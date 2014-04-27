@@ -1,0 +1,19 @@
+<com.blastedstudios.ledge.world.weapon.Gun>
+	<type>RIFLE</type>
+	<stats>
+		<accuracy>.93</accuracy>
+		<damage>35</damage>
+		<muzzleVelocity>970</muzzleVelocity>
+		<rateOfFire>12</rateOfFire>
+		<recoil>15</recoil>
+		<reloadSpeed>3000</reloadSpeed>
+		<roundsPerClip>30</roundsPerClip>
+		<projectileCount>1</projectileCount>
+	</stats>
+	<currentRounds>30</currentRounds>
+	<name>Steyr Aug</name>
+	<resource>steyraug</resource>
+	<cost>2230</cost>
+	<ammoType>_7_62mm</ammoType>
+	<fireSound>AK47_1</fireSound>
+</com.blastedstudios.ledge.world.weapon.Gun>

@@ -1,0 +1,22 @@
+<com.blastedstudios.ledge.world.weapon.RocketLauncher>
+	<type>ROCKET_LAUNCHER</type>
+	<stats>
+		<accuracy>.95</accuracy>
+		<damage>10</damage>
+		<muzzleVelocity>800</muzzleVelocity>
+		<rateOfFire>.5</rateOfFire>
+		<recoil>10</recoil>
+		<reloadSpeed>2500</reloadSpeed>
+		<roundsPerClip>1</roundsPerClip>
+		<projectileCount>1</projectileCount>
+	</stats>
+	<maxDistance>10</maxDistance>
+	<baseDamage>70</baseDamage>
+	<baseImpulse>30</baseImpulse>
+	<currentRounds>1</currentRounds>
+	<name>RPG-7</name>
+	<resource>rpg7</resource>
+	<cost>2600</cost>
+	<ammoType>RPG</ammoType>
+	<fireSound>rpg</fireSound>
+</com.blastedstudios.ledge.world.weapon.RocketLauncher>

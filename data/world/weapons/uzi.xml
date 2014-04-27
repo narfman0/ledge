@@ -1,0 +1,19 @@
+<com.blastedstudios.ledge.world.weapon.Gun>
+	<type>SMG</type>
+	<stats>
+		<accuracy>.65</accuracy>
+		<damage>20</damage>
+		<muzzleVelocity>400</muzzleVelocity>
+		<rateOfFire>10</rateOfFire>
+		<recoil>7</recoil>
+		<reloadSpeed>2500</reloadSpeed>
+		<roundsPerClip>32</roundsPerClip>
+		<projectileCount>1</projectileCount>
+	</stats>
+	<currentRounds>32</currentRounds>
+	<name>Uzi</name>
+	<resource>smg</resource>
+	<cost>600</cost>
+	<ammoType>_9mm</ammoType>
+	<fireSound>MP5_1</fireSound>
+</com.blastedstudios.ledge.world.weapon.Gun>

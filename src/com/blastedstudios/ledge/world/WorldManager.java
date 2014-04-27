@@ -1,0 +1,284 @@
+package com.blastedstudios.ledge.world;
+
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.EnumSet;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Camera;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.ParticleEffect;
+import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.physics.box2d.Fixture;
+import com.badlogic.gdx.physics.box2d.World;
+import com.badlogic.gdx.utils.Array;
+import com.blastedstudios.gdxworld.ui.GDXRenderer;
+import com.blastedstudios.gdxworld.util.Properties;
+import com.blastedstudios.gdxworld.world.GDXLevel;
+import com.blastedstudios.gdxworld.world.GDXLevel.CreateLevelReturnStruct;
+import com.blastedstudios.gdxworld.world.GDXNPC;
+import com.blastedstudios.gdxworld.world.GDXPath;
+import com.blastedstudios.ledge.physics.ContactListener;
+import com.blastedstudios.ledge.physics.VisibleQueryCallback;
+import com.blastedstudios.ledge.util.VisibilityReturnStruct;
+import com.blastedstudios.ledge.world.being.Being;
+import com.blastedstudios.ledge.world.being.FactionEnum;
+import com.blastedstudios.ledge.world.being.NPC;
+import com.blastedstudios.ledge.world.being.NPC.DifficultyEnum;
+import com.blastedstudios.ledge.world.being.NPCData;
+import com.blastedstudios.ledge.world.being.Being.IDeathCallback;
+import com.blastedstudios.ledge.world.being.Player;
+import com.blastedstudios.ledge.world.weapon.Gun;
+import com.blastedstudios.ledge.world.weapon.Weapon;
+import com.blastedstudios.ledge.world.weapon.WeaponFactory;
+import com.blastedstudios.ledge.world.weapon.DamageStruct;
+import com.blastedstudios.ledge.world.weapon.WeaponType;
+import com.blastedstudios.ledge.world.weapon.shot.GunShot;
+
+public class WorldManager implements IDeathCallback{
+	public static final String REMOVE_USER_DATA = "r";
+	private final World world = new World(new Vector2(0, -10), true);
+	private final Map<String,NPC> npcs = new HashMap<>();
+	private final Map<Body,GunShot> gunshots = new HashMap<>();
+	private final Player player;
+	private final CreateLevelReturnStruct createLevelStruct;
+	private Vector2 respawnLocation;
+	private final SpriteBatch spriteBatch = new SpriteBatch();
+	private final DropManager dropManager;
+	private final GDXLevel level;
+	private final LinkedList<ParticleEffect> particles = new LinkedList<>();
+	private boolean pause, inputEnable = true;
+	
+	public WorldManager(Player player, GDXLevel level){
+		this.player = player;
+		this.level = level;
+		dropManager = new DropManager();
+		Weapon gun = player.getEquippedWeapon();
+		if(gun != null && gun.getType() != WeaponType.MELEE)
+			((Gun)gun).addCurrentRounds(gun.getRoundsPerClip() - ((Gun)gun).getCurrentRounds());
+		createLevelStruct = level.createLevel(world);
+		world.setContactListener(new ContactListener(this));
+		for(GDXNPC gdxNPC : level.getNpcs())
+			spawnNPC(level, gdxNPC);
+	}
+
+	public void render(float dt, GDXRenderer gdxRenderer, Camera cam){
+		spriteBatch.setProjectionMatrix(cam.combined);
+		spriteBatch.begin();
+		player.render(dt, world, spriteBatch, gdxRenderer, this);
+		for(NPC npc : npcs.values())
+			npc.render(dt, world, spriteBatch, gdxRenderer, this);
+		for(Entry<Body, GunShot> entry : gunshots.entrySet())
+			entry.getValue().render(dt, spriteBatch, gdxRenderer, entry.getKey());
+		dropManager.render(player, world, spriteBatch, gdxRenderer);
+		renderTransferredParticles(dt);
+		spriteBatch.end();
+		if(!pause)
+			world.step(dt*2f, 10, 10);//TODO fix this to be reg, not *2
+		for(Body body : getBodiesIterable())
+			if(body != null && body.getUserData() != null && body.getUserData().equals(REMOVE_USER_DATA))
+				world.destroyBody(body);
+	}
+	
+	public Iterable<Body> getBodiesIterable(){
+		Array<Body> bodyArray = new Array<>(world.getBodyCount());
+		world.getBodies(bodyArray);
+		return bodyArray;
+	}
+	
+	public static void drawTexture(SpriteBatch spriteBatch, GDXRenderer renderer, 
+			Body body, String textureName, float scale){
+		Texture texture = renderer.getTexture(textureName + ".png");
+		Sprite sprite = new Sprite(texture);
+		sprite.setPosition(body.getWorldCenter().x - sprite.getWidth()/2, 
+				body.getWorldCenter().y - sprite.getHeight()/2);
+		sprite.setRotation((float) Math.toDegrees(body.getAngle()));
+		sprite.setScale(scale);
+		sprite.draw(spriteBatch);
+	}
+
+	public void processHit(float damageBase, Being target, Being origin, Fixture hit, Vector2 normal) {
+		DamageStruct damage = new DamageStruct();
+		damage.setTarget(target);
+		float bodypartDmgModifier = target.handleShotDamage(hit, damage);
+		float attackModifier = (100f + (origin == null ? 0f : origin.getAttack())) / 100f;
+		float defenseModifier = 100f / (100f + target.getDefense());
+		damage.setDamage(damageBase * bodypartDmgModifier * 
+				attackModifier * defenseModifier);
+		damage.setDir(normal);
+		damage.setOrigin(origin);
+		getProvider().beingHit(damage);
+		if(!Properties.getBool("character.godmode", false) || target != player){
+			target.setHp(target.getHp() - damage.getDamage());
+			target.receivedDamage(damage);
+			Gdx.app.log("WorldManager.processHit","Processed damage on being: " + target.getName() + 
+					" dmg: " + damage.getDamage() + " hp: " + target.getHp());
+		}
+	}
+	
+	public Player getPlayer(){
+		return player;
+	}
+
+	public World getWorld() {
+		return world;
+	}
+
+	public Map<String,Being> getAllBeings() {
+		HashMap<String,Being> beings = new HashMap<>();
+		for(Entry<String,NPC> entry : npcs.entrySet())
+			beings.put(entry.getKey(), entry.getValue());
+		beings.put(player.getName(), player);
+		beings.put("player", player);
+		beings.put("Player", player);
+		return beings;
+	}
+	
+	public VisibilityReturnStruct isVisible(Being origin){
+		Being closestEnemy = null;
+		float closestDistanceSq = Float.MAX_VALUE;
+		int enemyCount = 0;
+		for(Being being : getAllBeings().values())
+			if(being != origin && !origin.isFriendly(being.getFaction()) && !being.isDead()){
+				float currentClosestDistanceSq = being.getPosition().dst2(origin.getPosition());
+				boolean closer = closestEnemy == null || closestDistanceSq > currentClosestDistanceSq,
+						facingCorrectly = origin.getRagdoll().isFacingLeft() ?
+								being.getPosition().x < origin.getPosition().x : 
+								being.getPosition().x > origin.getPosition().x;
+				if(closer && (facingCorrectly || currentClosestDistanceSq < Properties.getFloat("ai.visible.proximity", 25f))){
+					VisibleQueryCallback callback = new VisibleQueryCallback(origin, being);
+					world.rayCast(callback, origin.getPosition(), being.getPosition());
+					if(!callback.called){
+						closestDistanceSq = currentClosestDistanceSq;
+						if(closestDistanceSq < Properties.getFloat("ai.visible.distance", 150f)){
+							enemyCount++;
+							closestEnemy = being;
+						}
+					}
+				}
+			}
+		return new VisibilityReturnStruct(enemyCount, closestEnemy);
+	}
+
+	public CreateLevelReturnStruct getCreateLevelStruct() {
+		return createLevelStruct;
+	}
+
+	public void respawnPlayer() {
+		player.respawn(world, respawnLocation.x, respawnLocation.y);
+	}
+	
+	public Vector2 getRespawnLocation(){
+		return respawnLocation;
+	}
+
+	public void setRespawnLocation(Vector2 respawnLocation) {
+		this.respawnLocation = respawnLocation;
+	}
+	
+	public Map<Body,GunShot> getGunshots(){
+		return gunshots;
+	}
+	
+	public NPC spawnNPC(GDXLevel level, GDXNPC gdxNPC){
+		NPCData npcData = NPCData.parse(gdxNPC.getProperties().get("NPCData"));
+		if(npcData == null){
+			npcData = new NPCData();
+			Gdx.app.error("WorldManager.<init>", "NPC failed to initialize " + gdxNPC + ", attempting defaults");
+		}
+		npcData.apply(gdxNPC.getProperties());
+		return spawnNPC(gdxNPC.getName(), gdxNPC.getCoordinates(), npcData);
+	}
+	
+	public NPC spawnNPC(String name, Vector2 coordinates, NPCData npcData){
+		EnumSet<FactionEnum> factions = EnumSet.noneOf(FactionEnum.class);
+		for(String factionStr : npcData.get("Faction").split(","))
+			factions.add(FactionEnum.valueOf(factionStr.toUpperCase()));
+		FactionEnum faction = factions.iterator().next();
+		int cash = npcData.getInteger("Cash"),
+				npcLevel = npcData.getInteger("Level"), 
+				xp = npcData.getInteger("XP");
+		DifficultyEnum difficulty = DifficultyEnum.valueOf(Properties.get(
+				"npc.difficulty.value", DifficultyEnum.MEDIUM.name()));
+		NPC npc = new NPC(name, WeaponFactory.getGuns(npcData.get("Weapons")), 
+				new ArrayList<Weapon>(), Stats.parseNPCData(npcData), 0, cash, 
+				npcLevel, xp, npcData.get("Behavior"), level.getPath(npcData.get("Path")),
+				faction, factions, this, npcData.get("Resource"), difficulty);
+		npc.aim(npcData.getFloat("Aim"));
+		npcs.put(name, npc);
+		npc.respawn(world, coordinates.x, coordinates.y);
+		return npc;
+	}
+	
+	public void changePlayerWeapon(int weapon){
+		player.setCurrentWeapon(weapon, world);
+	}
+
+	@Override public void dead(Being being) {
+		if(being != player)
+			dropManager.generateDrop(being, world);
+		being.death(this);
+	}
+
+	public DropManager getDropManager() {
+		return dropManager;
+	}
+
+	public GDXPath getPath(String path) {
+		return level.getPath(path);
+	}
+
+	public void pause(boolean pause) {
+		this.pause = pause;
+	}
+	
+	public boolean isPause(){
+		return pause;
+	}
+
+	public void setInputEnable(boolean inputEnable) {
+		this.inputEnable = inputEnable;
+		if(!inputEnable)
+			player.stopMovement();
+	}
+	
+	public boolean isInputEnable(){
+		return inputEnable;
+	}
+	
+	/**
+	 * @return trigger info provider reflectively. Some nastiness for the greater good?
+	 */
+	public QuestTriggerInformationProvider getProvider(){
+		try {
+			Field providerField = player.getQuestManager().getClass().getDeclaredField("provider");
+			providerField.setAccessible(true);
+			return (QuestTriggerInformationProvider) providerField.get(player.getQuestManager());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public void transferParticles(ParticleEffect... particles) {
+		this.particles.addAll(Arrays.asList(particles));
+	}
+	
+	private void renderTransferredParticles(float dt){
+		for(Iterator<ParticleEffect> i = particles.iterator(); i.hasNext();){
+			ParticleEffect effect = i.next();
+			effect.draw(spriteBatch, dt);
+			if(effect.isComplete())
+				i.remove();
+		}
+	}
+}

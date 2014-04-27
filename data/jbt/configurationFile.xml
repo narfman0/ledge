@@ -1,0 +1,12 @@
+<Configuration>
+  <DomainFile>data/jbt/botDomain.xml</DomainFile>
+  <ModelActionsPackage>com.blastedstudios.ledge.ai.bt.actions</ModelActionsPackage>
+  <ModelConditionsPackage>com.blastedstudios.ledge.ai.bt.conditions</ModelConditionsPackage>
+  <ModelActionsOutputDirectory>src/com/blastedstudios/ledge/ai/bt/actions</ModelActionsOutputDirectory>
+  <ModelConditionsOutputDirectory>src/com/blastedstudios/ledge/ai/bt/conditions</ModelConditionsOutputDirectory>
+  <ExecutionActionsPackage>com.blastedstudios.ledge.ai.bt.actions.execution</ExecutionActionsPackage>
+  <ExecutionConditionsPackage>com.blastedstudios.ledge.ai.bt.conditions.execution</ExecutionConditionsPackage>
+  <ExecutionActionsOutputDirectory>src/com/blastedstudios/ledge/ai/bt/actions/execution</ExecutionActionsOutputDirectory>
+  <ExecutionConditionsOutputDirectory>src/com/blastedstudios/ledge/ai/bt/conditions/execution</ExecutionConditionsOutputDirectory>
+</Configuration>
+

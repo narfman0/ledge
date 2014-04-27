@@ -1,0 +1,13 @@
+<com.blastedstudios.ledge.world.weapon.Melee>
+	<type>MELEE</type>
+	<stats>
+		<damage>20</damage>
+	</stats>
+	<name>Wrench</name>
+	<resource>wrench</resource>
+	<cost>100</cost>
+	<fireSound>clunk</fireSound>
+	<width>.15</width>
+	<height>.3</height>
+	<density>.01</density>
+</com.blastedstudios.ledge.world.weapon.Melee>

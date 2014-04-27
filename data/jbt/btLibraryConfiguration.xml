@@ -1,0 +1,12 @@
+<Configuration>
+	<BTLibrary>
+		<BTFile>data/jbt/enemyAggressive.xbt</BTFile>
+		<LibraryClassName>EnemyAggressiveBT</LibraryClassName>
+		<LibraryPackage>com.blastedstudios.ledge.ai.bt.trees</LibraryPackage>
+		<LibraryOutputDirectory>src/com/blastedstudios/ledge/ai/bt/trees/</LibraryOutputDirectory>
+		<DomainFile>data/jbt/botDomain.xml</DomainFile>
+		<ModelActionsPackage>com.blastedstudios.ledge.ai.bt.actions</ModelActionsPackage>
+		<ModelConditionsPackage>com.blastedstudios.ledge.ai.bt.conditions</ModelConditionsPackage>
+	</BTLibrary>
+</Configuration>
+

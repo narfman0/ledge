@@ -1,0 +1,19 @@
+<com.blastedstudios.ledge.world.weapon.Gun>
+	<type>PISTOL</type>
+	<stats>
+		<accuracy>.83</accuracy>
+		<damage>25</damage>
+		<muzzleVelocity>375</muzzleVelocity>
+		<rateOfFire>1.5</rateOfFire>
+		<recoil>11.7</recoil>
+		<reloadSpeed>1500</reloadSpeed>
+		<roundsPerClip>16</roundsPerClip>
+		<projectileCount>1</projectileCount>
+	</stats>
+	<currentRounds>16</currentRounds>
+	<name>Glock</name>
+	<resource>glock</resource>
+	<cost>100</cost>
+	<ammoType>_9mm</ammoType>
+	<fireSound>Glock-18_1</fireSound>
+</com.blastedstudios.ledge.world.weapon.Gun>

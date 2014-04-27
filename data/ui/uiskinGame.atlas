@@ -1,0 +1,209 @@
+
+uiskinGame.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+character
+  rotate: false
+  xy: 477, 0
+  size: 133, 63
+  split: 64, 64, 29, 30
+  orig: 0, 0
+  offset: 0, 0
+  index: -1
+default-window
+  rotate: false
+  xy: 0, 262
+  size: 279, 153
+  split: 64, 64, 45, 45
+  orig: 279, 153
+  offset: 0, 0
+  index: -1
+default-select
+  rotate: false
+  xy: 29, 29
+  size: 27, 20
+  split: 4, 14, 4, 4
+  orig: 27, 20
+  offset: 0, 0
+  index: -1
+default-round-large
+  rotate: false
+  xy: 57, 29
+  size: 20, 20
+  split: 5, 5, 5, 4
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+default-slider-knob
+  rotate: false
+  xy: 1, 1
+  size: 9, 18
+  orig: 9, 18
+  offset: 0, 0
+  index: -1
+default-round-down
+  rotate: false
+  xy: 280, 177
+  size: 278, 74
+  orig: 278, 74
+  offset: 0, 0
+  index: -1
+default-round
+  rotate: false
+  xy: 0, 177
+  size: 278, 74
+  orig: 278, 74
+  offset: 0, 0
+  index: -1
+check-off
+  rotate: false
+  xy: 11, 5
+  size: 14, 14
+  orig: 14, 14
+  offset: 0, 0
+  index: -1
+textfield
+  rotate: false
+  xy: 105, 50
+  size: 106, 66
+  split: 20, 20, 20, 20
+  orig: 105, 66
+  offset: 0, 0
+  index: -1
+check-on
+  rotate: false
+  xy: 104, 35
+  size: 14, 14
+  orig: 14, 14
+  offset: 0, 0
+  index: -1
+hud-bar-outside
+  rotate: false
+  xy: 278, 0
+  size: 199, 49
+  orig: 199, 49
+  offset: 0, 0
+  index: -1
+hud-bar-inside
+  rotate: false
+  xy: 286, 48
+  size: 187, 39
+  orig: 187, 39
+  offset: 0, 0
+  index: -1
+tree-minus
+  rotate: false
+  xy: 119, 35
+  size: 14, 14
+  orig: 14, 14
+  offset: 0, 0
+  index: -1
+default-slider
+  rotate: false
+  xy: 29, 20
+  size: 8, 8
+  split: 2, 2, 2, 2
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+default-pane
+  rotate: false
+  xy: 11, 1
+  size: 5, 3
+  split: 1, 1, 1, 1
+  orig: 5, 3
+  offset: 0, 0
+  index: -1
+default-rect-pad
+  rotate: false
+  xy: 11, 1
+  size: 5, 3
+  split: 1, 1, 1, 1
+  orig: 5, 3
+  offset: 0, 0
+  index: -1
+default-splitpane
+  rotate: false
+  xy: 17, 1
+  size: 5, 3
+  split: 0, 5, 0, 0
+  orig: 5, 3
+  offset: 0, 0
+  index: -1
+cursor
+  rotate: false
+  xy: 23, 1
+  size: 3, 3
+  split: 1, 1, 1, 1
+  orig: 3, 3
+  offset: 0, 0
+  index: -1
+default-splitpane-vertical
+  rotate: false
+  xy: 104, 29
+  size: 3, 5
+  split: 0, 0, 0, 5
+  orig: 3, 5
+  offset: 0, 0
+  index: -1
+default-rect-down
+  rotate: false
+  xy: 149, 46
+  size: 3, 3
+  split: 1, 1, 1, 1
+  orig: 3, 3
+  offset: 0, 0
+  index: -1
+default-rect
+  rotate: false
+  xy: 38, 25
+  size: 3, 3
+  split: 1, 1, 1, 1
+  orig: 3, 3
+  offset: 0, 0
+  index: -1
+default-select-selection
+  rotate: false
+  xy: 26, 16
+  size: 3, 3
+  split: 1, 1, 1, 1
+  orig: 3, 3
+  offset: 0, 0
+  index: -1
+default-pane-noborder
+  rotate: false
+  xy: 108, 33
+  size: 1, 1
+  split: 0, 0, 0, 0
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+selection
+  rotate: false
+  xy: 149, 44
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+toggle-button-shell
+  rotate: false
+  xy: 952, 0
+  size: 72, 70
+  orig: 72, 70
+  offset: 0, 0
+  index: -1
+toggle-button
+  rotate: false
+  xy: 952, 71
+  size: 72, 70
+  orig: 72, 70
+  offset: 0, 0
+  index: -1
+toggle-button-checked
+  rotate: false
+  xy: 952, 142
+  size: 72, 70
+  orig: 72, 70
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,20 @@
+<com.blastedstudios.ledge.world.being.NPCData>
+  <properties>
+    <entry>
+      <string>HP</string>
+      <string>50</string>
+    </entry>
+    <entry>
+      <string>Faction</string>
+      <string>FRIEND</string>
+    </entry>
+    <entry>
+      <string>Resource</string>
+      <string>townieFemale</string>
+    </entry>
+    <entry>
+      <string>Behavior</string>
+      <string>NeutralBT</string>
+    </entry>
+  </properties>
+</com.blastedstudios.ledge.world.being.NPCData>

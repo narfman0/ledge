@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tree>
+  <Node id="Node_0" name="Root" type="Root">
+    <Children>
+      <Node id="Node_28" type="Repeat">
+        <Children>
+          <Node id="Node_3" type="Selector">
+            <Children>
+              <Node id="Node_8" type="Sequence">
+                <Children>
+                  <Node id="Node_9" name="LowDanger" type="Condition" />
+                  <Node id="Node_39" name="NotifyDanger" type="Action">
+                    <Parameters>
+                      <Parameter name="target" fromcontext="true">LowDangerTarget</Parameter>
+                    </Parameters>
+                  </Node>
+                  <Node id="Node_13" name="Shoot" type="Action">
+                    <Parameters>
+                      <Parameter name="target" fromcontext="true">LowDangerTarget</Parameter>
+                    </Parameters>
+                  </Node>
+                  <Node id="Node_33" name="Move" type="Action">
+                    <Parameters>
+                      <Parameter name="target" fromcontext="true">LowDangerTarget</Parameter>
+                    </Parameters>
+                  </Node>
+                </Children>
+              </Node>
+              <Node id="Node_35" type="Sequence">
+                <Children>
+                  <Node id="Node_37" name="Search" type="Action">
+                    <Parameters>
+                      <Parameter name="lastTarget" fromcontext="true">LowDangerTarget</Parameter>
+                      <Parameter name="lastTime" fromcontext="true">LowDangerLastTime</Parameter>
+                    </Parameters>
+                  </Node>
+                  <Node id="Node_38" name="Move" type="Action">
+                    <Parameters>
+                      <Parameter name="target" fromcontext="true">SearchLocation</Parameter>
+                    </Parameters>
+                  </Node>
+                </Children>
+              </Node>
+              <Node id="Node_24" type="Sequence">
+                <Children>
+                  <Node id="Node_25" name="CurrentObjective" type="Action" />
+                  <Node id="Node_29" name="Move" type="Action">
+                    <Parameters>
+                      <Parameter name="target" fromcontext="true">CurrentObjectiveTarget</Parameter>
+                    </Parameters>
+                  </Node>
+                </Children>
+              </Node>
+            </Children>
+          </Node>
+        </Children>
+      </Node>
+    </Children>
+  </Node>
+</Tree>
+

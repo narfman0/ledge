@@ -1,0 +1,60 @@
+vasht.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+head
+  rotate: false
+  xy: 5, 9
+  size: 116, 84
+  orig: 116, 84
+  offset: 0, 0
+  index: -1
+torso
+  rotate: false
+  xy: 0, 91
+  size: 111, 144
+  orig: 111, 144
+  offset: 0, 0
+  index: -1
+larm
+  rotate: false
+  xy: 120, 0
+  size: 120, 45
+  orig: 120, 45
+  offset: 0, 0
+  index: -1
+rarm
+  rotate: false
+  xy: 120, 46
+  size: 120, 45
+  orig: 120, 45
+  offset: 0, 0
+  index: -1
+lhand
+  rotate: false
+  xy: 111, 98
+  size: 59, 40
+  orig: 59, 40
+  offset: 0, 0
+  index: -1
+rhand
+  rotate: false
+  xy: 188, 98
+  size: 59, 40
+  orig: 59, 40
+  offset: 0, 0
+  index: -1
+lleg
+  rotate: false
+  xy: 107, 140
+  size: 75, 116
+  orig: 75, 116
+  offset: 0, 0
+  index: -1
+rleg
+  rotate: false
+  xy: 182, 140
+  size: 75, 116
+  orig: 75, 116
+  offset: 0, 0
+  index: -1

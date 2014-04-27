@@ -1,0 +1,32 @@
+<com.blastedstudios.ledge.world.being.NPCData>
+  <properties>
+    <entry>
+      <string>HP</string>
+      <string>50</string>
+    </entry>
+    <entry>
+      <string>Faction</string>
+      <string>FRIEND</string>
+    </entry>
+    <entry>
+      <string>Resource</string>
+      <string>cohiggan</string>
+    </entry>
+    <entry>
+      <string>Behavior</string>
+      <string>NeutralBT</string>
+    </entry>
+    <entry>
+      <string>JetpackMax</string>
+      <string>100</string>
+    </entry>
+    <entry>
+      <string>JetpackRecharge</string>
+      <string>5</string>
+    </entry>
+    <entry>
+      <string>JetpackImpulse</string>
+      <string>6</string>
+    </entry>
+  </properties>
+</com.blastedstudios.ledge.world.being.NPCData>

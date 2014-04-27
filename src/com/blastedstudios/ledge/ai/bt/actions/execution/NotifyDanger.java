@@ -1,0 +1,113 @@
+// ******************************************************* 
+//                   MACHINE GENERATED CODE                
+//                MUST BE CAREFULLY COMPLETED              
+//                                                         
+//           ABSTRACT METHODS MUST BE IMPLEMENTED          
+//                                                         
+// Generated on 04/23/2014 19:32:16
+// ******************************************************* 
+package com.blastedstudios.ledge.ai.bt.actions.execution;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.math.Vector2;
+import com.blastedstudios.gdxworld.util.Properties;
+import com.blastedstudios.gdxworld.world.GDXPath;
+import com.blastedstudios.ledge.physics.VisibleQueryCallback;
+import com.blastedstudios.ledge.world.WorldManager;
+import com.blastedstudios.ledge.world.being.Being;
+import com.blastedstudios.ledge.world.being.NPC;
+import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
+
+/** ExecutionAction class created from MMPM action NotifyDanger. */
+public class NotifyDanger extends
+		jbt.execution.task.leaf.action.ExecutionAction {
+	/**
+	 * Value of the parameter "target" in case its value is specified at
+	 * construction time. null otherwise.
+	 */
+	private float[] target;
+	/**
+	 * Location, in the context, of the parameter "target" in case its value is
+	 * not specified at construction time. null otherwise.
+	 */
+	private java.lang.String targetLoc;
+
+	/**
+	 * Constructor. Constructs an instance of NotifyDanger that is able to run a
+	 * com.blastedstudios.ledge.ai.bt.actions.NotifyDanger.
+	 * 
+	 * @param target
+	 *            value of the parameter "target", or null in case it should be
+	 *            read from the context. If null,
+	 *            <code>targetLoc<code> cannot be null.
+	 * @param targetLoc
+	 *            in case <code>target</code> is null, this variable represents
+	 *            the place in the context where the parameter's value will be
+	 *            retrieved from.
+	 */
+	public NotifyDanger(jbt.model.core.ModelTask modelTask,
+			jbt.execution.core.BTExecutor executor,
+			jbt.execution.core.ExecutionTask parent, float[] target,
+			java.lang.String targetLoc) {
+		super(modelTask, executor, parent);
+
+		if (!(modelTask instanceof com.blastedstudios.ledge.ai.bt.actions.NotifyDanger)) {
+			throw new java.lang.RuntimeException(
+					"The ModelTask must subclass com.blastedstudios.ledge.ai.bt.actions.NotifyDanger");
+		}
+
+		this.target = target;
+		this.targetLoc = targetLoc;
+	}
+
+	/**
+	 * Returns the value of the parameter "target", or null in case it has not
+	 * been specified or it cannot be found in the context.
+	 */
+	public float[] getTarget() {
+		if (this.target != null) {
+			return this.target;
+		} else {
+			return (float[]) this.getContext().getVariable(this.targetLoc);
+		}
+	}
+
+	protected void internalSpawn() {
+		/*
+		 * Do not remove this first line unless you know what it does and you
+		 * need not do it.
+		 */
+		this.getExecutor().requestInsertionIntoList(
+				jbt.execution.core.BTExecutor.BTExecutorList.TICKABLE, this);
+		Gdx.app.debug(this.getClass().getCanonicalName(), "spawned");
+	}
+
+	protected jbt.execution.core.ExecutionTask.Status internalTick() {
+		NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
+		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
+		GDXPath path = new GDXPath();
+		path.getNodes().add(self.getPosition());
+		path.getNodes().add(new Vector2(getTarget()[0], getTarget()[1]));
+		for(Being being : world.getAllBeings().values())
+			if(being != self && !being.isDead() && self.isFriendly(being.getFaction()) && being instanceof NPC && 
+					self.getPosition().dst2(being.getPosition()) < Properties.getFloat("npc.notify.distanceSq", 225f)){
+				//verify friend is also visible, else cant communicate
+				VisibleQueryCallback callback = new VisibleQueryCallback(self, being);
+				world.getWorld().rayCast(callback, self.getPosition(), being.getPosition());
+				if(!callback.called)
+					((NPC)being).setPath(path);
+			}
+		return jbt.execution.core.ExecutionTask.Status.SUCCESS;
+	}
+
+	protected void internalTerminate() {}
+	protected void restoreState(jbt.execution.core.ITaskState state) {}
+
+	protected jbt.execution.core.ITaskState storeState() {
+		return null;
+	}
+
+	protected jbt.execution.core.ITaskState storeTerminationState() {
+		return null;
+	}
+}
