@@ -9,6 +9,7 @@
 package com.blastedstudios.ledge.ai.bt.actions.execution;
 
 import com.badlogic.gdx.Gdx;
+import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.util.VisibilityReturnStruct;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
@@ -113,7 +114,7 @@ public class Search extends jbt.execution.task.leaf.action.ExecutionAction {
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
 		Gdx.app.debug(this.getClass().getCanonicalName(), "ticked");
-		int searchTime = (int) getContext().getVariable(AIFieldEnum.SEARCH_TIME.name());
+		int searchTime = Properties.getInt("npc.search.time", 5000);
 		if(getLastTime() == null || (int)System.currentTimeMillis() - getLastTime() > searchTime)
 			return Status.FAILURE;
 		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());

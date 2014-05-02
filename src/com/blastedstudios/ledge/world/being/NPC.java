@@ -15,6 +15,7 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.GDXPath;
+import com.blastedstudios.ledge.ai.AIWorld;
 import com.blastedstudios.ledge.world.Stats;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.weapon.Gun;
@@ -22,7 +23,7 @@ import com.blastedstudios.ledge.world.weapon.Weapon;
 import com.blastedstudios.ledge.world.weapon.WeaponType;
 
 public class NPC extends Being {
-	public enum AIFieldEnum{AI_WORLD, OBJECTIVE, SELF, WORLD, SEARCH_TIME}
+	public enum AIFieldEnum{AI_WORLD, OBJECTIVE, SELF, WORLD}
 	public enum DifficultyEnum{HARD, MEDIUM, EASY}
 	private static final long serialVersionUID = 1L;
 	private IContext context;
@@ -33,7 +34,7 @@ public class NPC extends Being {
 	public NPC(String name, List<Weapon> guns, List<Weapon> inventory, Stats stats,
 			int currentGun, int cash, int level, int xp, String behavior,
 			GDXPath path, FactionEnum faction, EnumSet<FactionEnum> factions,
-			WorldManager world, String resource, DifficultyEnum difficulty) {
+			WorldManager world, String resource, DifficultyEnum difficulty, AIWorld aiWorld) {
 		super(name, guns, inventory, stats, currentGun, cash, level, xp, 
 				faction, factions, resource);
 		this.difficulty = difficulty;
@@ -42,9 +43,9 @@ public class NPC extends Being {
 			Class<?> btLibClass = Class.forName(basePackage+"."+behavior);
 			IBTLibrary library = (IBTLibrary) btLibClass.newInstance();
 			context = ContextFactory.createContext(library);
+			context.setVariable(AIFieldEnum.AI_WORLD.name(), aiWorld);
 			context.setVariable(AIFieldEnum.SELF.name(), this);
 			context.setVariable(AIFieldEnum.WORLD.name(), world);
-			context.setVariable(AIFieldEnum.SEARCH_TIME.name(), Properties.getInt("npc.search.time", 5000));
 			setPath(path);
 			btExecutor = BTExecutorFactory.createBTExecutor(library.getBT("Root"), context);
 		}catch(Exception e){

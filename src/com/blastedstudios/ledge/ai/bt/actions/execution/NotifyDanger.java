@@ -12,6 +12,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.GDXPath;
+import com.blastedstudios.ledge.ai.AIWorld;
 import com.blastedstudios.ledge.physics.VisibleQueryCallback;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
@@ -85,18 +86,22 @@ public class NotifyDanger extends
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
 		NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
 		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
-		GDXPath path = new GDXPath();
-		path.getNodes().add(self.getPosition());
-		path.getNodes().add(new Vector2(getTarget()[0], getTarget()[1]));
-		for(Being being : world.getAllBeings().values())
+		AIWorld aiWorld = (AIWorld) getContext().getVariable(AIFieldEnum.AI_WORLD.name());
+		Vector2 target = new Vector2(getTarget()[0], getTarget()[1]);
+		for(Being being : world.getAllBeings().values()){
+			float distanceSquared = self.getPosition().dst2(being.getPosition());
 			if(being != self && !being.isDead() && self.isFriendly(being.getFaction()) && being instanceof NPC && 
-					self.getPosition().dst2(being.getPosition()) < Properties.getFloat("npc.notify.distanceSq", 225f)){
-				//verify friend is also visible, else cant communicate
+					distanceSquared < Properties.getFloat("npc.notify.los.distanceSq", 225f)){
+				aiWorld.getPathToPoint(being.getPosition(), target);
+				GDXPath path = new GDXPath();
+				path.getNodes().addAll(aiWorld.getPathToPoint(being.getPosition(), target));
+				//verify friend is also visible, else can't communicate
 				VisibleQueryCallback callback = new VisibleQueryCallback(self, being);
 				world.getWorld().rayCast(callback, self.getPosition(), being.getPosition());
-				if(!callback.called)
+				if(!callback.called || distanceSquared < Properties.getFloat("npc.notify.absolute.distanceSq", 144f))
 					((NPC)being).setPath(path);
 			}
+		}
 		return jbt.execution.core.ExecutionTask.Status.SUCCESS;
 	}
 

@@ -282,7 +282,7 @@ public class GameplayScreen extends AbstractScreen {
 		case Keys.F10:
 			if(debugCommandEnabled()){
 				Vector2 position = worldManager.getPlayer().getPosition();
-				worldManager.spawnNPC(level, level.getClosestNPC(position.x, position.y));
+				worldManager.spawnNPC(level, level.getClosestNPC(position.x, position.y), worldManager.getAiWorld());
 			}
 			break;
 		case Keys.F12:

@@ -18,6 +18,7 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
@@ -27,6 +28,7 @@ import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXLevel.CreateLevelReturnStruct;
 import com.blastedstudios.gdxworld.world.GDXNPC;
 import com.blastedstudios.gdxworld.world.GDXPath;
+import com.blastedstudios.ledge.ai.AIWorld;
 import com.blastedstudios.ledge.physics.ContactListener;
 import com.blastedstudios.ledge.physics.VisibleQueryCallback;
 import com.blastedstudios.ledge.util.VisibilityReturnStruct;
@@ -46,7 +48,8 @@ import com.blastedstudios.ledge.world.weapon.shot.GunShot;
 
 public class WorldManager implements IDeathCallback{
 	public static final String REMOVE_USER_DATA = "r";
-	private final World world = new World(new Vector2(0, -10), true);
+	private final World world = new World(new Vector2(0, -10), true), aiWorldDebug;
+	private final Box2DDebugRenderer debugRenderer = new Box2DDebugRenderer();
 	private final Map<String,NPC> npcs = new HashMap<>();
 	private final Map<Body,GunShot> gunshots = new HashMap<>();
 	private final Player player;
@@ -56,6 +59,7 @@ public class WorldManager implements IDeathCallback{
 	private final DropManager dropManager;
 	private final GDXLevel level;
 	private final LinkedList<ParticleEffect> particles = new LinkedList<>();
+	private final AIWorld aiWorld;
 	private boolean pause, inputEnable = true;
 	
 	public WorldManager(Player player, GDXLevel level){
@@ -67,8 +71,10 @@ public class WorldManager implements IDeathCallback{
 			((Gun)gun).addCurrentRounds(gun.getRoundsPerClip() - ((Gun)gun).getCurrentRounds());
 		createLevelStruct = level.createLevel(world);
 		world.setContactListener(new ContactListener(this));
+		aiWorld = new AIWorld(world);
+		aiWorldDebug = aiWorld.createGraphVisible();
 		for(GDXNPC gdxNPC : level.getNpcs())
-			spawnNPC(level, gdxNPC);
+			spawnNPC(level, gdxNPC, aiWorld);
 	}
 
 	public void render(float dt, GDXRenderer gdxRenderer, Camera cam){
@@ -82,6 +88,8 @@ public class WorldManager implements IDeathCallback{
 		dropManager.render(player, world, spriteBatch, gdxRenderer);
 		renderTransferredParticles(dt);
 		spriteBatch.end();
+		if(Properties.getBool("world.debug.draw", false))
+			debugRenderer.render(aiWorldDebug, cam.combined);
 		if(!pause)
 			world.step(dt*2f, 10, 10);//TODO fix this to be reg, not *2
 		for(Body body : getBodiesIterable())
@@ -189,17 +197,17 @@ public class WorldManager implements IDeathCallback{
 		return gunshots;
 	}
 	
-	public NPC spawnNPC(GDXLevel level, GDXNPC gdxNPC){
+	public NPC spawnNPC(GDXLevel level, GDXNPC gdxNPC, AIWorld aiWorld){
 		NPCData npcData = NPCData.parse(gdxNPC.getProperties().get("NPCData"));
 		if(npcData == null){
 			npcData = new NPCData();
 			Gdx.app.error("WorldManager.<init>", "NPC failed to initialize " + gdxNPC + ", attempting defaults");
 		}
 		npcData.apply(gdxNPC.getProperties());
-		return spawnNPC(gdxNPC.getName(), gdxNPC.getCoordinates(), npcData);
+		return spawnNPC(gdxNPC.getName(), gdxNPC.getCoordinates(), npcData, aiWorld);
 	}
 	
-	public NPC spawnNPC(String name, Vector2 coordinates, NPCData npcData){
+	public NPC spawnNPC(String name, Vector2 coordinates, NPCData npcData, AIWorld aiWorld){
 		EnumSet<FactionEnum> factions = EnumSet.noneOf(FactionEnum.class);
 		for(String factionStr : npcData.get("Faction").split(","))
 			factions.add(FactionEnum.valueOf(factionStr.toUpperCase()));
@@ -212,7 +220,7 @@ public class WorldManager implements IDeathCallback{
 		NPC npc = new NPC(name, WeaponFactory.getGuns(npcData.get("Weapons")), 
 				new ArrayList<Weapon>(), Stats.parseNPCData(npcData), 0, cash, 
 				npcLevel, xp, npcData.get("Behavior"), level.getPath(npcData.get("Path")),
-				faction, factions, this, npcData.get("Resource"), difficulty);
+				faction, factions, this, npcData.get("Resource"), difficulty, aiWorld);
 		npc.aim(npcData.getFloat("Aim"));
 		npcs.put(name, npc);
 		npc.respawn(world, coordinates.x, coordinates.y);
@@ -280,5 +288,9 @@ public class WorldManager implements IDeathCallback{
 			if(effect.isComplete())
 				i.remove();
 		}
+	}
+
+	public AIWorld getAiWorld() {
+		return aiWorld;
 	}
 }

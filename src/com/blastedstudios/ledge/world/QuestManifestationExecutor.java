@@ -60,7 +60,7 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 				suffix++;
 			NPCData data = NPCData.parse(being);
 			data.set("Path", path);
-			worldManager.spawnNPC(being + suffix, coordinates, data);
+			worldManager.spawnNPC(being + suffix, coordinates, data, worldManager.getAiWorld());
 		}
 	}
 

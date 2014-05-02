@@ -3,23 +3,25 @@ package com.blastedstudios.ledge.ai;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import java.util.logging.Logger;
 
 import org.jgrapht.alg.DijkstraShortestPath;
 import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.SimpleWeightedGraph;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.badlogic.gdx.physics.box2d.World;
+import com.blastedstudios.gdxworld.physics.PhysicsHelper;
+import com.blastedstudios.gdxworld.util.Properties;
 
 public class AIWorld {
-	private static final Logger logger = Logger.getLogger(AIWorld.class.getCanonicalName());
 	private final SimpleWeightedGraph<Vector2, DefaultWeightedEdge> movementGraph;
 	
 	public AIWorld(World gameWorld){
 		movementGraph = GraphGenerator.generateGraph(gameWorld);
-		logger.info("Initialized graph with " +movementGraph.edgeSet().size() + " edges and " + 
-				movementGraph.vertexSet().size() + " vertices");
+		Gdx.app.log("AIWorld.<init>","Initialized graph with " +movementGraph.edgeSet().size() + 
+				" edges and " +	movementGraph.vertexSet().size() + " vertices");
 	}
 	
 	/**
@@ -50,9 +52,24 @@ public class AIWorld {
 				steps.add(movementGraph.getEdgeSource(edge));
 			steps.add(movementGraph.getEdgeTarget(list.get(list.size()-1)));
 		}catch(Exception e){
-			logger.warning("Error pathfinding for origin="+originRounded+
+			Gdx.app.error("AIWorld.<init>","Error pathfinding for origin="+originRounded+
 					" destination="+destinationRounded+" with message: "+e.getMessage());
 		}
 		return steps;
+	}
+
+	public World createGraphVisible(){
+		boolean nodesVisible = Properties.getBool("world.pathing.nodes.visible", true),
+				edgesVisible = Properties.getBool("world.pathing.edges.visible", true);
+		World world = new World(new Vector2(), true);
+		if(nodesVisible)
+			for(Vector2 node : movementGraph.vertexSet())
+				PhysicsHelper.createCircle(world, .1f, node, BodyType.StaticBody);
+		if(edgesVisible)
+			for(DefaultWeightedEdge edge : movementGraph.edgeSet()){
+				Vector2 source = movementGraph.getEdgeSource(edge), target = movementGraph.getEdgeTarget(edge);
+				PhysicsHelper.createEdge(world, BodyType.StaticBody, source.x, source.y, target.x, target.y, 1);
+			}
+		return world;
 	}
 }
