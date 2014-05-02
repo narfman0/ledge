@@ -90,8 +90,8 @@ public class WorldManager implements IDeathCallback{
 		spriteBatch.end();
 		if(Properties.getBool("world.debug.draw", false))
 			debugRenderer.render(aiWorldDebug, cam.combined);
-		if(!pause)
-			world.step(dt*2f, 10, 10);//TODO fix this to be reg, not *2
+		if(!pause)//min 1/20 because larger and you get really high hits on level startup/big cpu hits
+			world.step(Math.min(1f/20f, dt*2f), 10, 10);//TODO fix this to be reg, not *2
 		for(Body body : getBodiesIterable())
 			if(body != null && body.getUserData() != null && body.getUserData().equals(REMOVE_USER_DATA))
 				world.destroyBody(body);
