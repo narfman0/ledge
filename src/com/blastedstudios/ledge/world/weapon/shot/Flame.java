@@ -11,6 +11,7 @@ import com.blastedstudios.ledge.world.weapon.Gun;
 
 public class Flame extends GunShot {
 	public final ParticleEffect flame;
+	private long timeToRemove = -1l;
 	
 	public Flame(Being origin, Vector2 dir, Gun gun){
 		super(origin, dir, gun);
@@ -23,5 +24,17 @@ public class Flame extends GunShot {
 		super.render(dt, spriteBatch, gdxRenderer, body);
 		flame.setPosition(body.getPosition().x, body.getPosition().y);
 		flame.draw(spriteBatch, dt);
+	}
+	
+	public boolean isTimeToRemoveSet(){
+		return timeToRemove != -1l;
+	}
+
+	public long getTimeToRemove() {
+		return timeToRemove;
+	}
+
+	public void setTimeToRemove(long timeToRemove) {
+		this.timeToRemove = timeToRemove;
 	}
 }
