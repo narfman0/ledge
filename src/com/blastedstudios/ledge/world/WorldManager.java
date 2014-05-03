@@ -18,7 +18,6 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
-import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
@@ -48,7 +47,7 @@ import com.blastedstudios.ledge.world.weapon.WeaponType;
 import com.blastedstudios.ledge.world.weapon.shot.GunShot;
 
 public class WorldManager implements IDeathCallback{
-	public static final String REMOVE_USER_DATA = "r";
+	public static final String REMOVE_USER_DATA = "r", BODY_TYPE_STATIC_USER_DATA = "s";
 	private final World world = new World(new Vector2(0, -10), true), aiWorldDebug;
 	private final Box2DDebugRenderer debugRenderer = new Box2DDebugRenderer();
 	private final Map<String,NPC> npcs = new HashMap<>();
@@ -61,7 +60,6 @@ public class WorldManager implements IDeathCallback{
 	private final GDXLevel level;
 	private final LinkedList<ParticleEffect> particles = new LinkedList<>();
 	private final AIWorld aiWorld;
-	private final HashMap<Body, BodyType> toChangeBodyType = new HashMap<>();
 	private boolean pause, inputEnable = true;
 	
 	public WorldManager(Player player, GDXLevel level){
@@ -85,8 +83,12 @@ public class WorldManager implements IDeathCallback{
 		player.render(dt, world, spriteBatch, gdxRenderer, this);
 		for(NPC npc : npcs.values())
 			npc.render(dt, world, spriteBatch, gdxRenderer, this);
-		for(Entry<Body, GunShot> entry : gunshots.entrySet())
-			entry.getValue().render(dt, spriteBatch, gdxRenderer, entry.getKey());
+		for(Iterator<Entry<Body, GunShot>> iter = gunshots.entrySet().iterator(); iter.hasNext();){
+			Entry<Body, GunShot> entry = iter.next();
+			entry.getValue().render(dt, spriteBatch, gdxRenderer, entry.getKey(), this);
+			if(entry.getValue().isCanRemove())
+				iter.remove();
+		}
 		dropManager.render(player, world, spriteBatch, gdxRenderer);
 		renderTransferredParticles(dt);
 		spriteBatch.end();
@@ -94,11 +96,6 @@ public class WorldManager implements IDeathCallback{
 			debugRenderer.render(aiWorldDebug, cam.combined);
 		if(!pause)//min 1/20 because larger and you get really high hits on level startup/big cpu hits
 			world.step(Math.min(1f/20f, dt*2f), 10, 10);//TODO fix this to be reg, not *2
-		for(Iterator<Entry<Body,BodyType>> iter = toChangeBodyType.entrySet().iterator(); iter.hasNext();){
-			Entry<Body,BodyType> entry = iter.next();
-			entry.getKey().setType(entry.getValue());
-			iter.remove();
-		}
 		for(Body body : getBodiesIterable())
 			if(body != null && body.getUserData() != null && body.getUserData().equals(REMOVE_USER_DATA))
 				world.destroyBody(body);
@@ -299,9 +296,5 @@ public class WorldManager implements IDeathCallback{
 
 	public AIWorld getAiWorld() {
 		return aiWorld;
-	}
-
-	public HashMap<Body, BodyType> getToChangeBodyType() {
-		return toChangeBodyType;
 	}
 }

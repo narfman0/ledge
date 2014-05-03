@@ -5,11 +5,14 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.badlogic.gdx.physics.box2d.World;
+import com.badlogic.gdx.physics.box2d.WorldManifold;
 import com.badlogic.gdx.physics.box2d.joints.WeldJointDef;
 import com.blastedstudios.gdxworld.physics.PhysicsHelper;
 import com.blastedstudios.ledge.physics.IRagdoll;
+import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.Being.BodyPart;
+import com.blastedstudios.ledge.world.weapon.shot.GunShot;
 
 public class Melee extends Weapon {
 	private static final long serialVersionUID = 1L;
@@ -75,5 +78,10 @@ public class Melee extends Weapon {
 
 	@Override public String toString(){
 		return "[Melee name:" + name + " dmg: " + getDamage() + "]";
+	}
+
+	@Override public void handleContact(Body body, GunShot gunshot,
+			WorldManager worldManager, WorldManifold manifold) {
+		Gdx.app.log("Melee.handleContact", "Move melee damage calculation here");
 	}
 }

@@ -134,11 +134,7 @@ public abstract class Weapon implements Serializable{
 		return name;
 	}
 	
-	public void handleContact(Body body, GunShot gunshot, WorldManager worldManager, WorldManifold manifold){
-		body.setUserData(WorldManager.REMOVE_USER_DATA);
-		worldManager.getGunshots().remove(body);
-	}
-
+	public abstract void handleContact(Body body, GunShot gunshot, WorldManager worldManager, WorldManifold manifold);
 	public void activate(World world, IRagdoll ragdoll, Being owner){}
 	public void deactivate(World world){}
 }

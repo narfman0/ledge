@@ -1,5 +1,6 @@
 package com.blastedstudios.ledge.world.weapon;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.WorldManifold;
@@ -21,15 +22,9 @@ public class Flamethrower extends Gun {
 		Flame flame = (Flame) gunshot;
 		if(!flame.isTimeToRemoveSet()){
 			flame.setTimeToRemove(System.currentTimeMillis() + Properties.getInt("flame.contact.duration", 1500));
-			//would body.setType(BodyType.StaticBody); here, but we are inside the contact
-			//listener and the code would case a native crash. Thus we need to delay the
-			//deletion until after the solvers are done
-			worldManager.getToChangeBodyType().put(body, BodyType.StaticBody);
+			flame.setBodyType(BodyType.StaticBody);
 		}
-		if(flame.isTimeToRemoveSet() && System.currentTimeMillis() >= flame.getTimeToRemove()){
-			worldManager.transferParticles(flame.flame);
-			super.handleContact(body, gunshot, worldManager, manifold);
-		}
+		Gdx.app.log("Gun.handleContact","Move this to gunshot ahndleContact");
 	}
 	
 	@Override public GunShot createGunShot(Being origin, Vector2 dir){

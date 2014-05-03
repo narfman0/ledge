@@ -13,6 +13,7 @@ public class GunShot {
 	protected Being origin;
 	protected Vector2 dir;
 	protected Gun gun;
+	private boolean canRemove;
 	
 	public GunShot(){}
 	
@@ -46,8 +47,17 @@ public class GunShot {
 		this.gun = gun;
 	}
 	
-	public void render(float dt, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, Body body){
+	public void render(float dt, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, 
+			Body body, WorldManager worldManager){
 		WorldManager.drawTexture(spriteBatch, gdxRenderer, body, 
 				gun.getAmmoType().textureName, Properties.getFloat("gun.render.scale", .02f));
+	}
+
+	public boolean isCanRemove() {
+		return canRemove;
+	}
+
+	public void setCanRemove(boolean canRemove) {
+		this.canRemove = canRemove;
 	}
 }

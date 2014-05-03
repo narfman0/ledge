@@ -50,7 +50,9 @@ public class RocketLauncher extends Gun {
 		rocket.explosion.setPosition(body.getPosition().x, body.getPosition().y);
 		rocket.explosion.start();
 		worldManager.transferParticles(rocket.trail, rocket.explosion);
-		super.handleContact(body, gunshot, worldManager, manifold);
+
+		body.setUserData(WorldManager.REMOVE_USER_DATA);
+		worldManager.getGunshots().remove(body);
 	}
 	
 	@Override public GunShot createGunShot(Being origin, Vector2 dir){
