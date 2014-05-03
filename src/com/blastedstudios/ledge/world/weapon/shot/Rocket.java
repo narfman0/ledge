@@ -67,6 +67,6 @@ public class Rocket extends GunShot {
 		worldManager.transferParticles(trail, explosion);
 
 		body.setUserData(WorldManager.REMOVE_USER_DATA);
-		worldManager.getGunshots().remove(body);
+		setCanRemove(true);
 	}
 }
