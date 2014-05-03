@@ -1,10 +1,6 @@
 package com.blastedstudios.ledge.world.weapon;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.physics.box2d.Body;
-import com.badlogic.gdx.physics.box2d.WorldManifold;
-import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.weapon.shot.GunShot;
 
@@ -44,12 +40,5 @@ public class Gun extends Weapon {
 	@Override public String toStringPretty(Being owner) {
 		int rightHandSide = Being.INFINITE_AMMO ? getRoundsPerClip() : owner.getAmmo().get(ammoType);
 		return name + ": " + currentRounds + "/" + rightHandSide;
-	}
-
-	@Override public void handleContact(Body body, GunShot gunshot,
-			WorldManager worldManager, WorldManifold manifold) {
-		body.setUserData(WorldManager.REMOVE_USER_DATA);
-		worldManager.getGunshots().remove(body);
-		Gdx.app.log("Gun.handleContact","Move this to gunshot ahndleContact");
 	}
 }

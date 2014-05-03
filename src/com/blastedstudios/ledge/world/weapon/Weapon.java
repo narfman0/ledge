@@ -2,14 +2,14 @@ package com.blastedstudios.ledge.world.weapon;
 
 import java.io.Serializable;
 
-import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.physics.box2d.Contact;
+import com.badlogic.gdx.physics.box2d.ContactImpulse;
+import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
-import com.badlogic.gdx.physics.box2d.WorldManifold;
 import com.blastedstudios.ledge.physics.IRagdoll;
 import com.blastedstudios.ledge.world.Stats;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
-import com.blastedstudios.ledge.world.weapon.shot.GunShot;
 
 public abstract class Weapon implements Serializable{
 	private static final long serialVersionUID = 1L;
@@ -134,7 +134,8 @@ public abstract class Weapon implements Serializable{
 		return name;
 	}
 	
-	public abstract void handleContact(Body body, GunShot gunshot, WorldManager worldManager, WorldManifold manifold);
+	public void handleContact(WorldManager worldManager, Being target, 
+			Fixture hit, Contact contact, ContactImpulse oldManifold){}
 	public void activate(World world, IRagdoll ragdoll, Being owner){}
 	public void deactivate(World world){}
 }

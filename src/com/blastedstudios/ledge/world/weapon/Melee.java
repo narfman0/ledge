@@ -4,15 +4,17 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
+import com.badlogic.gdx.physics.box2d.Contact;
+import com.badlogic.gdx.physics.box2d.ContactImpulse;
+import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
-import com.badlogic.gdx.physics.box2d.WorldManifold;
 import com.badlogic.gdx.physics.box2d.joints.WeldJointDef;
 import com.blastedstudios.gdxworld.physics.PhysicsHelper;
+import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.physics.IRagdoll;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.Being.BodyPart;
-import com.blastedstudios.ledge.world.weapon.shot.GunShot;
 
 public class Melee extends Weapon {
 	private static final long serialVersionUID = 1L;
@@ -80,8 +82,15 @@ public class Melee extends Weapon {
 		return "[Melee name:" + name + " dmg: " + getDamage() + "]";
 	}
 
-	@Override public void handleContact(Body body, GunShot gunshot,
-			WorldManager worldManager, WorldManifold manifold) {
-		Gdx.app.log("Melee.handleContact", "Move melee damage calculation here");
+	@Override public void handleContact(WorldManager worldManager, Being target, 
+			Fixture hit, Contact contact, ContactImpulse oldManifold) {
+		float impulse = 0;
+		for(float normalImpulse : oldManifold.getNormalImpulses())
+			impulse += normalImpulse;
+		if(impulse > Properties.getFloat("melee.contact.impulse.threshold", .02f)){
+			Gdx.app.log("ContactListener.postSolve","HandleMelee - scale damage with impulse impulse: " + impulse);
+			worldManager.processHit(getDamage() * (float)Melee.impulseToDamageScalar(impulse, Gdx.graphics.getRawDeltaTime()), 
+					target, owner, hit, contact.getWorldManifold().getNormal());
+		}
 	}
 }

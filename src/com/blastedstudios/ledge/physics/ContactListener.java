@@ -33,18 +33,11 @@ public class ContactListener implements com.badlogic.gdx.physics.box2d.ContactLi
 				worldManager.processHit(gunshot.getGun().getDamage(), target, gunshot.getBeing(), 
 						hit, contact.getWorldManifold().getNormal());
 			}
-			gunshot.getGun().handleContact(gunshotBody, gunshot, worldManager, contact.getWorldManifold());
+			gunshot.handleContact(gunshotBody, worldManager, contact.getWorldManifold());
 		}else if(meleeBody != null && hit != null){//handle melee attack
 			Being target = (Being) hit.getBody().getUserData();
 			Melee melee = (Melee) meleeBody.getUserData();
-			float impulse = 0;
-			for(float normalImpulse : oldManifold.getNormalImpulses())
-				impulse += normalImpulse;
-			if(impulse > Properties.getFloat("melee.contact.impulse.threshold", .02f)){
-				Gdx.app.log("ContactListener.postSolve","HandleMelee - scale damage with impulse impulse: " + impulse);
-				worldManager.processHit(melee.getDamage() * (float)Melee.impulseToDamageScalar(impulse, Gdx.graphics.getRawDeltaTime()), 
-						target, melee.getOwner(), hit, contact.getWorldManifold().getNormal());
-			}
+			melee.handleContact(worldManager, target, hit, contact, oldManifold);
 		}else if(hit != null){//handle physics object collision dmg
 			Being target = (Being) hit.getBody().getUserData();
 			for(float i : oldManifold.getNormalImpulses())

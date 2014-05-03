@@ -47,7 +47,7 @@ import com.blastedstudios.ledge.world.weapon.WeaponType;
 import com.blastedstudios.ledge.world.weapon.shot.GunShot;
 
 public class WorldManager implements IDeathCallback{
-	public static final String REMOVE_USER_DATA = "r", BODY_TYPE_STATIC_USER_DATA = "s";
+	public static final String REMOVE_USER_DATA = "r";
 	private final World world = new World(new Vector2(0, -10), true), aiWorldDebug;
 	private final Box2DDebugRenderer debugRenderer = new Box2DDebugRenderer();
 	private final Map<String,NPC> npcs = new HashMap<>();
