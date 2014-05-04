@@ -3,6 +3,7 @@ package com.blastedstudios.ledge.world.weapon.shot;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.WorldManifold;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.Properties;
@@ -62,8 +63,10 @@ public class GunShot {
 		this.canRemove = canRemove;
 	}
 	
-	public void handleContact(Body body, WorldManager worldManager, WorldManifold manifold){
-		body.setUserData(WorldManager.REMOVE_USER_DATA);
-		canRemove = true;
+	public void postSolve(Body gunshotBody, Fixture hit, WorldManager worldManager, WorldManifold manifold){
+		if(!origin.getRagdoll().isOwned(hit)){
+			gunshotBody.setUserData(WorldManager.REMOVE_USER_DATA);
+			canRemove = true;
+		}
 	}
 }

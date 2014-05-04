@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.WorldManifold;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
@@ -39,7 +40,7 @@ public class Flame extends GunShot {
 			body.setType(bodyType);
 	}
 	
-	@Override public void handleContact(Body body, WorldManager worldManager, WorldManifold manifold){
+	@Override public void postSolve(Body gunshotBody, Fixture hit, WorldManager worldManager, WorldManifold manifold){
 		if(!isTimeToRemoveSet()){
 			timeToRemove = System.currentTimeMillis() + Properties.getInt("flame.contact.duration", 1500);
 			bodyType = BodyType.StaticBody;

@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.WorldManifold;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.ledge.world.WorldManager;
@@ -36,12 +37,12 @@ public class Rocket extends GunShot {
 		explosion.setPosition(body.getPosition().x, body.getPosition().y);
 	}
 
-	@Override public void handleContact(Body body, WorldManager worldManager, WorldManifold manifold){
+	@Override public void postSolve(Body gunshotBody, Fixture hit, WorldManager worldManager, WorldManifold manifold){
 		RocketLauncher launcher = (RocketLauncher) gun;//TODO: make generic
 		HashMap<Being, Float> nearbyBeings = new HashMap<>();
 		//provide impulse on bodies
 		for(Body worldBody : worldManager.getBodiesIterable()){
-			Vector2 direction = worldBody.getWorldCenter().cpy().sub(body.getPosition());
+			Vector2 direction = worldBody.getWorldCenter().cpy().sub(gunshotBody.getPosition());
 			float distance = direction.len();
 			if(distance < launcher.getMaxDistance()){
 				if(worldBody.getUserData() instanceof Being){
@@ -62,11 +63,11 @@ public class Rocket extends GunShot {
 					being.getKey().getRagdoll().getBodyPart(BodyPart.torso).getFixtureList().get(0), manifold.getNormal());
 		}
 		//send off particles to particle manager
-		explosion.setPosition(body.getPosition().x, body.getPosition().y);
+		explosion.setPosition(gunshotBody.getPosition().x, gunshotBody.getPosition().y);
 		explosion.start();
 		worldManager.transferParticles(trail, explosion);
 
-		body.setUserData(WorldManager.REMOVE_USER_DATA);
+		gunshotBody.setUserData(WorldManager.REMOVE_USER_DATA);
 		setCanRemove(true);
 	}
 }
