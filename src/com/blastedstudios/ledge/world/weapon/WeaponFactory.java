@@ -73,6 +73,10 @@ public class WeaponFactory {
 			weapon = WeaponFactory.getWeapon("benellim4");
 		else if(gunRoll < .85f)
 			weapon = WeaponFactory.getWeapon("ak47");
+		else if(gunRoll < .9f)
+			weapon = WeaponFactory.getWeapon("flamethrower");
+		else if(gunRoll < .95f)
+			weapon = WeaponFactory.getWeapon("rpg7");
 		else
 			weapon = WeaponFactory.getWeapon("psg1");
 		weapon.setDamage(weapon.getDamage()*( (100f+(float)(iLevel*2))/100f) );
