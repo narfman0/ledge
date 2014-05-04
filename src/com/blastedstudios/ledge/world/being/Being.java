@@ -529,7 +529,8 @@ public class Being implements Serializable{
 					Gdx.app.error("Being.attack", "Sound null for fireSound: " + weapon.getFireSound());
 			}
 			return true;
-		}else if(weapon != null && weapon instanceof Melee && ammo.get(((Gun)weapon).getAmmoType()) > 0 && 
+		}else if(weapon != null && !(weapon instanceof Melee) && 
+				(INFINITE_AMMO || ammo.get(((Gun)weapon).getAmmoType()) > 0) && 
 				((Gun)weapon).getCurrentRounds() == 0 && !reloading)
 			setReloading(true);
 		for(IComponent component : getListeners())
