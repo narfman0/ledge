@@ -17,6 +17,7 @@ import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.Being.BodyPart;
 
 public class Melee extends Weapon {
+	private static final float MIN_DAMAGE = Properties.getFloat("melee.damage.min", .005f);
 	private static final long serialVersionUID = 1L;
 	private float width, height, density;
 	private transient Body body;
@@ -82,15 +83,16 @@ public class Melee extends Weapon {
 		return "[Melee name:" + name + " dmg: " + getDamage() + "]";
 	}
 
-	@Override public void handleContact(WorldManager worldManager, Being target, 
+	@Override public void postSolve(WorldManager worldManager, Being target, 
 			Fixture hit, Contact contact, ContactImpulse oldManifold) {
 		float impulse = 0;
 		for(float normalImpulse : oldManifold.getNormalImpulses())
-			impulse += normalImpulse;
-		if(impulse > Properties.getFloat("melee.contact.impulse.threshold", .02f)){
-			Gdx.app.log("ContactListener.postSolve","HandleMelee - scale damage with impulse impulse: " + impulse);
-			worldManager.processHit(getDamage() * (float)Melee.impulseToDamageScalar(impulse, Gdx.graphics.getRawDeltaTime()), 
-					target, owner, hit, contact.getWorldManifold().getNormal());
+			impulse += Double.isNaN(normalImpulse) ? 0f : normalImpulse;
+		if(!owner.isFriendly(target.getFaction())){
+			float meleeDmg = MIN_DAMAGE;
+			if(impulse > Properties.getFloat("melee.contact.impulse.threshold", .02f))
+				meleeDmg = (float)Melee.impulseToDamageScalar(impulse, Gdx.graphics.getRawDeltaTime());
+			worldManager.processHit(getDamage() * meleeDmg, target, owner, hit, contact.getWorldManifold().getNormal());
 		}
 	}
 }

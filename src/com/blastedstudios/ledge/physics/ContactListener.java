@@ -37,7 +37,7 @@ public class ContactListener implements com.badlogic.gdx.physics.box2d.ContactLi
 		}else if(meleeBody != null && hit != null){//handle melee attack
 			Being target = (Being) hit.getBody().getUserData();
 			Melee melee = (Melee) meleeBody.getUserData();
-			melee.handleContact(worldManager, target, hit, contact, oldManifold);
+			melee.postSolve(worldManager, target, hit, contact, oldManifold);
 		}else if(hit != null){//handle physics object collision dmg
 			Being target = (Being) hit.getBody().getUserData();
 			for(float i : oldManifold.getNormalImpulses())
