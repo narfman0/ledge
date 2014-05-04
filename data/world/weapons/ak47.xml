@@ -1,5 +1,4 @@
 <com.blastedstudios.ledge.world.weapon.Gun>
-	<type>RIFLE</type>
 	<stats>
 		<accuracy>.9</accuracy>
 		<damage>40</damage>

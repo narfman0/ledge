@@ -1,5 +1,4 @@
 <com.blastedstudios.ledge.world.weapon.Gun>
-	<type>SNIPER</type>
 	<stats>
 		<accuracy>.99</accuracy>
 		<damage>75</damage>

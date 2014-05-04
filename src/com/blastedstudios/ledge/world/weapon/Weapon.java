@@ -13,19 +13,10 @@ import com.blastedstudios.ledge.world.being.Being;
 
 public abstract class Weapon implements Serializable{
 	private static final long serialVersionUID = 1L;
-	protected WeaponType type = WeaponType.MELEE;
 	protected int cost;
 	protected Stats stats;
 	protected String name, resource, fireSound;
 	
-	public WeaponType getType() {
-		return type;
-	}
-	
-	public void setType(WeaponType type) {
-		this.type = type;
-	}
-
 	public float getDamage() {
 		return stats.getDamage();
 	}

@@ -1,5 +1,4 @@
 <com.blastedstudios.ledge.world.weapon.Gun>
-	<type>PISTOL</type>
 	<stats>
 		<accuracy>.8</accuracy>
 		<damage>28</damage>

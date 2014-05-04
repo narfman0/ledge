@@ -19,8 +19,8 @@ import com.blastedstudios.ledge.ai.AIWorld;
 import com.blastedstudios.ledge.world.Stats;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.weapon.Gun;
+import com.blastedstudios.ledge.world.weapon.Melee;
 import com.blastedstudios.ledge.world.weapon.Weapon;
-import com.blastedstudios.ledge.world.weapon.WeaponType;
 
 public class NPC extends Being {
 	public enum AIFieldEnum{AI_WORLD, OBJECTIVE, SELF, LAST_HEALTH, WORLD}
@@ -78,7 +78,7 @@ public class NPC extends Being {
 	@Override public void reload(){
 		super.reload();
 		Weapon gun = getEquippedWeapon();
-		if(gun != null && gun.getType() != WeaponType.MELEE)
+		if(gun != null && !(gun instanceof Melee))
 			((Gun)gun).addCurrentRounds(gun.getRoundsPerClip() - ((Gun)gun).getCurrentRounds());
 	}
 

@@ -1,5 +1,4 @@
 <com.blastedstudios.ledge.world.weapon.RocketLauncher>
-	<type>ROCKET_LAUNCHER</type>
 	<stats>
 		<accuracy>.95</accuracy>
 		<damage>10</damage>

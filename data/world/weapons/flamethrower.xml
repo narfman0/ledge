@@ -1,5 +1,4 @@
 <com.blastedstudios.ledge.world.weapon.Flamethrower>
-	<type>FLAMETHROWER</type>
 	<stats>
 		<accuracy>.97</accuracy>
 		<damage>1</damage>

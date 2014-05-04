@@ -33,7 +33,6 @@ import com.blastedstudios.ledge.world.weapon.Gun;
 import com.blastedstudios.ledge.world.weapon.Melee;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 import com.blastedstudios.ledge.world.weapon.DamageStruct;
-import com.blastedstudios.ledge.world.weapon.WeaponType;
 import com.blastedstudios.ledge.world.weapon.shot.GunShot;
 
 public class Being implements Serializable{
@@ -198,7 +197,7 @@ public class Being implements Serializable{
 	 */
 	public void reload(){
 		Weapon weapon = getEquippedWeapon();
-		if(weapon != null && weapon.getType() != WeaponType.MELEE && reloading && 
+		if(weapon != null && !(weapon instanceof Melee) && reloading && 
 				System.currentTimeMillis() - reloadStartTime > weapon.getReloadSpeed()){
 			reloadImmediate((Gun)weapon);
 			Gdx.app.log("Being.reload", name + "'s gun " + weapon.getName() + " reloaded to " + 
@@ -254,7 +253,7 @@ public class Being implements Serializable{
 		ragdoll = new com.blastedstudios.ledge.physics.Ragdoll(world, x, y, this, atlas);
 		
 		for(Weapon weapon : guns){
-			if(weapon.getType() != WeaponType.MELEE){
+			if(!(weapon instanceof Melee)){
 				Gun gun = (Gun) weapon;
 				if(gun.getCurrentRounds() == 0)
 					gun.addCurrentRounds(random.nextInt(3) + 3);
@@ -431,7 +430,7 @@ public class Being implements Serializable{
 	}
 
 	public boolean isOwned(Fixture fixture){
-		if(getEquippedWeapon() != null && getEquippedWeapon().getType() == WeaponType.MELEE){
+		if(getEquippedWeapon() != null && getEquippedWeapon() instanceof Melee){
 			Melee meleeWeapon = (Melee) getEquippedWeapon(); 
 			if(meleeWeapon.getBody() == null)
 				Gdx.app.error("Being.isOwned", "Melee body null for: " + getName() + "'s weapon: " + meleeWeapon);
@@ -497,7 +496,7 @@ public class Being implements Serializable{
 	public boolean canAttack(){
 		Weapon equipped = getEquippedWeapon();
 		float timeDelta = getMSSinceLastFire()/1000f;
-		return !isDead() && !reloading && equipped != null && (equipped.getType().equals(WeaponType.MELEE) ||
+		return !isDead() && !reloading && equipped != null && (equipped instanceof Melee ||
 				(((Gun)equipped).getCurrentRounds() > 0 && timeDelta > 1f/equipped.getRateOfFire()));
 	}
 	
@@ -509,7 +508,7 @@ public class Being implements Serializable{
 		Weapon weapon = getEquippedWeapon();
 		if(canAttack()){
 			lastFireTime = System.currentTimeMillis();
-			if(weapon.getType() != WeaponType.MELEE){
+			if(!(weapon instanceof Melee)){
 				Gun gun = (Gun) weapon;
 				gun.addCurrentRounds(-1);
 				for(int i=0; i<weapon.getProjectileCount(); i++){
@@ -522,7 +521,7 @@ public class Being implements Serializable{
 			}
 			float volume = 1f - Math.min(1, world.getPlayer().getPosition().dst(getPosition()) / 25f);
 			float pan = Math.max(-1, Math.min(1, (world.getPlayer().getPosition().x - getPosition().x) / 15f));
-			if(weapon.getType() != WeaponType.MELEE){
+			if(!(weapon instanceof Melee)){
 				Sound sound = SoundManager.getSound(weapon.getFireSound());
 				if(sound != null)
 					sound.play(volume, 1, pan);
@@ -530,7 +529,7 @@ public class Being implements Serializable{
 					Gdx.app.error("Being.attack", "Sound null for fireSound: " + weapon.getFireSound());
 			}
 			return true;
-		}else if(weapon != null && weapon.getType() != WeaponType.MELEE && ammo.get(((Gun)weapon).getAmmoType()) > 0 && 
+		}else if(weapon != null && weapon instanceof Melee && ammo.get(((Gun)weapon).getAmmoType()) > 0 && 
 				((Gun)weapon).getCurrentRounds() == 0 && !reloading)
 			setReloading(true);
 		for(IComponent component : getListeners())

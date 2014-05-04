@@ -40,10 +40,10 @@ import com.blastedstudios.ledge.world.being.NPCData;
 import com.blastedstudios.ledge.world.being.Being.IDeathCallback;
 import com.blastedstudios.ledge.world.being.Player;
 import com.blastedstudios.ledge.world.weapon.Gun;
+import com.blastedstudios.ledge.world.weapon.Melee;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 import com.blastedstudios.ledge.world.weapon.WeaponFactory;
 import com.blastedstudios.ledge.world.weapon.DamageStruct;
-import com.blastedstudios.ledge.world.weapon.WeaponType;
 import com.blastedstudios.ledge.world.weapon.shot.GunShot;
 
 public class WorldManager implements IDeathCallback{
@@ -67,7 +67,7 @@ public class WorldManager implements IDeathCallback{
 		this.level = level;
 		dropManager = new DropManager();
 		Weapon gun = player.getEquippedWeapon();
-		if(gun != null && gun.getType() != WeaponType.MELEE)
+		if(gun != null && !(gun instanceof Melee))
 			((Gun)gun).addCurrentRounds(gun.getRoundsPerClip() - ((Gun)gun).getCurrentRounds());
 		createLevelStruct = level.createLevel(world);
 		world.setContactListener(new ContactListener(this));

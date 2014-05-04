@@ -20,9 +20,9 @@ import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.weapon.AmmoTypeEnum;
 import com.blastedstudios.ledge.world.weapon.Gun;
+import com.blastedstudios.ledge.world.weapon.Melee;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 import com.blastedstudios.ledge.world.weapon.WeaponFactory;
-import com.blastedstudios.ledge.world.weapon.WeaponType;
 
 public class DropManager {
 	public static final String GUN_DROP_PROPERTY = "gun.drop.probability";
@@ -107,7 +107,7 @@ public class DropManager {
 	}
 	
 	private void generateAmmo(World world, Being being) {
-		if(being.getEquippedWeapon() != null && being.getEquippedWeapon().getType() != WeaponType.MELEE &&
+		if(being.getEquippedWeapon() != null && !(being.getEquippedWeapon() instanceof Melee) &&
 				random.nextFloat() < Properties.getFloat("ammo.drop.probability", .2f)){
 			int amount = being.getEquippedWeapon().getRoundsPerClip()/4 + random.nextInt(5);
 			AmmoDropStruct struct = new AmmoDropStruct(amount, ((Gun)being.getEquippedWeapon()).getAmmoType());
