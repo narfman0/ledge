@@ -23,7 +23,7 @@ import com.blastedstudios.ledge.world.weapon.Weapon;
 import com.blastedstudios.ledge.world.weapon.WeaponType;
 
 public class NPC extends Being {
-	public enum AIFieldEnum{AI_WORLD, OBJECTIVE, SELF, WORLD}
+	public enum AIFieldEnum{AI_WORLD, OBJECTIVE, SELF, LAST_HEALTH, WORLD}
 	public enum DifficultyEnum{HARD, MEDIUM, EASY}
 	private static final long serialVersionUID = 1L;
 	private IContext context;
