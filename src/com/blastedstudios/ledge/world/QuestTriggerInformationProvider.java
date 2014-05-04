@@ -8,6 +8,7 @@ import com.badlogic.gdx.utils.Array;
 import com.blastedstudios.gdxworld.world.quest.trigger.IQuestTriggerInformationProvider;
 import com.blastedstudios.ledge.plugin.quest.trigger.beinghit.IBeingHitListener;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
+import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.weapon.DamageStruct;
 
 public class QuestTriggerInformationProvider implements IQuestTriggerInformationProvider{
@@ -29,8 +30,10 @@ public class QuestTriggerInformationProvider implements IQuestTriggerInformation
 	}
 
 	@Override public boolean isDead(String name) {
-		return worldManager.getAllBeings().containsKey(name) && 
-				worldManager.getAllBeings().get(name).isDead();
+		for(Being being : worldManager.getAllBeings())
+			if(being.getName().equalsIgnoreCase(name) && being.isDead())
+				return true;
+		return false;
 	}
 
 	@Override public boolean isNear(String origin, String target, float distance) {

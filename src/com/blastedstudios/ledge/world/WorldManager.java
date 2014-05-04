@@ -7,6 +7,7 @@ import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -50,7 +51,7 @@ public class WorldManager implements IDeathCallback{
 	public static final String REMOVE_USER_DATA = "r";
 	private final World world = new World(new Vector2(0, -10), true), aiWorldDebug;
 	private final Box2DDebugRenderer debugRenderer = new Box2DDebugRenderer();
-	private final Map<String,NPC> npcs = new HashMap<>();
+	private final List<NPC> npcs = new LinkedList<>();
 	private final Map<Body,GunShot> gunshots = new HashMap<>();
 	private final Player player;
 	private final CreateLevelReturnStruct createLevelStruct;
@@ -81,7 +82,7 @@ public class WorldManager implements IDeathCallback{
 		spriteBatch.setProjectionMatrix(cam.combined);
 		spriteBatch.begin();
 		player.render(dt, world, spriteBatch, gdxRenderer, this);
-		for(NPC npc : npcs.values())
+		for(NPC npc : npcs)
 			npc.render(dt, world, spriteBatch, gdxRenderer, this);
 		for(Iterator<Entry<Body, GunShot>> iter = gunshots.entrySet().iterator(); iter.hasNext();){
 			Entry<Body, GunShot> entry = iter.next();
@@ -145,21 +146,18 @@ public class WorldManager implements IDeathCallback{
 		return world;
 	}
 
-	public Map<String,Being> getAllBeings() {
-		HashMap<String,Being> beings = new HashMap<>();
-		for(Entry<String,NPC> entry : npcs.entrySet())
-			beings.put(entry.getKey(), entry.getValue());
-		beings.put(player.getName(), player);
-		beings.put("player", player);
-		beings.put("Player", player);
+	public List<Being> getAllBeings() {
+		List<Being> beings = new LinkedList<>();
+		beings.addAll(npcs);
+		beings.add(player);
 		return beings;
 	}
-	
+
 	public VisibilityReturnStruct isVisible(Being origin){
 		Being closestEnemy = null;
 		float closestDistanceSq = Float.MAX_VALUE;
 		int enemyCount = 0;
-		for(Being being : getAllBeings().values())
+		for(Being being : getAllBeings())
 			if(being != origin && !origin.isFriendly(being.getFaction()) && !being.isDead()){
 				float currentClosestDistanceSq = being.getPosition().dst2(origin.getPosition());
 				boolean closer = closestEnemy == null || closestDistanceSq > currentClosestDistanceSq,
@@ -226,7 +224,7 @@ public class WorldManager implements IDeathCallback{
 				npcLevel, xp, npcData.get("Behavior"), level.getPath(npcData.get("Path")),
 				faction, factions, this, npcData.get("Resource"), difficulty, aiWorld);
 		npc.aim(npcData.getFloat("Aim"));
-		npcs.put(name, npc);
+		npcs.add(npc);
 		npc.respawn(world, coordinates.x, coordinates.y);
 		return npc;
 	}

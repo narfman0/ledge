@@ -54,13 +54,9 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 		if(being.equalsIgnoreCase("player"))
 			worldManager.setRespawnLocation(coordinates.cpy());
 		else{
-			int suffix = 0;
-			String name = being;
-			while(worldManager.getAllBeings().containsKey(name + suffix))
-				suffix++;
 			NPCData data = NPCData.parse(being);
 			data.set("Path", path);
-			worldManager.spawnNPC(being + suffix, coordinates, data, worldManager.getAiWorld());
+			worldManager.spawnNPC(being, coordinates, data, worldManager.getAiWorld());
 		}
 	}
 
@@ -74,22 +70,31 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 	}
 
 	public CompletionEnum factionChange(String beingName, FactionEnum faction) {
-		Being being = worldManager.getAllBeings().get(beingName);
-		being.setFaction(faction);
-		being.respawn(worldManager.getWorld(), being.getPosition().x, being.getPosition().y);
+		for(Being being : worldManager.getAllBeings())
+			if(being.getName().equalsIgnoreCase(beingName) || 
+					beingName.equalsIgnoreCase("player") && being == worldManager.getPlayer()){
+				being.setFaction(faction);
+				being.respawn(worldManager.getWorld(), being.getPosition().x, being.getPosition().y);
+			}
 		return CompletionEnum.COMPLETED;
 	}
 
 	public CompletionEnum pathChange(String beingString, String pathString) {
 		GDXPath path = worldManager.getPath(pathString);
-		Being being = worldManager.getAllBeings().get(beingString);
+		
+		boolean found = false;
+		for(Being being : worldManager.getAllBeings())
+			if(being.getName().equalsIgnoreCase(beingString)){
+				((NPC)being).setPath(path);
+				found = true;
+			}
+		
 		if(path == null)
 			Gdx.app.error("QuestManifestationExecutor.pathChange", "Path null " +
 					"for quest manifestation! path:" + pathString + " being:" + beingString);
-		if(being == null)
+		if(!found)
 			Gdx.app.error("QuestManifestationExecutor.pathChange", "Being null " +
 					"for quest manifestation! path:" + pathString + " being:" + beingString);
-		((NPC)being).setPath(path);
 		return CompletionEnum.COMPLETED;
 	}
 
@@ -104,9 +109,12 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 	}
 
 	public CompletionEnum beingRotation(String beingString, boolean fixedRotation, float torque) {
-		final Being being = getBeing(beingString);
-		being.setFixedRotation(fixedRotation);
-		being.getRagdoll().applyTorque(torque);
+		for(Being being : worldManager.getAllBeings())
+			if(being.getName().equalsIgnoreCase(beingString) || 
+					beingString.equalsIgnoreCase("player") && being == worldManager.getPlayer()){
+				being.setFixedRotation(fixedRotation);
+				being.getRagdoll().applyTorque(torque);
+			}
 		return CompletionEnum.COMPLETED;
 	}
 	
@@ -116,24 +124,25 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 	}
 
 	public CompletionEnum weaponAdd(String weapon, String target) {
-		Being recipient = target.equals("player") ? worldManager.getPlayer() : worldManager.getAllBeings().get(target);
-		recipient.getGuns().add(0, WeaponFactory.getWeapon(weapon));
-		recipient.setCurrentWeapon(0, worldManager.getWorld());
-		if(recipient.getGuns().size() > 3)
-			recipient.getInventory().add(recipient.getGuns().remove(3));
+		for(Being being : worldManager.getAllBeings())
+			if(being.getName().equalsIgnoreCase(target) ||
+					target.equalsIgnoreCase("player") && being == worldManager.getPlayer()){
+				if(!being.getGuns().isEmpty())
+					being.getGuns().get(0).deactivate(worldManager.getWorld());
+				being.getGuns().add(0, WeaponFactory.getWeapon(weapon));
+				being.setCurrentWeapon(0, worldManager.getWorld());
+				if(being.getGuns().size() > 3)
+					being.getInventory().add(being.getGuns().remove(3));
+			}
 		return CompletionEnum.COMPLETED;
 	}
 
-	public CompletionEnum addXP(String being, long xp) {
-		getBeing(being).addXp(xp);
+	public CompletionEnum addXP(String beingName, long xp) {
+		for(Being being : worldManager.getAllBeings())
+			if(being.getName().equalsIgnoreCase(beingName) || 
+					beingName.equalsIgnoreCase("player") && being == worldManager.getPlayer())
+				being.addXp(xp);
 		return CompletionEnum.COMPLETED;
-	}
-	
-	/**
-	 * @return being corresponding to name, returns the player if string is "player"
-	 */
-	private Being getBeing(String beingName){
-		return worldManager.getAllBeings().get(beingName);
 	}
 
 	@Override public void particle(String name, String effectFile, String imagesDir,

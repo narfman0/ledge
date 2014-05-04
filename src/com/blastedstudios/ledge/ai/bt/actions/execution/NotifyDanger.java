@@ -88,7 +88,7 @@ public class NotifyDanger extends
 		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
 		AIWorld aiWorld = (AIWorld) getContext().getVariable(AIFieldEnum.AI_WORLD.name());
 		Vector2 target = new Vector2(getTarget()[0], getTarget()[1]);
-		for(Being being : world.getAllBeings().values()){
+		for(Being being : world.getAllBeings()){
 			float distanceSquared = self.getPosition().dst2(being.getPosition());
 			if(being != self && !being.isDead() && self.isFriendly(being.getFaction()) && being instanceof NPC && 
 					distanceSquared < Properties.getFloat("npc.notify.los.distanceSq", 225f)){

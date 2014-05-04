@@ -34,10 +34,14 @@ public class ParticleManager {
 			Entry<String,ParticleStruct> entry = iter.next();
 			ParticleStruct struct = entry.getValue();
 			if(!struct.particle.getAttachedBody().isEmpty()){
-				Being being = worldManager.getAllBeings().get(struct.particle.getAttachedBody());
-				if(being != null)
-					struct.effect.setPosition(being.getPosition().x, being.getPosition().y);
-				else
+				boolean found = false;
+				for(Being being : worldManager.getAllBeings())
+					if(being.getName().equalsIgnoreCase(struct.particle.getAttachedBody()) || 
+							struct.particle.getAttachedBody().equalsIgnoreCase("player") && being == worldManager.getPlayer()){
+						struct.effect.setPosition(being.getPosition().x, being.getPosition().y);
+						found = true;
+					}
+				if(!found)
 					for(Entry<GDXShape, Body> body : worldManager.getCreateLevelStruct().bodies.entrySet())
 						if(body.getKey().getName().equals(struct.particle.getAttachedBody()))
 							struct.effect.setPosition(body.getValue().getPosition().x, body.getValue().getPosition().y);
