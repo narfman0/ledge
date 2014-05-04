@@ -48,8 +48,16 @@ public class ContactListener implements com.badlogic.gdx.physics.box2d.ContactLi
 				}
 		}
 	}
-
+	
+	@Override public void preSolve(Contact contact, Manifold arg1) {
+		GunShot gunshot = (GunShot) (contact.getFixtureA().getBody().getUserData() instanceof GunShot ? contact.getFixtureA().getBody().getUserData() :
+			contact.getFixtureB().getBody().getUserData() instanceof GunShot ? contact.getFixtureB().getBody().getUserData() : null);
+		Fixture hit = contact.getFixtureA().getBody().getUserData() instanceof Being ? contact.getFixtureA() :
+			contact.getFixtureB().getBody().getUserData() instanceof Being ? contact.getFixtureB() : null;
+		if(gunshot != null && !gunshot.collideWithOrigin() && gunshot.getBeing().isOwned(hit))
+			contact.setEnabled(false);
+	}
+	
 	@Override public void beginContact(Contact contact) {}
 	@Override public void endContact(Contact contact) {}
-	@Override public void preSolve(Contact contact, Manifold arg1) {}
 }

@@ -26,7 +26,7 @@ public class PhysicsEnvironment {
 			BULLET_RADIUS = Properties.getFloat("gun.bullet.radius", 1f);
 
 	public static Body createBullet(World world, GunShot gunshot, Vector2 origin){
-		Vector2 position = origin.cpy().add(gunshot.getDir()),
+		Vector2 position = origin.cpy().add(gunshot.getDir().cpy().scl(.4f)),
 				velocity = gunshot.getDir().cpy().scl(gunshot.getGun().getMuzzleVelocity());
 		Body body = com.blastedstudios.gdxworld.physics.PhysicsHelper.createCircle(world, 
 				BULLET_RADIUS, position, BodyType.DynamicBody, BULLET_DENSITY, MASK_PROJECTILE, CAT_PROJECTILE, (short)0);

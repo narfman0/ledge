@@ -69,4 +69,8 @@ public class GunShot {
 			canRemove = true;
 		}
 	}
+	
+	public boolean collideWithOrigin(){
+		return false;
+	}
 }
