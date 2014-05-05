@@ -14543,146 +14543,146 @@
       <polygons>
         <world.shape.GDXPolygon>
           <name>Polygon-0</name>
-          <resource></resource>
+          <resource>forest1.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>42.854256</x>
-            <y>-24.71514</y>
+            <x>42.84319</x>
+            <y>-25.81121</y>
           </center>
-          <repeatable>false</repeatable>
+          <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>60.03325</x>
-              <y>11.18389</y>
+              <x>60.044315</x>
+              <y>12.279962</y>
             </Vector2>
             <Vector2>
-              <x>59.59575</x>
-              <y>-3.0348587</y>
+              <x>59.606815</x>
+              <y>-1.9387875</y>
             </Vector2>
             <Vector2>
-              <x>51.28325</x>
-              <y>-2.4098587</y>
+              <x>51.294315</x>
+              <y>-1.3137875</y>
             </Vector2>
             <Vector2>
-              <x>42.44574</x>
-              <y>2.9026413</y>
+              <x>42.456806</x>
+              <y>3.9987125</y>
             </Vector2>
             <Vector2>
-              <x>42.53325</x>
-              <y>7.6682644</y>
+              <x>42.544315</x>
+              <y>8.764336</y>
             </Vector2>
             <Vector2>
-              <x>28.095741</x>
-              <y>8.137014</y>
+              <x>28.106808</x>
+              <y>9.233086</y>
             </Vector2>
             <Vector2>
-              <x>28.083237</x>
-              <y>6.1838913</y>
+              <x>28.094303</x>
+              <y>7.2799625</y>
             </Vector2>
             <Vector2>
-              <x>27.098862</x>
-              <y>6.16436</y>
+              <x>27.109928</x>
+              <y>7.2604313</y>
             </Vector2>
             <Vector2>
-              <x>27.098862</x>
-              <y>5.69561</y>
+              <x>27.109928</x>
+              <y>6.7916813</y>
             </Vector2>
             <Vector2>
-              <x>28.083237</x>
-              <y>5.676079</y>
+              <x>28.094303</x>
+              <y>6.77215</y>
             </Vector2>
             <Vector2>
-              <x>28.083237</x>
-              <y>5.129204</y>
+              <x>28.094303</x>
+              <y>6.225275</y>
             </Vector2>
             <Vector2>
-              <x>18.995747</x>
-              <y>-1.8942356</y>
+              <x>19.006813</x>
+              <y>-0.79816437</y>
             </Vector2>
             <Vector2>
-              <x>15.314495</x>
-              <y>-3.3200169</y>
+              <x>15.325562</x>
+              <y>-2.2239456</y>
             </Vector2>
             <Vector2>
-              <x>8.183243</x>
-              <y>-2.2848606</y>
+              <x>8.194309</x>
+              <y>-1.1887894</y>
             </Vector2>
             <Vector2>
-              <x>2.823864</x>
-              <y>-0.4489231</y>
+              <x>2.8349304</x>
+              <y>0.64714813</y>
             </Vector2>
             <Vector2>
-              <x>0.6363678</x>
-              <y>-0.23407936</y>
+              <x>0.64743423</x>
+              <y>0.8619919</y>
             </Vector2>
             <Vector2>
-              <x>-7.844883</x>
-              <y>-0.17548561</y>
+              <x>-7.8338165</x>
+              <y>0.92058563</y>
             </Vector2>
             <Vector2>
-              <x>-15.779257</x>
-              <y>-1.0739231</y>
+              <x>-15.76819</x>
+              <y>0.022148132</y>
             </Vector2>
             <Vector2>
-              <x>-19.13238</x>
-              <y>-1.4840794</y>
+              <x>-19.121313</x>
+              <y>-0.38800812</y>
             </Vector2>
             <Vector2>
-              <x>-21.910507</x>
-              <y>-2.636423</y>
+              <x>-21.89944</x>
+              <y>-1.5403519</y>
             </Vector2>
             <Vector2>
-              <x>-26.498007</x>
-              <y>-2.6950169</y>
+              <x>-26.48694</x>
+              <y>-1.5989456</y>
             </Vector2>
             <Vector2>
-              <x>-31.37613</x>
-              <y>-3.2223606</y>
+              <x>-31.365063</x>
+              <y>-2.1262894</y>
             </Vector2>
             <Vector2>
-              <x>-36.98238</x>
-              <y>-3.3004856</y>
+              <x>-36.971313</x>
+              <y>-2.2044144</y>
             </Vector2>
             <Vector2>
-              <x>-41.40113</x>
-              <y>-4.648142</y>
+              <x>-41.390064</x>
+              <y>-3.5520706</y>
             </Vector2>
             <Vector2>
-              <x>-45.601128</x>
-              <y>-2.9293919</y>
+              <x>-45.59006</x>
+              <y>-1.8333206</y>
             </Vector2>
             <Vector2>
-              <x>-49.866756</x>
-              <y>0.9573269</y>
+              <x>-49.85569</x>
+              <y>2.0533981</y>
             </Vector2>
             <Vector2>
-              <x>-53.926132</x>
-              <y>3.7112331</y>
+              <x>-53.915066</x>
+              <y>4.8073044</y>
             </Vector2>
             <Vector2>
-              <x>-56.02613</x>
-              <y>4.570608</y>
+              <x>-56.015064</x>
+              <y>5.6666794</y>
             </Vector2>
             <Vector2>
-              <x>-61.669876</x>
-              <y>6.133108</y>
+              <x>-61.65881</x>
+              <y>7.2291794</y>
             </Vector2>
             <Vector2>
-              <x>-62.644936</x>
-              <y>-20.163088</y>
+              <x>-61.390686</x>
+              <y>-34.04681</y>
             </Vector2>
             <Vector2>
-              <x>62.27162</x>
-              <y>-18.158003</y>
+              <x>60.69649</x>
+              <y>-36.060394</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-31</name>
-          <resource></resource>
+          <resource>metal1.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -14691,7 +14691,7 @@
             <x>78.29483</x>
             <y>-10.940674</y>
           </center>
-          <repeatable>false</repeatable>
+          <repeatable>true</repeatable>
           <vertices>
             <Vector2>
               <x>-7.0734406</x>
@@ -14713,7 +14713,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-35</name>
-          <resource></resource>
+          <resource>forest1.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -14722,7 +14722,7 @@
             <x>41.12529</x>
             <y>-21.4646</y>
           </center>
-          <repeatable>false</repeatable>
+          <repeatable>true</repeatable>
           <vertices>
             <Vector2>
               <x>-2.357029</x>
@@ -14760,7 +14760,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-43</name>
-          <resource></resource>
+          <resource>forest1.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -14769,7 +14769,7 @@
             <x>34.373215</x>
             <y>-17.66333</y>
           </center>
-          <repeatable>false</repeatable>
+          <repeatable>true</repeatable>
           <vertices>
             <Vector2>
               <x>-3.3487015</x>
@@ -14823,7 +14823,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-55</name>
-          <resource></resource>
+          <resource>forest1.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -14832,7 +14832,7 @@
             <x>12.863184</x>
             <y>-2.8276856</y>
           </center>
-          <repeatable>false</repeatable>
+          <repeatable>true</repeatable>
           <vertices>
             <Vector2>
               <x>19.320704</x>
@@ -17593,207 +17593,215 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-1</name>
-          <resource></resource>
+          <resource>forest1.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-56.324677</x>
-            <y>-22.912504</y>
+            <x>-57.99029</x>
+            <y>-27.745255</y>
           </center>
-          <repeatable>false</repeatable>
+          <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>37.52569</x>
-              <y>4.3042164</y>
+              <x>39.191303</x>
+              <y>9.136967</y>
             </Vector2>
             <Vector2>
-              <x>30.569439</x>
-              <y>4.890154</y>
+              <x>32.235054</x>
+              <y>9.722904</y>
             </Vector2>
             <Vector2>
-              <x>23.875687</x>
-              <y>4.4604664</y>
+              <x>25.541302</x>
+              <y>9.293217</y>
             </Vector2>
             <Vector2>
-              <x>17.401855</x>
-              <y>2.341814</y>
+              <x>19.06747</x>
+              <y>7.1745644</y>
             </Vector2>
             <Vector2>
-              <x>7.035839</x>
-              <y>-2.1821117</y>
+              <x>8.701454</x>
+              <y>2.6506386</y>
             </Vector2>
             <Vector2>
-              <x>0.14286804</x>
-              <y>-3.1782055</y>
+              <x>1.8084831</x>
+              <y>1.6545448</y>
             </Vector2>
             <Vector2>
-              <x>-6.3649445</x>
-              <y>-2.016096</y>
+              <x>-4.6993294</x>
+              <y>2.8166542</y>
             </Vector2>
             <Vector2>
-              <x>-15.057518</x>
-              <y>-0.93699455</y>
+              <x>-13.391903</x>
+              <y>3.8957558</y>
             </Vector2>
             <Vector2>
-              <x>-22.501663</x>
-              <y>-0.93699455</y>
+              <x>-20.836048</x>
+              <y>3.8957558</y>
             </Vector2>
             <Vector2>
-              <x>-41.938766</x>
-              <y>1.055193</y>
+              <x>-40.27315</x>
+              <y>5.8879433</y>
             </Vector2>
             <Vector2>
-              <x>-44.81417</x>
-              <y>0.8061695</y>
+              <x>-43.148556</x>
+              <y>5.63892</y>
             </Vector2>
             <Vector2>
-              <x>14.125706</x>
-              <y>-8.607563</y>
+              <x>-44.12859</x>
+              <y>-29.494759</y>
+            </Vector2>
+            <Vector2>
+              <x>39.93256</x>
+              <y>-32.273052</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-13</name>
-          <resource></resource>
+          <resource>forest1.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-183.43188</x>
-            <y>10.506343</y>
+            <x>-181.91528</x>
+            <y>7.399816</y>
           </center>
-          <repeatable>false</repeatable>
+          <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>82.23953</x>
-              <y>-32.64197</y>
+              <x>80.72293</x>
+              <y>-29.535444</y>
             </Vector2>
             <Vector2>
-              <x>77.36141</x>
-              <y>-32.48572</y>
+              <x>75.84481</x>
+              <y>-29.379194</y>
             </Vector2>
             <Vector2>
-              <x>64.18562</x>
-              <y>-26.907112</y>
+              <x>62.66902</x>
+              <y>-23.800585</y>
             </Vector2>
             <Vector2>
-              <x>57.272743</x>
-              <y>-26.7826</y>
+              <x>55.75614</x>
+              <y>-23.676073</y>
             </Vector2>
             <Vector2>
-              <x>49.695786</x>
-              <y>-21.88514</y>
+              <x>48.179184</x>
+              <y>-18.778612</y>
             </Vector2>
             <Vector2>
-              <x>40.618057</x>
-              <y>-17.776253</y>
+              <x>39.101456</x>
+              <y>-14.669724</y>
             </Vector2>
             <Vector2>
-              <x>37.22467</x>
-              <y>-17.817757</y>
+              <x>35.70807</x>
+              <y>-14.711228</y>
             </Vector2>
             <Vector2>
-              <x>28.532104</x>
-              <y>-19.394905</y>
+              <x>27.015503</x>
+              <y>-16.288378</y>
             </Vector2>
             <Vector2>
-              <x>26.493423</x>
-              <y>-19.145882</y>
+              <x>24.976822</x>
+              <y>-16.039354</y>
             </Vector2>
             <Vector2>
-              <x>24.215698</x>
-              <y>-17.52723</y>
+              <x>22.699097</x>
+              <y>-14.420701</y>
             </Vector2>
             <Vector2>
-              <x>17.661392</x>
-              <y>-11.094125</y>
+              <x>16.14479</x>
+              <y>-7.987598</y>
             </Vector2>
             <Vector2>
-              <x>12.714127</x>
-              <y>-8.437873</y>
+              <x>11.197525</x>
+              <y>-5.331346</y>
             </Vector2>
             <Vector2>
-              <x>1.5578766</x>
-              <y>-3.4574041</y>
+              <x>0.041275024</x>
+              <y>-0.35087729</y>
             </Vector2>
             <Vector2>
-              <x>-0.90579224</x>
-              <y>-2.9593573</y>
+              <x>-2.4223938</x>
+              <y>0.14716959</y>
             </Vector2>
             <Vector2>
-              <x>-7.141327</x>
-              <y>-2.9593573</y>
+              <x>-8.657928</x>
+              <y>0.14716959</y>
             </Vector2>
             <Vector2>
-              <x>-13.184311</x>
-              <y>-0.9173651</y>
+              <x>-14.700912</x>
+              <y>2.1891618</y>
             </Vector2>
             <Vector2>
-              <x>-18.111649</x>
-              <y>2.0709162</y>
+              <x>-19.62825</x>
+              <y>5.177443</y>
             </Vector2>
             <Vector2>
-              <x>-22.760086</x>
-              <y>3.8555841</y>
+              <x>-24.276688</x>
+              <y>6.962111</y>
             </Vector2>
             <Vector2>
-              <x>-24.805405</x>
-              <y>2.610467</y>
+              <x>-26.322006</x>
+              <y>5.716994</y>
             </Vector2>
             <Vector2>
-              <x>-27.408524</x>
-              <y>2.8594904</y>
+              <x>-28.925125</x>
+              <y>5.9660172</y>
             </Vector2>
             <Vector2>
-              <x>-28.663605</x>
-              <y>3.7725763</y>
+              <x>-30.180206</x>
+              <y>6.879103</y>
             </Vector2>
             <Vector2>
-              <x>-30.66243</x>
-              <y>6.4288263</y>
+              <x>-32.17903</x>
+              <y>9.535353</y>
             </Vector2>
             <Vector2>
-              <x>-34.47415</x>
-              <y>10.413201</y>
+              <x>-35.990753</x>
+              <y>13.519728</y>
             </Vector2>
             <Vector2>
-              <x>-38.485092</x>
-              <y>19.212029</y>
+              <x>-40.001694</x>
+              <y>22.318556</y>
             </Vector2>
             <Vector2>
-              <x>-39.83313</x>
-              <y>23.36242</y>
+              <x>-41.34973</x>
+              <y>26.468946</y>
             </Vector2>
             <Vector2>
-              <x>-39.69368</x>
-              <y>26.599724</y>
+              <x>-41.21028</x>
+              <y>29.706251</y>
             </Vector2>
             <Vector2>
-              <x>-37.09056</x>
-              <y>33.62219</y>
+              <x>-38.607162</x>
+              <y>36.728718</y>
             </Vector2>
             <Vector2>
-              <x>-36.672195</x>
-              <y>38.602657</y>
+              <x>-38.188797</x>
+              <y>41.709187</y>
             </Vector2>
             <Vector2>
-              <x>-28.862823</x>
-              <y>46.944942</y>
+              <x>-30.379425</x>
+              <y>50.05147</y>
             </Vector2>
             <Vector2>
-              <x>-28.444458</x>
-              <y>49.393673</y>
+              <x>-29.96106</x>
+              <y>52.500202</y>
             </Vector2>
             <Vector2>
-              <x>-46.9187</x>
-              <y>30.409786</y>
+              <x>-48.435303</x>
+              <y>33.516315</y>
             </Vector2>
             <Vector2>
-              <x>-15.654633</x>
-              <y>-37.96842</y>
+              <x>-50.303024</x>
+              <y>-66.773674</y>
+            </Vector2>
+            <Vector2>
+              <x>81.66328</x>
+              <y>-67.49712</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -23065,6 +23073,42 @@
       <backgrounds>
         <world.GDXBackground>
           <coordinates>
+            <x>0.0</x>
+            <y>0.0</y>
+          </coordinates>
+          <texture>forestBackground.png</texture>
+          <depth>30.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-5.9944787</x>
+            <y>-4.240876</y>
+          </coordinates>
+          <texture>forestTree1.png</texture>
+          <depth>10.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>10.993022</x>
+            <y>-3.2958758</y>
+          </coordinates>
+          <texture>forestTree2.png</texture>
+          <depth>10.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-0.13145769</x>
+            <y>-4.93125</y>
+          </coordinates>
+          <texture>forestBigTree1.png</texture>
+          <depth>5.0</depth>
+          <scale>0.015</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
             <x>-870.0</x>
             <y>92.5</y>
           </coordinates>
@@ -23137,24 +23181,6 @@
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
-            <x>-50.8</x>
-            <y>92.5</y>
-          </coordinates>
-          <texture>forest-8.png</texture>
-          <depth>1.0</depth>
-          <scale>0.05</scale>
-        </world.GDXBackground>
-        <world.GDXBackground>
-          <coordinates>
-            <x>-51.6</x>
-            <y>92.5</y>
-          </coordinates>
-          <texture>forest-9.png</texture>
-          <depth>1.0</depth>
-          <scale>0.05</scale>
-        </world.GDXBackground>
-        <world.GDXBackground>
-          <coordinates>
             <x>-870.0</x>
             <y>-9.9</y>
           </coordinates>
@@ -23222,24 +23248,6 @@
             <y>-9.9</y>
           </coordinates>
           <texture>forest-17.png</texture>
-          <depth>1.0</depth>
-          <scale>0.05</scale>
-        </world.GDXBackground>
-        <world.GDXBackground>
-          <coordinates>
-            <x>-50.8</x>
-            <y>-9.9</y>
-          </coordinates>
-          <texture>forest-18.png</texture>
-          <depth>1.0</depth>
-          <scale>0.05</scale>
-        </world.GDXBackground>
-        <world.GDXBackground>
-          <coordinates>
-            <x>51.6</x>
-            <y>-9.9</y>
-          </coordinates>
-          <texture>forest-19.png</texture>
           <depth>1.0</depth>
           <scale>0.05</scale>
         </world.GDXBackground>
