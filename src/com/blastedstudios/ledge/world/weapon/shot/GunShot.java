@@ -63,7 +63,7 @@ public class GunShot {
 		this.canRemove = canRemove;
 	}
 	
-	public void postSolve(Body gunshotBody, Fixture hit, WorldManager worldManager, WorldManifold manifold){
+	public void beginContact(Body gunshotBody, Fixture hit, WorldManager worldManager, WorldManifold manifold){
 		if(!origin.getRagdoll().isOwned(hit)){
 			gunshotBody.setUserData(WorldManager.REMOVE_USER_DATA);
 			canRemove = true;

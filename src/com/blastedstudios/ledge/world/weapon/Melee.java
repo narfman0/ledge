@@ -82,7 +82,7 @@ public class Melee extends Weapon {
 		return "[Melee name:" + name + " dmg: " + getDamage() + "]";
 	}
 
-	@Override public void postSolve(WorldManager worldManager, Being target, 
+	@Override public void beginContact(WorldManager worldManager, Being target, 
 			Fixture hit, Contact contact, float i) {
 		if(!owner.isFriendly(target.getFaction())){
 			float meleeDmg = MIN_DAMAGE;

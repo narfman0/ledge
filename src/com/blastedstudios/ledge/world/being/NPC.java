@@ -98,4 +98,12 @@ public class NPC extends Being {
 		int scalar = Properties.getInt("npc.difficulty.shoot.delay.scalar", 2000);
 		return 5186L - 1045L * (long)Math.log(level) + scalar * difficulty.ordinal();
 	}
+	
+	public float getDistanceAware(){
+		return stats.getDistanceAware();
+	}
+	
+	public float getDistanceVision(){
+		return stats.getDistanceVision();
+	}
 }

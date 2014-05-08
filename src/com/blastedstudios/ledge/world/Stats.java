@@ -8,7 +8,7 @@ public class Stats implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private float hp, attack, defense, hpPerLevel, attackPerLevel, defensePerLevel,
 		damage, accuracy, rateOfFire, reloadSpeed, muzzleVelocity, recoil, 
-		jetpackRecharge, jetpackMax, jetpackImpulse;
+		jetpackRecharge, jetpackMax, jetpackImpulse, distanceAware, distanceVision;
 	private int projectileCount, roundsPerClip;
 
 	public float getDamage() {
@@ -150,6 +150,22 @@ public class Stats implements Serializable {
 	public void setJetpackImpulse(float jetpackImpulse) {
 		this.jetpackImpulse = jetpackImpulse;
 	}
+
+	public float getDistanceAware() {
+		return distanceAware;
+	}
+
+	public void setDistanceAware(float distanceAware) {
+		this.distanceAware = distanceAware;
+	}
+
+	public float getDistanceVision() {
+		return distanceVision;
+	}
+
+	public void setDistanceVision(float distanceVision) {
+		this.distanceVision = distanceVision;
+	}
 	
 	public static Stats parseNPCData(NPCData npcData){
 		Stats stats = new Stats();
@@ -162,6 +178,8 @@ public class Stats implements Serializable {
 		stats.jetpackRecharge = npcData.getFloat("JetpackRecharge");
 		stats.jetpackMax = npcData.getFloat("JetpackMax");
 		stats.jetpackImpulse = npcData.getFloat("JetpackImpulse");
+		stats.distanceAware = npcData.getFloat("DistanceAware");
+		stats.distanceVision = npcData.getFloat("DistanceVision");
 		return stats;
 	}
 }

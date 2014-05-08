@@ -37,7 +37,7 @@ public class Rocket extends GunShot {
 		explosion.setPosition(body.getPosition().x, body.getPosition().y);
 	}
 
-	@Override public void postSolve(Body gunshotBody, Fixture hit, WorldManager worldManager, WorldManifold manifold){
+	@Override public void beginContact(Body gunshotBody, Fixture hit, WorldManager worldManager, WorldManifold manifold){
 		RocketLauncher launcher = (RocketLauncher) gun;//TODO: make generic
 		HashMap<Being, Float> nearbyBeings = new HashMap<>();
 		//provide impulse on bodies

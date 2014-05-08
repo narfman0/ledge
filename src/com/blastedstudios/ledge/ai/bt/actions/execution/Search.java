@@ -12,7 +12,7 @@ import com.badlogic.gdx.Gdx;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.util.VisibilityReturnStruct;
 import com.blastedstudios.ledge.world.WorldManager;
-import com.blastedstudios.ledge.world.being.Being;
+import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
 
 /** ExecutionAction class created from MMPM action Search. */
@@ -118,7 +118,7 @@ public class Search extends jbt.execution.task.leaf.action.ExecutionAction {
 		if(getLastTime() == null || (int)System.currentTimeMillis() - getLastTime() > searchTime)
 			return Status.FAILURE;
 		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
-		VisibilityReturnStruct struct = world.isVisible((Being) getContext().getVariable(AIFieldEnum.SELF.name()));
+		VisibilityReturnStruct struct = world.isVisible((NPC) getContext().getVariable(AIFieldEnum.SELF.name()));
 		if(struct.isVisible())
 			return Status.SUCCESS;
 		getContext().setVariable("SearchLocation", getLastTarget());

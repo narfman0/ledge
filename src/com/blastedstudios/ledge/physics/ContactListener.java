@@ -1,6 +1,5 @@
 package com.blastedstudios.ledge.physics;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Contact;
@@ -39,23 +38,23 @@ public class ContactListener implements com.badlogic.gdx.physics.box2d.ContactLi
 			
 		if(gunshotBody != null){//handle projectile contact
 			GunShot gunshot = (GunShot) gunshotBody.getUserData();
-			if(hit != null){//handle getting shot
-				Being target = (Being) hit.getBody().getUserData();
-				worldManager.processHit(gunshot.getGun().getDamage(), target, gunshot.getBeing(), 
-						hit, contact.getWorldManifold().getNormal());
+			if(gunshot.collideWithOrigin() || !gunshot.getBeing().isOwned(hit)){//skip if self
+				if(hit != null){//handle getting shot
+					Being target = (Being) hit.getBody().getUserData();
+					worldManager.processHit(gunshot.getGun().getDamage(), target, gunshot.getBeing(), 
+							hit, contact.getWorldManifold().getNormal());
+				}
+				gunshot.beginContact(gunshotBody, hit, worldManager, contact.getWorldManifold());
 			}
-			gunshot.postSolve(gunshotBody, hit, worldManager, contact.getWorldManifold());
 		}else if(meleeBody != null && hit != null){//handle melee attack
 			Being target = (Being) hit.getBody().getUserData();
 			Melee melee = (Melee) meleeBody.getUserData();
-			melee.postSolve(worldManager, target, hit, contact, calculateMomentumImpulse(contact));
+			melee.beginContact(worldManager, target, hit, contact, calculateMomentumImpulse(contact));
 		}else if(hit != null){//handle physics object collision dmg
 			Being target = (Being) hit.getBody().getUserData();
 			float i = calculateMomentumImpulse(contact);
-			if(i > Properties.getFloat("contact.impulse.threshold", 20f) && !target.isDead()){
-				Gdx.app.log("ContactListener.beginContact", "i: " + i);
+			if(i > Properties.getFloat("contact.impulse.threshold", 20f) && !target.isDead())
 				worldManager.processHit(i, target, null, hit, contact.getWorldManifold().getNormal());
-			}
 		}
 	}
 	

@@ -10,7 +10,7 @@ package com.blastedstudios.ledge.ai.bt.conditions.execution;
 
 import com.badlogic.gdx.Gdx;
 import com.blastedstudios.ledge.util.VisibilityReturnStruct;
-import com.blastedstudios.ledge.world.being.Being;
+import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
 import com.blastedstudios.ledge.world.WorldManager;
 
@@ -42,7 +42,7 @@ public class HighDanger extends
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
 		Gdx.app.debug(this.getClass().getCanonicalName(), "ticked");
 		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
-		VisibilityReturnStruct struct = world.isVisible((Being) getContext().getVariable(AIFieldEnum.SELF.name()));
+		VisibilityReturnStruct struct = world.isVisible((NPC) getContext().getVariable(AIFieldEnum.SELF.name()));
 		if(struct.isVisible() && struct.enemyCount > 1){
 			getContext().setVariable("HighDangerTarget", struct.target);
 			return Status.SUCCESS;

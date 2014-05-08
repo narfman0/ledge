@@ -10,7 +10,6 @@ package com.blastedstudios.ledge.ai.bt.conditions.execution;
 
 import com.badlogic.gdx.Gdx;
 import com.blastedstudios.ledge.util.VisibilityReturnStruct;
-import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
 import com.blastedstudios.ledge.world.WorldManager;
@@ -56,7 +55,7 @@ public class LowDanger extends
 		}
 		getContext().setVariable(AIFieldEnum.LAST_HEALTH.name(), self.getHp());
 		
-		VisibilityReturnStruct struct = world.isVisible((Being) getContext().getVariable(AIFieldEnum.SELF.name()));
+		VisibilityReturnStruct struct = world.isVisible((NPC) getContext().getVariable(AIFieldEnum.SELF.name()));
 		if(struct.isVisible()){
 			getContext().setVariable("LowDangerTarget", struct.target);
 			getContext().setVariable("LowDangerLastTime", (int)System.currentTimeMillis());

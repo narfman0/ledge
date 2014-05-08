@@ -40,7 +40,7 @@ public class Flame extends GunShot {
 			body.setType(bodyType);
 	}
 	
-	@Override public void postSolve(Body gunshotBody, Fixture hit, WorldManager worldManager, WorldManifold manifold){
+	@Override public void beginContact(Body gunshotBody, Fixture hit, WorldManager worldManager, WorldManifold manifold){
 		if(!isTimeToRemoveSet()){
 			timeToRemove = System.currentTimeMillis() + Properties.getInt("flame.contact.duration", 1500);
 			bodyType = BodyType.StaticBody;

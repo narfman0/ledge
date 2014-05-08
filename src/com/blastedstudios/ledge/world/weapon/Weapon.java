@@ -124,7 +124,7 @@ public abstract class Weapon implements Serializable{
 		return name;
 	}
 	
-	public void postSolve(WorldManager worldManager, Being target, 
+	public void beginContact(WorldManager worldManager, Being target, 
 			Fixture hit, Contact contact, float i){}
 	public void activate(World world, IRagdoll ragdoll, Being owner){}
 	public void deactivate(World world){}

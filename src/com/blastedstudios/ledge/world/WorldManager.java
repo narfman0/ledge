@@ -153,7 +153,7 @@ public class WorldManager implements IDeathCallback{
 		return beings;
 	}
 
-	public VisibilityReturnStruct isVisible(Being origin){
+	public VisibilityReturnStruct isVisible(NPC origin){
 		Being closestEnemy = null;
 		float closestDistanceSq = Float.MAX_VALUE;
 		int enemyCount = 0;
@@ -164,12 +164,12 @@ public class WorldManager implements IDeathCallback{
 						facingCorrectly = origin.getRagdoll().isFacingLeft() ?
 								being.getPosition().x < origin.getPosition().x : 
 								being.getPosition().x > origin.getPosition().x;
-				if(closer && (facingCorrectly || currentClosestDistanceSq < Properties.getFloat("ai.visible.proximity", 25f))){
+				if(closer && (facingCorrectly || currentClosestDistanceSq < origin.getDistanceAware())){
 					VisibleQueryCallback callback = new VisibleQueryCallback(origin, being);
 					world.rayCast(callback, origin.getPosition(), being.getPosition());
 					if(!callback.called){
 						closestDistanceSq = currentClosestDistanceSq;
-						if(closestDistanceSq < Properties.getFloat("ai.visible.distance", 150f)){
+						if(closestDistanceSq < origin.getDistanceVision()){
 							enemyCount++;
 							closestEnemy = being;
 						}

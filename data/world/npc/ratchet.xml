@@ -64,5 +64,13 @@
       <string>JetpackImpulse</string>
       <string>3</string>
     </entry>
+    <entry>
+      <string>DistanceAware</string>
+      <string>25</string>
+    </entry>
+    <entry>
+      <string>DistanceVision</string>
+      <string>150</string>
+    </entry>
   </properties>
 </com.blastedstudios.ledge.world.being.NPCData>

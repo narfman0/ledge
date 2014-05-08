@@ -40,5 +40,13 @@
       <string>Behavior</string>
       <string>EnemyAggressiveBT</string>
     </entry>
+    <entry>
+      <string>DistanceAware</string>
+      <string>20</string>
+    </entry>
+    <entry>
+      <string>DistanceVision</string>
+      <string>120</string>
+    </entry>
   </properties>
 </com.blastedstudios.ledge.world.being.NPCData>
