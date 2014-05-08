@@ -3,7 +3,6 @@ package com.blastedstudios.ledge.world.weapon;
 import java.io.Serializable;
 
 import com.badlogic.gdx.physics.box2d.Contact;
-import com.badlogic.gdx.physics.box2d.ContactImpulse;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.ledge.physics.IRagdoll;
@@ -126,7 +125,7 @@ public abstract class Weapon implements Serializable{
 	}
 	
 	public void postSolve(WorldManager worldManager, Being target, 
-			Fixture hit, Contact contact, ContactImpulse oldManifold){}
+			Fixture hit, Contact contact, float i){}
 	public void activate(World world, IRagdoll ragdoll, Being owner){}
 	public void deactivate(World world){}
 }
