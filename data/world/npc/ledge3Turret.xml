@@ -58,7 +58,7 @@
     </entry>
     <entry>
       <string>DistanceVision</string>
-      <string>300</string>
+      <string>1000</string>
     </entry>
   </properties>
 </com.blastedstudios.ledge.world.being.NPCData>
