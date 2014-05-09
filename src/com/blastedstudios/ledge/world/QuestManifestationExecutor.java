@@ -198,8 +198,10 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 		}
 	}
 
-	public CompletionEnum turretAdd(Vector2 location, String weapon, float direction, float directionLow, float directionHigh) {
-		worldManager.turretAdd(new Turret((Gun)WeaponFactory.getWeapon(weapon), location, direction, directionLow, directionHigh, random));
+	public CompletionEnum turretAdd(Vector2 location, Vector2 mountLocation, String weapon, 
+			String baseResource, float direction, float directionLow, float directionHigh) {
+		worldManager.turretAdd(new Turret((Gun)WeaponFactory.getWeapon(weapon), baseResource, 
+				location, mountLocation, direction, directionLow, directionHigh, random));
 		return CompletionEnum.COMPLETED;
 	}
 }

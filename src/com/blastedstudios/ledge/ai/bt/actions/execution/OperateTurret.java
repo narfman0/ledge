@@ -79,12 +79,12 @@ public class OperateTurret extends
 		NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
 		Turret turret = (Turret) getContext().getVariable(AIFieldEnum.TURRET.name());
 		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
-		if(turret.getLocation().dst2(self.getPosition()) < Properties.getFloat("ai.turret.operate.distance", 1f)){
+		if(turret.getMountLocation().dst2(self.getPosition()) < Properties.getFloat("ai.turret.operate.distance", 1f)){
 			float angle = (float) Math.atan2(getTarget()[1] - self.getPosition().y, getTarget()[0] - self.getPosition().x);
 			self.aim(angle);
 			turret.aim(angle);
 			if(Math.abs(angle - turret.getDirection()) < .3)
-					turret.shoot(self, world);
+				turret.shoot(self, world);
 			return Status.SUCCESS;
 		}
 		return Status.FAILURE;

@@ -6,20 +6,25 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
+import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
 
 public class Turret {
 	private final Gun gun;
-	private final Vector2 location;
+	private final Vector2 location, mountLocation;
 	private final float directionLow, directionHigh;
-	private float direction;
 	private final Random random;
-	private Sprite gunSprite = null;
+	private final String baseResource;
+	private float direction;
+	private Sprite gunSprite = null, weaponBaseSprite = null;
 	
-	public Turret(Gun gun, Vector2 location, float direction, float directionLow, float directionHigh, Random random){
+	public Turret(Gun gun, String baseResource, Vector2 location, Vector2 mountLocation,
+			float direction, float directionLow, float directionHigh, Random random){
 		this.gun = gun;
+		this.baseResource = baseResource;
 		this.location = location;
+		this.mountLocation = mountLocation;
 		this.direction = direction;
 		this.directionLow = directionLow;
 		this.directionHigh = directionHigh;
@@ -33,10 +38,15 @@ public class Turret {
 	public void render(float dt, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, WorldManager worldManager) {
 		if(gunSprite == null){
 			gunSprite = new Sprite(gdxRenderer.getTexture(gun.getResource() + ".png"));
-			gunSprite.setPosition(location.x, location.y);
+			gunSprite.setScale(Properties.getFloat("ragdoll.custom.scale"));
+			gunSprite.setPosition(location.x - gunSprite.getWidth()/2f, location.y - gunSprite.getHeight()/2f);
+			weaponBaseSprite = new Sprite(gdxRenderer.getTexture(baseResource));
+			weaponBaseSprite.setScale(Properties.getFloat("turret.scale", .02f));
+			weaponBaseSprite.setPosition(location.x - weaponBaseSprite.getWidth()/2f, location.y - weaponBaseSprite.getHeight()/2f);
 		}
 		gunSprite.setRotation((float)Math.toDegrees(direction));
 		gunSprite.draw(spriteBatch);
+		weaponBaseSprite.draw(spriteBatch);
 	}
 	
 	public void shoot(Being source, WorldManager worldManager){
@@ -49,5 +59,9 @@ public class Turret {
 
 	public float getDirection() {
 		return direction;
+	}
+
+	public Vector2 getMountLocation() {
+		return mountLocation;
 	}
 }

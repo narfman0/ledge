@@ -49,7 +49,7 @@ public class ClosestTurret extends
 		if(closest == null)
 			return Status.FAILURE;
 		getContext().setVariable(AIFieldEnum.TURRET.name(), closest);
-		getContext().setVariable("ClosestTurretObjective", new float[]{closest.getLocation().x, closest.getLocation().y});
+		getContext().setVariable("ClosestTurretObjective", new float[]{closest.getMountLocation().x, closest.getMountLocation().y});
 		return jbt.execution.core.ExecutionTask.Status.SUCCESS;
 	}
 
