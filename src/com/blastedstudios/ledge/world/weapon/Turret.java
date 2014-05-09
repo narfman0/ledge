@@ -27,15 +27,16 @@ public class Turret {
 	}
 	
 	public void aim(float direction){
-		direction = Math.max(directionLow, Math.min(directionHigh, direction));
+		this.direction = Math.max(directionLow, Math.min(directionHigh, direction));
 	}
 	
 	public void render(float dt, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, WorldManager worldManager) {
 		if(gunSprite == null){
-			gunSprite = new Sprite(gdxRenderer.getTexture(gun.getResource()));
+			gunSprite = new Sprite(gdxRenderer.getTexture(gun.getResource() + ".png"));
 			gunSprite.setPosition(location.x, location.y);
-			gunSprite.setRotation(direction);
 		}
+		gunSprite.setRotation((float)Math.toDegrees(direction));
+		gunSprite.draw(spriteBatch);
 	}
 	
 	public void shoot(Being source, WorldManager worldManager){
@@ -44,5 +45,9 @@ public class Turret {
 	
 	public Vector2 getLocation(){
 		return location;
+	}
+
+	public float getDirection() {
+		return direction;
 	}
 }

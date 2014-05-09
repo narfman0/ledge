@@ -16,157 +16,34 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>3.7513375</x>
-            <y>-3.6760042</y>
+            <x>10.061144</x>
+            <y>-1.6470766</y>
           </center>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-3.459849</x>
-              <y>3.2120416</y>
+              <x>-0.8575325</x>
+              <y>1.1475211</y>
             </Vector2>
             <Vector2>
-              <x>6.9577174</x>
-              <y>3.1763523</y>
+              <x>11.765615</x>
+              <y>1.0103662</y>
             </Vector2>
             <Vector2>
-              <x>-3.497869</x>
-              <y>-6.3883934</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-8</name>
-          <resource>grassT.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>17.298012</x>
-            <y>-3.88233</y>
-          </center>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-6.516178</x>
-              <y>3.3284512</y>
+              <x>1.074543</x>
+              <y>-7.0355177</y>
             </Vector2>
             <Vector2>
-              <x>13.366518</x>
-              <y>3.3807306</y>
+              <x>-9.713805</x>
+              <y>1.1475209</y>
             </Vector2>
             <Vector2>
-              <x>-6.85034</x>
-              <y>-6.709182</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-15</name>
-          <resource>grassT.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>34.97152</x>
-            <y>-8.012398</y>
-          </center>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-4.251297</x>
-              <y>7.4062405</y>
+              <x>-1.2203369</x>
+              <y>1.1475211</y>
             </Vector2>
             <Vector2>
-              <x>8.50259</x>
-              <y>-3.8338175</y>
-            </Vector2>
-            <Vector2>
-              <x>-4.251297</x>
-              <y>-3.572421</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-1</name>
-          <resource>grassT.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>3.8144531</x>
-            <y>4.8049297</y>
-          </center>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-3.4453125</x>
-              <y>2.8413763</y>
-            </Vector2>
-            <Vector2>
-              <x>-3.5929694</x>
-              <y>-5.2669406</y>
-            </Vector2>
-            <Vector2>
-              <x>7.0382824</x>
-              <y>2.4255648</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-2</name>
-          <resource>grassT.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>24.191015</x>
-            <y>6.6183295</y>
-          </center>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-13.338282</x>
-              <y>0.5428648</y>
-            </Vector2>
-            <Vector2>
-              <x>6.7060566</x>
-              <y>0.30030727</y>
-            </Vector2>
-            <Vector2>
-              <x>6.632227</x>
-              <y>-0.84317255</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-5</name>
-          <resource>grassT.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>38.993553</x>
-            <y>0.5082154</y>
-          </center>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-7.6904335</x>
-              <y>4.9204316</y>
-            </Vector2>
-            <Vector2>
-              <x>3.642189</x>
-              <y>-3.0839324</y>
-            </Vector2>
-            <Vector2>
-              <x>4.0482407</x>
-              <y>-1.8364992</y>
+              <x>-1.048482</x>
+              <y>2.5825887</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -175,8 +52,8 @@
         <world.GDXNPC>
           <name>NPC-1</name>
           <coordinates>
-            <x>6.3</x>
-            <y>0.41785738</y>
+            <x>7.266659</x>
+            <y>0.21944946</y>
           </coordinates>
           <properties class="tree-map">
             <entry>
@@ -217,7 +94,7 @@
             </entry>
             <entry>
               <string>NPCData</string>
-              <string>desertSoldier</string>
+              <string>ledge3Turret</string>
             </entry>
             <entry>
               <string>Path</string>
@@ -249,6 +126,22 @@
             </coordinates>
             <being>player</being>
             <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>turret</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.turretadd.TurretAddManifestation">
+            <location>
+              <x>5.0</x>
+              <y>0.0</y>
+            </location>
+            <direction>0.0</direction>
+            <directionLow>0.0</directionLow>
+            <directionHigh>1.57075</directionHigh>
+            <weapon>ak47</weapon>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>

@@ -80,10 +80,11 @@ public class OperateTurret extends
 		Turret turret = (Turret) getContext().getVariable(AIFieldEnum.TURRET.name());
 		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
 		if(turret.getLocation().dst2(self.getPosition()) < Properties.getFloat("ai.turret.operate.distance", 1f)){
-			float angle = (float) Math.atan2(getTarget()[1], getTarget()[0]);
+			float angle = (float) Math.atan2(getTarget()[1] - self.getPosition().y, getTarget()[0] - self.getPosition().x);
 			self.aim(angle);
 			turret.aim(angle);
-			turret.shoot(self, world);
+			if(Math.abs(angle - turret.getDirection()) < .3)
+					turret.shoot(self, world);
 			return Status.SUCCESS;
 		}
 		return Status.FAILURE;

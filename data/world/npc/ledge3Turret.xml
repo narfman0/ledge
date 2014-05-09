@@ -25,10 +25,6 @@
       <string>1</string>
     </entry>
     <entry>
-      <string>Weapons</string>
-      <string>psg1</string>
-    </entry>
-    <entry>
       <string>Faction</string>
       <string>ENEMY</string>
     </entry>
@@ -38,7 +34,7 @@
     </entry>
     <entry>
       <string>Behavior</string>
-      <string>EnemySentryBT</string>
+      <string>EnemyTurretBT</string>
     </entry>
     <entry>
       <string>Cash</string>

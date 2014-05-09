@@ -19,9 +19,9 @@ public class TurretAddManifestationTable extends ManifestationTable{
 		weaponField.setMessageText("<weapon name>");
 		directionField = new TextField(manifestation.getDirection()+"", skin);
 		directionField.setMessageText("<direction>");
-		directionLowField = new TextField(manifestation.getDirection()+"", skin);
+		directionLowField = new TextField(manifestation.getDirectionLow()+"", skin);
 		directionLowField.setMessageText("<direction low>");
-		directionHighField = new TextField(manifestation.getDirection()+"", skin);
+		directionHighField = new TextField(manifestation.getDirectionHigh()+"", skin);
 		directionHighField.setMessageText("<direction high>");
 		locationTable = new VertexTable(manifestation.getLocation(), skin, null);
 

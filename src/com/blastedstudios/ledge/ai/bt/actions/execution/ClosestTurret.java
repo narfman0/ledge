@@ -44,12 +44,12 @@ public class ClosestTurret extends
 		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
 		Turret closest = null;
 		for(Turret turret : world.getTurrets())
-			if(turret == null || closest.getLocation().dst2(self.getPosition()) > turret.getLocation().dst2(self.getPosition()))
+			if(closest == null || closest.getLocation().dst2(self.getPosition()) > turret.getLocation().dst2(self.getPosition()))
 				closest = turret;
 		if(closest == null)
 			return Status.FAILURE;
 		getContext().setVariable(AIFieldEnum.TURRET.name(), closest);
-		getContext().setVariable("ClosestTurretTarget", closest.getLocation());
+		getContext().setVariable("ClosestTurretObjective", new float[]{closest.getLocation().x, closest.getLocation().y});
 		return jbt.execution.core.ExecutionTask.Status.SUCCESS;
 	}
 
