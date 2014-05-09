@@ -1,6 +1,7 @@
 package com.blastedstudios.ledge.world;
 
 import java.util.HashMap;
+import java.util.Random;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
@@ -20,16 +21,20 @@ import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.FactionEnum;
 import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.NPCData;
+import com.blastedstudios.ledge.world.weapon.Gun;
+import com.blastedstudios.ledge.world.weapon.Turret;
 import com.blastedstudios.ledge.world.weapon.WeaponFactory;
 
 public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 	private final HashMap<String, Long> soundIdMap = new HashMap<>();
 	private final GameplayScreen screen;
 	private final WorldManager worldManager;
+	private final Random random;
 	
 	public QuestManifestationExecutor(GameplayScreen screen, WorldManager worldManager){
 		this.screen = screen;
 		this.worldManager = worldManager;
+		random = new Random();
 	}
 
 	@Override public CompletionEnum addDialog(String dialog, String origin, String type) {
@@ -191,5 +196,10 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 		default:
 			break;
 		}
+	}
+
+	public CompletionEnum turretAdd(Vector2 location, String weapon, float direction, float directionLow, float directionHigh) {
+		worldManager.turretAdd(new Turret((Gun)WeaponFactory.getWeapon(weapon), location, direction, directionLow, directionHigh, random));
+		return CompletionEnum.COMPLETED;
 	}
 }

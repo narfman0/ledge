@@ -13,7 +13,6 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Contact;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
@@ -33,7 +32,6 @@ import com.blastedstudios.ledge.world.weapon.Gun;
 import com.blastedstudios.ledge.world.weapon.Melee;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 import com.blastedstudios.ledge.world.weapon.DamageStruct;
-import com.blastedstudios.ledge.world.weapon.shot.GunShot;
 
 public class Being implements Serializable{
 	private static final long serialVersionUID = 1L;
@@ -510,14 +508,7 @@ public class Being implements Serializable{
 			lastFireTime = System.currentTimeMillis();
 			if(!(weapon instanceof Melee)){
 				Gun gun = (Gun) weapon;
-				gun.addCurrentRounds(-1);
-				for(int i=0; i<weapon.getProjectileCount(); i++){
-					float degrees = (float) (random.nextGaussian() * 20 * (1f-weapon.getAccuracy()));
-					Vector2 dir = direction.cpy().rotate(degrees);
-					GunShot gunshot = gun.createGunShot(this, dir);
-					Body body = PhysicsEnvironment.createBullet(world.getWorld(), gunshot, getPosition());
-					world.getGunshots().put(body, gunshot);
-				}
+				gun.shoot(this, random, direction, world, getPosition());
 			}
 			float volume = 1f - Math.min(1, world.getPlayer().getPosition().dst(getPosition()) / 25f);
 			float pan = Math.max(-1, Math.min(1, (world.getPlayer().getPosition().x - getPosition().x) / 15f));

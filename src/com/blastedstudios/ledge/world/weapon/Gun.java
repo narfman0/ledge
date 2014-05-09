@@ -1,6 +1,11 @@
 package com.blastedstudios.ledge.world.weapon;
 
+import java.util.Random;
+
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.Body;
+import com.blastedstudios.ledge.physics.PhysicsEnvironment;
+import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.weapon.shot.GunShot;
 
@@ -40,5 +45,16 @@ public class Gun extends Weapon {
 	@Override public String toStringPretty(Being owner) {
 		int rightHandSide = Being.INFINITE_AMMO ? getRoundsPerClip() : owner.getAmmo().get(ammoType);
 		return name + ": " + currentRounds + "/" + rightHandSide;
+	}
+	
+	public void shoot(Being source, Random random, Vector2 direction, WorldManager world, Vector2 position){
+		currentRounds -= 1;
+		for(int i=0; i<getProjectileCount(); i++){
+			float degrees = (float) (random.nextGaussian() * 20 * (1f-getAccuracy()));
+			Vector2 dir = direction.cpy().rotate(degrees);
+			GunShot gunshot = createGunShot(source, dir);
+			Body body = PhysicsEnvironment.createBullet(world.getWorld(), gunshot, position);
+			world.getGunshots().put(body, gunshot);
+		}
 	}
 }

@@ -42,6 +42,7 @@ import com.blastedstudios.ledge.world.being.Being.IDeathCallback;
 import com.blastedstudios.ledge.world.being.Player;
 import com.blastedstudios.ledge.world.weapon.Gun;
 import com.blastedstudios.ledge.world.weapon.Melee;
+import com.blastedstudios.ledge.world.weapon.Turret;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 import com.blastedstudios.ledge.world.weapon.WeaponFactory;
 import com.blastedstudios.ledge.world.weapon.DamageStruct;
@@ -60,6 +61,7 @@ public class WorldManager implements IDeathCallback{
 	private final DropManager dropManager;
 	private final GDXLevel level;
 	private final LinkedList<ParticleEffect> particles = new LinkedList<>();
+	private final LinkedList<Turret> turrets = new LinkedList<>();
 	private final AIWorld aiWorld;
 	private boolean pause, inputEnable = true;
 	
@@ -90,6 +92,8 @@ public class WorldManager implements IDeathCallback{
 			if(entry.getValue().isCanRemove())
 				iter.remove();
 		}
+		for(Turret turret : turrets)
+			turret.render(dt, spriteBatch, gdxRenderer, this);
 		dropManager.render(player, world, spriteBatch, gdxRenderer);
 		renderTransferredParticles(dt);
 		spriteBatch.end();
@@ -294,5 +298,13 @@ public class WorldManager implements IDeathCallback{
 
 	public AIWorld getAiWorld() {
 		return aiWorld;
+	}
+
+	public void turretAdd(Turret turret) {
+		turrets.add(turret);
+	}
+	
+	public LinkedList<Turret> getTurrets(){
+		return turrets;
 	}
 }
