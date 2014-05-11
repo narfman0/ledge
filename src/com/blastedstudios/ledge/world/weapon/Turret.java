@@ -18,6 +18,7 @@ public class Turret {
 	private final String baseResource;
 	private float direction;
 	private Sprite gunSprite = null, weaponBaseSprite = null;
+	private long reloadTime;
 	
 	public Turret(Gun gun, String baseResource, Vector2 location, Vector2 mountLocation,
 			float direction, float directionLow, float directionHigh, Random random){
@@ -47,10 +48,17 @@ public class Turret {
 		gunSprite.setRotation((float)Math.toDegrees(direction));
 		gunSprite.draw(spriteBatch);
 		weaponBaseSprite.draw(spriteBatch);
+		if(reloadTime != 0l && System.currentTimeMillis() > reloadTime){
+			gun.setCurrentRounds(gun.getRoundsPerClip());
+			reloadTime = 0l;
+		}
 	}
 	
 	public void shoot(Being source, WorldManager worldManager){
-		gun.shoot(source, random, new Vector2((float)Math.cos(direction), (float)Math.sin(direction)), worldManager, location);
+		if(gun.canAttack())
+			gun.shoot(source, random, new Vector2((float)Math.cos(direction), (float)Math.sin(direction)), worldManager, location);
+		if(gun.getCurrentRounds() <= 0 && reloadTime == 0l)
+			reloadTime = System.currentTimeMillis() + (long)gun.getReloadSpeed();
 	}
 	
 	public Vector2 getLocation(){

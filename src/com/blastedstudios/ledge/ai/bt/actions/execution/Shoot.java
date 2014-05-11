@@ -12,6 +12,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
 import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
+import com.blastedstudios.ledge.world.weapon.Weapon;
 import com.blastedstudios.ledge.world.WorldManager;
 
 /** ExecutionAction class created from MMPM action Shoot. */
@@ -80,7 +81,8 @@ public class Shoot extends jbt.execution.task.leaf.action.ExecutionAction {
 		Vector2 target = new Vector2(getTarget()[0], getTarget()[1]);
 		Vector2 direction = target.cpy().sub(npc.getPosition()).nor();
 		npc.aim((float)Math.atan2(direction.y, direction.x));
-		if(npc.getMSSinceLastFire() > NPC.shootDelay(npc.getLevel(), npc.getDifficulty()))
+		Weapon equipped = npc.getEquippedWeapon();
+		if(equipped.getMSSinceAttack() > NPC.shootDelay(npc.getLevel(), npc.getDifficulty()))
 			npc.attack(direction, world);
 		return Status.SUCCESS;
 	}

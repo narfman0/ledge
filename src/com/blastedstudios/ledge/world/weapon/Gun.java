@@ -13,6 +13,7 @@ public class Gun extends Weapon {
 	private static final long serialVersionUID = 1L;
 	private int currentRounds;
 	private AmmoTypeEnum ammoType;
+	private long lastFireTime;
 	
 	public GunShot createGunShot(Being origin, Vector2 dir){
 		return new GunShot(origin, dir, this);
@@ -38,6 +39,10 @@ public class Gun extends Weapon {
 		this.ammoType = ammoType;
 	}
 	
+	@Override public long getMSSinceAttack(){
+		return System.currentTimeMillis() - lastFireTime;
+	}
+	
 	@Override public String toString(){
 		return "[Gun name:" + name + " dmg: " + getDamage() + " currentRounds:" + currentRounds + "]";
 	}
@@ -49,6 +54,7 @@ public class Gun extends Weapon {
 	
 	public void shoot(Being source, Random random, Vector2 direction, WorldManager world, Vector2 position){
 		currentRounds -= 1;
+		lastFireTime = System.currentTimeMillis();
 		for(int i=0; i<getProjectileCount(); i++){
 			float degrees = (float) (random.nextGaussian() * 20 * (1f-getAccuracy()));
 			Vector2 dir = direction.cpy().rotate(degrees);
@@ -56,5 +62,9 @@ public class Gun extends Weapon {
 			Body body = PhysicsEnvironment.createBullet(world.getWorld(), gunshot, position);
 			world.getGunshots().put(body, gunshot);
 		}
+	}
+	
+	@Override public boolean canAttack(){
+		return getMSSinceAttack()/1000f > 1f/getRateOfFire() && getCurrentRounds() > 0;
 	}
 }

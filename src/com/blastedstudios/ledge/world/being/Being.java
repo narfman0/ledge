@@ -45,7 +45,7 @@ public class Being implements Serializable{
 	private final HashMap<AmmoTypeEnum,Integer> ammo = new HashMap<>();
 	protected transient boolean jump, moveRight, moveLeft, dead, reloading;
 	protected transient IRagdoll ragdoll;
-	private transient long lastFireTime, reloadStartTime;
+	private transient long reloadStartTime;
 	protected String name;
 	private String resource;
 	protected float hp;
@@ -493,19 +493,12 @@ public class Being implements Serializable{
 
 	public boolean canAttack(){
 		Weapon equipped = getEquippedWeapon();
-		float timeDelta = getMSSinceLastFire()/1000f;
-		return !isDead() && !reloading && equipped != null && (equipped instanceof Melee ||
-				(((Gun)equipped).getCurrentRounds() > 0 && timeDelta > 1f/equipped.getRateOfFire()));
-	}
-	
-	public long getMSSinceLastFire(){
-		return System.currentTimeMillis() - lastFireTime;
+		return !isDead() && !reloading && equipped != null && equipped.canAttack();
 	}
 
 	public boolean attack(Vector2 direction, WorldManager world){
 		Weapon weapon = getEquippedWeapon();
 		if(canAttack()){
-			lastFireTime = System.currentTimeMillis();
 			if(!(weapon instanceof Melee)){
 				Gun gun = (Gun) weapon;
 				gun.shoot(this, random, direction, world, getPosition());

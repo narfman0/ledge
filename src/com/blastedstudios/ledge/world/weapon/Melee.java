@@ -21,6 +21,7 @@ public class Melee extends Weapon {
 	private float width, height, density;
 	private transient Body body;
 	private transient Being owner;
+	private transient long lastAttack;
 	
 	public float getWidth() {
 		return width;
@@ -85,10 +86,19 @@ public class Melee extends Weapon {
 	@Override public void beginContact(WorldManager worldManager, Being target, 
 			Fixture hit, Contact contact, float i) {
 		if(!owner.isFriendly(target.getFaction())){
+			lastAttack = System.currentTimeMillis() - 1000l;//Smaller to make attack frequency better
 			float meleeDmg = MIN_DAMAGE;
 			if(i > Properties.getFloat("melee.contact.impulse.threshold", 2f))
 				meleeDmg = (float)Melee.impulseToDamageScalar(i/10f, Gdx.graphics.getRawDeltaTime());
 			worldManager.processHit(getDamage() * meleeDmg, target, owner, hit, contact.getWorldManifold().getNormal());
 		}
+	}
+
+	@Override public long getMSSinceAttack() {
+		return System.currentTimeMillis() - lastAttack;
+	}
+
+	@Override public boolean canAttack() {
+		return true;
 	}
 }

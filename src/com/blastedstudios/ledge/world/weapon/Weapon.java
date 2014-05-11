@@ -124,6 +124,9 @@ public abstract class Weapon implements Serializable{
 		return name;
 	}
 	
+	public abstract long getMSSinceAttack();
+	public abstract boolean canAttack();
+	
 	public void beginContact(WorldManager worldManager, Being target, 
 			Fixture hit, Contact contact, float i){}
 	public void activate(World world, IRagdoll ragdoll, Being owner){}
