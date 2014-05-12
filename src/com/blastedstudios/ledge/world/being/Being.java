@@ -82,8 +82,7 @@ public class Being implements Serializable{
 				ammo.put(ammoType, 0);
 		}
 		if(bodypartDmgMap.isEmpty())
-			for(BodyPart bodyType : BodyPart.values())
-				bodypartDmgMap.put(bodyType, Properties.getFloat("character.bodypart." + bodyType.name() + ".dmgmultiplier", 1f));
+			initializeBodypartDmgMap();
 	}
 
 	public void render(float dt, World world, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, IDeathCallback deathCallback){
@@ -220,6 +219,8 @@ public class Being implements Serializable{
 	 */
 	public float handleShotDamage(Fixture bodyPart, DamageStruct shotDamage){
 		shotDamage.setBodyPart(ragdoll.getBodyPart(bodyPart));
+		if(bodypartDmgMap.isEmpty())
+			initializeBodypartDmgMap();
 		return bodypartDmgMap.get(shotDamage.getBodyPart());
 	}
 
@@ -627,5 +628,10 @@ public class Being implements Serializable{
 	
 	public void addListener(IComponent listener){
 		listeners.add(listener);
+	}
+	
+	private void initializeBodypartDmgMap(){
+		for(BodyPart bodyType : BodyPart.values())
+			bodypartDmgMap.put(bodyType, Properties.getFloat("character.bodypart." + bodyType.name() + ".dmgmultiplier", 1f));
 	}
 }
