@@ -25,6 +25,7 @@ public class Rocket extends GunShot {
 		trail = new ParticleEffect();
 		trail.load(Gdx.files.internal("data/particles/rocketTrail.p"), Gdx.files.internal("data/particles"));
 		trail.start();
+		trail.setDuration(99999);
 		explosion = new ParticleEffect();
 		explosion.load(Gdx.files.internal("data/particles/rocketExplosion.p"), Gdx.files.internal("data/particles"));
 	}
@@ -65,6 +66,7 @@ public class Rocket extends GunShot {
 		//send off particles to particle manager
 		explosion.setPosition(gunshotBody.getPosition().x, gunshotBody.getPosition().y);
 		explosion.start();
+		trail.setDuration(1500);
 		worldManager.transferParticles(trail, explosion);
 
 		gunshotBody.setUserData(WorldManager.REMOVE_USER_DATA);

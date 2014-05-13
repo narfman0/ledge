@@ -24,6 +24,7 @@ public class Flame extends GunShot {
 		flame = new ParticleEffect();
 		flame.load(Gdx.files.internal("data/particles/flame.p"), Gdx.files.internal("data/particles"));
 		flame.start();
+		flame.setDuration(99999);
 	}
 	
 	@Override public void render(float dt, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, 
@@ -42,8 +43,10 @@ public class Flame extends GunShot {
 	
 	@Override public void beginContact(Body gunshotBody, Fixture hit, WorldManager worldManager, WorldManifold manifold){
 		if(!isTimeToRemoveSet()){
-			timeToRemove = System.currentTimeMillis() + Properties.getInt("flame.contact.duration", 1500);
+			int duration = Properties.getInt("flame.contact.duration", 1500);
+			timeToRemove = System.currentTimeMillis() + duration;
 			bodyType = BodyType.StaticBody;
+			flame.setDuration(duration);
 		}
 	}
 	
