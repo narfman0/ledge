@@ -9221,19 +9221,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -9241,15 +9233,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>vasht</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -9257,11 +9257,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -9282,19 +9282,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string>-4</string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -9302,15 +9294,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string>-4</string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -9318,11 +9318,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -9343,19 +9343,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string>-4</string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -9363,15 +9355,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string>-4</string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldierGlock</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -9379,11 +9379,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -9404,19 +9404,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string>-4</string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -9424,15 +9416,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string>-4</string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -9440,11 +9440,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -9465,19 +9465,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>Resource</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>XP</string>
               <string></string>
             </entry>
             <entry>
-              <string>Behavior</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>Resource</string>
               <string></string>
             </entry>
             <entry>
@@ -9485,15 +9477,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>robbot</string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
@@ -9501,11 +9501,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
@@ -9526,19 +9526,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -9546,15 +9538,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldierGlock</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -9562,11 +9562,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -9587,19 +9587,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -9607,15 +9599,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -9623,11 +9623,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -9648,19 +9648,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -9668,15 +9660,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldierGlock</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -9684,11 +9684,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -9709,15 +9709,15 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
+              <string>XP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
               <string></string>
             </entry>
             <entry>
@@ -9725,7 +9725,7 @@
               <string>glock</string>
             </entry>
             <entry>
-              <string>Behavior</string>
+              <string>Aim</string>
               <string></string>
             </entry>
             <entry>
@@ -9733,11 +9733,11 @@
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -9745,11 +9745,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -9770,15 +9770,15 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
+              <string>XP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
               <string></string>
             </entry>
             <entry>
@@ -9786,7 +9786,7 @@
               <string>glock</string>
             </entry>
             <entry>
-              <string>Behavior</string>
+              <string>Aim</string>
               <string></string>
             </entry>
             <entry>
@@ -9794,11 +9794,11 @@
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -9806,11 +9806,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -9831,19 +9831,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -9851,15 +9843,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldierGlock</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -9867,11 +9867,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -9892,19 +9892,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -9912,15 +9904,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldierGlock</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -9928,11 +9928,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -9953,19 +9953,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -9973,15 +9965,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldierGlock</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -9989,11 +9989,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -10014,15 +10014,15 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
+              <string>XP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
               <string></string>
             </entry>
             <entry>
@@ -10030,7 +10030,7 @@
               <string>uzi</string>
             </entry>
             <entry>
-              <string>Behavior</string>
+              <string>Aim</string>
               <string></string>
             </entry>
             <entry>
@@ -10038,11 +10038,11 @@
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -10050,11 +10050,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -10075,19 +10075,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -10095,15 +10087,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -10111,11 +10111,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -10136,19 +10136,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -10156,15 +10148,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -10172,11 +10172,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -10197,19 +10197,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -10217,15 +10209,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -10233,11 +10233,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -10258,19 +10258,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -10278,15 +10270,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldierGlock</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -10294,11 +10294,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -10319,35 +10319,35 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string>-4</string>
-            </entry>
-            <entry>
-              <string>Guns</string>
-              <string>uzi</string>
+              <string>XP</string>
+              <string></string>
             </entry>
             <entry>
               <string>Behavior</string>
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string>uzi</string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string>-4</string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -10355,11 +10355,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -24100,15 +24100,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -24116,15 +24112,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Soldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -24132,11 +24132,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -24157,15 +24157,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -24173,15 +24169,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Soldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -24189,11 +24189,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -24214,15 +24214,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -24230,15 +24226,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Soldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -24246,11 +24246,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -24271,15 +24271,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -24287,15 +24283,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Soldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -24303,11 +24303,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -24328,15 +24328,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -24344,15 +24340,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Soldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -24360,11 +24360,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -24385,15 +24385,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -24401,15 +24397,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Soldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -24417,11 +24417,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -24442,15 +24442,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -24458,15 +24454,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Guard</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -24474,11 +24474,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -24499,15 +24499,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -24515,15 +24511,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Guard</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -24531,11 +24531,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -24556,15 +24556,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -24572,15 +24568,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Soldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -24588,11 +24588,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -24613,15 +24613,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -24629,15 +24625,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Soldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -24645,11 +24645,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -24670,15 +24670,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -24686,15 +24682,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Soldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -24702,11 +24702,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -24727,15 +24727,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -24743,15 +24739,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Sniper</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -24759,11 +24759,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -29399,19 +29399,6 @@
           <radius>0.13</radius>
         </world.shape.GDXCircle>
         <world.shape.GDXCircle>
-          <name>deadDoorHinge</name>
-          <resource></resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>847.72284</x>
-            <y>-452.1411</y>
-          </center>
-          <radius>1.0</radius>
-        </world.shape.GDXCircle>
-        <world.shape.GDXCircle>
           <name>shuttle1Hinge</name>
           <resource></resource>
           <density>1.0</density>
@@ -29423,6 +29410,19 @@
             <y>-273.01624</y>
           </center>
           <radius>0.5</radius>
+        </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>lastDoorMount</name>
+          <resource></resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>766.6824</x>
+            <y>-446.9513</y>
+          </center>
+          <radius>1.0</radius>
         </world.shape.GDXCircle>
       </circles>
       <polygons>
@@ -32917,525 +32917,262 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>539.2554</x>
-            <y>-249.43478</y>
+            <x>538.998</x>
+            <y>-249.6325</y>
           </center>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-56.40027</x>
-              <y>6.322357</y>
+              <x>-56.142883</x>
+              <y>6.5200806</y>
             </Vector2>
             <Vector2>
-              <x>-52.345917</x>
-              <y>6.1256256</y>
+              <x>-52.08853</x>
+              <y>6.323349</y>
             </Vector2>
             <Vector2>
-              <x>-52.43405</x>
-              <y>7.7782135</y>
+              <x>-52.176666</x>
+              <y>7.975937</y>
             </Vector2>
             <Vector2>
-              <x>-50.891632</x>
-              <y>7.581482</y>
+              <x>-50.634247</x>
+              <y>7.7792053</y>
             </Vector2>
             <Vector2>
-              <x>-50.715332</x>
-              <y>6.440399</y>
+              <x>-50.457947</x>
+              <y>6.6381226</y>
             </Vector2>
             <Vector2>
-              <x>-49.172913</x>
-              <y>6.3617096</y>
+              <x>-48.915527</x>
+              <y>6.559433</y>
             </Vector2>
             <Vector2>
-              <x>-49.172913</x>
-              <y>5.102585</y>
+              <x>-48.915527</x>
+              <y>5.300308</y>
             </Vector2>
             <Vector2>
-              <x>-48.291534</x>
-              <y>5.0238953</y>
+              <x>-48.03415</x>
+              <y>5.2216187</y>
             </Vector2>
             <Vector2>
-              <x>-48.644104</x>
-              <y>1.7580566</y>
+              <x>-48.38672</x>
+              <y>1.95578</y>
             </Vector2>
             <Vector2>
-              <x>-47.49829</x>
-              <y>1.4432678</y>
+              <x>-47.240906</x>
+              <y>1.6409912</y>
             </Vector2>
             <Vector2>
-              <x>-47.454224</x>
-              <y>0.4202423</y>
+              <x>-47.19684</x>
+              <y>0.6179657</y>
             </Vector2>
             <Vector2>
-              <x>-44.28125</x>
-              <y>1.1284943</y>
+              <x>-44.023865</x>
+              <y>1.3262177</y>
             </Vector2>
             <Vector2>
-              <x>-41.945587</x>
-              <y>2.623703</y>
+              <x>-41.6882</x>
+              <y>2.8214264</y>
             </Vector2>
             <Vector2>
-              <x>-43.003235</x>
-              <y>3.9615173</y>
+              <x>-42.74585</x>
+              <y>4.1592407</y>
             </Vector2>
             <Vector2>
-              <x>-39.786194</x>
-              <y>4.866501</y>
+              <x>-39.52881</x>
+              <y>5.0642242</y>
             </Vector2>
             <Vector2>
-              <x>-37.45053</x>
-              <y>6.401062</y>
+              <x>-37.193146</x>
+              <y>6.5987854</y>
             </Vector2>
             <Vector2>
-              <x>-38.199707</x>
-              <y>6.5977936</y>
+              <x>-37.94232</x>
+              <y>6.795517</y>
             </Vector2>
             <Vector2>
-              <x>-34.982635</x>
-              <y>6.755188</y>
+              <x>-34.72525</x>
+              <y>6.9529114</y>
             </Vector2>
             <Vector2>
-              <x>-35.574493</x>
-              <y>7.5106506</y>
+              <x>-35.31711</x>
+              <y>7.708374</y>
             </Vector2>
             <Vector2>
-              <x>-34.649017</x>
-              <y>8.848465</y>
+              <x>-34.391632</x>
+              <y>9.046188</y>
             </Vector2>
             <Vector2>
-              <x>-32.665924</x>
-              <y>9.438675</y>
+              <x>-32.40854</x>
+              <y>9.636398</y>
             </Vector2>
             <Vector2>
-              <x>-29.14038</x>
-              <y>9.359985</y>
+              <x>-28.882996</x>
+              <y>9.557709</y>
             </Vector2>
             <Vector2>
-              <x>-28.1268</x>
-              <y>10.501053</y>
+              <x>-27.869415</x>
+              <y>10.698776</y>
             </Vector2>
             <Vector2>
-              <x>-28.435272</x>
-              <y>11.681488</y>
+              <x>-28.177887</x>
+              <y>11.879211</y>
             </Vector2>
             <Vector2>
-              <x>-26.275879</x>
-              <y>11.760178</y>
+              <x>-26.018494</x>
+              <y>11.957901</y>
             </Vector2>
             <Vector2>
-              <x>-21.812317</x>
-              <y>6.369568</y>
+              <x>-21.554932</x>
+              <y>6.5672913</y>
             </Vector2>
             <Vector2>
-              <x>-20.269897</x>
-              <y>7.1171722</y>
+              <x>-20.012512</x>
+              <y>7.3148956</y>
             </Vector2>
             <Vector2>
-              <x>-16.171448</x>
-              <y>4.402191</y>
+              <x>-15.9140625</x>
+              <y>4.5999146</y>
             </Vector2>
             <Vector2>
-              <x>-11.216858</x>
-              <y>3.4185028</y>
+              <x>-10.959473</x>
+              <y>3.6162262</y>
             </Vector2>
             <Vector2>
-              <x>-6.765869</x>
-              <y>3.2611237</y>
+              <x>-6.508484</x>
+              <y>3.458847</y>
             </Vector2>
             <Vector2>
-              <x>1.6072388</x>
-              <y>3.1824188</y>
+              <x>1.864624</x>
+              <y>3.3801422</y>
             </Vector2>
             <Vector2>
-              <x>-0.41992188</x>
-              <y>1.4511414</y>
+              <x>-0.16253662</x>
+              <y>1.6488647</y>
             </Vector2>
             <Vector2>
-              <x>13.795593</x>
-              <y>-2.5937653</y>
+              <x>14.0529785</x>
+              <y>-2.3960419</y>
             </Vector2>
             <Vector2>
-              <x>14.349487</x>
-              <y>-3.3020325</y>
+              <x>14.606873</x>
+              <y>-3.104309</y>
             </Vector2>
             <Vector2>
-              <x>19.24115</x>
-              <y>-5.269409</y>
+              <x>19.498535</x>
+              <y>-5.071686</y>
             </Vector2>
             <Vector2>
-              <x>29.421143</x>
-              <y>-7.708954</y>
+              <x>29.678528</x>
+              <y>-7.5112305</y>
             </Vector2>
             <Vector2>
-              <x>27.878723</x>
-              <y>-8.495911</y>
+              <x>28.136108</x>
+              <y>-8.298187</y>
             </Vector2>
             <Vector2>
-              <x>34.885742</x>
-              <y>-11.132172</y>
+              <x>35.143127</x>
+              <y>-10.934448</y>
             </Vector2>
             <Vector2>
-              <x>40.35034</x>
-              <y>-11.958496</y>
+              <x>40.607727</x>
+              <y>-11.760773</y>
             </Vector2>
             <Vector2>
-              <x>43.43518</x>
-              <y>-12.076538</y>
+              <x>43.692566</x>
+              <y>-11.878815</y>
             </Vector2>
             <Vector2>
-              <x>49.120117</x>
-              <y>-12.942169</y>
+              <x>45.575317</x>
+              <y>-12.022369</y>
             </Vector2>
             <Vector2>
-              <x>49.38452</x>
-              <y>-8.535248</y>
+              <x>45.575317</x>
+              <y>-8.8359375</y>
             </Vector2>
             <Vector2>
-              <x>50.530334</x>
-              <y>-8.141785</y>
+              <x>49.19165</x>
+              <y>-8.198639</y>
             </Vector2>
             <Vector2>
-              <x>51.98462</x>
-              <y>-4.1283264</y>
+              <x>49.495117</x>
+              <y>-4.1928406</y>
             </Vector2>
             <Vector2>
-              <x>52.072754</x>
-              <y>0.9474945</y>
+              <x>48.660583</x>
+              <y>1.1482239</y>
             </Vector2>
             <Vector2>
-              <x>45.374207</x>
-              <y>1.0655365</y>
+              <x>45.63159</x>
+              <y>1.2632599</y>
             </Vector2>
             <Vector2>
-              <x>45.254517</x>
-              <y>3.2296448</y>
+              <x>45.5119</x>
+              <y>3.4273682</y>
             </Vector2>
             <Vector2>
-              <x>66.98065</x>
-              <y>3.2296448</y>
+              <x>67.23804</x>
+              <y>3.4273682</y>
             </Vector2>
             <Vector2>
-              <x>66.89252</x>
-              <y>0.9081421</y>
+              <x>67.1499</x>
+              <y>1.1058655</y>
             </Vector2>
             <Vector2>
-              <x>59.444824</x>
-              <y>0.8687897</y>
+              <x>59.70221</x>
+              <y>1.0665131</y>
             </Vector2>
             <Vector2>
-              <x>59.268555</x>
-              <y>-5.3480988</y>
+              <x>59.52594</x>
+              <y>-5.1503754</y>
             </Vector2>
             <Vector2>
-              <x>60.19397</x>
-              <y>-5.4268036</y>
+              <x>60.451355</x>
+              <y>-5.22908</y>
             </Vector2>
             <Vector2>
-              <x>59.70923</x>
-              <y>-9.322205</y>
+              <x>59.966614</x>
+              <y>-9.124481</y>
             </Vector2>
             <Vector2>
-              <x>61.956726</x>
-              <y>-9.400909</y>
+              <x>62.21411</x>
+              <y>-9.203186</y>
             </Vector2>
             <Vector2>
-              <x>61.780457</x>
-              <y>-14.673462</y>
+              <x>62.03784</x>
+              <y>-14.475739</y>
             </Vector2>
             <Vector2>
-              <x>41.34497</x>
-              <y>-14.319336</y>
+              <x>41.602356</x>
+              <y>-14.121613</y>
             </Vector2>
             <Vector2>
-              <x>26.701538</x>
-              <y>-11.60437</y>
+              <x>26.958923</x>
+              <y>-11.406647</y>
             </Vector2>
             <Vector2>
-              <x>25.54309</x>
-              <y>-8.456543</y>
+              <x>25.800476</x>
+              <y>-8.25882</y>
             </Vector2>
             <Vector2>
-              <x>14.790222</x>
-              <y>-5.741577</y>
+              <x>15.047607</x>
+              <y>-5.5438538</y>
             </Vector2>
             <Vector2>
-              <x>7.6950684</x>
-              <y>-5.859619</y>
+              <x>7.9524536</x>
+              <y>-5.6618958</y>
             </Vector2>
             <Vector2>
-              <x>0.07110596</x>
-              <y>-4.679199</y>
+              <x>0.3284912</x>
+              <y>-4.481476</y>
             </Vector2>
             <Vector2>
-              <x>-0.5269165</x>
-              <y>-1.7674866</y>
+              <x>-0.26953125</x>
+              <y>-1.5697632</y>
             </Vector2>
             <Vector2>
-              <x>-56.33734</x>
-              <y>-2.3576965</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-272</name>
-          <resource>debris1.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>635.2233</x>
-            <y>-263.18185</y>
-          </center>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-0.52838135</x>
-              <y>42.62805</y>
-            </Vector2>
-            <Vector2>
-              <x>0.64837646</x>
-              <y>-7.504944</y>
-            </Vector2>
-            <Vector2>
-              <x>-8.429565</x>
-              <y>-25.216583</y>
-            </Vector2>
-            <Vector2>
-              <x>-4.2268066</x>
-              <y>-27.468048</y>
-            </Vector2>
-            <Vector2>
-              <x>1.6570435</x>
-              <y>-12.458191</y>
-            </Vector2>
-            <Vector2>
-              <x>6.027954</x>
-              <y>-12.458191</y>
-            </Vector2>
-            <Vector2>
-              <x>4.8511353</x>
-              <y>42.47795</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-279</name>
-          <resource>debris1.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>617.8763</x>
-            <y>-303.53265</y>
-          </center>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-2.2931519</x>
-              <y>2.2163086</y>
-            </Vector2>
-            <Vector2>
-              <x>-2.2931519</x>
-              <y>-1.9207764</y>
-            </Vector2>
-            <Vector2>
-              <x>2.340393</x>
-              <y>-1.6674805</y>
-            </Vector2>
-            <Vector2>
-              <x>2.2458496</x>
-              <y>1.3720093</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-283</name>
-          <resource>debris1.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>606.9465</x>
-            <y>-310.82883</y>
-          </center>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-1.008667</x>
-              <y>1.1538696</y>
-            </Vector2>
-            <Vector2>
-              <x>-1.008667</x>
-              <y>-0.61917114</y>
-            </Vector2>
-            <Vector2>
-              <x>2.017334</x>
-              <y>-0.534729</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-286</name>
-          <resource>debris1.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>611.27277</x>
-            <y>-322.00528</y>
-          </center>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>39.3927</x>
-              <y>28.794281</y>
-            </Vector2>
-            <Vector2>
-              <x>32.86792</x>
-              <y>31.32721</y>
-            </Vector2>
-            <Vector2>
-              <x>30.787537</x>
-              <y>23.897308</y>
-            </Vector2>
-            <Vector2>
-              <x>33.90808</x>
-              <y>13.934509</y>
-            </Vector2>
-            <Vector2>
-              <x>31.63861</x>
-              <y>8.9530945</y>
-            </Vector2>
-            <Vector2>
-              <x>28.045227</x>
-              <y>6.673462</y>
-            </Vector2>
-            <Vector2>
-              <x>32.016846</x>
-              <y>-0.33425903</y>
-            </Vector2>
-            <Vector2>
-              <x>26.437683</x>
-              <y>-2.8671875</y>
-            </Vector2>
-            <Vector2>
-              <x>30.220154</x>
-              <y>-12.914398</y>
-            </Vector2>
-            <Vector2>
-              <x>23.600769</x>
-              <y>-10.3815</y>
-            </Vector2>
-            <Vector2>
-              <x>23.317078</x>
-              <y>-13.758728</y>
-            </Vector2>
-            <Vector2>
-              <x>10.524353</x>
-              <y>-7.76416</y>
-            </Vector2>
-            <Vector2>
-              <x>9.767883</x>
-              <y>-5.9066772</y>
-            </Vector2>
-            <Vector2>
-              <x>6.9310303</x>
-              <y>-5.9911194</y>
-            </Vector2>
-            <Vector2>
-              <x>3.7158813</x>
-              <y>-3.542633</y>
-            </Vector2>
-            <Vector2>
-              <x>3.8104248</x>
-              <y>-1.600708</y>
-            </Vector2>
-            <Vector2>
-              <x>0.12249756</x>
-              <y>0.25674438</y>
-            </Vector2>
-            <Vector2>
-              <x>-0.63397217</x>
-              <y>-0.41870117</y>
-            </Vector2>
-            <Vector2>
-              <x>-18.97882</x>
-              <y>10.894989</y>
-            </Vector2>
-            <Vector2>
-              <x>-50.157104</x>
-              <y>17.396149</y>
-            </Vector2>
-            <Vector2>
-              <x>-78.05298</x>
-              <y>23.98175</y>
-            </Vector2>
-            <Vector2>
-              <x>-78.80945</x>
-              <y>12.077026</y>
-            </Vector2>
-            <Vector2>
-              <x>-83.1593</x>
-              <y>11.570435</y>
-            </Vector2>
-            <Vector2>
-              <x>-83.1593</x>
-              <y>9.459686</y>
-            </Vector2>
-            <Vector2>
-              <x>-78.714905</x>
-              <y>9.290802</y>
-            </Vector2>
-            <Vector2>
-              <x>-12.426941</x>
-              <y>-3.7114868</y>
-            </Vector2>
-            <Vector2>
-              <x>25.61383</x>
-              <y>-33.751923</y>
-            </Vector2>
-            <Vector2>
-              <x>44.55316</x>
-              <y>-69.21274</y>
-            </Vector2>
-            <Vector2>
-              <x>46.82263</x>
-              <y>-36.352386</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-315</name>
-          <resource>debris1.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>518.59796</x>
-            <y>-334.50262</y>
-          </center>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-1.7092896</x>
-              <y>0.90005493</y>
-            </Vector2>
-            <Vector2>
-              <x>-1.5924072</x>
-              <y>-0.8739624</y>
-            </Vector2>
-            <Vector2>
-              <x>1.7385254</x>
-              <y>-0.71743774</y>
-            </Vector2>
-            <Vector2>
-              <x>1.5632324</x>
-              <y>0.6913452</y>
+              <x>-56.414093</x>
+              <y>-14.325073</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -33447,507 +33184,114 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>656.87854</x>
-            <y>-444.73367</y>
+            <x>621.1608</x>
+            <y>-428.87057</y>
           </center>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-174.97809</x>
-              <y>82.78409</y>
+              <x>-82.355835</x>
+              <y>177.76053</y>
             </Vector2>
             <Vector2>
-              <x>-127.94153</x>
-              <y>78.20624</y>
+              <x>-80.29999</x>
+              <y>174.41246</y>
             </Vector2>
             <Vector2>
-              <x>-119.24762</x>
-              <y>75.618744</y>
+              <x>-83.52991</x>
+              <y>59.755646</y>
             </Vector2>
             <Vector2>
-              <x>-113.0058</x>
-              <y>53.525604</y>
+              <x>-77.288086</x>
+              <y>37.662506</y>
             </Vector2>
             <Vector2>
-              <x>-99.34375</x>
-              <y>45.603943</y>
+              <x>-63.626038</x>
+              <y>29.740845</y>
             </Vector2>
             <Vector2>
-              <x>-97.1145</x>
-              <y>46.002014</y>
+              <x>-61.39679</x>
+              <y>30.138916</y>
             </Vector2>
             <Vector2>
-              <x>-91.764404</x>
-              <y>41.424164</y>
+              <x>-56.04669</x>
+              <y>25.561066</y>
             </Vector2>
             <Vector2>
-              <x>-81.51001</x>
-              <y>21.719452</y>
+              <x>-45.792297</x>
+              <y>5.8563538</y>
             </Vector2>
             <Vector2>
-              <x>-74.82233</x>
-              <y>15.947388</y>
+              <x>-39.104614</x>
+              <y>0.08428955</y>
             </Vector2>
             <Vector2>
-              <x>-73.4848</x>
-              <y>11.369507</y>
+              <x>-37.76709</x>
+              <y>-4.4935913</y>
             </Vector2>
             <Vector2>
-              <x>-54.313538</x>
-              <y>11.5685425</y>
+              <x>-19.468933</x>
+              <y>-4.2535095</y>
             </Vector2>
             <Vector2>
-              <x>-51.192627</x>
-              <y>3.6070557</y>
+              <x>-17.291748</x>
+              <y>-9.9088745</y>
             </Vector2>
             <Vector2>
-              <x>-41.097412</x>
-              <y>-3.2398071</y>
+              <x>-5.3796997</x>
+              <y>-19.102905</y>
             </Vector2>
             <Vector2>
-              <x>-34.85559</x>
-              <y>-9.2109375</y>
+              <x>0.8621216</x>
+              <y>-25.074036</y>
             </Vector2>
             <Vector2>
-              <x>-17.690613</x>
-              <y>-20.954132</y>
+              <x>18.0271</x>
+              <y>-36.81723</y>
             </Vector2>
             <Vector2>
-              <x>-16.289307</x>
-              <y>-34.687714</y>
+              <x>19.428406</x>
+              <y>-50.55081</y>
             </Vector2>
             <Vector2>
-              <x>-10.493347</x>
-              <y>-42.25113</y>
+              <x>25.224365</x>
+              <y>-58.114227</y>
             </Vector2>
             <Vector2>
-              <x>23.390808</x>
-              <y>-40.45981</y>
+              <x>45.892822</x>
+              <y>-54.3284</y>
             </Vector2>
             <Vector2>
-              <x>37.562317</x>
-              <y>-24.337769</y>
+              <x>63.969055</x>
+              <y>-43.862457</y>
             </Vector2>
             <Vector2>
-              <x>50.49182</x>
-              <y>-15.3811035</y>
+              <x>74.167725</x>
+              <y>-28.923187</y>
             </Vector2>
             <Vector2>
-              <x>60.746216</x>
-              <y>-2.8417358</y>
+              <x>86.124756</x>
+              <y>-18.879272</y>
             </Vector2>
             <Vector2>
-              <x>74.06854</x>
-              <y>-1.7615662</y>
+              <x>109.786255</x>
+              <y>-17.624664</y>
             </Vector2>
             <Vector2>
-              <x>185.20715</x>
-              <y>-1.677002</y>
+              <x>144.3216</x>
+              <y>-17.492493</y>
             </Vector2>
             <Vector2>
-              <x>185.48267</x>
-              <y>-10.287079</y>
+              <x>136.22986</x>
+              <y>-24.62909</y>
             </Vector2>
             <Vector2>
-              <x>180.79877</x>
-              <y>-9.549072</y>
+              <x>57.035645</x>
+              <y>-66.20993</y>
             </Vector2>
             <Vector2>
-              <x>178.18127</x>
-              <y>-18.405182</y>
-            </Vector2>
-            <Vector2>
-              <x>161.51215</x>
-              <y>-23.81723</y>
-            </Vector2>
-            <Vector2>
-              <x>134.0976</x>
-              <y>-50.38553</y>
-            </Vector2>
-            <Vector2>
-              <x>96.713745</x>
-              <y>-118.34396</y>
-            </Vector2>
-            <Vector2>
-              <x>-89.10956</x>
-              <y>-59.786224</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-349</name>
-          <resource>metal1.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>726.4919</x>
-            <y>-392.36835</y>
-          </center>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-11.157227</x>
-              <y>-3.72641</y>
-            </Vector2>
-            <Vector2>
-              <x>-11.057434</x>
-              <y>-2.479309</y>
-            </Vector2>
-            <Vector2>
-              <x>-2.9763794</x>
-              <y>7.051941</y>
-            </Vector2>
-            <Vector2>
-              <x>3.8077393</x>
-              <y>6.96286</y>
-            </Vector2>
-            <Vector2>
-              <x>10.891174</x>
-              <y>-1.6776123</y>
-            </Vector2>
-            <Vector2>
-              <x>11.190491</x>
-              <y>-3.72641</y>
-            </Vector2>
-            <Vector2>
-              <x>9.394653</x>
-              <y>-3.5482483</y>
-            </Vector2>
-            <Vector2>
-              <x>9.394653</x>
-              <y>-2.3902283</y>
-            </Vector2>
-            <Vector2>
-              <x>2.4110107</x>
-              <y>5.0922546</y>
-            </Vector2>
-            <Vector2>
-              <x>-2.9763794</x>
-              <y>5.003174</y>
-            </Vector2>
-            <Vector2>
-              <x>-9.461182</x>
-              <y>-2.479309</y>
-            </Vector2>
-            <Vector2>
-              <x>-9.461182</x>
-              <y>-4.0827026</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-361</name>
-          <resource>metal1.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>725.3612</x>
-            <y>-411.69067</y>
-          </center>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-9.4279175</x>
-              <y>5.352051</y>
-            </Vector2>
-            <Vector2>
-              <x>-9.328186</x>
-              <y>3.9268188</y>
-            </Vector2>
-            <Vector2>
-              <x>-1.0475464</x>
-              <y>-1.5959473</y>
-            </Vector2>
-            <Vector2>
-              <x>4.838684</x>
-              <y>-1.7741089</y>
-            </Vector2>
-            <Vector2>
-              <x>5.936096</x>
-              <y>-2.843048</y>
-            </Vector2>
-            <Vector2>
-              <x>5.8363037</x>
-              <y>-4.0901184</y>
-            </Vector2>
-            <Vector2>
-              <x>7.0335083</x>
-              <y>-4.179199</y>
-            </Vector2>
-            <Vector2>
-              <x>6.734253</x>
-              <y>-2.5758057</y>
-            </Vector2>
-            <Vector2>
-              <x>4.7388916</x>
-              <y>-0.9724121</y>
-            </Vector2>
-            <Vector2>
-              <x>0.049865723</x>
-              <y>-0.7052002</y>
-            </Vector2>
-            <Vector2>
-              <x>-7.632141</x>
-              <y>4.1049805</y>
-            </Vector2>
-            <Vector2>
-              <x>-7.7318726</x>
-              <y>5.352051</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-373</name>
-          <resource>metal1.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>757.59283</x>
-            <y>-422.6016</y>
-          </center>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-28.276733</x>
-              <y>1.119873</y>
-            </Vector2>
-            <Vector2>
-              <x>-28.376465</x>
-              <y>0.31817627</y>
-            </Vector2>
-            <Vector2>
-              <x>10.133362</x>
-              <y>0.14001465</y>
-            </Vector2>
-            <Vector2>
-              <x>11.230774</x>
-              <y>-1.1961365</y>
-            </Vector2>
-            <Vector2>
-              <x>12.627502</x>
-              <y>-1.0179749</y>
-            </Vector2>
-            <Vector2>
-              <x>12.52771</x>
-              <y>-0.4835205</y>
-            </Vector2>
-            <Vector2>
-              <x>10.133362</x>
-              <y>1.119873</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-380</name>
-          <resource>metal1.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>789.9199</x>
-            <y>-438.65585</y>
-          </center>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-18.616455</x>
-              <y>-1.9775085</y>
-            </Vector2>
-            <Vector2>
-              <x>-18.41687</x>
-              <y>3.4561768</y>
-            </Vector2>
-            <Vector2>
-              <x>11.812317</x>
-              <y>3.4561768</y>
-            </Vector2>
-            <Vector2>
-              <x>12.111633</x>
-              <y>-1.532135</y>
-            </Vector2>
-            <Vector2>
-              <x>13.0095215</x>
-              <y>-1.6212158</y>
-            </Vector2>
-            <Vector2>
-              <x>13.109253</x>
-              <y>-2.3338318</y>
-            </Vector2>
-            <Vector2>
-              <x>11.213745</x>
-              <y>-2.1556702</y>
-            </Vector2>
-            <Vector2>
-              <x>11.313477</x>
-              <y>2.0309448</y>
-            </Vector2>
-            <Vector2>
-              <x>-17.718506</x>
-              <y>2.6545105</y>
-            </Vector2>
-            <Vector2>
-              <x>-17.818298</x>
-              <y>-1.9775085</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-390</name>
-          <resource>metal1.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>776.59064</x>
-            <y>-428.5394</y>
-          </center>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-1.56781</x>
-              <y>0.38519287</y>
-            </Vector2>
-            <Vector2>
-              <x>-1.56781</x>
-              <y>-0.3288269</y>
-            </Vector2>
-            <Vector2>
-              <x>1.5888672</x>
-              <y>-0.36639404</y>
-            </Vector2>
-            <Vector2>
-              <x>1.546814</x>
-              <y>0.31002808</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-394</name>
-          <resource>metal1.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>749.188</x>
-            <y>-409.71017</y>
-          </center>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>19.96045</x>
-              <y>-6.8544617</y>
-            </Vector2>
-            <Vector2>
-              <x>19.834229</x>
-              <y>-0.7290344</y>
-            </Vector2>
-            <Vector2>
-              <x>-16.00763</x>
-              <y>-0.24050903</y>
-            </Vector2>
-            <Vector2>
-              <x>-13.734802</x>
-              <y>2.7658386</y>
-            </Vector2>
-            <Vector2>
-              <x>-13.734802</x>
-              <y>4.419342</y>
-            </Vector2>
-            <Vector2>
-              <x>-11.630371</x>
-              <y>4.4569397</y>
-            </Vector2>
-            <Vector2>
-              <x>-11.630371</x>
-              <y>2.7282715</y>
-            </Vector2>
-            <Vector2>
-              <x>-13.903137</x>
-              <y>0.32318115</y>
-            </Vector2>
-            <Vector2>
-              <x>20.423462</x>
-              <y>0.060150146</y>
-            </Vector2>
-            <Vector2>
-              <x>20.423462</x>
-              <y>-6.9296265</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-404</name>
-          <resource>debris1.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>937.31726</x>
-            <y>-349.19678</y>
-          </center>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-8.989319</x>
-              <y>-35.10794</y>
-            </Vector2>
-            <Vector2>
-              <x>-21.851318</x>
-              <y>-46.919952</y>
-            </Vector2>
-            <Vector2>
-              <x>-22.586243</x>
-              <y>-62.341187</y>
-            </Vector2>
-            <Vector2>
-              <x>3.1376953</x>
-              <y>-59.388184</y>
-            </Vector2>
-            <Vector2>
-              <x>32.90393</x>
-              <y>20.67102</y>
-            </Vector2>
-            <Vector2>
-              <x>11.589844</x>
-              <y>63.3255</y>
-            </Vector2>
-            <Vector2>
-              <x>-3.4770508</x>
-              <y>51.841614</y>
-            </Vector2>
-            <Vector2>
-              <x>-3.4770508</x>
-              <y>41.013916</y>
-            </Vector2>
-            <Vector2>
-              <x>3.1376953</x>
-              <y>37.0766</y>
-            </Vector2>
-            <Vector2>
-              <x>3.505127</x>
-              <y>24.608337</y>
-            </Vector2>
-            <Vector2>
-              <x>7.914978</x>
-              <y>7.218445</y>
-            </Vector2>
-            <Vector2>
-              <x>6.4450073</x>
-              <y>-14.43692</y>
-            </Vector2>
-            <Vector2>
-              <x>-8.2543335</x>
-              <y>-27.56137</y>
+              <x>-111.72037</x>
+              <y>-60.707916</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -33959,26 +33303,26 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>877.8722</x>
-            <y>-430.87827</y>
+            <x>773.88574</x>
+            <y>-442.03302</y>
           </center>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
-              <x>-36.0213</x>
-              <y>-18.656647</y>
+              <x>-8.106262</x>
+              <y>-4.558716</y>
             </Vector2>
             <Vector2>
-              <x>29.160095</x>
-              <y>26.731934</y>
+              <x>7.178406</x>
+              <y>6.0796814</y>
             </Vector2>
             <Vector2>
-              <x>36.0213</x>
-              <y>17.82129</y>
+              <x>7.8813477</x>
+              <y>4.5322876</y>
             </Vector2>
             <Vector2>
-              <x>-29.160095</x>
-              <y>-25.896545</y>
+              <x>-6.953491</x>
+              <y>-6.053253</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -34362,62 +33706,62 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>109.8255</x>
-            <y>-255.90736</y>
+            <x>110.13876</x>
+            <y>-255.03242</y>
           </center>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>28.122757</x>
-              <y>-12.82692</y>
+              <x>27.809494</x>
+              <y>-13.7018585</y>
             </Vector2>
             <Vector2>
-              <x>15.826775</x>
-              <y>-12.156235</y>
+              <x>15.513512</x>
+              <y>-13.031174</y>
             </Vector2>
             <Vector2>
-              <x>2.9020233</x>
-              <y>-9.054306</y>
+              <x>2.5887604</x>
+              <y>-9.929245</y>
             </Vector2>
             <Vector2>
-              <x>-5.0624237</x>
-              <y>-3.6049347</y>
+              <x>-5.3756866</x>
+              <y>-4.4798737</y>
             </Vector2>
             <Vector2>
-              <x>-9.7432785</x>
-              <y>5.197876</y>
+              <x>-10.056541</x>
+              <y>4.322937</y>
             </Vector2>
             <Vector2>
-              <x>-9.673416</x>
-              <y>8.802826</y>
+              <x>-9.986679</x>
+              <y>7.927887</y>
             </Vector2>
             <Vector2>
-              <x>-8.206284</x>
-              <y>13.329987</y>
+              <x>-8.5195465</x>
+              <y>12.455048</y>
             </Vector2>
             <Vector2>
-              <x>-2.2678833</x>
-              <y>14.83905</y>
+              <x>-2.5811462</x>
+              <y>13.964111</y>
             </Vector2>
             <Vector2>
-              <x>-0.24183655</x>
-              <y>15.006714</y>
+              <x>-0.5550995</x>
+              <y>14.131775</y>
             </Vector2>
             <Vector2>
-              <x>-0.3116989</x>
-              <y>17.102615</y>
+              <x>-0.62496185</x>
+              <y>16.227676</y>
             </Vector2>
             <Vector2>
-              <x>-19.733772</x>
-              <y>16.18042</y>
+              <x>-20.047035</x>
+              <y>15.305481</y>
             </Vector2>
             <Vector2>
-              <x>-18.19677</x>
-              <y>-28.16896</y>
+              <x>-14.437546</x>
+              <y>-17.669754</y>
             </Vector2>
             <Vector2>
-              <x>26.58577</x>
-              <y>-24.647842</y>
+              <x>26.272507</x>
+              <y>-25.522781</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -34429,146 +33773,146 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>58.783943</x>
-            <y>-228.97507</y>
+            <x>58.76944</x>
+            <y>-227.94617</y>
           </center>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-29.2129</x>
-              <y>35.36583</y>
+              <x>-29.198397</x>
+              <y>34.33693</y>
             </Vector2>
             <Vector2>
-              <x>-8.009499</x>
-              <y>27.30661</y>
+              <x>-7.994995</x>
+              <y>26.27771</y>
             </Vector2>
             <Vector2>
-              <x>-24.99141</x>
-              <y>27.53688</y>
+              <x>-24.976906</x>
+              <y>26.50798</y>
             </Vector2>
             <Vector2>
-              <x>-6.666298</x>
-              <y>18.902008</y>
+              <x>-6.6517944</x>
+              <y>17.873108</y>
             </Vector2>
             <Vector2>
-              <x>-3.9798965</x>
-              <y>14.18161</y>
+              <x>-3.965393</x>
+              <y>13.15271</y>
             </Vector2>
             <Vector2>
-              <x>-7.913555</x>
-              <y>17.86583</y>
+              <x>-7.8990517</x>
+              <y>16.83693</y>
             </Vector2>
             <Vector2>
-              <x>-22.400948</x>
-              <y>21.204636</y>
+              <x>-22.386444</x>
+              <y>20.175735</y>
             </Vector2>
             <Vector2>
-              <x>-1.3894348</x>
-              <y>5.3164825</y>
+              <x>-1.3749313</x>
+              <y>4.2875824</y>
             </Vector2>
             <Vector2>
-              <x>-3.7921104</x>
-              <y>6.126343</y>
+              <x>-3.777607</x>
+              <y>5.0974426</y>
             </Vector2>
             <Vector2>
-              <x>-5.0067863</x>
-              <y>4.49382</y>
+              <x>-4.992283</x>
+              <y>3.46492</y>
             </Vector2>
             <Vector2>
-              <x>-7.6304893</x>
-              <y>3.2111206</y>
+              <x>-7.615986</x>
+              <y>2.1822205</y>
             </Vector2>
             <Vector2>
-              <x>-1.9943848</x>
-              <y>2.74469</y>
+              <x>-1.9798813</x>
+              <y>1.7157898</y>
             </Vector2>
             <Vector2>
-              <x>5.0387497</x>
-              <y>-1.4762878</y>
+              <x>5.053253</x>
+              <y>-2.505188</y>
             </Vector2>
             <Vector2>
-              <x>11.754753</x>
-              <y>-1.1308899</y>
+              <x>11.769257</x>
+              <y>-2.15979</y>
             </Vector2>
             <Vector2>
-              <x>16.455963</x>
-              <y>-4.6999664</y>
+              <x>16.470467</x>
+              <y>-5.7288666</y>
             </Vector2>
             <Vector2>
-              <x>9.548065</x>
-              <y>-3.7789154</y>
+              <x>9.562569</x>
+              <y>-4.8078156</y>
             </Vector2>
             <Vector2>
-              <x>2.0645142</x>
-              <y>-5.50589</y>
+              <x>2.0790176</x>
+              <y>-6.53479</y>
             </Vector2>
             <Vector2>
-              <x>-4.7474365</x>
-              <y>-7.578247</y>
+              <x>-4.732933</x>
+              <y>-8.607147</y>
             </Vector2>
             <Vector2>
-              <x>6.60553</x>
-              <y>-7.6335144</y>
+              <x>6.6200333</x>
+              <y>-8.662415</y>
             </Vector2>
             <Vector2>
-              <x>8.791954</x>
-              <y>-7.9833527</y>
+              <x>8.8064575</x>
+              <y>-9.012253</y>
             </Vector2>
             <Vector2>
-              <x>7.1885757</x>
-              <y>-9.440964</y>
+              <x>7.203079</x>
+              <y>-10.469864</y>
             </Vector2>
             <Vector2>
-              <x>8.840538</x>
-              <y>-8.85791</y>
+              <x>8.8550415</x>
+              <y>-9.88681</y>
             </Vector2>
             <Vector2>
-              <x>6.094116</x>
-              <y>-10.9170685</y>
+              <x>6.1086197</x>
+              <y>-11.945969</y>
             </Vector2>
             <Vector2>
-              <x>9.835892</x>
-              <y>-9.535492</y>
+              <x>9.850395</x>
+              <y>-10.564392</y>
             </Vector2>
             <Vector2>
-              <x>11.754753</x>
-              <y>-9.190094</y>
+              <x>11.769257</x>
+              <y>-10.218994</y>
             </Vector2>
             <Vector2>
-              <x>16.264076</x>
-              <y>-9.190094</y>
+              <x>16.27858</x>
+              <y>-10.218994</y>
             </Vector2>
             <Vector2>
-              <x>20.389626</x>
-              <y>-8.844696</y>
+              <x>20.404129</x>
+              <y>-9.873596</y>
             </Vector2>
             <Vector2>
-              <x>24.515167</x>
-              <y>-9.996017</y>
+              <x>24.52967</x>
+              <y>-11.024918</y>
             </Vector2>
             <Vector2>
-              <x>27.105629</x>
-              <y>-11.377594</y>
+              <x>27.120132</x>
+              <y>-12.406494</y>
             </Vector2>
             <Vector2>
-              <x>18.374817</x>
-              <y>-12.183517</y>
+              <x>18.38932</x>
+              <y>-13.212418</y>
             </Vector2>
             <Vector2>
-              <x>6.1900635</x>
-              <y>-16.673645</y>
+              <x>6.204567</x>
+              <y>-17.702545</y>
             </Vector2>
             <Vector2>
-              <x>-3.7880096</x>
-              <y>-21.278915</y>
+              <x>-3.7735062</x>
+              <y>-22.307816</y>
             </Vector2>
             <Vector2>
-              <x>-31.99524</x>
-              <y>-38.894073</y>
+              <x>-43.817577</x>
+              <y>0.6193085</y>
             </Vector2>
             <Vector2>
-              <x>-53.294586</x>
-              <y>31.911835</y>
+              <x>-41.93639</x>
+              <y>25.323273</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -36460,66 +35804,66 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>406.27567</x>
-            <y>-212.18507</y>
+            <x>406.28464</x>
+            <y>-212.20071</y>
           </center>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-22.624756</x>
-              <y>27.908905</y>
+              <x>-22.633728</x>
+              <y>27.924545</y>
             </Vector2>
             <Vector2>
-              <x>-20.325104</x>
-              <y>27.908905</y>
+              <x>-20.334076</x>
+              <y>27.924545</y>
             </Vector2>
             <Vector2>
-              <x>-19.397827</x>
-              <y>27.196747</y>
+              <x>-19.4068</x>
+              <y>27.212387</y>
             </Vector2>
             <Vector2>
-              <x>-18.841461</x>
-              <y>26.351074</y>
+              <x>-18.850433</x>
+              <y>26.366714</y>
             </Vector2>
             <Vector2>
-              <x>-17.877106</x>
-              <y>22.701324</y>
+              <x>-17.886078</x>
+              <y>22.716965</y>
             </Vector2>
             <Vector2>
-              <x>-7.6460876</x>
-              <y>-0.035125732</y>
+              <x>-7.65506</x>
+              <y>-0.019485474</y>
             </Vector2>
             <Vector2>
-              <x>0.82788086</x>
-              <y>-9.3936615</y>
+              <x>0.8189087</x>
+              <y>-9.378021</y>
             </Vector2>
             <Vector2>
-              <x>7.7826843</x>
-              <y>-12.877808</y>
+              <x>7.773712</x>
+              <y>-12.862167</y>
             </Vector2>
             <Vector2>
-              <x>14.737457</x>
-              <y>-14.660385</y>
+              <x>14.728485</x>
+              <y>-14.644745</y>
             </Vector2>
             <Vector2>
-              <x>20.865173</x>
-              <y>-19.385101</y>
+              <x>20.856201</x>
+              <y>-19.369461</y>
             </Vector2>
             <Vector2>
-              <x>22.419128</x>
-              <y>-19.385101</y>
+              <x>22.410156</x>
+              <y>-19.369461</y>
             </Vector2>
             <Vector2>
-              <x>30.65509</x>
-              <y>-17.147415</y>
+              <x>30.646118</x>
+              <y>-17.131775</y>
             </Vector2>
             <Vector2>
-              <x>27.857971</x>
-              <y>-19.944534</y>
+              <x>27.975159</x>
+              <y>-20.147827</y>
             </Vector2>
             <Vector2>
-              <x>-18.433563</x>
-              <y>-19.237503</y>
+              <x>-18.442535</x>
+              <y>-19.221863</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -36847,6 +36191,1378 @@
             <Vector2>
               <x>1.3562012</x>
               <y>1.2993164</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-2</name>
+          <resource>metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>721.42957</x>
+            <y>-426.775</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-2.9275513</x>
+              <y>-0.5840149</y>
+            </Vector2>
+            <Vector2>
+              <x>1.4692383</x>
+              <y>-0.5230408</y>
+            </Vector2>
+            <Vector2>
+              <x>2.0267944</x>
+              <y>0.5177002</y>
+            </Vector2>
+            <Vector2>
+              <x>1.4692383</x>
+              <y>0.5177002</y>
+            </Vector2>
+            <Vector2>
+              <x>0.9116821</x>
+              <y>0.07165527</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.949707</x>
+              <y>1.2207031E-4</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-10</name>
+          <resource>metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>720.61993</x>
+            <y>-423.38635</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-2.5992432</x>
+              <y>-0.60562134</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.1954956</x>
+              <y>-0.60562134</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.8253784</x>
+              <y>0.121154785</y>
+            </Vector2>
+            <Vector2>
+              <x>1.8085938</x>
+              <y>0.32305908</y>
+            </Vector2>
+            <Vector2>
+              <x>2.010437</x>
+              <y>-0.3633728</y>
+            </Vector2>
+            <Vector2>
+              <x>2.717041</x>
+              <y>-0.3633728</y>
+            </Vector2>
+            <Vector2>
+              <x>2.2123413</x>
+              <y>0.80758667</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.1281738</x>
+              <y>0.6864319</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-18</name>
+          <resource>metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>727.51776</x>
+            <y>-429.66492</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-2.9694214</x>
+              <y>2.281311</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.3301392</x>
+              <y>2.281311</y>
+            </Vector2>
+            <Vector2>
+              <x>2.986206</x>
+              <y>-2.281311</y>
+            </Vector2>
+            <Vector2>
+              <x>2.3132324</x>
+              <y>-2.281311</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-22</name>
+          <resource>metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>735.8793</x>
+            <y>-436.56937</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-6.0145874</x>
+              <y>2.8869324</y>
+            </Vector2>
+            <Vector2>
+              <x>6.098572</x>
+              <y>3.129181</y>
+            </Vector2>
+            <Vector2>
+              <x>5.9976196</x>
+              <y>2.6042786</y>
+            </Vector2>
+            <Vector2>
+              <x>-5.812683</x>
+              <y>2.36203</y>
+            </Vector2>
+            <Vector2>
+              <x>-5.8463135</x>
+              <y>-2.7658691</y>
+            </Vector2>
+            <Vector2>
+              <x>5.930359</x>
+              <y>-2.1602173</y>
+            </Vector2>
+            <Vector2>
+              <x>5.863037</x>
+              <y>-2.6851196</y>
+            </Vector2>
+            <Vector2>
+              <x>-6.2164307</x>
+              <y>-3.371521</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-30</name>
+          <resource>metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>746.81683</x>
+            <y>-436.1985</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-3.0792847</x>
+              <y>2.821289</y>
+            </Vector2>
+            <Vector2>
+              <x>3.604187</x>
+              <y>2.9632263</y>
+            </Vector2>
+            <Vector2>
+              <x>3.3676147</x>
+              <y>-2.8212585</y>
+            </Vector2>
+            <Vector2>
+              <x>-3.1975708</x>
+              <y>-2.9986877</y>
+            </Vector2>
+            <Vector2>
+              <x>-3.256775</x>
+              <y>-2.3954163</y>
+            </Vector2>
+            <Vector2>
+              <x>2.805725</x>
+              <y>-2.1470032</y>
+            </Vector2>
+            <Vector2>
+              <x>2.9240112</x>
+              <y>2.324463</y>
+            </Vector2>
+            <Vector2>
+              <x>-3.1680298</x>
+              <y>2.253479</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>lastBaseDoor</name>
+          <resource></resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>749.8709</x>
+            <y>-442.7491</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.22058105</x>
+              <y>3.5486755</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.24816895</x>
+              <y>-3.6313782</y>
+            </Vector2>
+            <Vector2>
+              <x>0.24816895</x>
+              <y>-3.4659424</y>
+            </Vector2>
+            <Vector2>
+              <x>0.22058105</x>
+              <y>3.5486755</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>lastBaseDoorLever</name>
+          <resource>lever1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>748.9542</x>
+            <y>-437.62057</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.19647217</x>
+              <y>0.31021118</y>
+            </Vector2>
+            <Vector2>
+              <x>0.20678711</x>
+              <y>0.3288269</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.010314941</x>
+              <y>-0.63900757</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-44</name>
+          <resource>metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>742.5348</x>
+            <y>-442.8252</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>0.58825684</x>
+              <y>0.24679565</y>
+            </Vector2>
+            <Vector2>
+              <x>0.58825684</x>
+              <y>-0.20730591</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.612854</x>
+              <y>-0.22705078</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.56347656</x>
+              <y>0.18756104</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-0</name>
+          <resource>debris1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>789.6936</x>
+            <y>-415.60144</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-8.461121</x>
+              <y>-19.933899</y>
+            </Vector2>
+            <Vector2>
+              <x>-4.0323486</x>
+              <y>-24.577118</y>
+            </Vector2>
+            <Vector2>
+              <x>1.0957031</x>
+              <y>-22.842896</y>
+            </Vector2>
+            <Vector2>
+              <x>9.953247</x>
+              <y>-11.374695</y>
+            </Vector2>
+            <Vector2>
+              <x>11.678162</x>
+              <y>-3.76651</y>
+            </Vector2>
+            <Vector2>
+              <x>1.0785522</x>
+              <y>37.820282</y>
+            </Vector2>
+            <Vector2>
+              <x>-3.545166</x>
+              <y>37.606873</y>
+            </Vector2>
+            <Vector2>
+              <x>-12.792664</x>
+              <y>30.564514</y>
+            </Vector2>
+            <Vector2>
+              <x>4.1018066</x>
+              <y>13.278839</y>
+            </Vector2>
+            <Vector2>
+              <x>6.0579834</x>
+              <y>-5.287262</y>
+            </Vector2>
+            <Vector2>
+              <x>0.54504395</x>
+              <y>-12.329559</y>
+            </Vector2>
+            <Vector2>
+              <x>-5.679199</x>
+              <y>-19.158478</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-15</name>
+          <resource>debris1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>607.6985</x>
+            <y>-230.1375</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-8.121399</x>
+              <y>13.6532135</y>
+            </Vector2>
+            <Vector2>
+              <x>14.289185</x>
+              <y>-15.997711</y>
+            </Vector2>
+            <Vector2>
+              <x>-6.1676636</x>
+              <y>2.3444977</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-18</name>
+          <resource>metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>611.1213</x>
+            <y>-244.02824</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-4.9801025</x>
+              <y>2.129303</y>
+            </Vector2>
+            <Vector2>
+              <x>-4.8982544</x>
+              <y>0.9511566</y>
+            </Vector2>
+            <Vector2>
+              <x>-5.3618774</x>
+              <y>0.9838867</y>
+            </Vector2>
+            <Vector2>
+              <x>-5.3619385</x>
+              <y>2.5220337</y>
+            </Vector2>
+            <Vector2>
+              <x>3.31073</x>
+              <y>2.554779</y>
+            </Vector2>
+            <Vector2>
+              <x>3.2562256</x>
+              <y>4.7474823</y>
+            </Vector2>
+            <Vector2>
+              <x>3.6380005</x>
+              <y>4.420212</y>
+            </Vector2>
+            <Vector2>
+              <x>3.7647095</x>
+              <y>-10.182831</y>
+            </Vector2>
+            <Vector2>
+              <x>3.3325806</x>
+              <y>-10.182831</y>
+            </Vector2>
+            <Vector2>
+              <x>3.2996826</x>
+              <y>2.0567474</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-32</name>
+          <resource>metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>609.02454</x>
+            <y>-246.34811</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-2.8134766</x>
+              <y>0.16555786</y>
+            </Vector2>
+            <Vector2>
+              <x>2.8311768</x>
+              <y>0.20700073</y>
+            </Vector2>
+            <Vector2>
+              <x>2.8496704</x>
+              <y>-0.19294739</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.8673706</x>
+              <y>-0.1796112</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-36</name>
+          <resource>metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>613.7814</x>
+            <y>-248.71858</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>0.6480713</x>
+              <y>0.1777649</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.666626</x>
+              <y>0.17774963</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.666626</x>
+              <y>-0.1777649</y>
+            </Vector2>
+            <Vector2>
+              <x>0.6851196</x>
+              <y>-0.17773438</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-40</name>
+          <resource>metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>613.41565</x>
+            <y>-251.30716</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>0.99523926</x>
+              <y>0.16664124</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.0785522</x>
+              <y>0.25552368</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.0230103</x>
+              <y>-0.23330688</y>
+            </Vector2>
+            <Vector2>
+              <x>1.1063843</x>
+              <y>-0.18887329</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-44</name>
+          <resource>metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>608.25024</x>
+            <y>-254.0603</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>6.197693</x>
+              <y>0.23123169</y>
+            </Vector2>
+            <Vector2>
+              <x>-6.227112</x>
+              <y>0.1855011</y>
+            </Vector2>
+            <Vector2>
+              <x>-6.2423096</x>
+              <y>-0.27027893</y>
+            </Vector2>
+            <Vector2>
+              <x>6.2717896</x>
+              <y>-0.14649963</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-49</name>
+          <resource>metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>601.88635</x>
+            <y>-258.96124</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>0.6727295</x>
+              <y>-0.1716919</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.70843506</x>
+              <y>-0.1716919</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.6868286</x>
+              <y>0.1390686</y>
+            </Vector2>
+            <Vector2>
+              <x>0.7224121</x>
+              <y>0.2043457</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-55</name>
+          <resource>metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>607.76917</x>
+            <y>-251.07521</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-1.1171875</x>
+              <y>-0.18592834</y>
+            </Vector2>
+            <Vector2>
+              <x>1.1182861</x>
+              <y>-0.16322327</y>
+            </Vector2>
+            <Vector2>
+              <x>1.1361084</x>
+              <y>0.17459106</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.137207</x>
+              <y>0.17459106</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-59</name>
+          <resource>crate1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>607.22284</x>
+            <y>-250.31177</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.5883789</x>
+              <y>0.5708313</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.5883789</x>
+              <y>-0.5588074</y>
+            </Vector2>
+            <Vector2>
+              <x>0.5733032</x>
+              <y>-0.5588074</y>
+            </Vector2>
+            <Vector2>
+              <x>0.6033325</x>
+              <y>0.5467987</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-63</name>
+          <resource>crate1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>608.3595</x>
+            <y>-250.30576</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.5057373</x>
+              <y>0.53479004</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.53582764</x>
+              <y>-0.5467987</y>
+            </Vector2>
+            <Vector2>
+              <x>0.52575684</x>
+              <y>-0.5588074</y>
+            </Vector2>
+            <Vector2>
+              <x>0.5157471</x>
+              <y>0.5708313</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-65</name>
+          <resource>crate1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>607.2053</x>
+            <y>-249.19113</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.5633545</x>
+              <y>0.5498047</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.6134033</x>
+              <y>-0.51976013</y>
+            </Vector2>
+            <Vector2>
+              <x>0.59832764</x>
+              <y>-0.5678253</y>
+            </Vector2>
+            <Vector2>
+              <x>0.5783081</x>
+              <y>0.53778076</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-67</name>
+          <resource>crate1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>608.3745</x>
+            <y>-249.11601</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.49072266</x>
+              <y>0.5708313</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.52075195</x>
+              <y>-0.59487915</y>
+            </Vector2>
+            <Vector2>
+              <x>0.48065186</x>
+              <y>-0.5467987</y>
+            </Vector2>
+            <Vector2>
+              <x>0.5307617</x>
+              <y>0.5708313</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-69</name>
+          <resource>crate1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>607.8262</x>
+            <y>-247.90526</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.5733032</x>
+              <y>0.62190247</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.5733032</x>
+              <y>-0.6399231</y>
+            </Vector2>
+            <Vector2>
+              <x>0.5683594</x>
+              <y>-0.6279144</y>
+            </Vector2>
+            <Vector2>
+              <x>0.57836914</x>
+              <y>0.64593506</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-77</name>
+          <resource>metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>565.9709</x>
+            <y>-284.71432</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-26.593872</x>
+              <y>-20.386536</y>
+            </Vector2>
+            <Vector2>
+              <x>26.21753</x>
+              <y>20.760406</y>
+            </Vector2>
+            <Vector2>
+              <x>26.970215</x>
+              <y>20.760406</y>
+            </Vector2>
+            <Vector2>
+              <x>-26.593872</x>
+              <y>-21.134247</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>shuttle4</name>
+          <resource>elevatorWLip.png</resource>
+          <density>5.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>605.3147</x>
+            <y>-258.99216</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-2.6090698</x>
+              <y>0.2760315</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.4101562</x>
+              <y>-0.40039062</y>
+            </Vector2>
+            <Vector2>
+              <x>2.4972534</x>
+              <y>-0.44018555</y>
+            </Vector2>
+            <Vector2>
+              <x>2.663025</x>
+              <y>0.23623657</y>
+            </Vector2>
+            <Vector2>
+              <x>2.215393</x>
+              <y>0.19644165</y>
+            </Vector2>
+            <Vector2>
+              <x>2.1656494</x>
+              <y>-0.14175415</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.19458</x>
+              <y>-0.022399902</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.3272095</x>
+              <y>0.29592896</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-89</name>
+          <resource>metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>609.5952</x>
+            <y>-435.3571</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-1.1611328</x>
+              <y>1.0716553</y>
+            </Vector2>
+            <Vector2>
+              <x>1.4052124</x>
+              <y>-0.86187744</y>
+            </Vector2>
+            <Vector2>
+              <x>0.9169922</x>
+              <y>-0.86187744</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.1611328</x>
+              <y>0.6520996</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-93</name>
+          <resource>crate1.png</resource>
+          <density>5.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>607.63043</x>
+            <y>-435.21902</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.6055298</x>
+              <y>0.65689087</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.61035156</x>
+              <y>-0.6583252</y>
+            </Vector2>
+            <Vector2>
+              <x>0.6149292</x>
+              <y>-0.67858887</y>
+            </Vector2>
+            <Vector2>
+              <x>0.6010132</x>
+              <y>0.67996216</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-96</name>
+          <resource>metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>611.20496</x>
+            <y>-438.68646</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-1.0435791</x>
+              <y>0.10223389</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.026001</x>
+              <y>-0.11260986</y>
+            </Vector2>
+            <Vector2>
+              <x>1.059082</x>
+              <y>-0.1343689</y>
+            </Vector2>
+            <Vector2>
+              <x>1.010376</x>
+              <y>0.14471436</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-101</name>
+          <resource>metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>613.15375</x>
+            <y>-442.02634</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.76605225</x>
+              <y>0.11694336</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.76605225</x>
+              <y>-0.0897522</y>
+            </Vector2>
+            <Vector2>
+              <x>0.7841797</x>
+              <y>-0.13327026</y>
+            </Vector2>
+            <Vector2>
+              <x>0.74786377</x>
+              <y>0.1060791</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-105</name>
+          <resource>crate1.png</resource>
+          <density>5.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>605.67114</x>
+            <y>-436.72717</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>0.6052246</x>
+              <y>0.65859985</y>
+            </Vector2>
+            <Vector2>
+              <x>0.6135864</x>
+              <y>-0.667572</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.6114502</x>
+              <y>-0.6496582</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.6072998</x>
+              <y>0.65859985</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-109</name>
+          <resource>crate1.png</resource>
+          <density>5.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>607.6659</x>
+            <y>-436.5784</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.62371826</x>
+              <y>0.6296997</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.62371826</x>
+              <y>-0.6341858</y>
+            </Vector2>
+            <Vector2>
+              <x>0.616333</x>
+              <y>-0.6251831</y>
+            </Vector2>
+            <Vector2>
+              <x>0.6312256</x>
+              <y>0.6296997</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-113</name>
+          <resource>crate1.png</resource>
+          <density>5.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>606.3207</x>
+            <y>-438.0546</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.6143799</x>
+              <y>0.6341553</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.6143799</x>
+              <y>-0.6297302</y>
+            </Vector2>
+            <Vector2>
+              <x>0.6107178</x>
+              <y>-0.62075806</y>
+            </Vector2>
+            <Vector2>
+              <x>0.61816406</x>
+              <y>0.61624146</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-116</name>
+          <resource>crate1.png</resource>
+          <density>5.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>607.7721</x>
+            <y>-437.93784</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.6387329</x>
+              <y>0.67678833</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.6312256</x>
+              <y>-0.67678833</y>
+            </Vector2>
+            <Vector2>
+              <x>0.63116455</x>
+              <y>-0.66781616</y>
+            </Vector2>
+            <Vector2>
+              <x>0.6386719</x>
+              <y>0.66781616</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-121</name>
+          <resource>crate1.png</resource>
+          <density>5.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>606.29944</x>
+            <y>-435.34662</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>0.6045532</x>
+              <y>0.6693115</y>
+            </Vector2>
+            <Vector2>
+              <x>0.59552</x>
+              <y>-0.67385864</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.60717773</x>
+              <y>-0.6648865</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.59295654</x>
+              <y>0.6693115</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-125</name>
+          <resource>crate1.png</resource>
+          <density>5.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>604.11884</x>
+            <y>-436.82306</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.59484863</x>
+              <y>0.68203735</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.6057739</x>
+              <y>-0.70510864</y>
+            </Vector2>
+            <Vector2>
+              <x>0.5819092</x>
+              <y>-0.6692505</y>
+            </Vector2>
+            <Vector2>
+              <x>0.61865234</x>
+              <y>0.69229126</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-128</name>
+          <resource>crate1.png</resource>
+          <density>5.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>604.95715</x>
+            <y>-438.15448</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.58636475</x>
+              <y>0.62298584</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.5788574</x>
+              <y>-0.631958</y>
+            </Vector2>
+            <Vector2>
+              <x>0.5938721</x>
+              <y>-0.64089966</y>
+            </Vector2>
+            <Vector2>
+              <x>0.57147217</x>
+              <y>0.6498718</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-132</name>
+          <resource>metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>607.3533</x>
+            <y>-437.98126</y>
+          </center>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-3.4716187</x>
+              <y>-0.81881714</y>
+            </Vector2>
+            <Vector2>
+              <x>1.2064819</x>
+              <y>-0.67874146</y>
+            </Vector2>
+            <Vector2>
+              <x>1.1887817</x>
+              <y>0.075286865</y>
+            </Vector2>
+            <Vector2>
+              <x>1.1710815</x>
+              <y>1.7851562</y>
+            </Vector2>
+            <Vector2>
+              <x>1.5162354</x>
+              <y>1.8170166</y>
+            </Vector2>
+            <Vector2>
+              <x>1.5693359</x>
+              <y>-1.0185852</y>
+            </Vector2>
+            <Vector2>
+              <x>-3.18042</x>
+              <y>-1.1611328</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-141</name>
+          <resource>crate1.png</resource>
+          <density>5.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>603.3103</x>
+            <y>-434.57202</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.59606934</x>
+              <y>0.65374756</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.6131592</x>
+              <y>-0.6793823</y>
+            </Vector2>
+            <Vector2>
+              <x>0.62597656</x>
+              <y>-0.6383667</y>
+            </Vector2>
+            <Vector2>
+              <x>0.58325195</x>
+              <y>0.66400146</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-147</name>
+          <resource>crate1.png</resource>
+          <density>5.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>604.63495</x>
+            <y>-434.5515</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.6067505</x>
+              <y>0.65631104</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.6067505</x>
+              <y>-0.6460571</y>
+            </Vector2>
+            <Vector2>
+              <x>0.63238525</x>
+              <y>-0.65631104</y>
+            </Vector2>
+            <Vector2>
+              <x>0.5811157</x>
+              <y>0.6460571</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-153</name>
+          <resource>crate1.png</resource>
+          <density>5.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>603.8381</x>
+            <y>-433.1722</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.5704346</x>
+              <y>0.61016846</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.5875244</x>
+              <y>-0.6511841</y>
+            </Vector2>
+            <Vector2>
+              <x>0.5917969</x>
+              <y>-0.57940674</y>
+            </Vector2>
+            <Vector2>
+              <x>0.5661621</x>
+              <y>0.62042236</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-158</name>
+          <resource>crate1.png</resource>
+          <density>5.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>605.1306</x>
+            <y>-433.1517</y>
+          </center>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.5811157</x>
+              <y>0.61016846</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.5725708</x>
+              <y>-0.6409302</y>
+            </Vector2>
+            <Vector2>
+              <x>0.6152954</x>
+              <y>-0.58966064</y>
+            </Vector2>
+            <Vector2>
+              <x>0.5383911</x>
+              <y>0.62042236</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -40634,6 +41350,555 @@
             </entry>
           </properties>
         </world.GDXNPC>
+        <world.GDXNPC>
+          <name>NPC-0</name>
+          <coordinates>
+            <x>718.54626</x>
+            <y>-425.71286</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string>3</string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ledge4Turret</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>NPC-3</name>
+          <coordinates>
+            <x>740.3985</x>
+            <y>-438.1193</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ledge4Soldier</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>NPC-4</name>
+          <coordinates>
+            <x>739.25964</x>
+            <y>-438.16266</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ledge4Soldier</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>NPC-5</name>
+          <coordinates>
+            <x>745.17065</x>
+            <y>-438.01083</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string>-3</string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ledge4Soldier</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>NPC-6</name>
+          <coordinates>
+            <x>743.7426</x>
+            <y>-432.86993</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string>3</string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ledge4Guard</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>NPC-7</name>
+          <coordinates>
+            <x>747.629</x>
+            <y>-437.70715</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string>3</string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ledge4Guard</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>NPC-8</name>
+          <coordinates>
+            <x>733.656</x>
+            <y>-438.24945</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ledge4Guard</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>NPC-9</name>
+          <coordinates>
+            <x>742.54956</x>
+            <y>-442.04547</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string>3</string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ledge4Guard</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>NPC-10</name>
+          <coordinates>
+            <x>735.71674</x>
+            <y>-432.45782</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ledge4Soldier</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
       </npcs>
       <paths/>
       <joints>
@@ -40799,24 +42064,6 @@
             <y>-315.01865</y>
           </anchor>
         </world.joint.RevoluteJoint>
-        <world.joint.RevoluteJoint>
-          <name>Joint-8</name>
-          <bodyA>deadDoor</bodyA>
-          <bodyB>deadDoorHinge</bodyB>
-          <jointType>RevoluteJoint</jointType>
-          <collideConnected>false</collideConnected>
-          <enableLimit>false</enableLimit>
-          <enableMotor>false</enableMotor>
-          <lowerAngle>0.0</lowerAngle>
-          <upperAngle>0.0</upperAngle>
-          <maxMotorTorque>0.0</maxMotorTorque>
-          <motorSpeed>0.0</motorSpeed>
-          <referenceAngle>0.0</referenceAngle>
-          <anchor>
-            <x>847.98596</x>
-            <y>-452.1411</y>
-          </anchor>
-        </world.joint.RevoluteJoint>
         <world.joint.PrismaticJoint>
           <name>shuttle1Prismatic</name>
           <bodyA>shuttle1</bodyA>
@@ -40895,6 +42142,82 @@
             <y>-345.0769</y>
           </anchor>
         </world.joint.WeldJoint>
+        <world.joint.RevoluteJoint>
+          <name>Joint-0</name>
+          <bodyA>lastBaseDoor</bodyA>
+          <bodyB>Polygon-30</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>true</collideConnected>
+          <enableLimit>true</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>0.0</lowerAngle>
+          <upperAngle>1.57</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>1.57</referenceAngle>
+          <anchor>
+            <x>749.8433</x>
+            <y>-445.95035</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
+        <world.joint.RevoluteJoint>
+          <name>Joint-1</name>
+          <bodyA>lastBaseDoorLever</bodyA>
+          <bodyB>Polygon-30</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>true</collideConnected>
+          <enableLimit>true</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>-0.3</lowerAngle>
+          <upperAngle>0.3</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>748.91284</x>
+            <y>-438.1665</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
+        <world.joint.RevoluteJoint>
+          <name>Joint-0</name>
+          <bodyA>deadDoor</bodyA>
+          <bodyB>lastDoorMount</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>0.0</lowerAngle>
+          <upperAngle>0.0</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>766.6437</x>
+            <y>-446.9855</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
+        <world.joint.PrismaticJoint>
+          <name>shuttle4Joint</name>
+          <bodyA>shuttle4</bodyA>
+          <bodyB>Polygon-49</bodyB>
+          <jointType>PrismaticJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerTranslation>0.0</lowerTranslation>
+          <upperTranslation>0.0</upperTranslation>
+          <maxMotorForce>0.0</maxMotorForce>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>605.26605</x>
+            <y>-259.2414</y>
+          </anchor>
+          <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+          </axis>
+        </world.joint.PrismaticJoint>
       </joints>
       <quests>
         <world.quest.GDXQuest>
@@ -40904,8 +42227,8 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
             <coordinates>
-              <x>386.35788</x>
-              <y>-183.95729</y>
+              <x>25.777946</x>
+              <y>-140.71017</y>
             </coordinates>
             <being>player</being>
             <path></path>
@@ -40917,12 +42240,12 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
             <lowerLeft>
-              <x>857.5439</x>
-              <y>-436.40872</y>
+              <x>769.6254</x>
+              <y>-443.86548</y>
             </lowerLeft>
             <upperRight>
-              <x>907.4198</x>
-              <y>-392.4214</y>
+              <x>777.20624</x>
+              <y>-426.4594</y>
             </upperRight>
           </trigger>
           <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
@@ -41280,6 +42603,130 @@
             <directionHigh>6.2</directionHigh>
             <weapon>ak47</weapon>
             <baseResource>turretBase.png</baseResource>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>lastBaseDoorLever</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.objectdistance.ObjectDistanceTrigger">
+            <target>lastBaseDoorLever</target>
+            <distance>1.0</distance>
+            <actionRequired>true</actionRequired>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
+            <name>lastBaseDoor</name>
+            <impulse>
+              <x>0.0</x>
+              <y>0.0</y>
+            </impulse>
+            <type>DynamicBody</type>
+            <torque>100.0</torque>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>turret2BottomBaseEntrance</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.turretadd.TurretAddManifestation">
+            <location>
+              <x>718.30286</x>
+              <y>-426.058</y>
+            </location>
+            <mountLocation>
+              <x>718.5905</x>
+              <y>-426.08456</y>
+            </mountLocation>
+            <direction>3.3</direction>
+            <directionLow>-3.14</directionLow>
+            <directionHigh>6.2831855</directionHigh>
+            <weapon>rpg7</weapon>
+            <baseResource>turretBase.png</baseResource>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>shuttle4</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.objectdistance.ObjectDistanceTrigger">
+            <target>shuttle4</target>
+            <distance>1.0</distance>
+            <actionRequired>true</actionRequired>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.prismaticjoint.PrismaticJointManifestation">
+            <name>shuttle4Joint</name>
+            <enableMotor>true</enableMotor>
+            <maxMotorForce>9999.0</maxMotorForce>
+            <motorSpeed>1.0</motorSpeed>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>shuttle4Dynamic</name>
+          <prerequisites>shuttle4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
+            <name>shuttle4</name>
+            <impulse>
+              <x>0.0</x>
+              <y>0.0</y>
+            </impulse>
+            <type>DynamicBody</type>
+            <torque>0.0</torque>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>shuttle4Smoke</name>
+          <prerequisites>shuttle4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>8000</time>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.particle.ParticleManifestation">
+            <name>smoke4Smoke</name>
+            <effectFile>data/particles/particle.p</effectFile>
+            <imagesDir>data/particles</imagesDir>
+            <emitterName>smoke</emitterName>
+            <attachedBody>shuttle4</attachedBody>
+            <duration>-1</duration>
+            <position>
+              <x>0.0</x>
+              <y>0.0</y>
+            </position>
+            <modificationType>CREATE</modificationType>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>shuttle4Fall</name>
+          <prerequisites>shuttle4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>12000</time>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.prismaticjoint.PrismaticJointManifestation">
+            <name>shuttle4Joint</name>
+            <enableMotor>false</enableMotor>
+            <maxMotorForce>0.0</maxMotorForce>
+            <motorSpeed>0.0</motorSpeed>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>746.0973</x>
+              <y>-519.6736</y>
+            </lowerLeft>
+            <upperRight>
+              <x>800.17395</x>
+              <y>-469.03003</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
+            <success>true</success>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
