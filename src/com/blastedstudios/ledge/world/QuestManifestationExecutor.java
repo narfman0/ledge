@@ -8,6 +8,7 @@ import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Joint;
+import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 import com.blastedstudios.gdxworld.plugin.mode.sound.SoundManager;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.particle.ParticleManifestationTypeEnum;
@@ -203,5 +204,9 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 		worldManager.turretAdd(new Turret((Gun)WeaponFactory.getWeapon(weapon), baseResource, 
 				location, mountLocation, direction, directionLow, directionHigh, random));
 		return CompletionEnum.COMPLETED;
+	}
+
+	@Override public World getWorld() {
+		return worldManager.getWorld();
 	}
 }
