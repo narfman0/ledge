@@ -209,4 +209,14 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 	@Override public World getWorld() {
 		return worldManager.getWorld();
 	}
+
+	public CompletionEnum beingInvuln(String beingName, boolean invuln) {
+		if(beingName.equalsIgnoreCase("player"))
+			worldManager.getPlayer().setInvulnerable(invuln);
+		else
+			for(Being being : worldManager.getAllBeings())
+				if(being.getName().equalsIgnoreCase(beingName))
+					being.setInvulnerable(invuln);
+		return CompletionEnum.COMPLETED;
+	}
 }

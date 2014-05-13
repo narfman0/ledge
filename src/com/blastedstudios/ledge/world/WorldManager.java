@@ -134,7 +134,7 @@ public class WorldManager implements IDeathCallback{
 		damage.setDir(normal);
 		damage.setOrigin(origin);
 		getProvider().beingHit(damage);
-		if(!Properties.getBool("character.godmode", false) || target != player){
+		if( (!Properties.getBool("character.godmode", false) || target != player) && !target.isInvulnerable() ){
 			target.setHp(target.getHp() - damage.getDamage());
 			target.receivedDamage(damage);
 			Gdx.app.log("WorldManager.processHit","Processed damage on being: " + target.getName() + 

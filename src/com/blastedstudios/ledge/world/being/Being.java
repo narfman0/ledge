@@ -43,7 +43,7 @@ public class Being implements Serializable{
 			MAX_VELOCITY = Properties.getFloat("character.velocity.max", 7f);
 	private static final HashMap<BodyPart,Float> bodypartDmgMap = new HashMap<>();
 	private final HashMap<AmmoTypeEnum,Integer> ammo = new HashMap<>();
-	protected transient boolean jump, moveRight, moveLeft, dead, reloading;
+	protected transient boolean jump, moveRight, moveLeft, dead, reloading, invulnerable;
 	protected transient IRagdoll ragdoll;
 	private transient long reloadStartTime;
 	protected String name;
@@ -633,5 +633,13 @@ public class Being implements Serializable{
 	private void initializeBodypartDmgMap(){
 		for(BodyPart bodyType : BodyPart.values())
 			bodypartDmgMap.put(bodyType, Properties.getFloat("character.bodypart." + bodyType.name() + ".dmgmultiplier", 1f));
+	}
+
+	public void setInvulnerable(boolean invuln) {
+		this.invulnerable = invuln;
+	}
+
+	public boolean isInvulnerable() {
+		return invulnerable;
 	}
 }
