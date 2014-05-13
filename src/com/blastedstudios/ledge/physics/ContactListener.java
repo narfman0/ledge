@@ -59,9 +59,10 @@ public class ContactListener implements com.badlogic.gdx.physics.box2d.ContactLi
 	}
 	
 	private static float calculateMomentumImpulse(Contact contact){
-		Vector2 momentumA = contact.getFixtureA().getBody().getLinearVelocity().scl(contact.getFixtureA().getBody().getMass()),
-				momentumB = contact.getFixtureB().getBody().getLinearVelocity().scl(contact.getFixtureB().getBody().getMass());
-		Vector2 relativeMomentumProjected = momentumA.sub(momentumB).scl(contact.getWorldManifold().getNormal());
+		Vector2 velocity = contact.getFixtureA().getBody().getLinearVelocity().sub(
+				contact.getFixtureB().getBody().getLinearVelocity());
+//		float mass = Math.max(contact.getFixtureA().getBody().getMass(), contact.getFixtureB().getBody().getMass());
+		Vector2 relativeMomentumProjected = velocity.scl(contact.getWorldManifold().getNormal());
 		return relativeMomentumProjected.len2()/5f;
 	}
 	
