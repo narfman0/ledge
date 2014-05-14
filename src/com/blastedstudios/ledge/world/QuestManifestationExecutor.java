@@ -219,4 +219,27 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 					being.setInvulnerable(invuln);
 		return CompletionEnum.COMPLETED;
 	}
+
+	public CompletionEnum jetpackManifestation(String beingName,
+			boolean changeMax, float max, boolean changeRecharge,
+			float recharge, boolean changeImpulse, float impulse) {
+		Being target = null;
+		if(beingName.equalsIgnoreCase("player"))
+			target = worldManager.getPlayer();
+		else
+			for(Being being : worldManager.getAllBeings())
+				if(being.getName().equalsIgnoreCase(beingName))
+					target = being;
+		if(target == null)
+			Gdx.app.error("QuestManifestationExecutor.jetpackManifestation", "Being not found with name: " + beingName);
+		else{
+			if(changeImpulse && target.getStats().getJetpackImpulse() < impulse)
+				target.getStats().setJetpackImpulse(impulse);
+			if(changeMax && target.getStats().getJetpackMax() < max)
+				target.getStats().setJetpackMax(max);
+			if(changeRecharge && target.getStats().getJetpackRecharge() < recharge)
+				target.getStats().setJetpackRecharge(recharge);
+		}
+		return CompletionEnum.COMPLETED;
+	}
 }

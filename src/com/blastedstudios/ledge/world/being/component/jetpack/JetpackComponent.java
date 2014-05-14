@@ -11,6 +11,7 @@ import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
+import com.blastedstudios.ledge.world.being.Being.BodyPart;
 import com.blastedstudios.ledge.world.being.component.AbstractComponent;
 import com.blastedstudios.ledge.world.being.component.IComponent;
 
@@ -33,12 +34,12 @@ public class JetpackComponent extends AbstractComponent {
 	@Override public void render(float dt, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, boolean facingLeft) {
 		if(!being.getStats().hasJetpack())
 			return;
-		if((jetpackActivated || isDashing()) && !lastJetpackActivated){
+		if(!being.isDead() && (jetpackActivated || isDashing()) && !lastJetpackActivated){
 			lastJetpackActivated = true;
 			jetpackEffect.setDuration(10000);
 			jetpackEffect.start();
 		}
-		if((!jetpackActivated || !isDashing()) && lastJetpackActivated){
+		if(being.isDead() || ((!jetpackActivated || !isDashing()) && lastJetpackActivated)){
 			lastJetpackActivated = false;
 			jetpackEffect.setDuration(0);
 		}
@@ -73,9 +74,9 @@ public class JetpackComponent extends AbstractComponent {
 	}
 
 	private void jetpackRecharge(){
-		if(jetpackActivated && jetpackPower > 0){
-			being.getRagdoll().applyLinearImpulse(0, being.getStats().getJetpackImpulse(), 
-					being.getRagdoll().getPosition().x, being.getRagdoll().getPosition().y);
+		if(!being.isDead() && jetpackActivated && jetpackPower > 0){
+			if(being.getRagdoll().getBodyPart(BodyPart.torso).getLinearVelocity().y < 2f)
+				being.getRagdoll().applyForceAtCenter(0, being.getStats().getJetpackImpulse());
 			jetpackPower += -Properties.getFloat("character.jetpack.burnrate", 1f);
 			Gdx.app.log("Being.jetpackRecharge", "Jetpack burning, currently " + jetpackPower + "/" + 
 					being.getStats().getJetpackMax() + " loc:" + being.getPosition());
@@ -84,7 +85,7 @@ public class JetpackComponent extends AbstractComponent {
 	}
 
 	public void dash(boolean right){
-		if(jetpackPower > Properties.getFloat("character.jetpack.dash.burnrate", 30f) && 
+		if(!being.isDead() && jetpackPower > Properties.getFloat("character.jetpack.dash.burnrate", 30f) && 
 				System.currentTimeMillis() - lastDash > DASH_DURATION){
 			lastDash = System.currentTimeMillis();
 			dashRight = right;
