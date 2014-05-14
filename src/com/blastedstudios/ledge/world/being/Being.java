@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Random;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -503,15 +502,6 @@ public class Being implements Serializable{
 			if(!(weapon instanceof Melee)){
 				Gun gun = (Gun) weapon;
 				gun.shoot(this, random, direction, world, getPosition());
-			}
-			float volume = 1f - Math.min(1, world.getPlayer().getPosition().dst(getPosition()) / 25f);
-			float pan = Math.max(-1, Math.min(1, (world.getPlayer().getPosition().x - getPosition().x) / 15f));
-			if(!(weapon instanceof Melee)){
-				Sound sound = SoundManager.getSound(weapon.getFireSound());
-				if(sound != null)
-					sound.play(volume, 1, pan);
-				else
-					Gdx.app.error("Being.attack", "Sound null for fireSound: " + weapon.getFireSound());
 			}
 			return true;
 		}else if(weapon != null && !(weapon instanceof Melee) && 

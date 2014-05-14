@@ -2,8 +2,11 @@ package com.blastedstudios.ledge.world.weapon;
 
 import java.util.Random;
 
+import net.xeoh.plugins.base.Plugin;
+
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
+import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.ledge.physics.PhysicsEnvironment;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
@@ -24,11 +27,14 @@ public class Gun extends Weapon {
 	}
 
 	public int setCurrentRounds(int currentRounds) {
-		return this.currentRounds = currentRounds;
+		this.currentRounds = currentRounds;
+		for(IGunListener listener : PluginUtil.getPlugins(IGunListener.class))
+			listener.setCurrentRounds(this, currentRounds);
+		return currentRounds;
 	}
 	
 	public int addCurrentRounds(int currentRounds) {
-		return this.currentRounds += currentRounds;
+		return setCurrentRounds(this.currentRounds + currentRounds);
 	}
 	
 	public AmmoTypeEnum getAmmoType() {
@@ -62,9 +68,16 @@ public class Gun extends Weapon {
 			Body body = PhysicsEnvironment.createBullet(world.getWorld(), gunshot, position);
 			world.getGunshots().put(body, gunshot);
 		}
+		for(IGunListener listener : PluginUtil.getPlugins(IGunListener.class))
+			listener.shoot(this, source, random, direction, world, position);
 	}
 	
 	@Override public boolean canAttack(){
 		return getMSSinceAttack()/1000f > 1f/getRateOfFire() && getCurrentRounds() > 0;
+	}
+	
+	public static interface IGunListener extends Plugin{
+		void shoot(Gun gun, Being source, Random random, Vector2 direction, WorldManager world, Vector2 origin);
+		void setCurrentRounds(Gun gun, int currentRounds);
 	}
 }
