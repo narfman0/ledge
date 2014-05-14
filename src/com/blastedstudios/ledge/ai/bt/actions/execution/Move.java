@@ -10,6 +10,8 @@ package com.blastedstudios.ledge.ai.bt.actions.execution;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
+import com.blastedstudios.ledge.physics.VisibleQueryCallback;
+import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
 import com.blastedstudios.ledge.world.being.component.IComponent;
@@ -76,6 +78,7 @@ public class Move extends jbt.execution.task.leaf.action.ExecutionAction {
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
 		Gdx.app.debug(this.getClass().getCanonicalName(), "ticked");
+		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
 		NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
 		if(getTarget() == null){
 			Gdx.app.debug(this.getClass().getCanonicalName() + ".internalTick", "Null target for " + self.toString());
@@ -83,6 +86,8 @@ public class Move extends jbt.execution.task.leaf.action.ExecutionAction {
 			return Status.FAILURE;
 		}
 		Vector2 target = new Vector2(getTarget()[0], getTarget()[1]);
+		
+		//move left/right
 		if(self.getPosition().x < target.x){
 			self.setMoveRight(true);
 			self.setMoveLeft(false);
@@ -90,9 +95,17 @@ public class Move extends jbt.execution.task.leaf.action.ExecutionAction {
 			self.setMoveRight(false);
 			self.setMoveLeft(true);
 		}
-		boolean up = self.getPosition().y+.2f < target.y;
+		
+		//jump
+		boolean up = self.getPosition().y+1f < target.y;
+		Vector2 groundJumpTarget = self.getPosition().cpy().add(self.getRagdoll().isFacingLeft() ? -1f : 1f, -1f);
+		VisibleQueryCallback callback = new VisibleQueryCallback(self, self);
+		world.getWorld().rayCast(callback, self.getPosition(), groundJumpTarget);
+		if(!callback.called)
+			up = true;
 		self.setJump(up);
 		
+		//jetpack
 		for(IComponent component : self.getListeners())
 			if(component instanceof JetpackComponent){
 				JetpackComponent jetpack = (JetpackComponent) component; 

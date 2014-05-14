@@ -16,34 +16,34 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>10.061144</x>
-            <y>-1.6470766</y>
+            <x>11.564058</x>
+            <y>-2.6324327</y>
           </center>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-0.8575325</x>
-              <y>1.1475211</y>
+              <x>1.5682173</x>
+              <y>2.0928254</y>
             </Vector2>
             <Vector2>
-              <x>11.765615</x>
-              <y>1.0103662</y>
+              <x>10.262701</x>
+              <y>1.9957223</y>
             </Vector2>
             <Vector2>
-              <x>1.074543</x>
-              <y>-7.0355177</y>
+              <x>-0.42837143</x>
+              <y>-6.0501614</y>
             </Vector2>
             <Vector2>
-              <x>-9.713805</x>
-              <y>1.1475209</y>
+              <x>-11.21672</x>
+              <y>2.1328769</y>
             </Vector2>
             <Vector2>
-              <x>-1.2203369</x>
-              <y>1.1475211</y>
+              <x>-0.50819874</x>
+              <y>2.0501103</y>
             </Vector2>
             <Vector2>
-              <x>-1.048482</x>
-              <y>2.5825887</y>
+              <x>0.32236767</x>
+              <y>-2.2213738</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -52,8 +52,8 @@
         <world.GDXNPC>
           <name>NPC-1</name>
           <coordinates>
-            <x>7.266659</x>
-            <y>0.21944946</y>
+            <x>7.214062</x>
+            <y>0.22781289</y>
           </coordinates>
           <properties class="tree-map">
             <entry>
@@ -94,7 +94,7 @@
             </entry>
             <entry>
               <string>NPCData</string>
-              <string>ledge3Turret</string>
+              <string>ledge3Soldier</string>
             </entry>
             <entry>
               <string>Path</string>
@@ -115,33 +115,17 @@
       <joints/>
       <quests>
         <world.quest.GDXQuest>
-          <name>Quest-0</name>
+          <name>start</name>
           <prerequisites></prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
             <coordinates>
-              <x>4.7297654</x>
-              <y>2.2517776</y>
+              <x>19.373386</x>
+              <y>0.44283438</y>
             </coordinates>
             <being>player</being>
             <path></path>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>turret</name>
-          <prerequisites></prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.turretadd.TurretAddManifestation">
-            <location>
-              <x>5.0</x>
-              <y>0.0</y>
-            </location>
-            <direction>0.0</direction>
-            <directionLow>0.0</directionLow>
-            <directionHigh>1.57075</directionHigh>
-            <weapon>ak47</weapon>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
