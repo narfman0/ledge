@@ -10,6 +10,7 @@ package com.blastedstudios.ledge.ai.bt.actions.execution;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.ledge.physics.VisibleQueryCallback;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.NPC;
@@ -87,7 +88,6 @@ public class Move extends jbt.execution.task.leaf.action.ExecutionAction {
 		}
 		Vector2 target = new Vector2(getTarget()[0], getTarget()[1]);
 		
-		//move left/right
 		if(self.getPosition().x < target.x){
 			self.setMoveRight(true);
 			self.setMoveLeft(false);
@@ -96,26 +96,34 @@ public class Move extends jbt.execution.task.leaf.action.ExecutionAction {
 			self.setMoveLeft(true);
 		}
 		
-		//jump
-		boolean up = self.getPosition().y+1f < target.y;
-		Vector2 groundJumpTarget = self.getPosition().cpy().add(self.getRagdoll().isFacingLeft() ? -1f : 1f, -1f);
-		VisibleQueryCallback callback = new VisibleQueryCallback(self, self);
-		world.getWorld().rayCast(callback, self.getPosition(), groundJumpTarget);
-		if(!callback.called)
-			up = true;
-		self.setJump(up);
+		boolean shouldJump = shouldJump(self, world.getWorld(), target); 
+		self.setJump(shouldJump);
 		
-		//jetpack
 		for(IComponent component : self.getListeners())
 			if(component instanceof JetpackComponent){
 				JetpackComponent jetpack = (JetpackComponent) component; 
 				if(self.getRagdoll().getLinearVelocity().y < 4f || //up too fast 
 						self.getRagdoll().getLinearVelocity().y < -4f){ //falling too fast
-					jetpack.setJetpackActivated(up);
+					jetpack.setJetpackActivated(shouldJump);
 				}else
 					jetpack.setJetpackActivated(false);
 			}
 		return Status.SUCCESS;
+	}
+	
+	private boolean shouldJump(NPC self, World world, Vector2 target){
+		boolean up = self.getPosition().y+1f < target.y;
+		//diagonally ahead of npc
+		Vector2 groundJumpTarget = self.getPosition().cpy().add(self.getRagdoll().isFacingLeft() ? -1f : 1f, -1f);
+		VisibleQueryCallback callback = new VisibleQueryCallback(self, self);
+		world.rayCast(callback, self.getPosition(), groundJumpTarget);
+		up |= !callback.called;
+		//directly ahead of npc
+		callback = new VisibleQueryCallback(self, self);
+		groundJumpTarget = self.getPosition().cpy().add(self.getRagdoll().isFacingLeft() ? -1f : 1f, 0f);
+		world.rayCast(callback, self.getPosition(), groundJumpTarget);
+		up |= callback.called;
+		return up;
 	}
 
 	protected void internalTerminate() {}
