@@ -15,4 +15,6 @@
 	<cost>150</cost>
 	<ammoType>_38specialJHP</ammoType>
 	<fireSound>Glock-18_1</fireSound>
+	<rolls>2</rolls>
+	<minLevel>1</minLevel>
 </com.blastedstudios.ledge.world.weapon.Gun>

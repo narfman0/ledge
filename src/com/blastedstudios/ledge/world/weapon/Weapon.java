@@ -12,7 +12,7 @@ import com.blastedstudios.ledge.world.being.Being;
 
 public abstract class Weapon implements Serializable{
 	private static final long serialVersionUID = 1L;
-	protected int cost;
+	protected int cost, rolls, minLevel;
 	protected Stats stats;
 	protected String name, resource, fireSound;
 	
@@ -122,6 +122,14 @@ public abstract class Weapon implements Serializable{
 	
 	public String toStringPretty(Being owner) {
 		return name;
+	}
+
+	public int getRolls() {
+		return rolls;
+	}
+
+	public int getMinLevel() {
+		return minLevel;
 	}
 	
 	public abstract long getMSSinceAttack();

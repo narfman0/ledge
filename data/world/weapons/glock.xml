@@ -15,4 +15,6 @@
 	<cost>100</cost>
 	<ammoType>_9mm</ammoType>
 	<fireSound>Glock-18_1</fireSound>
+	<rolls>7</rolls>
+	<minLevel>1</minLevel>
 </com.blastedstudios.ledge.world.weapon.Gun>

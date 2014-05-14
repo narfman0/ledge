@@ -15,4 +15,6 @@
 	<cost>750</cost>
 	<ammoType>GAS</ammoType>
 	<fireSound>flamethrower</fireSound>
+	<rolls>1</rolls>
+	<minLevel>7</minLevel>
 </com.blastedstudios.ledge.world.weapon.Flamethrower>

@@ -118,7 +118,7 @@ public class DropManager {
 
 	private void generateGuns(World world, Being being){
 		if(random.nextFloat() < Properties.getFloat(GUN_DROP_PROPERTY, .1f)){
-			Weapon weapon = WeaponFactory.generateGun(WeaponFactory.generateILevel(being.getLevel()));
+			Weapon weapon = WeaponFactory.generateGun(WeaponFactory.generateILevel(being.getLevel()), being.getLevel());
 			dropGun(world, weapon, being.getPosition());
 			Gdx.app.log("WorldManager.generateGuns", "Generated " + weapon);
 		}

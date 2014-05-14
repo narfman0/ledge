@@ -58,27 +58,9 @@ public class WeaponFactory {
 	/**
 	 * @param iLevel monster level dropping weapon
 	 */
-	public static Weapon generateGun(int iLevel){
+	public static Weapon generateGun(int iLevel, int mLevel){
 		Random random = new Random();
-		Weapon weapon = null;
-		float gunRoll = random.nextFloat();
-		if(gunRoll < .1f){//pistol
-			if(gunRoll < .05f)
-				weapon = WeaponFactory.getWeapon("38special");
-			else
-				weapon = WeaponFactory.getWeapon("glock");
-		}else if(gunRoll < .4f)
-			weapon = WeaponFactory.getWeapon("mp5");
-		else if(gunRoll < .55f)
-			weapon = WeaponFactory.getWeapon("benellim4");
-		else if(gunRoll < .85f)
-			weapon = WeaponFactory.getWeapon("ak47");
-		else if(gunRoll < .9f)
-			weapon = WeaponFactory.getWeapon("flamethrower");
-		else if(gunRoll < .95f)
-			weapon = WeaponFactory.getWeapon("rpg7");
-		else
-			weapon = WeaponFactory.getWeapon("psg1");
+		Weapon weapon = rollWeaponType(random.nextFloat(), mLevel, random);
 		weapon.setDamage(weapon.getDamage()*( (100f+(float)(iLevel*2))/100f) );
 
 		float rarity = random.nextFloat();
@@ -120,6 +102,23 @@ public class WeaponFactory {
 				weapon.getStats().setRoundsPerClip((int)(weapon.getRoundsPerClip() * getPercent(random, 5f, iLevel)));
 		}
 		return weapon;
+	}
+	
+	private static Weapon rollWeaponType(float roll, int mLevel, Random random){
+		Collection<Weapon> weapons = getStockWeapons();
+		int total = 0;
+		for(Weapon weapon : weapons)
+			if(weapon.getMinLevel() <= mLevel)
+				total += weapon.getRolls();
+		int current = 0, target = random.nextInt(total);
+		for(Weapon weapon : weapons){
+			if(weapon.getMinLevel() <= mLevel){
+				current += weapon.getRolls();
+				if(current >= target)
+					return weapon;
+			}
+		}
+		return null;
 	}
 	
 	private static float getPercent(Random random, float divisor, float mLevel){

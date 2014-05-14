@@ -15,4 +15,6 @@
 	<cost>2230</cost>
 	<ammoType>_7_62mm</ammoType>
 	<fireSound>AK47_1</fireSound>
+	<rolls>2</rolls>
+	<minLevel>3</minLevel>
 </com.blastedstudios.ledge.world.weapon.Gun>

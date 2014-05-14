@@ -9,4 +9,6 @@
 	<width>.15</width>
 	<height>.3</height>
 	<density>.01</density>
+	<rolls>1</rolls>
+	<minLevel>1</minLevel>
 </com.blastedstudios.ledge.world.weapon.Melee>

@@ -7,6 +7,7 @@ import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.util.IConsoleCommand;
 import com.blastedstudios.ledge.world.DropManager;
 import com.blastedstudios.ledge.world.WorldManager;
+import com.blastedstudios.ledge.world.weapon.Weapon;
 import com.blastedstudios.ledge.world.weapon.WeaponFactory;
 
 @PluginImplementation
@@ -26,8 +27,14 @@ public class GunDropConsole implements IConsoleCommand{
 					Gdx.app.log("GunDropConsole.execute", "Gun drop probability set to: " + 
 							Properties.getFloat(DropManager.GUN_DROP_PROPERTY));
 				}catch(NumberFormatException e){
-					String weapon = tokens[2];
-					world.getPlayer().getGuns().add(0, WeaponFactory.getWeapon(weapon));
+					String weaponName = tokens[2];
+					final Weapon weapon;
+					if(weaponName.equalsIgnoreCase("random")){
+						int iLevel = WeaponFactory.generateILevel(world.getPlayer().getLevel());
+						weapon = WeaponFactory.generateGun(iLevel, world.getPlayer().getLevel());
+					}else
+						weapon = WeaponFactory.getWeapon(weaponName);
+					world.getPlayer().getGuns().add(0, weapon);
 					world.getPlayer().setCurrentWeapon(0, world.getWorld());
 					Gdx.app.log("GunDropConsole.execute", "Generated weapon: " + weapon + " for player");
 				}

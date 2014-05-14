@@ -15,4 +15,6 @@
 	<cost>10000</cost>
 	<ammoType>_7_62mm</ammoType>
 	<fireSound>PSG-1_1</fireSound>
+	<rolls>2</rolls>
+	<minLevel>6</minLevel>
 </com.blastedstudios.ledge.world.weapon.Gun>
