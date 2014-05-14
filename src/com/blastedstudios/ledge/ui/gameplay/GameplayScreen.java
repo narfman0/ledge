@@ -48,7 +48,7 @@ public class GameplayScreen extends AbstractScreen {
 	private HUD hud;
 	private OrthographicCamera camera;
 	private WorldManager worldManager;
-	private AbstractWindow characterWindow, weaponLockerWindow, inventoryWindow;
+	private AbstractWindow characterWindow, inventoryWindow;
 	private ConsoleWindow consoleWindow;
 	private final Box2DDebugRenderer renderer;
 	private final GDXRenderer gdxRenderer;
@@ -192,16 +192,6 @@ public class GameplayScreen extends AbstractScreen {
 		case Keys.R:
 			if(!worldManager.isPause() && worldManager.isInputEnable())
 				worldManager.getPlayer().setReloading(true);
-			break;
-		case Keys.B:
-			//if(worldManager.isInWeaponLockerRange()){
-			if(weaponLockerWindow == null)
-				stage.addActor(weaponLockerWindow = new WeaponLockerWindow(skin));
-			else{
-				weaponLockerWindow.remove();
-				weaponLockerWindow = null;
-			}
-			//}
 			break;
 		case Keys.I:
 			if(consoleWindow == null){

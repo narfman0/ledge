@@ -26,7 +26,7 @@ public class GunInformationWindow extends AbstractWindow {
 		Button deleteButton = new TextButton("Delete", skin);
 		deleteButton.addListener(new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
-				event.getListenerActor().getParent().remove();
+				event.getListenerActor().getParent().getParent().remove();
 				listener.deleteWeapon(weapon);
 			}
 		});

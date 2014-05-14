@@ -28,7 +28,7 @@ public class GunButton extends ImageButton {
 
 	static Sprite createGunSprite(final GDXRenderer renderer, String resource){
 		Sprite sprite = new Sprite(renderer.getTexture(resource + ".png"));
-		sprite.setScale(INVENTORY_GUN_DIMENSION_X/sprite.getRegionWidth(), INVENTORY_GUN_DIMENSION_Y/sprite.getRegionHeight());
+		sprite.setSize(INVENTORY_GUN_DIMENSION_X, INVENTORY_GUN_DIMENSION_Y);
 		return sprite;
 	}
 	

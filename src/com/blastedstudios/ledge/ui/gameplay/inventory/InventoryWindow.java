@@ -83,8 +83,18 @@ public class InventoryWindow extends AbstractWindow implements IButtonClicked, I
 		rebuildGunTables();
 		add(new Label("Inventory", skin)).colspan(2);
 		row();
-		add(gunsTable);
-		add(inventoryTable);
+		add(new Label("To swap, click a gun in the active column,\nthen shift click a gun in the inventory column", skin)).colspan(2);
+		row();
+		Table activeGuns = new Table();
+		activeGuns.add(new Label("Active", skin));
+		activeGuns.row();
+		activeGuns.add(gunsTable);
+		Table inventoryGuns = new Table();
+		inventoryGuns.add(new Label("Inventory", skin));
+		inventoryGuns.row();
+		inventoryGuns.add(inventoryTable);
+		add(activeGuns);
+		add(inventoryGuns);
 		row();
 		Table controls = new Table();
 		controls.add(acceptButton);
@@ -141,8 +151,7 @@ public class InventoryWindow extends AbstractWindow implements IButtonClicked, I
 		Gdx.app.log("InventoryWindow.swap", "Weapon swap, first: " + first + " second: " + second);
 	}
 
-	@Override
-	public void gunButtonClicked(Weapon weapon) {
+	@Override public void gunButtonClicked(Weapon weapon) {
 		if(gunInformationWindow != null)
 			gunInformationWindow.remove();
 		if(lastClicked != null && Gdx.input.isKeyPressed(Keys.SHIFT_LEFT)){
@@ -164,8 +173,13 @@ public class InventoryWindow extends AbstractWindow implements IButtonClicked, I
 	}
 
 	@Override public void deleteWeapon(Weapon weapon) {
-		guns.remove(weapon);
+		boolean removed = guns.remove(weapon);
 		inventory.remove(weapon);
+		if(removed && !inventory.isEmpty()){
+			Weapon newWeapon = inventory.get(0); 
+			guns.add(newWeapon); 
+			inventory.remove(newWeapon);
+		}
 		rebuildGunTables();
 	}
 }
