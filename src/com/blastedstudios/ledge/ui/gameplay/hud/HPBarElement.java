@@ -25,9 +25,10 @@ public class HPBarElement extends AbstractHUDElement{
 		barOutsideSprite.setPosition(4, 4);
 		barOutsideSprite.draw(spriteBatch);
 		barOutsideSprite.setColor(skin.getColor("yellow"));
-		barInsideSprite.setPosition(10, 9);
+		barInsideSprite.setPosition(10 - ((1f-percentHP)*width/2), 9);
 		barInsideSprite.setColor(skin.getColor("yellow"));
 		barInsideSprite.setRegionWidth((int)(width * percentHP));
+		barInsideSprite.setScale(percentHP, 1f);
 		barInsideSprite.draw(spriteBatch);
 		barInsideSprite.setRegionWidth(width);
 
