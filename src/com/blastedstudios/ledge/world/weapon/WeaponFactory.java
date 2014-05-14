@@ -105,13 +105,15 @@ public class WeaponFactory {
 	}
 	
 	private static Weapon rollWeaponType(float roll, int mLevel, Random random){
+		if(mLevel < 1){
+			Gdx.app.error("WeaponFactory.rollWeaponType", "Error: mLevel of " + mLevel + ", using 1");
+			mLevel = 1;
+		}
 		Collection<Weapon> weapons = getStockWeapons();
 		int total = 0;
 		for(Weapon weapon : weapons)
 			if(weapon.getMinLevel() <= mLevel)
 				total += weapon.getRolls();
-		if(total == 0)
-			Gdx.app.error("WeaponFactory.rollWeaponType", "Error: total rolls 0 for mLevel" + mLevel);
 		int current = 0, target = random.nextInt(total);
 		for(Weapon weapon : weapons){
 			if(weapon.getMinLevel() <= mLevel){
