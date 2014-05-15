@@ -1,4 +1,4 @@
-package com.blastedstudios.ledge.physics;
+package com.blastedstudios.ledge.physics.ragdoll;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;

@@ -1,4 +1,4 @@
-package com.blastedstudios.ledge.physics;
+package com.blastedstudios.ledge.physics.ragdoll;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,6 +22,7 @@ import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.physics.PhysicsHelper;
 import com.blastedstudios.gdxworld.util.Properties;
+import com.blastedstudios.ledge.physics.PhysicsEnvironment;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.Being.BodyPart;
 import com.blastedstudios.ledge.world.weapon.DamageStruct;

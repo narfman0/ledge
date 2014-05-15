@@ -34,9 +34,10 @@ public class NPC extends Being {
 	public NPC(String name, List<Weapon> guns, List<Weapon> inventory, Stats stats,
 			int currentGun, int cash, int level, int xp, String behavior,
 			GDXPath path, FactionEnum faction, EnumSet<FactionEnum> factions,
-			WorldManager world, String resource, DifficultyEnum difficulty, AIWorld aiWorld) {
+			WorldManager world, String resource, String ragdollResource, 
+			DifficultyEnum difficulty, AIWorld aiWorld) {
 		super(name, guns, inventory, stats, currentGun, cash, level, xp, 
-				faction, factions, resource);
+				faction, factions, resource, ragdollResource);
 		this.difficulty = difficulty;
 		String basePackage = "com.blastedstudios.ledge.ai.bt.trees";
 		try{

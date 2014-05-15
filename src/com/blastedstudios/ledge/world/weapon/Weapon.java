@@ -5,7 +5,7 @@ import java.io.Serializable;
 import com.badlogic.gdx.physics.box2d.Contact;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
-import com.blastedstudios.ledge.physics.IRagdoll;
+import com.blastedstudios.ledge.physics.ragdoll.IRagdoll;
 import com.blastedstudios.ledge.world.Stats;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;

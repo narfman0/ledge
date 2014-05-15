@@ -22,7 +22,7 @@ public class Player extends Being {
 	public Player(String name, List<Weapon> guns, List<Weapon> inventory, Stats stats, int currentGun,
 			int cash, int level, int xp, FactionEnum faction,
 			EnumSet<FactionEnum> factions, String resource) {
-		super(name, guns, inventory, stats, currentGun, cash, level, xp, faction, factions, resource);
+		super(name, guns, inventory, stats, currentGun, cash, level, xp, faction, factions, resource, null);
 	}
 	
 	@Override public void render(float dt, World world, SpriteBatch spriteBatch, 

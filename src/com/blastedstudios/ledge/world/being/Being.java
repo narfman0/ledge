@@ -20,8 +20,8 @@ import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.FileUtil;
 import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.util.Properties;
-import com.blastedstudios.ledge.physics.IRagdoll;
 import com.blastedstudios.ledge.physics.PhysicsEnvironment;
+import com.blastedstudios.ledge.physics.ragdoll.IRagdoll;
 import com.blastedstudios.ledge.util.VectorHelper;
 import com.blastedstudios.ledge.world.Stats;
 import com.blastedstudios.ledge.world.WorldManager;
@@ -46,7 +46,7 @@ public class Being implements Serializable{
 	protected transient IRagdoll ragdoll;
 	private transient long reloadStartTime;
 	protected String name;
-	private String resource;
+	private String resource, ragdollResource;
 	protected float hp;
 	protected Stats stats;
 	private List<Weapon> guns, inventory;
@@ -61,7 +61,7 @@ public class Being implements Serializable{
 
 	public Being(String name, List<Weapon> guns, List<Weapon> inventory, Stats stats,
 			int currentWeapon, int cash, int level, int xp, FactionEnum faction,
-			EnumSet<FactionEnum> factions, String resource){
+			EnumSet<FactionEnum> factions, String resource, String ragdollResource){
 		this.name = name;
 		this.guns = guns;
 		this.inventory = inventory;
@@ -248,7 +248,11 @@ public class Being implements Serializable{
 			atlasHandle = FileUtil.find(Gdx.files.internal("data/textures/characters"), resource + ".atlas");
 		TextureAtlas atlas = new TextureAtlas(atlasHandle != null ? atlasHandle : 
 			Gdx.files.internal("data/textures/characters/dummy.atlas"));
-		ragdoll = new com.blastedstudios.ledge.physics.Ragdoll(world, x, y, this, atlas);
+		if(ragdollResource != null)
+			ragdoll = new com.blastedstudios.ledge.physics.ragdoll.RagdollCustom(world, x, y, 
+					this, atlas, Gdx.files.internal("data/world/npc/ragdoll/" + ragdollResource));
+		else
+			ragdoll = new com.blastedstudios.ledge.physics.ragdoll.Ragdoll(world, x, y, this, atlas);
 		
 		for(Weapon weapon : guns){
 			if(!(weapon instanceof Melee)){
