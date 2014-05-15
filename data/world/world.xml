@@ -42251,8 +42251,8 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
             <coordinates>
-              <x>605.2448</x>
-              <y>-258.16013</y>
+              <x>25.386288</x>
+              <y>-141.51025</y>
             </coordinates>
             <being>player</being>
             <path></path>
@@ -42776,7 +42776,98 @@
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
-      <backgrounds/>
+      <backgrounds>
+        <world.GDXBackground>
+          <coordinates>
+            <x>0.0</x>
+            <y>0.0</y>
+          </coordinates>
+          <texture>ledge4BackgroundBase.png</texture>
+          <scissor>false</scissor>
+          <scissorPosition>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorPosition>
+          <scissorDimensions>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorDimensions>
+          <depth>100.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>15.3015175</x>
+            <y>-33.66716</y>
+          </coordinates>
+          <texture>ledge4CragOffshoot.png</texture>
+          <scissor>false</scissor>
+          <scissorPosition>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorPosition>
+          <scissorDimensions>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorDimensions>
+          <depth>10.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>64.37262</x>
+            <y>-27.566849</y>
+          </coordinates>
+          <texture>ledge4CragOffshoot.png</texture>
+          <scissor>false</scissor>
+          <scissorPosition>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorPosition>
+          <scissorDimensions>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorDimensions>
+          <depth>7.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>3.4118652</x>
+            <y>-41.84606</y>
+          </coordinates>
+          <texture>ledge4CragOffshoot.png</texture>
+          <scissor>false</scissor>
+          <scissorPosition>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorPosition>
+          <scissorDimensions>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorDimensions>
+          <depth>5.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>12.078178</x>
+            <y>-43.87805</y>
+          </coordinates>
+          <texture>ledge4Head.png</texture>
+          <scissor>false</scissor>
+          <scissorPosition>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorPosition>
+          <scissorDimensions>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorDimensions>
+          <depth>5.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+      </backgrounds>
       <lights/>
       <groups/>
       <particles/>
