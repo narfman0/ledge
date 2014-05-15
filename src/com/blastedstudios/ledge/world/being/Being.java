@@ -22,6 +22,7 @@ import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.physics.PhysicsEnvironment;
 import com.blastedstudios.ledge.physics.ragdoll.IRagdoll;
+import com.blastedstudios.ledge.physics.ragdoll.IRagdoll.IRagdollPlugin;
 import com.blastedstudios.ledge.util.VectorHelper;
 import com.blastedstudios.ledge.world.Stats;
 import com.blastedstudios.ledge.world.WorldManager;
@@ -248,11 +249,9 @@ public class Being implements Serializable{
 			atlasHandle = FileUtil.find(Gdx.files.internal("data/textures/characters"), resource + ".atlas");
 		TextureAtlas atlas = new TextureAtlas(atlasHandle != null ? atlasHandle : 
 			Gdx.files.internal("data/textures/characters/dummy.atlas"));
-		if(ragdollResource != null)
-			ragdoll = new com.blastedstudios.ledge.physics.ragdoll.RagdollCustom(world, x, y, 
-					this, atlas, Gdx.files.internal("data/world/npc/ragdoll/" + ragdollResource));
-		else
-			ragdoll = new com.blastedstudios.ledge.physics.ragdoll.Ragdoll(world, x, y, this, atlas);
+		for(IRagdollPlugin plugin : PluginUtil.getPlugins(IRagdollPlugin.class))
+			if(plugin.canCreate(ragdollResource))
+				ragdoll = plugin.create(world, x, y, this, atlas, Gdx.files.internal("data/world/npc/ragdoll/" + ragdollResource));
 		
 		for(Weapon weapon : guns){
 			if(!(weapon instanceof Melee)){

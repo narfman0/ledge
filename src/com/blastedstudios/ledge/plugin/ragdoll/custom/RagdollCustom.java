@@ -1,4 +1,4 @@
-package com.blastedstudios.ledge.physics.ragdoll;
+package com.blastedstudios.ledge.plugin.ragdoll.custom;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Vector2;
@@ -11,14 +11,15 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.physics.PhysicsHelper;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.physics.PhysicsEnvironment;
+import com.blastedstudios.ledge.physics.ragdoll.AbstractRagdoll;
 import com.blastedstudios.ledge.world.being.Being;
 
-public class Ragdoll extends AbstractRagdoll {
+public class RagdollCustom extends AbstractRagdoll {
 	private static float DENSITY = Properties.getFloat("character.ragdoll.density", 6f),
 			SCALE = Properties.getFloat("character.ragdoll.scale", 1f);
 	private final static float torsoY = .27f, legX = .1f, legY = -.2f, armX = -.02f, armY = .3f, headY = .6f;
 
-	public Ragdoll(World world, float x, float y, Being being, TextureAtlas atlas){
+	public RagdollCustom(World world, float x, float y, Being being, TextureAtlas atlas){
 		super(being, atlas, x, y, 
 				createTorso(world, being.getMask(), being.getCat()), 
 				createHead(world, being.getMask(), being.getCat()), 

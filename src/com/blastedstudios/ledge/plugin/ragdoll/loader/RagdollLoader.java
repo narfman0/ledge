@@ -1,4 +1,4 @@
-package com.blastedstudios.ledge.physics.ragdoll;
+package com.blastedstudios.ledge.plugin.ragdoll.loader;
 
 import java.util.Map;
 
@@ -11,17 +11,18 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.util.ISerializer;
 import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.world.group.GDXGroupExportStruct;
+import com.blastedstudios.ledge.physics.ragdoll.AbstractRagdoll;
 import com.blastedstudios.ledge.world.being.Being;
 
-public class RagdollCustom extends AbstractRagdoll {
-	public RagdollCustom(World world, float x, float y, Being being, TextureAtlas atlas, Map<String,Body> bodyMap){
+public class RagdollLoader extends AbstractRagdoll {
+	public RagdollLoader(World world, float x, float y, Being being, TextureAtlas atlas, Map<String,Body> bodyMap){
 		super(being, atlas, x, y, bodyMap.get("torso"), bodyMap.get("head"), bodyMap.get("rLeg"), 
 				bodyMap.get("lLeg"), bodyMap.get("rArm"), bodyMap.get("lArm"), bodyMap.get("lHand"));
 		initializeJoints(world);
 		setTransform(x,y,0);
 	}
 	
-	public RagdollCustom(World world, float x, float y, Being being, TextureAtlas atlas, FileHandle file){
+	public RagdollLoader(World world, float x, float y, Being being, TextureAtlas atlas, FileHandle file){
 		this(world, x, y, being, atlas, createBodyMap(world, file, x, y));
 	}
 	
