@@ -12,10 +12,12 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Contact;
+import com.badlogic.gdx.physics.box2d.Filter;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.Joint;
 import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.util.Properties;
+import com.blastedstudios.ledge.physics.PhysicsEnvironment;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.Being.BodyPart;
 import com.blastedstudios.ledge.world.weapon.DamageStruct;
@@ -86,6 +88,20 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		float scale = Properties.getFloat("ragdoll.custom.scale", .005f);
 		for(Sprite sprite : sprites.values())
 			sprite.setScale(scale);
+		initializeFilters(being.getMask(), being.getCat());
+	}
+	
+	private void initializeFilters(short mask, short cat){
+		for(Fixture fixture : new Fixture[]{lArmFixture, lHandFixture, rArmFixture}){
+			Filter filter = fixture.getFilterData();
+			filter.maskBits = PhysicsEnvironment.MASK_NOTHING;
+			filter.categoryBits = PhysicsEnvironment.CAT_NOTHING;
+			fixture.setFilterData(filter);
+		}
+		Filter filter = headFixture.getFilterData();
+		filter.maskBits = mask;
+		filter.categoryBits = cat;
+		headFixture.setFilterData(filter);
 	}
 	
 	@Override public void setFriction(float friction){

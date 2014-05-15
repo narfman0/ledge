@@ -6,8 +6,6 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.badlogic.gdx.physics.box2d.CircleShape;
-import com.badlogic.gdx.physics.box2d.Filter;
-import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.physics.PhysicsHelper;
@@ -29,22 +27,8 @@ public class Ragdoll extends AbstractRagdoll {
 				createRArm(world, being.getMask(), being.getCat()), 
 				createLArm(world, being.getMask(), being.getCat()), 
 				createLHand(world, being.getMask(), being.getCat()));
-		initializeFilters(being.getMask(), being.getCat());
 		initializeJoints(world);
 		setTransform(x,y,0);
-	}
-	
-	private void initializeFilters(short mask, short cat){
-		for(Fixture fixture : new Fixture[]{lArmFixture, lHandFixture, rArmFixture}){
-			Filter filter = fixture.getFilterData();
-			filter.maskBits = PhysicsEnvironment.MASK_NOTHING;
-			filter.categoryBits = PhysicsEnvironment.CAT_NOTHING;
-			fixture.setFilterData(filter);
-		}
-		Filter filter = headFixture.getFilterData();
-		filter.maskBits = mask;
-		filter.categoryBits = cat;
-		headFixture.setFilterData(filter);
 	}
 	
 	private void initializeJoints(World world){
