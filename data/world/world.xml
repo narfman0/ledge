@@ -28913,8 +28913,8 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
             <coordinates>
-              <x>-54.1875</x>
-              <y>-6.9799986</y>
+              <x>-57.786602</x>
+              <y>-9.53465</y>
             </coordinates>
             <being>player</being>
             <path></path>
@@ -29216,15 +29216,15 @@
             <x>0.0</x>
             <y>0.0</y>
           </coordinates>
-          <texture>background100.png</texture>
-          <scissor>false</scissor>
+          <texture>forestBackgroundVista.png</texture>
+          <scissor>true</scissor>
           <scissorPosition>
-            <x>0.0</x>
-            <y>0.0</y>
+            <x>-99000.0</x>
+            <y>-9000.0</y>
           </scissorPosition>
           <scissorDimensions>
-            <x>0.0</x>
-            <y>0.0</y>
+            <x>9999999.0</x>
+            <y>9999999.0</y>
           </scissorDimensions>
           <depth>100.0</depth>
           <scale>0.02</scale>
