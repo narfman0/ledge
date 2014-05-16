@@ -24,18 +24,10 @@ public class RagdollLoader extends AbstractRagdoll {
 	
 	public RagdollLoader(World world, float x, float y, Being being, TextureAtlas atlas, FileHandle file){
 		this(world, x, y, being, atlas, createBodyMap(world, file, x, y));
+		initializeFilters(being.getMask(), being.getCat());
 	}
 	
-	private void initializeJoints(World world){
-		lLegJoint = lLegBody.getJointList().get(0).joint;
-		rLegJoint = rLegBody.getJointList().get(0).joint;
-		lArmJoint = lArmBody.getJointList().get(0).joint;
-		rArmJoint = rArmBody.getJointList().get(0).joint;
-		lHandJoint = lHandBody.getJointList().get(0).joint;
-		headJoint = headBody.getJointList().get(0).joint;
-	}
-	
-	private static Map<String,Body> createBodyMap(World world, FileHandle fileHandle, float x, float y){
+	protected static Map<String,Body> createBodyMap(World world, FileHandle fileHandle, float x, float y){
 		GDXGroupExportStruct struct = null;
 		for(ISerializer serializer : PluginUtil.getPlugins(ISerializer.class))
 			if(serializer.getFileFilter().accept(fileHandle.file()))

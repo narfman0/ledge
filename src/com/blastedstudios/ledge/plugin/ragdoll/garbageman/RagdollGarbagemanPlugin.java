@@ -1,4 +1,4 @@
-package com.blastedstudios.ledge.plugin.ragdoll.loader;
+package com.blastedstudios.ledge.plugin.ragdoll.garbageman;
 
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
@@ -10,12 +10,12 @@ import com.blastedstudios.ledge.physics.ragdoll.IRagdoll.IRagdollPlugin;
 import com.blastedstudios.ledge.world.being.Being;
 
 @PluginImplementation
-public class RagdollLoaderPlugin implements IRagdollPlugin{
+public class RagdollGarbagemanPlugin implements IRagdollPlugin{
 	@Override public boolean canCreate(String resource) {
-		return resource != null && (resource.matches(".*agdoll.xml") || resource.matches(".*json"));
+		return resource != null && resource.equalsIgnoreCase("garbageman.xml");
 	}
 
 	@Override public IRagdoll create(World world, float x, float y, Being being, TextureAtlas atlas, FileHandle file) {
-		return new RagdollLoader(world, x, y, being, atlas, file);
+		return new RagdollGarbageman(world, x, y, being, atlas, file);
 	}
 }

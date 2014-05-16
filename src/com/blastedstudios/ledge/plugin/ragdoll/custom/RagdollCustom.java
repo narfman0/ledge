@@ -28,11 +28,12 @@ public class RagdollCustom extends AbstractRagdoll {
 				createRArm(world, being.getMask(), being.getCat()), 
 				createLArm(world, being.getMask(), being.getCat()), 
 				createLHand(world, being.getMask(), being.getCat()));
+		initializeFilters(being.getMask(), being.getCat());
 		initializeJoints(world);
 		setTransform(x,y,0);
 	}
 	
-	private void initializeJoints(World world){
+	@Override protected void initializeJoints(World world){
 		lLegJoint = PhysicsEnvironment.addWeld(world, lLegBody, torsoBody, new Vector2(-.1f,-.05f).scl(SCALE));
 		rLegJoint = PhysicsEnvironment.addWeld(world, rLegBody, torsoBody, new Vector2(.1f,-.05f).scl(SCALE));
 		lArmJoint = PhysicsEnvironment.addRevolute(world, lArmBody, torsoBody, 0,0,new Vector2(-.17f,.3f).scl(SCALE));

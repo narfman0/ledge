@@ -35,7 +35,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 	public final Fixture torsoFixture, headFixture, rLegFixture, lLegFixture, 
 		rArmFixture, lArmFixture, lHandFixture;
 	protected Joint headJoint, rLegJoint, lLegJoint, rArmJoint, lArmJoint, lHandJoint;
-	private final List<Body> bodies = new LinkedList<>();
+	protected final List<Body> bodies = new LinkedList<>();
 	private final Map<Body,Sprite> sprites = new HashMap<>();
 	private boolean facingLeft;
 	private float targetHeading;
@@ -88,10 +88,9 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		float scale = Properties.getFloat("ragdoll.custom.scale", .005f);
 		for(Sprite sprite : sprites.values())
 			sprite.setScale(scale);
-		initializeFilters(being.getMask(), being.getCat());
 	}
 	
-	private void initializeFilters(short mask, short cat){
+	protected void initializeFilters(short mask, short cat){
 		for(Fixture fixture : new Fixture[]{lArmFixture, lHandFixture, rArmFixture}){
 			Filter filter = fixture.getFilterData();
 			filter.maskBits = PhysicsEnvironment.MASK_NOTHING;
@@ -102,6 +101,15 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		filter.maskBits = mask;
 		filter.categoryBits = cat;
 		headFixture.setFilterData(filter);
+	}
+
+	protected void initializeJoints(World world){
+		lLegJoint = lLegBody.getJointList().get(0).joint;
+		rLegJoint = rLegBody.getJointList().get(0).joint;
+		lArmJoint = lArmBody.getJointList().get(0).joint;
+		rArmJoint = rArmBody.getJointList().get(0).joint;
+		lHandJoint = lHandBody.getJointList().get(0).joint;
+		headJoint = headBody.getJointList().get(0).joint;
 	}
 	
 	@Override public void setFriction(float friction){

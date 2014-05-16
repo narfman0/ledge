@@ -74,6 +74,7 @@ public class Being implements Serializable{
 		this.friendlyFactions = factions;
 		this.resource = resource;
 		this.stats = stats;
+		this.ragdollResource = ragdollResource;
 		for(AmmoTypeEnum ammoType : AmmoTypeEnum.values()){
 			for(Weapon weapon : guns)
 				if(weapon instanceof Gun && ((Gun)weapon).getAmmoType() == ammoType)

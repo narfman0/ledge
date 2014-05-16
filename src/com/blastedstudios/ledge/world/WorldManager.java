@@ -226,7 +226,7 @@ public class WorldManager implements IDeathCallback{
 		NPC npc = new NPC(name, WeaponFactory.getGuns(npcData.get("Weapons")), 
 				new ArrayList<Weapon>(), Stats.parseNPCData(npcData), 0, cash, 
 				npcLevel, xp, npcData.get("Behavior"), level.getPath(npcData.get("Path")),
-				faction, factions, this, npcData.get("Resource"), npcData.get("ragdollResource"),
+				faction, factions, this, npcData.get("Resource"), npcData.get("RagdollResource"),
 				difficulty, aiWorld);
 		npc.aim(npcData.getFloat("Aim"));
 		npcs.add(npc);
