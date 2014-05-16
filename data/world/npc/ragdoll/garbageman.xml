@@ -9,8 +9,8 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>-5.2880545</x>
-        <y>1.4473987</y>
+        <x>6.462845</x>
+        <y>1.6129303</y>
       </center>
       <radius>0.5</radius>
     </world.shape.GDXCircle>
@@ -102,30 +102,30 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>3.5896606</x>
-        <y>1.6559672</y>
+        <x>4.0938845</x>
+        <y>1.5810155</y>
       </center>
       <repeatable>false</repeatable>
       <vertices>
         <Vector2>
-          <x>-2.8249645</x>
-          <y>-0.5422783</y>
+          <x>-3.2886982</x>
+          <y>-0.5831982</y>
         </Vector2>
         <Vector2>
-          <x>1.8469715</x>
-          <y>-0.681324</y>
+          <x>2.041925</x>
+          <y>-0.6772183</y>
         </Vector2>
         <Vector2>
-          <x>2.0027027</x>
-          <y>0.041713715</y>
+          <x>2.3845334</x>
+          <y>0.0458194</y>
         </Vector2>
         <Vector2>
-          <x>1.6445208</x>
-          <y>0.75084686</y>
+          <x>1.9952054</x>
+          <y>0.8244754</y>
         </Vector2>
         <Vector2>
-          <x>-2.6692333</x>
-          <y>0.43104172</y>
+          <x>-3.132967</x>
+          <y>0.39012182</y>
         </Vector2>
       </vertices>
     </world.shape.GDXPolygon>
@@ -137,30 +137,30 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>-3.524141</x>
-        <y>1.4752078</y>
+        <x>-2.862317</x>
+        <y>1.4642171</y>
       </center>
       <repeatable>false</repeatable>
       <vertices>
         <Vector2>
-          <x>-1.9559839</x>
-          <y>0.778656</y>
+          <x>-1.6694608</x>
+          <y>0.7466098</y>
         </Vector2>
         <Vector2>
-          <x>-2.4387505</x>
-          <y>-0.15295029</y>
+          <x>-2.0120692</x>
+          <y>-0.18499649</y>
         </Vector2>
         <Vector2>
-          <x>-1.8002527</x>
-          <y>-0.80646515</y>
+          <x>-1.2022672</x>
+          <y>-0.7272748</y>
         </Vector2>
         <Vector2>
-          <x>3.0741336</x>
-          <y>-0.30590057</y>
+          <x>2.4185393</x>
+          <y>-0.3134495</y>
         </Vector2>
         <Vector2>
-          <x>3.1208532</x>
-          <y>0.48666</y>
+          <x>2.4652588</x>
+          <y>0.4791113</y>
         </Vector2>
       </vertices>
     </world.shape.GDXPolygon>
@@ -323,13 +323,13 @@
     <world.joint.WeldJoint>
       <name>lWrist</name>
       <bodyA>lHand</bodyA>
-      <bodyB>rArm</bodyB>
+      <bodyB>lArm</bodyB>
       <jointType>WeldJoint</jointType>
       <collideConnected>false</collideConnected>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>-5.2880545</x>
-        <y>1.4613032</y>
+        <x>4.5411787</x>
+        <y>1.5609524</y>
       </anchor>
     </world.joint.WeldJoint>
   </joints>

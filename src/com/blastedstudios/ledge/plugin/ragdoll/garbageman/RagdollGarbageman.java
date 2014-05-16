@@ -20,5 +20,9 @@ public class RagdollGarbageman extends RagdollLoader {
 				filter.categoryBits = PhysicsEnvironment.CAT_ENEMY;
 				fixture.setFilterData(filter);
 			}
+		Filter filter = lHandFixture.getFilterData();
+		filter.maskBits = PhysicsEnvironment.MASK_NOTHING;
+		filter.categoryBits = PhysicsEnvironment.CAT_NOTHING;
+		lHandFixture.setFilterData(filter);
 	}
 }

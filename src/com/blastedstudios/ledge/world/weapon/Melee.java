@@ -18,7 +18,7 @@ import com.blastedstudios.ledge.world.being.Being.BodyPart;
 public class Melee extends Weapon {
 	private static final float MIN_DAMAGE = Properties.getFloat("melee.damage.min", .005f);
 	private static final long serialVersionUID = 1L;
-	private float width, height, density;
+	private float width, height, offsetX, offsetY, density;
 	private transient Body body;
 	private transient Being owner;
 	private transient long lastAttack;
@@ -57,12 +57,12 @@ public class Melee extends Weapon {
 	
 	@Override public void activate(World world, IRagdoll ragdoll, Being owner) {
 		this.owner = owner;
-		Vector2 position = ragdoll.getWeaponCenter();
+		Vector2 position = ragdoll.getWeaponCenter().cpy().add(offsetX, offsetY);
 		body = PhysicsHelper.createRectangle(world, width, height, position, BodyType.DynamicBody, 
 				density, owner.getMask(), owner.getCat(), (short)0);
 		body.setUserData(this);
 		WeldJointDef def = new WeldJointDef();
-		def.initialize(body, ragdoll.getBodyPart(BodyPart.lArm), position);
+		def.initialize(body, ragdoll.getBodyPart(BodyPart.lHand), position);
 		world.createJoint(def);
 	}
 	

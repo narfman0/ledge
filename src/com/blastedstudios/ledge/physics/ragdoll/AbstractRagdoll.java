@@ -261,6 +261,8 @@ public abstract class AbstractRagdoll implements IRagdoll {
 			return BodyPart.lLeg;
 		if(rLegFixture == fixture)
 			return BodyPart.rLeg;
+		if(lHandFixture == fixture)
+			return BodyPart.lHand;
 		return null;
 	}
 
@@ -282,6 +284,8 @@ public abstract class AbstractRagdoll implements IRagdoll {
 			return rLegBody;
 		case torso:
 			return torsoBody;
+		case lHand:
+			return lHandBody;
 		default:
 			break;
 		}
