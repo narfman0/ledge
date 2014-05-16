@@ -1,0 +1,14 @@
+<com.blastedstudios.ledge.world.weapon.Melee>
+	<stats>
+		<damage>100</damage>
+	</stats>
+	<name>Garbageman Cleaver</name>
+	<resource>garbagemanCleaver</resource>
+	<cost>100</cost>
+	<fireSound>clunk</fireSound>
+	<width>1</width>
+	<height>4</height>
+	<density>.1</density>
+	<rolls>0</rolls>
+	<minLevel>9999</minLevel>
+</com.blastedstudios.ledge.world.weapon.Melee>
