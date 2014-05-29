@@ -501,6 +501,8 @@ public class Being implements Serializable{
 	}
 
 	public boolean attack(Vector2 direction, WorldManager world){
+		if(isDead())
+			return false;
 		Weapon weapon = getEquippedWeapon();
 		if(canAttack()){
 			if(!(weapon instanceof Melee)){
