@@ -88,6 +88,10 @@ public class Move extends jbt.execution.task.leaf.action.ExecutionAction {
 		}
 		Vector2 target = new Vector2(getTarget()[0], getTarget()[1]);
 		
+		//When close, return early. Especially for operating turrets, no more jumping and moving all the time.
+		if(target.dst(self.getPosition()) < .5f)
+			return Status.SUCCESS;
+		
 		if(self.getPosition().x < target.x){
 			self.setMoveRight(true);
 			self.setMoveLeft(false);
@@ -95,7 +99,7 @@ public class Move extends jbt.execution.task.leaf.action.ExecutionAction {
 			self.setMoveRight(false);
 			self.setMoveLeft(true);
 		}
-		
+
 		boolean shouldJump = shouldJump(self, world.getWorld(), target); 
 		self.setJump(shouldJump);
 		
