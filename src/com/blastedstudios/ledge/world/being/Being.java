@@ -44,7 +44,7 @@ public class Being implements Serializable{
 	private static final HashMap<BodyPart,Float> bodypartDmgMap = new HashMap<>();
 	private final HashMap<AmmoTypeEnum,Integer> ammo = new HashMap<>();
 	protected transient boolean jump, moveRight, moveLeft, dead, reloading, invulnerable;
-	protected transient IRagdoll ragdoll;
+	protected transient IRagdoll ragdoll = null;
 	private transient long reloadStartTime;
 	protected String name;
 	private String resource, ragdollResource;
@@ -236,6 +236,10 @@ public class Being implements Serializable{
 			getEquippedWeapon().deactivate(worldManager.getWorld());
 		for(IComponent component : getListeners())
 			component.death(worldManager);
+	}
+	
+	public boolean isSpawned(){
+		return ragdoll != null;
 	}
 
 	public void respawn(World world, float x, float y) {

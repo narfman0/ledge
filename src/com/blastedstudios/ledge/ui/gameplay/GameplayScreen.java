@@ -73,17 +73,14 @@ public class GameplayScreen extends AbstractScreen {
 		worldManager = new WorldManager(player, level);
 		player.getQuestManager().initialize(new QuestTriggerInformationProvider(this, worldManager), 
 				new QuestManifestationExecutor(this, worldManager));
-		List<QuestStatus> statuses = player.getQuestManager().getQuestStatuses(level);
 		player.getQuestManager().setCurrentLevel(level);
 		player.getQuestManager().tick();//to get "start" quest to set respawn location
-		if(worldManager.getRespawnLocation() == null)
+		if(worldManager.getRespawnLocation() == null && Properties.getBool("player.spawn.onnewlevel.loadsavedspawn", false)){
+			List<QuestStatus> statuses = player.getQuestManager().getQuestStatuses(level);
 			worldManager.setRespawnLocation(getSavedSpawn(statuses));
-		try{
-			worldManager.respawnPlayer();
-			Gdx.app.debug("GameplayScreen.<init>", "Player initialized to " + worldManager.getPlayer().getPosition());
-		}catch(NullPointerException e){
-			Gdx.app.error("GameplayScreen.<init>", "Player position null, please set start location in level " + level.getName());
 		}
+		if(worldManager.getRespawnLocation() != null)
+			worldManager.respawnPlayer();
 		camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		camera.zoom = Properties.getFloat("gameplay.camera.zoom", .02f);
 		renderer = new Box2DDebugRenderer();
@@ -93,7 +90,9 @@ public class GameplayScreen extends AbstractScreen {
 
 	@Override public void render(float delta) {
 		super.render(delta);
-		camera.position.set(worldManager.getPlayer().getPosition().x, worldManager.getPlayer().getPosition().y, 0);
+		//if player is not spawned then we are in a cutscene, if input isn't enabled we shouldn't update camera
+		if(worldManager.getPlayer().isSpawned() && worldManager.isInputEnable())
+			camera.position.set(worldManager.getPlayer().getPosition().x, worldManager.getPlayer().getPosition().y, 0);
 		camera.update();
 		if(!Gdx.graphics.isGL20Available())
 			camera.apply(Gdx.gl10);
@@ -109,7 +108,8 @@ public class GameplayScreen extends AbstractScreen {
 			renderer.render(worldManager.getWorld(), camera.combined);
 		dialogManager.render(gdxRenderer);
 		stage.draw();
-		hud.render();
+		if(worldManager.getPlayer().isSpawned())
+			hud.render();
 		worldManager.getPlayer().getQuestManager().tick();
 		
 		int x = Gdx.input.getX(), y = Gdx.input.getY();
@@ -194,7 +194,7 @@ public class GameplayScreen extends AbstractScreen {
 				worldManager.getPlayer().setReloading(true);
 			break;
 		case Keys.I:
-			if(consoleWindow == null){
+			if(consoleWindow == null && !worldManager.isPause() && worldManager.isInputEnable()){
 				if(characterWindow == null){
 					ChangeListener listener = new ChangeListener() {
 						@Override public void changed(ChangeEvent event, Actor actor) {
@@ -256,7 +256,7 @@ public class GameplayScreen extends AbstractScreen {
 			}
 			break;
 		case Keys.F2:
-			if(worldManager.getPlayer().isDead())
+			if(worldManager.getPlayer().isDead() && worldManager.getRespawnLocation() != null)
 				worldManager.respawnPlayer();
 			break;
 		case Keys.F6:

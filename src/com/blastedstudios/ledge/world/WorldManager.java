@@ -83,7 +83,8 @@ public class WorldManager implements IDeathCallback{
 	public void render(float dt, GDXRenderer gdxRenderer, Camera cam){
 		spriteBatch.setProjectionMatrix(cam.combined);
 		spriteBatch.begin();
-		player.render(dt, world, spriteBatch, gdxRenderer, this);
+		if(player.isSpawned())
+			player.render(dt, world, spriteBatch, gdxRenderer, this);
 		for(NPC npc : npcs)
 			npc.render(dt, world, spriteBatch, gdxRenderer, this);
 		for(Iterator<Entry<Body, GunShot>> iter = gunshots.entrySet().iterator(); iter.hasNext();){
@@ -94,7 +95,8 @@ public class WorldManager implements IDeathCallback{
 		}
 		for(Turret turret : turrets)
 			turret.render(dt, spriteBatch, gdxRenderer, this);
-		dropManager.render(player, world, spriteBatch, gdxRenderer);
+		if(player.isSpawned())
+			dropManager.render(player, world, spriteBatch, gdxRenderer);
 		renderTransferredParticles(dt);
 		spriteBatch.end();
 		if(Properties.getBool("world.debug.draw", false))
@@ -153,7 +155,8 @@ public class WorldManager implements IDeathCallback{
 	public List<Being> getAllBeings() {
 		List<Being> beings = new LinkedList<>();
 		beings.addAll(npcs);
-		beings.add(player);
+		if(player.isSpawned())
+			beings.add(player);
 		return beings;
 	}
 
@@ -197,6 +200,8 @@ public class WorldManager implements IDeathCallback{
 
 	public void setRespawnLocation(Vector2 respawnLocation) {
 		this.respawnLocation = respawnLocation;
+		if(!player.isSpawned())
+			player.respawn(world, respawnLocation.x, respawnLocation.y);
 	}
 	
 	public Map<Body,GunShot> getGunshots(){
@@ -267,7 +272,7 @@ public class WorldManager implements IDeathCallback{
 	}
 	
 	public boolean isInputEnable(){
-		return inputEnable;
+		return inputEnable && player.isSpawned();
 	}
 	
 	/**
