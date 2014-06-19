@@ -10,7 +10,7 @@ public class CameraTweenManifestation extends AbstractQuestManifestation{
 	public static final CameraTweenManifestation DEFAULT = new CameraTweenManifestation();
 	private Vector2 target = new Vector2();
 	public float duration = 2f;
-	private CameraTweenType tweenType = CameraTweenType.BounceInOut; 
+	private CameraTweenType tweenType = CameraTweenType.CubicInOut; 
 
 	public CameraTweenManifestation(){}
 	public CameraTweenManifestation(Vector2 target, float duration, CameraTweenType tweenType){
