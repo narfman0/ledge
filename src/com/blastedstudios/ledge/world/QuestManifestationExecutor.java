@@ -3,6 +3,9 @@ package com.blastedstudios.ledge.world;
 import java.util.HashMap;
 import java.util.Random;
 
+import aurelienribon.tweenengine.Tween;
+import aurelienribon.tweenengine.TweenEquation;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.math.Vector2;
@@ -17,6 +20,7 @@ import com.blastedstudios.gdxworld.world.GDXParticle;
 import com.blastedstudios.gdxworld.world.GDXPath;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.gdxworld.world.quest.manifestation.IQuestManifestationExecutor;
+import com.blastedstudios.ledge.plugin.quest.manifestation.cameratween.CameraAccessor;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.FactionEnum;
@@ -240,6 +244,15 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 			if(changeRecharge && target.getStats().getJetpackRecharge() < recharge)
 				target.getStats().setJetpackRecharge(recharge);
 		}
+		return CompletionEnum.COMPLETED;
+	}
+	
+	public CompletionEnum cameraTween(int tweenType, float duration, Vector2 target, TweenEquation ease){
+		if(screen.getCamera() == null)
+			return CompletionEnum.EXECUTING;
+		Tween.registerAccessor(screen.getCamera().getClass(), new CameraAccessor());
+		Tween.to(screen.getCamera(), tweenType, duration).target(target.x, target.y).
+			ease(ease).start(worldManager.getTweenManager());
 		return CompletionEnum.COMPLETED;
 	}
 }

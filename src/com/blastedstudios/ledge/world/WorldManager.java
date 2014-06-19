@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import aurelienribon.tweenengine.TweenManager;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.Texture;
@@ -63,11 +65,13 @@ public class WorldManager implements IDeathCallback{
 	private final LinkedList<ParticleEffect> particles = new LinkedList<>();
 	private final LinkedList<Turret> turrets = new LinkedList<>();
 	private final AIWorld aiWorld;
+	private final TweenManager tweenManager;
 	private boolean pause, inputEnable = true;
 	
 	public WorldManager(Player player, GDXLevel level){
 		this.player = player;
 		this.level = level;
+		tweenManager = new TweenManager();
 		dropManager = new DropManager();
 		Weapon gun = player.getEquippedWeapon();
 		if(gun != null && !(gun instanceof Melee))
@@ -106,6 +110,7 @@ public class WorldManager implements IDeathCallback{
 		for(Body body : getBodiesIterable())
 			if(body != null && body.getUserData() != null && body.getUserData().equals(REMOVE_USER_DATA))
 				world.destroyBody(body);
+		tweenManager.update(dt);
 	}
 	
 	public Iterable<Body> getBodiesIterable(){
@@ -312,5 +317,9 @@ public class WorldManager implements IDeathCallback{
 	
 	public LinkedList<Turret> getTurrets(){
 		return turrets;
+	}
+
+	public TweenManager getTweenManager() {
+		return tweenManager;
 	}
 }

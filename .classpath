@@ -9,6 +9,7 @@
 	<classpathentry kind="lib" path="lib/jdom.jar"/>
 	<classpathentry kind="lib" path="lib/mmpm.jar"/>
 	<classpathentry kind="lib" path="lib/sourceformatter.jar"/>
+	<classpathentry kind="lib" path="lib/tween-engine-api-6.3.3.jar" sourcepath="lib/tween-engine-api-6.3.3-src.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/GDXWorld"/>
 	<classpathentry kind="lib" path="/GDXWorld/lib/box2dlights-sources.jar"/>
 	<classpathentry kind="lib" path="/GDXWorld/lib/box2dlights.jar"/>
