@@ -1,37 +1,38 @@
 package com.blastedstudios.ledge.world;
 
-import java.util.HashMap;
 import java.util.Random;
 
 import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenEquation;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Joint;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
-import com.blastedstudios.gdxworld.plugin.mode.sound.SoundManager;
-import com.blastedstudios.gdxworld.plugin.quest.manifestation.particle.ParticleManifestationTypeEnum;
-import com.blastedstudios.gdxworld.plugin.quest.manifestation.sound.SoundManifestationEnum;
-import com.blastedstudios.gdxworld.world.GDXParticle;
+import com.blastedstudios.gdxworld.plugin.quest.manifestation.beingspawn.IBeingSpawnHandler;
+import com.blastedstudios.gdxworld.plugin.quest.manifestation.dialog.IDialogHandler;
+import com.blastedstudios.gdxworld.plugin.quest.manifestation.endlevel.IEndLevelHandler;
+import com.blastedstudios.gdxworld.plugin.quest.manifestation.particle.IParticleHandler;
+import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.world.GDXPath;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.gdxworld.world.quest.manifestation.IQuestManifestationExecutor;
+import com.blastedstudios.ledge.plugin.quest.handler.BeingSpawnHandlerPlugin;
+import com.blastedstudios.ledge.plugin.quest.handler.DialogHandlerPlugin;
+import com.blastedstudios.ledge.plugin.quest.handler.EndLevelHandlerPlugin;
+import com.blastedstudios.ledge.plugin.quest.handler.ParticleHandlerPlugin;
 import com.blastedstudios.ledge.plugin.quest.manifestation.cameratween.CameraAccessor;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.FactionEnum;
 import com.blastedstudios.ledge.world.being.NPC;
-import com.blastedstudios.ledge.world.being.NPCData;
 import com.blastedstudios.ledge.world.weapon.Gun;
 import com.blastedstudios.ledge.world.weapon.Turret;
 import com.blastedstudios.ledge.world.weapon.WeaponFactory;
 
 public class QuestManifestationExecutor implements IQuestManifestationExecutor{
-	private final HashMap<String, Long> soundIdMap = new HashMap<>();
 	private final GameplayScreen screen;
 	private final WorldManager worldManager;
 	private final Random random;
@@ -40,15 +41,14 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 		this.screen = screen;
 		this.worldManager = worldManager;
 		random = new Random();
-	}
-
-	@Override public CompletionEnum addDialog(String dialog, String origin, String type) {
-		screen.getDialogManager().add(dialog, origin);
-		return CompletionEnum.EXECUTING;
-	}
-
-	@Override public void endLevel(boolean success) {
-		screen.levelComplete(success);
+		for(IDialogHandler handler : PluginUtil.getPlugins(IDialogHandler.class))
+			((DialogHandlerPlugin)handler).setDialogManager(screen.getDialogManager());
+		for(IEndLevelHandler handler : PluginUtil.getPlugins(IEndLevelHandler.class))
+			((EndLevelHandlerPlugin)handler).setGameplayScreen(screen);
+		for(IBeingSpawnHandler handler : PluginUtil.getPlugins(IBeingSpawnHandler.class))
+			((BeingSpawnHandlerPlugin)handler).setWorldManager(worldManager);
+		for(IParticleHandler handler : PluginUtil.getPlugins(IParticleHandler.class))
+			((ParticleHandlerPlugin)handler).setGameplayScreen(screen);
 	}
 
 	@Override public Joint getPhysicsJoint(String name) {
@@ -58,16 +58,6 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 			if(joint.getUserData() != null && joint.getUserData().equals(name))
 				return joint;
 		return null;
-	}
-
-	@Override public void beingSpawn(String being, Vector2 coordinates, String path) {
-		if(being.equalsIgnoreCase("player"))
-			worldManager.setRespawnLocation(coordinates.cpy());
-		else{
-			NPCData data = NPCData.parse(being);
-			data.set("Path", path);
-			worldManager.spawnNPC(being, coordinates, data, worldManager.getAiWorld());
-		}
 	}
 
 	@Override public Body getPhysicsObject(String name) {
@@ -153,54 +143,6 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 					beingName.equalsIgnoreCase("player") && being == worldManager.getPlayer())
 				being.addXp(xp);
 		return CompletionEnum.COMPLETED;
-	}
-
-	@Override public void particle(String name, String effectFile, String imagesDir,
-			int duration, Vector2 position,
-			ParticleManifestationTypeEnum modificationType, String emitterName,
-			String attachedBody) {
-		switch(modificationType){
-		case REMOVE:
-			screen.getParticleManager().scheduleRemove(name);
-			break;
-		case MODIFY:
-			screen.getParticleManager().modify(name, duration, position, emitterName, attachedBody);
-			break;
-		case CREATE:
-			screen.getParticleManager().addParticle(new GDXParticle(name, 
-					effectFile, imagesDir, duration, position, emitterName, attachedBody));
-			break;
-		}
-	}
-
-	@Override public void sound(SoundManifestationEnum manifestationType, String name,
-			String filename, float volume, float pan, float pitch) {
-		Sound sound = SoundManager.getSound(filename);
-		switch(manifestationType){
-		case PLAY:
-			soundIdMap.put(name, sound.play(volume, pan, pitch));
-			break;
-		case LOOP:
-			soundIdMap.put(name, sound.loop(volume, pan, pitch));
-			break;
-		case PAUSE:
-			sound.pause(soundIdMap.get(name));
-			break;
-		case PITCHPAN:
-			sound.setPitch(soundIdMap.get(name), pitch);
-			sound.setPan(soundIdMap.get(name), pan, volume);
-		case RESUME:
-			sound.resume(soundIdMap.get(name));
-			break;
-		case STOP:
-			sound.stop();
-			break;
-		case VOLUME:
-			sound.setVolume(soundIdMap.get(name), volume);
-			break;
-		default:
-			break;
-		}
 	}
 
 	public CompletionEnum turretAdd(Vector2 location, Vector2 mountLocation, String weapon, 
