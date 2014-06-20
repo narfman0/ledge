@@ -2,6 +2,10 @@ package com.blastedstudios.ledge.ui.overworld;
 
 import java.io.File;
 
+import aurelienribon.tweenengine.Tween;
+import aurelienribon.tweenengine.TweenManager;
+import aurelienribon.tweenengine.equations.Cubic;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -15,6 +19,7 @@ import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXWorld;
+import com.blastedstudios.ledge.util.SpriteTweenAccessor;
 import com.blastedstudios.ledge.world.being.Player;
 
 public class OverworldScreen extends AbstractScreen{
@@ -28,6 +33,7 @@ public class OverworldScreen extends AbstractScreen{
 	private final GDXWorld gdxWorld;
 	private final File worldFile;
 	private final GDXRenderer gdxRenderer;
+	private final TweenManager tweenManager;
 
 	public OverworldScreen(GDXGame game, Player player, GDXWorld gdxWorld, File worldFile, GDXRenderer gdxRenderer){
 		super(game, Properties.get("screen.skin","data/ui/uiskinGame.json"));
@@ -49,12 +55,17 @@ public class OverworldScreen extends AbstractScreen{
 				lowerRight.x = level.getCoordinates().x;
 			else if(level.getCoordinates().y < lowerRight.y)
 				lowerRight.y = level.getCoordinates().y;
+		GDXLevel firstLevel = gdxWorld.getLevels().get(0);
 		stage.addActor(levelInfo = new LevelInformationWindow(skin, 
-				gdxWorld.getLevels().get(0), game, player, gdxWorld, worldFile, gdxRenderer));
+				firstLevel, game, player, gdxWorld, worldFile, gdxRenderer));
+		levelCurrentSprite.setPosition(firstLevel.getCoordinates().x*OFFSET_SCALAR, firstLevel.getCoordinates().y*OFFSET_SCALAR);
+		tweenManager = new TweenManager();
+		Tween.registerAccessor(Sprite.class, new SpriteTweenAccessor());
 	}
 
 	@Override public void render(float delta){
 		super.render(delta);
+		tweenManager.update(delta);
 		camera.update();
 		if(!Gdx.graphics.isGL20Available())
 			camera.apply(Gdx.gl10);
@@ -74,10 +85,8 @@ public class OverworldScreen extends AbstractScreen{
 				Vector2 position = level.getCoordinates().cpy().scl(OFFSET_SCALAR);
 				levelSprite.setPosition(position.x, position.y);
 				levelSprite.draw(spriteBatch);
-				if(levelInfo != null && levelInfo.level == level){
-					levelCurrentSprite.setPosition(position.x, position.y);
+				if(levelInfo != null && levelInfo.level == level)
 					levelCurrentSprite.draw(spriteBatch);
-				}
 			}
 		}
 		spriteBatch.end();
@@ -109,6 +118,10 @@ public class OverworldScreen extends AbstractScreen{
 					levelInfo.remove();
 				stage.addActor(levelInfo = new LevelInformationWindow(skin, 
 						level, game, player, gdxWorld, worldFile, gdxRenderer));
+				float duration = Properties.getFloat("overworld.tween.duration", .5f);
+				Tween.to(levelCurrentSprite, SpriteTweenAccessor.POSITION_XY, duration).
+					target(level.getCoordinates().x*OFFSET_SCALAR, level.getCoordinates().y*OFFSET_SCALAR).
+					ease(Cubic.INOUT).start(tweenManager);
 			}
 		}
 		return false;
