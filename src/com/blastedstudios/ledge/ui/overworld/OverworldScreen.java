@@ -28,6 +28,7 @@ public class OverworldScreen extends AbstractScreen{
 	private final GDXWorld gdxWorld;
 	private final File worldFile;
 	private final GDXRenderer gdxRenderer;
+	private final Sprite backgroundSprite;
 
 	public OverworldScreen(GDXGame game, Player player, GDXWorld gdxWorld, File worldFile, GDXRenderer gdxRenderer){
 		super(game, Properties.get("screen.skin","data/ui/uiskinGame.json"));
@@ -38,6 +39,8 @@ public class OverworldScreen extends AbstractScreen{
 		Gdx.app.log("OverworldScreen.<init>", "Loaded world successfully");
 		levelSprite = skin.getSprite("toggle-button");
 		levelSelectedSprite = skin.getSprite("toggle-button-checked");
+		backgroundSprite = new Sprite(gdxRenderer.getTexture(gdxWorld.getWorldProperties().get("background")));
+		backgroundSprite.setPosition(backgroundSprite.getWidth()/-2f, backgroundSprite.getHeight()/-2f);
 		for(GDXLevel level : gdxWorld.getLevels())
 			if(level.getCoordinates().x < upperLeft.x)
 				upperLeft.x = level.getCoordinates().x;
@@ -66,6 +69,7 @@ public class OverworldScreen extends AbstractScreen{
 			camera.position.x-=camera.zoom;
 		spriteBatch.setProjectionMatrix(camera.combined);
 		spriteBatch.begin();
+		backgroundSprite.draw(spriteBatch);
 		for(GDXLevel level : gdxWorld.getLevels()){
 			if(player.isLevelAvailable(gdxWorld, level)){
 				Sprite sprite = levelSprite;
