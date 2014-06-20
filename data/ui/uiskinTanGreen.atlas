@@ -171,24 +171,17 @@ selection
   orig: 1, 1
   offset: 0, 0
   index: -1
-toggle-button-shell
+overworld-level
   rotate: false
-  xy: 952, 0
-  size: 72, 70
-  orig: 72, 70
+  xy: 844, 0
+  size: 70, 70
+  orig: 70, 70
   offset: 0, 0
   index: -1
-toggle-button
+overworld-current
   rotate: false
-  xy: 952, 71
-  size: 72, 70
-  orig: 72, 70
-  offset: 0, 0
-  index: -1
-toggle-button-checked
-  rotate: false
-  xy: 952, 142
-  size: 72, 70
-  orig: 72, 70
+  xy: 924, 0
+  size: 70, 70
+  orig: 70, 70
   offset: 0, 0
   index: -1

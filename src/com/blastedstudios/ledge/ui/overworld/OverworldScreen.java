@@ -20,7 +20,7 @@ import com.blastedstudios.ledge.world.being.Player;
 public class OverworldScreen extends AbstractScreen{
 	private static final float OFFSET_SCALAR = Properties.getFloat("world.level.offset.scalar", 20);
 	private final SpriteBatch spriteBatch = new SpriteBatch();
-	private final Sprite levelSprite, levelSelectedSprite;
+	private final Sprite backgroundSprite, levelSprite, levelCurrentSprite;
 	private final Player player;
 	private final OrthographicCamera camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 	private LevelInformationWindow levelInfo;
@@ -28,7 +28,6 @@ public class OverworldScreen extends AbstractScreen{
 	private final GDXWorld gdxWorld;
 	private final File worldFile;
 	private final GDXRenderer gdxRenderer;
-	private final Sprite backgroundSprite;
 
 	public OverworldScreen(GDXGame game, Player player, GDXWorld gdxWorld, File worldFile, GDXRenderer gdxRenderer){
 		super(game, Properties.get("screen.skin","data/ui/uiskinGame.json"));
@@ -37,8 +36,8 @@ public class OverworldScreen extends AbstractScreen{
 		this.worldFile = worldFile;
 		this.gdxRenderer = gdxRenderer;
 		Gdx.app.log("OverworldScreen.<init>", "Loaded world successfully");
-		levelSprite = skin.getSprite("toggle-button");
-		levelSelectedSprite = skin.getSprite("toggle-button-checked");
+		levelSprite = skin.getSprite("overworld-level");
+		levelCurrentSprite = skin.getSprite("overworld-current");
 		backgroundSprite = new Sprite(gdxRenderer.getTexture(gdxWorld.getWorldProperties().get("background")));
 		backgroundSprite.setPosition(backgroundSprite.getWidth()/-2f, backgroundSprite.getHeight()/-2f);
 		for(GDXLevel level : gdxWorld.getLevels())
@@ -72,13 +71,13 @@ public class OverworldScreen extends AbstractScreen{
 		backgroundSprite.draw(spriteBatch);
 		for(GDXLevel level : gdxWorld.getLevels()){
 			if(player.isLevelAvailable(gdxWorld, level)){
-				Sprite sprite = levelSprite;
-				if(levelInfo != null && levelInfo.level == level)
-					sprite = levelSelectedSprite;
-				Vector2 position = level.getCoordinates().cpy().scl(OFFSET_SCALAR).
-						sub(sprite.getWidth()/2, sprite.getHeight()/2);
-				sprite.setPosition(position.x, position.y);
-				sprite.draw(spriteBatch);
+				Vector2 position = level.getCoordinates().cpy().scl(OFFSET_SCALAR);
+				levelSprite.setPosition(position.x, position.y);
+				levelSprite.draw(spriteBatch);
+				if(levelInfo != null && levelInfo.level == level){
+					levelCurrentSprite.setPosition(position.x, position.y);
+					levelCurrentSprite.draw(spriteBatch);
+				}
 			}
 		}
 		spriteBatch.end();
