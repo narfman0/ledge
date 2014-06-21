@@ -14,13 +14,20 @@ import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 
 public class GunInformationWindow extends AbstractWindow {
-	public GunInformationWindow(final Skin skin, final Weapon weapon, final IDeleteWeaponListener listener){
+	public GunInformationWindow(final Skin skin, final Weapon weapon, final IWeaponInfoListener listener, boolean canSell){
 		super("", skin);
 		setColor(MainScreen.WINDOW_ALPHA_COLOR);
 		Button closeButton = new TextButton("Close", skin);
 		closeButton.addListener(new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
 				event.getListenerActor().getParent().getParent().remove();
+			}
+		});
+		Button sellButton = new TextButton("Sell", skin);
+		sellButton.addListener(new ClickListener() {
+			@Override public void clicked(InputEvent event, float x, float y) {
+				event.getListenerActor().getParent().getParent().remove();
+				listener.sellWeapon(weapon);
 			}
 		});
 		Button deleteButton = new TextButton("Delete", skin);
@@ -36,6 +43,8 @@ public class GunInformationWindow extends AbstractWindow {
 		row();
 		final Table controls = new Table();
 		controls.add(closeButton);
+		if(canSell)
+			controls.add(sellButton);
 		controls.add(deleteButton);
 		add(controls).colspan(2);
 		pack();
@@ -43,7 +52,8 @@ public class GunInformationWindow extends AbstractWindow {
 		setY(32f);	
 	}
 	
-	public interface IDeleteWeaponListener{
+	public interface IWeaponInfoListener{
 		void deleteWeapon(Weapon weapon);
+		void sellWeapon(Weapon weapon);
 	}
 }

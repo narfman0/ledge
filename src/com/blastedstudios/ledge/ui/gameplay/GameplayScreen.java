@@ -203,7 +203,8 @@ public class GameplayScreen extends AbstractScreen {
 						}
 					};
 					stage.addActor(characterWindow = new CharacterWindow(skin, worldManager.getPlayer(), listener));
-					stage.addActor(inventoryWindow = new InventoryWindow(skin, worldManager.getPlayer(), listener, gdxRenderer, stage));
+					stage.addActor(inventoryWindow = new InventoryWindow(skin, 
+							worldManager.getPlayer(), listener, gdxRenderer, stage, false));
 				}else
 					cleanInventoryCharacterWindows();
 			}

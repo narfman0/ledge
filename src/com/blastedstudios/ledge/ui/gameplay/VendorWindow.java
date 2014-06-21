@@ -9,14 +9,14 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.blastedstudios.gdxworld.ui.AbstractWindow;
+import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.weapon.Weapon;
-import com.blastedstudios.ledge.world.weapon.WeaponFactory;
 
-public class WeaponLockerWindow extends AbstractWindow {
-	public WeaponLockerWindow(final Skin skin){
-		super("Weapon Locker", skin);
+public class VendorWindow extends AbstractWindow {
+	public VendorWindow(final Skin skin, NPC npc){
+		super("Vendor", skin);
 		Table table = new Table(skin);
-		for(final Weapon gun : WeaponFactory.getStockWeapons()){
+		for(final Weapon gun : npc.getVendorWeapons()){
 			table.add(new GunTable(skin, gun));
 			Button buyButton = new TextButton("Buy", skin);
 			table.add(buyButton);
