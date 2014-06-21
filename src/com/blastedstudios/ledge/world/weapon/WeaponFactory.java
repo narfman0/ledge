@@ -57,10 +57,11 @@ public class WeaponFactory {
 
 	/**
 	 * @param iLevel monster level dropping weapon
+	 * @param pLevel player level for determining weapon type
 	 */
-	public static Weapon generateGun(int iLevel, int mLevel){
+	public static Weapon generateGun(int iLevel, int pLevel){
 		Random random = new Random();
-		Weapon weapon = rollWeaponType(random.nextFloat(), mLevel, random);
+		Weapon weapon = rollWeaponType(random.nextFloat(), pLevel, random);
 		weapon.setDamage(weapon.getDamage()*( (100f+(float)(iLevel*2))/100f) );
 
 		float rarity = random.nextFloat();
@@ -104,19 +105,22 @@ public class WeaponFactory {
 		return weapon;
 	}
 	
-	private static Weapon rollWeaponType(float roll, int mLevel, Random random){
-		if(mLevel < 1){
-			Gdx.app.error("WeaponFactory.rollWeaponType", "Error: mLevel of " + mLevel + ", using 1");
-			mLevel = 1;
+	/**
+	 * @param pLevel player level for determining weapon type
+	 */
+	private static Weapon rollWeaponType(float roll, int pLevel, Random random){
+		if(pLevel < 1){
+			Gdx.app.error("WeaponFactory.rollWeaponType", "Error: mLevel of " + pLevel + ", using 1");
+			pLevel = 1;
 		}
 		Collection<Weapon> weapons = getStockWeapons();
 		int total = 0;
 		for(Weapon weapon : weapons)
-			if(weapon.getMinLevel() <= mLevel)
+			if(weapon.getMinLevel() <= pLevel)
 				total += weapon.getRolls();
 		int current = 0, target = random.nextInt(total);
 		for(Weapon weapon : weapons){
-			if(weapon.getMinLevel() <= mLevel){
+			if(weapon.getMinLevel() <= pLevel){
 				current += weapon.getRolls();
 				if(current >= target)
 					return weapon;

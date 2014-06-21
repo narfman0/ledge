@@ -1,6 +1,7 @@
 package com.blastedstudios.ledge.world.being;
 
 import java.util.EnumSet;
+import java.util.LinkedList;
 import java.util.List;
 
 import jbt.execution.core.BTExecutorFactory;
@@ -30,15 +31,20 @@ public class NPC extends Being {
 	private IBTExecutor btExecutor;
 	private GDXPath path;
 	private final DifficultyEnum difficulty;
+	private final boolean vendor;
+	private final LinkedList<Weapon> vendorWeapons;
 	
 	public NPC(String name, List<Weapon> guns, List<Weapon> inventory, Stats stats,
 			int currentGun, int cash, int level, int xp, String behavior,
 			GDXPath path, FactionEnum faction, EnumSet<FactionEnum> factions,
 			WorldManager world, String resource, String ragdollResource, 
-			DifficultyEnum difficulty, AIWorld aiWorld) {
+			DifficultyEnum difficulty, AIWorld aiWorld, boolean vendor,
+			LinkedList<Weapon> vendorWeapons) {
 		super(name, guns, inventory, stats, currentGun, cash, level, xp, 
 				faction, factions, resource, ragdollResource);
 		this.difficulty = difficulty;
+		this.vendor = vendor;
+		this.vendorWeapons = vendorWeapons;
 		String basePackage = "com.blastedstudios.ledge.ai.bt.trees";
 		try{
 			Class<?> btLibClass = Class.forName(basePackage+"."+behavior);
@@ -106,5 +112,13 @@ public class NPC extends Being {
 	
 	public float getDistanceVision(){
 		return stats.getDistanceVision();
+	}
+
+	public boolean isVendor() {
+		return vendor;
+	}
+
+	public LinkedList<Weapon> getVendorWeapons() {
+		return vendorWeapons;
 	}
 }

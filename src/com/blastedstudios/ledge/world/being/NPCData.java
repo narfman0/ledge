@@ -37,6 +37,12 @@ public class NPCData {
 			properties.put(key, "0");
 		return Integer.parseInt(properties.get(key));
 	}
+
+	public boolean getBool(String key) {
+		if(get(key).isEmpty())
+			properties.put(key, "false");
+		return Boolean.parseBoolean(properties.get(key));
+	}
 	
 	public String set(String key, String value){
 		return properties.put(key, value);

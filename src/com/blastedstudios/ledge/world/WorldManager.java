@@ -9,6 +9,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.Map.Entry;
 
 import aurelienribon.tweenengine.TweenManager;
@@ -67,10 +68,12 @@ public class WorldManager implements IDeathCallback{
 	private final AIWorld aiWorld;
 	private final TweenManager tweenManager;
 	private boolean pause, inputEnable = true;
+	private final Random random;
 	
 	public WorldManager(Player player, GDXLevel level){
 		this.player = player;
 		this.level = level;
+		random = new Random();
 		tweenManager = new TweenManager();
 		dropManager = new DropManager();
 		Weapon gun = player.getEquippedWeapon();
@@ -233,11 +236,20 @@ public class WorldManager implements IDeathCallback{
 				xp = npcData.getInteger("XP");
 		DifficultyEnum difficulty = DifficultyEnum.valueOf(Properties.get(
 				"npc.difficulty.value", DifficultyEnum.MEDIUM.name()));
+		//Generate weapon list once per vendor, first if he has specific weapons, then generate randomly
+		LinkedList<Weapon> vendorWeapons = new LinkedList<Weapon>();
+		for(String weapon : npcData.get("VendorWeapons").split(","))
+			vendorWeapons.add(WeaponFactory.getWeapon(weapon));
+		if(npcData.getBool("VendorRandom")){
+			int count = random.nextInt(5)+5;
+			for(int i=0; i<count; i++)
+				vendorWeapons.add(WeaponFactory.generateGun(npcLevel, player.getLevel()));
+		}
 		NPC npc = new NPC(name, WeaponFactory.getGuns(npcData.get("Weapons")), 
 				new ArrayList<Weapon>(), Stats.parseNPCData(npcData), 0, cash, 
 				npcLevel, xp, npcData.get("Behavior"), level.getPath(npcData.get("Path")),
 				faction, factions, this, npcData.get("Resource"), npcData.get("RagdollResource"),
-				difficulty, aiWorld);
+				difficulty, aiWorld, npcData.getBool("Vendor"), vendorWeapons);
 		npc.aim(npcData.getFloat("Aim"));
 		npcs.add(npc);
 		npc.respawn(world, coordinates.x, coordinates.y);
