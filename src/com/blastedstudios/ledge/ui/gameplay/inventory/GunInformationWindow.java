@@ -14,13 +14,21 @@ import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 
 public class GunInformationWindow extends AbstractWindow {
-	public GunInformationWindow(final Skin skin, final Weapon weapon, final IWeaponInfoListener listener, boolean canSell){
+	public GunInformationWindow(final Skin skin, final Weapon weapon, final IWeaponInfoListener listener, 
+			boolean canDelete, boolean canSell, boolean canBuy){
 		super("", skin);
 		setColor(MainScreen.WINDOW_ALPHA_COLOR);
 		Button closeButton = new TextButton("Close", skin);
 		closeButton.addListener(new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
 				event.getListenerActor().getParent().getParent().remove();
+			}
+		});
+		Button buyButton = new TextButton("Buy", skin);
+		buyButton.addListener(new ClickListener() {
+			@Override public void clicked(InputEvent event, float x, float y) {
+				event.getListenerActor().getParent().getParent().remove();
+				listener.buyWeapon(weapon);
 			}
 		});
 		Button sellButton = new TextButton("Sell", skin);
@@ -37,16 +45,19 @@ public class GunInformationWindow extends AbstractWindow {
 				listener.deleteWeapon(weapon);
 			}
 		});
-		add(new Label(weapon.getName(), skin)).colspan(2);
+		add(new Label(weapon.getName(), skin));
 		row();
-		add(new GunTable(skin, weapon)).colspan(2);
+		add(new GunTable(skin, weapon));
 		row();
 		final Table controls = new Table();
-		controls.add(closeButton);
+		if(canBuy)
+			controls.add(buyButton);
 		if(canSell)
 			controls.add(sellButton);
-		controls.add(deleteButton);
-		add(controls).colspan(2);
+		if(canDelete)
+			controls.add(deleteButton);
+		controls.add(closeButton);
+		add(controls);
 		pack();
 		setX(Gdx.graphics.getWidth()/2f - getWidth()/2f);
 		setY(32f);	
@@ -55,5 +66,6 @@ public class GunInformationWindow extends AbstractWindow {
 	public interface IWeaponInfoListener{
 		void deleteWeapon(Weapon weapon);
 		void sellWeapon(Weapon weapon);
+		void buyWeapon(Weapon weapon);
 	}
 }

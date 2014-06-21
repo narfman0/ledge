@@ -42,12 +42,7 @@ public class DropManager {
 			float distance = player.getPosition().dst2(dropBody.getPosition());
 			WorldManager.drawTexture(spriteBatch, renderer, dropBody, entry.getValue().getResource(), scale);
 			if(distance < Properties.getFloat("drop.pickup.distance", .5f)){
-				if(player.getGuns().size() < Being.MAX_GUNS){
-					player.getGuns().add(entry.getValue());
-					if(player.getGuns().size() == 1)
-						player.setCurrentWeapon(0, world);
-				}else
-					player.getInventory().add(entry.getValue());
+				player.receive(entry.getValue(), world);
 				world.destroyBody(dropBody);
 				gunDropRemoveList.add(dropBody);
 				Gdx.app.log("WorldManager.render","Player picked up " + entry.getValue());

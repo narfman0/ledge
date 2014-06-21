@@ -282,13 +282,22 @@ public class Being implements Serializable{
 		ragdoll = null;
 	}
 
-	public boolean buy(Weapon gun){
-		boolean afford = cash >= gun.getCost();
+	public boolean buy(Weapon weapon, World world){
+		boolean afford = cash >= weapon.getCost();
 		if(afford){
-			cash -= gun.getCost();
-			guns.add(gun);
+			cash -= weapon.getCost();
+			receive(weapon, world);
 		}
 		return afford;
+	}
+	
+	public void receive(Weapon weapon, World world){
+		if(guns.size() < MAX_GUNS){
+			guns.add(weapon);
+			if(guns.size() == 1)
+				setCurrentWeapon(0, world);
+		}else
+			inventory.add(weapon);
 	}
 
 	public void aim(float heading){

@@ -40,6 +40,7 @@ import com.blastedstudios.ledge.world.QuestManifestationExecutor;
 import com.blastedstudios.ledge.world.QuestTriggerInformationProvider;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
+import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.Player;
 import com.blastedstudios.ledge.world.being.component.IComponent;
 
@@ -49,7 +50,7 @@ public class GameplayScreen extends AbstractScreen {
 	private HUD hud;
 	private OrthographicCamera camera;
 	private WorldManager worldManager;
-	private AbstractWindow characterWindow, inventoryWindow;
+	private AbstractWindow characterWindow, inventoryWindow, vendorWindow;
 	private ConsoleWindow consoleWindow;
 	private final Box2DDebugRenderer renderer;
 	private final GDXRenderer gdxRenderer;
@@ -114,9 +115,10 @@ public class GameplayScreen extends AbstractScreen {
 		worldManager.getPlayer().getQuestManager().tick();
 		
 		int x = Gdx.input.getX(), y = Gdx.input.getY();
-		if(!worldManager.isPause() && worldManager.isInputEnable() && 
-				Gdx.input.isTouched() && (inventoryWindow == null || !inventoryWindow.contains(x, y)) &&
-				(characterWindow == null || !characterWindow.contains(x, y)))
+		if(!worldManager.isPause() && worldManager.isInputEnable() && Gdx.input.isTouched() && 
+				(inventoryWindow == null || !inventoryWindow.contains(x, y)) &&
+				(characterWindow == null || !characterWindow.contains(x, y)) &&
+				(vendorWindow == null || !vendorWindow.contains(x, y)))
 			worldManager.getPlayer().attack(touchedDirection, worldManager);
 	}
 	
@@ -197,16 +199,17 @@ public class GameplayScreen extends AbstractScreen {
 		case Keys.I:
 			if(consoleWindow == null && !worldManager.isPause() && worldManager.isInputEnable()){
 				if(characterWindow == null){
+					cleanCharacterWindows();//just to be safe
 					ChangeListener listener = new ChangeListener() {
 						@Override public void changed(ChangeEvent event, Actor actor) {
-							cleanInventoryCharacterWindows();
+							cleanCharacterWindows();
 						}
 					};
 					stage.addActor(characterWindow = new CharacterWindow(skin, worldManager.getPlayer(), listener));
 					stage.addActor(inventoryWindow = new InventoryWindow(skin, 
 							worldManager.getPlayer(), listener, gdxRenderer, stage, false));
 				}else
-					cleanInventoryCharacterWindows();
+					cleanCharacterWindows();
 			}
 			break;
 		case Keys.A:
@@ -222,6 +225,24 @@ public class GameplayScreen extends AbstractScreen {
 				game.pushScreen(new LevelEditorScreen(game, world, selectedFile, level));
 				Gdx.app.log("GameplayScreen.render", "Edit mode entered");
 			}
+			if(vendorWindow == null){
+				if(!worldManager.isPause() && worldManager.isInputEnable()){
+					NPC npc = worldManager.findVendor();
+					if(npc != null){
+						cleanCharacterWindows();//just to be safe
+						ChangeListener listener = new ChangeListener() {
+							@Override public void changed(ChangeEvent event, Actor actor) {
+								cleanCharacterWindows();
+							}
+						};
+						stage.addActor(vendorWindow = new VendorWindow(skin, npc, stage, worldManager.getPlayer(),
+								worldManager.getWorld(), listener, gdxRenderer));
+						stage.addActor(inventoryWindow = new InventoryWindow(skin, 
+								worldManager.getPlayer(), listener, gdxRenderer, stage, true));
+					}
+				}
+			}else
+				cleanCharacterWindows();
 			break;
 		case Keys.W:
 			if(!worldManager.isPause() && worldManager.isInputEnable())
@@ -289,11 +310,13 @@ public class GameplayScreen extends AbstractScreen {
 		return super.keyDown(key);
 	}
 	
-	private void cleanInventoryCharacterWindows(){
-		characterWindow.remove();
-		inventoryWindow.remove();
+	private void cleanCharacterWindows(){
+		for(AbstractWindow window : new AbstractWindow[]{characterWindow,inventoryWindow,vendorWindow})
+			if(window != null)
+				window.remove();
 		characterWindow = null;
 		inventoryWindow = null;
+		vendorWindow = null;
 	}
 	
 	private boolean debugCommandEnabled(){

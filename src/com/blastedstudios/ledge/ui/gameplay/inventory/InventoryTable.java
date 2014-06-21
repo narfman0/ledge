@@ -134,6 +134,7 @@ public class InventoryTable extends Table implements IButtonClicked, IWeaponInfo
 	@Override public void sellWeapon(Weapon weapon) {
 		being.addCash((int)(weapon.getCost() * Properties.getFloat("weapon.resell.scalar", .25f)));
 		deleteWeapon(weapon);
+		accept();
 	}
 	
 	public void accept(){
@@ -148,4 +149,6 @@ public class InventoryTable extends Table implements IButtonClicked, IWeaponInfo
 		being.setGuns(guns);
 		being.setInventory(inventory);
 	}
+
+	@Override public void buyWeapon(Weapon weapon) {/*can't buy weapons here*/}
 }

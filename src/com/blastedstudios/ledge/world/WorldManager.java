@@ -334,4 +334,14 @@ public class WorldManager implements IDeathCallback{
 	public TweenManager getTweenManager() {
 		return tweenManager;
 	}
+
+	/**
+	 * @return vendor if player is close enough, otherwise null
+	 */
+	public NPC findVendor() {
+		for(NPC npc : npcs)
+			if(npc.isVendor() && npc.getPosition().dst(player.getPosition()) < Properties.getFloat("vendor.distance", 2f))
+				return npc;
+		return null;
+	}
 }

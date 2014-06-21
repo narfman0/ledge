@@ -71,10 +71,10 @@ public class InventoryWindow extends AbstractWindow implements IButtonClicked {
 	@Override public void gunButtonClicked(Weapon weapon) {
 		if(gunInformationWindow != null)
 			gunInformationWindow.remove();
-		stage.addActor(gunInformationWindow = new GunInformationWindow(skin, weapon, inventoryTable, canSell));
+		stage.addActor(gunInformationWindow = new GunInformationWindow(skin, weapon, inventoryTable, true, canSell, false));
 	}
 	
-	public boolean contains(float x, float y){
+	@Override public boolean contains(float x, float y){
 		return (gunInformationWindow != null && gunInformationWindow.contains(x, y)) || super.contains(x, y);
 	}
 }
