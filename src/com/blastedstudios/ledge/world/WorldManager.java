@@ -239,7 +239,8 @@ public class WorldManager implements IDeathCallback{
 		//Generate weapon list once per vendor, first if he has specific weapons, then generate randomly
 		LinkedList<Weapon> vendorWeapons = new LinkedList<Weapon>();
 		for(String weapon : npcData.get("VendorWeapons").split(","))
-			vendorWeapons.add(WeaponFactory.getWeapon(weapon));
+			if(!weapon.equals(""))
+				vendorWeapons.add(WeaponFactory.getWeapon(weapon));
 		if(npcData.getBool("VendorRandom")){
 			int count = random.nextInt(5)+5;
 			for(int i=0; i<count; i++)
