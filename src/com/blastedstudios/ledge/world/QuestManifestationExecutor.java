@@ -14,6 +14,7 @@ import com.badlogic.gdx.utils.Array;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.beingspawn.IBeingSpawnHandler;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.dialog.IDialogHandler;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.endlevel.IEndLevelHandler;
+import com.blastedstudios.gdxworld.plugin.quest.manifestation.inputenable.IInputEnableHandler;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.particle.IParticleHandler;
 import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.world.GDXPath;
@@ -22,6 +23,7 @@ import com.blastedstudios.gdxworld.world.quest.manifestation.IQuestManifestation
 import com.blastedstudios.ledge.plugin.quest.handler.BeingSpawnHandlerPlugin;
 import com.blastedstudios.ledge.plugin.quest.handler.DialogHandlerPlugin;
 import com.blastedstudios.ledge.plugin.quest.handler.EndLevelHandlerPlugin;
+import com.blastedstudios.ledge.plugin.quest.handler.InputEnableHandlerPlugin;
 import com.blastedstudios.ledge.plugin.quest.handler.ParticleHandlerPlugin;
 import com.blastedstudios.ledge.plugin.quest.manifestation.cameratween.CameraAccessor;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
@@ -49,6 +51,8 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 			((BeingSpawnHandlerPlugin)handler).setWorldManager(worldManager);
 		for(IParticleHandler handler : PluginUtil.getPlugins(IParticleHandler.class))
 			((ParticleHandlerPlugin)handler).setGameplayScreen(screen);
+		for(IInputEnableHandler handler : PluginUtil.getPlugins(IInputEnableHandler.class))
+			((InputEnableHandlerPlugin)handler).setWorldManager(worldManager);
 	}
 
 	@Override public Joint getPhysicsJoint(String name) {
@@ -100,11 +104,6 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 
 	public CompletionEnum pause(boolean pause) {
 		worldManager.pause(pause);
-		return CompletionEnum.COMPLETED;
-	}
-
-	public CompletionEnum inputEnable(boolean inputEnable) {
-		worldManager.setInputEnable(inputEnable);
 		return CompletionEnum.COMPLETED;
 	}
 
