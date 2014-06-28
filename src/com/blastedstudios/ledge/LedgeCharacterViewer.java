@@ -17,6 +17,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextField;
 import com.badlogic.gdx.scenes.scene2d.ui.Window;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.blastedstudios.gdxworld.GDXWorldEditor;
 import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.util.FileUtil;
 import com.blastedstudios.gdxworld.util.GDXGame;
@@ -38,7 +39,7 @@ public class LedgeCharacterViewer extends GDXGame {
 	}
 
 	public static void main (String[] argv) {
-		new LwjglApplication(new LedgeCharacterViewer(), LedgeCharacterViewer.class.getSimpleName(), 800, 600, true);
+		new LwjglApplication(new LedgeCharacterViewer(), GDXWorldEditor.generateConfiguration(LedgeCharacterViewer.class.getSimpleName()));
 	}
 
 	private class MainScreen extends AbstractScreen {
@@ -94,8 +95,6 @@ public class LedgeCharacterViewer extends GDXGame {
 			super.render(delta);
 			camera.position.set(player.getPosition().x, player.getPosition().y, 0);
 			camera.update();
-			if(!Gdx.graphics.isGL20Available())
-				camera.apply(Gdx.gl10);
 			world.step(delta, 4, 4);
 			player.setMoveLeft(Gdx.input.isKeyPressed(Keys.A));
 			player.setMoveRight(Gdx.input.isKeyPressed(Keys.D));

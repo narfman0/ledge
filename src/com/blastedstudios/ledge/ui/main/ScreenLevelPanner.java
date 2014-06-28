@@ -70,8 +70,6 @@ public class ScreenLevelPanner {
 		
 		camera.position.add(cameraMoveAmountX, 0, 0);
 		camera.update();
-		if(!Gdx.graphics.isGL20Available())
-			camera.apply(Gdx.gl10);
 		rayHandler.setCombinedMatrix(camera.combined);
 
 		gdxRenderer.render(gdxLevel, camera, struct.bodies.entrySet());

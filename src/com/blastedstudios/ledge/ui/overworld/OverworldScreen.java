@@ -67,8 +67,6 @@ public class OverworldScreen extends AbstractScreen{
 		super.render(delta);
 		tweenManager.update(delta);
 		camera.update();
-		if(!Gdx.graphics.isGL20Available())
-			camera.apply(Gdx.gl10);
 		if(Gdx.input.isKeyPressed(Keys.UP) && upperLeft.y > camera.position.y)
 			camera.position.y+=camera.zoom;
 		if(Gdx.input.isKeyPressed(Keys.DOWN) && lowerRight.y < camera.position.y)
@@ -109,7 +107,7 @@ public class OverworldScreen extends AbstractScreen{
 		super.touchDown(x, y, ptr, button);
 		if(levelInfo == null || !levelInfo.contains(x, y)){
 			Vector2 coordinates = GDXRenderer.toWorldCoordinates(camera, new Vector2(x,y));
-			coordinates.div(OFFSET_SCALAR);
+			coordinates.scl(1f/OFFSET_SCALAR);
 			GDXLevel level = gdxWorld.getClosestLevel(coordinates.x,coordinates.y);
 			if(Math.abs(level.getCoordinates().x - coordinates.x) < levelSprite.getWidth()/2 &&
 					Math.abs(level.getCoordinates().y - coordinates.y) < levelSprite.getHeight()/2 &&

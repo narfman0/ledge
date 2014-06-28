@@ -13396,7 +13396,7 @@
           <prerequisites>vasht0</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.inputenable.InputEnableManifestation">
+          <manifestation class="com.blastedstudios.gdxworld.plugin.quest.manifestation.inputenable.InputEnableManifestation">
             <inputEnable>false</inputEnable>
           </manifestation>
         </world.quest.GDXQuest>
@@ -13405,7 +13405,7 @@
           <prerequisites>vasht7</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.inputenable.InputEnableManifestation">
+          <manifestation class="com.blastedstudios.gdxworld.plugin.quest.manifestation.inputenable.InputEnableManifestation">
             <inputEnable>true</inputEnable>
           </manifestation>
         </world.quest.GDXQuest>
@@ -13423,7 +13423,7 @@
               <y>-5.041423</y>
             </upperRight>
           </trigger>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.inputenable.InputEnableManifestation">
+          <manifestation class="com.blastedstudios.gdxworld.plugin.quest.manifestation.inputenable.InputEnableManifestation">
             <inputEnable>false</inputEnable>
           </manifestation>
         </world.quest.GDXQuest>
@@ -13553,7 +13553,7 @@
           <prerequisites>vasht20</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.inputenable.InputEnableManifestation">
+          <manifestation class="com.blastedstudios.gdxworld.plugin.quest.manifestation.inputenable.InputEnableManifestation">
             <inputEnable>true</inputEnable>
           </manifestation>
         </world.quest.GDXQuest>
@@ -13571,7 +13571,7 @@
               <y>2.1135209</y>
             </upperRight>
           </trigger>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.inputenable.InputEnableManifestation">
+          <manifestation class="com.blastedstudios.gdxworld.plugin.quest.manifestation.inputenable.InputEnableManifestation">
             <inputEnable>false</inputEnable>
           </manifestation>
         </world.quest.GDXQuest>
@@ -13965,7 +13965,7 @@
           <prerequisites>robbot35</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.inputenable.InputEnableManifestation">
+          <manifestation class="com.blastedstudios.gdxworld.plugin.quest.manifestation.inputenable.InputEnableManifestation">
             <inputEnable>true</inputEnable>
           </manifestation>
         </world.quest.GDXQuest>
@@ -13983,7 +13983,7 @@
               <y>-15.57332</y>
             </upperRight>
           </trigger>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.inputenable.InputEnableManifestation">
+          <manifestation class="com.blastedstudios.gdxworld.plugin.quest.manifestation.inputenable.InputEnableManifestation">
             <inputEnable>false</inputEnable>
           </manifestation>
         </world.quest.GDXQuest>
@@ -14005,7 +14005,7 @@
           <trigger class="plugin.quest.trigger.kill.KillTrigger">
             <name>desertSoldier2</name>
           </trigger>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.inputenable.InputEnableManifestation">
+          <manifestation class="com.blastedstudios.gdxworld.plugin.quest.manifestation.inputenable.InputEnableManifestation">
             <inputEnable>false</inputEnable>
           </manifestation>
         </world.quest.GDXQuest>
@@ -14040,7 +14040,7 @@
           <prerequisites>family4</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.inputenable.InputEnableManifestation">
+          <manifestation class="com.blastedstudios.gdxworld.plugin.quest.manifestation.inputenable.InputEnableManifestation">
             <inputEnable>true</inputEnable>
           </manifestation>
         </world.quest.GDXQuest>
@@ -14049,7 +14049,7 @@
           <prerequisites>family1</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.inputenable.InputEnableManifestation">
+          <manifestation class="com.blastedstudios.gdxworld.plugin.quest.manifestation.inputenable.InputEnableManifestation">
             <inputEnable>true</inputEnable>
           </manifestation>
         </world.quest.GDXQuest>

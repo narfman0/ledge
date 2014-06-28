@@ -96,8 +96,6 @@ public class GameplayScreen extends AbstractScreen {
 		if(worldManager.getPlayer().isSpawned() && worldManager.isInputEnable())
 			camera.position.set(worldManager.getPlayer().getPosition().x, worldManager.getPlayer().getPosition().y, 0);
 		camera.update();
-		if(!Gdx.graphics.isGL20Available())
-			camera.apply(Gdx.gl10);
 		rayHandler.setCombinedMatrix(camera.combined);
 
 		gdxRenderer.render(level, camera, worldManager.getCreateLevelStruct().bodies.entrySet());

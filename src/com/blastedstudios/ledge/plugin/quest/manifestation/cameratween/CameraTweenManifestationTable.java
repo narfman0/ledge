@@ -17,7 +17,7 @@ public class CameraTweenManifestationTable extends ManifestationTable{
 	private final CameraTweenManifestation manifestation;
 	private final VertexTable targetTable;
 	private final TextField durationField;
-	private final SelectBox cameraTweenTypeList;
+	private final SelectBox<CameraTweenType> cameraTweenTypeList;
 	private boolean modify;
 	
 	public CameraTweenManifestationTable(Skin skin, CameraTweenManifestation manifestation){
@@ -31,8 +31,9 @@ public class CameraTweenManifestationTable extends ManifestationTable{
 			}
 		});
 		durationField = new TextField(manifestation.getDuration()+"", skin);
-		cameraTweenTypeList = new SelectBox(CameraTweenType.values(), skin);
-		cameraTweenTypeList.setSelection(manifestation.getTweenType().ordinal());
+		cameraTweenTypeList = new SelectBox<CameraTweenType>(skin);
+		cameraTweenTypeList.setItems(CameraTweenType.values());
+		cameraTweenTypeList.setSelected(manifestation.getTweenType());
 		add(new Label("Target: ", skin));
 		add(targetTable);
 		add(targetButton);
@@ -47,7 +48,7 @@ public class CameraTweenManifestationTable extends ManifestationTable{
 	@Override public AbstractQuestManifestation apply() {
 		manifestation.setDuration(Float.parseFloat(durationField.getText()));
 		manifestation.setTarget(targetTable.getVertex());
-		manifestation.setTweenType(CameraTweenType.values()[cameraTweenTypeList.getSelectionIndex()]);
+		manifestation.setTweenType(cameraTweenTypeList.getSelected());
 		return manifestation;
 	}
 

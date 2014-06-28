@@ -10,7 +10,7 @@ public class VectorHelper {
 		Vector2 average = new Vector2();
 		for(Vector2 vector : vectors)
 			average.add(vector);
-		return average.div(vectors.size());
+		return average.scl(1f/(float)vectors.size());
 	}
 	
 	public static Vector2 calculateAverage(Vector2[] vectors){

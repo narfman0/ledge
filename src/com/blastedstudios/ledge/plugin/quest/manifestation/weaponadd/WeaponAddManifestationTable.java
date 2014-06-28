@@ -16,7 +16,7 @@ import com.blastedstudios.ledge.plugin.quest.manifestation.weaponadd.WeaponAddMa
 public class WeaponAddManifestationTable extends ManifestationTable{
 	private final WeaponAddManifestation manifestation;
 	private final TextField weaponField, targetField;
-	private final List weaponAddTypeField;
+	private final List<WeaponAddType> weaponAddTypeField;
 	private final VertexTable locationTable;
 	private final Table targetTable = new Table();
 	
@@ -25,7 +25,8 @@ public class WeaponAddManifestationTable extends ManifestationTable{
 		this.manifestation = manifestation;
 		weaponField = new TextField(manifestation.getWeapon(), skin);
 		weaponField.setMessageText("<weapon name>");
-		weaponAddTypeField = new List(WeaponAddType.values(), skin);
+		weaponAddTypeField = new List<WeaponAddType>(skin);
+		weaponAddTypeField.setItems(WeaponAddType.values());
 		weaponAddTypeField.setSelectedIndex(manifestation.getWeaponAddType().ordinal());
 		weaponAddTypeField.addListener(new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
@@ -49,7 +50,7 @@ public class WeaponAddManifestationTable extends ManifestationTable{
 	}
 	
 	private WeaponAddType getType(){
-		return WeaponAddType.values()[weaponAddTypeField.getSelectedIndex()];
+		return weaponAddTypeField.getSelected();
 	}
 	
 	private void updateTargetTable(final Skin skin){
