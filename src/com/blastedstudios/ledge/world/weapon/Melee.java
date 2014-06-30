@@ -59,7 +59,7 @@ public class Melee extends Weapon {
 		this.owner = owner;
 		Vector2 position = ragdoll.getWeaponCenter().cpy().add(offsetX, offsetY);
 		body = PhysicsHelper.createRectangle(world, width, height, position, BodyType.DynamicBody, 
-				density, owner.getMask(), owner.getCat(), (short)0);
+				.2f, .5f, density, owner.getMask(), owner.getCat(), (short)0);
 		body.setUserData(this);
 		WeldJointDef def = new WeldJointDef();
 		def.initialize(body, ragdoll.getBodyPart(BodyPart.lHand), position);

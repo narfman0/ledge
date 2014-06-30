@@ -44,13 +44,13 @@ public class RagdollCustom extends AbstractRagdoll {
 	
 	private static Body createTorso(World world, short mask, short cat){
 		return PhysicsHelper.createRectangle(world, .15f*SCALE, .3f*SCALE, 
-				new Vector2(0,torsoY).scl(SCALE), BodyType.DynamicBody, DENSITY, 
+				new Vector2(0,torsoY).scl(SCALE), BodyType.DynamicBody, .2f, .5f, DENSITY, 
 				mask, cat, (short)0);
 	}
 	
 	private static Body createLLeg(World world, short mask, short cat){
 		Body lLegBody = PhysicsHelper.createRectangle(world, .1f*SCALE, .25f*SCALE, 
-				new Vector2(-legX, legY).scl(SCALE), BodyType.DynamicBody, DENSITY, 
+				new Vector2(-legX, legY).scl(SCALE), BodyType.DynamicBody, .2f, .5f, DENSITY, 
 				mask, cat, (short)0);
 		lLegBody.setTransform(lLegBody.getPosition(), -.2f*SCALE);
 		return lLegBody;
@@ -58,7 +58,7 @@ public class RagdollCustom extends AbstractRagdoll {
 	
 	private static Body createRLeg(World world, short mask, short cat){
 		Body rLegBody = PhysicsHelper.createRectangle(world, .1f*SCALE, .25f*SCALE, 
-				new Vector2(legX, legY).scl(SCALE), BodyType.DynamicBody, DENSITY, 
+				new Vector2(legX, legY).scl(SCALE), BodyType.DynamicBody, .2f, .5f, DENSITY, 
 				mask, cat, (short)0);
 		rLegBody.setTransform(rLegBody.getPosition(), .2f*SCALE);
 		return rLegBody;

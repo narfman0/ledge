@@ -131,7 +131,7 @@ public class DropManager {
 	
 	private Body generateDropBody(World world, Vector2 position, Object userData){
 		float radius = Properties.getFloat("drop.pickup.distance", .5f)-.25f;
-		Body body = PhysicsHelper.createCircle(world, radius, position, BodyType.DynamicBody, 1);
+		Body body = PhysicsHelper.createCircle(world, radius, position, BodyType.DynamicBody, .2f, .5f, 1);
 		body.setFixedRotation(true);
 		body.setUserData(userData);
 		return body;

@@ -64,7 +64,7 @@ public class AIWorld {
 		World world = new World(new Vector2(), true);
 		if(nodesVisible)
 			for(Vector2 node : movementGraph.vertexSet())
-				PhysicsHelper.createCircle(world, .1f, node, BodyType.StaticBody);
+				PhysicsHelper.createCircle(world, .1f, node, BodyType.StaticBody, .2f, .5f, 1f);
 		if(edgesVisible)
 			for(DefaultWeightedEdge edge : movementGraph.edgeSet()){
 				Vector2 source = movementGraph.getEdgeSource(edge), target = movementGraph.getEdgeTarget(edge);
