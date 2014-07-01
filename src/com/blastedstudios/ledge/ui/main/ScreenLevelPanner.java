@@ -6,6 +6,7 @@ import box2dLight.RayHandler;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
@@ -21,6 +22,7 @@ public class ScreenLevelPanner {
 	private static final int TIME_TO_TRANSITION = Properties.getInt("screen.panner.transition.time", 10000);
 	private final GDXRenderer gdxRenderer;
 	private final GDXWorld gdxWorld;
+	private final SpriteBatch spriteBatch = new SpriteBatch();
 	private ParticleManager particleManager;
 	private OrthographicCamera camera;
 	private TiledMeshRenderer tiledMeshRenderer;
@@ -71,8 +73,10 @@ public class ScreenLevelPanner {
 		camera.position.add(cameraMoveAmountX, 0, 0);
 		camera.update();
 		rayHandler.setCombinedMatrix(camera.combined);
-
-		gdxRenderer.render(gdxLevel, camera, struct.bodies.entrySet());
+		spriteBatch.setProjectionMatrix(camera.combined);
+		spriteBatch.begin();
+		gdxRenderer.render(spriteBatch, gdxLevel, camera, struct.bodies.entrySet());
+		spriteBatch.end();
 		tiledMeshRenderer.render(camera);
 		world.step(1f/30f, 10, 10);
 		//worldManager.render(gdxRenderer, camera);

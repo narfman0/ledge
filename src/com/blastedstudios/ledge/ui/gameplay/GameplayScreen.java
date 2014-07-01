@@ -9,6 +9,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.scenes.scene2d.Actor;
@@ -60,6 +61,7 @@ public class GameplayScreen extends AbstractScreen {
 	private final File selectedFile;
 	private Vector2 touchedDirection;
 	private final TiledMeshRenderer tiledMeshRenderer;
+	private final SpriteBatch spriteBatch = new SpriteBatch();
 	
 	public GameplayScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world, File selectedFile, final GDXRenderer gdxRenderer){
 		super(game, Properties.get("screen.skin","data/ui/uiskinGame.json"));
@@ -98,7 +100,11 @@ public class GameplayScreen extends AbstractScreen {
 		camera.update();
 		rayHandler.setCombinedMatrix(camera.combined);
 
-		gdxRenderer.render(level, camera, worldManager.getCreateLevelStruct().bodies.entrySet());
+		spriteBatch.setProjectionMatrix(camera.combined);
+		spriteBatch.begin();
+		gdxRenderer.render(spriteBatch, level, camera, worldManager.getCreateLevelStruct().bodies.entrySet());
+		spriteBatch.end();
+		
 		tiledMeshRenderer.render(camera);
 		worldManager.render(delta, gdxRenderer, camera);
 		particleManager.render(delta, camera, worldManager);
