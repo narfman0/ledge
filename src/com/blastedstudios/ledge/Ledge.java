@@ -10,7 +10,7 @@ import com.blastedstudios.ledge.ui.main.MainScreen;
 
 public class Ledge extends GDXGame {
 	@Override public void create () {
-		Properties.load(FileUtil.find(Gdx.files.internal("data"), "ledge.properties").read());
+		Properties.load(FileUtil.find(Gdx.files.internal("."), "ledge.properties").read());
 		pushScreen(new MainScreen(this));
 	}
 	

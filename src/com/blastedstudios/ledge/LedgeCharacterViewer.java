@@ -52,7 +52,7 @@ public class LedgeCharacterViewer extends GDXGame {
 		private final HUD hud;
 
 		public MainScreen(GDXGame game){
-			super(game, "data/ui/uiskin.json");
+			super(game, "uiskin.json");
 			spriteBatch = new SpriteBatch();
 			spriteBatch.enableBlending();
 			world = new World(new Vector2(0,-20), false);

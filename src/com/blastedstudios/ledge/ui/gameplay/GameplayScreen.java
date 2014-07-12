@@ -64,7 +64,7 @@ public class GameplayScreen extends AbstractScreen {
 	private final SpriteBatch spriteBatch = new SpriteBatch();
 	
 	public GameplayScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world, File selectedFile, final GDXRenderer gdxRenderer){
-		super(game, Properties.get("screen.skin","data/ui/uiskinGame.json"));
+		super(game, Properties.get("screen.skin","uiskinGame.json"));
 		this.level = level;
 		this.world = world;
 		this.selectedFile = selectedFile;

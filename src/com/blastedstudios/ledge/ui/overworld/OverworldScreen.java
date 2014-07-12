@@ -36,7 +36,7 @@ public class OverworldScreen extends AbstractScreen{
 	private final TweenManager tweenManager;
 
 	public OverworldScreen(GDXGame game, Player player, GDXWorld gdxWorld, File worldFile, GDXRenderer gdxRenderer){
-		super(game, Properties.get("screen.skin","data/ui/uiskinGame.json"));
+		super(game, Properties.get("screen.skin","uiskinGame.json"));
 		this.player = player;
 		this.gdxWorld = gdxWorld;
 		this.worldFile = worldFile;
