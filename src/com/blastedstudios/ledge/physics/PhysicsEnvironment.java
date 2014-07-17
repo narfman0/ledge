@@ -28,10 +28,10 @@ public class PhysicsEnvironment {
 	public static Body createBullet(World world, GunShot gunshot, Vector2 origin){
 		Vector2 position = origin.cpy().add(gunshot.getDir().cpy().scl(.4f)),
 				velocity = gunshot.getDir().cpy().scl(gunshot.getGun().getMuzzleVelocity());
-		Body body = com.blastedstudios.gdxworld.physics.PhysicsHelper.createCircle(world, 
-				BULLET_RADIUS, position, BodyType.DynamicBody, .2f, .5f, BULLET_DENSITY, MASK_PROJECTILE, CAT_PROJECTILE, (short)0);
 		float angle = (float)Math.atan2(gunshot.getDir().y, gunshot.getDir().x);
-		body.setTransform(position, angle);
+		Body body = com.blastedstudios.gdxworld.physics.PhysicsHelper.createCircle(world, 
+				BULLET_RADIUS, position, angle, BodyType.DynamicBody, .2f, .5f, BULLET_DENSITY, 
+				gunshot.getBeing().getMask(), gunshot.getBeing().getCat(), (short)0);
 		body.setLinearVelocity(velocity);
 		body.setBullet(true);
 		body.setUserData(gunshot);
