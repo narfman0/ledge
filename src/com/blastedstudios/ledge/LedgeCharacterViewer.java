@@ -56,7 +56,7 @@ public class LedgeCharacterViewer extends GDXGame {
 			spriteBatch = new SpriteBatch();
 			spriteBatch.enableBlending();
 			world = new World(new Vector2(0,-20), false);
-			GDXLevel level = GDXWorld.load(Gdx.files.internal("data/world/animationViewer.xml").file()).getLevels().get(0);
+			GDXLevel level = GDXWorld.load(Gdx.files.internal("data/world/animationViewer.xml")).getLevels().get(0);
 			level.createLevel(world);
 			player = new Player("name", new ArrayList<Weapon>(WeaponFactory.getStockWeapons()), new ArrayList<Weapon>(), 
 					Stats.parseNPCData(NPCData.parse("player")), 0, 1, 1, 1, FactionEnum.FRIEND, EnumSet.of(FactionEnum.FRIEND), 

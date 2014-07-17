@@ -32,7 +32,7 @@ public class RagdollLoader extends AbstractRagdoll {
 		for(ISerializer serializer : PluginUtil.getPlugins(ISerializer.class))
 			if(serializer.getFileFilter().accept(fileHandle.file()))
 				try {
-					struct = (GDXGroupExportStruct) serializer.load(fileHandle.file());
+					struct = (GDXGroupExportStruct) serializer.load(fileHandle);
 				} catch (Exception e) {
 					Gdx.app.error("RagdollCustom.<init>", "Error deserializing ragdoll: " + 
 							fileHandle.path() +" message: " + e.getMessage());

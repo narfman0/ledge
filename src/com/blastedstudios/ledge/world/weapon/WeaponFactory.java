@@ -17,7 +17,7 @@ public class WeaponFactory {
 		HashMap<String, Weapon> guns = new HashMap<String, Weapon>();
 		for(FileHandle handle : Gdx.files.internal("data/world/weapons").list())
 			try {
-				Weapon gun = (Weapon) serializer.load(handle.file()); 
+				Weapon gun = (Weapon) serializer.load(handle); 
 				guns.put(gun.getName(), gun);
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -27,7 +27,7 @@ public class WeaponFactory {
 
 	public static Weapon getWeapon(String name){
 		try {
-			return (Weapon) serializer.load(Gdx.files.internal("data/world/weapons/" + name + ".xml").file());
+			return (Weapon) serializer.load(Gdx.files.internal("data/world/weapons/" + name + ".xml"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 

@@ -1,13 +1,12 @@
 package com.blastedstudios.ledge.ui.overworld;
 
-import java.io.File;
-
 import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenManager;
 import aurelienribon.tweenengine.equations.Cubic;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -31,11 +30,11 @@ public class OverworldScreen extends AbstractScreen{
 	private LevelInformationWindow levelInfo;
 	private final Vector2 upperLeft = new Vector2(), lowerRight = new Vector2();
 	private final GDXWorld gdxWorld;
-	private final File worldFile;
+	private final FileHandle worldFile;
 	private final GDXRenderer gdxRenderer;
 	private final TweenManager tweenManager;
 
-	public OverworldScreen(GDXGame game, Player player, GDXWorld gdxWorld, File worldFile, GDXRenderer gdxRenderer){
+	public OverworldScreen(GDXGame game, Player player, GDXWorld gdxWorld, FileHandle worldFile, GDXRenderer gdxRenderer){
 		super(game, Properties.get("screen.skin","uiskinGame.json"));
 		this.player = player;
 		this.gdxWorld = gdxWorld;

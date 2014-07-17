@@ -1,8 +1,7 @@
 package com.blastedstudios.ledge.ui.overworld;
 
-import java.io.File;
-
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
@@ -23,7 +22,7 @@ class LevelInformationWindow extends AbstractWindow{
 	public final GDXLevel level;
 	
 	public LevelInformationWindow(final Skin skin, final GDXLevel level, 
-			final GDXGame game, final Player player, final GDXWorld world, final File selectedFile, final GDXRenderer gdxRenderer) {
+			final GDXGame game, final Player player, final GDXWorld world, final FileHandle selectedFile, final GDXRenderer gdxRenderer) {
 		super("", skin);
 		setColor(MainScreen.WINDOW_ALPHA_COLOR);
 		this.level = level;

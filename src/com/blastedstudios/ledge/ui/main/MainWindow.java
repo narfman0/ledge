@@ -1,8 +1,7 @@
 package com.blastedstudios.ledge.ui.main;
 
-import java.io.File;
-
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
@@ -19,7 +18,7 @@ import com.blastedstudios.ledge.world.being.Player;
 
 class MainWindow extends Window{
 	public MainWindow(final Skin skin, final GDXGame game, final IMainWindowListener listener, 
-			final GDXWorld gdxWorld, final File worldFile, final GDXRenderer gdxRenderer) {
+			final GDXWorld gdxWorld, final FileHandle worldFile, final GDXRenderer gdxRenderer) {
 		super("", skin);
 		setColor(MainScreen.WINDOW_ALPHA_COLOR);
 		final Button newCharacterButton = new TextButton("Create New", skin);

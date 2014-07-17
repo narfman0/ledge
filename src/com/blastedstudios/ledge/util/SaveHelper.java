@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
 import com.blastedstudios.gdxworld.plugin.serializer.xml.XMLSerializer;
 import com.blastedstudios.gdxworld.util.ISerializer;
 import com.blastedstudios.gdxworld.util.PluginUtil;
@@ -18,13 +19,13 @@ public class SaveHelper {
 		init();
 		Gdx.app.log("SaveHelper.load","Loading characters...");
 		List<Player> characters = new ArrayList<Player>();
-		for(File file : new File(SAVE_DIRECTORY).listFiles()){
+		for(FileHandle file : new FileHandle(SAVE_DIRECTORY).list()){
 			try {
 				Player being = (Player) getSerializer().load(file);
 				characters.add(being);
 				Gdx.app.log("SaveHelper.load","Loaded: " + being.getName());
 			} catch (Exception e) {
-				Gdx.app.error("SaveHelper.load","Failed to load " + file.getName());
+				Gdx.app.error("SaveHelper.load","Failed to load " + file.path());
 				e.printStackTrace();
 			} 
 		}
@@ -34,7 +35,7 @@ public class SaveHelper {
 
 	public static void save(Player character){
 		init();
-		File file = new File(SAVE_DIRECTORY + "/" + character.getName());
+		FileHandle file = new FileHandle(SAVE_DIRECTORY + "/" + character.getName());
 		try{
 			getSerializer().save(file, character);
 		}catch(Exception e){

@@ -1,12 +1,12 @@
 package com.blastedstudios.ledge.ui.gameplay;
 
-import java.io.File;
 import java.util.List;
 
 import box2dLight.RayHandler;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -58,12 +58,12 @@ public class GameplayScreen extends AbstractScreen {
 	private final GDXLevel level;
 	private RayHandler rayHandler;
 	private final GDXWorld world;
-	private final File selectedFile;
+	private final FileHandle selectedFile;
 	private Vector2 touchedDirection;
 	private final TiledMeshRenderer tiledMeshRenderer;
 	private final SpriteBatch spriteBatch = new SpriteBatch();
 	
-	public GameplayScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world, File selectedFile, final GDXRenderer gdxRenderer){
+	public GameplayScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world, FileHandle selectedFile, final GDXRenderer gdxRenderer){
 		super(game, Properties.get("screen.skin","uiskinGame.json"));
 		this.level = level;
 		this.world = world;

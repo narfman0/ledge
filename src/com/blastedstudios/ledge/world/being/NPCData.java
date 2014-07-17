@@ -50,7 +50,7 @@ public class NPCData {
 	
 	public static NPCData parse(String name){
 		try {
-			return (NPCData) serializer.load(Gdx.files.internal("data/world/npc/" + name + ".xml").file());
+			return (NPCData) serializer.load(Gdx.files.internal("data/world/npc/" + name + ".xml"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
