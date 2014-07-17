@@ -15,6 +15,7 @@ import com.blastedstudios.ledge.ui.main.NewCharacterWindow.INewCharacterWindowLi
 
 public class MainScreen extends AbstractScreen implements IMainWindowListener, INewCharacterWindowListener{
 	public static final Color WINDOW_ALPHA_COLOR = new Color(1, 1, 1, .7f);
+	public static final String SKIN_PATH = Properties.get("screen.skin","data/ui/uiskinGame.json");
 	private static final FileHandle WORLD_FILE = Gdx.files.internal("data/world/" + Properties.get("world.path", "world.xml"));
 	private final GDXWorld gdxWorld = GDXWorld.load(WORLD_FILE);
 	private final GDXRenderer gdxRenderer;
@@ -23,7 +24,7 @@ public class MainScreen extends AbstractScreen implements IMainWindowListener, I
 	private ScreenLevelPanner panner;
 
 	public MainScreen(final GDXGame game){
-		super(game, Properties.get("screen.skin","uiskinGame.json"));
+		super(game, SKIN_PATH);
 		gdxRenderer = new GDXRenderer(true, true);
 		stage.addActor(mainWindow = new MainWindow(skin, game, this, gdxWorld, WORLD_FILE, gdxRenderer));
 		panner = new ScreenLevelPanner(gdxWorld, gdxRenderer);

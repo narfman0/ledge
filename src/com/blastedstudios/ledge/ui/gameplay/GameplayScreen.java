@@ -34,6 +34,7 @@ import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.ledge.ui.gameplay.hud.HUD;
 import com.blastedstudios.ledge.ui.gameplay.inventory.InventoryWindow;
 import com.blastedstudios.ledge.ui.gameplay.particles.ParticleManager;
+import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.util.SaveHelper;
 import com.blastedstudios.ledge.world.DialogManager;
 import com.blastedstudios.ledge.world.DialogManager.DialogStruct;
@@ -64,7 +65,7 @@ public class GameplayScreen extends AbstractScreen {
 	private final SpriteBatch spriteBatch = new SpriteBatch();
 	
 	public GameplayScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world, FileHandle selectedFile, final GDXRenderer gdxRenderer){
-		super(game, Properties.get("screen.skin","uiskinGame.json"));
+		super(game, MainScreen.SKIN_PATH);
 		this.level = level;
 		this.world = world;
 		this.selectedFile = selectedFile;

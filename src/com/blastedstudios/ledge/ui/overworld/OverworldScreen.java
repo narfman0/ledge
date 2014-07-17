@@ -18,6 +18,7 @@ import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXWorld;
+import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.util.SpriteTweenAccessor;
 import com.blastedstudios.ledge.world.being.Player;
 
@@ -35,7 +36,7 @@ public class OverworldScreen extends AbstractScreen{
 	private final TweenManager tweenManager;
 
 	public OverworldScreen(GDXGame game, Player player, GDXWorld gdxWorld, FileHandle worldFile, GDXRenderer gdxRenderer){
-		super(game, Properties.get("screen.skin","uiskinGame.json"));
+		super(game, MainScreen.SKIN_PATH);
 		this.player = player;
 		this.gdxWorld = gdxWorld;
 		this.worldFile = worldFile;
