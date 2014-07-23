@@ -10,6 +10,7 @@ import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.being.Being.BodyPart;
 import com.blastedstudios.ledge.world.being.component.AbstractComponent;
+import com.blastedstudios.ledge.world.weapon.Melee;
 
 @PluginImplementation
 public class RenderWeaponComponent extends AbstractComponent {
@@ -22,8 +23,14 @@ public class RenderWeaponComponent extends AbstractComponent {
 				weaponSprite.setScale(Properties.getFloat("ragdoll.custom.scale"));
 			}
 			Vector2 position = being.getRagdoll().getWeaponCenter();
-			weaponSprite.setPosition(position.x - weaponSprite.getWidth()/2, position.y - weaponSprite.getHeight()/2);
-			weaponSprite.setRotation((float)Math.toDegrees(being.getRagdoll().getBodyPart(BodyPart.lArm).getAngle()));
+			float rotation = being.getRagdoll().getBodyPart(BodyPart.lArm).getAngle();
+			if(being.getEquippedWeapon() instanceof Melee){
+				Melee weapon = ((Melee)being.getEquippedWeapon());
+				position = weapon.getBody().getWorldCenter();
+				rotation = weapon.getBody().getAngle();
+			}
+			weaponSprite.setPosition(position.x - weaponSprite.getWidth()/2f, position.y - weaponSprite.getHeight()/2f);
+			weaponSprite.setRotation((float)Math.toDegrees(rotation));
 			if(facingLeft)
 				weaponSprite.flip(false, true);
 			weaponSprite.draw(spriteBatch);

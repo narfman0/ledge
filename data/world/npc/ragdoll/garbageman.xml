@@ -9,9 +9,14 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>6.462845</x>
-        <y>1.6129303</y>
+        <x>9.30718</x>
+        <y>13.77001</y>
       </center>
+      <filter>
+        <categoryBits>1</categoryBits>
+        <maskBits>-1</maskBits>
+        <groupIndex>0</groupIndex>
+      </filter>
       <radius>0.5</radius>
     </world.shape.GDXCircle>
   </circles>
@@ -24,34 +29,39 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>-0.124171734</x>
-        <y>3.0309935</y>
+        <x>2.7342818</x>
+        <y>15.1831665</y>
       </center>
+      <filter>
+        <categoryBits>1</categoryBits>
+        <maskBits>-1</maskBits>
+        <groupIndex>0</groupIndex>
+      </filter>
       <repeatable>false</repeatable>
       <vertices>
         <Vector2>
           <x>0.39180446</x>
-          <y>1.0708814</y>
+          <y>1.0708809</y>
         </Vector2>
         <Vector2>
           <x>-1.0423828</x>
-          <y>0.13031912</y>
+          <y>0.13031864</y>
         </Vector2>
         <Vector2>
           <x>-1.0452044</x>
-          <y>-0.4702816</y>
+          <y>-0.47028208</y>
         </Vector2>
         <Vector2>
           <x>-0.47124624</x>
-          <y>-1.1615376</y>
+          <y>-1.1615381</y>
         </Vector2>
         <Vector2>
           <x>1.2294712</x>
-          <y>-0.5269413</y>
+          <y>-0.5269418</y>
         </Vector2>
         <Vector2>
           <x>0.9375577</x>
-          <y>0.95756054</y>
+          <y>0.95756006</y>
         </Vector2>
       </vertices>
     </world.shape.GDXPolygon>
@@ -63,9 +73,14 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>0.22097588</x>
-        <y>0.32352448</y>
+        <x>3.0794294</x>
+        <y>12.4756975</y>
       </center>
+      <filter>
+        <categoryBits>1</categoryBits>
+        <maskBits>-1</maskBits>
+        <groupIndex>0</groupIndex>
+      </filter>
       <repeatable>false</repeatable>
       <vertices>
         <Vector2>
@@ -102,9 +117,14 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>4.0938845</x>
-        <y>1.5810155</y>
+        <x>6.952338</x>
+        <y>13.733189</y>
       </center>
+      <filter>
+        <categoryBits>1</categoryBits>
+        <maskBits>-1</maskBits>
+        <groupIndex>0</groupIndex>
+      </filter>
       <repeatable>false</repeatable>
       <vertices>
         <Vector2>
@@ -137,9 +157,14 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>-2.862317</x>
-        <y>1.4642171</y>
+        <x>-0.003863573</x>
+        <y>13.61639</y>
       </center>
+      <filter>
+        <categoryBits>1</categoryBits>
+        <maskBits>-1</maskBits>
+        <groupIndex>0</groupIndex>
+      </filter>
       <repeatable>false</repeatable>
       <vertices>
         <Vector2>
@@ -168,34 +193,39 @@
       <name>lLeg</name>
       <resource></resource>
       <density>2.0</density>
-      <friction>0.5</friction>
+      <friction>0.3</friction>
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>1.1567912</x>
-        <y>-2.5916677</y>
+        <x>4.4988117</x>
+        <y>9.526916</y>
       </center>
+      <filter>
+        <categoryBits>1</categoryBits>
+        <maskBits>-1</maskBits>
+        <groupIndex>0</groupIndex>
+      </filter>
       <repeatable>false</repeatable>
       <vertices>
         <Vector2>
-          <x>-0.65786314</x>
-          <y>1.5017625</y>
+          <x>-1.1414303</x>
+          <y>1.5353521</y>
         </Vector2>
         <Vector2>
-          <x>-0.6775894</x>
-          <y>-0.94514513</y>
+          <x>-0.23090827</x>
+          <y>-1.1007097</y>
         </Vector2>
         <Vector2>
-          <x>0.29403114</x>
-          <y>-1.0706185</y>
+          <x>0.3296088</x>
+          <y>-1.1007097</y>
         </Vector2>
         <Vector2>
-          <x>1.005415</x>
-          <y>-0.9331237</y>
+          <x>1.33264</x>
+          <y>-0.9237039</y>
         </Vector2>
         <Vector2>
-          <x>0.036004066</x>
-          <y>1.4471248</y>
+          <x>-0.28991044</x>
+          <y>1.5897734</y>
         </Vector2>
       </vertices>
     </world.shape.GDXPolygon>
@@ -203,33 +233,38 @@
       <name>rLeg</name>
       <resource></resource>
       <density>2.0</density>
-      <friction>0.5</friction>
+      <friction>0.3</friction>
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>-0.6399274</x>
-        <y>-2.5478826</y>
+        <x>2.2185264</x>
+        <y>9.60429</y>
       </center>
+      <filter>
+        <categoryBits>1</categoryBits>
+        <maskBits>-1</maskBits>
+        <groupIndex>0</groupIndex>
+      </filter>
       <repeatable>false</repeatable>
       <vertices>
         <Vector2>
-          <x>0.3619361</x>
+          <x>0.3619358</x>
           <y>1.6288575</y>
         </Vector2>
         <Vector2>
-          <x>-1.3000097</x>
-          <y>-0.9934803</y>
+          <x>-1.30001</x>
+          <y>-0.9934802</y>
         </Vector2>
         <Vector2>
-          <x>-0.5011153</x>
-          <y>-1.1248368</y>
+          <x>-0.5011156</x>
+          <y>-1.1248369</y>
         </Vector2>
         <Vector2>
-          <x>0.16756964</x>
-          <y>-1.0175232</y>
+          <x>0.16756934</x>
+          <y>-1.0175233</y>
         </Vector2>
         <Vector2>
-          <x>1.2716208</x>
+          <x>1.2716205</x>
           <y>1.5069829</y>
         </Vector2>
       </vertices>
@@ -244,8 +279,8 @@
       <collideConnected>false</collideConnected>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>0.06812382</x>
-        <y>2.1461134</y>
+        <x>2.9265773</x>
+        <y>14.298286</y>
       </anchor>
     </world.joint.WeldJoint>
     <world.joint.RevoluteJoint>
@@ -254,16 +289,16 @@
       <bodyB>torso</bodyB>
       <jointType>RevoluteJoint</jointType>
       <collideConnected>false</collideConnected>
-      <enableLimit>false</enableLimit>
+      <enableLimit>true</enableLimit>
       <enableMotor>false</enableMotor>
-      <lowerAngle>0.0</lowerAngle>
-      <upperAngle>0.0</upperAngle>
+      <lowerAngle>-0.7</lowerAngle>
+      <upperAngle>0.7</upperAngle>
       <maxMotorTorque>0.0</maxMotorTorque>
       <motorSpeed>0.0</motorSpeed>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>-0.5849724</x>
-        <y>1.5864444</y>
+        <x>2.2785752</x>
+        <y>13.746257</y>
       </anchor>
     </world.joint.RevoluteJoint>
     <world.joint.RevoluteJoint>
@@ -274,14 +309,14 @@
       <collideConnected>false</collideConnected>
       <enableLimit>false</enableLimit>
       <enableMotor>false</enableMotor>
-      <lowerAngle>0.0</lowerAngle>
-      <upperAngle>0.0</upperAngle>
+      <lowerAngle>-4.7</lowerAngle>
+      <upperAngle>0.7</upperAngle>
       <maxMotorTorque>0.0</maxMotorTorque>
       <motorSpeed>0.0</motorSpeed>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>0.97233963</x>
-        <y>1.5586352</y>
+        <x>3.919272</x>
+        <y>13.637412</y>
       </anchor>
     </world.joint.RevoluteJoint>
     <world.joint.RevoluteJoint>
@@ -292,14 +327,14 @@
       <collideConnected>false</collideConnected>
       <enableLimit>true</enableLimit>
       <enableMotor>false</enableMotor>
-      <lowerAngle>-0.5</lowerAngle>
+      <lowerAngle>-0.0</lowerAngle>
       <upperAngle>0.5</upperAngle>
       <maxMotorTorque>0.0</maxMotorTorque>
       <motorSpeed>0.0</motorSpeed>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>0.8782544</x>
-        <y>-1.286588</y>
+        <x>3.7857018</x>
+        <y>10.97939</y>
       </anchor>
     </world.joint.RevoluteJoint>
     <world.joint.RevoluteJoint>
@@ -310,14 +345,14 @@
       <collideConnected>false</collideConnected>
       <enableLimit>true</enableLimit>
       <enableMotor>false</enableMotor>
-      <lowerAngle>-0.5</lowerAngle>
+      <lowerAngle>-0.0</lowerAngle>
       <upperAngle>0.5</upperAngle>
       <maxMotorTorque>0.0</maxMotorTorque>
       <motorSpeed>0.0</motorSpeed>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>0.11332893</x>
-        <y>-1.0499156</y>
+        <x>2.9152575</x>
+        <y>11.104111</y>
       </anchor>
     </world.joint.RevoluteJoint>
     <world.joint.WeldJoint>
@@ -328,8 +363,8 @@
       <collideConnected>false</collideConnected>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>4.5411787</x>
-        <y>1.5609524</y>
+        <x>7.3996325</x>
+        <y>13.713125</y>
       </anchor>
     </world.joint.WeldJoint>
   </joints>

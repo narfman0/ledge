@@ -7,7 +7,7 @@ import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.badlogic.gdx.physics.box2d.Contact;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
-import com.badlogic.gdx.physics.box2d.joints.WeldJointDef;
+import com.badlogic.gdx.physics.box2d.joints.RevoluteJointDef;
 import com.blastedstudios.gdxworld.physics.PhysicsHelper;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.physics.ragdoll.IRagdoll;
@@ -61,7 +61,10 @@ public class Melee extends Weapon {
 		body = PhysicsHelper.createRectangle(world, width, height, position, BodyType.DynamicBody, 
 				.2f, .5f, density, owner.getMask(), owner.getCat(), (short)0);
 		body.setUserData(this);
-		WeldJointDef def = new WeldJointDef();
+		RevoluteJointDef def = new RevoluteJointDef();
+		def.enableLimit = true;
+		def.lowerAngle = -.5f;
+		def.upperAngle = .01f;
 		def.initialize(body, ragdoll.getBodyPart(BodyPart.lHand), position);
 		world.createJoint(def);
 	}
