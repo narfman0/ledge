@@ -103,10 +103,6 @@ public class Search extends jbt.execution.task.leaf.action.ExecutionAction {
 	}
 
 	protected void internalSpawn() {
-		/*
-		 * Do not remove this first line unless you know what it does and you
-		 * need not do it.
-		 */
 		this.getExecutor().requestInsertionIntoList(
 				jbt.execution.core.BTExecutor.BTExecutorList.TICKABLE, this);
 		Gdx.app.debug(this.getClass().getCanonicalName(), "spawned");

@@ -45,21 +45,14 @@ public class ClosestCover extends
 		return jbt.execution.core.ExecutionTask.Status.SUCCESS;
 	}
 
-	protected void internalTerminate() {
-		/* TODO: this method's implementation must be completed. */
-	}
-
-	protected void restoreState(jbt.execution.core.ITaskState state) {
-		/* TODO: this method's implementation must be completed. */
-	}
+	protected void internalTerminate() {}
+	protected void restoreState(jbt.execution.core.ITaskState state) {}
 
 	protected jbt.execution.core.ITaskState storeState() {
-		/* TODO: this method's implementation must be completed. */
 		return null;
 	}
 
 	protected jbt.execution.core.ITaskState storeTerminationState() {
-		/* TODO: this method's implementation must be completed. */
 		return null;
 	}
 }
