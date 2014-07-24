@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tree>
+  <Node id="Node_0" name="Root" type="Root">
+    <Children>
+      <Node id="Node_28" type="Repeat">
+        <Children>
+          <Node id="Node_3" type="Selector">
+            <Children>
+              <Node id="Node_8" type="Sequence">
+                <Children>
+                  <Node id="Node_36" name="GMTick" type="Action" />
+                </Children>
+              </Node>
+              <Node id="Node_29" type="Sequence">
+                <Children>
+                  <Node id="Node_37" name="GMSword" type="Action" />
+                </Children>
+              </Node>
+              <Node id="Node_38" type="Sequence">
+                <Children>
+                  <Node id="Node_40" name="GMStomp" type="Action" />
+                </Children>
+              </Node>
+              <Node id="Node_39" type="Sequence">
+                <Children>
+                  <Node id="Node_41" name="GMMove" type="Action" />
+                </Children>
+              </Node>
+            </Children>
+          </Node>
+        </Children>
+      </Node>
+    </Children>
+  </Node>
+</Tree>
+

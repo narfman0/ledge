@@ -1,4 +1,4 @@
-<Domain package="com.blastedstudios.ledge.server.ai.bt">
+<Domain package="com.blastedstudios.ledge.ai.bt">
 	<ActionSet>
 		<Action name="Move">
 			<Parameter name="target" type="COORDINATE" />
@@ -19,6 +19,12 @@
 			<Parameter name="target" type="COORDINATE" />
 		</Action>
 		<Action name="CurrentObjective" />
+		
+		<!-- Garbageman domain nodes -->
+		<Action name="GMTick" />
+		<Action name="GMSword" />
+		<Action name="GMStomp" />
+		<Action name="GMMove" />
 	</ActionSet>
 	<SensorSet>
 		<Sensor name="LowDanger" type="BOOLEAN" />
@@ -26,8 +32,6 @@
 		<Sensor name="InCover" type="BOOLEAN" />
 		<Sensor name="IsDead" type="BOOLEAN" />
 	</SensorSet>
-	<EntitySet>
-	</EntitySet>
-	<GoalSet>
-	</GoalSet>
+	<EntitySet/>
+	<GoalSet/>
 </Domain>

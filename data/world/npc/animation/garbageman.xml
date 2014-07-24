@@ -1,0 +1,40 @@
+<world.animation.GDXAnimations>
+  <animations class="linked-list">
+    <world.animation.GDXAnimation>
+      <animations>
+        <world.animation.AnimationStruct>
+          <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
+            <name>lLeg</name>
+            <impulse>
+              <x>-80.0</x>
+              <y>50.0</y>
+            </impulse>
+            <position>
+              <x>0.0</x>
+              <y>0.0</y>
+            </position>
+            <velocity>
+              <x>0.0</x>
+              <y>0.0</y>
+            </velocity>
+            <type>DynamicBody</type>
+            <torque>2000.0</torque>
+            <angle>0.0</angle>
+            <hasPosition>false</hasPosition>
+            <hasVelocity>false</hasVelocity>
+            <hasAngle>false</hasAngle>
+            <relativePosition>true</relativePosition>
+            <relativeVelocity>true</relativeVelocity>
+            <relativeAngle>true</relativeAngle>
+          </manifestation>
+          <time>0.0</time>
+        </world.animation.AnimationStruct>
+      </animations>
+      <name>walkLeft</name>
+      <totalTime>0.75</totalTime>
+      <repeat>true</repeat>
+    </world.animation.GDXAnimation>
+  </animations>
+  <name>garbageman</name>
+  <defaultAnimation>walkLeft</defaultAnimation>
+</world.animation.GDXAnimations>
