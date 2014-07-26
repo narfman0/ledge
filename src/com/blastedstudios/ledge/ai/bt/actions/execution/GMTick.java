@@ -54,6 +54,7 @@ public class GMTick extends
 		if(getContext().getVariable(HANDLER_NAME) == null){
 			final NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
 			final WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
+			self.aim(4f);
 			FileHandle handle = FileUtil.find(HANDLER_PATH);
 			GDXAnimationHandler handler = null;
 			IQuestManifestationExecutor executor = new IQuestManifestationExecutor() {

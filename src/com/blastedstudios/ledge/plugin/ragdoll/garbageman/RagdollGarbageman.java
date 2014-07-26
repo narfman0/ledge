@@ -1,6 +1,7 @@
 package com.blastedstudios.ledge.plugin.ragdoll.garbageman;
 
 import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Filter;
@@ -24,5 +25,9 @@ public class RagdollGarbageman extends RagdollLoader {
 		filter.maskBits = PhysicsEnvironment.MASK_NOTHING;
 		filter.categoryBits = PhysicsEnvironment.CAT_NOTHING;
 		lHandFixture.setFilterData(filter);
+	}
+	
+	@Override public void render(SpriteBatch spriteBatch, boolean dead, boolean isGrounded, boolean isMoving, float velX){
+		super.render(spriteBatch, isGrounded, isMoving, velX);
 	}
 }

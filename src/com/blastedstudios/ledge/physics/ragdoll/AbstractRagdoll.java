@@ -315,6 +315,10 @@ public abstract class AbstractRagdoll implements IRagdoll {
 			lArmBody.applyTorque(getAngularImpulse(lArmBody, targetHeading)*5f, true);
 			rArmBody.applyTorque(getAngularImpulse(rArmBody, targetHeading+(float)Math.PI)*5f, true);
 		}
+		render(spriteBatch, isGrounded, isMoving, velX);
+	}
+	
+	public void render(SpriteBatch spriteBatch, boolean isGrounded, boolean isMoving, float velX){
 		for(BodyPart part : facingLeft ? LEFT_FACING_ORDER : RIGHT_FACING_ORDER){
 			Body body = getBodyPart(part);
 			Sprite sprite = sprites.get(body);
