@@ -15,7 +15,6 @@ import com.badlogic.gdx.physics.box2d.Joint;
 import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.util.FileUtil;
 import com.blastedstudios.gdxworld.util.ISerializer;
-import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.world.animation.GDXAnimationHandler;
 import com.blastedstudios.gdxworld.world.animation.GDXAnimations;
 import com.blastedstudios.gdxworld.world.quest.manifestation.IQuestManifestationExecutor;
@@ -68,13 +67,12 @@ public class GMTick extends
 					return null;
 				}
 			};
-			for(ISerializer serializer : PluginUtil.getPlugins(ISerializer.class))
-				if(serializer.getFileFilter().accept(handle.file()))
-					try {
-						handler = new GDXAnimationHandler((GDXAnimations) serializer.load(handle), executor);
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
+			ISerializer serializer = FileUtil.getSerializer(handle);
+			try {
+				handler = new GDXAnimationHandler((GDXAnimations) serializer.load(handle), executor);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			getContext().setVariable(HANDLER_NAME, handler);
 			handler.setActive(true);
 		}else{

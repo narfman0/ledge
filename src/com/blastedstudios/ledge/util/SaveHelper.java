@@ -6,10 +6,7 @@ import java.util.List;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
-import com.blastedstudios.gdxworld.plugin.serializer.xml.XMLSerializer;
-import com.blastedstudios.gdxworld.util.ISerializer;
-import com.blastedstudios.gdxworld.util.PluginUtil;
-import com.blastedstudios.gdxworld.util.Properties;
+import com.blastedstudios.gdxworld.util.FileUtil;
 import com.blastedstudios.ledge.world.being.Player;
 
 public class SaveHelper {
@@ -21,7 +18,7 @@ public class SaveHelper {
 		List<Player> characters = new ArrayList<Player>();
 		for(FileHandle file : new FileHandle(SAVE_DIRECTORY).list()){
 			try {
-				Player being = (Player) getSerializer().load(file);
+				Player being = (Player) FileUtil.getSerializer(file).load(file);
 				characters.add(being);
 				Gdx.app.log("SaveHelper.load","Loaded: " + being.getName());
 			} catch (Exception e) {
@@ -37,7 +34,7 @@ public class SaveHelper {
 		init();
 		FileHandle file = new FileHandle(SAVE_DIRECTORY + "/" + character.getName());
 		try{
-			getSerializer().save(file, character);
+			FileUtil.getSerializer(file).save(file, character);
 		}catch(Exception e){
 			Gdx.app.error("SaveHelper.save","Failed to write " + character.getName());
 			e.printStackTrace();
@@ -49,13 +46,5 @@ public class SaveHelper {
 		File savePath = new File(SAVE_DIRECTORY);
 		if(!savePath.isDirectory())
 			savePath.mkdirs();
-	}
-	
-	private static ISerializer getSerializer(){
-		String preferredSerializer = Properties.get("character.save.serializer", "XMLSerializer");
-		for(ISerializer serializer : PluginUtil.getPlugins(ISerializer.class))
-			if(serializer.getClass().getSimpleName().equals(preferredSerializer))
-				return serializer;
-		return new XMLSerializer();
 	}
 }

@@ -8,8 +8,8 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.World;
+import com.blastedstudios.gdxworld.util.FileUtil;
 import com.blastedstudios.gdxworld.util.ISerializer;
-import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.world.group.GDXGroupExportStruct;
 import com.blastedstudios.ledge.physics.ragdoll.AbstractRagdoll;
 import com.blastedstudios.ledge.world.being.Being;
@@ -29,15 +29,14 @@ public class RagdollLoader extends AbstractRagdoll {
 	
 	protected static Map<String,Body> createBodyMap(World world, FileHandle fileHandle, float x, float y){
 		GDXGroupExportStruct struct = null;
-		for(ISerializer serializer : PluginUtil.getPlugins(ISerializer.class))
-			if(serializer.getFileFilter().accept(fileHandle.file()))
-				try {
-					struct = (GDXGroupExportStruct) serializer.load(fileHandle);
-				} catch (Exception e) {
-					Gdx.app.error("RagdollCustom.<init>", "Error deserializing ragdoll: " + 
-							fileHandle.path() +" message: " + e.getMessage());
-					e.printStackTrace();
-				}
+		ISerializer serializer = FileUtil.getSerializer(fileHandle);
+		try {
+			struct = (GDXGroupExportStruct) serializer.load(fileHandle);
+		} catch (Exception e) {
+			Gdx.app.error("RagdollCustom.<init>", "Error deserializing ragdoll: " + 
+					fileHandle.path() +" message: " + e.getMessage());
+			e.printStackTrace();
+		}
 		if(struct == null)
 			Gdx.app.error("RagdollCustom.<init>", "Error deserializing ragdoll: " + fileHandle.path());
 		return struct.instantiate(world, new Vector2(x,y));
