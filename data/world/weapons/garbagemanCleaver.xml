@@ -4,12 +4,12 @@
 	</stats>
 	<name>Garbageman Cleaver</name>
 	<resource>garbagemanCleaver</resource>
+	<bodyPath>data/world/weaponBodies/garbagemanCleaver.xml</bodyPath>
 	<cost>100</cost>
 	<fireSound>clunk</fireSound>
 	<width>1</width>
 	<height>4</height>
-	<offsetY>-1</offsetY>
-	<density>.001</density>
+	<density>.1</density>
 	<rolls>0</rolls>
 	<minLevel>9999</minLevel>
 </com.blastedstudios.ledge.world.weapon.Melee>

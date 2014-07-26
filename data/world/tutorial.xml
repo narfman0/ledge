@@ -16,8 +16,8 @@
           <restitution>0.3</restitution>
           <bodyType>DynamicBody</bodyType>
           <center>
-            <x>-4.1654477</x>
-            <y>1.3897059</y>
+            <x>-4.175847</x>
+            <y>1.430759</y>
           </center>
           <filter>
             <categoryBits>16</categoryBits>
@@ -112,39 +112,39 @@
           <restitution>0.3</restitution>
           <bodyType>DynamicBody</bodyType>
           <center>
-            <x>0.22097588</x>
-            <y>0.32352448</y>
+            <x>0.22097564</x>
+            <y>0.32352442</y>
           </center>
           <filter>
-            <categoryBits>1</categoryBits>
-            <maskBits>-1</maskBits>
+            <categoryBits>16</categoryBits>
+            <maskBits>-17</maskBits>
             <groupIndex>0</groupIndex>
           </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
-              <x>0.7494621</x>
+              <x>0.74946237</x>
               <y>1.8886247</y>
             </Vector2>
             <Vector2>
-              <x>-0.981205</x>
+              <x>-0.98120475</x>
               <y>1.9282465</y>
             </Vector2>
             <Vector2>
-              <x>-1.5285096</x>
-              <y>0.21131468</y>
+              <x>-1.5285094</x>
+              <y>0.21131474</y>
             </Vector2>
             <Vector2>
-              <x>-1.0551648</x>
+              <x>-1.0551646</x>
               <y>-2.1659756</y>
             </Vector2>
             <Vector2>
-              <x>1.355936</x>
+              <x>1.3559363</x>
               <y>-2.1131468</y>
             </Vector2>
             <Vector2>
-              <x>1.4594798</x>
-              <y>0.25093603</y>
+              <x>1.45948</x>
+              <y>0.2509361</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -293,6 +293,126 @@
             <Vector2>
               <x>1.2178686</x>
               <y>1.2449204</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>garbagemanCleaver</name>
+          <resource>garbagemanCleaver.png</resource>
+          <density>0.1</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>-37.999092</x>
+            <y>0.2217065</y>
+          </center>
+          <filter>
+            <categoryBits>16</categoryBits>
+            <maskBits>-17</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.70764923</x>
+              <y>4.2108297</y>
+            </Vector2>
+            <Vector2>
+              <x>0.0013008118</x>
+              <y>4.381689</y>
+            </Vector2>
+            <Vector2>
+              <x>0.579731</x>
+              <y>4.1787934</y>
+            </Vector2>
+            <Vector2>
+              <x>0.8111038</x>
+              <y>3.644858</y>
+            </Vector2>
+            <Vector2>
+              <x>0.8733978</x>
+              <y>0.5159952</y>
+            </Vector2>
+            <Vector2>
+              <x>0.73101425</x>
+              <y>-0.10336997</y>
+            </Vector2>
+            <Vector2>
+              <x>0.41065216</x>
+              <y>-0.31694424</y>
+            </Vector2>
+            <Vector2>
+              <x>0.37505722</x>
+              <y>-1.4916024</y>
+            </Vector2>
+            <Vector2>
+              <x>0.8289032</x>
+              <y>-1.6838193</y>
+            </Vector2>
+            <Vector2>
+              <x>0.8199997</x>
+              <y>-3.2108746</y>
+            </Vector2>
+            <Vector2>
+              <x>0.5174408</x>
+              <y>-3.7341313</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.51483536</x>
+              <y>-4.0224566</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.0309753</x>
+              <y>-3.7341313</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.44364548</x>
+              <y>-3.5098786</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.24786758</x>
+              <y>-3.2108746</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.14997864</x>
+              <y>-1.6731405</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.016494751</x>
+              <y>-1.4382088</y>
+            </Vector2>
+            <Vector2>
+              <x>0.0102005005</x>
+              <y>-0.38101637</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.24786758</x>
+              <y>-0.38101637</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.15887833</x>
+              <y>1.0285735</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.55933</x>
+              <y>1.3062196</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.40805054</x>
+              <y>2.0216937</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.39915085</x>
+              <y>2.3420548</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.6839142</x>
+              <y>2.4381633</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.39025116</x>
+              <y>2.8225965</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -455,6 +575,28 @@
             <string>lHip</string>
             <string>rHip</string>
             <string>lWrist</string>
+          </joints>
+        </world.group.GDXGroup>
+        <world.group.GDXGroup>
+          <name>garbagemanCleaver</name>
+          <center>
+            <x>-37.919735</x>
+            <y>0.43065482</y>
+          </center>
+          <circles class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string></string>
+            </a>
+          </circles>
+          <polygons class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>garbagemanCleaver</string>
+            </a>
+          </polygons>
+          <joints class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string></string>
+            </a>
           </joints>
         </world.group.GDXGroup>
       </groups>

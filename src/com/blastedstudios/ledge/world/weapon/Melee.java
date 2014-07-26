@@ -1,15 +1,22 @@
 package com.blastedstudios.ledge.world.weapon;
 
+import java.util.Map;
+
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.badlogic.gdx.physics.box2d.Contact;
+import com.badlogic.gdx.physics.box2d.Filter;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.physics.box2d.joints.RevoluteJointDef;
+import com.badlogic.gdx.physics.box2d.joints.WeldJointDef;
 import com.blastedstudios.gdxworld.physics.PhysicsHelper;
+import com.blastedstudios.gdxworld.util.FileUtil;
 import com.blastedstudios.gdxworld.util.Properties;
+import com.blastedstudios.gdxworld.world.group.GDXGroupExportStruct;
 import com.blastedstudios.ledge.physics.ragdoll.IRagdoll;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
@@ -19,6 +26,7 @@ public class Melee extends Weapon {
 	private static final float MIN_DAMAGE = Properties.getFloat("melee.damage.min", .005f);
 	private static final long serialVersionUID = 1L;
 	private float width, height, offsetX, offsetY, density;
+	private String bodyPath = "";
 	private transient Body body;
 	private transient Being owner;
 	private transient long lastAttack;
@@ -27,24 +35,12 @@ public class Melee extends Weapon {
 		return width;
 	}
 
-	public void setWidth(float width) {
-		this.width = width;
-	}
-
 	public float getHeight() {
 		return height;
-	}
-
-	public void setHeight(float height) {
-		this.height = height;
 	}
 	
 	public float getDensity() {
 		return density;
-	}
-	
-	public void setDensity(float density) {
-		this.density = density;
 	}
 	
 	public Being getOwner() {
@@ -54,19 +50,44 @@ public class Melee extends Weapon {
 	public Body getBody() {
 		return body;
 	}
+
+	public String getBodyPath() {
+		return bodyPath;
+	}
 	
 	@Override public void activate(World world, IRagdoll ragdoll, Being owner) {
 		this.owner = owner;
 		Vector2 position = ragdoll.getWeaponCenter().cpy().add(offsetX, offsetY);
-		body = PhysicsHelper.createRectangle(world, width, height, position, BodyType.DynamicBody, 
-				.2f, .5f, density, owner.getMask(), owner.getCat(), (short)0);
+		if(bodyPath != null && !bodyPath.equals("")){
+			FileHandle handle = Gdx.files.internal(bodyPath);
+			try {
+				GDXGroupExportStruct struct = (GDXGroupExportStruct) FileUtil.getSerializer(handle).load(handle);
+				Map<String,Body> returnStruct = struct.instantiate(world, position);
+				body = returnStruct.values().iterator().next();
+				Filter filter = new Filter();
+				filter.categoryBits = owner.getCat();
+				filter.maskBits = owner.getMask();
+				for(Fixture fixture : body.getFixtureList())
+					fixture.setFilterData(filter);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else
+			body = PhysicsHelper.createRectangle(world, width, height, position, BodyType.DynamicBody, 
+					.2f, .5f, density, owner.getMask(), owner.getCat(), (short)0);
 		body.setUserData(this);
-		RevoluteJointDef def = new RevoluteJointDef();
-		def.enableLimit = true;
-		def.lowerAngle = -.5f;
-		def.upperAngle = .01f;
-		def.initialize(body, ragdoll.getBodyPart(BodyPart.lHand), position);
-		world.createJoint(def);
+		if(Properties.getBool("melee.useweld", true)){
+			WeldJointDef def = new WeldJointDef();
+			def.initialize(body, ragdoll.getBodyPart(BodyPart.lHand), ragdoll.getBodyPart(BodyPart.lHand).getWorldCenter());
+			world.createJoint(def);
+		}else{
+			RevoluteJointDef def = new RevoluteJointDef();
+			def.enableLimit = true;
+			def.lowerAngle = -.5f;
+			def.upperAngle = .01f;
+			def.initialize(body, ragdoll.getBodyPart(BodyPart.lHand), ragdoll.getBodyPart(BodyPart.lHand).getWorldCenter());
+			world.createJoint(def);
+		}
 	}
 	
 	@Override public void deactivate(World world) {

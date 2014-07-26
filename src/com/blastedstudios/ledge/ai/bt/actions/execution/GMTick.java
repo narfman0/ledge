@@ -74,10 +74,7 @@ public class GMTick extends
 				e.printStackTrace();
 			}
 			getContext().setVariable(HANDLER_NAME, handler);
-			handler.setActive(true);
-		}else{
-			GDXAnimationHandler handler = (GDXAnimationHandler) getContext().getVariable(HANDLER_NAME);
-			handler.render(Gdx.graphics.getRawDeltaTime());
+			handler.setActive(true);//defer until we see player?
 		}
 		//Need to initialize to carry on with next nodes, though don't want to
 		//keep running, so fail always. Lame but effective, TODO think of more 

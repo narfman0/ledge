@@ -9,10 +9,17 @@
 package com.blastedstudios.ledge.ai.bt.actions.execution;
 
 import com.badlogic.gdx.Gdx;
+import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.animation.GDXAnimationHandler;
+import com.blastedstudios.ledge.world.WorldManager;
+import com.blastedstudios.ledge.world.being.NPC;
+import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
 
 /** ExecutionAction class created from MMPM action GMStomp. */
 public class GMStomp extends jbt.execution.task.leaf.action.ExecutionAction {
+	public static final float STOMP_DISTANCE = Properties.getFloat("garbageman.stomp.distance", 3f);
+	private static final float STOMP_RATE = Properties.getFloat("garbageman.stomp.rate", 5f);
+	private static final String LAST_STOMP_ATTACK = "last.stomp.attack";
 
 	/**
 	 * Constructor. Constructs an instance of GMStomp that is able to run a
@@ -33,13 +40,27 @@ public class GMStomp extends jbt.execution.task.leaf.action.ExecutionAction {
 		this.getExecutor().requestInsertionIntoList(
 				jbt.execution.core.BTExecutor.BTExecutorList.TICKABLE, this);
 		Gdx.app.debug(this.getClass().getCanonicalName(), "spawned");
+		getContext().setVariable(LAST_STOMP_ATTACK, 0f);
 	}
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
+		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
+		NPC npc = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
 		GDXAnimationHandler handler = (GDXAnimationHandler) getContext().getVariable(GMTick.HANDLER_NAME);
-		//TODO time it out, check distance
-		handler.applyCurrentAnimation(handler.getAnimations().getAnimation("stomp"), 0);
-		return jbt.execution.core.ExecutionTask.Status.SUCCESS;
+		float total = ((float)System.currentTimeMillis())/1000f;
+		if(total - STOMP_RATE > (Float)getContext().getVariable(LAST_STOMP_ATTACK)){
+			float distance = world.getPlayer().getPosition().dst(npc.getPosition());
+			if(distance < STOMP_DISTANCE){
+				handler.applyCurrentAnimation(handler.getAnimations().getAnimation("stomp"), 0);
+				getContext().setVariable(LAST_STOMP_ATTACK, total);
+			}
+		}
+		//TODO find out when hit occurs
+		if(handler.getCurrentAnimation().getName().equals("stomp")){
+			handler.render(Gdx.graphics.getDeltaTime());
+			return jbt.execution.core.ExecutionTask.Status.RUNNING;
+		}
+		return jbt.execution.core.ExecutionTask.Status.FAILURE;
 	}
 
 	protected void internalTerminate() {}

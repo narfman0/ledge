@@ -345,4 +345,8 @@ public class WorldManager implements IDeathCallback{
 				return npc;
 		return null;
 	}
+
+	public Random getRandom() {
+		return random;
+	}
 }
