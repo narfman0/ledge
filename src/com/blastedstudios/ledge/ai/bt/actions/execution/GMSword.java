@@ -49,7 +49,7 @@ public class GMSword extends jbt.execution.task.leaf.action.ExecutionAction {
 		float total = ((float)System.currentTimeMillis())/1000f;
 		if(total - SWORD_RATE > (Float)getContext().getVariable(LAST_SWORD_ATTACK)){
 			float distance = world.getPlayer().getPosition().dst(npc.getPosition());
-			if(distance < Properties.getFloat("garbageman.sword.distance.max", 7f) && distance > GMStomp.STOMP_DISTANCE){
+			if(distance < Properties.getFloat("garbageman.sword.distance.max", 10f) && distance > GMStomp.STOMP_DISTANCE){
 				handler.applyCurrentAnimation(handler.getAnimations().getAnimation("sword"), 0);
 				getContext().setVariable(LAST_SWORD_ATTACK, total);
 			}

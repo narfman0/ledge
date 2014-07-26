@@ -18,9 +18,9 @@ torso
   index: -1
 larm
   rotate: false
-  xy: 465, 266
-  size: 661, 209
-  orig: 661, 209
+  xy: 465, 0
+  size: 836, 209
+  orig: 836, 209
   offset: 0, 0
   index: -1
 rarm

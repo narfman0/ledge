@@ -17,7 +17,7 @@ import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
 
 /** ExecutionAction class created from MMPM action GMStomp. */
 public class GMStomp extends jbt.execution.task.leaf.action.ExecutionAction {
-	public static final float STOMP_DISTANCE = Properties.getFloat("garbageman.stomp.distance", 3f);
+	public static final float STOMP_DISTANCE = Properties.getFloat("garbageman.stomp.distance", 6f);
 	private static final float STOMP_RATE = Properties.getFloat("garbageman.stomp.rate", 5f);
 	private static final String LAST_STOMP_ATTACK = "last.stomp.attack";
 

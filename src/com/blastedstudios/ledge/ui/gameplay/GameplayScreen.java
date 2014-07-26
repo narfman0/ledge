@@ -84,7 +84,7 @@ public class GameplayScreen extends AbstractScreen {
 			List<QuestStatus> statuses = player.getQuestManager().getQuestStatuses(level);
 			worldManager.setRespawnLocation(getSavedSpawn(statuses));
 		}
-		if(worldManager.getRespawnLocation() != null)
+		if(worldManager.getRespawnLocation() != null && !player.isSpawned())
 			worldManager.respawnPlayer();
 		camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		camera.zoom = Properties.getFloat("gameplay.camera.zoom", .02f);
