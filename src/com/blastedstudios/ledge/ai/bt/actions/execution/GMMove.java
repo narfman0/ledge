@@ -9,6 +9,7 @@
 package com.blastedstudios.ledge.ai.bt.actions.execution;
 
 import com.badlogic.gdx.Gdx;
+import com.blastedstudios.gdxworld.world.animation.GDXAnimationHandler;
 
 /** ExecutionAction class created from MMPM action GMMove. */
 public class GMMove extends jbt.execution.task.leaf.action.ExecutionAction {
@@ -35,11 +36,9 @@ public class GMMove extends jbt.execution.task.leaf.action.ExecutionAction {
 	}
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
-		/*
-		 * TODO: this method's implementation must be completed. This function
-		 * should only return Status.SUCCESS, Status.FAILURE or Status.RUNNING.
-		 * No other values are allowed.
-		 */
+		GDXAnimationHandler handler = (GDXAnimationHandler) getContext().getVariable(GMTick.HANDLER_NAME);
+		//TODO figure out which direction, time it out
+		handler.applyCurrentAnimation(handler.getAnimations().getAnimation("walkLeft"), 0);
 		return jbt.execution.core.ExecutionTask.Status.SUCCESS;
 	}
 

@@ -9,7 +9,7 @@
 	<width>1</width>
 	<height>4</height>
 	<offsetY>-1</offsetY>
-	<density>.1</density>
+	<density>.001</density>
 	<rolls>0</rolls>
 	<minLevel>9999</minLevel>
 </com.blastedstudios.ledge.world.weapon.Melee>
