@@ -7,6 +7,7 @@ import java.util.List;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.blastedstudios.gdxworld.util.FileUtil;
+import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.being.Player;
 
 public class SaveHelper {
@@ -32,7 +33,8 @@ public class SaveHelper {
 
 	public static void save(Player character){
 		init();
-		FileHandle file = new FileHandle(SAVE_DIRECTORY + "/" + character.getName());
+		FileHandle file = new FileHandle(SAVE_DIRECTORY + "/" + character.getName() + 
+				"." + Properties.get("save.extenstion", "xml"));
 		try{
 			FileUtil.getSerializer(file).save(file, character);
 		}catch(Exception e){
