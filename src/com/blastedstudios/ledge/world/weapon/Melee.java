@@ -58,25 +58,13 @@ public class Melee extends Weapon {
 	@Override public void activate(World world, IRagdoll ragdoll, Being owner) {
 		this.owner = owner;
 		Vector2 position = ragdoll.getWeaponCenter().cpy().add(offsetX, offsetY);
-		if(bodyPath != null && !bodyPath.equals("")){
-			FileHandle handle = Gdx.files.internal(bodyPath);
-			try {
-				GDXGroupExportStruct struct = (GDXGroupExportStruct) FileUtil.getSerializer(handle).load(handle);
-				Map<String,Body> returnStruct = struct.instantiate(world, position);
-				body = returnStruct.values().iterator().next();
-				Filter filter = new Filter();
-				filter.categoryBits = owner.getCat();
-				filter.maskBits = owner.getMask();
-				for(Fixture fixture : body.getFixtureList())
-					fixture.setFilterData(filter);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}else
+		if(bodyPath != null && !bodyPath.equals(""))
+			body = loadBody(owner, bodyPath, world, position);
+		else
 			body = PhysicsHelper.createRectangle(world, width, height, position, BodyType.DynamicBody, 
 					.2f, .5f, density, owner.getMask(), owner.getCat(), (short)0);
 		body.setUserData(this);
-		if(Properties.getBool("melee.useweld", false)){
+		if(Properties.getBool("melee.useweld", true)){
 			WeldJointDef def = new WeldJointDef();
 			def.initialize(body, ragdoll.getBodyPart(BodyPart.lHand), ragdoll.getBodyPart(BodyPart.lHand).getWorldCenter());
 			world.createJoint(def);
@@ -88,6 +76,24 @@ public class Melee extends Weapon {
 			def.initialize(body, ragdoll.getBodyPart(BodyPart.lHand), ragdoll.getBodyPart(BodyPart.lHand).getWorldCenter());
 			world.createJoint(def);
 		}
+	}
+	
+	private static Body loadBody(Being owner, String bodyPath, World world, Vector2 position){
+		FileHandle handle = Gdx.files.internal(bodyPath);
+		try {
+			GDXGroupExportStruct struct = (GDXGroupExportStruct) FileUtil.getSerializer(handle).load(handle);
+			Map<String,Body> returnStruct = struct.instantiate(world, position);
+			Body body = returnStruct.values().iterator().next();
+			Filter filter = new Filter();
+			filter.categoryBits = owner.getCat();
+			filter.maskBits = owner.getMask();
+			for(Fixture fixture : body.getFixtureList())
+				fixture.setFilterData(filter);
+			return body;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 	
 	@Override public void deactivate(World world) {
@@ -114,7 +120,8 @@ public class Melee extends Weapon {
 			float meleeDmg = MIN_DAMAGE;
 			if(i > Properties.getFloat("melee.contact.impulse.threshold", 2f))
 				meleeDmg = (float)Melee.impulseToDamageScalar(i/10f, Gdx.graphics.getRawDeltaTime());
-			worldManager.processHit(getDamage() * meleeDmg, target, owner, hit, contact.getWorldManifold().getNormal());
+			worldManager.processHit(getDamage() * meleeDmg, target, owner, hit, contact.getWorldManifold().getNormal(),
+					contact.getWorldManifold().getPoints()[0]);
 		}
 	}
 

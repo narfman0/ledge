@@ -7,7 +7,7 @@ import com.blastedstudios.ledge.world.being.Being.BodyPart;
 public class DamageStruct {
 	private Being target, origin;
 	private float damage;
-	private Vector2 dir;
+	private Vector2 dir, damagePosition;
 	private BodyPart bodyPart;
 	
 	public float getDamage() {
@@ -48,5 +48,13 @@ public class DamageStruct {
 
 	public void setOrigin(Being origin) {
 		this.origin = origin;
+	}
+
+	public Vector2 getDamagePosition() {
+		return damagePosition;
+	}
+
+	public void setDamagePosition(Vector2 damagePosition) {
+		this.damagePosition = damagePosition;
 	}
 }

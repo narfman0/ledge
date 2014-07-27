@@ -61,7 +61,8 @@ public class Rocket extends GunShot {
 		for(Entry<Being,Float> being : nearbyBeings.entrySet()){
 			Gdx.app.log("RocketLauncher.handleContact","Calculate rocket baseDamage for " + being.getKey().getName());
 			worldManager.processHit(launcher.calculateLinearDmg(being.getValue()), being.getKey(), getBeing(), 
-					being.getKey().getRagdoll().getBodyPart(BodyPart.torso).getFixtureList().get(0), manifold.getNormal());
+					being.getKey().getRagdoll().getBodyPart(BodyPart.torso).getFixtureList().get(0), 
+					manifold.getNormal(), manifold.getPoints()[0]);
 		}
 		//send off particles to particle manager
 		explosion.setPosition(gunshotBody.getPosition().x, gunshotBody.getPosition().y);

@@ -10,7 +10,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.ParticleEmitter;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.physics.box2d.Body;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.being.component.AbstractComponent;
@@ -36,8 +35,7 @@ public class BloodComponent extends AbstractComponent {
 	@Override public void receivedDamage(DamageStruct damage){
 		ParticleEffect effect = new ParticleEffect();
 		effect.load(Gdx.files.internal("data/particles/blood.p"), Gdx.files.internal("data/particles"));
-		Body body = being.getRagdoll().getBodyPart(damage.getBodyPart());
-		effect.setPosition(body.getWorldCenter().x, body.getWorldCenter().y);
+		effect.setPosition(damage.getDamagePosition().x, damage.getDamagePosition().y);
 		float angle = (float)Math.atan2(damage.getDir().y, damage.getDir().x);
 		ParticleEmitter emitter = effect.findEmitter("blood");
 		float angleDegrees = (float)Math.toDegrees(angle), quantityScalar = 20f + damage.getDamage()/100f;

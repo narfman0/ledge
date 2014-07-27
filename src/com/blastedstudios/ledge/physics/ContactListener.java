@@ -42,7 +42,7 @@ public class ContactListener implements com.badlogic.gdx.physics.box2d.ContactLi
 				if(hit != null){//handle getting shot
 					Being target = (Being) hit.getBody().getUserData();
 					worldManager.processHit(gunshot.getGun().getDamage(), target, gunshot.getBeing(), 
-							hit, contact.getWorldManifold().getNormal());
+							hit, contact.getWorldManifold().getNormal(), contact.getWorldManifold().getPoints()[0]);
 				}
 				gunshot.beginContact(gunshotBody, hit, worldManager, contact.getWorldManifold());
 			}
@@ -54,7 +54,8 @@ public class ContactListener implements com.badlogic.gdx.physics.box2d.ContactLi
 			Being target = (Being) hit.getBody().getUserData();
 			float i = calculateMomentumImpulse(contact);
 			if(i > Properties.getFloat("contact.impulse.threshold", 20f) && !target.isDead())
-				worldManager.processHit(i, target, null, hit, contact.getWorldManifold().getNormal());
+				worldManager.processHit(i, target, null, hit, contact.getWorldManifold().getNormal(), 
+						contact.getWorldManifold().getPoints()[0]);
 		}
 	}
 	

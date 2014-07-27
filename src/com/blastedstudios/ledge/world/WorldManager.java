@@ -133,7 +133,7 @@ public class WorldManager implements IDeathCallback{
 		sprite.draw(spriteBatch);
 	}
 
-	public void processHit(float damageBase, Being target, Being origin, Fixture hit, Vector2 normal) {
+	public void processHit(float damageBase, Being target, Being origin, Fixture hit, Vector2 normal, Vector2 damagePosition) {
 		DamageStruct damage = new DamageStruct();
 		damage.setTarget(target);
 		float bodypartDmgModifier = target.handleShotDamage(hit, damage);
@@ -143,6 +143,7 @@ public class WorldManager implements IDeathCallback{
 				attackModifier * defenseModifier);
 		damage.setDir(normal);
 		damage.setOrigin(origin);
+		damage.setDamagePosition(damagePosition);
 		getProvider().beingHit(damage);
 		if( (!Properties.getBool("character.godmode", false) || target != player) && !target.isInvulnerable() ){
 			target.setHp(target.getHp() - damage.getDamage());
