@@ -233,7 +233,7 @@ public class Being implements Serializable{
 		dead = true;
 		reloading = false;
 		if(getEquippedWeapon() != null)
-			getEquippedWeapon().deactivate(worldManager.getWorld());
+			getEquippedWeapon().death(worldManager.getWorld());
 		for(IComponent component : getListeners())
 			component.death(worldManager);
 	}
@@ -248,6 +248,8 @@ public class Being implements Serializable{
 		hp = getMaxHp();
 		if(ragdoll != null)
 			clean(world);
+		if(getEquippedWeapon() != null)
+			getEquippedWeapon().deactivate(world);
 
 		FileHandle atlasHandle = FileUtil.find(Gdx.files.internal("data/textures/characters"), resource);
 		if(atlasHandle == null)

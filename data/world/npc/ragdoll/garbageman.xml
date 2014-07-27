@@ -4,7 +4,7 @@
     <world.shape.GDXCircle>
       <name>lHand</name>
       <resource></resource>
-      <density>0.01</density>
+      <density>1</density>
       <friction>0.5</friction>
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
@@ -17,7 +17,7 @@
         <maskBits>-1</maskBits>
         <groupIndex>0</groupIndex>
       </filter>
-      <radius>0.5</radius>
+      <radius>0.1</radius>
     </world.shape.GDXCircle>
   </circles>
   <polygons>

@@ -10,6 +10,7 @@ import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.badlogic.gdx.physics.box2d.Contact;
 import com.badlogic.gdx.physics.box2d.Filter;
 import com.badlogic.gdx.physics.box2d.Fixture;
+import com.badlogic.gdx.physics.box2d.Joint;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.physics.box2d.joints.RevoluteJointDef;
 import com.badlogic.gdx.physics.box2d.joints.WeldJointDef;
@@ -30,6 +31,7 @@ public class Melee extends Weapon {
 	private transient Body body;
 	private transient Being owner;
 	private transient long lastAttack;
+	private transient Joint joint;
 	
 	public float getWidth() {
 		return width;
@@ -67,14 +69,14 @@ public class Melee extends Weapon {
 		if(Properties.getBool("melee.useweld", true)){
 			WeldJointDef def = new WeldJointDef();
 			def.initialize(body, ragdoll.getBodyPart(BodyPart.lHand), ragdoll.getBodyPart(BodyPart.lHand).getWorldCenter());
-			world.createJoint(def);
+			joint = world.createJoint(def);
 		}else{
 			RevoluteJointDef def = new RevoluteJointDef();
 			def.enableLimit = true;
 			def.lowerAngle = -.5f;
 			def.upperAngle = .01f;
 			def.initialize(body, ragdoll.getBodyPart(BodyPart.lHand), ragdoll.getBodyPart(BodyPart.lHand).getWorldCenter());
-			world.createJoint(def);
+			joint = world.createJoint(def);
 		}
 	}
 	
@@ -97,10 +99,22 @@ public class Melee extends Weapon {
 	}
 	
 	@Override public void deactivate(World world) {
-		if(body != null)
+		death(world);
+		if(body != null){
 			world.destroyBody(body);
-		else
-			Gdx.app.error("Melee.deactivate", "Want to destroy weapon body, but body null! " + this);
+			body = null;
+		}else
+			Gdx.app.error("Melee.deactivate", "Want to destroy weapon body, but null! " + this);
+	}
+
+	@Override public void death(World world){
+		if(body != null)
+			body.setUserData(null);
+		if(joint != null){
+			world.destroyJoint(joint);
+			joint = null;
+		}else
+			Gdx.app.error("Melee.deactivate", "Want to destroy weapon joint, but null! " + this);
 	}
 	
 	public static double impulseToDamageScalar(float impulse, float dt){

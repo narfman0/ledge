@@ -139,4 +139,5 @@ public abstract class Weapon implements Serializable{
 			Fixture hit, Contact contact, float i){}
 	public void activate(World world, IRagdoll ragdoll, Being owner){}
 	public void deactivate(World world){}
+	public void death(World world){}
 }
