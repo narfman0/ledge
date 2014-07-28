@@ -24,7 +24,7 @@ public class BloodComponent extends AbstractComponent {
 	@Override public void render(float dt, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, boolean facingLeft){
 		for(Iterator<BloodStruct> iter = blood.iterator(); iter.hasNext();){
 			BloodStruct current = iter.next();
-			current.effect.draw(spriteBatch, dt/5f);
+			current.effect.draw(spriteBatch, dt);
 			if(System.currentTimeMillis() - current.startTime > BLOOD_TIME){
 				current.effect.dispose();
 				iter.remove();

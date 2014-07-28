@@ -52,7 +52,7 @@ public class GunShot {
 	public void render(float dt, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, 
 			Body body, WorldManager worldManager){
 		WorldManager.drawTexture(spriteBatch, gdxRenderer, body, 
-				gun.getAmmoType().textureName, Properties.getFloat("gun.render.scale", .02f));
+				gun.getAmmoType().textureName, getWeaponRenderScale());
 	}
 
 	public boolean isCanRemove() {
@@ -72,5 +72,9 @@ public class GunShot {
 	
 	public boolean collideWithOrigin(){
 		return false;
+	}
+	
+	public static float getWeaponRenderScale(){
+		return Properties.getFloat("weapon.render.scale", .02f);
 	}
 }

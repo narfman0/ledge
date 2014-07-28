@@ -11,6 +11,7 @@ import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.being.Being.BodyPart;
 import com.blastedstudios.ledge.world.being.component.AbstractComponent;
 import com.blastedstudios.ledge.world.weapon.Melee;
+import com.blastedstudios.ledge.world.weapon.shot.GunShot;
 
 @PluginImplementation
 public class RenderWeaponComponent extends AbstractComponent {
@@ -20,7 +21,9 @@ public class RenderWeaponComponent extends AbstractComponent {
 		if(gdxRenderer != null && being.getEquippedWeapon() != null){
 			if(weaponSprite == null){
 				weaponSprite = new Sprite(gdxRenderer.getTexture(being.getEquippedWeapon().getResource() + ".png"));
-				weaponSprite.setScale(Properties.getFloat("ragdoll.custom.scale"));
+				float scale = being.getEquippedWeapon() instanceof Melee ? 
+						GunShot.getWeaponRenderScale() : Properties.getFloat("ragdoll.custom.scale");
+				weaponSprite.setScale(scale);
 			}
 			Vector2 position = being.getRagdoll().getWeaponCenter();
 			float rotation = being.getRagdoll().getBodyPart(BodyPart.lArm).getAngle();

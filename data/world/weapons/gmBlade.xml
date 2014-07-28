@@ -2,9 +2,9 @@
 	<stats>
 		<damage>100</damage>
 	</stats>
-	<name>Garbageman Cleaver</name>
-	<resource>garbagemanCleaver</resource>
-	<bodyPath>data/world/weaponBodies/garbagemanCleaver.xml</bodyPath>
+	<name>Garbageman Blade</name>
+	<resource>gmBlade</resource>
+	<bodyPath>data/world/weaponBodies/gmBlade.xml</bodyPath>
 	<cost>100</cost>
 	<fireSound>clunk</fireSound>
 	<density>.1</density>

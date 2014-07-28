@@ -412,6 +412,82 @@
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>gmBlade</name>
+          <resource>gmBlade.png</resource>
+          <density>0.1</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>35.661427</x>
+            <y>2.563651</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>0.013969421</x>
+              <y>5.0695295</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.80075073</x>
+              <y>4.65973</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.8170471</x>
+              <y>2.844902</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.1978569</x>
+              <y>2.552188</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.29562378</x>
+              <y>-2.5410376</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.86592865</x>
+              <y>-2.8922944</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.8333397</x>
+              <y>-4.668093</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.034915924</x>
+              <y>-5.116921</y>
+            </Vector2>
+            <Vector2>
+              <x>0.812397</x>
+              <y>-4.6876073</y>
+            </Vector2>
+            <Vector2>
+              <x>0.7961006</x>
+              <y>-2.794723</y>
+            </Vector2>
+            <Vector2>
+              <x>0.24209213</x>
+              <y>-2.5605516</y>
+            </Vector2>
+            <Vector2>
+              <x>0.25838852</x>
+              <y>2.591217</y>
+            </Vector2>
+            <Vector2>
+              <x>0.86127853</x>
+              <y>2.8839312</y>
+            </Vector2>
+            <Vector2>
+              <x>0.86127853</x>
+              <y>4.65973</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
       </polygons>
       <npcs/>
       <paths/>
@@ -587,6 +663,28 @@
           <polygons class="java.util.Arrays$ArrayList">
             <a class="string-array">
               <string>garbagemanCleaver</string>
+            </a>
+          </polygons>
+          <joints class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string></string>
+            </a>
+          </joints>
+        </world.group.GDXGroup>
+        <world.group.GDXGroup>
+          <name>gmBlade</name>
+          <center>
+            <x>35.615627</x>
+            <y>0.78125167</y>
+          </center>
+          <circles class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string></string>
+            </a>
+          </circles>
+          <polygons class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>gmBlade</string>
             </a>
           </polygons>
           <joints class="java.util.Arrays$ArrayList">
