@@ -4,13 +4,13 @@
     <world.shape.GDXCircle>
       <name>lHand</name>
       <resource></resource>
-      <density>1</density>
+      <density>100.0</density>
       <friction>0.5</friction>
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>-2.247746</x>
-        <y>1.3736013</y>
+        <x>-2.87419</x>
+        <y>-9.186501</y>
       </center>
       <filter>
         <categoryBits>1</categoryBits>
@@ -29,8 +29,8 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>-0.124171734</x>
-        <y>3.030994</y>
+        <x>-0.22800046</x>
+        <y>-7.829372</y>
       </center>
       <filter>
         <categoryBits>1</categoryBits>
@@ -73,8 +73,8 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>0.22097564</x>
-        <y>0.32352442</y>
+        <x>0.08494496</x>
+        <y>-10.57736</y>
       </center>
       <filter>
         <categoryBits>1</categoryBits>
@@ -84,28 +84,28 @@
       <repeatable>false</repeatable>
       <vertices>
         <Vector2>
-          <x>0.74946237</x>
-          <y>1.8886247</y>
+          <x>0.8261165</x>
+          <y>1.6587595</y>
         </Vector2>
         <Vector2>
-          <x>-0.98120475</x>
-          <y>1.9282465</y>
+          <x>-1.0426574</x>
+          <y>1.6694387</y>
         </Vector2>
         <Vector2>
-          <x>-1.5285094</x>
-          <y>0.21131474</y>
+          <x>-1.300726</x>
+          <y>0.056953043</y>
         </Vector2>
         <Vector2>
-          <x>-1.0551646</x>
-          <y>-2.1659756</y>
+          <x>-0.98926395</x>
+          <y>-1.8758936</y>
         </Vector2>
         <Vector2>
-          <x>1.3559363</x>
-          <y>-2.1131468</y>
+          <x>1.2621644</x>
+          <y>-1.9186085</y>
         </Vector2>
         <Vector2>
-          <x>1.45948</x>
-          <y>0.2509361</y>
+          <x>1.2443664</x>
+          <y>0.40935043</y>
         </Vector2>
       </vertices>
     </world.shape.GDXPolygon>
@@ -117,8 +117,8 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>-0.6585221</x>
-        <y>1.4342351</y>
+        <x>-1.0467018</x>
+        <y>-9.409821</y>
       </center>
       <filter>
         <categoryBits>1</categoryBits>
@@ -153,8 +153,8 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>-2.4351559</x>
-        <y>1.5013156</y>
+        <x>-2.497227</x>
+        <y>-9.409821</y>
       </center>
       <filter>
         <categoryBits>1</categoryBits>
@@ -189,8 +189,8 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>-0.5861752</x>
-        <y>-2.28582</y>
+        <x>-0.90316504</x>
+        <y>-13.3508415</y>
       </center>
       <filter>
         <categoryBits>1</categoryBits>
@@ -225,8 +225,8 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>1.6226556</x>
-        <y>-2.2801943</y>
+        <x>1.3056657</x>
+        <y>-13.345216</y>
       </center>
       <filter>
         <categoryBits>1</categoryBits>
@@ -263,8 +263,8 @@
       <collideConnected>false</collideConnected>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>0.06812382</x>
-        <y>2.1461134</y>
+        <x>-0.15680951</x>
+        <y>-8.651632</y>
       </anchor>
     </world.joint.WeldJoint>
     <world.joint.RevoluteJoint>
@@ -276,13 +276,13 @@
       <enableLimit>true</enableLimit>
       <enableMotor>false</enableMotor>
       <lowerAngle>-0.7</lowerAngle>
-      <upperAngle>3.5</upperAngle>
+      <upperAngle>1.5</upperAngle>
       <maxMotorTorque>0.0</maxMotorTorque>
       <motorSpeed>0.0</motorSpeed>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>-0.65167165</x>
-        <y>1.5003482</y>
+        <x>-0.7619362</x>
+        <y>-9.409821</y>
       </anchor>
     </world.joint.RevoluteJoint>
     <world.joint.RevoluteJoint>
@@ -294,13 +294,13 @@
       <enableLimit>true</enableLimit>
       <enableMotor>false</enableMotor>
       <lowerAngle>-0.7</lowerAngle>
-      <upperAngle>3.5</upperAngle>
+      <upperAngle>1.5</upperAngle>
       <maxMotorTorque>0.0</maxMotorTorque>
       <motorSpeed>0.0</motorSpeed>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>1.1321762</x>
-        <y>1.528514</y>
+        <x>0.74198264</x>
+        <y>-9.281677</y>
       </anchor>
     </world.joint.RevoluteJoint>
     <world.joint.RevoluteJoint>
@@ -317,8 +317,8 @@
       <motorSpeed>0.0</motorSpeed>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>0.042673945</x>
-        <y>-1.0869601</y>
+        <x>-0.2743159</x>
+        <y>-12.151981</y>
       </anchor>
     </world.joint.RevoluteJoint>
     <world.joint.RevoluteJoint>
@@ -335,8 +335,8 @@
       <motorSpeed>0.0</motorSpeed>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>0.94403094</x>
-        <y>-1.2045282</y>
+        <x>0.6270411</x>
+        <y>-12.269549</y>
       </anchor>
     </world.joint.RevoluteJoint>
     <world.joint.WeldJoint>
@@ -347,8 +347,8 @@
       <collideConnected>false</collideConnected>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>-2.2242746</x>
-        <y>1.3736013</y>
+        <x>-2.87419</x>
+        <y>-9.186501</y>
       </anchor>
     </world.joint.WeldJoint>
   </joints>

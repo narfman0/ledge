@@ -66,7 +66,7 @@ public class Melee extends Weapon {
 			body = PhysicsHelper.createRectangle(world, width, height, position, BodyType.DynamicBody, 
 					.2f, .5f, density, owner.getMask(), owner.getCat(), (short)0);
 		body.setUserData(this);
-		if(Properties.getBool("melee.useweld", true)){
+		if(Properties.getBool("melee.useweld", false)){
 			WeldJointDef def = new WeldJointDef();
 			def.initialize(body, ragdoll.getBodyPart(BodyPart.lHand), ragdoll.getBodyPart(BodyPart.lHand).getWorldCenter());
 			joint = world.createJoint(def);

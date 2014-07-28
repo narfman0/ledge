@@ -453,7 +453,7 @@
             <relativeVelocity>true</relativeVelocity>
             <relativeAngle>true</relativeAngle>
           </manifestation>
-          <time>1.0</time>
+          <time>0.7</time>
         </world.animation.AnimationStruct>
         <world.animation.AnimationStruct>
           <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
@@ -480,7 +480,7 @@
             <relativeVelocity>true</relativeVelocity>
             <relativeAngle>true</relativeAngle>
           </manifestation>
-          <time>1.0</time>
+          <time>0.7</time>
         </world.animation.AnimationStruct>
         <world.animation.AnimationStruct>
           <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
@@ -507,7 +507,7 @@
             <relativeVelocity>true</relativeVelocity>
             <relativeAngle>true</relativeAngle>
           </manifestation>
-          <time>1.5</time>
+          <time>1.2</time>
         </world.animation.AnimationStruct>
         <world.animation.AnimationStruct>
           <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
@@ -534,7 +534,7 @@
             <relativeVelocity>true</relativeVelocity>
             <relativeAngle>true</relativeAngle>
           </manifestation>
-          <time>1.6</time>
+          <time>1.3</time>
         </world.animation.AnimationStruct>
       </animations>
       <name>sword</name>
