@@ -17,7 +17,7 @@ import com.blastedstudios.ledge.world.being.Being;
 public class RagdollLoader extends AbstractRagdoll {
 	public RagdollLoader(World world, float x, float y, Being being, TextureAtlas atlas, Map<String,Body> bodyMap){
 		super(being, atlas, x, y, bodyMap.get("torso"), bodyMap.get("head"), bodyMap.get("rLeg"), 
-				bodyMap.get("lLeg"), bodyMap.get("rArm"), bodyMap.get("lArm"), bodyMap.get("lHand"));
+				bodyMap.get("lLeg"), bodyMap.get("rArm"), bodyMap.get("lArm"), bodyMap.get("lHand"), bodyMap.get("rHand"));
 		initializeJoints(world);
 		setTransform(x,y,0);
 	}

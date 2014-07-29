@@ -550,7 +550,8 @@ public class Being implements Serializable{
 		rArm,
 		lLeg,
 		rLeg,
-		lHand
+		lHand,
+		rHand
 	}
 
 	/**

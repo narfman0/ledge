@@ -9,8 +9,26 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>-2.87419</x>
-        <y>-9.186501</y>
+        <x>3.1562722</x>
+        <y>7.313534</y>
+      </center>
+      <filter>
+        <categoryBits>1</categoryBits>
+        <maskBits>-1</maskBits>
+        <groupIndex>0</groupIndex>
+      </filter>
+      <radius>0.1</radius>
+    </world.shape.GDXCircle>
+    <world.shape.GDXCircle>
+      <name>rHand</name>
+      <resource></resource>
+      <density>100.0</density>
+      <friction>0.5</friction>
+      <restitution>0.3</restitution>
+      <bodyType>DynamicBody</bodyType>
+      <center>
+        <x>1.7577147</x>
+        <y>7.0319247</y>
       </center>
       <filter>
         <categoryBits>1</categoryBits>
@@ -29,8 +47,8 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>-0.22800046</x>
-        <y>-7.829372</y>
+        <x>5.8024616</x>
+        <y>8.670662</y>
       </center>
       <filter>
         <categoryBits>1</categoryBits>
@@ -73,8 +91,8 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>0.08494496</x>
-        <y>-10.57736</y>
+        <x>6.115407</x>
+        <y>5.9226737</y>
       </center>
       <filter>
         <categoryBits>1</categoryBits>
@@ -117,8 +135,8 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>-1.0467018</x>
-        <y>-9.409821</y>
+        <x>4.9837604</x>
+        <y>7.090213</y>
       </center>
       <filter>
         <categoryBits>1</categoryBits>
@@ -153,8 +171,8 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>-2.497227</x>
-        <y>-9.409821</y>
+        <x>3.5332353</x>
+        <y>7.090213</y>
       </center>
       <filter>
         <categoryBits>1</categoryBits>
@@ -189,8 +207,8 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>-0.90316504</x>
-        <y>-13.3508415</y>
+        <x>5.1272974</x>
+        <y>3.1491923</y>
       </center>
       <filter>
         <categoryBits>1</categoryBits>
@@ -225,8 +243,8 @@
       <restitution>0.3</restitution>
       <bodyType>DynamicBody</bodyType>
       <center>
-        <x>1.3056657</x>
-        <y>-13.345216</y>
+        <x>7.336128</x>
+        <y>3.154818</y>
       </center>
       <filter>
         <categoryBits>1</categoryBits>
@@ -263,8 +281,8 @@
       <collideConnected>false</collideConnected>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>-0.15680951</x>
-        <y>-8.651632</y>
+        <x>5.8736525</x>
+        <y>7.848401</y>
       </anchor>
     </world.joint.WeldJoint>
     <world.joint.RevoluteJoint>
@@ -281,8 +299,8 @@
       <motorSpeed>0.0</motorSpeed>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>-0.7619362</x>
-        <y>-9.409821</y>
+        <x>5.268526</x>
+        <y>7.090213</y>
       </anchor>
     </world.joint.RevoluteJoint>
     <world.joint.RevoluteJoint>
@@ -299,8 +317,8 @@
       <motorSpeed>0.0</motorSpeed>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>0.74198264</x>
-        <y>-9.281677</y>
+        <x>6.7724447</x>
+        <y>7.218357</y>
       </anchor>
     </world.joint.RevoluteJoint>
     <world.joint.RevoluteJoint>
@@ -317,8 +335,8 @@
       <motorSpeed>0.0</motorSpeed>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>-0.2743159</x>
-        <y>-12.151981</y>
+        <x>5.7561464</x>
+        <y>4.348052</y>
       </anchor>
     </world.joint.RevoluteJoint>
     <world.joint.RevoluteJoint>
@@ -335,8 +353,8 @@
       <motorSpeed>0.0</motorSpeed>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>0.6270411</x>
-        <y>-12.269549</y>
+        <x>6.657503</x>
+        <y>4.230484</y>
       </anchor>
     </world.joint.RevoluteJoint>
     <world.joint.WeldJoint>
@@ -347,8 +365,20 @@
       <collideConnected>false</collideConnected>
       <referenceAngle>0.0</referenceAngle>
       <anchor>
-        <x>-2.87419</x>
-        <y>-9.186501</y>
+        <x>3.1562722</x>
+        <y>7.313534</y>
+      </anchor>
+    </world.joint.WeldJoint>
+    <world.joint.WeldJoint>
+      <name>rWrist</name>
+      <bodyA>rHand</bodyA>
+      <bodyB>rArm</bodyB>
+      <jointType>WeldJoint</jointType>
+      <collideConnected>false</collideConnected>
+      <referenceAngle>0.0</referenceAngle>
+      <anchor>
+        <x>1.7577145</x>
+        <y>7.025918</y>
       </anchor>
     </world.joint.WeldJoint>
   </joints>

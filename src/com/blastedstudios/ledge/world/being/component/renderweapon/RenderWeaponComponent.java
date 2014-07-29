@@ -25,7 +25,7 @@ public class RenderWeaponComponent extends AbstractComponent {
 						GunShot.getWeaponRenderScale() : Properties.getFloat("ragdoll.custom.scale");
 				weaponSprite.setScale(scale);
 			}
-			Vector2 position = being.getRagdoll().getWeaponCenter();
+			Vector2 position = being.getRagdoll().getHandLocationFacing();
 			float rotation = being.getRagdoll().getBodyPart(BodyPart.lArm).getAngle();
 			if(being.getEquippedWeapon() instanceof Melee){
 				Melee weapon = ((Melee)being.getEquippedWeapon());

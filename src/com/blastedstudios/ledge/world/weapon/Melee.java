@@ -59,7 +59,7 @@ public class Melee extends Weapon {
 	
 	@Override public void activate(World world, IRagdoll ragdoll, Being owner) {
 		this.owner = owner;
-		Vector2 position = ragdoll.getWeaponCenter().cpy().add(offsetX, offsetY);
+		Vector2 position = ragdoll.getHandLocationFacing().cpy().add(offsetX, offsetY);
 		if(bodyPath != null && !bodyPath.equals(""))
 			body = loadBody(owner, bodyPath, world, position);
 		else

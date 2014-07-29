@@ -31,10 +31,10 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		LEFT_FACING_ORDER = new BodyPart[]{
 		BodyPart.lLeg, BodyPart.lArm, BodyPart.torso, 
 		BodyPart.head, BodyPart.rLeg, BodyPart.rArm};
-	public final Body torsoBody, headBody, rLegBody, lLegBody, rArmBody, lArmBody, lHandBody;
+	public final Body torsoBody, headBody, rLegBody, lLegBody, rArmBody, lArmBody, lHandBody, rHandBody;
 	public final Fixture torsoFixture, headFixture, rLegFixture, lLegFixture, 
-		rArmFixture, lArmFixture, lHandFixture;
-	protected Joint headJoint, rLegJoint, lLegJoint, rArmJoint, lArmJoint, lHandJoint;
+		rArmFixture, lArmFixture, lHandFixture, rHandFixture;
+	protected Joint headJoint, rLegJoint, lLegJoint, rArmJoint, lArmJoint, lHandJoint, rHandJoint;
 	protected final List<Body> bodies = new LinkedList<>();
 	private final Map<Body,Sprite> sprites = new HashMap<>();
 	private boolean facingLeft;
@@ -42,7 +42,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 	
 	public AbstractRagdoll(Being being, TextureAtlas atlas, float x, float y,
 			Body torsoBody, Body headBody, Body rLegBody, Body lLegBody, 
-			Body rArmBody, Body lArmBody, Body lHandBody){
+			Body rArmBody, Body lArmBody, Body lHandBody, Body rHandBody){
 		this.torsoBody = torsoBody;
 		this.headBody = headBody;
 		this.rLegBody = rLegBody;
@@ -50,6 +50,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		this.rArmBody = rArmBody;
 		this.lArmBody = lArmBody;
 		this.lHandBody = lHandBody;
+		this.rHandBody = rHandBody;
 		this.torsoFixture = torsoBody.getFixtureList().get(0);
 		this.headFixture = headBody.getFixtureList().get(0);
 		this.rLegFixture = rLegBody.getFixtureList().get(0);
@@ -57,6 +58,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		this.rArmFixture = rArmBody.getFixtureList().get(0);
 		this.lArmFixture = lArmBody.getFixtureList().get(0);
 		this.lHandFixture = lHandBody.getFixtureList().get(0);
+		this.rHandFixture = rHandBody.getFixtureList().get(0);
 
 		torsoBody.setFixedRotation(true);
 		bodies.add(torsoBody);
@@ -66,6 +68,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		bodies.add(lArmBody);
 		bodies.add(rArmBody);
 		bodies.add(lHandBody);
+		bodies.add(rHandBody);
 		for(Body body : bodies){
 			body.setBullet(true);
 			body.setUserData(being);
@@ -78,6 +81,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		rLegFixture.setUserData(being);
 		lLegFixture.setUserData(being);
 		lHandFixture.setUserData(being);
+		rHandFixture.setUserData(being);
 
 		sprites.put(torsoBody, atlas.createSprite("torso"));
 		sprites.put(rLegBody, atlas.createSprite("rleg"));
@@ -91,7 +95,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 	}
 	
 	protected void initializeFilters(short mask, short cat){
-		for(Fixture fixture : new Fixture[]{lArmFixture, lHandFixture, rArmFixture}){
+		for(Fixture fixture : new Fixture[]{lArmFixture, lHandFixture, rArmFixture, rHandFixture}){
 			Filter filter = fixture.getFilterData();
 			filter.maskBits = PhysicsEnvironment.MASK_NOTHING;
 			filter.categoryBits = PhysicsEnvironment.CAT_NOTHING;
@@ -109,6 +113,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		lArmJoint = lArmBody.getJointList().get(0).joint;
 		rArmJoint = rArmBody.getJointList().get(0).joint;
 		lHandJoint = lHandBody.getJointList().get(0).joint;
+		rHandJoint = rHandBody.getJointList().get(0).joint;
 		headJoint = headBody.getJointList().get(0).joint;
 	}
 	
@@ -120,6 +125,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		rLegFixture.setFriction(friction);
 		lLegFixture.setFriction(friction);
 		lHandFixture.setFriction(friction);
+		rHandFixture.setFriction(friction);
 	}
 
 	@Override public boolean standingOn(Contact contact){
@@ -188,7 +194,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		i /= bodies.size();
 		j /= bodies.size();
 		for(Body body : bodies)
-			if(body != rArmBody && body != lArmBody && body != lHandBody)
+			if(body != rArmBody && body != lArmBody && body != lHandBody && body != rHandBody)
 				body.applyLinearImpulse(i,j,x,y,true);
 	}
 
@@ -196,7 +202,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		x /= bodies.size();
 		y /= bodies.size();
 		for(Body body : bodies)
-			if(body != rArmBody && body != lArmBody && body != lHandBody)
+			if(body != rArmBody && body != lArmBody && body != lHandBody && body != rHandBody)
 				body.applyForceToCenter(x,y,true);
 	}
 
@@ -208,7 +214,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 	@Override public boolean isOwned(Fixture fixture){
 		return fixture == torsoFixture || fixture == headFixture || fixture == rLegFixture ||
 				fixture == lLegFixture || fixture == rArmFixture || fixture == lArmFixture ||
-				fixture == lHandFixture;
+				fixture == lHandFixture || fixture == rHandFixture;
 	}
 
 	@Override public void dispose(World world) {
@@ -238,6 +244,10 @@ public abstract class AbstractRagdoll implements IRagdoll {
 			world.destroyJoint(lHandJoint);
 			lHandJoint = null;
 		}
+		if(rHandJoint != null){
+			world.destroyJoint(rHandJoint);
+			rHandJoint = null;
+		}
 		if(lLegJoint != null){
 			world.destroyJoint(lLegJoint);
 			lLegJoint = null;
@@ -263,6 +273,8 @@ public abstract class AbstractRagdoll implements IRagdoll {
 			return BodyPart.rLeg;
 		if(lHandFixture == fixture)
 			return BodyPart.lHand;
+		if(rHandFixture == fixture)
+			return BodyPart.rHand;
 		return null;
 	}
 
@@ -286,6 +298,8 @@ public abstract class AbstractRagdoll implements IRagdoll {
 			return torsoBody;
 		case lHand:
 			return lHandBody;
+		case rHand:
+			return rHandBody;
 		default:
 			break;
 		}
@@ -362,12 +376,12 @@ public abstract class AbstractRagdoll implements IRagdoll {
 	@Override public void applyTorque(float torque) {
 		torsoBody.applyTorque(torque, true);
 	}
-
-	@Override public Vector2 getWeaponCenter() {
-		return lHandBody.getWorldCenter();
-	}
 	
 	@Override public boolean isFacingLeft(){
 		return facingLeft;
+	}
+	
+	@Override public Vector2 getHandLocationFacing(){
+		return (isFacingLeft() ? getBodyPart(BodyPart.lHand) : getBodyPart(BodyPart.rHand)).getWorldCenter();
 	}
 }

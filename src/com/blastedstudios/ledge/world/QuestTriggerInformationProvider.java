@@ -41,9 +41,9 @@ public class QuestTriggerInformationProvider implements IQuestTriggerInformation
 		Array<Body> bodyArray = new Array<>(worldManager.getWorld().getBodyCount());
 		worldManager.getWorld().getBodies(bodyArray);
 		for(Body body : bodyArray){
-			if(body.getUserData().equals(origin))
+			if(origin != null && origin.equals(body.getUserData()))
 				originBody = body;
-			if(body.getUserData().equals(target))
+			if(target != null && target.equals(body.getUserData()))
 				targetBody = body;
 		}
 		return originBody.getPosition().dst(targetBody.getPosition()) < distance;
@@ -53,7 +53,7 @@ public class QuestTriggerInformationProvider implements IQuestTriggerInformation
 		Array<Body> bodyArray = new Array<>(worldManager.getWorld().getBodyCount());
 		worldManager.getWorld().getBodies(bodyArray);
 		for(Body body : bodyArray)
-			if(body.getUserData().equals(name))
+			if(name != null && name.equals(body.getUserData()))
 				return body;
 		return null;
 	}

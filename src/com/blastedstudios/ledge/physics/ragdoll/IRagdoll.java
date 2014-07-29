@@ -39,6 +39,10 @@ public interface IRagdoll{
 	public boolean isFixedRotation();
 	public void setFixedRotation(boolean fixedRotation);
 	public void applyTorque(float torque);
-	public Vector2 getWeaponCenter();
 	public boolean isFacingLeft();
+	/**
+	 * @return position of the hand according to which direction the ragdoll is facing.
+	 * If facing left, will return the right hand (as it is "behind" and further out)
+	 */
+	public Vector2 getHandLocationFacing();
 }

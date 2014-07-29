@@ -15,7 +15,7 @@ import com.blastedstudios.ledge.physics.ragdoll.AbstractRagdoll;
 import com.blastedstudios.ledge.world.being.Being;
 
 public class RagdollCustom extends AbstractRagdoll {
-	private static float DENSITY = Properties.getFloat("character.ragdoll.density", 6f),
+	private static float DENSITY = Properties.getFloat("character.ragdoll.density", 5f),
 			SCALE = Properties.getFloat("character.ragdoll.scale", 1f);
 	private final static float torsoY = .27f, legX = .1f, legY = -.2f, armX = -.02f, armY = .3f, headY = .6f;
 
@@ -27,7 +27,8 @@ public class RagdollCustom extends AbstractRagdoll {
 				createLLeg(world, being.getMask(), being.getCat()),
 				createRArm(world, being.getMask(), being.getCat()), 
 				createLArm(world, being.getMask(), being.getCat()), 
-				createLHand(world, being.getMask(), being.getCat()));
+				createLHand(world, being.getMask(), being.getCat()), 
+				createRHand(world, being.getMask(), being.getCat()));
 		initializeFilters(being.getMask(), being.getCat());
 		initializeJoints(world);
 		setTransform(x,y,0);
@@ -38,6 +39,7 @@ public class RagdollCustom extends AbstractRagdoll {
 		rLegJoint = PhysicsEnvironment.addWeld(world, rLegBody, torsoBody, new Vector2(.1f,-.05f).scl(SCALE));
 		lArmJoint = PhysicsEnvironment.addRevolute(world, lArmBody, torsoBody, 0,0,new Vector2(-.17f,.3f).scl(SCALE));
 		lHandJoint = PhysicsEnvironment.addWeld(world, lHandBody, lArmBody, new Vector2(-armX,armY-.11f).scl(SCALE));
+		rHandJoint = PhysicsEnvironment.addWeld(world, rHandBody, rArmBody, new Vector2(armX,armY-.11f).scl(SCALE));
 		rArmJoint = PhysicsEnvironment.addRevolute(world, rArmBody, torsoBody, 0,0,new Vector2(.17f,.3f).scl(SCALE));
 		headJoint = PhysicsEnvironment.addWeld(world, headBody, torsoBody, new Vector2(0,.45f).scl(SCALE));
 	}
@@ -87,9 +89,19 @@ public class RagdollCustom extends AbstractRagdoll {
 		lHand.setPosition(new Vector2(-armX+.14f, armY));
 		lHand.setRadius(.1f);
 		Body lHandBody = world.createBody(getDynamicBody());
-		lHandBody.createFixture(lHand, DENSITY);
+		lHandBody.createFixture(lHand, DENSITY/2f);
 		lHand.dispose();
 		return lHandBody;
+	}
+	
+	private static Body createRHand(World world, short mask, short cat){
+		CircleShape rHand = new CircleShape();
+		rHand.setPosition(new Vector2(armX-.14f, armY));
+		rHand.setRadius(.1f);
+		Body rHandBody = world.createBody(getDynamicBody());
+		rHandBody.createFixture(rHand, DENSITY/2f);
+		rHand.dispose();
+		return rHandBody;
 	}
 	
 	private static Body createHead(World world, short mask, short cat){

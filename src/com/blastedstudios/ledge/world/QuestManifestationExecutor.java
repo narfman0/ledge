@@ -72,7 +72,7 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 		Array<Body> bodyArray = new Array<>(worldManager.getWorld().getBodyCount());
 		worldManager.getWorld().getBodies(bodyArray);
 		for(Body body : bodyArray)
-			if(body.getUserData().equals(name))
+			if(name != null && name.equals(body.getUserData()))
 				return body;
 		return null;
 	}
