@@ -63,6 +63,7 @@ public class GameplayScreen extends AbstractScreen {
 	private Vector2 touchedDirection;
 	private final TiledMeshRenderer tiledMeshRenderer;
 	private final SpriteBatch spriteBatch = new SpriteBatch();
+	private GDXLevel nextLevel = null;
 	
 	public GameplayScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world, FileHandle selectedFile, final GDXRenderer gdxRenderer){
 		super(game, MainScreen.SKIN_PATH);
@@ -125,9 +126,12 @@ public class GameplayScreen extends AbstractScreen {
 				(characterWindow == null || !characterWindow.contains(x, y)) &&
 				(vendorWindow == null || !vendorWindow.contains(x, y)))
 			worldManager.getPlayer().attack(touchedDirection, worldManager);
+		if(nextLevel != null)
+			game.pushScreen(new GameplayScreen(getGame(), worldManager.getPlayer(),
+					nextLevel, world, selectedFile, gdxRenderer));
 	}
 	
-	public void levelComplete(boolean success){
+	public void levelComplete(boolean success, String nextLevel){
 		SaveHelper.save(worldManager.getPlayer());
 		worldManager.getPlayer().clean(worldManager.getWorld());
 		//cant always setLevelCompleted(...,success), because if player 
@@ -136,6 +140,8 @@ public class GameplayScreen extends AbstractScreen {
 		if(success) 
 			worldManager.getPlayer().setLevelCompleted(level.getName(), true);
 		game.popScreen();
+		if(success && !nextLevel.equals(""))
+			this.nextLevel = world.getLevel(nextLevel);
 	}
 
 	public boolean isAction() {
@@ -307,7 +313,7 @@ public class GameplayScreen extends AbstractScreen {
 			break;
 		case Keys.F12:
 			if(debugCommandEnabled()){
-				levelComplete(true);
+				levelComplete(true, "");
 				Gdx.app.log("Gameplayscreen.keyDown", "beat level cheater");
 			}
 			break;

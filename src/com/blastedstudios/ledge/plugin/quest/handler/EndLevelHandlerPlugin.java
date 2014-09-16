@@ -14,9 +14,8 @@ public class EndLevelHandlerPlugin implements IEndLevelHandler{
 		this.screen = screen;
 	}
 
-	@Override public CompletionEnum endLevel(boolean success) {
-		screen.levelComplete(success);
+	@Override public CompletionEnum endLevel(boolean success, String nextLevel) {
+		screen.levelComplete(success, nextLevel);
 		return CompletionEnum.COMPLETED;
 	}
-
 }
