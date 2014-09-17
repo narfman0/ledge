@@ -1,6 +1,7 @@
 package com.blastedstudios.ledge.ui.gameplay;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -14,7 +15,6 @@ import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener.ChangeEvent;
 import com.blastedstudios.gdxworld.ui.AbstractWindow;
-import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunButton;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunInformationWindow;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunButton.IButtonClicked;
@@ -34,7 +34,7 @@ public class VendorWindow extends AbstractWindow implements IButtonClicked{
 	private GunInformationWindow gunInformationWindow;
 	
 	public VendorWindow(final Skin skin, NPC npc, Stage stage, Being client, 
-			World world, final ChangeListener closeListener, GDXRenderer renderer){
+			World world, final ChangeListener closeListener, AssetManager sharedAssets){
 		super("", skin);
 		this.stage = stage;
 		this.skin = skin;
@@ -45,7 +45,7 @@ public class VendorWindow extends AbstractWindow implements IButtonClicked{
 		Table table = new Table(skin);
 		int counter = 0;
 		for(final Weapon gun : npc.getVendorWeapons()){
-			table.add(new GunButton(skin, renderer, gun, this));
+			table.add(new GunButton(skin, sharedAssets, gun, this));
 			if(counter % 2 == 1)
 				table.row();
 			counter++;

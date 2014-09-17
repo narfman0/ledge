@@ -2,6 +2,7 @@ package com.blastedstudios.ledge.world.weapon;
 
 import java.util.Random;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
@@ -38,10 +39,12 @@ public class Turret {
 	
 	public void render(float dt, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, WorldManager worldManager) {
 		if(gunSprite == null){
-			gunSprite = new Sprite(gdxRenderer.getTexture(gun.getResource() + ".png"));
+			String gunPath = "data/textures/weapons/" + gun.getResource() + ".png",
+				basePath = "data/textures/weapons/" + baseResource;
+			gunSprite = new Sprite(worldManager.getSharedAssets().get(gunPath, Texture.class));
 			gunSprite.setScale(Properties.getFloat("ragdoll.custom.scale"));
 			gunSprite.setPosition(location.x - gunSprite.getWidth()/2f, location.y - gunSprite.getHeight()/2f);
-			weaponBaseSprite = new Sprite(gdxRenderer.getTexture(baseResource));
+			weaponBaseSprite = new Sprite(worldManager.getSharedAssets().get(basePath, Texture.class));
 			weaponBaseSprite.setScale(Properties.getFloat("turret.scale", .02f));
 			weaponBaseSprite.setPosition(location.x - weaponBaseSprite.getWidth()/2f, location.y - weaponBaseSprite.getHeight()/2f);
 		}

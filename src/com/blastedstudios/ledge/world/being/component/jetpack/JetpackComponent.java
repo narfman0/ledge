@@ -4,6 +4,7 @@ import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.ParticleEmitter;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -31,7 +32,8 @@ public class JetpackComponent extends AbstractComponent {
 	private float jetpackPower;
 	private long lastDash;
 
-	@Override public void render(float dt, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, boolean facingLeft) {
+	@Override public void render(float dt, SpriteBatch spriteBatch, AssetManager sharedAssets,
+			GDXRenderer gdxRenderer, boolean facingLeft) {
 		if(!being.getStats().hasJetpack())
 			return;
 		if(!being.isDead() && (jetpackActivated || isDashing()) && !lastJetpackActivated){

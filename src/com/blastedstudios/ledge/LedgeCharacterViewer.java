@@ -60,7 +60,7 @@ public class LedgeCharacterViewer extends GDXGame {
 			level.createLevel(world);
 			player = new Player("name", new ArrayList<Weapon>(WeaponFactory.getStockWeapons()), new ArrayList<Weapon>(), 
 					Stats.parseNPCData(NPCData.parse("player")), 0, 1, 1, 1, FactionEnum.FRIEND, EnumSet.of(FactionEnum.FRIEND), 
-					Properties.get("character.texture.default", "dummy"), null);
+					Properties.get("character.texture.default", "dummy"));
 			player.respawn(world, 0, 0);
 			hud = new HUD(skin, player);
 			camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
@@ -104,7 +104,7 @@ public class LedgeCharacterViewer extends GDXGame {
 			try{
 				spriteBatch.setProjectionMatrix(camera.combined);
 				spriteBatch.begin();
-				player.render(delta, world, spriteBatch, null, null);
+				player.render(delta, world, spriteBatch, null, null, null);
 				spriteBatch.end();
 			}catch(Exception e){
 				e.printStackTrace();

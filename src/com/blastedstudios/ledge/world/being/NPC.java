@@ -40,9 +40,9 @@ public class NPC extends Being {
 			GDXPath path, FactionEnum faction, EnumSet<FactionEnum> factions,
 			WorldManager world, String resource, String ragdollResource, 
 			DifficultyEnum difficulty, AIWorld aiWorld, boolean vendor,
-			LinkedList<Weapon> vendorWeapons, AssetManager sharedAssets) {
+			LinkedList<Weapon> vendorWeapons) {
 		super(name, guns, inventory, stats, currentGun, cash, level, xp, 
-				faction, factions, resource, ragdollResource, sharedAssets);
+				faction, factions, resource, ragdollResource);
 		this.difficulty = difficulty;
 		this.vendor = vendor;
 		this.vendorWeapons = vendorWeapons;
@@ -62,8 +62,8 @@ public class NPC extends Being {
 	}
 	
 	@Override public void render(float dt, World world, SpriteBatch spriteBatch, 
-			GDXRenderer gdxRenderer, IDeathCallback callback){
-		super.render(dt, world, spriteBatch, gdxRenderer, callback);
+			AssetManager sharedAssets, GDXRenderer gdxRenderer, IDeathCallback callback){
+		super.render(dt, world, spriteBatch, sharedAssets, gdxRenderer, callback);
 		if(!dead)
 			btExecutor.tick();
 	}

@@ -2,6 +2,8 @@ package com.blastedstudios.ledge.world.being.component.renderweapon;
 
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
+import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
@@ -17,10 +19,12 @@ import com.blastedstudios.ledge.world.weapon.shot.GunShot;
 public class RenderWeaponComponent extends AbstractComponent {
 	private transient Sprite weaponSprite;
 
-	@Override public void render(float dt, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, boolean facingLeft) {
-		if(gdxRenderer != null && being.getEquippedWeapon() != null){
+	@Override public void render(float dt, SpriteBatch spriteBatch, AssetManager sharedAssets,
+			GDXRenderer renderer, boolean facingLeft) {
+		if(being.getEquippedWeapon() != null){
 			if(weaponSprite == null){
-				weaponSprite = new Sprite(gdxRenderer.getTexture(being.getEquippedWeapon().getResource() + ".png"));
+				String path = "data/textures/weapons/" + being.getEquippedWeapon().getResource() + ".png";
+				weaponSprite = new Sprite(sharedAssets.get(path, Texture.class));
 				float scale = being.getEquippedWeapon() instanceof Melee ? 
 						GunShot.getWeaponRenderScale() : Properties.getFloat("ragdoll.custom.scale");
 				weaponSprite.setScale(scale);

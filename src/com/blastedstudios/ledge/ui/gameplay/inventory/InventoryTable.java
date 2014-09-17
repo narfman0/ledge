@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
@@ -15,7 +16,6 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
-import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunButton.IButtonClicked;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunInformationWindow.IWeaponInfoListener;
@@ -28,20 +28,20 @@ public class InventoryTable extends Table implements IButtonClicked, IWeaponInfo
 	private final Sprite noGun;
 	private final Table gunsTable, inventoryTable;
 	final List<Weapon> guns, inventory;
-	private final GDXRenderer renderer;
+	private final AssetManager sharedAssets;
 	private final Skin skin;
 	private Weapon lastClicked = null;
 	private final Being being;
 	private final IButtonClicked informationWindowListener;
 	
 	public InventoryTable(final Skin skin, final Being being, final ChangeListener listener,
-			final GDXRenderer renderer, IButtonClicked informationWindowListener){
+			final AssetManager sharedAssets, IButtonClicked informationWindowListener){
 		setColor(MainScreen.WINDOW_ALPHA_COLOR);
-		this.renderer = renderer;
+		this.sharedAssets = sharedAssets;
 		this.skin = skin;
 		this.being = being;
 		this.informationWindowListener = informationWindowListener;
-		noGun = GunButton.createGunSprite(renderer, "nogun");
+		noGun = GunButton.createGunSprite(sharedAssets, "nogun");
 		gunsTable = new Table();
 		inventoryTable = new Table();
 		guns = new ArrayList<>(being.getGuns());
@@ -73,7 +73,7 @@ public class InventoryTable extends Table implements IButtonClicked, IWeaponInfo
 		gunsTable.clear();
 		for(int i=0; i<GUNS_PER_ROW; i++){
 			if(guns.size() > i)
-				gunsTable.add(new GunButton(skin, renderer, guns.get(i), this));
+				gunsTable.add(new GunButton(skin, sharedAssets, guns.get(i), this));
 			else
 				gunsTable.add(new ImageButton(new SpriteDrawable(noGun)));
 			gunsTable.row();
@@ -86,7 +86,7 @@ public class InventoryTable extends Table implements IButtonClicked, IWeaponInfo
 			for(int x=0; x < GUNS_PER_ROW; x++){
 				if(inventory.size() > x+y*GUNS_PER_ROW){
 					final Weapon gun = inventory.get(x+y*GUNS_PER_ROW);
-					inventoryTable.add(new GunButton(skin, renderer, gun, this));
+					inventoryTable.add(new GunButton(skin, sharedAssets, gun, this));
 				}else
 					inventoryTable.add(new ImageButton(new SpriteDrawable(noGun)));
 			}

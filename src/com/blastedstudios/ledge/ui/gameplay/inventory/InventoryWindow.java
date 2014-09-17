@@ -1,6 +1,7 @@
 package com.blastedstudios.ledge.ui.gameplay.inventory;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
@@ -11,7 +12,6 @@ import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener.ChangeEvent;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.blastedstudios.gdxworld.ui.AbstractWindow;
-import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunButton.IButtonClicked;
 import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.world.being.Being;
@@ -31,13 +31,13 @@ public class InventoryWindow extends AbstractWindow implements IButtonClicked {
 	private GunInformationWindow gunInformationWindow;
 
 	public InventoryWindow(final Skin skin, final Being being, final ChangeListener listener,
-			final GDXRenderer renderer, final Stage stage, boolean canSell){
+			final AssetManager sharedAssets, final Stage stage, boolean canSell){
 		super("", skin);
 		setColor(MainScreen.WINDOW_ALPHA_COLOR);
 		this.skin = skin;
 		this.stage = stage;
 		this.canSell = canSell;
-		inventoryTable = new InventoryTable(skin, being, listener, renderer, this);
+		inventoryTable = new InventoryTable(skin, being, listener, sharedAssets, this);
 		final Button acceptButton = new TextButton("Accept", skin);
 		acceptButton.addListener(new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {

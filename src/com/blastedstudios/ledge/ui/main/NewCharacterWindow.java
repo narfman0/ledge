@@ -44,7 +44,7 @@ class NewCharacterWindow extends Window{
 						WeaponFactory.getGuns(npcData.get("Weapons")), new ArrayList<Weapon>(), 
 						Stats.parseNPCData(npcData),
 						0,0,1,0, FactionEnum.FRIEND, EnumSet.of(FactionEnum.FRIEND), 
-						"player", sharedAssets);
+						"player");
 				game.pushScreen(new OverworldScreen(game, player, gdxWorld, worldFile, gdxRenderer, sharedAssets));
 			}
 		});

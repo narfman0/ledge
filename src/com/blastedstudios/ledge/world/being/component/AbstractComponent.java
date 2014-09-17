@@ -1,5 +1,6 @@
 package com.blastedstudios.ledge.world.being.component;
 
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.World;
@@ -25,7 +26,8 @@ public abstract class AbstractComponent implements IComponent{
 		return null;
 	}
 	
-	public void render(float dt, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, boolean facingLeft){}
+	public void render(float dt, SpriteBatch spriteBatch, AssetManager sharedAssets,
+			GDXRenderer gdxRenderer, boolean facingLeft){}
 	public void receivedDamage(DamageStruct damage){}
 	public void dash(boolean right){}
 	public void setFixedRotation(boolean fixedRotation){}

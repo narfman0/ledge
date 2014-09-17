@@ -6,6 +6,7 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.GDXGame;
@@ -29,6 +30,9 @@ public class MainScreen extends AbstractScreen implements IMainWindowListener, I
 	public MainScreen(final GDXGame game){
 		super(game, SKIN_PATH);
 		loadAssetsRecursive(sharedAssets, Gdx.files.internal("data/sounds"), Sound.class);
+		loadAssetsRecursive(sharedAssets, Gdx.files.internal("data/textures/ammo"), Texture.class);
+		loadAssetsRecursive(sharedAssets, Gdx.files.internal("data/textures/weapons"), Texture.class);
+		sharedAssets.load("data/textures/" + gdxWorld.getWorldProperties().get("background"), Texture.class);
 		gdxRenderer = new GDXRenderer(true, true);
 		stage.addActor(mainWindow = new MainWindow(skin, game, this, gdxWorld, WORLD_FILE, gdxRenderer, sharedAssets));
 		panner = new ScreenLevelPanner(gdxWorld, gdxRenderer);

@@ -226,7 +226,7 @@ public class GameplayScreen extends AbstractScreen {
 					};
 					stage.addActor(characterWindow = new CharacterWindow(skin, worldManager.getPlayer(), listener));
 					stage.addActor(inventoryWindow = new InventoryWindow(skin, 
-							worldManager.getPlayer(), listener, gdxRenderer, stage, false));
+							worldManager.getPlayer(), listener, worldManager.getSharedAssets(), stage, false));
 					worldManager.pause(true);
 				}else
 					cleanCharacterWindows();
@@ -256,9 +256,9 @@ public class GameplayScreen extends AbstractScreen {
 							}
 						};
 						stage.addActor(vendorWindow = new VendorWindow(skin, npc, stage, worldManager.getPlayer(),
-								worldManager.getWorld(), listener, gdxRenderer));
+								worldManager.getWorld(), listener, worldManager.getSharedAssets()));
 						stage.addActor(inventoryWindow = new InventoryWindow(skin, 
-								worldManager.getPlayer(), listener, gdxRenderer, stage, true));
+								worldManager.getPlayer(), listener, worldManager.getSharedAssets(), stage, true));
 						worldManager.pause(true);
 					}
 				}

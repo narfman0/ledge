@@ -94,9 +94,9 @@ public class WorldManager implements IDeathCallback{
 		spriteBatch.setProjectionMatrix(cam.combined);
 		spriteBatch.begin();
 		if(player.isSpawned())
-			player.render(dt, world, spriteBatch, gdxRenderer, this);
+			player.render(dt, world, spriteBatch, sharedAssets, gdxRenderer, this);
 		for(NPC npc : npcs)
-			npc.render(dt, world, spriteBatch, gdxRenderer, this);
+			npc.render(dt, world, spriteBatch, sharedAssets, gdxRenderer, this);
 		for(Iterator<Entry<Body, GunShot>> iter = gunshots.entrySet().iterator(); iter.hasNext();){
 			Entry<Body, GunShot> entry = iter.next();
 			entry.getValue().render(dt, spriteBatch, gdxRenderer, entry.getKey(), this);
@@ -254,7 +254,7 @@ public class WorldManager implements IDeathCallback{
 				new ArrayList<Weapon>(), Stats.parseNPCData(npcData), 0, cash, 
 				npcLevel, xp, npcData.get("Behavior"), level.getPath(npcData.get("Path")),
 				faction, factions, this, npcData.get("Resource"), npcData.get("RagdollResource"),
-				difficulty, aiWorld, npcData.getBool("Vendor"), vendorWeapons, sharedAssets);
+				difficulty, aiWorld, npcData.getBool("Vendor"), vendorWeapons);
 		npc.aim(npcData.getFloat("Aim"));
 		npcs.add(npc);
 		npc.respawn(world, coordinates.x, coordinates.y);

@@ -22,13 +22,13 @@ public class Player extends Being {
 
 	public Player(String name, List<Weapon> guns, List<Weapon> inventory, Stats stats, int currentGun,
 			int cash, int level, int xp, FactionEnum faction,
-			EnumSet<FactionEnum> factions, String resource, AssetManager sharedAssets) {
-		super(name, guns, inventory, stats, currentGun, cash, level, xp, faction, factions, resource, null, sharedAssets);
+			EnumSet<FactionEnum> factions, String resource) {
+		super(name, guns, inventory, stats, currentGun, cash, level, xp, faction, factions, resource, null);
 	}
 	
 	@Override public void render(float dt, World world, SpriteBatch spriteBatch, 
-			GDXRenderer gdxRenderer, IDeathCallback deathCallback){
-		super.render(dt, world, spriteBatch, gdxRenderer, deathCallback);
+			AssetManager sharedAssets, GDXRenderer gdxRenderer, IDeathCallback deathCallback){
+		super.render(dt, world, spriteBatch, sharedAssets, gdxRenderer, deathCallback);
 		questManager.tick();
 	}
 

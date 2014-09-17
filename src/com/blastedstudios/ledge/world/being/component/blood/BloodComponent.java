@@ -7,6 +7,7 @@ import java.util.Random;
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.ParticleEmitter;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -21,7 +22,8 @@ public class BloodComponent extends AbstractComponent {
 	private static final long BLOOD_TIME = Properties.getInt("character.blood.time", 10000);
 	private transient LinkedList<BloodStruct> blood = new LinkedList<>();
 	
-	@Override public void render(float dt, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, boolean facingLeft){
+	@Override public void render(float dt, SpriteBatch spriteBatch, AssetManager sharedAssets,
+			GDXRenderer gdxRenderer, boolean facingLeft){
 		for(Iterator<BloodStruct> iter = blood.iterator(); iter.hasNext();){
 			BloodStruct current = iter.next();
 			current.effect.draw(spriteBatch, dt);

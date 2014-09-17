@@ -9,6 +9,7 @@ import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
@@ -48,7 +49,9 @@ public class OverworldScreen extends AbstractScreen{
 		Gdx.app.log("OverworldScreen.<init>", "Loaded world successfully");
 		levelSprite = skin.getSprite("overworld-level");
 		levelCurrentSprite = skin.getSprite("overworld-current");
-		backgroundSprite = new Sprite(gdxRenderer.getTexture(gdxWorld.getWorldProperties().get("background")));
+		String backgroundPath = "data/textures/" + gdxWorld.getWorldProperties().get("background");
+		sharedAssets.finishLoading();
+		backgroundSprite = new Sprite(sharedAssets.get(backgroundPath, Texture.class));
 		backgroundSprite.setPosition(backgroundSprite.getWidth()/-2f, backgroundSprite.getHeight()/-2f);
 		for(GDXLevel level : gdxWorld.getLevels())
 			if(level.getCoordinates().x < upperLeft.x)
@@ -69,6 +72,7 @@ public class OverworldScreen extends AbstractScreen{
 
 	@Override public void render(float delta){
 		super.render(delta);
+		sharedAssets.update();
 		tweenManager.update(delta);
 		camera.update();
 		if(Gdx.input.isKeyPressed(Keys.UP) && upperLeft.y > camera.position.y)

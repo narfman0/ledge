@@ -44,7 +44,6 @@ public class Being implements Serializable{
 			MAX_VELOCITY = Properties.getFloat("character.velocity.max", 7f);
 	private static final HashMap<BodyPart,Float> bodypartDmgMap = new HashMap<>();
 	private final HashMap<AmmoTypeEnum,Integer> ammo = new HashMap<>();
-	private final AssetManager sharedAssets;
 	protected transient boolean jump, moveRight, moveLeft, dead, reloading, invulnerable;
 	protected transient IRagdoll ragdoll = null;
 	private transient long reloadStartTime;
@@ -61,11 +60,11 @@ public class Being implements Serializable{
 	private transient DamageStruct lastDamage;
 	private transient Random random;
 	private transient List<IComponent> listeners;
+	private transient AssetManager sharedAssets;
 
 	public Being(String name, List<Weapon> guns, List<Weapon> inventory, Stats stats,
 			int currentWeapon, int cash, int level, int xp, FactionEnum faction,
-			EnumSet<FactionEnum> factions, String resource, String ragdollResource,
-			AssetManager sharedAssets){
+			EnumSet<FactionEnum> factions, String resource, String ragdollResource){
 		this.name = name;
 		this.guns = guns;
 		this.inventory = inventory;
@@ -78,7 +77,6 @@ public class Being implements Serializable{
 		this.resource = resource;
 		this.stats = stats;
 		this.ragdollResource = ragdollResource;
-		this.sharedAssets = sharedAssets;
 		for(AmmoTypeEnum ammoType : AmmoTypeEnum.values()){
 			for(Weapon weapon : guns)
 				if(weapon instanceof Gun && ((Gun)weapon).getAmmoType() == ammoType)
@@ -90,13 +88,15 @@ public class Being implements Serializable{
 			initializeBodypartDmgMap();
 	}
 
-	public void render(float dt, World world, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, IDeathCallback deathCallback){
+	public void render(float dt, World world, SpriteBatch spriteBatch, AssetManager sharedAssets,
+			GDXRenderer gdxRenderer, IDeathCallback deathCallback){
+		this.sharedAssets = sharedAssets;
 		Vector2 vel = ragdoll.getLinearVelocity();
 		
 		ragdoll.render(spriteBatch, dead, isGrounded(world), moveLeft || moveRight, vel.x);
 		boolean facingLeft = !isDead() && ragdoll.aim(lastGunHeadingRadians);
 		for(IComponent component : getListeners())
-			component.render(dt, spriteBatch, gdxRenderer, facingLeft);
+			component.render(dt, spriteBatch, sharedAssets, gdxRenderer, facingLeft);
 		if(!dead && hp <= 0 && deathCallback != null)
 			deathCallback.dead(this);
 		if(dead)
@@ -469,7 +469,8 @@ public class Being implements Serializable{
 
 	public void setReloading(boolean reloading) {
 		if(!this.reloading && reloading){
-			sharedAssets.get("data/sounds/guns/reload.mp3", Sound.class).play();
+			if(sharedAssets != null)
+				sharedAssets.get("data/sounds/guns/reload.mp3", Sound.class).play();
 			reloadStartTime = System.currentTimeMillis();
 			Gdx.app.log("Being.setReloading", name + " began reloading");
 			for(IComponent component : getListeners())
