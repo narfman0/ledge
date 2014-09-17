@@ -18,7 +18,6 @@
 	<classpathentry kind="lib" path="/GDXWorld/lib/gdx-box2d.jar"/>
 	<classpathentry kind="lib" path="/GDXWorld/lib/gdx-box2d-natives.jar"/>
 	<classpathentry kind="lib" path="/GDXWorld/lib/gdx-natives.jar"/>
-	<classpathentry kind="lib" path="/GDXWorld/lib/gdx-openal.jar"/>
 	<classpathentry kind="lib" path="/GDXWorld/lib/gdx.jar"/>
 	<classpathentry kind="lib" path="/GDXWorld/lib/jspf.core-1.0.2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>

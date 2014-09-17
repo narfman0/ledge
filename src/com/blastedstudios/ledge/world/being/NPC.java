@@ -11,6 +11,7 @@ import jbt.execution.core.IBTLibrary;
 import jbt.execution.core.IContext;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
@@ -39,9 +40,9 @@ public class NPC extends Being {
 			GDXPath path, FactionEnum faction, EnumSet<FactionEnum> factions,
 			WorldManager world, String resource, String ragdollResource, 
 			DifficultyEnum difficulty, AIWorld aiWorld, boolean vendor,
-			LinkedList<Weapon> vendorWeapons) {
+			LinkedList<Weapon> vendorWeapons, AssetManager sharedAssets) {
 		super(name, guns, inventory, stats, currentGun, cash, level, xp, 
-				faction, factions, resource, ragdollResource);
+				faction, factions, resource, ragdollResource, sharedAssets);
 		this.difficulty = difficulty;
 		this.vendor = vendor;
 		this.vendorWeapons = vendorWeapons;

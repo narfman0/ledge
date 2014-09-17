@@ -1,6 +1,7 @@
 package com.blastedstudios.ledge.ui.main;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
@@ -18,7 +19,8 @@ import com.blastedstudios.ledge.world.being.Player;
 
 class MainWindow extends Window{
 	public MainWindow(final Skin skin, final GDXGame game, final IMainWindowListener listener, 
-			final GDXWorld gdxWorld, final FileHandle worldFile, final GDXRenderer gdxRenderer) {
+			final GDXWorld gdxWorld, final FileHandle worldFile, final GDXRenderer gdxRenderer,
+			final AssetManager sharedAssets) {
 		super("", skin);
 		setColor(MainScreen.WINDOW_ALPHA_COLOR);
 		final Button newCharacterButton = new TextButton("Create New", skin);
@@ -41,7 +43,7 @@ class MainWindow extends Window{
 			final Button savedCharacterButton = new TextButton(being.getName(), skin);
 			savedCharacterButton.addListener(new ClickListener() {
 				@Override public void clicked(InputEvent event, float x, float y) {
-					game.pushScreen(new OverworldScreen(game, being, gdxWorld, worldFile, gdxRenderer));
+					game.pushScreen(new OverworldScreen(game, being, gdxWorld, worldFile, gdxRenderer, sharedAssets));
 				}
 			});
 			add(savedCharacterButton).fillX();

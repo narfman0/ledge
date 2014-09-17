@@ -17,6 +17,7 @@ import com.blastedstudios.gdxworld.plugin.quest.manifestation.endlevel.IEndLevel
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.inputenable.IInputEnableHandler;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.particle.IParticleHandler;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.pause.IPauseHandler;
+import com.blastedstudios.gdxworld.plugin.quest.manifestation.sound.ISoundHandler;
 import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.world.GDXPath;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
@@ -27,6 +28,7 @@ import com.blastedstudios.ledge.plugin.quest.handler.EndLevelHandlerPlugin;
 import com.blastedstudios.ledge.plugin.quest.handler.InputEnableHandlerPlugin;
 import com.blastedstudios.ledge.plugin.quest.handler.ParticleHandlerPlugin;
 import com.blastedstudios.ledge.plugin.quest.handler.PauseHandlerPlugin;
+import com.blastedstudios.ledge.plugin.quest.handler.SoundHandlerPlugin;
 import com.blastedstudios.ledge.plugin.quest.manifestation.cameratween.CameraAccessor;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
 import com.blastedstudios.ledge.world.being.Being;
@@ -57,6 +59,8 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 			((InputEnableHandlerPlugin)handler).setWorldManager(worldManager);
 		for(IPauseHandler handler : PluginUtil.getPlugins(IPauseHandler.class))
 			((PauseHandlerPlugin)handler).setWorldManager(worldManager);
+		for(ISoundHandler handler : PluginUtil.getPlugins(ISoundHandler.class))
+			((SoundHandlerPlugin)handler).setWorldManager(worldManager);
 	}
 
 	@Override public Joint getPhysicsJoint(String name) {

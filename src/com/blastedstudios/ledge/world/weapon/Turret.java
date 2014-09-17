@@ -56,7 +56,8 @@ public class Turret {
 	
 	public void shoot(Being source, WorldManager worldManager){
 		if(gun.canAttack())
-			gun.shoot(source, random, new Vector2((float)Math.cos(direction), (float)Math.sin(direction)), worldManager, location);
+			gun.shoot(source, random, new Vector2((float)Math.cos(direction), (float)Math.sin(direction)),
+					worldManager, location);
 		if(gun.getCurrentRounds() <= 0 && reloadTime == 0l)
 			reloadTime = System.currentTimeMillis() + (long)gun.getReloadSpeed();
 	}

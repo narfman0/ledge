@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
@@ -21,8 +22,8 @@ public class Player extends Being {
 
 	public Player(String name, List<Weapon> guns, List<Weapon> inventory, Stats stats, int currentGun,
 			int cash, int level, int xp, FactionEnum faction,
-			EnumSet<FactionEnum> factions, String resource) {
-		super(name, guns, inventory, stats, currentGun, cash, level, xp, faction, factions, resource, null);
+			EnumSet<FactionEnum> factions, String resource, AssetManager sharedAssets) {
+		super(name, guns, inventory, stats, currentGun, cash, level, xp, faction, factions, resource, null, sharedAssets);
 	}
 	
 	@Override public void render(float dt, World world, SpriteBatch spriteBatch, 

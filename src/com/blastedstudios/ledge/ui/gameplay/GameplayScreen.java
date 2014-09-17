@@ -6,6 +6,7 @@ import box2dLight.RayHandler;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -63,20 +64,23 @@ public class GameplayScreen extends AbstractScreen {
 	private Vector2 touchedDirection;
 	private final TiledMeshRenderer tiledMeshRenderer;
 	private final SpriteBatch spriteBatch = new SpriteBatch();
+	private final AssetManager sharedAssets;
 	private GDXLevel nextLevel = null;
 	
-	public GameplayScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world, FileHandle selectedFile, final GDXRenderer gdxRenderer){
+	public GameplayScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world,
+			FileHandle selectedFile, final GDXRenderer gdxRenderer, AssetManager sharedAssets){
 		super(game, MainScreen.SKIN_PATH);
 		this.level = level;
 		this.world = world;
 		this.selectedFile = selectedFile;
 		this.gdxRenderer = gdxRenderer;
+		this.sharedAssets = sharedAssets;
 		hud = new HUD(skin, player);
 		dialogManager = new DialogManager(skin);
 		particleManager = new ParticleManager();
 		for(GDXParticle particle : level.getParticles())
 			particleManager.addParticle(particle);
-		worldManager = new WorldManager(player, level);
+		worldManager = new WorldManager(player, level, sharedAssets);
 		player.getQuestManager().initialize(new QuestTriggerInformationProvider(this, worldManager), 
 				new QuestManifestationExecutor(this, worldManager));
 		player.getQuestManager().setCurrentLevel(level);
@@ -92,6 +96,10 @@ public class GameplayScreen extends AbstractScreen {
 		renderer = new Box2DDebugRenderer();
 		rayHandler = worldManager.getCreateLevelStruct().lights.rayHandler;
 		tiledMeshRenderer = new TiledMeshRenderer(gdxRenderer, level.getPolygons());
+		if(sharedAssets.getQueuedAssets() > 0){
+			Gdx.app.log("GameplayScreen.<init>", "Shared assets finishing loading");
+			sharedAssets.finishLoading();
+		}
 	}
 
 	@Override public void render(float delta) {
@@ -128,7 +136,7 @@ public class GameplayScreen extends AbstractScreen {
 			worldManager.getPlayer().attack(touchedDirection, worldManager);
 		if(nextLevel != null)
 			game.pushScreen(new GameplayScreen(getGame(), worldManager.getPlayer(),
-					nextLevel, world, selectedFile, gdxRenderer));
+					nextLevel, world, selectedFile, gdxRenderer, sharedAssets));
 	}
 	
 	public void levelComplete(boolean success, String nextLevel){

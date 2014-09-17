@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
@@ -27,7 +28,8 @@ import com.blastedstudios.ledge.world.weapon.WeaponFactory;
 class NewCharacterWindow extends Window{
 	public NewCharacterWindow(final Skin skin, final GDXGame game, 
 			final INewCharacterWindowListener listener, final GDXWorld gdxWorld, 
-			final FileHandle worldFile, final GDXRenderer gdxRenderer) {
+			final FileHandle worldFile, final GDXRenderer gdxRenderer,
+			final AssetManager sharedAssets) {
 		super("", skin);
 		setColor(MainScreen.WINDOW_ALPHA_COLOR);
 		final TextField nameField = new TextField("", skin);
@@ -42,8 +44,8 @@ class NewCharacterWindow extends Window{
 						WeaponFactory.getGuns(npcData.get("Weapons")), new ArrayList<Weapon>(), 
 						Stats.parseNPCData(npcData),
 						0,0,1,0, FactionEnum.FRIEND, EnumSet.of(FactionEnum.FRIEND), 
-						"player");
-				game.pushScreen(new OverworldScreen(game, player, gdxWorld, worldFile, gdxRenderer));
+						"player", sharedAssets);
+				game.pushScreen(new OverworldScreen(game, player, gdxWorld, worldFile, gdxRenderer, sharedAssets));
 			}
 		});
 		backButton.addListener(new ClickListener() {

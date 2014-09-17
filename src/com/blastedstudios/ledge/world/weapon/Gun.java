@@ -4,6 +4,7 @@ import java.util.Random;
 
 import net.xeoh.plugins.base.Plugin;
 
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.blastedstudios.gdxworld.util.PluginUtil;
@@ -58,7 +59,8 @@ public class Gun extends Weapon {
 		return name + ": " + currentRounds + "/" + rightHandSide;
 	}
 	
-	public void shoot(Being source, Random random, Vector2 direction, WorldManager world, Vector2 position){
+	public void shoot(Being source, Random random, Vector2 direction,
+			WorldManager world, Vector2 position){
 		currentRounds -= 1;
 		lastFireTime = System.currentTimeMillis();
 		for(int i=0; i<getProjectileCount(); i++){
@@ -69,7 +71,7 @@ public class Gun extends Weapon {
 			world.getGunshots().put(body, gunshot);
 		}
 		for(IGunListener listener : PluginUtil.getPlugins(IGunListener.class))
-			listener.shoot(this, source, random, direction, world, position);
+			listener.shoot(this, source, random, direction, world, position, world.getSharedAssets());
 	}
 	
 	@Override public boolean canAttack(){
@@ -77,7 +79,8 @@ public class Gun extends Weapon {
 	}
 	
 	public static interface IGunListener extends Plugin{
-		void shoot(Gun gun, Being source, Random random, Vector2 direction, WorldManager world, Vector2 origin);
+		void shoot(Gun gun, Being source, Random random, Vector2 direction,
+				WorldManager world, Vector2 origin, AssetManager sharedAssets);
 		void setCurrentRounds(Gun gun, int currentRounds);
 	}
 }

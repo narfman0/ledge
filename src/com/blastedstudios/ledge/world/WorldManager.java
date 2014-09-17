@@ -15,6 +15,7 @@ import java.util.Map.Entry;
 import aurelienribon.tweenengine.TweenManager;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
@@ -67,12 +68,14 @@ public class WorldManager implements IDeathCallback{
 	private final LinkedList<Turret> turrets = new LinkedList<>();
 	private final AIWorld aiWorld;
 	private final TweenManager tweenManager;
+	private final AssetManager sharedAssets;
 	private boolean pause, inputEnable = true;
 	private final Random random;
 	
-	public WorldManager(Player player, GDXLevel level){
+	public WorldManager(Player player, GDXLevel level, AssetManager sharedAssets){
 		this.player = player;
 		this.level = level;
+		this.sharedAssets = sharedAssets;
 		random = new Random();
 		tweenManager = new TweenManager();
 		dropManager = new DropManager();
@@ -103,7 +106,7 @@ public class WorldManager implements IDeathCallback{
 		for(Turret turret : turrets)
 			turret.render(dt, spriteBatch, gdxRenderer, this);
 		if(player.isSpawned())
-			dropManager.render(player, world, spriteBatch, gdxRenderer);
+			dropManager.render(player, world, spriteBatch, gdxRenderer, sharedAssets);
 		renderTransferredParticles(dt);
 		spriteBatch.end();
 		if(Properties.getBool("world.debug.draw", false))
@@ -251,7 +254,7 @@ public class WorldManager implements IDeathCallback{
 				new ArrayList<Weapon>(), Stats.parseNPCData(npcData), 0, cash, 
 				npcLevel, xp, npcData.get("Behavior"), level.getPath(npcData.get("Path")),
 				faction, factions, this, npcData.get("Resource"), npcData.get("RagdollResource"),
-				difficulty, aiWorld, npcData.getBool("Vendor"), vendorWeapons);
+				difficulty, aiWorld, npcData.getBool("Vendor"), vendorWeapons, sharedAssets);
 		npc.aim(npcData.getFloat("Aim"));
 		npcs.add(npc);
 		npc.respawn(world, coordinates.x, coordinates.y);
@@ -349,5 +352,9 @@ public class WorldManager implements IDeathCallback{
 
 	public Random getRandom() {
 		return random;
+	}
+
+	public AssetManager getSharedAssets() {
+		return sharedAssets;
 	}
 }

@@ -2,6 +2,8 @@ package com.blastedstudios.ledge.ui.main;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
+import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.blastedstudios.gdxworld.ui.AbstractScreen;
@@ -19,19 +21,22 @@ public class MainScreen extends AbstractScreen implements IMainWindowListener, I
 	private static final FileHandle WORLD_FILE = Gdx.files.internal("data/world/" + Properties.get("world.path", "world.xml"));
 	private final GDXWorld gdxWorld = GDXWorld.load(WORLD_FILE);
 	private final GDXRenderer gdxRenderer;
+	private final AssetManager sharedAssets = new AssetManager();
 	private NewCharacterWindow newCharacterWindow;
 	private MainWindow mainWindow;
 	private ScreenLevelPanner panner;
 
 	public MainScreen(final GDXGame game){
 		super(game, SKIN_PATH);
+		loadAssetsRecursive(sharedAssets, Gdx.files.internal("data/sounds"), Sound.class);
 		gdxRenderer = new GDXRenderer(true, true);
-		stage.addActor(mainWindow = new MainWindow(skin, game, this, gdxWorld, WORLD_FILE, gdxRenderer));
+		stage.addActor(mainWindow = new MainWindow(skin, game, this, gdxWorld, WORLD_FILE, gdxRenderer, sharedAssets));
 		panner = new ScreenLevelPanner(gdxWorld, gdxRenderer);
 	}
 
 	@Override public void render(float delta){
 		super.render(delta);
+		sharedAssets.update();
 		panner.render();
 		stage.draw();
 		
@@ -48,11 +53,29 @@ public class MainScreen extends AbstractScreen implements IMainWindowListener, I
 
 	@Override public void newCharacterButtonClicked() {
 		mainWindow.remove();
-		stage.addActor(newCharacterWindow = new NewCharacterWindow(skin, game, this, gdxWorld, WORLD_FILE, gdxRenderer));
+		stage.addActor(newCharacterWindow = new NewCharacterWindow(skin, game, this, gdxWorld, WORLD_FILE,
+				gdxRenderer, sharedAssets));
 	}
 
 	@Override public void backButtonClicked() {
 		newCharacterWindow.remove();
-		stage.addActor(mainWindow = new MainWindow(skin, game, this, gdxWorld, WORLD_FILE, gdxRenderer));
+		stage.addActor(mainWindow = new MainWindow(skin, game, this, gdxWorld, WORLD_FILE, gdxRenderer, sharedAssets));
+	}
+	
+	public static <T> void loadAssetsRecursive(AssetManager assets, FileHandle path, Class<T> type){
+		for(FileHandle file : path.list()){
+			if(file.isDirectory())
+				loadAssetsRecursive(assets, file, type);
+			else{
+				try{
+					assets.load(file.path(), type);
+					Gdx.app.debug("MainScreen.loadAssetsRecursive", "Success loading asset path: " +
+							path.path() + " as " + type.getCanonicalName());
+				}catch(Exception e){
+					Gdx.app.debug("MainScreen.loadAssetsRecursive", "Failed to load asset path: " +
+							path.path() + " as " + type.getCanonicalName());
+				}
+			}
+		}
 	}
 }

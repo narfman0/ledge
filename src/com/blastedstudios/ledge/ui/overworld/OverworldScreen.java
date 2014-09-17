@@ -6,6 +6,7 @@ import aurelienribon.tweenengine.equations.Cubic;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.Sprite;
@@ -34,13 +35,16 @@ public class OverworldScreen extends AbstractScreen{
 	private final FileHandle worldFile;
 	private final GDXRenderer gdxRenderer;
 	private final TweenManager tweenManager;
+	private final AssetManager sharedAssets;
 
-	public OverworldScreen(GDXGame game, Player player, GDXWorld gdxWorld, FileHandle worldFile, GDXRenderer gdxRenderer){
+	public OverworldScreen(GDXGame game, Player player, GDXWorld gdxWorld, FileHandle worldFile,
+			GDXRenderer gdxRenderer, AssetManager sharedAssets){
 		super(game, MainScreen.SKIN_PATH);
 		this.player = player;
 		this.gdxWorld = gdxWorld;
 		this.worldFile = worldFile;
 		this.gdxRenderer = gdxRenderer;
+		this.sharedAssets = sharedAssets;
 		Gdx.app.log("OverworldScreen.<init>", "Loaded world successfully");
 		levelSprite = skin.getSprite("overworld-level");
 		levelCurrentSprite = skin.getSprite("overworld-current");
@@ -57,7 +61,7 @@ public class OverworldScreen extends AbstractScreen{
 				lowerRight.y = level.getCoordinates().y;
 		GDXLevel firstLevel = gdxWorld.getLevels().get(0);
 		stage.addActor(levelInfo = new LevelInformationWindow(skin, 
-				firstLevel, game, player, gdxWorld, worldFile, gdxRenderer));
+				firstLevel, game, player, gdxWorld, worldFile, gdxRenderer, sharedAssets));
 		levelCurrentSprite.setPosition(firstLevel.getCoordinates().x*OFFSET_SCALAR, firstLevel.getCoordinates().y*OFFSET_SCALAR);
 		tweenManager = new TweenManager();
 		Tween.registerAccessor(Sprite.class, new SpriteTweenAccessor());
@@ -115,7 +119,7 @@ public class OverworldScreen extends AbstractScreen{
 				if(levelInfo != null)
 					levelInfo.remove();
 				stage.addActor(levelInfo = new LevelInformationWindow(skin, 
-						level, game, player, gdxWorld, worldFile, gdxRenderer));
+						level, game, player, gdxWorld, worldFile, gdxRenderer, sharedAssets));
 				float duration = Properties.getFloat("overworld.tween.duration", .5f);
 				Tween.to(levelCurrentSprite, SpriteTweenAccessor.POSITION_XY, duration).
 					target(level.getCoordinates().x*OFFSET_SCALAR, level.getCoordinates().y*OFFSET_SCALAR).

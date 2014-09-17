@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Random;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -15,7 +17,6 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Contact;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
-import com.blastedstudios.gdxworld.plugin.mode.sound.SoundManager;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.FileUtil;
 import com.blastedstudios.gdxworld.util.PluginUtil;
@@ -43,6 +44,7 @@ public class Being implements Serializable{
 			MAX_VELOCITY = Properties.getFloat("character.velocity.max", 7f);
 	private static final HashMap<BodyPart,Float> bodypartDmgMap = new HashMap<>();
 	private final HashMap<AmmoTypeEnum,Integer> ammo = new HashMap<>();
+	private final AssetManager sharedAssets;
 	protected transient boolean jump, moveRight, moveLeft, dead, reloading, invulnerable;
 	protected transient IRagdoll ragdoll = null;
 	private transient long reloadStartTime;
@@ -62,7 +64,8 @@ public class Being implements Serializable{
 
 	public Being(String name, List<Weapon> guns, List<Weapon> inventory, Stats stats,
 			int currentWeapon, int cash, int level, int xp, FactionEnum faction,
-			EnumSet<FactionEnum> factions, String resource, String ragdollResource){
+			EnumSet<FactionEnum> factions, String resource, String ragdollResource,
+			AssetManager sharedAssets){
 		this.name = name;
 		this.guns = guns;
 		this.inventory = inventory;
@@ -75,6 +78,7 @@ public class Being implements Serializable{
 		this.resource = resource;
 		this.stats = stats;
 		this.ragdollResource = ragdollResource;
+		this.sharedAssets = sharedAssets;
 		for(AmmoTypeEnum ammoType : AmmoTypeEnum.values()){
 			for(Weapon weapon : guns)
 				if(weapon instanceof Gun && ((Gun)weapon).getAmmoType() == ammoType)
@@ -465,7 +469,7 @@ public class Being implements Serializable{
 
 	public void setReloading(boolean reloading) {
 		if(!this.reloading && reloading){
-			SoundManager.getSound("reload").play();
+			sharedAssets.get("data/sounds/guns/reload.mp3", Sound.class).play();
 			reloadStartTime = System.currentTimeMillis();
 			Gdx.app.log("Being.setReloading", name + " began reloading");
 			for(IComponent component : getListeners())
