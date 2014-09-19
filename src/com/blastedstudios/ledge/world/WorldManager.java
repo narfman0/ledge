@@ -15,7 +15,6 @@ import java.util.Map.Entry;
 import aurelienribon.tweenengine.TweenManager;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
@@ -28,6 +27,7 @@ import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
+import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXLevel.CreateLevelReturnStruct;
@@ -68,11 +68,11 @@ public class WorldManager implements IDeathCallback{
 	private final LinkedList<Turret> turrets = new LinkedList<>();
 	private final AIWorld aiWorld;
 	private final TweenManager tweenManager;
-	private final AssetManager sharedAssets;
+	private final AssetManagerWrapper sharedAssets;
 	private boolean pause, inputEnable = true;
 	private final Random random;
 	
-	public WorldManager(Player player, GDXLevel level, AssetManager sharedAssets){
+	public WorldManager(Player player, GDXLevel level, AssetManagerWrapper sharedAssets){
 		this.player = player;
 		this.level = level;
 		this.sharedAssets = sharedAssets;
@@ -99,7 +99,7 @@ public class WorldManager implements IDeathCallback{
 			npc.render(dt, world, spriteBatch, sharedAssets, gdxRenderer, this);
 		for(Iterator<Entry<Body, GunShot>> iter = gunshots.entrySet().iterator(); iter.hasNext();){
 			Entry<Body, GunShot> entry = iter.next();
-			entry.getValue().render(dt, spriteBatch, gdxRenderer, entry.getKey(), this);
+			entry.getValue().render(dt, spriteBatch, sharedAssets, entry.getKey(), this);
 			if(entry.getValue().isCanRemove())
 				iter.remove();
 		}
@@ -125,9 +125,17 @@ public class WorldManager implements IDeathCallback{
 		return bodyArray;
 	}
 	
-	public static void drawTexture(SpriteBatch spriteBatch, GDXRenderer renderer, 
-			Body body, String textureName, float scale){
-		Texture texture = renderer.getTexture(textureName + ".png");
+	public static void drawTexture(SpriteBatch spriteBatch, Body body,
+			String textureName, float scale, AssetManagerWrapper... assetManagers){
+		Texture texture = null;
+		for(AssetManagerWrapper assetManager : assetManagers){
+			if(!textureName.endsWith("png"))
+				Gdx.app.error("WorldManager.drawTexture", "Texture must end with png: " + textureName);
+			if(assetManager.isLoaded(textureName))
+				texture = assetManager.getTexture(textureName);
+		}
+		if(texture == null)
+			Gdx.app.error("WorldManager.drawTexture", "Can't find texture: " + textureName);
 		Sprite sprite = new Sprite(texture);
 		sprite.setPosition(body.getWorldCenter().x - sprite.getWidth()/2, 
 				body.getWorldCenter().y - sprite.getHeight()/2);
@@ -354,7 +362,7 @@ public class WorldManager implements IDeathCallback{
 		return random;
 	}
 
-	public AssetManager getSharedAssets() {
+	public AssetManagerWrapper getSharedAssets() {
 		return sharedAssets;
 	}
 }

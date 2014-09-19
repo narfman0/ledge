@@ -8,8 +8,7 @@ import java.util.Random;
 import java.util.Map.Entry;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.assets.AssetManager;
-import com.badlogic.gdx.backends.lwjgl.audio.Mp3.Sound;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
@@ -17,6 +16,7 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.blastedstudios.gdxworld.physics.PhysicsHelper;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
+import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.weapon.AmmoTypeEnum;
@@ -33,7 +33,7 @@ public class DropManager {
 	private final Map<Body,AmmoDropStruct> droppedAmmo = new HashMap<>();
 
 	public void render(Being player, World world, SpriteBatch spriteBatch, GDXRenderer renderer,
-			AssetManager sharedAssets){
+			AssetManagerWrapper sharedAssets){
 		float scale = Properties.getFloat("ragdoll.custom.scale");
 		float impulseDistance = Properties.getFloat("drop.impulse.distance", 100f);
 		float impulseScale = Properties.getFloat("drop.impulse.scalar", .03f);
@@ -42,7 +42,8 @@ public class DropManager {
 		for(Entry<Body, Weapon> entry : droppedGuns.entrySet()){
 			Body dropBody = entry.getKey();
 			float distance = player.getPosition().dst2(dropBody.getPosition());
-			WorldManager.drawTexture(spriteBatch, renderer, dropBody, entry.getValue().getResource(), scale);
+			String gunPath = "data/textures/weapons/" + entry.getValue().getResource() + ".png";
+			WorldManager.drawTexture(spriteBatch, dropBody, gunPath, scale, sharedAssets);
 			if(distance < Properties.getFloat("drop.pickup.distance", .5f)){
 				player.receive(entry.getValue(), world);
 				world.destroyBody(dropBody);
@@ -61,10 +62,10 @@ public class DropManager {
 		for(Entry<Body, Integer> entry : droppedCash.entrySet()){
 			Body dropBody = entry.getKey();
 			float distance = player.getPosition().dst2(dropBody.getPosition());
-			WorldManager.drawTexture(spriteBatch, renderer, dropBody, "money", scale);
+			WorldManager.drawTexture(spriteBatch, dropBody, "data/textures/money.png", scale, sharedAssets);
 			if(distance < Properties.getFloat("drop.pickup.distance", .5f)){
 				player.addCash(entry.getValue());
-				sharedAssets.get("data/sounds/chaching.mp3", Sound.class).play();
+				sharedAssets.getSound("data/sounds/chaching.mp3").play();
 				world.destroyBody(dropBody);
 				cashDropRemoveList.add(dropBody);
 			}else if(distance < impulseDistance){
@@ -80,11 +81,12 @@ public class DropManager {
 		for(Entry<Body, AmmoDropStruct> entry : droppedAmmo.entrySet()){
 			Body dropBody = entry.getKey();
 			float distance = player.getPosition().dst2(dropBody.getPosition());
-			WorldManager.drawTexture(spriteBatch, renderer, dropBody, entry.getValue().type.textureName, scale*5);
+			String ammoPath = "data/textures/ammo/" + entry.getValue().type.textureName + ".png";
+			WorldManager.drawTexture(spriteBatch, dropBody, ammoPath, scale*5, sharedAssets);
 			if(distance < Properties.getFloat("drop.pickup.distance", .5f)){
 				player.addAmmo(entry.getValue().type, entry.getValue().amount);
 				world.destroyBody(dropBody);
-				sharedAssets.get("data/sounds/ammoPickup.mp3", Sound.class).play();
+				sharedAssets.get("data/sounds/guns/ammoPickup.mp3", Sound.class).play();
 				ammoDropRemoveList.add(dropBody);
 			}else if(distance < impulseDistance){
 				Vector2 impulse = player.getPosition().cpy().sub(dropBody.getWorldCenter());

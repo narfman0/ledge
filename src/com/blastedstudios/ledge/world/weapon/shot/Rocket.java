@@ -10,7 +10,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.WorldManifold;
-import com.blastedstudios.gdxworld.ui.GDXRenderer;
+import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.Being.BodyPart;
@@ -30,9 +30,9 @@ public class Rocket extends GunShot {
 		explosion.load(Gdx.files.internal("data/particles/rocketExplosion.p"), Gdx.files.internal("data/particles"));
 	}
 	
-	@Override public void render(float dt, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, 
+	@Override public void render(float dt, SpriteBatch spriteBatch, AssetManagerWrapper assetManager, 
 			Body body, WorldManager worldManager){
-		super.render(dt, spriteBatch, gdxRenderer, body, worldManager);
+		super.render(dt, spriteBatch, assetManager, body, worldManager);
 		trail.setPosition(body.getPosition().x, body.getPosition().y);
 		trail.draw(spriteBatch, dt);
 		explosion.setPosition(body.getPosition().x, body.getPosition().y);

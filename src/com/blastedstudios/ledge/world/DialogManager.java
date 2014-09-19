@@ -9,7 +9,8 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.NinePatch;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
-import com.blastedstudios.gdxworld.ui.GDXRenderer;
+import com.badlogic.gdx.utils.GdxRuntimeException;
+import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.ui.main.MainScreen;
 
@@ -38,15 +39,19 @@ public class DialogManager {
 		return dialogs.poll();
 	}
 	
-	public void render(GDXRenderer gdxRenderer){
+	public void render(AssetManagerWrapper assetManager){
 		if(!dialogs.isEmpty()){
 			float centerX = Gdx.graphics.getWidth()/2;
 			spriteBatch.begin();
 			patch.draw(spriteBatch, centerX - 256, 0, 768, 256);
 			if(!dialogs.peek().portrait.isEmpty()){
 				patch.draw(spriteBatch, centerX - 512, 0, 256, 256);
-				final Texture tex = gdxRenderer.getTexture(dialogs.peek().portrait + ".png");
-				spriteBatch.draw(tex, centerX - 512, 0, 256, 256);
+				try{
+					final Texture tex = assetManager.getTexture(dialogs.peek().portrait + ".png");
+					spriteBatch.draw(tex, centerX - 512, 0, 256, 256);
+				}catch(GdxRuntimeException e){
+					e.printStackTrace();
+				}
 				font.draw(spriteBatch, dialogs.peek().portrait + ":", centerX - 170, TEXT_PORTRAIT_DRAW_HEIGHT);
 			}
 			font.drawMultiLine(spriteBatch, dialogs.peek().dialog, centerX - 224, TEXT_DRAW_HEIGHT);

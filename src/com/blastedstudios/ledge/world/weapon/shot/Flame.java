@@ -8,7 +8,7 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.WorldManifold;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
-import com.blastedstudios.gdxworld.ui.GDXRenderer;
+import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
@@ -27,9 +27,9 @@ public class Flame extends GunShot {
 		flame.setDuration(99999);
 	}
 	
-	@Override public void render(float dt, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, 
+	@Override public void render(float dt, SpriteBatch spriteBatch, AssetManagerWrapper assetManager, 
 			Body body, WorldManager worldManager){
-		super.render(dt, spriteBatch, gdxRenderer, body, worldManager);
+		super.render(dt, spriteBatch, assetManager, body, worldManager);
 		flame.setPosition(body.getPosition().x, body.getPosition().y);
 		flame.draw(spriteBatch, dt);
 		if(isTimeToRemoveSet() && System.currentTimeMillis() >= timeToRemove){

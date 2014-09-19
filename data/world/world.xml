@@ -25115,7 +25115,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>westBaseDoor</name>
-          <resource>ledge3BaseDoorWest.png</resource>
+          <resource>woodDoor.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.05</restitution>

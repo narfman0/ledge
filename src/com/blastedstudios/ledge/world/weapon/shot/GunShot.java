@@ -5,7 +5,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.WorldManifold;
-import com.blastedstudios.gdxworld.ui.GDXRenderer;
+import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
@@ -49,10 +49,10 @@ public class GunShot {
 		this.gun = gun;
 	}
 	
-	public void render(float dt, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, 
+	public void render(float dt, SpriteBatch spriteBatch, AssetManagerWrapper assetManager, 
 			Body body, WorldManager worldManager){
-		WorldManager.drawTexture(spriteBatch, gdxRenderer, body, 
-				gun.getAmmoType().textureName, getWeaponRenderScale());
+		String ammoPath = "data/textures/ammo/" + gun.getAmmoType().textureName + ".png";
+		WorldManager.drawTexture(spriteBatch, body,	ammoPath, getWeaponRenderScale(), assetManager);
 	}
 
 	public boolean isCanRemove() {

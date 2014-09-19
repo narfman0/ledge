@@ -6,7 +6,6 @@ import box2dLight.RayHandler;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
-import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -23,6 +22,7 @@ import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.ui.AbstractWindow;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.ui.leveleditor.LevelEditorScreen;
+import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.util.TiledMeshRenderer;
@@ -35,6 +35,7 @@ import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.ledge.ui.gameplay.hud.HUD;
 import com.blastedstudios.ledge.ui.gameplay.inventory.InventoryWindow;
 import com.blastedstudios.ledge.ui.gameplay.particles.ParticleManager;
+import com.blastedstudios.ledge.ui.loading.LoadingScreen;
 import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.util.SaveHelper;
 import com.blastedstudios.ledge.world.DialogManager;
@@ -64,17 +65,19 @@ public class GameplayScreen extends AbstractScreen {
 	private Vector2 touchedDirection;
 	private final TiledMeshRenderer tiledMeshRenderer;
 	private final SpriteBatch spriteBatch = new SpriteBatch();
-	private final AssetManager sharedAssets;
+	private final AssetManagerWrapper sharedAssets, assetManager;
 	private GDXLevel nextLevel = null;
 	
 	public GameplayScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world,
-			FileHandle selectedFile, final GDXRenderer gdxRenderer, AssetManager sharedAssets){
+			FileHandle selectedFile, final GDXRenderer gdxRenderer, AssetManagerWrapper sharedAssets,
+			AssetManagerWrapper assetManager){
 		super(game, MainScreen.SKIN_PATH);
 		this.level = level;
 		this.world = world;
 		this.selectedFile = selectedFile;
 		this.gdxRenderer = gdxRenderer;
 		this.sharedAssets = sharedAssets;
+		this.assetManager = assetManager;
 		hud = new HUD(skin, player);
 		dialogManager = new DialogManager(skin);
 		particleManager = new ParticleManager();
@@ -122,7 +125,7 @@ public class GameplayScreen extends AbstractScreen {
 			rayHandler.updateAndRender();
 		if(Properties.getBool("debug.draw"))
 			renderer.render(worldManager.getWorld(), camera.combined);
-		dialogManager.render(gdxRenderer);
+		dialogManager.render(assetManager);
 		stage.draw();
 		if(worldManager.getPlayer().isSpawned())
 			hud.render();
@@ -134,9 +137,11 @@ public class GameplayScreen extends AbstractScreen {
 				(characterWindow == null || !characterWindow.contains(x, y)) &&
 				(vendorWindow == null || !vendorWindow.contains(x, y)))
 			worldManager.getPlayer().attack(touchedDirection, worldManager);
-		if(nextLevel != null)
-			game.pushScreen(new GameplayScreen(getGame(), worldManager.getPlayer(),
+		if(nextLevel != null){
+			assetManager.dispose();
+			game.pushScreen(new LoadingScreen(getGame(), worldManager.getPlayer(),
 					nextLevel, world, selectedFile, gdxRenderer, sharedAssets));
+		}
 	}
 	
 	public void levelComplete(boolean success, String nextLevel){
@@ -150,6 +155,8 @@ public class GameplayScreen extends AbstractScreen {
 		game.popScreen();
 		if(success && !nextLevel.equals(""))
 			this.nextLevel = world.getLevel(nextLevel);
+		else
+			assetManager.dispose();
 	}
 
 	public boolean isAction() {

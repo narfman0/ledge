@@ -6,7 +6,6 @@ import aurelienribon.tweenengine.equations.Cubic;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
-import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -16,6 +15,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.ui.worldeditor.WorldEditorScreen;
+import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.GDXLevel;
@@ -36,10 +36,10 @@ public class OverworldScreen extends AbstractScreen{
 	private final FileHandle worldFile;
 	private final GDXRenderer gdxRenderer;
 	private final TweenManager tweenManager;
-	private final AssetManager sharedAssets;
+	private final AssetManagerWrapper sharedAssets;
 
 	public OverworldScreen(GDXGame game, Player player, GDXWorld gdxWorld, FileHandle worldFile,
-			GDXRenderer gdxRenderer, AssetManager sharedAssets){
+			GDXRenderer gdxRenderer, AssetManagerWrapper sharedAssets){
 		super(game, MainScreen.SKIN_PATH);
 		this.player = player;
 		this.gdxWorld = gdxWorld;
