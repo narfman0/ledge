@@ -1,6 +1,13 @@
 package com.blastedstudios.ledge.ui.loading;
 
+import java.util.List;
+
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.blastedstudios.gdxworld.ui.AbstractScreen;
@@ -14,6 +21,8 @@ import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.world.being.Player;
 
 public class LoadingScreen extends AbstractScreen{
+	private final SpriteBatch spriteBatch = new SpriteBatch();
+	private final OrthographicCamera camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 	private final Label loadingLabel;
 	private final AssetManagerWrapper assetManager;
 	private final Player player;
@@ -22,6 +31,8 @@ public class LoadingScreen extends AbstractScreen{
 	private final FileHandle selectedFile;
 	private final GDXRenderer gdxRenderer;
 	private final AssetManagerWrapper sharedAssets;
+	private final Sprite backgroundSprite;
+	private List<String> createdAssetList = null;
 	
 	public LoadingScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world,
 			FileHandle selectedFile, final GDXRenderer gdxRenderer, AssetManagerWrapper sharedAssets){
@@ -33,20 +44,43 @@ public class LoadingScreen extends AbstractScreen{
 		this.gdxRenderer = gdxRenderer;
 		this.sharedAssets = sharedAssets;
 		assetManager = new AssetManagerWrapper();
-		for(String asset : level.createAssetList())
-			assetManager.loadTexture(asset);
 		loadingLabel = new Label("0", skin);
 		Table table = new Table(skin);
 		table.add("Loading... ");
 		table.add(loadingLabel);
 		table.add("% complete");
+		table.pack();
+		table.setX(Gdx.graphics.getWidth()/2 - table.getWidth()/2);
+		table.setY(Gdx.graphics.getHeight()/2 - table.getHeight()/2);
 		stage.addActor(table);
+		createdAssetList = level.createAssetList();
+		String backgroundPath = "data/textures/" + world.getWorldProperties().get("background");
+		backgroundSprite = new Sprite(sharedAssets.get(backgroundPath, Texture.class));
+		backgroundSprite.setPosition(backgroundSprite.getWidth()/-2f, backgroundSprite.getHeight()/-2f);
+		camera.update();
 	}
 
 	@Override public void render(float delta){
-		assetManager.update();
-		loadingLabel.setText(assetManager.getProgress()+"");
-		if(assetManager.getQueuedAssets() == 0){
+		super.render(delta);
+		spriteBatch.setProjectionMatrix(camera.combined);
+		spriteBatch.begin();
+		backgroundSprite.draw(spriteBatch);
+		spriteBatch.end();
+		stage.draw();
+		//begin loading
+		if(!createdAssetList.isEmpty()){
+			long start = System.currentTimeMillis();
+			while(System.currentTimeMillis() - start < 33){
+				assetManager.loadTexture(createdAssetList.remove(0));
+			}
+		}
+		//middle of loading
+		if(createdAssetList.isEmpty()){
+			loadingLabel.setText(((int)assetManager.getProgress()*100)+"");
+			assetManager.update();
+		}
+		//done loading
+		if(createdAssetList.isEmpty() && assetManager.getQueuedAssets() == 0){
 			game.popScreen();
 			game.pushScreen(new GameplayScreen(game, player, level, world, selectedFile, 
 					gdxRenderer, sharedAssets, assetManager));

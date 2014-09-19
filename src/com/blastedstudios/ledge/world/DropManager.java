@@ -43,7 +43,11 @@ public class DropManager {
 			Body dropBody = entry.getKey();
 			float distance = player.getPosition().dst2(dropBody.getPosition());
 			String gunPath = "data/textures/weapons/" + entry.getValue().getResource() + ".png";
-			WorldManager.drawTexture(spriteBatch, dropBody, gunPath, scale, sharedAssets);
+			try{
+				WorldManager.drawTexture(spriteBatch, dropBody, gunPath, scale, sharedAssets);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
 			if(distance < Properties.getFloat("drop.pickup.distance", .5f)){
 				player.receive(entry.getValue(), world);
 				world.destroyBody(dropBody);

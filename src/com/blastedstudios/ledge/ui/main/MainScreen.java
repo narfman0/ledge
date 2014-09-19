@@ -45,7 +45,6 @@ public class MainScreen extends AbstractScreen implements IMainWindowListener, I
 		sharedAssets.update();
 		panner.render();
 		stage.draw();
-		
 	}
 
 	@Override public boolean keyDown(int key) {
