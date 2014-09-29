@@ -14,7 +14,7 @@ import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXWorld;
-import com.blastedstudios.ledge.ui.loading.LoadingScreen;
+import com.blastedstudios.ledge.ui.loading.GameplayLoadingScreen;
 import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.world.DialogManager;
 import com.blastedstudios.ledge.world.being.Player;
@@ -32,7 +32,7 @@ class LevelInformationWindow extends AbstractWindow{
 		final Button startButton = new TextButton("Start", skin);
 		startButton.addListener(new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
-				game.pushScreen(new LoadingScreen(game, player, level,
+				game.pushScreen(new GameplayLoadingScreen(game, player, level,
 						world, selectedFile, gdxRenderer, sharedAssets));
 			}
 		});

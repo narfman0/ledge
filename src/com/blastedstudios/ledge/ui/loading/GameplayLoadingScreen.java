@@ -8,7 +8,6 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
@@ -20,10 +19,9 @@ import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
 import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.world.being.Player;
 
-public class LoadingScreen extends AbstractScreen{
+public class GameplayLoadingScreen extends AbstractScreen{
 	private final SpriteBatch spriteBatch = new SpriteBatch();
 	private final OrthographicCamera camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-	private final Label loadingLabel;
 	private final AssetManagerWrapper assetManager;
 	private final Player player;
 	private final GDXLevel level;
@@ -34,7 +32,7 @@ public class LoadingScreen extends AbstractScreen{
 	private final Sprite backgroundSprite;
 	private List<String> createdAssetList = null;
 	
-	public LoadingScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world,
+	public GameplayLoadingScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world,
 			FileHandle selectedFile, final GDXRenderer gdxRenderer, AssetManagerWrapper sharedAssets){
 		super(game, MainScreen.SKIN_PATH);
 		this.player = player;
@@ -44,11 +42,8 @@ public class LoadingScreen extends AbstractScreen{
 		this.gdxRenderer = gdxRenderer;
 		this.sharedAssets = sharedAssets;
 		assetManager = new AssetManagerWrapper();
-		loadingLabel = new Label("0", skin);
 		Table table = new Table(skin);
-		table.add("Loading... ");
-		table.add(loadingLabel);
-		table.add("% complete");
+		table.add("Loading");
 		table.pack();
 		table.setX(Gdx.graphics.getWidth()/2 - table.getWidth()/2);
 		table.setY(Gdx.graphics.getHeight()/2 - table.getHeight()/2);
@@ -75,10 +70,8 @@ public class LoadingScreen extends AbstractScreen{
 			}
 		}
 		//middle of loading
-		if(createdAssetList.isEmpty()){
-			loadingLabel.setText(((int)assetManager.getProgress()*100)+"");
+		if(createdAssetList.isEmpty())
 			assetManager.update();
-		}
 		//done loading
 		if(createdAssetList.isEmpty() && assetManager.getQueuedAssets() == 0){
 			game.popScreen();

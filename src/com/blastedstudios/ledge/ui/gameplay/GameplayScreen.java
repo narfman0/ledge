@@ -35,7 +35,7 @@ import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.ledge.ui.gameplay.hud.HUD;
 import com.blastedstudios.ledge.ui.gameplay.inventory.InventoryWindow;
 import com.blastedstudios.ledge.ui.gameplay.particles.ParticleManager;
-import com.blastedstudios.ledge.ui.loading.LoadingScreen;
+import com.blastedstudios.ledge.ui.loading.GameplayLoadingScreen;
 import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.util.SaveHelper;
 import com.blastedstudios.ledge.world.DialogManager;
@@ -138,7 +138,7 @@ public class GameplayScreen extends AbstractScreen {
 			worldManager.getPlayer().attack(touchedDirection, worldManager);
 		if(nextLevel != null){
 			assetManager.dispose();
-			game.pushScreen(new LoadingScreen(getGame(), worldManager.getPlayer(),
+			game.pushScreen(new GameplayLoadingScreen(getGame(), worldManager.getPlayer(),
 					nextLevel, world, selectedFile, gdxRenderer, sharedAssets));
 		}
 	}
