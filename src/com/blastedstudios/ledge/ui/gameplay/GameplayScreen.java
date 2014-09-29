@@ -115,7 +115,7 @@ public class GameplayScreen extends AbstractScreen {
 
 		spriteBatch.setProjectionMatrix(camera.combined);
 		spriteBatch.begin();
-		gdxRenderer.render(spriteBatch, level, camera, worldManager.getCreateLevelStruct().bodies.entrySet());
+		gdxRenderer.render(assetManager, spriteBatch, level, camera, worldManager.getCreateLevelStruct().bodies.entrySet());
 		spriteBatch.end();
 		
 		tiledMeshRenderer.render(camera);
