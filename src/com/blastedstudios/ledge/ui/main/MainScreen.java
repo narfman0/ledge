@@ -12,11 +12,13 @@ import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.util.ScreenLevelPanner;
+import com.blastedstudios.gdxworld.util.ScreenLevelPanner.ITransitionListener;
 import com.blastedstudios.gdxworld.world.GDXWorld;
 import com.blastedstudios.ledge.ui.main.MainWindow.IMainWindowListener;
 import com.blastedstudios.ledge.ui.main.NewCharacterWindow.INewCharacterWindowListener;
 
-public class MainScreen extends AbstractScreen implements IMainWindowListener, INewCharacterWindowListener{
+public class MainScreen extends AbstractScreen implements IMainWindowListener,
+		INewCharacterWindowListener, ITransitionListener {
 	public static final Color WINDOW_ALPHA_COLOR = new Color(1, 1, 1, .7f);
 	public static final String SKIN_PATH = Properties.get("screen.skin","data/ui/uiskinGame.json");
 	private static final FileHandle WORLD_FILE = Gdx.files.internal("data/world/" + Properties.get("world.path", "world.xml"));
@@ -25,7 +27,7 @@ public class MainScreen extends AbstractScreen implements IMainWindowListener, I
 	private final AssetManagerWrapper sharedAssets = new AssetManagerWrapper();
 	private NewCharacterWindow newCharacterWindow;
 	private MainWindow mainWindow;
-	private ScreenLevelPanner panner;
+	private ScreenLevelPanner activePanner, loadingPanner;
 
 	public MainScreen(final GDXGame game){
 		super(game, SKIN_PATH);
@@ -37,13 +39,13 @@ public class MainScreen extends AbstractScreen implements IMainWindowListener, I
 		sharedAssets.load("data/textures/money.png", Texture.class);
 		gdxRenderer = new GDXRenderer(true, true);
 		stage.addActor(mainWindow = new MainWindow(skin, game, this, gdxWorld, WORLD_FILE, gdxRenderer, sharedAssets));
-		panner = new ScreenLevelPanner(gdxWorld, gdxRenderer);
+		loadingPanner = new ScreenLevelPanner(gdxWorld, gdxRenderer, this);
 	}
 
 	@Override public void render(float delta){
 		super.render(delta);
 		sharedAssets.update();
-		panner.render();
+		updatePanners();
 		stage.draw();
 	}
 
@@ -82,5 +84,21 @@ public class MainScreen extends AbstractScreen implements IMainWindowListener, I
 				}
 			}
 		}
+	}
+	
+	private void updatePanners(){
+		if(activePanner != null)
+			activePanner.render();
+		if(loadingPanner != null)
+			if(loadingPanner.update()){
+				if(activePanner != null)
+					activePanner.dispose();
+				activePanner = loadingPanner;
+				loadingPanner = null;
+			}
+	}
+
+	@Override public void transition() {
+		loadingPanner = new ScreenLevelPanner(gdxWorld, gdxRenderer, this);
 	}
 }

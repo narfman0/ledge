@@ -99,10 +99,9 @@ public class GameplayScreen extends AbstractScreen {
 		renderer = new Box2DDebugRenderer();
 		rayHandler = worldManager.getCreateLevelStruct().lights.rayHandler;
 		tiledMeshRenderer = new TiledMeshRenderer(gdxRenderer, level.getPolygons());
-		if(sharedAssets.getQueuedAssets() > 0){
+		if(sharedAssets.getQueuedAssets() > 0)
 			Gdx.app.log("GameplayScreen.<init>", "Shared assets finishing loading");
-			sharedAssets.finishLoading();
-		}
+		sharedAssets.finishLoading();//unsure if queued == 0 means its done... this verifies
 	}
 
 	@Override public void render(float delta) {
