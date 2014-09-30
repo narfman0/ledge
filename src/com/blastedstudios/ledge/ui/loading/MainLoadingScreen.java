@@ -10,6 +10,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
+import com.blastedstudios.gdxworld.util.GDXGameFade;
 import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.world.GDXWorld;
 import com.blastedstudios.ledge.ui.main.MainScreen;
@@ -53,8 +54,10 @@ public class MainLoadingScreen extends AbstractScreen{
 		super.render(delta);
 		stage.draw();
 		sharedAssets.update();
-		if(sharedAssets.getProgress() == 1f)
-			game.pushScreen(new MainScreen(game, sharedAssets, gdxWorld));
+		if(sharedAssets.getProgress() == 1f){
+			game.popScreen();
+			GDXGameFade.fadeInPushScreen(game, new MainScreen(game, sharedAssets, gdxWorld));
+		}
 		if(iterationsToLoad-- == 0){
 			PluginUtil.initialize(ClassURI.CLASSPATH);//this takes 5+ seconds
 			gdxWorld = GDXWorld.load(MainScreen.WORLD_FILE);
