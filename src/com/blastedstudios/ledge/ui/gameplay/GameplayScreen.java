@@ -264,7 +264,7 @@ public class GameplayScreen extends AbstractScreen {
 			break;
 		case Keys.E:
 			if(debugCommandEnabled()){
-				game.pushScreen(new LevelEditorScreen(game, world, selectedFile, level));
+				game.pushScreen(new LevelEditorScreen(game, world, selectedFile, level, assetManager));
 				Gdx.app.log("GameplayScreen.render", "Edit mode entered");
 			}
 			if(vendorWindow == null){
