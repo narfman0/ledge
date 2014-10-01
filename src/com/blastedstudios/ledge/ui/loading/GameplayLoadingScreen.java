@@ -8,7 +8,6 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
@@ -33,7 +32,6 @@ public class GameplayLoadingScreen extends AbstractScreen{
 	private final GDXRenderer gdxRenderer;
 	private final AssetManagerWrapper sharedAssets;
 	private final Sprite backgroundSprite;
-	private final Label loadingLabel;
 	private List<String> createdAssetList = null;
 	private boolean finished = false;
 	
@@ -47,10 +45,8 @@ public class GameplayLoadingScreen extends AbstractScreen{
 		this.gdxRenderer = gdxRenderer;
 		this.sharedAssets = sharedAssets;
 		assetManager = new AssetManagerWrapper();
-		loadingLabel = new Label("", skin);
 		Table table = new Table(skin);
 		table.add("Loading ");
-		table.add(loadingLabel);
 		table.pack();
 		table.setX(Gdx.graphics.getWidth()/2 - table.getWidth()/2);
 		table.setY(Gdx.graphics.getHeight()/2 - table.getHeight()/2);
@@ -79,10 +75,8 @@ public class GameplayLoadingScreen extends AbstractScreen{
 			}
 		}
 		//middle of loading
-		if(createdAssetList.isEmpty()){
+		if(createdAssetList.isEmpty())
 			assetManager.update();
-			loadingLabel.setText(assetManager.getQueuedAssets()+"");
-		}
 		//done loading
 		if(createdAssetList.isEmpty() && assetManager.getQueuedAssets() == 0){
 			finished = true;

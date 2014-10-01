@@ -19,6 +19,7 @@ public class MainLoadingScreen extends AbstractScreen{
 	private final AssetManagerWrapper sharedAssets = new AssetManagerWrapper();
 	private GDXWorld gdxWorld;
 	private int iterationsToLoad = 1;
+	private MainScreen mainScreen = null;
 	
 	public MainLoadingScreen(final GDXGame game){
 		super(game, MainScreen.SKIN_PATH);
@@ -54,9 +55,14 @@ public class MainLoadingScreen extends AbstractScreen{
 		super.render(delta);
 		stage.draw();
 		sharedAssets.update();
-		if(sharedAssets.getProgress() == 1f){
-			game.popScreen();
-			GDXGameFade.fadeInPushScreen(game, new MainScreen(game, sharedAssets, gdxWorld));
+		if(mainScreen == null && sharedAssets.getProgress() == 1f)
+			mainScreen = new MainScreen(game, sharedAssets, gdxWorld);
+		if(mainScreen != null){
+			mainScreen.updatePanners();
+			if(mainScreen.ready()){
+				game.popScreen();
+				GDXGameFade.fadeInPushScreen(game, mainScreen);
+			}
 		}
 		if(iterationsToLoad-- == 0){
 			PluginUtil.initialize(ClassURI.CLASSPATH);//this takes 5+ seconds
