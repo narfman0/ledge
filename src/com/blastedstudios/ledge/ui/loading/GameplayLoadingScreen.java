@@ -14,7 +14,6 @@ import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.GDXGameFade;
-import com.blastedstudios.gdxworld.util.GDXGameFade.IPopListener;
 import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXWorld;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
@@ -68,25 +67,18 @@ public class GameplayLoadingScreen extends AbstractScreen{
 		if(finished)
 			return;
 		//begin loading
-		if(!createdAssetList.isEmpty()){
-			long start = System.currentTimeMillis();
-			while(System.currentTimeMillis() - start < 33){
-				assetManager.loadTexture(createdAssetList.remove(0));
-			}
-		}
+		if(!createdAssetList.isEmpty())
+			assetManager.loadTexture(createdAssetList.remove(0));
 		//middle of loading
 		if(createdAssetList.isEmpty())
 			assetManager.update();
 		//done loading
 		if(createdAssetList.isEmpty() && assetManager.getQueuedAssets() == 0){
 			finished = true;
-			GDXGameFade.fadeOutPopScreen(game, new IPopListener() {
-				@Override public void screenPopped() {
-					GameplayScreen screen = new GameplayScreen(game, player, level, world, selectedFile, 
-							gdxRenderer, sharedAssets, assetManager);
-					GDXGameFade.fadeInPushScreen(game, screen);
-				}
-			});
+			game.popScreen();
+			GameplayScreen screen = new GameplayScreen(game, player, level, world, selectedFile, 
+					gdxRenderer, sharedAssets, assetManager);
+			GDXGameFade.fadeInPushScreen(game, screen);
 		}
 	}
 }

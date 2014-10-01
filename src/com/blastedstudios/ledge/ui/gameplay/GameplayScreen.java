@@ -139,13 +139,9 @@ public class GameplayScreen extends AbstractScreen {
 				(vendorWindow == null || !vendorWindow.contains(x, y)))
 			worldManager.getPlayer().attack(touchedDirection, worldManager);
 		if(nextLevel != null){
-			GDXGameFade.fadeOutPopScreen(game, new IPopListener() {
-				@Override public void screenPopped() {
-					assetManager.dispose();
-					game.pushScreen(new GameplayLoadingScreen(getGame(), worldManager.getPlayer(),
-							nextLevel, world, selectedFile, gdxRenderer, sharedAssets));
-				}
-			});
+			assetManager.dispose();
+			game.pushScreen(new GameplayLoadingScreen(getGame(), worldManager.getPlayer(),
+					nextLevel, world, selectedFile, gdxRenderer, sharedAssets));
 		}
 	}
 	
