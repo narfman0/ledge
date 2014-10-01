@@ -33,6 +33,8 @@ public class GameplayLoadingScreen extends AbstractScreen{
 	private final Sprite backgroundSprite;
 	private List<String> createdAssetList = null;
 	private boolean finished = false;
+	private GameplayScreen screen = null;
+	private int ticksToTransitionGame = 2;
 	
 	public GameplayLoadingScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world,
 			FileHandle selectedFile, final GDXRenderer gdxRenderer, AssetManagerWrapper sharedAssets){
@@ -74,11 +76,16 @@ public class GameplayLoadingScreen extends AbstractScreen{
 			assetManager.update();
 		//done loading
 		if(createdAssetList.isEmpty() && assetManager.getQueuedAssets() == 0){
-			finished = true;
-			game.popScreen();
-			GameplayScreen screen = new GameplayScreen(game, player, level, world, selectedFile, 
-					gdxRenderer, sharedAssets, assetManager);
-			GDXGameFade.fadeInPushScreen(game, screen);
+			if(screen == null)
+				screen = new GameplayScreen(game, player, level, world, selectedFile, 
+						gdxRenderer, sharedAssets, assetManager);
+			else
+				ticksToTransitionGame--;
+			if(ticksToTransitionGame == 0){
+				finished = true;
+				game.popScreen();
+				GDXGameFade.fadeInPushScreen(game, screen);
+			}
 		}
 	}
 }
