@@ -12,6 +12,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
+import com.blastedstudios.gdxworld.util.GDXGameFade;
 import com.blastedstudios.gdxworld.world.GDXWorld;
 import com.blastedstudios.ledge.ui.overworld.OverworldScreen;
 import com.blastedstudios.ledge.util.SaveHelper;
@@ -43,7 +44,9 @@ class MainWindow extends Window{
 			final Button savedCharacterButton = new TextButton(being.getName(), skin);
 			savedCharacterButton.addListener(new ClickListener() {
 				@Override public void clicked(InputEvent event, float x, float y) {
-					game.pushScreen(new OverworldScreen(game, being, gdxWorld, worldFile, gdxRenderer, sharedAssets));
+					OverworldScreen screen = new OverworldScreen(game, being, 
+							gdxWorld, worldFile, gdxRenderer, sharedAssets); 
+					GDXGameFade.fadeInPushScreen(game, screen);
 				}
 			});
 			add(savedCharacterButton).fillX();

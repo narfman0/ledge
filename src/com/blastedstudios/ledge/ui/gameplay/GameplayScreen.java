@@ -24,6 +24,8 @@ import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.ui.leveleditor.LevelEditorScreen;
 import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
+import com.blastedstudios.gdxworld.util.GDXGameFade;
+import com.blastedstudios.gdxworld.util.GDXGameFade.IPopListener;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.util.TiledMeshRenderer;
 import com.blastedstudios.gdxworld.world.GDXLevel;
@@ -137,9 +139,13 @@ public class GameplayScreen extends AbstractScreen {
 				(vendorWindow == null || !vendorWindow.contains(x, y)))
 			worldManager.getPlayer().attack(touchedDirection, worldManager);
 		if(nextLevel != null){
-			assetManager.dispose();
-			game.pushScreen(new GameplayLoadingScreen(getGame(), worldManager.getPlayer(),
-					nextLevel, world, selectedFile, gdxRenderer, sharedAssets));
+			GDXGameFade.fadeOutPopScreen(game, new IPopListener() {
+				@Override public void screenPopped() {
+					assetManager.dispose();
+					game.pushScreen(new GameplayLoadingScreen(getGame(), worldManager.getPlayer(),
+							nextLevel, world, selectedFile, gdxRenderer, sharedAssets));
+				}
+			});
 		}
 	}
 	
@@ -154,8 +160,13 @@ public class GameplayScreen extends AbstractScreen {
 		game.popScreen();
 		if(success && !nextLevel.equals(""))
 			this.nextLevel = world.getLevel(nextLevel);
-		else
-			assetManager.dispose();
+		else{
+			GDXGameFade.fadeOutPopScreen(game, new IPopListener() {
+				@Override public void screenPopped() {
+					assetManager.dispose();
+				}
+			});
+		}
 	}
 
 	public boolean isAction() {
@@ -210,9 +221,12 @@ public class GameplayScreen extends AbstractScreen {
 				}
 		switch(key){
 		case Keys.ESCAPE:
-			SaveHelper.save(worldManager.getPlayer());
-			worldManager.getPlayer().clean(worldManager.getWorld());
-			game.popScreen();
+			GDXGameFade.fadeOutPopScreen(game, new IPopListener() {
+				@Override public void screenPopped() {
+					SaveHelper.save(worldManager.getPlayer());
+					worldManager.getPlayer().clean(worldManager.getWorld());
+				}
+			});
 			break;
 		case Keys.C:
 			worldManager.getPlayer().setFixedRotation(false);

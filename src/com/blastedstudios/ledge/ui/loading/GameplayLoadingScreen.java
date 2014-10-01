@@ -8,11 +8,14 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
+import com.blastedstudios.gdxworld.util.GDXGameFade;
+import com.blastedstudios.gdxworld.util.GDXGameFade.IPopListener;
 import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXWorld;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
@@ -30,7 +33,9 @@ public class GameplayLoadingScreen extends AbstractScreen{
 	private final GDXRenderer gdxRenderer;
 	private final AssetManagerWrapper sharedAssets;
 	private final Sprite backgroundSprite;
+	private final Label loadingLabel;
 	private List<String> createdAssetList = null;
+	private boolean finished = false;
 	
 	public GameplayLoadingScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world,
 			FileHandle selectedFile, final GDXRenderer gdxRenderer, AssetManagerWrapper sharedAssets){
@@ -42,8 +47,10 @@ public class GameplayLoadingScreen extends AbstractScreen{
 		this.gdxRenderer = gdxRenderer;
 		this.sharedAssets = sharedAssets;
 		assetManager = new AssetManagerWrapper();
+		loadingLabel = new Label("", skin);
 		Table table = new Table(skin);
-		table.add("Loading");
+		table.add("Loading ");
+		table.add(loadingLabel);
 		table.pack();
 		table.setX(Gdx.graphics.getWidth()/2 - table.getWidth()/2);
 		table.setY(Gdx.graphics.getHeight()/2 - table.getHeight()/2);
@@ -62,6 +69,8 @@ public class GameplayLoadingScreen extends AbstractScreen{
 		backgroundSprite.draw(spriteBatch);
 		spriteBatch.end();
 		stage.draw();
+		if(finished)
+			return;
 		//begin loading
 		if(!createdAssetList.isEmpty()){
 			long start = System.currentTimeMillis();
@@ -70,13 +79,20 @@ public class GameplayLoadingScreen extends AbstractScreen{
 			}
 		}
 		//middle of loading
-		if(createdAssetList.isEmpty())
+		if(createdAssetList.isEmpty()){
 			assetManager.update();
+			loadingLabel.setText(assetManager.getQueuedAssets()+"");
+		}
 		//done loading
 		if(createdAssetList.isEmpty() && assetManager.getQueuedAssets() == 0){
-			game.popScreen();
-			game.pushScreen(new GameplayScreen(game, player, level, world, selectedFile, 
-					gdxRenderer, sharedAssets, assetManager));
+			finished = true;
+			GDXGameFade.fadeOutPopScreen(game, new IPopListener() {
+				@Override public void screenPopped() {
+					GameplayScreen screen = new GameplayScreen(game, player, level, world, selectedFile, 
+							gdxRenderer, sharedAssets, assetManager);
+					GDXGameFade.fadeInPushScreen(game, screen);
+				}
+			});
 		}
 	}
 }

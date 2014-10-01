@@ -16,6 +16,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
+import com.blastedstudios.gdxworld.util.GDXGameFade;
 import com.blastedstudios.gdxworld.world.GDXWorld;
 import com.blastedstudios.ledge.ui.overworld.OverworldScreen;
 import com.blastedstudios.ledge.world.Stats;
@@ -45,7 +46,9 @@ class NewCharacterWindow extends Window{
 						Stats.parseNPCData(npcData),
 						0,0,1,0, FactionEnum.FRIEND, EnumSet.of(FactionEnum.FRIEND), 
 						"player");
-				game.pushScreen(new OverworldScreen(game, player, gdxWorld, worldFile, gdxRenderer, sharedAssets));
+				OverworldScreen screen = new OverworldScreen(game, player, 
+						gdxWorld, worldFile, gdxRenderer, sharedAssets);
+				GDXGameFade.fadeInPushScreen(game, screen);
 			}
 		});
 		backButton.addListener(new ClickListener() {
