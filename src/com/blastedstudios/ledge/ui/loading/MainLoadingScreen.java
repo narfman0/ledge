@@ -5,13 +5,13 @@ import net.xeoh.plugins.base.util.uri.ClassURI;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.GDXGameFade;
 import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.world.GDXWorld;
+import com.blastedstudios.ledge.ui.loading.LoadingWindow.ILoadingWindowExecutor;
 import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.util.AssetUtil;
 
@@ -23,13 +23,16 @@ public class MainLoadingScreen extends AbstractScreen{
 	
 	public MainLoadingScreen(final GDXGame game){
 		super(game, MainScreen.SKIN_PATH);
-		Table table = new Table(skin);
-		table.add("Loading");
-		table.pack();
-		table.setX(Gdx.graphics.getWidth()/2 - table.getWidth()/2);
-		table.setY(Gdx.graphics.getHeight()/2 - table.getHeight()/2);
-		stage.addActor(table);
-
+		stage.addActor(new LoadingWindow(skin, new ILoadingWindowExecutor() {
+			@Override public boolean act(float delta) {
+				if(mainScreen != null && mainScreen.ready()){
+					game.popScreen();
+					GDXGameFade.fadeInPushScreen(game, mainScreen);
+					return true;
+				}
+				return false;
+			}
+		}));
 		sharedAssets.load("data/textures/blood.png", Texture.class);
 		sharedAssets.load("data/textures/money.png", Texture.class);
 	}
@@ -40,13 +43,8 @@ public class MainLoadingScreen extends AbstractScreen{
 		sharedAssets.update();
 		if(mainScreen == null && sharedAssets.getProgress() == 1f)
 			mainScreen = new MainScreen(game, sharedAssets, gdxWorld);
-		if(mainScreen != null){
+		if(mainScreen != null)
 			mainScreen.updatePanners();
-			if(mainScreen.ready()){
-				game.popScreen();
-				GDXGameFade.fadeInPushScreen(game, mainScreen);
-			}
-		}
 		if(iterationsToLoad-- == 0){
 			PluginUtil.initialize(ClassURI.CLASSPATH);//this takes 5+ seconds
 			gdxWorld = GDXWorld.load(MainScreen.WORLD_FILE);
