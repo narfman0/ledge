@@ -8,7 +8,6 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
@@ -17,6 +16,7 @@ import com.blastedstudios.gdxworld.util.GDXGameFade;
 import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXWorld;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
+import com.blastedstudios.ledge.ui.loading.LoadingWindow.ILoadingWindowExecutor;
 import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.world.being.Player;
 
@@ -36,7 +36,7 @@ public class GameplayLoadingScreen extends AbstractScreen{
 	private GameplayScreen screen = null;
 	private int ticksToTransitionGame = 2;
 	
-	public GameplayLoadingScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world,
+	public GameplayLoadingScreen(final GDXGame game, Player player, GDXLevel level, GDXWorld world,
 			FileHandle selectedFile, final GDXRenderer gdxRenderer, AssetManagerWrapper sharedAssets){
 		super(game, MainScreen.SKIN_PATH);
 		this.player = player;
@@ -46,12 +46,15 @@ public class GameplayLoadingScreen extends AbstractScreen{
 		this.gdxRenderer = gdxRenderer;
 		this.sharedAssets = sharedAssets;
 		assetManager = new AssetManagerWrapper();
-		Table table = new Table(skin);
-		table.add("Loading ");
-		table.pack();
-		table.setX(Gdx.graphics.getWidth()/2 - table.getWidth()/2);
-		table.setY(Gdx.graphics.getHeight()/2 - table.getHeight()/2);
-		stage.addActor(table);
+		stage.addActor(new LoadingWindow(skin, new ILoadingWindowExecutor() {
+			@Override public boolean act(float delta) {
+				if(ticksToTransitionGame == 0){
+					game.popScreen();
+					GDXGameFade.fadeInPushScreen(game, screen);
+				}
+				return false;
+			}
+		}));
 		createdAssetList = level.createAssetList();
 		String backgroundPath = "data/textures/" + world.getWorldProperties().get("background");
 		backgroundSprite = new Sprite(sharedAssets.get(backgroundPath, Texture.class));
@@ -81,11 +84,8 @@ public class GameplayLoadingScreen extends AbstractScreen{
 						gdxRenderer, sharedAssets, assetManager);
 			else
 				ticksToTransitionGame--;
-			if(ticksToTransitionGame == 0){
+			if(ticksToTransitionGame == 0)
 				finished = true;
-				game.popScreen();
-				GDXGameFade.fadeInPushScreen(game, screen);
-			}
 		}
 	}
 }
