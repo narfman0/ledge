@@ -64,7 +64,7 @@ public class OverworldScreen extends AbstractScreen{
 				lowerRight.y = level.getCoordinates().y;
 		GDXLevel firstLevel = gdxWorld.getLevels().get(0);
 		stage.addActor(levelInfo = new LevelInformationWindow(skin, 
-				firstLevel, game, player, gdxWorld, worldFile, gdxRenderer, sharedAssets));
+				firstLevel, game, player, gdxWorld, worldFile, gdxRenderer, sharedAssets, this));
 		levelCurrentSprite.setPosition(firstLevel.getCoordinates().x*OFFSET_SCALAR, firstLevel.getCoordinates().y*OFFSET_SCALAR);
 		tweenManager = new TweenManager();
 		Tween.registerAccessor(Sprite.class, new SpriteTweenAccessor());
@@ -123,7 +123,7 @@ public class OverworldScreen extends AbstractScreen{
 				if(levelInfo != null)
 					levelInfo.remove();
 				stage.addActor(levelInfo = new LevelInformationWindow(skin, 
-						level, game, player, gdxWorld, worldFile, gdxRenderer, sharedAssets));
+						level, game, player, gdxWorld, worldFile, gdxRenderer, sharedAssets, this));
 				float duration = Properties.getFloat("overworld.tween.duration", .5f);
 				Tween.to(levelCurrentSprite, SpriteTweenAccessor.POSITION_XY, duration).
 					target(level.getCoordinates().x*OFFSET_SCALAR, level.getCoordinates().y*OFFSET_SCALAR).

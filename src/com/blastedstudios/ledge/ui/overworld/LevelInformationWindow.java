@@ -14,7 +14,8 @@ import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXWorld;
-import com.blastedstudios.ledge.ui.loading.GameplayLoadingScreen;
+import com.blastedstudios.ledge.ui.loading.GameplayLoadingWindowExecutor;
+import com.blastedstudios.ledge.ui.loading.LoadingWindow;
 import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.world.DialogManager;
 import com.blastedstudios.ledge.world.being.Player;
@@ -25,15 +26,15 @@ class LevelInformationWindow extends AbstractWindow{
 	public LevelInformationWindow(final Skin skin, final GDXLevel level, 
 			final GDXGame game, final Player player, final GDXWorld world, 
 			final FileHandle selectedFile, final GDXRenderer gdxRenderer,
-			final AssetManagerWrapper sharedAssets) {
+			final AssetManagerWrapper sharedAssets, final OverworldScreen screen) {
 		super("", skin);
 		setColor(MainScreen.WINDOW_ALPHA_COLOR);
 		this.level = level;
 		final Button startButton = new TextButton("Start", skin);
 		startButton.addListener(new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
-				game.pushScreen(new GameplayLoadingScreen(game, player, level,
-						world, selectedFile, gdxRenderer, sharedAssets)); 
+				screen.getStage().addActor(new LoadingWindow(skin, 
+						new GameplayLoadingWindowExecutor(game, player, level, world, selectedFile, gdxRenderer, sharedAssets)));
 			}
 		});
 		add(new Label(level.getName(), skin));

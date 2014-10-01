@@ -2,13 +2,7 @@ package com.blastedstudios.ledge.ui.loading;
 
 import java.util.List;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
-import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
@@ -17,12 +11,10 @@ import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXWorld;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
 import com.blastedstudios.ledge.ui.loading.LoadingWindow.ILoadingWindowExecutor;
-import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.world.being.Player;
 
-public class GameplayLoadingScreen extends AbstractScreen{
-	private final SpriteBatch spriteBatch = new SpriteBatch();
-	private final OrthographicCamera camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+public class GameplayLoadingWindowExecutor implements ILoadingWindowExecutor{
+	private final GDXGame game;
 	private final AssetManagerWrapper assetManager;
 	private final Player player;
 	private final GDXLevel level;
@@ -30,15 +22,13 @@ public class GameplayLoadingScreen extends AbstractScreen{
 	private final FileHandle selectedFile;
 	private final GDXRenderer gdxRenderer;
 	private final AssetManagerWrapper sharedAssets;
-	private final Sprite backgroundSprite;
 	private List<String> createdAssetList = null;
-	private boolean finished = false;
 	private GameplayScreen screen = null;
 	private int ticksToTransitionGame = 2;
 	
-	public GameplayLoadingScreen(final GDXGame game, Player player, GDXLevel level, GDXWorld world,
+	public GameplayLoadingWindowExecutor(final GDXGame game, Player player, GDXLevel level, GDXWorld world,
 			FileHandle selectedFile, final GDXRenderer gdxRenderer, AssetManagerWrapper sharedAssets){
-		super(game, MainScreen.SKIN_PATH);
+		this.game = game;
 		this.player = player;
 		this.level = level;
 		this.world = world;
@@ -46,31 +36,10 @@ public class GameplayLoadingScreen extends AbstractScreen{
 		this.gdxRenderer = gdxRenderer;
 		this.sharedAssets = sharedAssets;
 		assetManager = new AssetManagerWrapper();
-		stage.addActor(new LoadingWindow(skin, new ILoadingWindowExecutor() {
-			@Override public boolean act(float delta) {
-				if(ticksToTransitionGame == 0){
-					game.popScreen();
-					GDXGameFade.fadeInPushScreen(game, screen);
-				}
-				return false;
-			}
-		}));
 		createdAssetList = level.createAssetList();
-		String backgroundPath = "data/textures/" + world.getWorldProperties().get("background");
-		backgroundSprite = new Sprite(sharedAssets.get(backgroundPath, Texture.class));
-		backgroundSprite.setPosition(backgroundSprite.getWidth()/-2f, backgroundSprite.getHeight()/-2f);
-		camera.update();
 	}
 
-	@Override public void render(float delta){
-		super.render(delta);
-		spriteBatch.setProjectionMatrix(camera.combined);
-		spriteBatch.begin();
-		backgroundSprite.draw(spriteBatch);
-		spriteBatch.end();
-		stage.draw();
-		if(finished)
-			return;
+	@Override public boolean act(float delta) {
 		//begin loading
 		if(!createdAssetList.isEmpty())
 			assetManager.loadTexture(createdAssetList.remove(0));
@@ -79,13 +48,16 @@ public class GameplayLoadingScreen extends AbstractScreen{
 			assetManager.update();
 		//done loading
 		if(createdAssetList.isEmpty() && assetManager.getQueuedAssets() == 0){
-			if(screen == null)
+			if(screen == null){
 				screen = new GameplayScreen(game, player, level, world, selectedFile, 
 						gdxRenderer, sharedAssets, assetManager);
-			else
+			}else
 				ticksToTransitionGame--;
-			if(ticksToTransitionGame == 0)
-				finished = true;
+			if(ticksToTransitionGame == 0){
+				GDXGameFade.fadeInPushScreen(game, screen);
+				return true;
+			}
 		}
+		return false;
 	}
 }
