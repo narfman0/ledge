@@ -27,8 +27,8 @@ public class Player extends Being {
 	}
 	
 	@Override public void render(float dt, World world, SpriteBatch spriteBatch, 
-			AssetManager sharedAssets, GDXRenderer gdxRenderer, IDeathCallback deathCallback){
-		super.render(dt, world, spriteBatch, sharedAssets, gdxRenderer, deathCallback);
+			AssetManager sharedAssets, GDXRenderer gdxRenderer, IDeathCallback deathCallback, boolean paused){
+		super.render(dt, world, spriteBatch, sharedAssets, gdxRenderer, deathCallback, paused);
 		questManager.tick();
 	}
 

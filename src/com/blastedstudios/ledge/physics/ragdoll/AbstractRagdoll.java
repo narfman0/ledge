@@ -324,15 +324,15 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		sprite.translateX(rotation/300f);
 	}
 	
-	@Override public void render(SpriteBatch spriteBatch, boolean dead, boolean isGrounded, boolean isMoving, float velX) {
-		if(!dead){
+	@Override public void render(SpriteBatch spriteBatch, boolean dead, boolean isGrounded, boolean isMoving, float velX, boolean paused) {
+		if(!dead && !paused){
 			lArmBody.applyTorque(getAngularImpulse(lArmBody, targetHeading)*5f, true);
 			rArmBody.applyTorque(getAngularImpulse(rArmBody, targetHeading+(float)Math.PI)*5f, true);
 		}
-		render(spriteBatch, isGrounded, isMoving, velX);
+		render(spriteBatch, isGrounded, isMoving, velX, paused);
 	}
 	
-	public void render(SpriteBatch spriteBatch, boolean isGrounded, boolean isMoving, float velX){
+	public void render(SpriteBatch spriteBatch, boolean isGrounded, boolean isMoving, float velX, boolean paused){
 		for(BodyPart part : facingLeft ? LEFT_FACING_ORDER : RIGHT_FACING_ORDER){
 			Body body = getBodyPart(part);
 			Sprite sprite = sprites.get(body);
