@@ -24,18 +24,26 @@ public class JetpackComponent extends AbstractComponent {
 			RIGHT_LOW = 240f, RIGHT_HIGH_MIN = RIGHT_LOW - DIFFERENCE, RIGHT_HIGH_MAX = RIGHT_LOW + DIFFERENCE,
 			DASH_LEFT_LOW = 180f, DASH_LEFT_HIGH_MIN = DASH_LEFT_LOW - DIFFERENCE, DASH_LEFT_HIGH_MAX = DASH_LEFT_LOW + DIFFERENCE,
 			DASH_RIGHT_LOW = 0f, DASH_RIGHT_HIGH_MIN = DASH_RIGHT_LOW - DIFFERENCE, DASH_RIGHT_HIGH_MAX = DASH_RIGHT_LOW + DIFFERENCE,
-			DASH_DURATION = Properties.getFloat("character.dash.duration", 500),
+			DASH_BURN_RATE = Properties.getFloat("character.jetpack.dash.burnrate", 30f),
+			DASH_DURATION = Properties.getFloat("character.dash.duration", .5f),
 			DASH_FORCE = Properties.getFloat("character.jetpack.dash.force", 500);
 	private ParticleEffect jetpackEffect;
 	private boolean lastJetpackActivated, jetpackActivated, dashRight;
 	private long lastTimeAPressed, lastTimeDPressed;
 	private float jetpackPower;
-	private long lastDash;
+	private float timeUntilDashAvailable;
 
 	@Override public void render(float dt, SpriteBatch spriteBatch, AssetManager sharedAssets,
-			GDXRenderer gdxRenderer, boolean facingLeft) {
+			GDXRenderer gdxRenderer, boolean facingLeft, boolean paused) {
 		if(!being.getStats().hasJetpack())
 			return;
+		if(!paused)
+			updateJetpackAngles();
+		jetpackEffect.setPosition(being.getPosition().x, being.getPosition().y);
+		jetpackEffect.draw(spriteBatch, dt);
+		if(paused)
+			return;
+		timeUntilDashAvailable -= dt;
 		if(!being.isDead() && (jetpackActivated || isDashing()) && !lastJetpackActivated){
 			lastJetpackActivated = true;
 			jetpackEffect.setDuration(10000);
@@ -45,9 +53,6 @@ public class JetpackComponent extends AbstractComponent {
 			lastJetpackActivated = false;
 			jetpackEffect.setDuration(0);
 		}
-		updateJetpackAngles();
-		jetpackEffect.setPosition(being.getPosition().x, being.getPosition().y);
-		jetpackEffect.draw(spriteBatch, dt);
 		jetpackRecharge();
 
 		if(isDashing())
@@ -87,9 +92,8 @@ public class JetpackComponent extends AbstractComponent {
 	}
 
 	public void dash(boolean right){
-		if(!being.isDead() && jetpackPower > Properties.getFloat("character.jetpack.dash.burnrate", 30f) && 
-				System.currentTimeMillis() - lastDash > DASH_DURATION){
-			lastDash = System.currentTimeMillis();
+		if(!being.isDead() && jetpackPower > DASH_BURN_RATE && timeUntilDashAvailable <= 0f){
+			timeUntilDashAvailable = DASH_DURATION;
 			dashRight = right;
 			applyDashForce();
 			jetpackPower -= Properties.getFloat("character.jetpack.dash.burnrate");
@@ -98,7 +102,7 @@ public class JetpackComponent extends AbstractComponent {
 	}
 
 	public boolean isDashing(){
-		return System.currentTimeMillis() - lastDash < DASH_DURATION;
+		return timeUntilDashAvailable > 0;
 	}
 
 	private void applyDashForce(){

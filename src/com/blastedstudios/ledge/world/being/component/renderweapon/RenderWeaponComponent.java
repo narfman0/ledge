@@ -20,7 +20,7 @@ public class RenderWeaponComponent extends AbstractComponent {
 	private transient Sprite weaponSprite;
 
 	@Override public void render(float dt, SpriteBatch spriteBatch, AssetManager sharedAssets,
-			GDXRenderer renderer, boolean facingLeft) {
+			GDXRenderer renderer, boolean facingLeft, boolean paused) {
 		if(being.getEquippedWeapon() != null){
 			if(weaponSprite == null){
 				String path = "data/textures/weapons/" + being.getEquippedWeapon().getResource() + ".png";

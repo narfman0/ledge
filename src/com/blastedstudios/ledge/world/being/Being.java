@@ -46,7 +46,6 @@ public class Being implements Serializable{
 	private final HashMap<AmmoTypeEnum,Integer> ammo = new HashMap<>();
 	protected transient boolean jump, moveRight, moveLeft, dead, reloading, invulnerable;
 	protected transient IRagdoll ragdoll = null;
-	private transient long reloadStartTime;
 	protected String name;
 	private String resource, ragdollResource;
 	protected float hp;
@@ -56,7 +55,7 @@ public class Being implements Serializable{
 	private long xp;
 	private FactionEnum faction;
 	private EnumSet<FactionEnum> friendlyFactions;
-	private transient float lastGunHeadingRadians;
+	private transient float lastGunHeadingRadians, timeUntilReload;
 	private transient DamageStruct lastDamage;
 	private transient Random random;
 	private transient List<IComponent> listeners;
@@ -96,7 +95,7 @@ public class Being implements Serializable{
 		ragdoll.render(spriteBatch, dead, isGrounded(world), moveLeft || moveRight, vel.x, paused);
 		boolean facingLeft = !isDead() && ragdoll.aim(lastGunHeadingRadians);
 		for(IComponent component : getListeners())
-			component.render(dt, spriteBatch, sharedAssets, gdxRenderer, facingLeft);
+			component.render(dt, spriteBatch, sharedAssets, gdxRenderer, facingLeft, paused);
 		
 		if(paused)
 			return;
@@ -128,6 +127,7 @@ public class Being implements Serializable{
 				Gdx.input.getRoll() > ACCELEROMETER_ROLL_THRESHOLD)
 			walk(false, world);
 		reload();
+		timeUntilReload = Math.max(0f, timeUntilReload-dt);
 	}
 	
 	private void walk(boolean left, World world){
@@ -203,8 +203,7 @@ public class Being implements Serializable{
 	 */
 	public void reload(){
 		Weapon weapon = getEquippedWeapon();
-		if(weapon != null && !(weapon instanceof Melee) && reloading && 
-				System.currentTimeMillis() - reloadStartTime > weapon.getReloadSpeed()){
+		if(weapon != null && !(weapon instanceof Melee) && reloading && timeUntilReload <= 0f){
 			reloadImmediate((Gun)weapon);
 			Gdx.app.log("Being.reload", name + "'s gun " + weapon.getName() + " reloaded to " + 
 					((Gun)weapon).getCurrentRounds() + " rounds");
@@ -472,10 +471,10 @@ public class Being implements Serializable{
 	}
 
 	public void setReloading(boolean reloading) {
-		if(!this.reloading && reloading){
+		if(!this.reloading && reloading && getEquippedWeapon() != null){
 			if(sharedAssets != null)
 				sharedAssets.get("data/sounds/guns/reload.mp3", Sound.class).play();
-			reloadStartTime = System.currentTimeMillis();
+			timeUntilReload = (float)getEquippedWeapon().getReloadSpeed()/1000f;
 			Gdx.app.log("Being.setReloading", name + " began reloading");
 			for(IComponent component : getListeners())
 				component.setReloading(reloading);

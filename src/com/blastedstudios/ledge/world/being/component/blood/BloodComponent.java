@@ -23,7 +23,7 @@ public class BloodComponent extends AbstractComponent {
 	private transient LinkedList<BloodStruct> blood = new LinkedList<>();
 	
 	@Override public void render(float dt, SpriteBatch spriteBatch, AssetManager sharedAssets,
-			GDXRenderer gdxRenderer, boolean facingLeft){
+			GDXRenderer gdxRenderer, boolean facingLeft, boolean paused){
 		for(Iterator<BloodStruct> iter = blood.iterator(); iter.hasNext();){
 			BloodStruct current = iter.next();
 			current.effect.draw(spriteBatch, dt);
