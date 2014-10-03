@@ -6333,7 +6333,7 @@
           <prerequisites>bully4</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.time.TimeTrigger">
-            <time>100</time>
+            <time>250</time>
           </trigger>
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
             <being>kid1</being>
@@ -6403,18 +6403,339 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>To fight, get within melee range of your opponent and swing weapon around so as to inflict bonus damage by the extra force.</dialog>
+            <dialog>To fight, get within melee range of your opponent and swing weapon around so as to inflict bonus damage by the extra force. Sometimes, however, it isn&apos;t worth it...</dialog>
             <origin></origin>
             <type>Type</type>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
-          <name>bully13InputEnable</name>
+          <name>bully13</name>
           <prerequisites>bully12</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>kid0</being>
+            <path>bullyOfficerPath</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully14</name>
+          <prerequisites>bully13</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>300</time>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>kid0</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully15</name>
+          <prerequisites>bully14</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingrotation.BeingRotationManifestation">
+            <fixedRotation>false</fixedRotation>
+            <torque>-50.0</torque>
+            <being>player</being>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully16</name>
+          <prerequisites>bully15</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&lt;grunts&gt; I give you win! &lt;gurgle, cough spit&gt; thats the finest beat down youve ever given</dialog>
+            <origin>Colligan</origin>
+            <type>Type</type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully17</name>
+          <prerequisites>bully16</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Maybe I need to best meself then, I need practice fleeing too right?</dialog>
+            <origin>Bully</origin>
+            <type>Type</type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully18</name>
+          <prerequisites>bully17</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&lt;suddenly scared, realizing this is a serious situation. He could die, looks down searching ground&gt; Your father didnt &lt;sputter&gt; teach you to flee, though?</dialog>
+            <origin>Colligan</origin>
+            <type>Type</type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully19</name>
+          <prerequisites>bully18</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&lt;confused&gt; What are... ye blatherin...</dialog>
+            <origin>Bully</origin>
+            <type>Type</type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully20</name>
+          <prerequisites>bully19</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.weaponadd.WeaponAddManifestation">
+            <weapon>wrench</weapon>
+            <target>player</target>
+            <weaponAddType>PERSON</weaponAddType>
+            <location>
+              <x>0.0</x>
+              <y>0.0</y>
+            </location>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully21</name>
+          <prerequisites>bully20</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Colligan suddenly pulls a wrench from nearby, and catches the Bully offguard...</dialog>
+            <origin></origin>
+            <type>Type</type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully22</name>
+          <prerequisites>bully21</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingrotation.BeingRotationManifestation">
+            <fixedRotation>true</fixedRotation>
+            <torque>0.0</torque>
+            <being>player</being>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully23</name>
+          <prerequisites>bully22</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
             <inputEnable>true</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully25</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="com.blastedstudios.ledge.plugin.quest.trigger.beinghit.BeingHitTrigger">
+            <target>kid0</target>
+            <origin>.*</origin>
+            <damageAmount>-1.0</damageAmount>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Argh! Not fair, officer aid me!</dialog>
+            <origin>Bully</origin>
+            <type>Type</type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully24</name>
+          <prerequisites>bully23</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.factionchange.FactionChangeManifestation">
+            <being>kid0</being>
+            <faction>ENEMY</faction>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully26</name>
+          <prerequisites>bully25</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&lt;comes in tentatively&gt;</dialog>
+            <origin>Bully2</origin>
+            <type>Type</type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully27</name>
+          <prerequisites>bully26</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>When in combat with multiple melee enemies, remember to keep moving and keep moving your weapon. Swinging your weapon more means more blocking and damage bonuses.</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully24Invulnerable</name>
+          <prerequisites>bully23</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beinginvuln.BeingInvulnManifestation">
+            <being>kid0</being>
+            <invuln>true</invuln>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully28</name>
+          <prerequisites>bully27</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beinginvuln.BeingInvulnManifestation">
+            <being>kid0</being>
+            <invuln>false</invuln>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully29</name>
+          <prerequisites>bully28</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.factionchange.FactionChangeManifestation">
+            <being>kid1</being>
+            <faction>ENEMY</faction>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully31kid0</name>
+          <prerequisites>bully30</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="com.blastedstudios.ledge.plugin.quest.trigger.beinghit.BeingHitTrigger">
+            <target>kid0</target>
+            <origin>.*</origin>
+            <damageAmount>-1.0</damageAmount>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>kid0</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully31kid1</name>
+          <prerequisites>bully30</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="com.blastedstudios.ledge.plugin.quest.trigger.beinghit.BeingHitTrigger">
+            <target>kid1</target>
+            <origin>.*</origin>
+            <damageAmount>-1.0</damageAmount>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>kid1</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully26InputDisable</name>
+          <prerequisites>bully25</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>false</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully30</name>
+          <prerequisites>bully29</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>true</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully32</name>
+          <prerequisites>bully31kid0,bully31kid1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>false</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully33</name>
+          <prerequisites>bully32dialog</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>No, good job Col, you must have learned well from your grandpa &lt;kids walk away, leaving two in extreme pain&gt;</dialog>
+            <origin>Kid in group</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully34</name>
+          <prerequisites>bully33</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&lt;pained groan&gt; You alright, boys?</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully35</name>
+          <prerequisites>bully34</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>I think you broke my wrist! Im gonna get you soon, boy! Git back, wonder why no one likes you!</dialog>
+            <origin>Bully</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully36</name>
+          <prerequisites>bully35</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Colligan walks slowly off again</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully37</name>
+          <prerequisites>bully36</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Yeah, your friends count...</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully38</name>
+          <prerequisites>bully37</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>true</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully32dialog</name>
+          <prerequisites>bully32</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Anyone else want practice?</dialog>
+            <origin>Colligan</origin>
+            <type></type>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>

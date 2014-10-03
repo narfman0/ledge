@@ -7,7 +7,7 @@ import com.blastedstudios.gdxworld.plugin.mode.quest.TriggerTable;
 import com.blastedstudios.gdxworld.world.quest.trigger.AbstractQuestTrigger;
 
 public class BeingHitTable extends TriggerTable {
-	private final TextField beingText, weaponText, damageAmountText;
+	private final TextField beingText, originText, damageAmountText;
 	private final BeingHitTrigger trigger;
 
 	public BeingHitTable(Skin skin, BeingHitTrigger trigger) {
@@ -17,20 +17,20 @@ public class BeingHitTable extends TriggerTable {
 		beingText.setMessageText("<being name regex>");
 		damageAmountText = new TextField(trigger.getDamageAmount()+"", skin);
 		damageAmountText.setMessageText("<damage amount>");
-		weaponText = new TextField(trigger.getOrigin(), skin);
-		weaponText.setMessageText("<weapon name regex>");
+		originText = new TextField(trigger.getOrigin(), skin);
+		originText.setMessageText("<origin name regex>");
 		add(new Label("Being: ", skin));
 		add(beingText);
 		add(new Label("Damage amount: ", skin));
 		add(damageAmountText);
-		add(new Label("Weapon: ", skin));
-		add(weaponText);
+		add(new Label("Origin: ", skin));
+		add(originText);
 	}
 
 	@Override public AbstractQuestTrigger apply() {
 		trigger.setTarget(beingText.getText());
 		trigger.setDamageAmount(Float.parseFloat(damageAmountText.getText()));
-		trigger.setOrigin(weaponText.getText());
+		trigger.setOrigin(originText.getText());
 		return trigger;
 	}
 
