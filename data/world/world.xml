@@ -5106,8 +5106,323 @@
             </entry>
           </properties>
         </world.GDXNPC>
+        <world.GDXNPC>
+          <name>kid1</name>
+          <coordinates>
+            <x>-21.303532</x>
+            <y>12.0765915</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string>-3</string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>kid</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>kid0</name>
+          <coordinates>
+            <x>-26.791203</x>
+            <y>12.147783</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>kid</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>kid2</name>
+          <coordinates>
+            <x>-28.523588</x>
+            <y>12.148196</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>kid</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>kid3</name>
+          <coordinates>
+            <x>-20.443302</x>
+            <y>11.898613</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string>-3</string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>kid</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>kid4</name>
+          <coordinates>
+            <x>-29.16425</x>
+            <y>12.023198</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>kid</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
       </npcs>
-      <paths/>
+      <paths>
+        <world.GDXPath>
+          <name>bullyOfficerPath</name>
+          <nodes>
+            <Vector2>
+              <x>-22.903133</x>
+              <y>11.421146</y>
+            </Vector2>
+          </nodes>
+        </world.GDXPath>
+      </paths>
       <joints>
         <world.joint.RevoluteJoint>
           <name>colDoorJoint</name>
@@ -5434,8 +5749,8 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
             <coordinates>
-              <x>31.08333</x>
-              <y>19.300001</y>
+              <x>-17.622404</x>
+              <y>11.881228</y>
             </coordinates>
             <being>player</being>
             <path></path>
@@ -5941,6 +6256,167 @@
             <impulse>0.0</impulse>
           </manifestation>
         </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully0</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>-26.227604</x>
+              <y>11.026518</y>
+            </lowerLeft>
+            <upperRight>
+              <x>-22.623539</x>
+              <y>18.982159</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>false</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully1</name>
+          <prerequisites>bully0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&apos;ey runt, going off to your gramps&apos; &apos;ouse?</dialog>
+            <origin>Bully</origin>
+            <type>Type</type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully2</name>
+          <prerequisites>bully1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>... &lt;Colligan grunts in dismay&gt;</dialog>
+            <origin>Colligan</origin>
+            <type>Type</type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully3</name>
+          <prerequisites>bully2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Aye, &apos;e asked you a question mate! *pushes Colligan*</dialog>
+            <origin>Bully 2</origin>
+            <type>Type</type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully6</name>
+          <prerequisites>bully5</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingrotation.BeingRotationManifestation">
+            <fixedRotation>false</fixedRotation>
+            <torque>50.0</torque>
+            <being>player</being>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully4</name>
+          <prerequisites>bully3</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>kid1</being>
+            <path>bullyOfficerPath</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully5</name>
+          <prerequisites>bully4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>100</time>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>kid1</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully8</name>
+          <prerequisites>bully7</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>250</time>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingrotation.BeingRotationManifestation">
+            <fixedRotation>true</fixedRotation>
+            <torque>0.0</torque>
+            <being>player</being>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully7</name>
+          <prerequisites>bully6</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&lt;Colligan lands on big kids shoe, with a thud&gt;</dialog>
+            <origin></origin>
+            <type>Type</type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully9</name>
+          <prerequisites>bully8</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Youve fallen and sullied my attire, runt! Whats wrong with you? Gonna to make me challenge the day after I take me rites?</dialog>
+            <origin>Bully</origin>
+            <type>Type</type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully10</name>
+          <prerequisites>bully9</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>You cant challenge one who isnt of age, or hasnt your father taught you that?</dialog>
+            <origin>Colligan</origin>
+            <type>Type</type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully11</name>
+          <prerequisites>bully10</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>My father taught me to fight! What of it, its practice, right boys &lt;motions to other children&gt;?</dialog>
+            <origin>Bully</origin>
+            <type>Type</type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully12</name>
+          <prerequisites>bully11</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>To fight, get within melee range of your opponent and swing weapon around so as to inflict bonus damage by the extra force.</dialog>
+            <origin></origin>
+            <type>Type</type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>bully13InputEnable</name>
+          <prerequisites>bully12</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>true</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
       </quests>
       <backgrounds>
         <world.GDXBackground>
@@ -6071,6 +6547,11 @@
             <x>233.55476</x>
             <y>-10.56848</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -6142,6 +6623,11 @@
             <x>27.45467</x>
             <y>34.8897</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -6173,6 +6659,11 @@
             <x>-27.524876</x>
             <y>30.047821</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -6268,6 +6759,11 @@
             <x>-94.474045</x>
             <y>19.983463</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -6375,6 +6871,11 @@
             <x>-85.45321</x>
             <y>24.073914</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -6438,6 +6939,11 @@
             <x>-107.8812</x>
             <y>11.424345</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -6481,6 +6987,11 @@
             <x>-219.53122</x>
             <y>-10.119473</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -6564,6 +7075,11 @@
             <x>-227.04074</x>
             <y>2.1453857</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -6635,6 +7151,11 @@
             <x>-248.46205</x>
             <y>2.4631329</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -6694,6 +7215,11 @@
             <x>-252.77226</x>
             <y>6.3677354</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -6725,6 +7251,11 @@
             <x>-245.96199</x>
             <y>6.395032</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -6756,6 +7287,11 @@
             <x>-250.14665</x>
             <y>12.051644</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -6787,6 +7323,11 @@
             <x>-195.10562</x>
             <y>-14.326259</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -6826,6 +7367,11 @@
             <x>-249.9516</x>
             <y>11.093611</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -6909,6 +7455,11 @@
             <x>-259.07983</x>
             <y>3.580449</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -6972,6 +7523,11 @@
             <x>-229.08076</x>
             <y>-3.2728941</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -7019,6 +7575,11 @@
             <x>36.025414</x>
             <y>38.51987</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -7066,6 +7627,11 @@
             <x>77.77752</x>
             <y>13.273282</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -7233,6 +7799,11 @@
             <x>136.40594</x>
             <y>-8.434641</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -7264,6 +7835,11 @@
             <x>174.83084</x>
             <y>-20.201494</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -7383,6 +7959,11 @@
             <x>-105.31608</x>
             <y>25.678637</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -7458,6 +8039,11 @@
             <x>127.37689</x>
             <y>-6.2184534</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -7489,6 +8075,11 @@
             <x>126.86381</x>
             <y>-3.3418994</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -7520,6 +8111,11 @@
             <x>-87.49455</x>
             <y>11.320057</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -7551,6 +8147,11 @@
             <x>242.08064</x>
             <y>-1.2002201</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -7598,6 +8199,11 @@
             <x>254.43344</x>
             <y>-2.1712532</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -7629,6 +8235,11 @@
             <x>260.10114</x>
             <y>-1.8086268</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -7660,6 +8271,11 @@
             <x>262.8731</x>
             <y>0.13069987</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -7691,6 +8307,11 @@
             <x>171.1818</x>
             <y>-24.06368</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -7794,6 +8415,11 @@
             <x>174.06432</x>
             <y>-19.449118</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -7829,6 +8455,11 @@
             <x>164.93884</x>
             <y>-19.293962</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -7860,6 +8491,11 @@
             <x>183.0162</x>
             <y>-22.247738</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -7891,6 +8527,11 @@
             <x>143.23404</x>
             <y>-8.284079</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -7922,6 +8563,11 @@
             <x>77.44886</x>
             <y>21.208593</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -7953,6 +8599,11 @@
             <x>77.36658</x>
             <y>24.374414</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -7988,6 +8639,11 @@
             <x>77.58434</x>
             <y>26.463186</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -8031,6 +8687,11 @@
             <x>86.23559</x>
             <y>23.578281</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -8062,6 +8723,11 @@
             <x>92.50192</x>
             <y>22.606503</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -8093,6 +8759,11 @@
             <x>70.146095</x>
             <y>32.90113</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -8132,6 +8803,11 @@
             <x>70.17745</x>
             <y>27.179264</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -8163,6 +8839,11 @@
             <x>29.825544</x>
             <y>45.096596</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -8218,6 +8899,11 @@
             <x>29.492392</x>
             <y>50.790962</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -8249,6 +8935,11 @@
             <x>25.977386</x>
             <y>49.42413</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -8280,6 +8971,11 @@
             <x>21.914633</x>
             <y>51.935783</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -8311,6 +9007,11 @@
             <x>18.337234</x>
             <y>48.817326</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -8346,6 +9047,11 @@
             <x>-33.539135</x>
             <y>41.824787</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -8413,6 +9119,11 @@
             <x>-24.202553</x>
             <y>44.04118</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -8444,6 +9155,11 @@
             <x>-96.83075</x>
             <y>26.154833</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -8491,6 +9207,11 @@
             <x>-165.55061</x>
             <y>-16.880592</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -8562,6 +9283,11 @@
             <x>-155.03903</x>
             <y>-5.42964</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -8593,6 +9319,11 @@
             <x>-153.43945</x>
             <y>-3.2191465</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -8624,6 +9355,11 @@
             <x>-156.86331</x>
             <y>-8.008548</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -8671,6 +9407,11 @@
             <x>-168.53273</x>
             <y>-7.141948</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -8702,6 +9443,11 @@
             <x>-173.3487</x>
             <y>-7.2270355</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -8733,6 +9479,11 @@
             <x>-178.15887</x>
             <y>-7.2002244</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -8764,6 +9515,11 @@
             <x>-261.02094</x>
             <y>19.588436</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -8803,6 +9559,11 @@
             <x>-267.29425</x>
             <y>15.775026</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -8854,6 +9615,11 @@
             <x>-264.5181</x>
             <y>10.095935</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -8917,6 +9683,11 @@
             <x>-263.28668</x>
             <y>2.0100641</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -8956,6 +9727,11 @@
             <x>-272.7729</x>
             <y>4.4134035</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -8995,6 +9771,11 @@
             <x>-265.54517</x>
             <y>0.059071682</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -9034,6 +9815,11 @@
             <x>-259.8619</x>
             <y>13.549469</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -9065,6 +9851,11 @@
             <x>-243.36926</x>
             <y>-17.860008</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -9112,6 +9903,11 @@
             <x>-230.05704</x>
             <y>-18.989285</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -9143,6 +9939,11 @@
             <x>-230.05765</x>
             <y>-15.582483</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -9174,6 +9975,11 @@
             <x>-231.55612</x>
             <y>-11.976167</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -9205,6 +10011,11 @@
             <x>-230.81744</x>
             <y>-7.804795</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
@@ -9236,6 +10047,11 @@
             <x>-203.59106</x>
             <y>-12.352635</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -9267,6 +10083,11 @@
             <x>-202.59157</x>
             <y>-12.320989</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -9298,6 +10119,11 @@
             <x>-201.59207</x>
             <y>-12.289343</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -9329,6 +10155,11 @@
             <x>-200.59256</x>
             <y>-12.257696</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -9360,6 +10191,11 @@
             <x>-199.59306</x>
             <y>-12.226049</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -9391,6 +10227,11 @@
             <x>-198.59357</x>
             <y>-12.194404</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -9422,6 +10263,11 @@
             <x>-197.59407</x>
             <y>-12.162756</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -9453,6 +10299,11 @@
             <x>-193.46039</x>
             <y>-12.4622555</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -9484,6 +10335,11 @@
             <x>-192.46156</x>
             <y>-12.510606</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -9515,6 +10371,11 @@
             <x>-191.46272</x>
             <y>-12.558955</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -9546,6 +10407,11 @@
             <x>-190.4639</x>
             <y>-12.607306</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -9577,6 +10443,11 @@
             <x>-189.46507</x>
             <y>-12.655655</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -9608,6 +10479,11 @@
             <x>-188.46623</x>
             <y>-12.704004</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -9639,6 +10515,11 @@
             <x>-187.4674</x>
             <y>-12.752354</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -9670,6 +10551,11 @@
             <x>-186.46857</x>
             <y>-12.800704</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -9701,6 +10587,11 @@
             <x>-185.46974</x>
             <y>-12.849053</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -9732,6 +10623,11 @@
             <x>-184.47092</x>
             <y>-12.897403</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -9763,6 +10659,11 @@
             <x>-183.47208</x>
             <y>-12.945752</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
@@ -9794,6 +10695,11 @@
             <x>-182.47325</x>
             <y>-12.994101</y>
           </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
