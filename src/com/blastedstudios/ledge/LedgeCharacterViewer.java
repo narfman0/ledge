@@ -104,7 +104,7 @@ public class LedgeCharacterViewer extends GDXGame {
 			try{
 				spriteBatch.setProjectionMatrix(camera.combined);
 				spriteBatch.begin();
-				player.render(delta, world, spriteBatch, null, null, null, false);
+				player.render(delta, world, spriteBatch, null, null, null, false, true);
 				spriteBatch.end();
 			}catch(Exception e){
 				e.printStackTrace();

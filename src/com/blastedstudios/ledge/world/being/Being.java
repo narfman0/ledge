@@ -88,11 +88,11 @@ public class Being implements Serializable{
 	}
 
 	public void render(float dt, World world, SpriteBatch spriteBatch, AssetManager sharedAssets,
-			GDXRenderer gdxRenderer, IDeathCallback deathCallback, boolean paused){
+			GDXRenderer gdxRenderer, IDeathCallback deathCallback, boolean paused, boolean inputEnabled){
 		this.sharedAssets = sharedAssets;
 		Vector2 vel = ragdoll.getLinearVelocity();
 		
-		ragdoll.render(spriteBatch, dead, isGrounded(world), moveLeft || moveRight, vel.x, paused);
+		ragdoll.render(spriteBatch, dead, isGrounded(world), moveLeft || moveRight, vel.x, paused, inputEnabled);
 		boolean facingLeft = !isDead() && ragdoll.aim(lastGunHeadingRadians);
 		for(IComponent component : getListeners())
 			component.render(dt, spriteBatch, sharedAssets, gdxRenderer, facingLeft, paused);

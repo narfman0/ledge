@@ -35,7 +35,8 @@ public interface IRagdoll{
 	public void dispose(World world);
 	public BodyPart getBodyPart(Fixture fixture);
 	public Body getBodyPart(BodyPart part);
-	public void render(SpriteBatch spriteBatch, boolean dead, boolean isGrounded, boolean isMoving, float velX, boolean paused);
+	public void render(SpriteBatch spriteBatch, boolean dead, boolean isGrounded,
+			boolean isMoving, float velX, boolean paused, boolean inputEnabled);
 	public boolean isFixedRotation();
 	public void setFixedRotation(boolean fixedRotation);
 	public void applyTorque(float torque);

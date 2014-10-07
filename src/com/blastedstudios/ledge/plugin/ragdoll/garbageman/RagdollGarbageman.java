@@ -22,7 +22,8 @@ public class RagdollGarbageman extends RagdollLoader {
 			}
 	}
 	
-	@Override public void render(SpriteBatch spriteBatch, boolean dead, boolean isGrounded, boolean isMoving, float velX, boolean paused){
+	@Override public void render(SpriteBatch spriteBatch, boolean dead, boolean isGrounded,
+			boolean isMoving, float velX, boolean paused, boolean inputEnabled){
 		super.render(spriteBatch, isGrounded, isMoving, velX, paused);
 	}
 }

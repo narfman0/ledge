@@ -94,9 +94,9 @@ public class WorldManager implements IDeathCallback{
 		spriteBatch.setProjectionMatrix(cam.combined);
 		spriteBatch.begin();
 		if(player.isSpawned())
-			player.render(dt, world, spriteBatch, sharedAssets, gdxRenderer, this, pause);
+			player.render(dt, world, spriteBatch, sharedAssets, gdxRenderer, this, pause, inputEnable);
 		for(NPC npc : npcs)
-			npc.render(dt, world, spriteBatch, sharedAssets, gdxRenderer, this, pause);
+			npc.render(dt, world, spriteBatch, sharedAssets, gdxRenderer, this, pause, true);
 		for(Iterator<Entry<Body, GunShot>> iter = gunshots.entrySet().iterator(); iter.hasNext();){
 			Entry<Body, GunShot> entry = iter.next();
 			entry.getValue().render(dt, spriteBatch, sharedAssets, entry.getKey(), this);
