@@ -82,7 +82,7 @@ public class Shoot extends jbt.execution.task.leaf.action.ExecutionAction {
 		Vector2 direction = target.cpy().sub(npc.getPosition()).nor();
 		npc.aim((float)Math.atan2(direction.y, direction.x));
 		Weapon equipped = npc.getEquippedWeapon();
-		if(equipped.getMSSinceAttack() > NPC.shootDelay(npc.getLevel(), npc.getDifficulty()))
+		if(equipped != null && equipped.getMSSinceAttack() > NPC.shootDelay(npc.getLevel(), npc.getDifficulty()))
 			npc.attack(direction, world);
 		return Status.SUCCESS;
 	}
