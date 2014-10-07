@@ -7,10 +7,10 @@ import com.blastedstudios.ledge.world.WorldManager;
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 @PluginImplementation
-public class InputEnableHandlerPlugin implements IInputEnableHandler{
+public class InputEnableHandlerPlugin implements IInputEnableHandler, IWorldManagerInitializer{
 	private WorldManager world;
 	
-	public void setWorldManager(WorldManager world){
+	@Override public void setWorldManager(WorldManager world){
 		this.world = world;
 	}
 	

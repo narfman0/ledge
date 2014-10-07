@@ -11,24 +11,14 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Joint;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
-import com.blastedstudios.gdxworld.plugin.quest.manifestation.beingspawn.IBeingSpawnHandler;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.dialog.IDialogHandler;
-import com.blastedstudios.gdxworld.plugin.quest.manifestation.endlevel.IEndLevelHandler;
-import com.blastedstudios.gdxworld.plugin.quest.manifestation.inputenable.IInputEnableHandler;
-import com.blastedstudios.gdxworld.plugin.quest.manifestation.particle.IParticleHandler;
-import com.blastedstudios.gdxworld.plugin.quest.manifestation.pause.IPauseHandler;
-import com.blastedstudios.gdxworld.plugin.quest.manifestation.sound.ISoundHandler;
 import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.world.GDXPath;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.gdxworld.world.quest.manifestation.IQuestManifestationExecutor;
-import com.blastedstudios.ledge.plugin.quest.handler.BeingSpawnHandlerPlugin;
 import com.blastedstudios.ledge.plugin.quest.handler.DialogHandlerPlugin;
-import com.blastedstudios.ledge.plugin.quest.handler.EndLevelHandlerPlugin;
-import com.blastedstudios.ledge.plugin.quest.handler.InputEnableHandlerPlugin;
-import com.blastedstudios.ledge.plugin.quest.handler.ParticleHandlerPlugin;
-import com.blastedstudios.ledge.plugin.quest.handler.PauseHandlerPlugin;
-import com.blastedstudios.ledge.plugin.quest.handler.SoundHandlerPlugin;
+import com.blastedstudios.ledge.plugin.quest.handler.IGameplayScreenInitializer;
+import com.blastedstudios.ledge.plugin.quest.handler.IWorldManagerInitializer;
 import com.blastedstudios.ledge.plugin.quest.manifestation.cameratween.CameraAccessor;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
 import com.blastedstudios.ledge.world.being.Being;
@@ -49,18 +39,10 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 		random = new Random();
 		for(IDialogHandler handler : PluginUtil.getPlugins(IDialogHandler.class))
 			((DialogHandlerPlugin)handler).setDialogManager(screen.getDialogManager());
-		for(IEndLevelHandler handler : PluginUtil.getPlugins(IEndLevelHandler.class))
-			((EndLevelHandlerPlugin)handler).setGameplayScreen(screen);
-		for(IBeingSpawnHandler handler : PluginUtil.getPlugins(IBeingSpawnHandler.class))
-			((BeingSpawnHandlerPlugin)handler).setWorldManager(worldManager);
-		for(IParticleHandler handler : PluginUtil.getPlugins(IParticleHandler.class))
-			((ParticleHandlerPlugin)handler).setGameplayScreen(screen);
-		for(IInputEnableHandler handler : PluginUtil.getPlugins(IInputEnableHandler.class))
-			((InputEnableHandlerPlugin)handler).setWorldManager(worldManager);
-		for(IPauseHandler handler : PluginUtil.getPlugins(IPauseHandler.class))
-			((PauseHandlerPlugin)handler).setWorldManager(worldManager);
-		for(ISoundHandler handler : PluginUtil.getPlugins(ISoundHandler.class))
-			((SoundHandlerPlugin)handler).setWorldManager(worldManager);
+		for(IWorldManagerInitializer init : PluginUtil.getPlugins(IWorldManagerInitializer.class))
+			init.setWorldManager(worldManager);
+		for(IGameplayScreenInitializer init : PluginUtil.getPlugins(IGameplayScreenInitializer.class))
+			init.setGameplayScreen(screen);
 	}
 
 	@Override public Joint getPhysicsJoint(String name) {

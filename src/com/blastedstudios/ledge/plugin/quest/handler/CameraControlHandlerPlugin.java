@@ -7,10 +7,10 @@ import com.blastedstudios.ledge.world.WorldManager;
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 @PluginImplementation
-public class CameraControlHandlerPlugin implements ICameraControlHandler{
+public class CameraControlHandlerPlugin implements ICameraControlHandler, IWorldManagerInitializer{
 	private WorldManager world;
 	
-	public void setWorldManager(WorldManager world){
+	@Override public void setWorldManager(WorldManager world){
 		this.world = world;
 	}
 

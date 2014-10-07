@@ -12,11 +12,11 @@ import com.blastedstudios.ledge.world.WorldManager;
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 @PluginImplementation
-public class SoundHandlerPlugin implements ISoundHandler{
+public class SoundHandlerPlugin implements ISoundHandler, IWorldManagerInitializer{
 	private final HashMap<String, Long> soundIdMap = new HashMap<>();
 	private WorldManager world;
 	
-	public void setWorldManager(WorldManager world){
+	@Override public void setWorldManager(WorldManager world){
 		this.world = world;
 	}
 

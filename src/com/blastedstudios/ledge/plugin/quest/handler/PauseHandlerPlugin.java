@@ -7,10 +7,10 @@ import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.ledge.world.WorldManager;
 
 @PluginImplementation
-public class PauseHandlerPlugin implements IPauseHandler {
+public class PauseHandlerPlugin implements IPauseHandler, IWorldManagerInitializer{
 	private WorldManager world;
 	
-	public void setWorldManager(WorldManager world){
+	@Override public void setWorldManager(WorldManager world){
 		this.world = world;
 	}
 

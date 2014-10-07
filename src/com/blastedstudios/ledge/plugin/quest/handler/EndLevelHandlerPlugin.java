@@ -7,10 +7,10 @@ import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 @PluginImplementation
-public class EndLevelHandlerPlugin implements IEndLevelHandler{
+public class EndLevelHandlerPlugin implements IEndLevelHandler, IGameplayScreenInitializer{
 	private GameplayScreen screen;
 	
-	public void setGameplayScreen(GameplayScreen screen){
+	@Override public void setGameplayScreen(GameplayScreen screen){
 		this.screen = screen;
 	}
 
