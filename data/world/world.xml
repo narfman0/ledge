@@ -702,7 +702,7 @@
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
-          <bodyType>DynamicBody</bodyType>
+          <bodyType>StaticBody</bodyType>
           <center>
             <x>33.49783</x>
             <y>12.396761</y>
@@ -5533,6 +5533,67 @@
             </entry>
           </properties>
         </world.GDXNPC>
+        <world.GDXNPC>
+          <name>ratchet</name>
+          <coordinates>
+            <x>-102.47584</x>
+            <y>57.754543</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ratchet</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
       </npcs>
       <paths>
         <world.GDXPath>
@@ -5541,6 +5602,24 @@
             <Vector2>
               <x>-22.903133</x>
               <y>11.421146</y>
+            </Vector2>
+          </nodes>
+        </world.GDXPath>
+        <world.GDXPath>
+          <name>ratchet0</name>
+          <nodes>
+            <Vector2>
+              <x>-115.04251</x>
+              <y>57.76321</y>
+            </Vector2>
+          </nodes>
+        </world.GDXPath>
+        <world.GDXPath>
+          <name>ratchet1</name>
+          <nodes>
+            <Vector2>
+              <x>-130.61256</x>
+              <y>57.605537</y>
             </Vector2>
           </nodes>
         </world.GDXPath>
@@ -5871,8 +5950,8 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
             <coordinates>
-              <x>31.160412</x>
-              <y>18.796246</y>
+              <x>-79.0906</x>
+              <y>58.79975</y>
             </coordinates>
             <being>player</being>
             <path></path>
@@ -7099,6 +7178,718 @@
             <dialog>&lt;interrupts forcefully&gt; He&apos;s not ready, not even of age yet. We&apos;ve got to be careful with this one, they&apos;re... &lt;trails off, looks away frustratedly, leaves.&gt;</dialog>
             <origin>Carragan</origin>
             <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>save0</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>-56.920918</x>
+              <y>10.766945</y>
+            </lowerLeft>
+            <upperRight>
+              <x>-51.119072</x>
+              <y>19.587715</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>-55.49504</x>
+              <y>11.828977</y>
+            </coordinates>
+            <being>player</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>save1</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>-123.71589</x>
+              <y>56.87685</y>
+            </lowerLeft>
+            <upperRight>
+              <x>-117.3732</x>
+              <y>65.874626</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>-121.06081</x>
+              <y>57.407867</y>
+            </coordinates>
+            <being>player</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>save2</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>-70.83552</x>
+              <y>67.70368</y>
+            </lowerLeft>
+            <upperRight>
+              <x>-67.39375</x>
+              <y>73.01385</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>-67.787094</x>
+              <y>69.20823</y>
+            </coordinates>
+            <being>player</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>save3</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>103.05038</x>
+              <y>16.301828</y>
+            </lowerLeft>
+            <upperRight>
+              <x>113.48224</x>
+              <y>30.176199</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>111.656654</x>
+              <y>9.468962</y>
+            </coordinates>
+            <being>player</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>save4</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>134.42813</x>
+              <y>-4.231002</y>
+            </lowerLeft>
+            <upperRight>
+              <x>138.03445</x>
+              <y>6.771347</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>134.18362</x>
+              <y>2.5904555</y>
+            </coordinates>
+            <being>player</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>save5</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>108.9088</x>
+              <y>-17.763895</y>
+            </lowerLeft>
+            <upperRight>
+              <x>113.06524</x>
+              <y>-4.010958</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>112.2095</x>
+              <y>-9.585482</y>
+            </coordinates>
+            <being>player</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>save6</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>70.64504</x>
+              <y>-13.289604</y>
+            </lowerLeft>
+            <upperRight>
+              <x>75.076546</x>
+              <y>-6.5048213</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>74.495865</x>
+              <y>-7.8617783</y>
+            </coordinates>
+            <being>player</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>save7</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>53.40803</x>
+              <y>-9.732179</y>
+            </lowerLeft>
+            <upperRight>
+              <x>56.678177</x>
+              <y>-2.9840713</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>57.381104</x>
+              <y>-8.998689</y>
+            </coordinates>
+            <being>player</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>save8</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>9.272913</x>
+              <y>-16.704916</y>
+            </lowerLeft>
+            <upperRight>
+              <x>14.188514</x>
+              <y>-2.3610344</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>13.114064</x>
+              <y>-16.253649</y>
+            </coordinates>
+            <being>player</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>save9</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>-27.385456</x>
+              <y>43.38653</y>
+            </lowerLeft>
+            <upperRight>
+              <x>-22.232628</x>
+              <y>50.565907</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>-26.105894</x>
+              <y>45.66899</y>
+            </coordinates>
+            <being>player</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>save10</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>-51.962875</x>
+              <y>57.196762</y>
+            </lowerLeft>
+            <upperRight>
+              <x>-44.74406</x>
+              <y>68.412506</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>-51.962875</x>
+              <y>57.196762</y>
+            </coordinates>
+            <being>player</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet0</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>-102.15544</x>
+              <y>57.258793</y>
+            </lowerLeft>
+            <upperRight>
+              <x>-98.61539</x>
+              <y>65.83148</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>false</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet1</name>
+          <prerequisites>ratchet0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Whoa my boy, good to see you! You look worse off than normal!</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet2</name>
+          <prerequisites>ratchet1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&lt;grunts&gt; I dont know why I come. Why do we do this gramps?</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet3</name>
+          <prerequisites>ratchet2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>You know Col, you are special, and have a desire to understand and provide things that benefit these people? They are just too blind, belligerent, and bafoony to realize the common good. You are my grandson, you know. Come, let me care for you.</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet4</name>
+          <prerequisites>ratchet3</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>It&apos;s just...</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet5</name>
+          <prerequisites>ratchet4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&lt;interrupts&gt;: Just not worth it? Of course not! These foolhardy folks so passionately seek to bring you down, the standards are so...</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet6</name>
+          <prerequisites>ratchet5</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>...stop! You mustn&apos;t say that! You know it is against standards; it will put us in danger. Dad has been warning me, I&apos;m sure you too.</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet7</name>
+          <prerequisites>ratchet6</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Will it put us in more danger than what we are working on? Their pontifications on our own ponderous plots is too gross; but moreso they fear our inklings to pursue our passions. It is itself an affront to them more than our plots. It is freedom they disagree with, as change is a chancy virgin best left untouched.</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet8</name>
+          <prerequisites>ratchet7</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>You are the most confusing conspiracist I know</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet9</name>
+          <prerequisites>ratchet8</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>One can only hope. I am rubbing off on you indeed, in grammar if not in thought, am I not? Though you and I both know your heart.</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet10</name>
+          <prerequisites>ratchet9</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>I understand neither your grammar nor your heart.</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet11</name>
+          <prerequisites>ratchet10</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Of course, but you are a splendidly brilliant chap of fifteen. You get that from your father *wink.* Come, lets explore the problem before us.</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet12</name>
+          <prerequisites>ratchet11</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>true</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet13</name>
+          <prerequisites>ratchet12</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>ratchet</being>
+            <path>ratchet0</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet14</name>
+          <prerequisites>ratchet14Pre</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Col, well met! Ready to... whoa are you okay?</dialog>
+            <origin>Cohiggan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet15</name>
+          <prerequisites>ratchet14</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Im fine, lets finish</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet16</name>
+          <prerequisites>ratchet15</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>The young one has been challenged</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet17</name>
+          <prerequisites>ratchet16</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>But he is not of age? Who did this? Havent they respect for standards? Let me challenge!</dialog>
+            <origin>Cohiggan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet18</name>
+          <prerequisites>ratchet17</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Challenge what? You challenge standards, fight the council? Heh heh... let us take our own challenge, the sky remains untouched by us! It is certainly not going to challenge itself.</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet19</name>
+          <prerequisites>ratchet18</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>You are confusing, gramps</dialog>
+            <origin>Cohiggan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet20</name>
+          <prerequisites>ratchet19</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Colligan motions at Cohiggan in triumph, indicating he is right in being the most confusing person around</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet21</name>
+          <prerequisites>ratchet20</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Im old and confused as well, dont worry. Foolish challenges...&lt;sad pause&gt; Let us see what this mess was. Col, did you inspect the issue we were having with the cantankerous crank?</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet22</name>
+          <prerequisites>ratchet21</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>The factory fashioned a new one, along with the pins. And yes, we updated the boilerplate firewall yesterday, he should be fine.</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet23</name>
+          <prerequisites>ratchet22</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Should is young....</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet24</name>
+          <prerequisites>ratchet23</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&lt;cutting off gramps&gt; yeah, we&apos;ve checked it a dozen times! It worked similarly for all trials before this!</dialog>
+            <origin>Cohiggan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet25</name>
+          <prerequisites>ratchet24</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Well theres just a few concepts Im still parsing... *pauses briefly, then ruffles* well.. just a quick trip then</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet26</name>
+          <prerequisites>ratchet25</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>But we were going to shoot for the ledge across the way! Didnt you say you learned to communicate with them, they are waiting for us today!</dialog>
+            <origin>Cohiggan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet27</name>
+          <prerequisites>ratchet26</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>They understand these setbacks, patience wins the day! Take it easy, and if you are okay, then off you go!</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet28</name>
+          <prerequisites>ratchet27</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&lt;excitedly&gt; woo time to get off this rock... the first person to fly to another ledge! And brother can next!</dialog>
+            <origin>Cohiggan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet29</name>
+          <prerequisites>ratchet28</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>When you touch down, fasten quickly and leave the pack running for when I cross over behind you to save me some time!</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet30</name>
+          <prerequisites>ratchet29</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Col, we&apos;ll need to modify it special to accommodate your augmentations, boy, but your time will come eventually. Now, did we forget anything yesterday?</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet31</name>
+          <prerequisites>ratchet30</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Of course not, its set gramps!</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet32</name>
+          <prerequisites>ratchet31</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Fine fine, ready to say farewell, friend? You have packed your...</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet33</name>
+          <prerequisites>ratchet32</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&lt;interrupts&gt; of course I&apos;m tooled up and have food and supplies. I&apos;m ready now &lt;moves to launchpad&gt;</dialog>
+            <origin>Cohiggan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet34</name>
+          <prerequisites>ratchet33</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&lt;aside, to Colligan&gt;: his patience he gets from his father, or lack thereof: remember my boy, life is not such a race, savor your victories as much as the process to get there. Your life isnt the sum of accomplishments.</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet35</name>
+          <prerequisites>ratchet34</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Then you write your book on process while we bask in victory, thats a good trade off.</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet36</name>
+          <prerequisites>ratchet35</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Touche, it is time I suppose.</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet37</name>
+          <prerequisites>ratchet36</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Cmon gramps, this is the culmination of many years! Lets go celebrate victorious and wish Coh well!</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet38</name>
+          <prerequisites>ratchet37</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>true</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet14Pre</name>
+          <prerequisites>ratchet13</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>-119.90405</x>
+              <y>57.132523</y>
+            </lowerLeft>
+            <upperRight>
+              <x>-116.42214</x>
+              <y>66.00154</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>false</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet14RatchetPath</name>
+          <prerequisites>ratchet14Pre</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>ratchet</being>
+            <path></path>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
