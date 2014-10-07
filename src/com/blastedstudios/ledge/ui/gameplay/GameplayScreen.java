@@ -110,7 +110,7 @@ public class GameplayScreen extends AbstractScreen {
 	@Override public void render(float delta) {
 		super.render(delta);
 		//if player is not spawned then we are in a cutscene, if input isn't enabled we shouldn't update camera
-		if(worldManager.getPlayer().isSpawned() && worldManager.isInputEnable())
+		if(worldManager.getPlayer().isSpawned() && worldManager.isPlayerTrack())
 			camera.position.set(worldManager.getPlayer().getPosition().x, worldManager.getPlayer().getPosition().y, 0);
 		camera.update();
 		rayHandler.setCombinedMatrix(camera.combined);

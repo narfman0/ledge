@@ -69,7 +69,7 @@ public class WorldManager implements IDeathCallback{
 	private final AIWorld aiWorld;
 	private final TweenManager tweenManager;
 	private final AssetManagerWrapper sharedAssets;
-	private boolean pause, inputEnable = true;
+	private boolean pause, inputEnable = true, playerTrack = true;
 	private final Random random;
 	
 	public WorldManager(Player player, GDXLevel level, AssetManagerWrapper sharedAssets){
@@ -364,5 +364,13 @@ public class WorldManager implements IDeathCallback{
 
 	public AssetManagerWrapper getSharedAssets() {
 		return sharedAssets;
+	}
+
+	public boolean isPlayerTrack() {
+		return playerTrack;
+	}
+
+	public void setPlayerTrack(boolean playerTrack) {
+		this.playerTrack = playerTrack;
 	}
 }
