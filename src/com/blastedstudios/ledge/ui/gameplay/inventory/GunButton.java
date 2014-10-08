@@ -1,5 +1,6 @@
 package com.blastedstudios.ledge.ui.gameplay.inventory;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
@@ -29,7 +30,13 @@ public class GunButton extends ImageButton {
 
 	static Sprite createGunSprite(AssetManager sharedAssets, String resource){
 		String assetPath = "data/textures/weapons/" + resource + ".png";
-		Sprite sprite = new Sprite(sharedAssets.get(assetPath, Texture.class));
+		Sprite sprite = null;
+		try{
+			sprite = new Sprite(sharedAssets.get(assetPath, Texture.class));
+		}catch(Exception e){
+			sprite = new Sprite();
+			Gdx.app.error("GunButton.createGunSprite", "Failed to create sprite with resource: " + resource + " " + e.getMessage());
+		}
 		sprite.setSize(INVENTORY_GUN_DIMENSION_X, INVENTORY_GUN_DIMENSION_Y);
 		return sprite;
 	}
