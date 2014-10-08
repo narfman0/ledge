@@ -69,7 +69,6 @@ public class GameplayScreen extends AbstractScreen {
 	private final TiledMeshRenderer tiledMeshRenderer;
 	private final SpriteBatch spriteBatch = new SpriteBatch();
 	private final AssetManagerWrapper sharedAssets, assetManager;
-	private GDXLevel nextLevel = null;
 	
 	public GameplayScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world,
 			FileHandle selectedFile, final GDXRenderer gdxRenderer, AssetManagerWrapper sharedAssets,
@@ -109,6 +108,9 @@ public class GameplayScreen extends AbstractScreen {
 
 	@Override public void render(float delta) {
 		super.render(delta);
+		//if disposed this up in super's render, need to drop it before rendering scene
+		if(assetManager.getLoadedAssets() == 0)
+			return;
 		//if player is not spawned then we are in a cutscene, if input isn't enabled we shouldn't update camera
 		if(worldManager.getPlayer().isSpawned() && worldManager.isPlayerTrack())
 			camera.position.set(worldManager.getPlayer().getPosition().x, worldManager.getPlayer().getPosition().y, 0);
@@ -139,36 +141,25 @@ public class GameplayScreen extends AbstractScreen {
 				(characterWindow == null || !characterWindow.contains(x, y)) &&
 				(vendorWindow == null || !vendorWindow.contains(x, y)))
 			worldManager.getPlayer().attack(touchedDirection, worldManager);
-		if(nextLevel != null){
-			assetManager.dispose();
-			GDXGameFade.fadeOutPopScreen(game, new IPopListener() {
-				@Override public void screenPopped() {
-					((AbstractScreen)game.getScreen()).getStage().addActor(new LoadingWindow(skin, 
-							new GameplayLoadingWindowExecutor(game, worldManager.getPlayer(), level, 
-									world, selectedFile, gdxRenderer, sharedAssets)));
-				}
-			});
-		}
 	}
 	
-	public void levelComplete(boolean success, String nextLevel){
+	public void levelComplete(final boolean success, final String nextLevelName){
 		SaveHelper.save(worldManager.getPlayer());
-		worldManager.getPlayer().clean(worldManager.getWorld());
 		//cant always setLevelCompleted(...,success), because if player 
 		//previously beats a level then replays and loses, we don't want to 
 		//make it so he can't play any later levels again
 		if(success) 
 			worldManager.getPlayer().setLevelCompleted(level.getName(), true);
-		game.popScreen();
-		if(success && !nextLevel.equals(""))
-			this.nextLevel = world.getLevel(nextLevel);
-		else{
-			GDXGameFade.fadeOutPopScreen(game, new IPopListener() {
-				@Override public void screenPopped() {
-					assetManager.dispose();
-				}
-			});
-		}
+		GDXGameFade.fadeOutPopScreen(game, new IPopListener() {
+			@Override public void screenPopped() {
+				dispose();
+				if(success && !nextLevelName.equals(""))
+					((AbstractScreen)game.getScreen()).getStage().addActor(new LoadingWindow(skin, 
+							new GameplayLoadingWindowExecutor(game, worldManager.getPlayer(), 
+									world.getLevel(nextLevelName), 
+									world, selectedFile, gdxRenderer, sharedAssets)));
+			}
+		});
 	}
 
 	public boolean isAction() {
@@ -226,7 +217,7 @@ public class GameplayScreen extends AbstractScreen {
 			GDXGameFade.fadeOutPopScreen(game, new IPopListener() {
 				@Override public void screenPopped() {
 					SaveHelper.save(worldManager.getPlayer());
-					worldManager.getPlayer().clean(worldManager.getWorld());
+					dispose();
 				}
 			});
 			break;
@@ -410,5 +401,12 @@ public class GameplayScreen extends AbstractScreen {
 	
 	public Camera getCamera(){
 		return camera;
+	}
+	
+	@Override public void dispose(){
+		super.dispose();
+		assetManager.dispose();
+		worldManager.getPlayer().clean(worldManager.getWorld());
+		worldManager.getWorld().dispose();
 	}
 }
