@@ -9,6 +9,7 @@ import com.badlogic.gdx.physics.box2d.Manifold;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
+import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.weapon.Melee;
 import com.blastedstudios.ledge.world.weapon.shot.GunShot;
 
@@ -53,7 +54,8 @@ public class ContactListener implements com.badlogic.gdx.physics.box2d.ContactLi
 		}else if(hit != null){//handle physics object collision dmg
 			Being target = (Being) hit.getBody().getUserData();
 			float i = calculateMomentumImpulse(contact);
-			if(i > Properties.getFloat("contact.impulse.threshold", 20f) && !target.isDead())
+			if(i > Properties.getFloat("contact.impulse.threshold", 20f) && !target.isDead() &&
+					(target instanceof NPC && Properties.getBool("npc.falldamage", false)))
 				worldManager.processHit(i, target, null, hit, contact.getWorldManifold().getNormal(), 
 						contact.getWorldManifold().getPoints()[0]);
 		}
