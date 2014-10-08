@@ -117,6 +117,8 @@ public class Move extends jbt.execution.task.leaf.action.ExecutionAction {
 	
 	private boolean shouldJump(NPC self, World world, Vector2 target){
 		boolean up = self.getPosition().y+1f < target.y;
+		if(self.getStats().getJetpackImpulse() > 100f)
+			return up;
 		//diagonally ahead of npc
 		Vector2 groundJumpTarget = self.getPosition().cpy().add(self.getRagdoll().isFacingLeft() ? -1f : 1f, -1f);
 		VisibleQueryCallback callback = new VisibleQueryCallback(self, self);

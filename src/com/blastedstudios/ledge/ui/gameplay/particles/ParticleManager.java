@@ -22,8 +22,13 @@ public class ParticleManager {
 
 	public void addParticle(GDXParticle particle){
 		if(!particles.containsKey(particle.getName())){
-			particles.put(particle.getName(), new ParticleStruct(particle.createEffect(), particle));
-			Gdx.app.log("ParticleManager.addParticle", "Particle added: " + particle);
+			try{
+				particles.put(particle.getName(), new ParticleStruct(particle.createEffect(), particle));
+				Gdx.app.log("ParticleManager.addParticle", "Particle added: " + particle);
+			}catch(Exception e){
+				Gdx.app.log("ParticleManager.addParticle", "Failed to add particle: " + particle);
+				e.printStackTrace();
+			}
 		}
 	}
 
