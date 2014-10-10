@@ -253,10 +253,7 @@ public class Being implements Serializable{
 		random = new Random();
 		dead = false;
 		hp = getMaxHp();
-		if(ragdoll != null)
-			clean(world);
-		if(getEquippedWeapon() != null)
-			getEquippedWeapon().deactivate(world);
+		dispose(world);
 
 		FileHandle atlasHandle = FileUtil.find(Gdx.files.internal("data/textures/characters"), resource);
 		if(atlasHandle == null)
@@ -285,7 +282,9 @@ public class Being implements Serializable{
 	/**
 	 * Clean character from level when exiting
 	 */
-	public void clean(World world){
+	public void dispose(World world){
+		if(getEquippedWeapon() != null)
+			getEquippedWeapon().dispose(world);
 		if(ragdoll != null)
 			ragdoll.dispose(world);
 		ragdoll = null;
@@ -379,7 +378,7 @@ public class Being implements Serializable{
 
 	public void setCurrentWeapon(int currentWeapon, World world) {
 		if(getEquippedWeapon() != null)
-			getEquippedWeapon().deactivate(world);
+			getEquippedWeapon().dispose(world);
 		this.currentWeapon = currentWeapon;
 		reloading = false;
 		if(getEquippedWeapon() != null)

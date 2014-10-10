@@ -98,7 +98,7 @@ public class Melee extends Weapon {
 		return null;
 	}
 	
-	@Override public void deactivate(World world) {
+	@Override public void dispose(World world) {
 		death(world);
 		if(body != null){
 			world.destroyBody(body);

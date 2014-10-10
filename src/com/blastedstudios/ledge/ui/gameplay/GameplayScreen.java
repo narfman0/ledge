@@ -406,7 +406,7 @@ public class GameplayScreen extends AbstractScreen {
 	@Override public void dispose(){
 		super.dispose();
 		assetManager.dispose();
-		worldManager.getPlayer().clean(worldManager.getWorld());
+		worldManager.getPlayer().dispose(worldManager.getWorld());
 		worldManager.getWorld().dispose();
 	}
 }
