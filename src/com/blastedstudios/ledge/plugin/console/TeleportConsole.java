@@ -2,6 +2,7 @@ package com.blastedstudios.ledge.plugin.console;
 
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
+import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
 import com.blastedstudios.ledge.util.IConsoleCommand;
 import com.blastedstudios.ledge.world.WorldManager;
 
@@ -11,7 +12,7 @@ public class TeleportConsole implements IConsoleCommand{
 		return new String[]{"teleport","tp"};
 	}
 
-	@Override public void execute(WorldManager world, String[] tokens) {
+	@Override public void execute(final WorldManager world, final GameplayScreen screen, String[] tokens) {
 		float x, y;
 		if(tokens[1].contains(",")){
 			x = Float.parseFloat(tokens[1].split(",")[0].trim());

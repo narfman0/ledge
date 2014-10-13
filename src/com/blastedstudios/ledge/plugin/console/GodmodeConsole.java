@@ -4,6 +4,7 @@ import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 import com.badlogic.gdx.Gdx;
 import com.blastedstudios.gdxworld.util.Properties;
+import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
 import com.blastedstudios.ledge.util.IConsoleCommand;
 import com.blastedstudios.ledge.world.WorldManager;
 
@@ -13,7 +14,7 @@ public class GodmodeConsole implements IConsoleCommand{
 		return new String[]{"player"};
 	}
 
-	@Override public void execute(WorldManager world, String[] tokens) {
+	@Override public void execute(final WorldManager world, final GameplayScreen screen, String[] tokens) {
 		if(tokens.length == 3 && tokens[1].equalsIgnoreCase("godmode")){
 			boolean enabled = Boolean.parseBoolean(tokens[2]);
 			Properties.set("character.godmode", enabled+"");

@@ -304,7 +304,7 @@ public class GameplayScreen extends AbstractScreen {
 							return false;
 						}
 					};
-		 			stage.addActor(consoleWindow = new ConsoleWindow(worldManager, skin, listener));
+		 			stage.addActor(consoleWindow = new ConsoleWindow(skin, worldManager, this, listener));
 					consoleWindow.setX(Gdx.graphics.getWidth()/2);
 		 		}else{
 		 			consoleWindow.execute();
