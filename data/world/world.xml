@@ -12826,19 +12826,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -12846,15 +12838,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>vasht</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -12862,11 +12862,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -12887,19 +12887,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string>-4</string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -12907,15 +12899,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string>-4</string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -12923,11 +12923,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -12948,19 +12948,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string>-4</string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -12968,15 +12960,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string>-4</string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldierGlock</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -12984,11 +12984,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -13009,19 +13009,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string>-4</string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -13029,15 +13021,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string>-4</string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -13045,11 +13045,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -13070,19 +13070,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>Resource</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>XP</string>
               <string></string>
             </entry>
             <entry>
-              <string>Behavior</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>Resource</string>
               <string></string>
             </entry>
             <entry>
@@ -13090,15 +13082,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>robbot</string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
@@ -13106,11 +13106,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
@@ -13131,19 +13131,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -13151,15 +13143,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldierGlock</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -13167,11 +13167,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -13192,19 +13192,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -13212,15 +13204,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -13228,11 +13228,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -13253,19 +13253,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -13273,15 +13265,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldierGlock</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -13289,11 +13289,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -13314,15 +13314,15 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
+              <string>XP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
               <string></string>
             </entry>
             <entry>
@@ -13330,7 +13330,7 @@
               <string>glock</string>
             </entry>
             <entry>
-              <string>Behavior</string>
+              <string>Aim</string>
               <string></string>
             </entry>
             <entry>
@@ -13338,11 +13338,11 @@
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -13350,11 +13350,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -13375,15 +13375,15 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
+              <string>XP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
               <string></string>
             </entry>
             <entry>
@@ -13391,7 +13391,7 @@
               <string>glock</string>
             </entry>
             <entry>
-              <string>Behavior</string>
+              <string>Aim</string>
               <string></string>
             </entry>
             <entry>
@@ -13399,11 +13399,11 @@
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -13411,11 +13411,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -13436,19 +13436,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -13456,15 +13448,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldierGlock</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -13472,11 +13472,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -13497,19 +13497,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -13517,15 +13509,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldierGlock</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -13533,11 +13533,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -13558,19 +13558,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -13578,15 +13570,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldierGlock</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -13594,11 +13594,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -13619,15 +13619,15 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
+              <string>XP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
               <string></string>
             </entry>
             <entry>
@@ -13635,7 +13635,7 @@
               <string>uzi</string>
             </entry>
             <entry>
-              <string>Behavior</string>
+              <string>Aim</string>
               <string></string>
             </entry>
             <entry>
@@ -13643,11 +13643,11 @@
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -13655,11 +13655,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -13680,19 +13680,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -13700,15 +13692,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -13716,11 +13716,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -13741,19 +13741,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -13761,15 +13753,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -13777,11 +13777,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -13802,19 +13802,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -13822,15 +13814,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -13838,11 +13838,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -13863,19 +13863,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -13883,15 +13875,23 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldierGlock</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -13899,11 +13899,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -13924,35 +13924,35 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Aim</string>
-              <string>-4</string>
-            </entry>
-            <entry>
-              <string>Guns</string>
-              <string>uzi</string>
+              <string>XP</string>
+              <string></string>
             </entry>
             <entry>
               <string>Behavior</string>
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string>uzi</string>
+            </entry>
+            <entry>
+              <string>Aim</string>
+              <string>-4</string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>desertSoldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -13960,11 +13960,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -25165,8 +25165,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-110.77756</x>
-            <y>32.001118</y>
+            <x>-110.157745</x>
+            <y>32.004105</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -25176,20 +25176,20 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-2.2421188</x>
-              <y>-0.11991882</y>
+              <x>-2.8619308</x>
+              <y>-0.12290573</y>
             </Vector2>
             <Vector2>
-              <x>2.2351532</x>
-              <y>-0.15418053</y>
+              <x>2.8404007</x>
+              <y>-0.1522255</y>
             </Vector2>
             <Vector2>
-              <x>2.2212448</x>
-              <y>0.13704681</y>
+              <x>2.8556824</x>
+              <y>0.14107513</y>
             </Vector2>
             <Vector2>
-              <x>-2.2143097</x>
-              <y>0.13704681</y>
+              <x>-2.8341217</x>
+              <y>0.1340599</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -28587,15 +28587,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -28603,15 +28599,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Soldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -28619,11 +28619,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -28644,15 +28644,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -28660,15 +28656,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Soldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -28676,11 +28676,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -28701,15 +28701,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -28717,15 +28713,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Soldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -28733,11 +28733,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -28758,15 +28758,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -28774,15 +28770,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Soldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -28790,11 +28790,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -28815,15 +28815,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -28831,15 +28827,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Soldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -28847,11 +28847,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -28872,15 +28872,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -28888,15 +28884,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Soldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -28904,11 +28904,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -28929,15 +28929,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -28945,15 +28941,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Guard</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -28961,11 +28961,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -28986,15 +28986,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -29002,15 +28998,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Guard</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -29018,11 +29018,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -29043,15 +29043,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -29059,15 +29055,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Soldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -29075,11 +29075,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -29100,15 +29100,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -29116,15 +29112,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Soldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -29132,11 +29132,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -29157,15 +29157,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -29173,15 +29169,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Soldier</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -29189,11 +29189,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
@@ -29214,15 +29214,11 @@
           </coordinates>
           <properties>
             <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-            <entry>
               <string>Resource</string>
               <string></string>
             </entry>
             <entry>
-              <string>Guns</string>
+              <string>XP</string>
               <string></string>
             </entry>
             <entry>
@@ -29230,15 +29226,19 @@
               <string></string>
             </entry>
             <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
               <string>NPCData</string>
               <string>ledge3Sniper</string>
             </entry>
             <entry>
-              <string>Defense</string>
+              <string>Attack</string>
               <string></string>
             </entry>
             <entry>
-              <string>Attack</string>
+              <string>Defense</string>
               <string></string>
             </entry>
             <entry>
@@ -29246,11 +29246,11 @@
               <string></string>
             </entry>
             <entry>
-              <string>HP</string>
+              <string>Level</string>
               <string></string>
             </entry>
             <entry>
-              <string>Level</string>
+              <string>HP</string>
               <string></string>
             </entry>
             <entry>
