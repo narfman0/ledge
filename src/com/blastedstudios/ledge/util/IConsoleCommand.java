@@ -8,4 +8,5 @@ import net.xeoh.plugins.base.Plugin;
 public interface IConsoleCommand extends Plugin {
 	public String[] getMatches();
 	public void execute(final WorldManager world, final GameplayScreen screen, String[] tokens);
+	public String getHelp();
 }

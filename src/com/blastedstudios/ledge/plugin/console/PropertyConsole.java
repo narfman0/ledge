@@ -21,4 +21,10 @@ public class PropertyConsole implements IConsoleCommand {
 		else if(tokens.length == 3)
 			Properties.set(tokens[1], tokens[2]);
 	}
+
+	@Override public String getHelp() {
+		return "Property command prints or sets properties. Can be shortened to 'prop'. Usage:\n"
+				+ "property debug.draw, shows the current value for property debug.draw\n"
+				+ "property debug.draw true, sets value for property debug.draw to 'true'";
+	}
 }

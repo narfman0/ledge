@@ -15,4 +15,8 @@ public class PauseConsole implements IConsoleCommand {
 	@Override public void execute(final WorldManager world, final GameplayScreen screen, String[] tokens) {
 		world.pause(Boolean.parseBoolean(tokens[1]));
 	}
+
+	@Override public String getHelp() {
+		return "Pause command pauses gameplay. Usage:\npause <true/false>, where true pauses the game";
+	}
 }

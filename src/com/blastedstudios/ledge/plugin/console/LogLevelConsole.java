@@ -20,4 +20,9 @@ public class LogLevelConsole implements IConsoleCommand{
 			Gdx.app.log("LogLevelConsole.execute", "Log level set to: " + level);
 		}
 	}
+
+	@Override public String getHelp() {
+		return "Log level command changes verbosity of log. Usage:\n"
+				+ "log level <level>, where level is a libgdx log supported value e.g. DEBUG, INFO, WARNING";
+	}
 }

@@ -23,4 +23,9 @@ public class TeleportConsole implements IConsoleCommand{
 		}
 		world.getPlayer().setPosition(x, y, 0);
 	}
+
+	@Override public String getHelp() {
+		return "Teleport command places the player in a location. Can be shortened to 'tp'. Usage:\n"
+				+ "teleport <location>, where <location> is an x,y comma separated value e.g. 100,100";
+	}
 }

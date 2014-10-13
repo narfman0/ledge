@@ -21,4 +21,9 @@ public class GodmodeConsole implements IConsoleCommand{
 			Gdx.app.log("GodmodeConsole.execute", "Godmode set to: " + enabled);
 		}
 	}
+
+	@Override public String getHelp() {
+		return "God mode command, making player invincible to damage until unset. "
+				+ "Usage:\nplayer godmode <true/false>, where true enabled invincibility";
+	}
 }

@@ -27,4 +27,8 @@ public class AddAmmoConsole implements IConsoleCommand{
 			}
 		}
 	}
+
+	@Override public String getHelp() {
+		return "Add ammo to current weapon. Usage:\nplayer addammo <rds>, where <rds> is an integer value";
+	}
 }

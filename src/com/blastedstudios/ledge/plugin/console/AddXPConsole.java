@@ -20,4 +20,9 @@ public class AddXPConsole implements IConsoleCommand{
 			world.getPlayer().addXp(amount);
 		}
 	}
+
+	@Override
+	public String getHelp() {
+		return "Add xp console command. Usage:\nplayer addxp <xp>, where xp is some integer value";
+	}
 }

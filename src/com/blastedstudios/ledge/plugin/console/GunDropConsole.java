@@ -42,4 +42,11 @@ public class GunDropConsole implements IConsoleCommand{
 			}
 		}
 	}
+
+	@Override public String getHelp() {
+		return "Gun drop command displays rate and drops guns. No argument shows current gun drop rate, while 'random' or <gunname>"
+				+ " spawns a random weapon or a particular named weapon, respectively. Usage:\n"
+				+ "gun drop <gunname>, drop the weapon with name <gunname>, e.g. glock\n"
+				+ "gun drop, shows probability to drop a gun";
+	}
 }

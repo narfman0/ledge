@@ -16,4 +16,9 @@ public class JetpackConsole implements IConsoleCommand{
 		if(tokens[1].equalsIgnoreCase("jetpack"))
 			world.getPlayer().getStats().setJetpackMax(Float.parseFloat(tokens[2]));
 	}
+
+	@Override public String getHelp() {
+		return "Jetpack console command changes max power for player. Usage:\n"
+				+ "player jetpack <max>, where max is an integer e.g. 100";
+	}
 }
