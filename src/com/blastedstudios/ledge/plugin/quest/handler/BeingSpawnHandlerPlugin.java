@@ -17,11 +17,11 @@ public class BeingSpawnHandlerPlugin implements IBeingSpawnHandler, IWorldManage
 	}
 
 	@Override public CompletionEnum beingSpawn(String being, Vector2 coordinates,
-			String path) {
+			String path, String npcData) {
 		if(being.equalsIgnoreCase("player"))
 			world.setRespawnLocation(coordinates.cpy());
 		else{
-			NPCData data = NPCData.parse(being);
+			NPCData data = NPCData.parse(npcData);
 			data.set("Path", path);
 			world.spawnNPC(being, coordinates, data, world.getAiWorld());
 		}
