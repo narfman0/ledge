@@ -222,6 +222,7 @@ public class GameplayScreen extends AbstractScreen {
 			});
 			break;
 		case Keys.C:
+		case Keys.CONTROL_LEFT:
 			worldManager.getPlayer().setFixedRotation(false);
 			break;
 		case Keys.R:
@@ -370,6 +371,7 @@ public class GameplayScreen extends AbstractScreen {
 			worldManager.getPlayer().setJump(false);
 			break;
 		case Keys.C:
+		case Keys.CONTROL_LEFT:
 			worldManager.getPlayer().setFixedRotation(true);
 			break;
 		}
