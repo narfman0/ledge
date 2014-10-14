@@ -6,7 +6,7 @@ import com.blastedstudios.ledge.world.QuestManifestationExecutor;
 
 public class PathChangeManifestation extends AbstractQuestManifestation {
 	private static final long serialVersionUID = 1L;
-	public static final PathChangeManifestation DEFAULT = new PathChangeManifestation("Name", "");
+	public static final PathChangeManifestation DEFAULT = new PathChangeManifestation();
 	private String being = "", path = "";
 	
 	public PathChangeManifestation(){}

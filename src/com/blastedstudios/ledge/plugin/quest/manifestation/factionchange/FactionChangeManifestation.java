@@ -7,7 +7,7 @@ import com.blastedstudios.ledge.world.being.FactionEnum;
 
 public class FactionChangeManifestation extends AbstractQuestManifestation {
 	private static final long serialVersionUID = 1L;
-	public static final FactionChangeManifestation DEFAULT = new FactionChangeManifestation("Name", FactionEnum.FRIEND);
+	public static final FactionChangeManifestation DEFAULT = new FactionChangeManifestation("", FactionEnum.FRIEND);
 	private String being = "";
 	private FactionEnum faction = FactionEnum.FRIEND;
 	
