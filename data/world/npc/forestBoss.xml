@@ -2,27 +2,27 @@
   <properties>
     <entry>
       <string>HP</string>
-      <string>55</string>
+      <string>1000</string>
     </entry>
     <entry>
       <string>Attack</string>
-      <string>8</string>
+      <string>10</string>
     </entry>
     <entry>
       <string>Defense</string>
-      <string>8</string>
-    </entry>
-    <entry>
-      <string>HPPerLevel</string>
       <string>5</string>
     </entry>
     <entry>
+      <string>HPPerLevel</string>
+      <string>100</string>
+    </entry>
+    <entry>
       <string>AttackPerLevel</string>
-      <string>2</string>
+      <string>3</string>
     </entry>
     <entry>
       <string>DefensePerLevel</string>
-      <string>2</string>
+      <string>1</string>
     </entry>
     <entry>
       <string>Weapons</string>
@@ -34,31 +34,31 @@
     </entry>
     <entry>
       <string>Resource</string>
-      <string>forestSoldier</string>
+      <string>forestBoss</string>
     </entry>
     <entry>
       <string>Behavior</string>
-      <string>EnemyAggressiveBT</string>
+      <string>forestBossBT</string>
     </entry>
     <entry>
       <string>Cash</string>
-      <string>5</string>
+      <string>500</string>
     </entry>
     <entry>
       <string>Level</string>
-      <string>1</string>
+      <string>4</string>
     </entry>
     <entry>
       <string>XP</string>
-      <string>100</string>
+      <string>1000</string>
     </entry>
     <entry>
       <string>DistanceAware</string>
-      <string>25</string>
+      <string>99999</string>
     </entry>
     <entry>
       <string>DistanceVision</string>
-      <string>150</string>
+      <string>99999</string>
     </entry>
   </properties>
 </com.blastedstudios.ledge.world.being.NPCData>
