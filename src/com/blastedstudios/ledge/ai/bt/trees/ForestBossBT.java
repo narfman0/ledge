@@ -2,7 +2,7 @@
 //                   MACHINE GENERATED CODE                
 //                       DO NOT MODIFY                     
 //                                                         
-// Generated on 10/19/2014 14:56:27
+// Generated on 10/19/2014 15:05:51
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.trees;
 
@@ -14,11 +14,11 @@ package com.blastedstudios.ledge.ai.bt.trees;
  */
 public class ForestBossBT implements jbt.execution.core.IBTLibrary {
 	/** Tree generated from file data/jbt/forestBoss.xbt. */
-	private static jbt.model.core.ModelTask forestBoss;
+	private static jbt.model.core.ModelTask Root;
 
 	/* Static initialization of all the trees. */
 	static {
-		forestBoss = new jbt.model.task.decorator.ModelRepeat(
+		Root = new jbt.model.task.decorator.ModelRepeat(
 				null,
 				new jbt.model.task.composite.ModelSelector(
 						null,
@@ -84,8 +84,8 @@ public class ForestBossBT implements jbt.execution.core.IBTLibrary {
 	 * so they are shared among all the instances of this class.
 	 */
 	public jbt.model.core.ModelTask getBT(java.lang.String name) {
-		if (name.equals("forestBoss")) {
-			return forestBoss;
+		if (name.equals("Root")) {
+			return Root;
 		}
 		return null;
 	}
@@ -117,7 +117,7 @@ public class ForestBossBT implements jbt.execution.core.IBTLibrary {
 
 			if ((this.currentTree - 1) == 0) {
 				return new jbt.util.Pair<java.lang.String, jbt.model.core.ModelTask>(
-						"forestBoss", forestBoss);
+						"Root", Root);
 			}
 
 			throw new java.util.NoSuchElementException();

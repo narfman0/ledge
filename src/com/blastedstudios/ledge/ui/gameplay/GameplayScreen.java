@@ -153,7 +153,7 @@ public class GameplayScreen extends AbstractScreen {
 		GDXGameFade.fadeOutPopScreen(game, new IPopListener() {
 			@Override public void screenPopped() {
 				dispose();
-				if(success && !nextLevelName.equals(""))
+				if(success && nextLevelName != null && !nextLevelName.equals(""))
 					((AbstractScreen)game.getScreen()).getStage().addActor(new LoadingWindow(skin, 
 							new GameplayLoadingWindowExecutor(game, worldManager.getPlayer(), 
 									world.getLevel(nextLevelName), 

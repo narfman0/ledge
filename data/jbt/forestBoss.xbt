@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tree>
-  <Node id="Node_0" name="forestBoss" type="Root">
+  <Node id="Node_0" name="Root" type="Root">
     <Children>
       <Node id="Node_1" type="Repeat">
         <Children>

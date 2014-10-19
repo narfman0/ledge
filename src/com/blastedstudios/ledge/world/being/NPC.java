@@ -65,7 +65,7 @@ public class NPC extends Being {
 			AssetManager sharedAssets, GDXRenderer gdxRenderer, IDeathCallback callback,
 			boolean paused, boolean inputEnabled){
 		super.render(dt, world, spriteBatch, sharedAssets, gdxRenderer, callback, paused, inputEnabled);
-		if(!dead)
+		if(!dead && btExecutor != null)
 			btExecutor.tick();
 	}
 
