@@ -19,6 +19,22 @@
 			<Parameter name="target" type="COORDINATE" />
 		</Action>
 		<Action name="CurrentObjective" />
+		<Action name="Jump">
+			<Parameter name="towardPlayer" type="BOOLEAN" />
+		</Action>
+		<Action name="Drop" />
+		<Action name="Land" />
+		<Action name="Attack">
+			<Parameter name="type" type="STRING" />
+		</Action>
+		<Action name="CooldownStart">
+			<Parameter name="identifier" type="STRING" />
+			<Parameter name="duration" type="INTEGER" />
+		</Action>
+		<Action name="CooldownEnd">
+			<Parameter name="identifier" type="STRING" />
+		</Action>
+		<Action name="RunAway" />
 		
 		<!-- Garbageman domain nodes -->
 		<Action name="GMTick" />
@@ -31,6 +47,8 @@
 		<Sensor name="HighDanger" type="BOOLEAN" />
 		<Sensor name="InCover" type="BOOLEAN" />
 		<Sensor name="IsDead" type="BOOLEAN" />
+		<Sensor name="PlayerLeft" type="BOOLEAN" />
+		<Sensor name="PlayerUnder" type="BOOLEAN" />
 	</SensorSet>
 	<EntitySet/>
 	<GoalSet/>

@@ -181,12 +181,15 @@ public class Being implements Serializable{
 		}
 		if(dir != null){
 			jump = false;
-			ragdoll.setLinearVelocity(ragdoll.getLinearVelocity().x, 0);
-			ragdoll.applyLinearImpulse(dir.x*CHARACTER_JUMP_IMPULSE, dir.y*CHARACTER_JUMP_IMPULSE, 
-					ragdoll.getPosition().x, ragdoll.getPosition().y);			
+			jumpImmediate(dir.cpy().scl(CHARACTER_JUMP_IMPULSE));
 			for(IComponent component : getListeners())
 				component.jump(world);
 		}
+	}
+	
+	public void jumpImmediate(Vector2 impulse){
+		ragdoll.setLinearVelocity(ragdoll.getLinearVelocity().x, 0);
+		ragdoll.applyLinearImpulse(impulse.x, impulse.y, ragdoll.getPosition().x, ragdoll.getPosition().y);
 	}
 	
 	/**
