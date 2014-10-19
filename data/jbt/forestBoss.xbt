@@ -64,7 +64,7 @@
                   </Node>
                   <Node id="Node_35" type="Wait">
                     <Parameters>
-                      <Parameter name="duration" fromcontext="false">250</Parameter>
+                      <Parameter name="duration" fromcontext="false">350</Parameter>
                     </Parameters>
                   </Node>
                   <Node id="Node_14" name="Attack" type="Action">
@@ -74,7 +74,7 @@
                   </Node>
                   <Node id="Node_34" type="Wait">
                     <Parameters>
-                      <Parameter name="duration" fromcontext="false">250</Parameter>
+                      <Parameter name="duration" fromcontext="false">350</Parameter>
                     </Parameters>
                   </Node>
                   <Node id="Node_15" name="Attack" type="Action">
@@ -84,7 +84,7 @@
                   </Node>
                   <Node id="Node_33" type="Wait">
                     <Parameters>
-                      <Parameter name="duration" fromcontext="false">250</Parameter>
+                      <Parameter name="duration" fromcontext="false">350</Parameter>
                     </Parameters>
                   </Node>
                   <Node id="Node_19" name="CooldownStart" type="Action">

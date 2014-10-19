@@ -50,7 +50,7 @@ public class ForestTick extends jbt.execution.task.leaf.action.ExecutionAction {
 					Gdx.app.log("ForestTick.internalTick", "Lunge executed");
 					float aimAngle = Being.getAimAngle(self, world.getPlayer());
 					Vector2 lungeForce = new Vector2((float)Math.cos(aimAngle), (float)Math.sin(aimAngle)).scl(
-							Properties.getFloat("ai.forest.lunge.magnitude", 120f));
+							Properties.getFloat("ai.forest.lunge.magnitude", 180f));
 					self.aim(aimAngle);
 					self.getRagdoll().applyForceAtCenter(lungeForce.x, lungeForce.y);
 					self.getRagdoll().applyLinearImpulse(lungeForce.x, lungeForce.y,

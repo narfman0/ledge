@@ -1,0 +1,14 @@
+<com.blastedstudios.ledge.world.weapon.Melee>
+	<stats>
+		<damage>50</damage>
+	</stats>
+	<name>Sword</name>
+	<resource>sword</resource>
+	<cost>100</cost>
+	<fireSound>clunk</fireSound>
+	<width>.15</width>
+	<height>.5</height>
+	<density>.01</density>
+	<rolls>1</rolls>
+	<minLevel>1</minLevel>
+</com.blastedstudios.ledge.world.weapon.Melee>
