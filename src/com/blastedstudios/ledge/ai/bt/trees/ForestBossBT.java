@@ -2,7 +2,7 @@
 //                   MACHINE GENERATED CODE                
 //                       DO NOT MODIFY                     
 //                                                         
-// Generated on 10/19/2014 16:14:16
+// Generated on 10/19/2014 16:32:52
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.trees;
 
@@ -61,6 +61,8 @@ public class ForestBossBT implements jbt.execution.core.IBTLibrary {
 								new com.blastedstudios.ledge.ai.bt.actions.Attack(
 										null, "lunge", null),
 								new jbt.model.task.leaf.ModelWait(null, 350),
+								new com.blastedstudios.ledge.ai.bt.actions.Land(
+										null),
 								new com.blastedstudios.ledge.ai.bt.actions.CooldownStart(
 										null, "forestBossCooldown", null,
 										(int) 3500, null),

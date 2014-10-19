@@ -87,6 +87,7 @@
                       <Parameter name="duration" fromcontext="false">350</Parameter>
                     </Parameters>
                   </Node>
+                  <Node id="Node_37" name="Land" type="Action" />
                   <Node id="Node_19" name="CooldownStart" type="Action">
                     <Parameters>
                       <Parameter name="identifier" fromcontext="false">forestBossCooldown</Parameter>
