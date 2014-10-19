@@ -56,6 +56,7 @@ public class Being implements Serializable{
 	private FactionEnum faction;
 	private EnumSet<FactionEnum> friendlyFactions;
 	private transient float lastGunHeadingRadians, timeUntilReload;
+	private transient int ticksToActivateWeapon = -1;
 	private transient DamageStruct lastDamage;
 	private transient Random random;
 	private transient List<IComponent> listeners;
@@ -89,6 +90,8 @@ public class Being implements Serializable{
 
 	public void render(float dt, World world, SpriteBatch spriteBatch, AssetManager sharedAssets,
 			GDXRenderer gdxRenderer, IDeathCallback deathCallback, boolean paused, boolean inputEnabled){
+		if(ticksToActivateWeapon != -1 && getEquippedWeapon() != null && ticksToActivateWeapon-- == 0)
+			getEquippedWeapon().activate(world, ragdoll, this);
 		this.sharedAssets = sharedAssets;
 		Vector2 vel = ragdoll.getLinearVelocity();
 		
@@ -276,7 +279,7 @@ public class Being implements Serializable{
 			}
 		}
 		if(getEquippedWeapon() != null)
-			getEquippedWeapon().activate(world, ragdoll, this);
+			ticksToActivateWeapon = 5;
 		Gdx.app.log("Being.respawn", name + " initialized at " + x + "," + y);
 		for(IComponent component : getListeners())
 			component.respawn(world, x, y);

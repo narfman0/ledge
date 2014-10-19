@@ -382,7 +382,11 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		return facingLeft;
 	}
 	
-	@Override public Vector2 getHandLocationFacing(){
-		return (isFacingLeft() ? getBodyPart(BodyPart.lHand) : getBodyPart(BodyPart.rHand)).getWorldCenter();
+	@Override public Body getHandFacing(){
+		return isFacingLeft() ? getBodyPart(BodyPart.lHand) : getBodyPart(BodyPart.rHand);
+	}
+	
+	@Override public Vector2 getHandFacingPosition(){
+		return getHandFacing().getWorldCenter();
 	}
 }

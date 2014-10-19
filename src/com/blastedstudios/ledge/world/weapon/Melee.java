@@ -21,7 +21,6 @@ import com.blastedstudios.gdxworld.world.group.GDXGroupExportStruct;
 import com.blastedstudios.ledge.physics.ragdoll.IRagdoll;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
-import com.blastedstudios.ledge.world.being.Being.BodyPart;
 
 public class Melee extends Weapon {
 	private static final float MIN_DAMAGE = Properties.getFloat("melee.damage.min", .005f);
@@ -32,6 +31,7 @@ public class Melee extends Weapon {
 	private transient Being owner;
 	private transient long lastAttack;
 	private transient Joint joint;
+	private transient boolean startedFacingLeft;
 	
 	public float getWidth() {
 		return width;
@@ -59,7 +59,8 @@ public class Melee extends Weapon {
 	
 	@Override public void activate(World world, IRagdoll ragdoll, Being owner) {
 		this.owner = owner;
-		Vector2 position = ragdoll.getHandLocationFacing().cpy().add(offsetX, offsetY);
+		this.startedFacingLeft = ragdoll.isFacingLeft();
+		Vector2 position = ragdoll.getHandFacingPosition().cpy().add(offsetX, offsetY);
 		if(bodyPath != null && !bodyPath.equals(""))
 			body = loadBody(owner, bodyPath, world, position);
 		else
@@ -68,14 +69,14 @@ public class Melee extends Weapon {
 		body.setUserData(this);
 		if(Properties.getBool("melee.useweld", false)){
 			WeldJointDef def = new WeldJointDef();
-			def.initialize(body, ragdoll.getBodyPart(BodyPart.lHand), ragdoll.getBodyPart(BodyPart.lHand).getWorldCenter());
+			def.initialize(body, ragdoll.getHandFacing() ,ragdoll.getHandFacingPosition());
 			joint = world.createJoint(def);
 		}else{
 			RevoluteJointDef def = new RevoluteJointDef();
 			def.enableLimit = true;
 			def.lowerAngle = -.5f;
 			def.upperAngle = .01f;
-			def.initialize(body, ragdoll.getBodyPart(BodyPart.lHand), ragdoll.getBodyPart(BodyPart.lHand).getWorldCenter());
+			def.initialize(body, ragdoll.getHandFacing(), ragdoll.getHandFacingPosition());
 			joint = world.createJoint(def);
 		}
 	}
@@ -145,5 +146,9 @@ public class Melee extends Weapon {
 
 	@Override public boolean canAttack() {
 		return true;
+	}
+
+	public boolean isStartedFacingLeft() {
+		return startedFacingLeft;
 	}
 }
