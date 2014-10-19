@@ -53,6 +53,8 @@ public class ForestTick extends jbt.execution.task.leaf.action.ExecutionAction {
 							Properties.getFloat("ai.forest.lunge.magnitude", 120f));
 					self.aim(aimAngle);
 					self.getRagdoll().applyForceAtCenter(lungeForce.x, lungeForce.y);
+					self.getRagdoll().applyLinearImpulse(lungeForce.x, lungeForce.y,
+							self.getRagdoll().getPosition().x, self.getRagdoll().getPosition().y);
 				}
 				return Status.SUCCESS;
 			}

@@ -35,6 +35,7 @@
 			<Parameter name="identifier" type="STRING" />
 		</Action>
 		<Action name="RunAway" />
+		<Action name="Stop" />
 		
 		<!-- Garbageman domain nodes -->
 		<Action name="GMTick" />

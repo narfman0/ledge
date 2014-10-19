@@ -77,10 +77,10 @@ public class Jump extends jbt.execution.task.leaf.action.ExecutionAction {
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
 		NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
 		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
-		Vector2 jumpVector = new Vector2(0, 120f);
+		Vector2 jumpVector = new Vector2(0, 100f);
 		if(getTowardPlayer() != null){
 			boolean playerLeft = world.getPlayer().getPosition().x < self.getPosition().x;
-			jumpVector.x = jumpVector.y/2f;
+			jumpVector.x = jumpVector.y;
 			if((getTowardPlayer() && playerLeft) || (!getTowardPlayer() && !playerLeft))
 				jumpVector.x *= -1f;
 		}

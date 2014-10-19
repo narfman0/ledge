@@ -36,13 +36,18 @@
                             <Children>
                               <Node id="Node_9" type="Wait">
                                 <Parameters>
-                                  <Parameter name="duration" fromcontext="false">3000</Parameter>
+                                  <Parameter name="duration" fromcontext="false">1000</Parameter>
                                 </Parameters>
                               </Node>
                             </Children>
                           </Node>
                           <Node id="Node_17" type="Sequence">
                             <Children>
+                              <Node id="Node_32" type="Wait">
+                                <Parameters>
+                                  <Parameter name="duration" fromcontext="false">200</Parameter>
+                                </Parameters>
+                              </Node>
                               <Node id="Node_10" name="PlayerUnder" type="Condition" />
                             </Children>
                           </Node>
@@ -57,9 +62,19 @@
                       <Parameter name="type" fromcontext="false">lunge</Parameter>
                     </Parameters>
                   </Node>
+                  <Node id="Node_35" type="Wait">
+                    <Parameters>
+                      <Parameter name="duration" fromcontext="false">250</Parameter>
+                    </Parameters>
+                  </Node>
                   <Node id="Node_14" name="Attack" type="Action">
                     <Parameters>
                       <Parameter name="type" fromcontext="false">lunge</Parameter>
+                    </Parameters>
+                  </Node>
+                  <Node id="Node_34" type="Wait">
+                    <Parameters>
+                      <Parameter name="duration" fromcontext="false">250</Parameter>
                     </Parameters>
                   </Node>
                   <Node id="Node_15" name="Attack" type="Action">
@@ -67,10 +82,15 @@
                       <Parameter name="type" fromcontext="false">lunge</Parameter>
                     </Parameters>
                   </Node>
+                  <Node id="Node_33" type="Wait">
+                    <Parameters>
+                      <Parameter name="duration" fromcontext="false">250</Parameter>
+                    </Parameters>
+                  </Node>
                   <Node id="Node_19" name="CooldownStart" type="Action">
                     <Parameters>
                       <Parameter name="identifier" fromcontext="false">forestBossCooldown</Parameter>
-                      <Parameter name="duration" fromcontext="false">5000</Parameter>
+                      <Parameter name="duration" fromcontext="false">3500</Parameter>
                     </Parameters>
                   </Node>
                   <Node id="Node_20" name="Jump" type="Action">
@@ -78,7 +98,6 @@
                       <Parameter name="towardPlayer" fromcontext="false">false</Parameter>
                     </Parameters>
                   </Node>
-                  <Node id="Node_21" name="Land" type="Action" />
                   <Node id="Node_24" type="Parallel">
                     <Parameters>
                       <Parameter name="policy" fromcontext="false">sequence</Parameter>
@@ -92,6 +111,7 @@
                               <Parameter name="identifier" fromcontext="false">forestBossCooldown</Parameter>
                             </Parameters>
                           </Node>
+                          <Node id="Node_36" name="Stop" type="Action" />
                         </Children>
                       </Node>
                     </Children>

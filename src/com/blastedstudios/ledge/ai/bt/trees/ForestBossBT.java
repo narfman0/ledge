@@ -2,7 +2,7 @@
 //                   MACHINE GENERATED CODE                
 //                       DO NOT MODIFY                     
 //                                                         
-// Generated on 10/19/2014 15:05:51
+// Generated on 10/19/2014 15:51:37
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.trees;
 
@@ -41,9 +41,11 @@ public class ForestBossBT implements jbt.execution.core.IBTLibrary {
 												new jbt.model.task.composite.ModelSequence(
 														null,
 														new jbt.model.task.leaf.ModelWait(
-																null, 3000)),
+																null, 1000)),
 												new jbt.model.task.composite.ModelSequence(
 														null,
+														new jbt.model.task.leaf.ModelWait(
+																null, 200),
 														new com.blastedstudios.ledge.ai.bt.conditions.PlayerUnder(
 																null)))),
 								new com.blastedstudios.ledge.ai.bt.actions.Drop(
@@ -52,17 +54,18 @@ public class ForestBossBT implements jbt.execution.core.IBTLibrary {
 										null),
 								new com.blastedstudios.ledge.ai.bt.actions.Attack(
 										null, "lunge", null),
+								new jbt.model.task.leaf.ModelWait(null, 250),
 								new com.blastedstudios.ledge.ai.bt.actions.Attack(
 										null, "lunge", null),
+								new jbt.model.task.leaf.ModelWait(null, 250),
 								new com.blastedstudios.ledge.ai.bt.actions.Attack(
 										null, "lunge", null),
+								new jbt.model.task.leaf.ModelWait(null, 250),
 								new com.blastedstudios.ledge.ai.bt.actions.CooldownStart(
 										null, "forestBossCooldown", null,
-										(int) 5000, null),
+										(int) 3500, null),
 								new com.blastedstudios.ledge.ai.bt.actions.Jump(
 										null, (boolean) false, null),
-								new com.blastedstudios.ledge.ai.bt.actions.Land(
-										null),
 								new jbt.model.task.composite.ModelParallel(
 										null,
 										jbt.model.task.composite.ModelParallel.ParallelPolicy.SEQUENCE_POLICY,
@@ -73,6 +76,8 @@ public class ForestBossBT implements jbt.execution.core.IBTLibrary {
 												new com.blastedstudios.ledge.ai.bt.actions.CooldownEnd(
 														null,
 														"forestBossCooldown",
+														null),
+												new com.blastedstudios.ledge.ai.bt.actions.Stop(
 														null))))));
 
 	}

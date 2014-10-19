@@ -4,30 +4,29 @@
 //                                                         
 //           ABSTRACT METHODS MUST BE IMPLEMENTED          
 //                                                         
-// Generated on 10/19/2014 08:49:28
+// Generated on 10/19/2014 15:45:46
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.actions.execution;
 
 import com.badlogic.gdx.Gdx;
-import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
 
-/** ExecutionAction class created from MMPM action Drop. */
-public class Drop extends jbt.execution.task.leaf.action.ExecutionAction {
+/** ExecutionAction class created from MMPM action Stop. */
+public class Stop extends jbt.execution.task.leaf.action.ExecutionAction {
 
 	/**
-	 * Constructor. Constructs an instance of Drop that is able to run a
-	 * com.blastedstudios.ledge.ai.bt.actions.Drop.
+	 * Constructor. Constructs an instance of Stop that is able to run a
+	 * com.blastedstudios.ledge.ai.bt.actions.Stop.
 	 */
-	public Drop(jbt.model.core.ModelTask modelTask,
+	public Stop(jbt.model.core.ModelTask modelTask,
 			jbt.execution.core.BTExecutor executor,
 			jbt.execution.core.ExecutionTask parent) {
 		super(modelTask, executor, parent);
 
-		if (!(modelTask instanceof com.blastedstudios.ledge.ai.bt.actions.Drop)) {
+		if (!(modelTask instanceof com.blastedstudios.ledge.ai.bt.actions.Stop)) {
 			throw new java.lang.RuntimeException(
-					"The ModelTask must subclass com.blastedstudios.ledge.ai.bt.actions.Drop");
+					"The ModelTask must subclass com.blastedstudios.ledge.ai.bt.actions.Stop");
 		}
 	}
 
@@ -39,9 +38,9 @@ public class Drop extends jbt.execution.task.leaf.action.ExecutionAction {
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
 		NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
-		self.getRagdoll().applyLinearImpulse(0, Properties.getFloat("character.drop.force", -100f),
-				self.getRagdoll().getPosition().x, self.getRagdoll().getPosition().y);
-		self.aim((float)Math.PI*1.5f);
+		self.setMoveLeft(false);
+		self.setMoveRight(false);
+		self.setJump(false);
 		return jbt.execution.core.ExecutionTask.Status.SUCCESS;
 	}
 
