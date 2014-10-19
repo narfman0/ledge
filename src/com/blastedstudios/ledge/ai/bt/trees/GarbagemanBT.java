@@ -2,7 +2,7 @@
 //                   MACHINE GENERATED CODE                
 //                       DO NOT MODIFY                     
 //                                                         
-// Generated on 07/23/2014 22:27:54
+// Generated on 10/19/2014 13:42:31
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.trees;
 
@@ -24,8 +24,11 @@ public class GarbagemanBT implements jbt.execution.core.IBTLibrary {
 						null,
 						new jbt.model.task.composite.ModelSequence(
 								null,
-								new com.blastedstudios.ledge.ai.bt.actions.GMTick(
-										null)),
+								new jbt.model.task.decorator.ModelLimit(
+										null,
+										1,
+										new com.blastedstudios.ledge.ai.bt.actions.GMTick(
+												null))),
 						new jbt.model.task.composite.ModelSequence(
 								null,
 								new com.blastedstudios.ledge.ai.bt.actions.GMSword(

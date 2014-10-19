@@ -77,10 +77,7 @@ public class GMTick extends
 			getContext().setVariable(HANDLER_NAME, handler);
 			handler.setActive(true);//defer until we see player?
 		}
-		//Need to initialize to carry on with next nodes, though don't want to
-		//keep running, so fail always. Lame but effective, TODO think of more 
-		//elegant way later.
-		return jbt.execution.core.ExecutionTask.Status.FAILURE;
+		return jbt.execution.core.ExecutionTask.Status.SUCCESS;
 	}
 
 	protected void internalTerminate() {}

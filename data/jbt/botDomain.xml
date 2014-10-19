@@ -41,6 +41,9 @@
 		<Action name="GMSword" />
 		<Action name="GMStomp" />
 		<Action name="GMMove" />
+		
+		<!-- forest commander domain nodes -->
+		<Action name="ForestTick" />
 	</ActionSet>
 	<SensorSet>
 		<Sensor name="LowDanger" type="BOOLEAN" />

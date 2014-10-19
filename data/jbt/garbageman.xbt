@@ -8,7 +8,14 @@
             <Children>
               <Node id="Node_8" type="Sequence">
                 <Children>
-                  <Node id="Node_36" name="GMTick" type="Action" />
+                  <Node id="Node_42" type="Limit">
+                    <Parameters>
+                      <Parameter name="runs" fromcontext="false">1</Parameter>
+                    </Parameters>
+                    <Children>
+                      <Node id="Node_36" name="GMTick" type="Action" />
+                    </Children>
+                  </Node>
                 </Children>
               </Node>
               <Node id="Node_29" type="Sequence">
