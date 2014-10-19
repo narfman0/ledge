@@ -316,6 +316,16 @@ public class Being implements Serializable{
 		for(IComponent component : getListeners())
 			component.aim(heading);
 	}
+	
+	public void aim(Being being){
+		aim(getAimAngle(this, being));
+	}
+	
+	public static float getAimAngle(Being origin, Being target){
+		return (float) Math.atan2(
+				target.getPosition().y - origin.getPosition().y, 
+				target.getPosition().x - origin.getPosition().x);
+	}
 
 	public void setJump(boolean jump){
 		this.jump = jump;

@@ -9,6 +9,7 @@
 package com.blastedstudios.ledge.ai.bt.actions.execution;
 
 import com.badlogic.gdx.Gdx;
+import com.blastedstudios.ledge.world.being.INPCActionExecutor;
 
 /** ExecutionAction class created from MMPM action Attack. */
 public class Attack extends jbt.execution.task.leaf.action.ExecutionAction {
@@ -71,8 +72,8 @@ public class Attack extends jbt.execution.task.leaf.action.ExecutionAction {
 	}
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
-		Gdx.app.debug(this.getClass().getCanonicalName(), "ticked with type: " + getType());
-		return jbt.execution.core.ExecutionTask.Status.SUCCESS;
+		INPCActionExecutor executor = (INPCActionExecutor) getContext().getVariable(INPCActionExecutor.EXECUTE_CONTEXT_NAME);
+		return executor.execute(getType());
 	}
 
 	protected void internalTerminate() {}

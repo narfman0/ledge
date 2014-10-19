@@ -40,6 +40,7 @@ public class Drop extends jbt.execution.task.leaf.action.ExecutionAction {
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
 		NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
 		self.getRagdoll().applyForceAtCenter(0, Properties.getFloat("character.drop.force", -100f));
+		self.aim((float)Math.PI*1.5f);
 		return jbt.execution.core.ExecutionTask.Status.SUCCESS;
 	}
 

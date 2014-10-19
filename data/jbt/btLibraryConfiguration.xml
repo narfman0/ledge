@@ -1,7 +1,7 @@
 <Configuration>
 	<BTLibrary>
-		<BTFile>data/jbt/enemyTurret.xbt</BTFile>
-		<LibraryClassName>EnemyTurretBT</LibraryClassName>
+		<BTFile>data/jbt/forestBoss.xbt</BTFile>
+		<LibraryClassName>ForestBossBT</LibraryClassName>
 		<LibraryPackage>com.blastedstudios.ledge.ai.bt.trees</LibraryPackage>
 		<LibraryOutputDirectory>src/com/blastedstudios/ledge/ai/bt/trees/</LibraryOutputDirectory>
 		<DomainFile>data/jbt/botDomain.xml</DomainFile>
