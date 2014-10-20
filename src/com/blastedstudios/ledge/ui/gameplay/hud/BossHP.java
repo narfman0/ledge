@@ -5,8 +5,8 @@ import java.util.LinkedList;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.Player;
@@ -16,13 +16,12 @@ import net.xeoh.plugins.base.annotations.PluginImplementation;
 @PluginImplementation
 public class BossHP extends AbstractHUDElement{
 	private final LinkedList<NPC> npcs = new LinkedList<>();
-	private Sprite barOutsideSprite, barInsideSprite;
+	private HPComponent hpBar;
 
 	@Override public AbstractHUDElement initialize(Skin skin, BitmapFont font, Player player){
 		super.initialize(skin, font, player);
 		npcs.clear();
-		barOutsideSprite = skin.getSprite("hud-bar-outside");
-		barInsideSprite = skin.getSprite("hud-bar-inside");
+		hpBar = new HPComponent(skin);
 		return this;
 	}
 
@@ -31,18 +30,8 @@ public class BossHP extends AbstractHUDElement{
 		for(Iterator<NPC> iter = npcs.iterator(); iter.hasNext();){
 			NPC npc = iter.next();
 			float percentHP = npc.getHp()/npc.getMaxHp();
-			int width = barInsideSprite.getRegionWidth();
-			barOutsideSprite.setPosition(Gdx.graphics.getWidth()/2f - barOutsideSprite.getWidth()/2f,
-					Gdx.graphics.getHeight() - (i*64 + 48));
-			barOutsideSprite.draw(spriteBatch);
-			barOutsideSprite.setColor(skin.getColor("yellow"));
-			barInsideSprite.setPosition(Gdx.graphics.getWidth()/2f - barOutsideSprite.getWidth()/2f,
-					Gdx.graphics.getHeight() - (i*64 + 44));
-			barInsideSprite.setColor(skin.getColor("yellow"));
-			barInsideSprite.setRegionWidth((int)(width * percentHP));
-			barInsideSprite.setScale(percentHP, 1f);
-			barInsideSprite.draw(spriteBatch);
-			barInsideSprite.setRegionWidth(width);
+			Vector2 position = new Vector2(Gdx.graphics.getWidth()/2f, Gdx.graphics.getHeight()-64f*(i+1));
+			hpBar.render(spriteBatch, percentHP, position);
 			if(npc.isDead())
 				iter.remove();
 			i++;

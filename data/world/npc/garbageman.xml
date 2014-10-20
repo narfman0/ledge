@@ -64,5 +64,9 @@
       <string>RagdollResource</string>
       <string>garbageman.xml</string>
     </entry>
+    <entry>
+      <string>boss</string>
+      <string>true</string>
+    </entry>
   </properties>
 </com.blastedstudios.ledge.world.being.NPCData>

@@ -65,9 +65,9 @@ check-on
   index: -1
 hud-bar-outside
   rotate: false
-  xy: 278, 0
-  size: 199, 49
-  orig: 199, 49
+  xy: 280, 0
+  size: 198, 49
+  orig: 198, 49
   offset: 0, 0
   index: -1
 hud-bar-inside
