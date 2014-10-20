@@ -43,8 +43,7 @@ public class RunAway extends jbt.execution.task.leaf.action.ExecutionAction {
 		boolean playerLeft = world.getPlayer().getPosition().x < self.getPosition().x;
 		self.setMoveLeft(!playerLeft);
 		self.setMoveRight(playerLeft);
-		//face towards player to block shots with melee weapon
-		self.aim(world.getPlayer());
+		self.aim(playerLeft ? 0f : 3.14f);
 		return jbt.execution.core.ExecutionTask.Status.SUCCESS;
 	}
 
