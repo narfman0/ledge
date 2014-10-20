@@ -60,5 +60,9 @@
       <string>DistanceVision</string>
       <string>99999</string>
     </entry>
+    <entry>
+      <string>boss</string>
+      <string>true</string>
+    </entry>
   </properties>
 </com.blastedstudios.ledge.world.being.NPCData>

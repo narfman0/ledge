@@ -54,7 +54,7 @@ import com.blastedstudios.ledge.world.being.component.IComponent;
 public class GameplayScreen extends AbstractScreen {
 	private final DialogManager dialogManager;
 	private final ParticleManager particleManager;
-	private HUD hud;
+	private final HUD hud;
 	private OrthographicCamera camera;
 	private WorldManager worldManager;
 	private AbstractWindow characterWindow, inventoryWindow, vendorWindow;
@@ -85,7 +85,11 @@ public class GameplayScreen extends AbstractScreen {
 		particleManager = new ParticleManager();
 		for(GDXParticle particle : level.getParticles())
 			particleManager.addParticle(particle);
-		worldManager = new WorldManager(player, level, sharedAssets);
+		worldManager = new WorldManager(player, level, sharedAssets, new IGameplayListener() {
+			@Override public void npcAdded(NPC npc, boolean boss) {
+				hud.npcAdded(npc, boss);
+			}
+		});
 		player.getQuestManager().initialize(new QuestTriggerInformationProvider(this, worldManager), 
 				new QuestManifestationExecutor(this, worldManager));
 		player.getQuestManager().setCurrentLevel(level);
@@ -410,5 +414,9 @@ public class GameplayScreen extends AbstractScreen {
 		assetManager.dispose();
 		worldManager.getPlayer().dispose(worldManager.getWorld());
 		worldManager.getWorld().dispose();
+	}
+	
+	public interface IGameplayListener{
+		void npcAdded(NPC npc, boolean boss);
 	}
 }

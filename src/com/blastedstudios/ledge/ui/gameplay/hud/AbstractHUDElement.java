@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.blastedstudios.gdxworld.util.Properties;
+import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.Player;
 
 public abstract class AbstractHUDElement implements IHUDElement{
@@ -40,8 +41,9 @@ public abstract class AbstractHUDElement implements IHUDElement{
 		}
 		font.draw(spriteBatch, string, x, y);
 	}
-	
+
 	public abstract void render(final SpriteBatch spriteBatch);
+	public void npcAdded(NPC npc, boolean boss){}
 	protected enum XAlign{LEFT,MIDDLE,RIGHT}
 	protected enum YAlign{UP,DOWN}
 }

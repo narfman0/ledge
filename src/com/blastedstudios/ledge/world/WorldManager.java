@@ -36,6 +36,7 @@ import com.blastedstudios.gdxworld.world.GDXPath;
 import com.blastedstudios.ledge.ai.AIWorld;
 import com.blastedstudios.ledge.physics.ContactListener;
 import com.blastedstudios.ledge.physics.VisibleQueryCallback;
+import com.blastedstudios.ledge.ui.gameplay.GameplayScreen.IGameplayListener;
 import com.blastedstudios.ledge.util.VisibilityReturnStruct;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.FactionEnum;
@@ -69,13 +70,15 @@ public class WorldManager implements IDeathCallback{
 	private final AIWorld aiWorld;
 	private final TweenManager tweenManager;
 	private final AssetManagerWrapper sharedAssets;
+	private final IGameplayListener listener;
 	private boolean pause, inputEnable = true, playerTrack = true;
 	private final Random random;
 	
-	public WorldManager(Player player, GDXLevel level, AssetManagerWrapper sharedAssets){
+	public WorldManager(Player player, GDXLevel level, AssetManagerWrapper sharedAssets, IGameplayListener listener){
 		this.player = player;
 		this.level = level;
 		this.sharedAssets = sharedAssets;
+		this.listener = listener;
 		random = new Random();
 		tweenManager = new TweenManager();
 		dropManager = new DropManager();
@@ -266,6 +269,7 @@ public class WorldManager implements IDeathCallback{
 		npc.aim(npcData.getFloat("Aim"));
 		npcs.add(npc);
 		npc.respawn(world, coordinates.x, coordinates.y);
+		listener.npcAdded(npc, npcData.getBool("boss"));
 		return npc;
 	}
 	
