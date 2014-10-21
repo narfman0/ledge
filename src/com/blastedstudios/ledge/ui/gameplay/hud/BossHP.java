@@ -38,8 +38,8 @@ public class BossHP extends AbstractHUDElement{
 		}
 	}
 	
-	@Override public void npcAdded(NPC npc, boolean boss){
-		if(boss)
+	@Override public void npcAdded(NPC npc){
+		if(npc.isBoss())
 			npcs.add(npc);
 	}
 }

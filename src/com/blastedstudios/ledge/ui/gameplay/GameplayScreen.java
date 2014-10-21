@@ -86,8 +86,8 @@ public class GameplayScreen extends AbstractScreen {
 		for(GDXParticle particle : level.getParticles())
 			particleManager.addParticle(particle);
 		worldManager = new WorldManager(player, level, sharedAssets, new IGameplayListener() {
-			@Override public void npcAdded(NPC npc, boolean boss) {
-				hud.npcAdded(npc, boss);
+			@Override public void npcAdded(NPC npc) {
+				hud.npcAdded(npc);
 			}
 		});
 		player.getQuestManager().initialize(new QuestTriggerInformationProvider(this, worldManager), 
@@ -417,6 +417,6 @@ public class GameplayScreen extends AbstractScreen {
 	}
 	
 	public interface IGameplayListener{
-		void npcAdded(NPC npc, boolean boss);
+		void npcAdded(NPC npc);
 	}
 }

@@ -33,8 +33,8 @@ public class HUD {
 		spriteBatch.end();
 	}
 	
-	public void npcAdded(NPC npc, boolean boss){
+	public void npcAdded(NPC npc){
 		for(IHUDElement element : elements)
-			element.npcAdded(npc, boss);
+			element.npcAdded(npc);
 	}
 }

@@ -42,25 +42,25 @@ public class Being implements Serializable{
 			CHARACTER_IMPULSE_MAGNITUDE = Properties.getFloat("character.impulse.magnitude", 2f),
 			CHARACTER_JUMP_IMPULSE = Properties.getFloat("character.jump.impulse", 70),
 			MAX_VELOCITY = Properties.getFloat("character.velocity.max", 7f);
-	private static final HashMap<BodyPart,Float> bodypartDmgMap = new HashMap<>();
-	private final HashMap<AmmoTypeEnum,Integer> ammo = new HashMap<>();
+	protected static final HashMap<BodyPart,Float> bodypartDmgMap = new HashMap<>();
+	protected final HashMap<AmmoTypeEnum,Integer> ammo = new HashMap<>();
 	protected transient boolean jump, moveRight, moveLeft, dead, reloading, invulnerable;
 	protected transient IRagdoll ragdoll = null;
 	protected String name;
-	private String resource, ragdollResource;
+	protected String resource, ragdollResource;
 	protected float hp;
 	protected Stats stats;
-	private List<Weapon> guns, inventory;
-	private int currentWeapon, cash, level;
-	private long xp;
-	private FactionEnum faction;
-	private EnumSet<FactionEnum> friendlyFactions;
-	private transient float lastGunHeadingRadians, timeUntilReload;
-	private transient int ticksToActivateWeapon = -1;
-	private transient DamageStruct lastDamage;
-	private transient Random random;
-	private transient List<IComponent> listeners;
-	private transient AssetManager sharedAssets;
+	protected List<Weapon> guns, inventory;
+	protected int currentWeapon, cash, level;
+	protected long xp;
+	protected FactionEnum faction;
+	protected EnumSet<FactionEnum> friendlyFactions;
+	protected transient float lastGunHeadingRadians, timeUntilReload;
+	protected transient int ticksToActivateWeapon = -1;
+	protected transient DamageStruct lastDamage;
+	protected transient Random random;
+	protected transient List<IComponent> listeners;
+	protected transient AssetManager sharedAssets;
 
 	public Being(String name, List<Weapon> guns, List<Weapon> inventory, Stats stats,
 			int currentWeapon, int cash, int level, int xp, FactionEnum faction,

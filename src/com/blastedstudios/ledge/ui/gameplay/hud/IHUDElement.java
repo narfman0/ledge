@@ -11,5 +11,5 @@ import com.blastedstudios.ledge.world.being.Player;
 public interface IHUDElement extends Plugin{
 	void render(final SpriteBatch spriteBatch);
 	IHUDElement initialize(Skin skin, BitmapFont font, Player player);
-	void npcAdded(NPC npc, boolean boss);
+	void npcAdded(NPC npc);
 }

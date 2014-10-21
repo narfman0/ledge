@@ -43,7 +43,7 @@ public abstract class AbstractHUDElement implements IHUDElement{
 	}
 
 	public abstract void render(final SpriteBatch spriteBatch);
-	public void npcAdded(NPC npc, boolean boss){}
+	public void npcAdded(NPC npc){}
 	protected enum XAlign{LEFT,MIDDLE,RIGHT}
 	protected enum YAlign{UP,DOWN}
 }

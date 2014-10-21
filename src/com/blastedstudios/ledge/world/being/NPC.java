@@ -32,7 +32,7 @@ public class NPC extends Being {
 	private IBTExecutor btExecutor;
 	private GDXPath path;
 	private final DifficultyEnum difficulty;
-	private final boolean vendor;
+	private final boolean vendor, boss;
 	private final LinkedList<Weapon> vendorWeapons;
 	
 	public NPC(String name, List<Weapon> guns, List<Weapon> inventory, Stats stats,
@@ -40,12 +40,13 @@ public class NPC extends Being {
 			GDXPath path, FactionEnum faction, EnumSet<FactionEnum> factions,
 			WorldManager world, String resource, String ragdollResource, 
 			DifficultyEnum difficulty, AIWorld aiWorld, boolean vendor,
-			LinkedList<Weapon> vendorWeapons) {
+			LinkedList<Weapon> vendorWeapons, boolean boss) {
 		super(name, guns, inventory, stats, currentGun, cash, level, xp, 
 				faction, factions, resource, ragdollResource);
 		this.difficulty = difficulty;
 		this.vendor = vendor;
 		this.vendorWeapons = vendorWeapons;
+		this.boss = boss;
 		String basePackage = "com.blastedstudios.ledge.ai.bt.trees";
 		try{
 			Class<?> btLibClass = Class.forName(basePackage+"."+behavior);
@@ -122,5 +123,15 @@ public class NPC extends Being {
 
 	public LinkedList<Weapon> getVendorWeapons() {
 		return vendorWeapons;
+	}
+
+	public boolean isBoss() {
+		return boss;
+	}
+	
+	@Override public long addXp(long xp){
+		if(!boss)
+			return super.addXp(xp);
+		return this.xp;
 	}
 }
