@@ -105,8 +105,7 @@ public class NPC extends Being {
 	 * @return Delay before an NPC of the given level may shoot his weapon. 
 	 */
 	public static long shootDelay(int level, DifficultyEnum difficulty){
-		int scalar = Properties.getInt("npc.difficulty.shoot.delay.scalar", 2000);
-		return 5186L - 1045L * (long)Math.log(level) + scalar * difficulty.ordinal();
+		return 1000 - ((2-difficulty.ordinal()) * 300) - (level * 25);
 	}
 	
 	public float getDistanceAware(){
