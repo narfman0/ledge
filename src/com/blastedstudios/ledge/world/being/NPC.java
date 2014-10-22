@@ -130,7 +130,7 @@ public class NPC extends Being {
 	}
 	
 	@Override public long addXp(long xp){
-		if(!boss || Properties.getBool("npc.boss.levelup.enable", false))
+		if(name.matches(Properties.get("npc.levelup.name.match", "noone")))
 			return super.addXp(xp);
 		return this.xp;
 	}

@@ -34,7 +34,6 @@ public class DropManager {
 
 	public void render(Being player, World world, SpriteBatch spriteBatch, GDXRenderer renderer,
 			AssetManagerWrapper sharedAssets){
-		float scale = Properties.getFloat("ragdoll.custom.scale");
 		float impulseDistance = Properties.getFloat("drop.impulse.distance", 100f);
 		float impulseScale = Properties.getFloat("drop.impulse.scalar", .03f);
 		{
@@ -44,7 +43,7 @@ public class DropManager {
 			float distance = player.getPosition().dst2(dropBody.getPosition());
 			String gunPath = "data/textures/weapons/" + entry.getValue().getResource() + ".png";
 			try{
-				WorldManager.drawTexture(spriteBatch, dropBody, gunPath, scale, sharedAssets);
+				WorldManager.drawTexture(spriteBatch, dropBody, gunPath, Properties.getFloat("ragdoll.custom.scale"), sharedAssets);
 			}catch(Exception e){
 				e.printStackTrace();
 			}
@@ -66,7 +65,8 @@ public class DropManager {
 		for(Entry<Body, Integer> entry : droppedCash.entrySet()){
 			Body dropBody = entry.getKey();
 			float distance = player.getPosition().dst2(dropBody.getPosition());
-			WorldManager.drawTexture(spriteBatch, dropBody, "data/textures/money.png", scale, sharedAssets);
+			WorldManager.drawTexture(spriteBatch, dropBody, "data/textures/money.png", 
+					Properties.getFloat("gameplay.camera.zoom"), sharedAssets);
 			if(distance < Properties.getFloat("drop.pickup.distance", .5f)){
 				player.addCash(entry.getValue());
 				sharedAssets.getSound("data/sounds/chaching.mp3").play();
@@ -86,7 +86,7 @@ public class DropManager {
 			Body dropBody = entry.getKey();
 			float distance = player.getPosition().dst2(dropBody.getPosition());
 			String ammoPath = "data/textures/ammo/" + entry.getValue().type.textureName + ".png";
-			WorldManager.drawTexture(spriteBatch, dropBody, ammoPath, scale*5, sharedAssets);
+			WorldManager.drawTexture(spriteBatch, dropBody, ammoPath, Properties.getFloat("gameplay.camera.zoom"), sharedAssets);
 			if(distance < Properties.getFloat("drop.pickup.distance", .5f)){
 				player.addAmmo(entry.getValue().type, entry.getValue().amount);
 				world.destroyBody(dropBody);

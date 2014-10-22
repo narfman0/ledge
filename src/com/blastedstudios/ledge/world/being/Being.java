@@ -462,7 +462,8 @@ public class Being implements Serializable{
 	
 	public void levelUp(){
 		++level;
-		hp = getMaxHp();
+		if(Properties.getBool("being.levelup.restorehp", false))
+			hp = getMaxHp();
 		Gdx.app.log("Being.levelUp", name + " now level " + level);
 		for(IComponent component : getListeners())
 			component.levelUp();
