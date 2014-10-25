@@ -24,7 +24,7 @@
 		</Action>
 		<Action name="Drop" />
 		<Action name="Land" />
-		<Action name="Attack">
+		<Action name="Action">
 			<Parameter name="type" type="STRING" />
 		</Action>
 		<Action name="CooldownStart">
@@ -37,14 +37,17 @@
 		<Action name="RunAway" />
 		<Action name="Stop" />
 		
-		<!-- Garbageman domain nodes -->
+		<!-- Garbageman domain node(s) -->
 		<Action name="GMTick" />
 		<Action name="GMSword" />
 		<Action name="GMStomp" />
 		<Action name="GMMove" />
 		
-		<!-- forest commander domain nodes -->
+		<!-- Forest commander domain node()s -->
 		<Action name="ForestTick" />
+		
+		<!-- Near dead ledge domain node(s) -->
+		<Action name="NearDeadTick" />
 	</ActionSet>
 	<SensorSet>
 		<Sensor name="LowDanger" type="BOOLEAN" />

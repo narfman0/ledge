@@ -52,13 +52,13 @@ public class ForestBossBT implements jbt.execution.core.IBTLibrary {
 										null),
 								new com.blastedstudios.ledge.ai.bt.actions.Land(
 										null),
-								new com.blastedstudios.ledge.ai.bt.actions.Attack(
+								new com.blastedstudios.ledge.ai.bt.actions.Action(
 										null, "lunge", null),
 								new jbt.model.task.leaf.ModelWait(null, 350),
-								new com.blastedstudios.ledge.ai.bt.actions.Attack(
+								new com.blastedstudios.ledge.ai.bt.actions.Action(
 										null, "lunge", null),
 								new jbt.model.task.leaf.ModelWait(null, 350),
-								new com.blastedstudios.ledge.ai.bt.actions.Attack(
+								new com.blastedstudios.ledge.ai.bt.actions.Action(
 										null, "lunge", null),
 								new jbt.model.task.leaf.ModelWait(null, 350),
 								new com.blastedstudios.ledge.ai.bt.actions.Land(

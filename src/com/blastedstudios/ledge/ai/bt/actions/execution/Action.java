@@ -11,8 +11,8 @@ package com.blastedstudios.ledge.ai.bt.actions.execution;
 import com.badlogic.gdx.Gdx;
 import com.blastedstudios.ledge.world.being.INPCActionExecutor;
 
-/** ExecutionAction class created from MMPM action Attack. */
-public class Attack extends jbt.execution.task.leaf.action.ExecutionAction {
+/** ExecutionAction class created from MMPM action Action. */
+public class Action extends jbt.execution.task.leaf.action.ExecutionAction {
 	/**
 	 * Value of the parameter "type" in case its value is specified at
 	 * construction time. null otherwise.
@@ -37,15 +37,15 @@ public class Attack extends jbt.execution.task.leaf.action.ExecutionAction {
 	 *            the place in the context where the parameter's value will be
 	 *            retrieved from.
 	 */
-	public Attack(jbt.model.core.ModelTask modelTask,
+	public Action(jbt.model.core.ModelTask modelTask,
 			jbt.execution.core.BTExecutor executor,
 			jbt.execution.core.ExecutionTask parent, java.lang.String type,
 			java.lang.String typeLoc) {
 		super(modelTask, executor, parent);
 
-		if (!(modelTask instanceof com.blastedstudios.ledge.ai.bt.actions.Attack)) {
+		if (!(modelTask instanceof com.blastedstudios.ledge.ai.bt.actions.Action)) {
 			throw new java.lang.RuntimeException(
-					"The ModelTask must subclass com.blastedstudios.ledge.ai.bt.actions.Attack");
+					"The ModelTask must subclass com.blastedstudios.ledge.ai.bt.actions.Action");
 		}
 
 		this.type = type;

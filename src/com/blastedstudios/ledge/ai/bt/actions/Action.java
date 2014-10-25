@@ -6,8 +6,8 @@
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.actions;
 
-/** ModelAction class created from MMPM action Attack. */
-public class Attack extends jbt.model.task.leaf.action.ModelAction {
+/** ModelAction class created from MMPM action Action. */
+public class Action extends jbt.model.task.leaf.action.ModelAction {
 	/**
 	 * Value of the parameter "type" in case its value is specified at
 	 * construction time. null otherwise.
@@ -20,7 +20,7 @@ public class Attack extends jbt.model.task.leaf.action.ModelAction {
 	private java.lang.String typeLoc;
 
 	/**
-	 * Constructor. Constructs an instance of Attack.
+	 * Constructor. Constructs an instance of Action.
 	 * 
 	 * @param type
 	 *            value of the parameter "type", or null in case it should be
@@ -31,7 +31,7 @@ public class Attack extends jbt.model.task.leaf.action.ModelAction {
 	 *            the place in the context where the parameter's value will be
 	 *            retrieved from.
 	 */
-	public Attack(jbt.model.core.ModelTask guard, java.lang.String type,
+	public Action(jbt.model.core.ModelTask guard, java.lang.String type,
 			java.lang.String typeLoc) {
 		super(guard);
 		this.type = type;
@@ -39,13 +39,13 @@ public class Attack extends jbt.model.task.leaf.action.ModelAction {
 	}
 
 	/**
-	 * Returns a com.blastedstudios.ledge.ai.bt.actions.execution.Attack task
+	 * Returns a com.blastedstudios.ledge.ai.bt.actions.execution.Action task
 	 * that is able to run this task.
 	 */
 	public jbt.execution.core.ExecutionTask createExecutor(
 			jbt.execution.core.BTExecutor executor,
 			jbt.execution.core.ExecutionTask parent) {
-		return new com.blastedstudios.ledge.ai.bt.actions.execution.Attack(
+		return new com.blastedstudios.ledge.ai.bt.actions.execution.Action(
 				this, executor, parent, this.type, this.typeLoc);
 	}
 }

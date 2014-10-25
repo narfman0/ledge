@@ -57,7 +57,7 @@
                   </Node>
                   <Node id="Node_11" name="Drop" type="Action" />
                   <Node id="Node_12" name="Land" type="Action" />
-                  <Node id="Node_13" name="Attack" type="Action">
+                  <Node id="Node_13" name="Action" type="Action">
                     <Parameters>
                       <Parameter name="type" fromcontext="false">lunge</Parameter>
                     </Parameters>
@@ -67,7 +67,7 @@
                       <Parameter name="duration" fromcontext="false">350</Parameter>
                     </Parameters>
                   </Node>
-                  <Node id="Node_14" name="Attack" type="Action">
+                  <Node id="Node_14" name="Action" type="Action">
                     <Parameters>
                       <Parameter name="type" fromcontext="false">lunge</Parameter>
                     </Parameters>
@@ -77,7 +77,7 @@
                       <Parameter name="duration" fromcontext="false">350</Parameter>
                     </Parameters>
                   </Node>
-                  <Node id="Node_15" name="Attack" type="Action">
+                  <Node id="Node_15" name="Action" type="Action">
                     <Parameters>
                       <Parameter name="type" fromcontext="false">lunge</Parameter>
                     </Parameters>
