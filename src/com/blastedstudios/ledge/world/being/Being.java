@@ -393,6 +393,8 @@ public class Being implements Serializable{
 	}
 
 	public void setCurrentWeapon(int currentWeapon, World world) {
+		if(this.currentWeapon == currentWeapon)
+			return; //dont do anything if its the same, duh
 		if(getEquippedWeapon() != null)
 			getEquippedWeapon().dispose(world);
 		this.currentWeapon = currentWeapon;

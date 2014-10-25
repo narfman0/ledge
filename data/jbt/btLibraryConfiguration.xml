@@ -1,7 +1,7 @@
 <Configuration>
 	<BTLibrary>
-		<BTFile>data/jbt/forestBoss.xbt</BTFile>
-		<LibraryClassName>ForestBossBT</LibraryClassName>
+		<BTFile>data/jbt/nearDeadBoss.xbt</BTFile>
+		<LibraryClassName>NearDeadBossBT</LibraryClassName>
 		<LibraryPackage>com.blastedstudios.ledge.ai.bt.trees</LibraryPackage>
 		<LibraryOutputDirectory>src/com/blastedstudios/ledge/ai/bt/trees/</LibraryOutputDirectory>
 		<DomainFile>data/jbt/botDomain.xml</DomainFile>
