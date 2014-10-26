@@ -10,6 +10,7 @@ package com.blastedstudios.ledge.ai.bt.actions.execution;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
+import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.INPCActionExecutor;
@@ -56,16 +57,18 @@ public class NearDeadTick extends
 						return Status.FAILURE;
 				}else if(identifier.equals("choose_weapon")){
 					float d = self.getPosition().dst(world.getPlayer().getPosition());
-					if(d > 15f)
+					if(d > Properties.getFloat("neardead.boss.weapon.far", 15f))
 						self.setCurrentWeapon(2, world.getWorld());
-					else if(d > 9f)
+					else if(d > Properties.getFloat("neardead.boss.weapon.medium", 9f))
 						self.setCurrentWeapon(1, world.getWorld());
 					else
 						self.setCurrentWeapon(0, world.getWorld());
 				}else if(identifier.equals("path")){
-					boolean moveLeft = System.currentTimeMillis() % 15000 < 7500;
+					long duration = Properties.getLong("neardead.boss.direction.duration", 15000);
+					float distance = Properties.getFloat("neardead.boss.player.distance", 10f);
+					boolean moveLeft = System.currentTimeMillis() % duration < duration/2;
 					Vector2 origin = world.getPlayer().getPosition().cpy(),
-							target = origin.add(10f * (moveLeft ? -1f : 1f), 10f);
+							target = origin.add(distance * (moveLeft ? -1f : 1f), distance);
 					getContext().setVariable("move_target", new float[]{target.x, target.y});
 				}
 				return Status.SUCCESS;
