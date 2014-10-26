@@ -45,27 +45,27 @@ public class NearDeadTick extends
 		final NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
 		final WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
 		INPCActionExecutor executor = new INPCActionExecutor() {
-			@Override public Status execute(String attackIdentifier) {
-				if(attackIdentifier.equals("aim")){
+			@Override public Status execute(String identifier) {
+				if(identifier.equals("aim")){
 					float aimAngle = Being.getAimAngle(self, world.getPlayer());
 					// If within 45 degrees below player, aim at him
-					if(aimAngle < 1.75*Math.PI && aimAngle > 1.25*Math.PI){
+					if(aimAngle > -.75*Math.PI && aimAngle < -.25*Math.PI){
 						float[] target = new float[]{world.getPlayer().getPosition().x, world.getPlayer().getPosition().y};
 						getContext().setVariable("aim_target", target);
 					}else
 						return Status.FAILURE;
-				}else if(attackIdentifier.equals("choose_weapon")){
+				}else if(identifier.equals("choose_weapon")){
 					float d = self.getPosition().dst(world.getPlayer().getPosition());
-					if(d > 100f)
+					if(d > 15f)
 						self.setCurrentWeapon(2, world.getWorld());
-					else if(d > 50f)
+					else if(d > 9f)
 						self.setCurrentWeapon(1, world.getWorld());
 					else
 						self.setCurrentWeapon(0, world.getWorld());
-				}else if(attackIdentifier.equals("path")){
-					boolean moveLeft = System.currentTimeMillis() % 10000 < 5000;
+				}else if(identifier.equals("path")){
+					boolean moveLeft = System.currentTimeMillis() % 15000 < 7500;
 					Vector2 origin = world.getPlayer().getPosition().cpy(),
-							target = origin.add(30f * (moveLeft ? -1f : 1f), 30f);
+							target = origin.add(10f * (moveLeft ? -1f : 1f), 10f);
 					getContext().setVariable("move_target", new float[]{target.x, target.y});
 				}
 				return Status.SUCCESS;

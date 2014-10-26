@@ -18,55 +18,32 @@
                   </Node>
                 </Children>
               </Node>
-              <Node id="Node_41" type="Parallel">
-                <Parameters>
-                  <Parameter name="policy" fromcontext="false">selector</Parameter>
-                </Parameters>
+              <Node id="Node_52" type="Sequence">
                 <Children>
-                  <Node id="Node_42" type="Repeat">
-                    <Children>
-                      <Node id="Node_6" type="Sequence">
-                        <Children>
-                          <Node id="Node_39" name="Action" type="Action">
-                            <Parameters>
-                              <Parameter name="type" fromcontext="false">path</Parameter>
-                            </Parameters>
-                          </Node>
-                          <Node id="Node_40" name="Move" type="Action">
-                            <Parameters>
-                              <Parameter name="target" fromcontext="true">move_target</Parameter>
-                            </Parameters>
-                          </Node>
-                        </Children>
-                      </Node>
-                    </Children>
+                  <Node id="Node_39" name="Action" type="Action">
+                    <Parameters>
+                      <Parameter name="type" fromcontext="false">path</Parameter>
+                    </Parameters>
                   </Node>
-                  <Node id="Node_43" type="Repeat">
-                    <Children>
-                      <Node id="Node_45" name="Action" type="Action">
-                        <Parameters>
-                          <Parameter name="type" fromcontext="false">choose_weapon</Parameter>
-                        </Parameters>
-                      </Node>
-                    </Children>
+                  <Node id="Node_40" name="Move" type="Action">
+                    <Parameters>
+                      <Parameter name="target" fromcontext="true">move_target</Parameter>
+                    </Parameters>
                   </Node>
-                  <Node id="Node_44" type="Repeat">
-                    <Children>
-                      <Node id="Node_47" type="Sequence">
-                        <Children>
-                          <Node id="Node_48" name="Action" type="Action">
-                            <Parameters>
-                              <Parameter name="type" fromcontext="false">aim</Parameter>
-                            </Parameters>
-                          </Node>
-                          <Node id="Node_46" name="Shoot" type="Action">
-                            <Parameters>
-                              <Parameter name="target" fromcontext="true">aim_target</Parameter>
-                            </Parameters>
-                          </Node>
-                        </Children>
-                      </Node>
-                    </Children>
+                  <Node id="Node_45" name="Action" type="Action">
+                    <Parameters>
+                      <Parameter name="type" fromcontext="false">choose_weapon</Parameter>
+                    </Parameters>
+                  </Node>
+                  <Node id="Node_48" name="Action" type="Action">
+                    <Parameters>
+                      <Parameter name="type" fromcontext="false">aim</Parameter>
+                    </Parameters>
+                  </Node>
+                  <Node id="Node_46" name="Shoot" type="Action">
+                    <Parameters>
+                      <Parameter name="target" fromcontext="true">aim_target</Parameter>
+                    </Parameters>
                   </Node>
                 </Children>
               </Node>

@@ -45,8 +45,8 @@ public class ForestTick extends jbt.execution.task.leaf.action.ExecutionAction {
 		final NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
 		final WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
 		INPCActionExecutor executor = new INPCActionExecutor() {
-			@Override public Status execute(String attackIdentifier) {
-				if(attackIdentifier.equals("lunge")){
+			@Override public Status execute(String identifier) {
+				if(identifier.equals("lunge")){
 					float aimAngle = Being.getAimAngle(self, world.getPlayer());
 					Vector2 lungeForce = new Vector2((float)Math.cos(aimAngle), (float)Math.sin(aimAngle)).scl(
 							Properties.getFloat("ai.forest.lunge.magnitude", 180f));

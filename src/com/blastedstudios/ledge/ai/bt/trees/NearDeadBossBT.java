@@ -2,7 +2,7 @@
 //                   MACHINE GENERATED CODE                
 //                       DO NOT MODIFY                     
 //                                                         
-// Generated on 10/25/2014 15:29:56
+// Generated on 10/25/2014 22:53:15
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.trees;
 
@@ -29,31 +29,18 @@ public class NearDeadBossBT implements jbt.execution.core.IBTLibrary {
 										1,
 										new com.blastedstudios.ledge.ai.bt.actions.NearDeadTick(
 												null))),
-						new jbt.model.task.composite.ModelParallel(
+						new jbt.model.task.composite.ModelSequence(
 								null,
-								jbt.model.task.composite.ModelParallel.ParallelPolicy.SELECTOR_POLICY,
-								new jbt.model.task.decorator.ModelRepeat(
-										null,
-										new jbt.model.task.composite.ModelSequence(
-												null,
-												new com.blastedstudios.ledge.ai.bt.actions.Action(
-														null, "path", null),
-												new com.blastedstudios.ledge.ai.bt.actions.Move(
-														null, null,
-														"move_target"))),
-								new jbt.model.task.decorator.ModelRepeat(
-										null,
-										new com.blastedstudios.ledge.ai.bt.actions.Action(
-												null, "choose_weapon", null)),
-								new jbt.model.task.decorator.ModelRepeat(
-										null,
-										new jbt.model.task.composite.ModelSequence(
-												null,
-												new com.blastedstudios.ledge.ai.bt.actions.Action(
-														null, "aim", null),
-												new com.blastedstudios.ledge.ai.bt.actions.Shoot(
-														null, null,
-														"aim_target"))))));
+								new com.blastedstudios.ledge.ai.bt.actions.Action(
+										null, "path", null),
+								new com.blastedstudios.ledge.ai.bt.actions.Move(
+										null, null, "move_target"),
+								new com.blastedstudios.ledge.ai.bt.actions.Action(
+										null, "choose_weapon", null),
+								new com.blastedstudios.ledge.ai.bt.actions.Action(
+										null, "aim", null),
+								new com.blastedstudios.ledge.ai.bt.actions.Shoot(
+										null, null, "aim_target"))));
 
 	}
 
