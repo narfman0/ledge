@@ -1,4 +1,4 @@
-ratchet.png
+ratchetChopper.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
@@ -11,36 +11,36 @@ head
   index: -1
 torso
   rotate: false
-  xy: 0, 25
-  size: 29, 39
-  orig: 29, 39
+  xy: 0, 24
+  size: 64, 40
+  orig: 64, 40
   offset: 0, 0
   index: -1
 larm
   rotate: false
-  xy: 32, 21
+  xy: 32, 12
   size: 32, 12
   orig: 32, 12
   offset: 0, 0
   index: -1
 rarm
   rotate: false
-  xy: 32, 10
-  size: 32, 12
-  orig: 32, 12
+  xy: 31, 0
+  size: 33, 12
+  orig: 33, 12
   offset: 0, 0
   index: -1
 lleg
   rotate: false
-  xy: 36, 31
-  size: 24, 33
-  orig: 24, 33
+  xy: 0, 26
+  size: 1, 1
+  orig: 1, 1
   offset: 0, 0
   index: -1
 rleg
   rotate: false
-  xy: 36, 31
-  size: 24, 33
-  orig: 24, 33
+  xy: 0, 26
+  size: 1, 1
+  orig: 1, 1
   offset: 0, 0
   index: -1
