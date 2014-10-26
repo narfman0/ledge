@@ -20,17 +20,59 @@
               </Node>
               <Node id="Node_29" type="Sequence">
                 <Children>
-                  <Node id="Node_37" name="GMSword" type="Action" />
+                  <Node id="Node_46" type="Inverter">
+                    <Children>
+                      <Node id="Node_45" name="IsCooldown" type="Condition">
+                        <Parameters>
+                          <Parameter name="identifier" fromcontext="false">sword</Parameter>
+                        </Parameters>
+                      </Node>
+                    </Children>
+                  </Node>
+                  <Node id="Node_50" name="Action" type="Action">
+                    <Parameters>
+                      <Parameter name="type" fromcontext="false">sword</Parameter>
+                    </Parameters>
+                  </Node>
+                  <Node id="Node_43" name="CooldownStart" type="Action">
+                    <Parameters>
+                      <Parameter name="identifier" fromcontext="false">sword</Parameter>
+                      <Parameter name="duration" fromcontext="false">10000</Parameter>
+                    </Parameters>
+                  </Node>
                 </Children>
               </Node>
               <Node id="Node_38" type="Sequence">
                 <Children>
-                  <Node id="Node_40" name="GMStomp" type="Action" />
+                  <Node id="Node_47" type="Inverter">
+                    <Children>
+                      <Node id="Node_48" name="IsCooldown" type="Condition">
+                        <Parameters>
+                          <Parameter name="identifier" fromcontext="false">stomp</Parameter>
+                        </Parameters>
+                      </Node>
+                    </Children>
+                  </Node>
+                  <Node id="Node_51" name="Action" type="Action">
+                    <Parameters>
+                      <Parameter name="type" fromcontext="false">stomp</Parameter>
+                    </Parameters>
+                  </Node>
+                  <Node id="Node_49" name="CooldownStart" type="Action">
+                    <Parameters>
+                      <Parameter name="identifier" fromcontext="false">stomp</Parameter>
+                      <Parameter name="duration" fromcontext="false">5000</Parameter>
+                    </Parameters>
+                  </Node>
                 </Children>
               </Node>
               <Node id="Node_39" type="Sequence">
                 <Children>
-                  <Node id="Node_41" name="GMMove" type="Action" />
+                  <Node id="Node_52" name="Action" type="Action">
+                    <Parameters>
+                      <Parameter name="type" fromcontext="false">move</Parameter>
+                    </Parameters>
+                  </Node>
                 </Children>
               </Node>
             </Children>

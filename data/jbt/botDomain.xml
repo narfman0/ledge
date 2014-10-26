@@ -1,32 +1,10 @@
 <Domain package="com.blastedstudios.ledge.ai.bt">
 	<ActionSet>
-		<Action name="Move">
-			<Parameter name="target" type="COORDINATE" />
-		</Action>
-		<Action name="Shoot">
-			<Parameter name="target" type="COORDINATE" />
-		</Action>
-		<Action name="Search">
-			<Parameter name="lastTarget" type="COORDINATE" />
-			<Parameter name="lastTime" type="INTEGER" />
-		</Action>
-		<Action name="NotifyDanger">
-			<Parameter name="target" type="COORDINATE" />
-		</Action>
-		<Action name="ClosestCover" />
-		<Action name="ClosestTurret" type="COORDINATE" />
-		<Action name="OperateTurret">
-			<Parameter name="target" type="COORDINATE" />
-		</Action>
-		<Action name="CurrentObjective" />
-		<Action name="Jump">
-			<Parameter name="towardPlayer" type="BOOLEAN" />
-		</Action>
-		<Action name="Drop" />
-		<Action name="Land" />
 		<Action name="Action">
 			<Parameter name="type" type="STRING" />
 		</Action>
+		<Action name="ClosestCover" />
+		<Action name="ClosestTurret" type="COORDINATE" />
 		<Action name="CooldownStart">
 			<Parameter name="identifier" type="STRING" />
 			<Parameter name="duration" type="INTEGER" />
@@ -34,25 +12,43 @@
 		<Action name="CooldownEnd">
 			<Parameter name="identifier" type="STRING" />
 		</Action>
+		<Action name="CurrentObjective" />
+		<Action name="Drop" />
+		<Action name="Jump">
+			<Parameter name="towardPlayer" type="BOOLEAN" />
+		</Action>
+		<Action name="Land" />
+		<Action name="Move">
+			<Parameter name="target" type="COORDINATE" />
+		</Action>
+		<Action name="NotifyDanger">
+			<Parameter name="target" type="COORDINATE" />
+		</Action>
+		<Action name="OperateTurret">
+			<Parameter name="target" type="COORDINATE" />
+		</Action>
 		<Action name="RunAway" />
+		<Action name="Search">
+			<Parameter name="lastTarget" type="COORDINATE" />
+			<Parameter name="lastTime" type="INTEGER" />
+		</Action>
+		<Action name="Shoot">
+			<Parameter name="target" type="COORDINATE" />
+		</Action>
 		<Action name="Stop" />
 		
-		<!-- Garbageman domain node(s) -->
+		<!-- Specific domain node(s) e.g. bosses -->
 		<Action name="GMTick" />
-		<Action name="GMSword" />
-		<Action name="GMStomp" />
-		<Action name="GMMove" />
-		
-		<!-- Forest commander domain node()s -->
 		<Action name="ForestTick" />
-		
-		<!-- Near dead ledge domain node(s) -->
 		<Action name="NearDeadTick" />
 	</ActionSet>
 	<SensorSet>
 		<Sensor name="LowDanger" type="BOOLEAN" />
 		<Sensor name="HighDanger" type="BOOLEAN" />
 		<Sensor name="InCover" type="BOOLEAN" />
+		<Sensor name="IsCooldown" type="BOOLEAN">
+			<Parameter name="identifier" type="STRING" />
+		</Sensor>
 		<Sensor name="IsDead" type="BOOLEAN" />
 		<Sensor name="PlayerLeft" type="BOOLEAN" />
 		<Sensor name="PlayerUnder" type="BOOLEAN" />

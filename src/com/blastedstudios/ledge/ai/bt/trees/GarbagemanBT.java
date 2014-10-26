@@ -2,7 +2,7 @@
 //                   MACHINE GENERATED CODE                
 //                       DO NOT MODIFY                     
 //                                                         
-// Generated on 10/19/2014 13:42:31
+// Generated on 10/26/2014 14:17:06
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.trees;
 
@@ -31,16 +31,28 @@ public class GarbagemanBT implements jbt.execution.core.IBTLibrary {
 												null))),
 						new jbt.model.task.composite.ModelSequence(
 								null,
-								new com.blastedstudios.ledge.ai.bt.actions.GMSword(
-										null)),
+								new jbt.model.task.decorator.ModelInverter(
+										null,
+										new com.blastedstudios.ledge.ai.bt.conditions.IsCooldown(
+												null, "sword", null)),
+								new com.blastedstudios.ledge.ai.bt.actions.Action(
+										null, "sword", null),
+								new com.blastedstudios.ledge.ai.bt.actions.CooldownStart(
+										null, "sword", null, (int) 10000, null)),
 						new jbt.model.task.composite.ModelSequence(
 								null,
-								new com.blastedstudios.ledge.ai.bt.actions.GMStomp(
-										null)),
+								new jbt.model.task.decorator.ModelInverter(
+										null,
+										new com.blastedstudios.ledge.ai.bt.conditions.IsCooldown(
+												null, "stomp", null)),
+								new com.blastedstudios.ledge.ai.bt.actions.Action(
+										null, "stomp", null),
+								new com.blastedstudios.ledge.ai.bt.actions.CooldownStart(
+										null, "stomp", null, (int) 5000, null)),
 						new jbt.model.task.composite.ModelSequence(
 								null,
-								new com.blastedstudios.ledge.ai.bt.actions.GMMove(
-										null))));
+								new com.blastedstudios.ledge.ai.bt.actions.Action(
+										null, "move", null))));
 
 	}
 
