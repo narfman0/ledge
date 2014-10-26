@@ -2,7 +2,7 @@
   <properties>
     <entry>
       <string>HP</string>
-      <string>500</string>
+      <string>1500</string>
     </entry>
     <entry>
       <string>Attack</string>
@@ -14,7 +14,7 @@
     </entry>
     <entry>
       <string>HPPerLevel</string>
-      <string>10</string>
+      <string>50</string>
     </entry>
     <entry>
       <string>AttackPerLevel</string>
