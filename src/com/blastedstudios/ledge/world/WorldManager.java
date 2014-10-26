@@ -35,7 +35,6 @@ import com.blastedstudios.gdxworld.world.GDXNPC;
 import com.blastedstudios.gdxworld.world.GDXPath;
 import com.blastedstudios.ledge.ai.AIWorld;
 import com.blastedstudios.ledge.physics.ContactListener;
-import com.blastedstudios.ledge.physics.VisibleQueryCallback;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen.IGameplayListener;
 import com.blastedstudios.ledge.util.VisibilityReturnStruct;
 import com.blastedstudios.ledge.world.being.Being;
@@ -194,15 +193,12 @@ public class WorldManager implements IDeathCallback{
 						facingCorrectly = origin.getRagdoll().isFacingLeft() ?
 								being.getPosition().x < origin.getPosition().x : 
 								being.getPosition().x > origin.getPosition().x;
-				if(closer && (facingCorrectly || currentClosestDistanceSq < origin.getDistanceAware())){
-					VisibleQueryCallback callback = new VisibleQueryCallback(origin, being);
-					world.rayCast(callback, origin.getPosition(), being.getPosition());
-					if(!callback.called){
-						closestDistanceSq = currentClosestDistanceSq;
-						if(closestDistanceSq < origin.getDistanceVision()){
-							enemyCount++;
-							closestEnemy = being;
-						}
+				if(closer && origin.sees(being, world) && 
+						(facingCorrectly || currentClosestDistanceSq < origin.getDistanceAware())){
+					closestDistanceSq = currentClosestDistanceSq;
+					if(closestDistanceSq < origin.getDistanceVision()){
+						enemyCount++;
+						closestEnemy = being;
 					}
 				}
 			}

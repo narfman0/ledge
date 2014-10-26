@@ -50,12 +50,14 @@ public class NearDeadTick extends
 				if(identifier.equals("aim")){
 					float aimAngle = Being.getAimAngle(self, world.getPlayer());
 					// If within 45 degrees below player, aim at him
-					if(aimAngle > -.75*Math.PI && aimAngle < -.25*Math.PI){
+					if(self.sees(world.getPlayer(), world.getWorld()) && aimAngle > -.75*Math.PI && aimAngle < -.25*Math.PI){
 						float[] target = new float[]{world.getPlayer().getPosition().x, world.getPlayer().getPosition().y};
 						getContext().setVariable("aim_target", target);
 					}else
 						return Status.FAILURE;
 				}else if(identifier.equals("choose_weapon")){
+					if(!self.sees(world.getPlayer(), world.getWorld()))
+						return Status.FAILURE;
 					float d = self.getPosition().dst(world.getPlayer().getPosition());
 					if(d > Properties.getFloat("neardead.boss.weapon.far", 15f))
 						self.setCurrentWeapon(2, world.getWorld());

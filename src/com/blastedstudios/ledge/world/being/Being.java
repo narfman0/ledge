@@ -22,6 +22,7 @@ import com.blastedstudios.gdxworld.util.FileUtil;
 import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.physics.PhysicsEnvironment;
+import com.blastedstudios.ledge.physics.VisibleQueryCallback;
 import com.blastedstudios.ledge.physics.ragdoll.IRagdoll;
 import com.blastedstudios.ledge.physics.ragdoll.IRagdoll.IRagdollPlugin;
 import com.blastedstudios.ledge.util.VectorHelper;
@@ -160,6 +161,12 @@ public class Being implements Serializable{
 				normals.add(normal);
 			}
 		return normals;
+	}
+	
+	public boolean sees(Being being, World world){
+		VisibleQueryCallback callback = new VisibleQueryCallback(this, being);
+		world.rayCast(callback, getPosition(), being.getPosition());
+		return !callback.called;
 	}
 	
 	public boolean isGrounded(World world){

@@ -13,7 +13,6 @@ import com.badlogic.gdx.math.Vector2;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.GDXPath;
 import com.blastedstudios.ledge.ai.AIWorld;
-import com.blastedstudios.ledge.physics.VisibleQueryCallback;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.NPC;
@@ -96,9 +95,8 @@ public class NotifyDanger extends
 				GDXPath path = new GDXPath();
 				path.getNodes().addAll(aiWorld.getPathToPoint(being.getPosition(), target));
 				//verify friend is also visible, else can't communicate
-				VisibleQueryCallback callback = new VisibleQueryCallback(self, being);
-				world.getWorld().rayCast(callback, self.getPosition(), being.getPosition());
-				if(!callback.called || distanceSquared < Properties.getFloat("npc.notify.absolute.distanceSq", 144f))
+				if(self.sees(being, world.getWorld()) || 
+						distanceSquared < Properties.getFloat("npc.notify.absolute.distanceSq", 144f))
 					((NPC)being).setPath(path);
 			}
 		}
