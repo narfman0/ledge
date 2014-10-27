@@ -51836,8 +51836,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>4.47103</x>
-            <y>-2.8563569</y>
+            <x>4.440446</x>
+            <y>-2.8297975</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -51847,132 +51847,132 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-39.170254</x>
-              <y>16.534336</y>
+              <x>-40.118362</x>
+              <y>17.357681</y>
             </Vector2>
             <Vector2>
-              <x>-44.338223</x>
-              <y>6.2071867</y>
+              <x>-44.307636</x>
+              <y>6.1806273</y>
             </Vector2>
             <Vector2>
-              <x>-55.35092</x>
-              <y>-7.470793</y>
+              <x>-55.320335</x>
+              <y>-7.4973516</y>
             </Vector2>
             <Vector2>
-              <x>-48.890957</x>
-              <y>-7.8003826</y>
+              <x>-48.86037</x>
+              <y>-7.8269415</y>
             </Vector2>
             <Vector2>
-              <x>-9.454431</x>
-              <y>-7.41586</y>
+              <x>-9.423846</x>
+              <y>-7.442419</y>
             </Vector2>
             <Vector2>
-              <x>-8.408535</x>
-              <y>-7.910245</y>
+              <x>-8.377951</x>
+              <y>-7.936804</y>
             </Vector2>
             <Vector2>
-              <x>-1.2102942</x>
-              <y>-7.9651766</y>
+              <x>-1.1797099</x>
+              <y>-7.9917355</y>
             </Vector2>
             <Vector2>
-              <x>1.9889288</x>
-              <y>-8.239835</y>
+              <x>2.0195131</x>
+              <y>-8.266394</y>
             </Vector2>
             <Vector2>
-              <x>6.541663</x>
-              <y>-8.239835</y>
+              <x>6.5722475</x>
+              <y>-8.266394</y>
             </Vector2>
             <Vector2>
-              <x>19.892246</x>
-              <y>-7.74545</y>
+              <x>19.922832</x>
+              <y>-7.772009</y>
             </Vector2>
             <Vector2>
-              <x>35.765305</x>
-              <y>-7.5257235</y>
+              <x>35.79589</x>
+              <y>-7.5522823</y>
             </Vector2>
             <Vector2>
-              <x>37.549484</x>
-              <y>-7.9651766</y>
+              <x>37.58007</x>
+              <y>-7.9917355</y>
             </Vector2>
             <Vector2>
-              <x>39.579758</x>
-              <y>-7.5257235</y>
+              <x>39.610344</x>
+              <y>-7.5522823</y>
             </Vector2>
             <Vector2>
-              <x>39.764324</x>
-              <y>3.460605</y>
+              <x>39.79491</x>
+              <y>3.4340456</y>
             </Vector2>
             <Vector2>
-              <x>38.53386</x>
-              <y>4.5592375</y>
+              <x>38.564445</x>
+              <y>4.532678</y>
             </Vector2>
             <Vector2>
-              <x>38.34929</x>
-              <y>6.152255</y>
+              <x>38.379875</x>
+              <y>6.1256957</y>
             </Vector2>
             <Vector2>
-              <x>39.764324</x>
-              <y>7.1410246</y>
+              <x>39.79491</x>
+              <y>7.1144657</y>
             </Vector2>
             <Vector2>
-              <x>42.840496</x>
-              <y>6.756503</y>
+              <x>42.871082</x>
+              <y>6.7299438</y>
             </Vector2>
             <Vector2>
-              <x>43.51726</x>
-              <y>5.822665</y>
+              <x>43.547848</x>
+              <y>5.796106</y>
             </Vector2>
             <Vector2>
-              <x>43.701828</x>
-              <y>4.614169</y>
+              <x>43.732414</x>
+              <y>4.58761</y>
             </Vector2>
             <Vector2>
-              <x>41.979176</x>
-              <y>3.5155365</y>
+              <x>42.00976</x>
+              <y>3.4889772</y>
             </Vector2>
             <Vector2>
-              <x>41.7946</x>
-              <y>2.7464936</y>
+              <x>41.825188</x>
+              <y>2.7199342</y>
             </Vector2>
             <Vector2>
-              <x>42.0407</x>
-              <y>2.5816987</y>
+              <x>42.071285</x>
+              <y>2.5551393</y>
             </Vector2>
             <Vector2>
-              <x>42.995632</x>
-              <y>-43.863636</y>
+              <x>43.02622</x>
+              <y>-43.890198</y>
             </Vector2>
             <Vector2>
-              <x>-63.937695</x>
-              <y>-42.183636</y>
+              <x>-63.90711</x>
+              <y>-42.210197</y>
             </Vector2>
             <Vector2>
-              <x>-55.962776</x>
-              <y>10.178517</y>
+              <x>-55.93219</x>
+              <y>10.151958</y>
             </Vector2>
             <Vector2>
-              <x>-49.015854</x>
-              <y>13.53128</y>
+              <x>-48.985268</x>
+              <y>13.504721</y>
             </Vector2>
             <Vector2>
-              <x>-45.636276</x>
-              <y>17.72223</y>
+              <x>-45.60569</x>
+              <y>17.695671</y>
             </Vector2>
             <Vector2>
-              <x>-45.824028</x>
-              <y>13.53128</y>
+              <x>-45.79344</x>
+              <y>13.504721</y>
             </Vector2>
             <Vector2>
-              <x>-42.819954</x>
-              <y>18.225143</y>
+              <x>-42.789368</x>
+              <y>18.198584</y>
             </Vector2>
             <Vector2>
-              <x>-43.94648</x>
-              <y>14.704745</y>
+              <x>-43.915894</x>
+              <y>14.678186</y>
             </Vector2>
             <Vector2>
-              <x>-42.632195</x>
-              <y>13.866555</y>
+              <x>-42.60161</x>
+              <y>13.839996</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -51984,8 +51984,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-0.8223176</x>
-            <y>0.9972511</y>
+            <x>-0.7500009</x>
+            <y>3.8249993</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -52152,6 +52152,578 @@
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-0</name>
+          <resource>debris1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-45.29506</x>
+            <y>33.997623</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-12.722343</x>
+              <y>85.954544</y>
+            </Vector2>
+            <Vector2>
+              <x>11.035927</x>
+              <y>33.13384</y>
+            </Vector2>
+            <Vector2>
+              <x>-55.08206</x>
+              <y>35.785915</y>
+            </Vector2>
+            <Vector2>
+              <x>-53.424507</x>
+              <y>11.254124</y>
+            </Vector2>
+            <Vector2>
+              <x>11.2201</x>
+              <y>10.812107</y>
+            </Vector2>
+            <Vector2>
+              <x>11.312706</x>
+              <y>12.921547</y>
+            </Vector2>
+            <Vector2>
+              <x>13.061821</x>
+              <y>11.696133</y>
+            </Vector2>
+            <Vector2>
+              <x>15.4215355</x>
+              <y>10.770668</y>
+            </Vector2>
+            <Vector2>
+              <x>18.218658</x>
+              <y>11.889519</y>
+            </Vector2>
+            <Vector2>
+              <x>17.286285</x>
+              <y>10.149086</y>
+            </Vector2>
+            <Vector2>
+              <x>13.763981</x>
+              <y>7.787071</y>
+            </Vector2>
+            <Vector2>
+              <x>10.3452835</x>
+              <y>7.041172</y>
+            </Vector2>
+            <Vector2>
+              <x>5.4762115</x>
+              <y>2.8144073</y>
+            </Vector2>
+            <Vector2>
+              <x>0.5035515</x>
+              <y>-2.4068851</y>
+            </Vector2>
+            <Vector2>
+              <x>8.791321</x>
+              <y>1.1982956</y>
+            </Vector2>
+            <Vector2>
+              <x>9.827293</x>
+              <y>1.3226128</y>
+            </Vector2>
+            <Vector2>
+              <x>9.930893</x>
+              <y>0.8253441</y>
+            </Vector2>
+            <Vector2>
+              <x>9.930893</x>
+              <y>0.3280754</y>
+            </Vector2>
+            <Vector2>
+              <x>8.998516</x>
+              <y>-0.41781998</y>
+            </Vector2>
+            <Vector2>
+              <x>1.4359283</x>
+              <y>-4.147316</y>
+            </Vector2>
+            <Vector2>
+              <x>0.39995575</x>
+              <y>-7.130913</y>
+            </Vector2>
+            <Vector2>
+              <x>0.5035515</x>
+              <y>-8.374081</y>
+            </Vector2>
+            <Vector2>
+              <x>1.6431198</x>
+              <y>-8.871344</y>
+            </Vector2>
+            <Vector2>
+              <x>3.7150612</x>
+              <y>-8.622713</y>
+            </Vector2>
+            <Vector2>
+              <x>5.9942017</x>
+              <y>-7.379547</y>
+            </Vector2>
+            <Vector2>
+              <x>7.755352</x>
+              <y>-6.136383</y>
+            </Vector2>
+            <Vector2>
+              <x>10.702133</x>
+              <y>-5.0394764</y>
+            </Vector2>
+            <Vector2>
+              <x>11.279228</x>
+              <y>-5.4801674</y>
+            </Vector2>
+            <Vector2>
+              <x>11.121838</x>
+              <y>-6.2356377</y>
+            </Vector2>
+            <Vector2>
+              <x>7.444561</x>
+              <y>-8.374081</y>
+            </Vector2>
+            <Vector2>
+              <x>5.6834106</x>
+              <y>-9.741564</y>
+            </Vector2>
+            <Vector2>
+              <x>3.1970787</x>
+              <y>-12.352211</y>
+            </Vector2>
+            <Vector2>
+              <x>0.6071472</x>
+              <y>-16.951923</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.11802673</x>
+              <y>-20.805735</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.11802673</x>
+              <y>-21.800264</y>
+            </Vector2>
+            <Vector2>
+              <x>1.1251373</x>
+              <y>-20.68142</y>
+            </Vector2>
+            <Vector2>
+              <x>2.0575104</x>
+              <y>-19.065302</y>
+            </Vector2>
+            <Vector2>
+              <x>2.161106</x>
+              <y>-19.065302</y>
+            </Vector2>
+            <Vector2>
+              <x>1.5395241</x>
+              <y>-22.67048</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.9151535</x>
+              <y>-32.11854</y>
+            </Vector2>
+            <Vector2>
+              <x>-53.677734</x>
+              <y>-29.75653</y>
+            </Vector2>
+            <Vector2>
+              <x>-75.433136</x>
+              <y>47.94131</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-71</name>
+          <resource>debris1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-33.71521</x>
+            <y>48.960144</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.80142975</x>
+              <y>-2.0730286</y>
+            </Vector2>
+            <Vector2>
+              <x>1.2555733</x>
+              <y>0.6518326</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.45414352</x>
+              <y>1.4212036</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-74</name>
+          <resource>debris1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-33.71521</x>
+            <y>55.489132</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.4274292</x>
+              <y>-4.5948677</y>
+            </Vector2>
+            <Vector2>
+              <x>0.6144295</x>
+              <y>2.1692047</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.18700027</x>
+              <y>2.425663</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-77</name>
+          <resource>debris1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-33.982353</x>
+            <y>62.498978</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>0.026714325</x>
+              <y>-3.9109802</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.37400055</x>
+              <y>3.6865768</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.026714325</x>
+              <y>4.3597794</y>
+            </Vector2>
+            <Vector2>
+              <x>0.37400055</x>
+              <y>-4.1353836</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-82</name>
+          <resource>debris1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-19.91508</x>
+            <y>48.30908</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-2.023756</x>
+              <y>-3.4559555</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.3502655</x>
+              <y>-2.475212</y>
+            </Vector2>
+            <Vector2>
+              <x>1.868082</x>
+              <y>3.596058</y>
+            </Vector2>
+            <Vector2>
+              <x>0.5059376</x>
+              <y>2.335102</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-86</name>
+          <resource>debris1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-17.784298</x>
+            <y>54.485424</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-1.2356586</x>
+              <y>-1.6929512</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.88539314</x>
+              <y>-2.6269913</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.14594269</x>
+              <y>-2.0198631</y>
+            </Vector2>
+            <Vector2>
+              <x>2.2669973</x>
+              <y>6.3398056</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-90</name>
+          <resource>debris1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-11.670867</x>
+            <y>71.06856</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-4.7026377</x>
+              <y>-10.149921</y>
+            </Vector2>
+            <Vector2>
+              <x>-3.5740051</x>
+              <y>-9.5895</y>
+            </Vector2>
+            <Vector2>
+              <x>3.3534708</x>
+              <y>4.0475006</y>
+            </Vector2>
+            <Vector2>
+              <x>2.575101</x>
+              <y>5.635376</y>
+            </Vector2>
+            <Vector2>
+              <x>1.6799784</x>
+              <y>5.3551636</y>
+            </Vector2>
+            <Vector2>
+              <x>0.66809845</x>
+              <y>4.701332</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-96</name>
+          <resource>debris1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-21.93188</x>
+            <y>39.679306</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>1.5946217</x>
+              <y>5.445633</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.43851852</x>
+              <y>4.393181</y>
+            </Vector2>
+            <Vector2>
+              <x>-4.066284</x>
+              <y>-6.322674</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.2324696</x>
+              <y>-6.322674</y>
+            </Vector2>
+            <Vector2>
+              <x>4.1858845</x>
+              <y>-0.24716568</y>
+            </Vector2>
+            <Vector2>
+              <x>0.95677376</x>
+              <y>3.0536995</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-98</name>
+          <resource>debris1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-24.642738</x>
+            <y>31.51006</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-1.2358303</x>
+              <y>1.2246704</y>
+            </Vector2>
+            <Vector2>
+              <x>0.5182533</x>
+              <y>1.4160233</y>
+            </Vector2>
+            <Vector2>
+              <x>2.3919334</x>
+              <y>2.372799</y>
+            </Vector2>
+            <Vector2>
+              <x>1.1162376</x>
+              <y>-2.124035</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.7905865</x>
+              <y>-2.889452</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-100</name>
+          <resource>debris1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-17.18585</x>
+            <y>30.710331</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-13.675909</x>
+              <y>-1.6113377</y>
+            </Vector2>
+            <Vector2>
+              <x>-13.237389</x>
+              <y>-1.8983707</y>
+            </Vector2>
+            <Vector2>
+              <x>-13.237389</x>
+              <y>-2.6159496</y>
+            </Vector2>
+            <Vector2>
+              <x>-11.682632</x>
+              <y>-3.1421738</y>
+            </Vector2>
+            <Vector2>
+              <x>-9.888685</x>
+              <y>-2.6159496</y>
+            </Vector2>
+            <Vector2>
+              <x>-6.1014595</x>
+              <y>-1.8026924</y>
+            </Vector2>
+            <Vector2>
+              <x>21.96388</x>
+              <y>13.553513</y>
+            </Vector2>
+            <Vector2>
+              <x>38.77178</x>
+              <y>13.591217</y>
+            </Vector2>
+            <Vector2>
+              <x>35.120102</x>
+              <y>9.433922</y>
+            </Vector2>
+            <Vector2>
+              <x>12.80476</x>
+              <y>2.1649284</y>
+            </Vector2>
+            <Vector2>
+              <x>4.5202045</x>
+              <y>-1.721962</y>
+            </Vector2>
+            <Vector2>
+              <x>1.4680014</x>
+              <y>-4.0391445</y>
+            </Vector2>
+            <Vector2>
+              <x>-8.685257</x>
+              <y>-5.8330956</y>
+            </Vector2>
+            <Vector2>
+              <x>-11.30143</x>
+              <y>-5.235111</y>
+            </Vector2>
+            <Vector2>
+              <x>-12.920969</x>
+              <y>-4.861372</y>
+            </Vector2>
+            <Vector2>
+              <x>-13.917606</x>
+              <y>-3.366413</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
       </polygons>
       <npcs>
         <world.GDXNPC>
@@ -52215,8 +52787,576 @@
             </entry>
           </properties>
         </world.GDXNPC>
+        <world.GDXNPC>
+          <name>g0</name>
+          <coordinates>
+            <x>-40.023556</x>
+            <y>45.816257</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string>4</string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ledge4Guard</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>g1</name>
+          <coordinates>
+            <x>-41.79101</x>
+            <y>45.87864</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ledge4Guard</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>g2</name>
+          <coordinates>
+            <x>-43.22057</x>
+            <y>45.504353</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ledge4Guard</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>g3</name>
+          <coordinates>
+            <x>-14.575981</x>
+            <y>34.35195</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ledge4Guard</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>g4</name>
+          <coordinates>
+            <x>-13.068646</x>
+            <y>35.32253</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ledge4Guard</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>g5</name>
+          <coordinates>
+            <x>-11.561312</x>
+            <y>36.11664</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string>4</string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ledge4Guard</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>NPC-8</name>
+          <coordinates>
+            <x>-36.704117</x>
+            <y>-8.896964</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string>FRIEND</string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string>0</string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ledge4Guard</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>NPC-10</name>
+          <coordinates>
+            <x>-22.647985</x>
+            <y>-9.236007</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string>4</string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string>FRIEND</string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string>0</string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ledge4Guard</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>NPC-11</name>
+          <coordinates>
+            <x>-20.105167</x>
+            <y>-8.896964</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string>4</string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string>FRIEND</string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string>0</string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ledge4Guard</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
       </npcs>
-      <paths/>
+      <paths>
+        <world.GDXPath>
+          <name>Path-0</name>
+          <nodes>
+            <Vector2>
+              <x>-89.276566</x>
+              <y>45.887238</y>
+            </Vector2>
+          </nodes>
+        </world.GDXPath>
+        <world.GDXPath>
+          <name>Path-1</name>
+          <nodes>
+            <Vector2>
+              <x>19.994171</x>
+              <y>45.312782</y>
+            </Vector2>
+          </nodes>
+        </world.GDXPath>
+      </paths>
       <joints/>
       <quests>
         <world.quest.GDXQuest>
@@ -52226,11 +53366,534 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
             <coordinates>
-              <x>9.599999</x>
-              <y>-8.879999</y>
+              <x>-30.420204</x>
+              <y>46.36316</y>
             </coordinates>
             <being>player</being>
+            <npcData>player</npcData>
             <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>drop0</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>false</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>drop1</name>
+          <prerequisites>drop0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>1500</time>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Colligan arrives at a ledge devoid of life similar to harvested ledge, but more so, and with trash and debris. He lands roughly, but doesnt quite pass out. He is tired and takes a break, resting in some debris. Wakes up to hear guards talking</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>drop2</name>
+          <prerequisites>drop1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>...this crap, Im ready to to get back to my woman.</dialog>
+            <origin>Patrol1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>drop3</name>
+          <prerequisites>drop2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Oh man I know weve heard ya, shes the sweetest thing, knows your ways, knows the kitchen, the way of roast...</dialog>
+            <origin>Patrol2</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>drop4</name>
+          <prerequisites>drop3</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>...right into a mans heart I tell ya. Only one more cycle until I can go back, cash out and done.</dialog>
+            <origin>Patrol1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>drop5</name>
+          <prerequisites>drop4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Most of our time is coming up, you think theyve gotten what they need?</dialog>
+            <origin>Patrol2</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>drop6</name>
+          <prerequisites>drop5</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Who knows, who cares. Were done with this dung heap. Ill be glad not to deal with him again.</dialog>
+            <origin>Patrol1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>drop7</name>
+          <prerequisites>drop6</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Heh, garbage this, garbage that.</dialog>
+            <origin>Patrol2</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>drop8</name>
+          <prerequisites>drop7</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Garbage man can stay here for all I care, this is a trash home</dialog>
+            <origin>Patrol1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>drop9</name>
+          <prerequisites>drop8</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>You still call him that, ehh captain ballsy? You know hed send you solo to the wilds if he heard you? Still, he is a beastly fella.</dialog>
+            <origin>Patrol2</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>drop10</name>
+          <prerequisites>drop9</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Ha! Im not going over the gate. Thankfully my bro in env-7 says theyve hit one of the final tiers and should be done, just in line for me to go home happy.</dialog>
+            <origin>Patrol1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>drop11</name>
+          <prerequisites>drop10</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>You and me both, buddy, I got my daughter to see, you know</dialog>
+            <origin>Patrol2</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>drop12</name>
+          <prerequisites>drop11</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Yep were close...</dialog>
+            <origin>Patrol1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>drop13</name>
+          <prerequisites>drop12</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&lt;to himself&gt;: Who is this garbageman, and what is the resource they are farming now? More reactor stuff?</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>drop13Path</name>
+          <prerequisites>drop12</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>g0,g1,g2</being>
+            <path>Path-0</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>guards0</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>-30.491692</x>
+              <y>27.528187</y>
+            </lowerLeft>
+            <upperRight>
+              <x>-26.997221</x>
+              <y>36.094635</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>false</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>drop14</name>
+          <prerequisites>drop13</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>true</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>guards1</name>
+          <prerequisites>guards0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Oh no hes coming back...</dialog>
+            <origin>Guard1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>guards2</name>
+          <prerequisites>guards1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>I dont know if I can stand it, lets do rounds now?</dialog>
+            <origin>Guard2</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>guards3</name>
+          <prerequisites>guards2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Wont hear me complaining, rather do rounds early than have to see his grissly face again.</dialog>
+            <origin>Guard1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>guards4</name>
+          <prerequisites>guards3</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Cmon quick., lets get outta here</dialog>
+            <origin>Guard2</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>guards5</name>
+          <prerequisites>guards4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>g3,g4,g5</being>
+            <path>Path-1</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>guards6</name>
+          <prerequisites>guards5</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Guess I&apos;ve gotta drop down...</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>guards7</name>
+          <prerequisites>guards6</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>true</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall0</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>-34.438183</x>
+              <y>27.421255</y>
+            </lowerLeft>
+            <upperRight>
+              <x>-31.002556</x>
+              <y>28.397697</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>false</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall1</name>
+          <prerequisites>fall0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beinginvuln.BeingInvulnManifestation">
+            <being>player</being>
+            <invuln>true</invuln>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall2</name>
+          <prerequisites>fall1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingrotation.BeingRotationManifestation">
+            <fixedRotation>false</fixedRotation>
+            <torque>10.0</torque>
+            <being>player</being>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall3</name>
+          <prerequisites>fall2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>3000</time>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingrotation.BeingRotationManifestation">
+            <fixedRotation>true</fixedRotation>
+            <torque>0.0</torque>
+            <being>player</being>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall4</name>
+          <prerequisites>fall3</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beinginvuln.BeingInvulnManifestation">
+            <being>player</being>
+            <invuln>false</invuln>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall5</name>
+          <prerequisites>fall4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Col wakes up quickly amongst some dead bodies, kruft and crap, and a few appendage-less guards crawling</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall6</name>
+          <prerequisites>fall5</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>You... came for us! Officer down, soldier wounded!</dialog>
+            <origin>Enlisted1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall7</name>
+          <prerequisites>fall6</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Wha..?!</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall8</name>
+          <prerequisites>fall7</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Private Daylight looking for overworld, sir! Prepared to ship out!</dialog>
+            <origin>Enlisted2</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall9</name>
+          <prerequisites>fall8</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>You boy, you are too young to be of the army! Prepare to be *coughs*</dialog>
+            <origin>Officer</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall10</name>
+          <prerequisites>fall9</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Where are we, what happened here?</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall11</name>
+          <prerequisites>fall10</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>We&apos;re in the underworld private, welcome to the dead zone! Yippee!</dialog>
+            <origin>Enlisted2</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall12</name>
+          <prerequisites>fall11</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>We got two legs down, requesting assistance. Incoming! Suppressing fire!</dialog>
+            <origin>Enlisted1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall13</name>
+          <prerequisites>fall12</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Quiet boy, youll be just fine if you stay with me!</dialog>
+            <origin>Officer</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall14</name>
+          <prerequisites>fall13</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Yes sir, of course sir sorry lost it a minute.</dialog>
+            <origin>Enlisted1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall15</name>
+          <prerequisites>fall14</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Son, you need to run east. The beasts of the dead zone dont take kindly to fresh meat. We can cover your escape, just be sure to hide when the garbage man comes, hes.... oh no, here they come, run!</dialog>
+            <origin>Officer</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall16</name>
+          <prerequisites>fall15</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Call in the boys when you get out!</dialog>
+            <origin>Enlisted2</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall17</name>
+          <prerequisites>fall16</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>true</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>gm0</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>3.5333319</x>
+              <y>-11.359998</y>
+            </lowerLeft>
+            <upperRight>
+              <x>15.666667</x>
+              <y>-0.4800009</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Environment darkening, Colligan hears a gutteral growl of a visceral houndlike shape. A crunching of what seems like gore echos, with loud footsteps getting closer. At the same time, you see a hovering vessel descending from the sky.</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>gm1</name>
+          <prerequisites>gm0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>As the shape of the garbageman comes further into view, you hear a distant shouting &quot;just last until I arrive!&quot;</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>gm2</name>
+          <prerequisites>gm1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>60000</time>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Finally your dad arrives and whisks you away to safety, explaining a bunch of crap.</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>gm3</name>
+          <prerequisites>gm2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
+            <success>true</success>
+            <nextLevel></nextLevel>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
