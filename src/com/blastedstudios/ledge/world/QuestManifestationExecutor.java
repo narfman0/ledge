@@ -1,5 +1,6 @@
 package com.blastedstudios.ledge.world;
 
+import java.util.LinkedList;
 import java.util.Random;
 
 import aurelienribon.tweenengine.Tween;
@@ -77,11 +78,18 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 		GDXPath path = worldManager.getPath(pathString);
 		
 		boolean found = false;
+		LinkedList<String> names = new LinkedList<>();
+		if(beingString.contains(","))
+			for(String name : beingString.split(","))
+				names.add(name.trim());
+		else
+			names.add(beingString);
 		for(Being being : worldManager.getAllBeings())
-			if(being.getName().equalsIgnoreCase(beingString)){
-				((NPC)being).setPath(path);
-				found = true;
-			}
+			for(String name : names)
+				if(being.getName().equalsIgnoreCase(name)){
+					((NPC)being).setPath(path);
+					found = true;
+				}
 		
 		if(path == null)
 			Gdx.app.error("QuestManifestationExecutor.pathChange", "Path null " +
