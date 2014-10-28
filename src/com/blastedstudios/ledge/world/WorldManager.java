@@ -373,4 +373,21 @@ public class WorldManager implements IDeathCallback{
 	public void setPlayerTrack(boolean playerTrack) {
 		this.playerTrack = playerTrack;
 	}
+
+	/**
+	 * @param being regular expression for being(s) to remove
+	 * @return count of beings removed matching string being
+	 */
+	public int removeNPC(String being) {
+		int removed = 0;
+		for(Iterator<NPC> i = npcs.iterator(); i.hasNext();){
+			NPC npc = i.next();
+			if(npc.getName().matches(being)){
+				npc.dispose(world);
+				i.remove();
+				++removed;
+			}
+		}
+		return removed;
+	}
 }
