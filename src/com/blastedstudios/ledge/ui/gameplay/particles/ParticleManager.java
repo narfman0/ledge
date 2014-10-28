@@ -51,10 +51,11 @@ public class ParticleManager {
 						if(body.getKey().getName().equals(struct.particle.getAttachedBody()))
 							struct.effect.setPosition(body.getValue().getPosition().x, body.getValue().getPosition().y);
 			}
+			float time = worldManager.isPause() ? 0f : dt;
 			if(struct.particle.getEmitterName().isEmpty())
-				struct.effect.draw(spriteBatch, dt);
+				struct.effect.draw(spriteBatch, time);
 			else
-				struct.effect.findEmitter(struct.particle.getEmitterName()).draw(spriteBatch, dt);
+				struct.effect.findEmitter(struct.particle.getEmitterName()).draw(spriteBatch, time);
 			
 			if(struct.isRemoveScheduled() && 
 					(System.currentTimeMillis() - struct.getRemoveScheduled() > TIME_TO_REMOVE_SCHEDULED)){
