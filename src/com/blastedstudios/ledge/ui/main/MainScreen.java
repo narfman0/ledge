@@ -39,7 +39,7 @@ public class MainScreen extends AbstractScreen implements IMainWindowListener,
 	@Override public void render(float delta){
 		super.render(delta);
 		sharedAssets.update();
-		updatePanners();
+		updatePanners(delta);
 		stage.draw();
 	}
 
@@ -63,9 +63,9 @@ public class MainScreen extends AbstractScreen implements IMainWindowListener,
 		stage.addActor(mainWindow = new MainWindow(skin, game, this, gdxWorld, WORLD_FILE, gdxRenderer, sharedAssets));
 	}
 	
-	public void updatePanners(){
+	public void updatePanners(float dt){
 		if(activePanner != null)
-			activePanner.render();
+			activePanner.render(dt);
 		if(loadingPanner != null)
 			if(loadingPanner.update()){
 				if(activePanner != null)
