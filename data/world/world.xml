@@ -20669,8 +20669,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-864.1203</x>
-            <y>-8.488304</y>
+            <x>-863.3556</x>
+            <y>-8.938971</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -20680,36 +20680,36 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>5.7230225</x>
-              <y>-0.37206936</y>
+              <x>8.170288</x>
+              <y>-1.783206</y>
             </Vector2>
             <Vector2>
-              <x>6.029236</x>
-              <y>0.07714939</y>
+              <x>8.170288</x>
+              <y>-1.2157145</y>
             </Vector2>
             <Vector2>
-              <x>5.0010986</x>
-              <y>0.76074314</y>
+              <x>4.236389</x>
+              <y>1.2114096</y>
             </Vector2>
             <Vector2>
-              <x>-4.4487915</x>
-              <y>0.9365244</y>
+              <x>-5.213501</x>
+              <y>1.3871908</y>
             </Vector2>
             <Vector2>
-              <x>-6.8550415</x>
-              <y>-0.51660156</y>
+              <x>-7.619751</x>
+              <y>-0.065935135</y>
             </Vector2>
             <Vector2>
-              <x>-6.2644653</x>
-              <y>-1.1416016</y>
+              <x>-7.029175</x>
+              <y>-0.69093513</y>
             </Vector2>
             <Vector2>
-              <x>-4.0550537</x>
-              <y>0.14746094</y>
+              <x>-4.819763</x>
+              <y>0.59812737</y>
             </Vector2>
             <Vector2>
-              <x>4.869934</x>
-              <y>0.10839844</y>
+              <x>4.1052246</x>
+              <y>0.55906487</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -28893,6 +28893,42 @@
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-0</name>
+          <resource>wood1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-849.496</x>
+            <y>-10.381662</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>5.7993774</x>
+              <y>0.2664671</y>
+            </Vector2>
+            <Vector2>
+              <x>-5.744934</x>
+              <y>0.22697735</y>
+            </Vector2>
+            <Vector2>
+              <x>-5.772766</x>
+              <y>-0.27375126</y>
+            </Vector2>
+            <Vector2>
+              <x>5.718384</x>
+              <y>-0.21969223</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
       </polygons>
       <npcs>
         <world.GDXNPC>
@@ -33313,6 +33349,33 @@
             </Vector2>
           </nodes>
         </world.GDXPath>
+        <world.GDXPath>
+          <name>will0</name>
+          <nodes>
+            <Vector2>
+              <x>-858.911</x>
+              <y>-7.9311666</y>
+            </Vector2>
+          </nodes>
+        </world.GDXPath>
+        <world.GDXPath>
+          <name>chopper</name>
+          <nodes>
+            <Vector2>
+              <x>-863.6386</x>
+              <y>-7.63032</y>
+            </Vector2>
+          </nodes>
+        </world.GDXPath>
+        <world.GDXPath>
+          <name>boss0</name>
+          <nodes>
+            <Vector2>
+              <x>-846.4354</x>
+              <y>-10.132246</y>
+            </Vector2>
+          </nodes>
+        </world.GDXPath>
       </paths>
       <joints>
         <world.joint.PrismaticJoint>
@@ -34804,8 +34867,8 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
             <coordinates>
-              <x>-55.308334</x>
-              <y>-8.469999</y>
+              <x>-776.617</x>
+              <y>-37.068726</y>
             </coordinates>
             <being>player</being>
             <npcData>player</npcData>
@@ -35799,34 +35862,26 @@
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
-          <name>baseDoorWestOpenSpawn2</name>
-          <prerequisites>baseDoorWestOpen1</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
-            <coordinates>
-              <x>-826.1259</x>
-              <y>-36.788372</y>
-            </coordinates>
-            <being>forestBoss</being>
-            <npcData>forestBoss</npcData>
-            <path></path>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>baseDoorWestOpen1</name>
+          <name>baseDoorWestOpen1Input</name>
           <prerequisites>baseDoorWestOpen0</prerequisites>
           <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>As the outer gate guards are dispatched, the base perimeter door opens. The ambient noise quiets, and the shouts of a menacing sword wielding commander echo past the walls...</dialog>
-            <origin></origin>
-            <type></type>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>-799.82385</x>
+              <y>-38.71516</y>
+            </lowerLeft>
+            <upperRight>
+              <x>-795.2485</x>
+              <y>-27.242588</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>false</inputEnable>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
-          <name>baseDoorWestOpenSpawn3</name>
-          <prerequisites>baseDoorWestOpenSpawn2</prerequisites>
+          <name>forestBossKill1</name>
+          <prerequisites></prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.kill.KillTrigger">
             <name>forestBoss</name>
@@ -36275,6 +36330,324 @@
           <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
             <success>true</success>
             <nextLevel></nextLevel>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen2</name>
+          <prerequisites>baseDoorWestOpen1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&lt;menacingly&gt; Stop! I am Will, ascended to top 3! Fear my power! You are trespassing and harming innocent soldiers while rejecting our authority. Surrender now or meet a bloody justice!</dialog>
+            <origin>Will</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen3</name>
+          <prerequisites>baseDoorWestOpen2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>There is nothing innocent about your soldiers! They came to take those dearest to the natives, what gives you the right to administer justice!</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen4</name>
+          <prerequisites>baseDoorWestOpen3</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Further in the distance, a transport ship lands on top of an inner gate building. An officer with a grim smile comes up and passes Will, whose impassioned stance eases slightly.</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen5</name>
+          <prerequisites>baseDoorWestOpen4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Top3 Will, you are demanded back at Central. You are to leave immediately and let us resolve the situation.</dialog>
+            <origin>Security Officer</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen6</name>
+          <prerequisites>baseDoorWestOpen5</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>My research is... taken care of. Why is...</dialog>
+            <origin>Will</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen7</name>
+          <prerequisites>baseDoorWestOpen6</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>1000</time>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Will hesitates a bit, then turns around and walks abruptly toward the ship</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen8</name>
+          <prerequisites>baseDoorWestOpen7</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>We will clean up, no worries. Leave us to clean the trash.</dialog>
+            <origin>Security Officer</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen9</name>
+          <prerequisites>baseDoorWestOpen8</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Will looks back in surprise, gasps abruptly, opens his mouth, but continues on determined</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen10</name>
+          <prerequisites>baseDoorWestOpen9</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>No! He cant just walk away from this mess, he should atone for the people that he has taken! How can you take living beings..!</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen11</name>
+          <prerequisites>baseDoorWestOpen10</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>I didn&apos;t...!</dialog>
+            <origin>Will</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen12</name>
+          <prerequisites>baseDoorWestOpen11</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&lt;bruskly interrupting Will&gt; Leave him to me, sir! Orders are to get you back ASAP! I will finish this!</dialog>
+            <origin>Security Officer</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen13</name>
+          <prerequisites>baseDoorWestOpen12</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&lt;looks back at Colligan&gt; You see fool, he doesnt know what you are talking about. It was I who took these natives. It is easy to demonize those different from yourself, see each others disgust? I took the natives and incapacitated them so Will could continue his... research. A pleasant outcome is that both natives and soldiers are preoccupied.</dialog>
+            <origin>Security Officer</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen14</name>
+          <prerequisites>baseDoorWestOpen13</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>What research? Theres not jet power here?</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen15</name>
+          <prerequisites>baseDoorWestOpen14</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Jet power? Haha! There is just raw human power here!</dialog>
+            <origin>Security Officer</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen16</name>
+          <prerequisites>baseDoorWestOpen15</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>You took the people! You... killed them, then used them for yourself? That man..Will? Harvested them for power? You are evil!</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen17</name>
+          <prerequisites>baseDoorWestOpen16</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>The transport ship takes off, carrying Will and supplies off to the distance</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen18</name>
+          <prerequisites>baseDoorWestOpen17</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>You won&apos;t live to see what power we&apos;ve created! Now, prepare to meet my might!</dialog>
+            <origin>Security Officer</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>forestBossKill2</name>
+          <prerequisites>forestBossKill1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&lt;sputters&gt; soon you will see his iron will... *points inside complex*</dialog>
+            <origin>Security Officer</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen2Camera0</name>
+          <prerequisites>baseDoorWestOpen1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.cameracontrol.CameraControlManifestation">
+            <playerTrack>false</playerTrack>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen2Camera1</name>
+          <prerequisites>baseDoorWestOpen2Camera0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.cameratween.CameraTweenManifestation">
+            <target>
+              <x>-849.16943</x>
+              <y>-9.47837</y>
+            </target>
+            <duration>2.0</duration>
+            <tweenType>CubicInOut</tweenType>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen2Camera1WillSpawn</name>
+          <prerequisites>baseDoorWestOpen2Camera0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>-847.1996</x>
+              <y>-9.865171</y>
+            </coordinates>
+            <being>will</being>
+            <npcData>will</npcData>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen7Path</name>
+          <prerequisites>baseDoorWestOpen7</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>will</being>
+            <path>will0</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen11Path</name>
+          <prerequisites>baseDoorWestOpen11</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>will</being>
+            <path>chopper</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen19</name>
+          <prerequisites>baseDoorWestOpen18</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.cameratween.CameraTweenManifestation">
+            <target>
+              <x>-795.8051</x>
+              <y>-37.199142</y>
+            </target>
+            <duration>2.0</duration>
+            <tweenType>CubicInOut</tweenType>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen20</name>
+          <prerequisites>baseDoorWestOpen19</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>2000</time>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.cameracontrol.CameraControlManifestation">
+            <playerTrack>true</playerTrack>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen4OfficerSpawn</name>
+          <prerequisites>baseDoorWestOpen4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>-863.6715</x>
+              <y>-7.708687</y>
+            </coordinates>
+            <being>forestBoss</being>
+            <npcData>forestBoss</npcData>
+            <path>boss0</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen21</name>
+          <prerequisites>baseDoorWestOpen20</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>true</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen1</name>
+          <prerequisites>baseDoorWestOpen1Input</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Across a wide open courtyard of old, broken stones are stairs leading to an ivy and moss covered structure. On top of the walls stands a man in a prideful stance, with a staff flickering electric blue.</dialog>
+            <origin></origin>
+            <type></type>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
