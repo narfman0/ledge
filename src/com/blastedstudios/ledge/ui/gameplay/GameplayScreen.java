@@ -15,6 +15,7 @@ import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Event;
 import com.badlogic.gdx.scenes.scene2d.EventListener;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.beingspawn.BeingSpawnManifestation;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.dialog.DialogManifestation;
@@ -69,6 +70,7 @@ public class GameplayScreen extends AbstractScreen {
 	private final TiledMeshRenderer tiledMeshRenderer;
 	private final SpriteBatch spriteBatch = new SpriteBatch();
 	private final AssetManagerWrapper sharedAssets, assetManager;
+	private Table tintTable;
 	
 	public GameplayScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world,
 			FileHandle selectedFile, final GDXRenderer gdxRenderer, AssetManagerWrapper sharedAssets,
@@ -415,7 +417,14 @@ public class GameplayScreen extends AbstractScreen {
 		worldManager.getPlayer().dispose(worldManager.getWorld());
 		worldManager.getWorld().dispose();
 	}
-	
+
+	public void applyTintTable(Table tintTable) {
+		if(this.tintTable != null)
+			this.tintTable.remove();
+		stage.addActor(this.tintTable = tintTable);
+		Gdx.app.log("GameplayScreen.applyTintTable", "New table applied at " + System.currentTimeMillis());
+	}
+
 	public interface IGameplayListener{
 		void npcAdded(NPC npc);
 	}
