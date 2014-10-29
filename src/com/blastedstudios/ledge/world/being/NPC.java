@@ -47,11 +47,11 @@ public class NPC extends Being {
 		this.vendor = vendor;
 		this.vendorWeapons = vendorWeapons;
 		this.boss = boss;
-		applyBehaviorTree(behavior, aiWorld, world);
+		applyBehaviorTree(behavior, aiWorld, world, path);
 	}
 	
-	public void applyBehaviorTree(String behavior, AIWorld aiWorld, WorldManager world){
-		String basePackage = "com.blastedstudios.ledge.ai.bt.trees";
+	public void applyBehaviorTree(String behavior, AIWorld aiWorld, WorldManager world, GDXPath path){
+		final String basePackage = "com.blastedstudios.ledge.ai.bt.trees";
 		try{
 			Class<?> btLibClass = Class.forName(basePackage+"."+behavior);
 			IBTLibrary library = (IBTLibrary) btLibClass.newInstance();
