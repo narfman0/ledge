@@ -47,6 +47,10 @@ public class NPC extends Being {
 		this.vendor = vendor;
 		this.vendorWeapons = vendorWeapons;
 		this.boss = boss;
+		applyBehaviorTree(behavior, aiWorld, world);
+	}
+	
+	public void applyBehaviorTree(String behavior, AIWorld aiWorld, WorldManager world){
 		String basePackage = "com.blastedstudios.ledge.ai.bt.trees";
 		try{
 			Class<?> btLibClass = Class.forName(basePackage+"."+behavior);
