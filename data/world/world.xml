@@ -54070,8 +54070,8 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
             <coordinates>
-              <x>17.009686</x>
-              <y>-10.606908</y>
+              <x>-29.866669</x>
+              <y>46.079994</y>
             </coordinates>
             <being>player</being>
             <npcData>player</npcData>
@@ -54562,11 +54562,11 @@
           <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
             <lowerLeft>
               <x>19.618519</x>
-              <y>-10.926937</y>
+              <y>-11.0</y>
             </lowerLeft>
             <upperRight>
               <x>22.327017</x>
-              <y>-4.0396075</y>
+              <y>10.0</y>
             </upperRight>
           </trigger>
           <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
