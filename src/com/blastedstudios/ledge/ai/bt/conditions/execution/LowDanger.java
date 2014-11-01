@@ -12,6 +12,7 @@ import com.badlogic.gdx.Gdx;
 import com.blastedstudios.ledge.util.VisibilityReturnStruct;
 import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
+import com.blastedstudios.ledge.world.weapon.DamageStruct;
 import com.blastedstudios.ledge.world.WorldManager;
 
 /** ExecutionCondition class created from MMPM condition LowDanger. */
@@ -45,15 +46,11 @@ public class LowDanger extends
 		NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
 		
 		// figure out, upon receiving damage, where origin is
-		if(self.getLastDamage() != null && self.getLastDamage().getOrigin() != null && 
-				getContext().getVariable(AIFieldEnum.LAST_HEALTH.name()) != null && 
-				self.getHp() < (Float)getContext().getVariable(AIFieldEnum.LAST_HEALTH.name())){
-			float[] target = new float[]{self.getLastDamage().getOrigin().getPosition().x, 
-					self.getLastDamage().getOrigin().getPosition().y};
-			getContext().setVariable("LowDangerTarget", target);
-			getContext().setVariable("LowDangerLastTime", (int)System.currentTimeMillis());
+		DamageStruct shotDamage = (DamageStruct) getContext().getVariable(AIFieldEnum.ATTACK_TICK.name());
+		if(shotDamage != null){
+			self.aim(shotDamage.getOrigin());
+			getContext().clearVariable(AIFieldEnum.ATTACK_TICK.name());
 		}
-		getContext().setVariable(AIFieldEnum.LAST_HEALTH.name(), self.getHp());
 		
 		VisibilityReturnStruct struct = world.isVisible((NPC) getContext().getVariable(AIFieldEnum.SELF.name()));
 		if(struct.isVisible()){

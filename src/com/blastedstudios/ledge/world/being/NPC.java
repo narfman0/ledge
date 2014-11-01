@@ -13,6 +13,7 @@ import jbt.execution.core.IContext;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.Properties;
@@ -20,12 +21,13 @@ import com.blastedstudios.gdxworld.world.GDXPath;
 import com.blastedstudios.ledge.ai.AIWorld;
 import com.blastedstudios.ledge.world.Stats;
 import com.blastedstudios.ledge.world.WorldManager;
+import com.blastedstudios.ledge.world.weapon.DamageStruct;
 import com.blastedstudios.ledge.world.weapon.Gun;
 import com.blastedstudios.ledge.world.weapon.Melee;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 
 public class NPC extends Being {
-	public enum AIFieldEnum{AI_WORLD, OBJECTIVE, SELF, LAST_HEALTH, WORLD, TURRET}
+	public enum AIFieldEnum{AI_WORLD, ATTACK_TICK, OBJECTIVE, SELF, WORLD, TURRET}
 	public enum DifficultyEnum{HARD, MEDIUM, EASY}
 	private static final long serialVersionUID = 1L;
 	private IContext context;
@@ -94,6 +96,11 @@ public class NPC extends Being {
 		Weapon gun = getEquippedWeapon();
 		if(gun != null && !(gun instanceof Melee))
 			((Gun)gun).addCurrentRounds(gun.getRoundsPerClip() - ((Gun)gun).getCurrentRounds());
+	}
+	
+	@Override public float handleShotDamage(Fixture bodyPart, DamageStruct shotDamage){
+		context.setVariable(AIFieldEnum.ATTACK_TICK.name(), shotDamage);
+		return super.handleShotDamage(bodyPart, shotDamage);
 	}
 
 	public DifficultyEnum getDifficulty() {
