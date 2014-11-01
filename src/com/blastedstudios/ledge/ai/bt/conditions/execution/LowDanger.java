@@ -47,9 +47,12 @@ public class LowDanger extends
 		
 		// figure out, upon receiving damage, where origin is
 		DamageStruct shotDamage = (DamageStruct) getContext().getVariable(AIFieldEnum.ATTACK_TICK.name());
-		if(shotDamage != null){
+		if(shotDamage != null && shotDamage.getOrigin() != null){
 			self.aim(shotDamage.getOrigin());
 			getContext().clearVariable(AIFieldEnum.ATTACK_TICK.name());
+			float[] target = new float[]{shotDamage.getOrigin().getPosition().x, shotDamage.getOrigin().getPosition().y};
+			getContext().setVariable("LowDangerTarget", target);
+			getContext().setVariable("LowDangerLastTime", (int)System.currentTimeMillis());
 		}
 		
 		VisibilityReturnStruct struct = world.isVisible((NPC) getContext().getVariable(AIFieldEnum.SELF.name()));
