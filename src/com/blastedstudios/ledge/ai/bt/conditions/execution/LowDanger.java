@@ -44,6 +44,7 @@ public class LowDanger extends
 		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
 		NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
 		
+		// figure out, upon receiving damage, where origin is
 		if(self.getLastDamage() != null && self.getLastDamage().getOrigin() != null && 
 				getContext().getVariable(AIFieldEnum.LAST_HEALTH.name()) != null && 
 				self.getHp() < (Float)getContext().getVariable(AIFieldEnum.LAST_HEALTH.name())){
@@ -51,7 +52,6 @@ public class LowDanger extends
 					self.getLastDamage().getOrigin().getPosition().y};
 			getContext().setVariable("LowDangerTarget", target);
 			getContext().setVariable("LowDangerLastTime", (int)System.currentTimeMillis());
-			return Status.SUCCESS;
 		}
 		getContext().setVariable(AIFieldEnum.LAST_HEALTH.name(), self.getHp());
 		

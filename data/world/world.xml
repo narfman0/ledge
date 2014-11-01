@@ -36690,26 +36690,8 @@
             <x>0.0</x>
             <y>0.0</y>
           </coordinates>
-          <texture>forestBackgroundVista.png</texture>
-          <scissor>true</scissor>
-          <scissorUpperRight>
-            <x>101.84912</x>
-            <y>197.68616</y>
-          </scissorUpperRight>
-          <scissorLowerLeft>
-            <x>-992.2758</x>
-            <y>-180.01175</y>
-          </scissorLowerLeft>
-          <depth>100.0</depth>
-          <scale>0.02</scale>
-        </world.GDXBackground>
-        <world.GDXBackground>
-          <coordinates>
-            <x>0.0</x>
-            <y>0.0</y>
-          </coordinates>
           <texture>forestBackground.png</texture>
-          <scissor>true</scissor>
+          <scissor>false</scissor>
           <scissorUpperRight>
             <x>75.91938</x>
             <y>127.27173</y>
@@ -36849,6 +36831,24 @@
           <texture>forestTreeHouse7.png</texture>
           <scissor>false</scissor>
           <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-50.0</x>
+            <y>0.0</y>
+          </coordinates>
+          <texture>forestBackground.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>30.0</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
       </backgrounds>

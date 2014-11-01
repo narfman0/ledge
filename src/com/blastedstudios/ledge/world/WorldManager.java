@@ -93,7 +93,7 @@ public class WorldManager implements IDeathCallback{
 	}
 
 	public void render(float dt, GDXRenderer gdxRenderer, Camera cam){
-		if(!pause && inputEnable)
+		if(!pause && inputEnable && !player.isDead())
 			player.setFixedRotation(desireFixedRotation);
 		spriteBatch.setProjectionMatrix(cam.combined);
 		spriteBatch.begin();
