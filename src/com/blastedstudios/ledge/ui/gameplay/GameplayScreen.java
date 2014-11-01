@@ -229,7 +229,7 @@ public class GameplayScreen extends AbstractScreen {
 			break;
 		case Keys.C:
 		case Keys.CONTROL_LEFT:
-			worldManager.getPlayer().setFixedRotation(false);
+			worldManager.setDesireFixedRotation(false);
 			break;
 		case Keys.R:
 			if(!worldManager.isPause() && worldManager.isInputEnable())
@@ -378,7 +378,7 @@ public class GameplayScreen extends AbstractScreen {
 			break;
 		case Keys.C:
 		case Keys.CONTROL_LEFT:
-			worldManager.getPlayer().setFixedRotation(true);
+			worldManager.setDesireFixedRotation(true);
 			break;
 		}
 		for(IComponent component : worldManager.getPlayer().getListeners())

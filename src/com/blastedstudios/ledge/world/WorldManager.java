@@ -70,7 +70,7 @@ public class WorldManager implements IDeathCallback{
 	private final TweenManager tweenManager;
 	private final AssetManagerWrapper sharedAssets;
 	private final IGameplayListener listener;
-	private boolean pause, inputEnable = true, playerTrack = true;
+	private boolean pause, inputEnable = true, playerTrack = true, desireFixedRotation = true;
 	private final Random random;
 	
 	public WorldManager(Player player, GDXLevel level, AssetManagerWrapper sharedAssets, IGameplayListener listener){
@@ -93,6 +93,8 @@ public class WorldManager implements IDeathCallback{
 	}
 
 	public void render(float dt, GDXRenderer gdxRenderer, Camera cam){
+		if(!pause && inputEnable)
+			player.setFixedRotation(desireFixedRotation);
 		spriteBatch.setProjectionMatrix(cam.combined);
 		spriteBatch.begin();
 		if(player.isSpawned())
@@ -389,5 +391,9 @@ public class WorldManager implements IDeathCallback{
 			}
 		}
 		return removed;
+	}
+
+	public void setDesireFixedRotation(boolean desireFixedRotation) {
+		this.desireFixedRotation = desireFixedRotation;
 	}
 }
