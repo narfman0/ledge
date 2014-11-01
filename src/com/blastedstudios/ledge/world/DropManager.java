@@ -32,8 +32,8 @@ public class DropManager {
 	private final Map<Body,Integer> droppedCash = new HashMap<>();
 	private final Map<Body,AmmoDropStruct> droppedAmmo = new HashMap<>();
 
-	public void render(Being player, World world, SpriteBatch spriteBatch, GDXRenderer renderer,
-			AssetManagerWrapper sharedAssets){
+	public void render(float dt, boolean paused, Being player, World world,
+			SpriteBatch spriteBatch, GDXRenderer renderer, AssetManagerWrapper sharedAssets){
 		float impulseDistance = Properties.getFloat("drop.impulse.distance", 100f);
 		float impulseScale = Properties.getFloat("drop.impulse.scalar", .03f);
 		{
@@ -52,7 +52,7 @@ public class DropManager {
 				world.destroyBody(dropBody);
 				gunDropRemoveList.add(dropBody);
 				Gdx.app.log("WorldManager.render","Player picked up " + entry.getValue());
-			}else if(distance < impulseDistance){
+			}else if(!paused && distance < impulseDistance){
 				Vector2 impulse = player.getPosition().cpy().sub(dropBody.getWorldCenter());
 				impulse.nor().scl(impulseScale);
 				dropBody.applyLinearImpulse(impulse, dropBody.getWorldCenter(), true);
@@ -72,7 +72,7 @@ public class DropManager {
 				sharedAssets.getSound("data/sounds/chaching.mp3").play();
 				world.destroyBody(dropBody);
 				cashDropRemoveList.add(dropBody);
-			}else if(distance < impulseDistance){
+			}else if(!paused && distance < impulseDistance){
 				Vector2 impulse = player.getPosition().cpy().sub(dropBody.getWorldCenter());
 				impulse.nor().scl(impulseScale);
 				dropBody.applyLinearImpulse(impulse, dropBody.getWorldCenter(), true);
@@ -92,7 +92,7 @@ public class DropManager {
 				world.destroyBody(dropBody);
 				sharedAssets.get("data/sounds/guns/ammoPickup.mp3", Sound.class).play();
 				ammoDropRemoveList.add(dropBody);
-			}else if(distance < impulseDistance){
+			}else if(!paused && distance < impulseDistance){
 				Vector2 impulse = player.getPosition().cpy().sub(dropBody.getWorldCenter());
 				impulse.nor().scl(impulseScale);
 				dropBody.applyLinearImpulse(impulse, dropBody.getWorldCenter(), true);

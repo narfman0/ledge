@@ -78,13 +78,15 @@ public class Shoot extends jbt.execution.task.leaf.action.ExecutionAction {
 		Gdx.app.debug(this.getClass().getCanonicalName(), "ticked");
 		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
 		NPC npc = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
-		Vector2 target = new Vector2(getTarget()[0], getTarget()[1]);
-		Vector2 direction = target.cpy().sub(npc.getPosition()).nor();
-		npc.aim((float)Math.atan2(direction.y, direction.x));
-		Weapon equipped = npc.getEquippedWeapon();
-		int topLevel = Math.max(world.getPlayer().getLevel(), npc.getLevel());
-		if(equipped != null && equipped.getMSSinceAttack() > NPC.shootDelay(topLevel, npc.getDifficulty()))
-			npc.attack(direction, world);
+		if(!world.isPause()){
+			Vector2 target = new Vector2(getTarget()[0], getTarget()[1]);
+			Vector2 direction = target.cpy().sub(npc.getPosition()).nor();
+			npc.aim((float)Math.atan2(direction.y, direction.x));
+			Weapon equipped = npc.getEquippedWeapon();
+			int topLevel = Math.max(world.getPlayer().getLevel(), npc.getLevel());
+			if(equipped != null && equipped.getMSSinceAttack() > NPC.shootDelay(topLevel, npc.getDifficulty()))
+				npc.attack(direction, world);
+		}
 		return Status.SUCCESS;
 	}
 

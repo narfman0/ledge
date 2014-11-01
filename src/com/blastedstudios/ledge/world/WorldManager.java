@@ -108,7 +108,7 @@ public class WorldManager implements IDeathCallback{
 		for(Turret turret : turrets)
 			turret.render(dt, spriteBatch, gdxRenderer, this);
 		if(player.isSpawned())
-			dropManager.render(player, world, spriteBatch, gdxRenderer, sharedAssets);
+			dropManager.render(dt, pause, player, world, spriteBatch, gdxRenderer, sharedAssets);
 		renderTransferredParticles(dt);
 		spriteBatch.end();
 		if(Properties.getBool("world.debug.draw", false))

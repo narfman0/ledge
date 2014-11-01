@@ -2,6 +2,7 @@ package com.blastedstudios.ledge.world.being.component.renderweapon;
 
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
@@ -24,6 +25,10 @@ public class RenderWeaponComponent extends AbstractComponent {
 		if(being.getEquippedWeapon() != null){
 			if(weaponSprite == null){
 				String path = "data/textures/weapons/" + being.getEquippedWeapon().getResource() + ".png";
+				if(!sharedAssets.isLoaded(path)){
+					Gdx.app.log("RenderWeaponComponent.render", "Texture not loaded: " + path);
+					return;
+				}
 				weaponSprite = new Sprite(sharedAssets.get(path, Texture.class));
 				float scale = being.getEquippedWeapon() instanceof Melee ? 
 						GunShot.getWeaponRenderScale() : Properties.getFloat("ragdoll.custom.scale");
