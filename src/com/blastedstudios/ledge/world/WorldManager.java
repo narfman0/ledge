@@ -161,6 +161,8 @@ public class WorldManager implements IDeathCallback{
 		damage.setDamagePosition(damagePosition);
 		getProvider().beingHit(damage);
 		if( (!Properties.getBool("character.godmode", false) || target != player) && !target.isInvulnerable() ){
+			if(Properties.getBool("being.appendage.break.dead", false) && target.isDead())
+				target.getRagdoll().breakAppendage(damage.getBodyPart(), world, damage.getDir());
 			target.setHp(target.getHp() - damage.getDamage());
 			target.receivedDamage(damage);
 			Gdx.app.log("WorldManager.processHit","Processed damage on being: " + target.getName() + 

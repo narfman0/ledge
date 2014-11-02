@@ -15,32 +15,33 @@ import com.blastedstudios.ledge.world.being.Being.BodyPart;
 import com.blastedstudios.ledge.world.weapon.DamageStruct;
 
 public interface IRagdoll{
-	public static interface IRagdollPlugin extends Plugin{
-		public boolean canCreate(String resource);
-		public IRagdoll create(World world, float x, float y, Being being, TextureAtlas atlas, FileHandle file);
+	static interface IRagdollPlugin extends Plugin{
+		boolean canCreate(String resource);
+		IRagdoll create(World world, float x, float y, Being being, TextureAtlas atlas, FileHandle file);
 	}
 	
-	public void setFriction(float friction);
-	public boolean standingOn(Contact contact);
-	public boolean aim(float heading);
-	public void death(World world, DamageStruct shotDamage);
-	public Vector2 getPosition();
-	public Vector2 getLinearVelocity();
-	public void setLinearVelocity(float x, float y);
-	public void applyLinearImpulse(float i, float j, float x, float y);
-	public void applyForceAtCenter(float x, float y);
-	public void setTransform(float x, float y, float angle);
-	public boolean isOwned(Fixture fixture);
-	public boolean isFoot(Fixture fixture);
-	public void dispose(World world);
-	public BodyPart getBodyPart(Fixture fixture);
-	public Body getBodyPart(BodyPart part);
-	public void render(SpriteBatch spriteBatch, boolean dead, boolean isGrounded,
+	void setFriction(float friction);
+	boolean standingOn(Contact contact);
+	boolean aim(float heading);
+	void death(World world, DamageStruct shotDamage);
+	Vector2 getPosition();
+	Vector2 getLinearVelocity();
+	void setLinearVelocity(float x, float y);
+	void applyLinearImpulse(float i, float j, float x, float y);
+	void applyForceAtCenter(float x, float y);
+	void setTransform(float x, float y, float angle);
+	boolean isOwned(Fixture fixture);
+	boolean isFoot(Fixture fixture);
+	void dispose(World world);
+	BodyPart getBodyPart(Fixture fixture);
+	Body getBodyPart(BodyPart part);
+	void render(SpriteBatch spriteBatch, boolean dead, boolean isGrounded,
 			boolean isMoving, float velX, boolean paused, boolean inputEnabled);
-	public boolean isFixedRotation();
-	public void setFixedRotation(boolean fixedRotation);
-	public void applyTorque(float torque);
-	public boolean isFacingLeft();
+	boolean isFixedRotation();
+	void setFixedRotation(boolean fixedRotation);
+	void applyTorque(float torque);
+	boolean isFacingLeft();
+	void breakAppendage(BodyPart bodyPart, World world, Vector2 dir);
 	
 	Body getHandFacing();
 	/**

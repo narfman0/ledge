@@ -51,7 +51,7 @@ public class ContactListener implements com.badlogic.gdx.physics.box2d.ContactLi
 		}else if(hit != null){//handle physics object collision dmg
 			Being target = (Being) hit.getBody().getUserData();
 			float i = calculateMomentumImpulse(contact);
-			if(i > Properties.getFloat("contact.impulse.threshold", 13f) && !target.isDead())
+			if(i > Properties.getFloat("contact.impulse.threshold", 13f))
 				worldManager.processHit(impulseToDamage(i), target, null, hit,
 						contact.getWorldManifold().getNormal(), 
 						contact.getWorldManifold().getPoints()[0]);

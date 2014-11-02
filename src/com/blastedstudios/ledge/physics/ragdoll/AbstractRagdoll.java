@@ -39,7 +39,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 	private final Map<Body,Sprite> sprites = new HashMap<>();
 	private boolean facingLeft;
 	private float targetHeading;
-	
+
 	public AbstractRagdoll(Being being, TextureAtlas atlas, float x, float y,
 			Body torsoBody, Body headBody, Body rLegBody, Body lLegBody, 
 			Body rArmBody, Body lArmBody, Body lHandBody, Body rHandBody){
@@ -73,7 +73,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 			body.setBullet(true);
 			body.setUserData(being);
 		}
-		
+
 		torsoFixture.setUserData(being);
 		headFixture.setUserData(being);
 		rArmFixture.setUserData(being);
@@ -96,7 +96,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		for(Sprite sprite : sprites.values())
 			sprite.setScale(scale);
 	}
-	
+
 	protected void initializeFilters(short mask, short cat){
 		for(Fixture fixture : new Fixture[]{lArmFixture, lHandFixture, rArmFixture, rHandFixture}){
 			Filter filter = fixture.getFilterData();
@@ -119,7 +119,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		rHandJoint = rHandBody.getJointList().get(0).joint;
 		headJoint = headBody.getJointList().get(0).joint;
 	}
-	
+
 	@Override public void setFriction(float friction){
 		torsoFixture.setFriction(friction);
 		headFixture.setFriction(friction);
@@ -148,37 +148,51 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		torsoBody.setFixedRotation(false);
 		torsoBody.setBullet(false);
 		Vector2 dir = damage.getDir().cpy();
-		switch(damage.getBodyPart()){
+		breakAppendage(damage.getBodyPart(), world, dir);
+		torsoBody.applyTorque((dir.x > 0 ? -1 : 1) * DEATH_TORQUE, true);
+	}
+
+	@Override public void breakAppendage(BodyPart bodyPart, World world, Vector2 dir){
+		switch(bodyPart){
 		case head:
-			headBody.applyLinearImpulse(dir.scl(DEATH_IMPULSE), headBody.getPosition(),true);
-			world.destroyJoint(headJoint);
-			headJoint = null;
+			if(headJoint != null){
+				headBody.applyLinearImpulse(dir.scl(DEATH_IMPULSE), headBody.getPosition(),true);
+				world.destroyJoint(headJoint);
+				headJoint = null;
+			}
 			break;
 		case lArm:
-			lArmBody.applyLinearImpulse(dir.scl(DEATH_IMPULSE), lArmBody.getPosition(),true);
-			world.destroyJoint(lArmJoint);
-			lArmJoint = null;
-			break;
+			if(lArmJoint != null){
+				lArmBody.applyLinearImpulse(dir.scl(DEATH_IMPULSE), lArmBody.getPosition(),true);
+				world.destroyJoint(lArmJoint);
+				lArmJoint = null;
+				break;
+			}
 		case rArm:
-			rArmBody.applyLinearImpulse(dir.scl(DEATH_IMPULSE), rArmBody.getPosition(),true);
-			world.destroyJoint(rArmJoint);
-			rArmJoint = null;
-			break;
+			if(rArmJoint != null){
+				rArmBody.applyLinearImpulse(dir.scl(DEATH_IMPULSE), rArmBody.getPosition(),true);
+				world.destroyJoint(rArmJoint);
+				rArmJoint = null;
+				break;
+			}
 		case lLeg:
-			lLegBody.applyLinearImpulse(dir.scl(DEATH_IMPULSE), lLegBody.getPosition(),true);
-			world.destroyJoint(lLegJoint);
-			lLegJoint = null;
+			if(lLegJoint != null){
+				lLegBody.applyLinearImpulse(dir.scl(DEATH_IMPULSE), lLegBody.getPosition(),true);
+				world.destroyJoint(lLegJoint);
+				lLegJoint = null;
+			}
 			break;
 		case rLeg:
-			rLegBody.applyLinearImpulse(dir.scl(DEATH_IMPULSE), rLegBody.getPosition(),true);
-			world.destroyJoint(rLegJoint);
-			rLegJoint = null;
+			if(rLegJoint != null){
+				rLegBody.applyLinearImpulse(dir.scl(DEATH_IMPULSE), rLegBody.getPosition(),true);
+				world.destroyJoint(rLegJoint);
+				rLegJoint = null;
+			}
 			break;
 		default:
 			torsoBody.applyLinearImpulse(dir.scl(DEATH_IMPULSE), torsoBody.getPosition(),true);
 			break;
 		}
-		torsoBody.applyTorque((dir.x > 0 ? -1 : 1) * DEATH_TORQUE, true);
 	}
 
 	@Override public Vector2 getPosition(){
@@ -308,7 +322,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		}
 		return null;
 	}
-	
+
 	private static float getAngularImpulse(Body body, float heading){
 		float angle = body.getAngle() + body.getAngularVelocity() * Gdx.graphics.getRawDeltaTime();
 		float rotation = heading - angle;
@@ -319,14 +333,14 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		float desiredAngularVelocity = rotation / Gdx.graphics.getRawDeltaTime();
 		return body.getInertia() * desiredAngularVelocity;
 	}
-	
+
 	private static void rotateLeg(Sprite sprite, boolean isRightLeg, float velX){
 		float rotation = (float)Math.sin( ((double)System.currentTimeMillis())/100.0 ) * 45f * 
 				(isRightLeg ? -1f : 1f) * Math.min(1f, Math.max(-1f, velX/5f)); 
 		sprite.rotate(rotation);
 		sprite.translateX(rotation/300f);
 	}
-	
+
 	@Override public void render(SpriteBatch spriteBatch, boolean dead, boolean isGrounded, 
 			boolean isMoving, float velX, boolean paused, boolean inputEnabled) {
 		if(!dead && !paused && (inputEnabled || torsoBody.isFixedRotation())){
@@ -335,7 +349,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		}
 		render(spriteBatch, isGrounded, isMoving, velX, paused);
 	}
-	
+
 	public void render(SpriteBatch spriteBatch, boolean isGrounded, boolean isMoving, float velX, boolean paused){
 		for(BodyPart part : facingLeft ? LEFT_FACING_ORDER : RIGHT_FACING_ORDER){
 			Body body = getBodyPart(part);
@@ -357,12 +371,12 @@ public abstract class AbstractRagdoll implements IRagdoll {
 				recoverFromFreeRotation(rLegBody);
 		}
 	}
-	
+
 	private static void recoverFromFreeRotation(Body body){
 		body.setTransform(body.getPosition().x, body.getPosition().y, 
 				(body.getAngle() % (float)((body.getAngle() < 0 ? 2.0 : -2.0)*Math.PI))*.83f);
 	}
-	
+
 	private static void applyBodyTransform(Sprite sprite, Body body){
 		sprite.setPosition(body.getWorldCenter().x - sprite.getWidth()/2f, 
 				body.getWorldCenter().y - sprite.getHeight()/2);
@@ -380,15 +394,15 @@ public abstract class AbstractRagdoll implements IRagdoll {
 	@Override public void applyTorque(float torque) {
 		torsoBody.applyTorque(torque, true);
 	}
-	
+
 	@Override public boolean isFacingLeft(){
 		return facingLeft;
 	}
-	
+
 	@Override public Body getHandFacing(){
 		return isFacingLeft() ? getBodyPart(BodyPart.lHand) : getBodyPart(BodyPart.rHand);
 	}
-	
+
 	@Override public Vector2 getHandFacingPosition(){
 		return getHandFacing().getWorldCenter();
 	}
