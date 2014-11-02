@@ -9,7 +9,6 @@ import com.badlogic.gdx.physics.box2d.Manifold;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
-import com.blastedstudios.ledge.world.being.Player;
 import com.blastedstudios.ledge.world.weapon.Melee;
 import com.blastedstudios.ledge.world.weapon.shot.GunShot;
 
@@ -30,12 +29,10 @@ public class ContactListener implements com.badlogic.gdx.physics.box2d.ContactLi
 	}
 	
 	@Override public void beginContact(Contact contact) {
-		Body gunshotBody = contact.getFixtureA().getBody().getUserData() instanceof GunShot ? contact.getFixtureA().getBody() :
-			contact.getFixtureB().getBody().getUserData() instanceof GunShot ? contact.getFixtureB().getBody() : null;
-		Fixture hit = contact.getFixtureA().getBody().getUserData() instanceof Being ? contact.getFixtureA() :
-			contact.getFixtureB().getBody().getUserData() instanceof Being ? contact.getFixtureB() : null;
-		Body meleeBody = contact.getFixtureA().getBody().getUserData() instanceof Melee ? contact.getFixtureA().getBody() :
-			contact.getFixtureB().getBody().getUserData() instanceof Melee ? contact.getFixtureB().getBody() : null;
+		Body aBody = contact.getFixtureA().getBody(), bBody = contact.getFixtureB().getBody();
+		Body gunshotBody = aBody.getUserData() instanceof GunShot ? aBody :	bBody.getUserData() instanceof GunShot ? bBody : null;
+		Fixture hit = aBody.getUserData() instanceof Being ? contact.getFixtureA() : bBody.getUserData() instanceof Being ? contact.getFixtureB() : null;
+		Body meleeBody = aBody.getUserData() instanceof Melee ? aBody : bBody.getUserData() instanceof Melee ? bBody : null;
 			
 		if(gunshotBody != null){//handle projectile contact
 			GunShot gunshot = (GunShot) gunshotBody.getUserData();
@@ -54,19 +51,21 @@ public class ContactListener implements com.badlogic.gdx.physics.box2d.ContactLi
 		}else if(hit != null){//handle physics object collision dmg
 			Being target = (Being) hit.getBody().getUserData();
 			float i = calculateMomentumImpulse(contact);
-			if(i > Properties.getFloat("contact.impulse.threshold", 20f) && !target.isDead() &&
-					(target instanceof Player || Properties.getBool("npc.falldamage", false)))
-				worldManager.processHit(i, target, null, hit, contact.getWorldManifold().getNormal(), 
+			if(i > Properties.getFloat("contact.impulse.threshold", 13f) && !target.isDead())
+				worldManager.processHit(impulseToDamage(i), target, null, hit,
+						contact.getWorldManifold().getNormal(), 
 						contact.getWorldManifold().getPoints()[0]);
 		}
+	}
+	
+	public static float impulseToDamage(float impulse){
+		return Math.max(0f, impulse - Properties.getFloat("contact.impulse.threshold"));
 	}
 	
 	private static float calculateMomentumImpulse(Contact contact){
 		Vector2 velocity = contact.getFixtureA().getBody().getLinearVelocity().sub(
 				contact.getFixtureB().getBody().getLinearVelocity());
-//		float mass = Math.max(contact.getFixtureA().getBody().getMass(), contact.getFixtureB().getBody().getMass());
-		Vector2 relativeMomentumProjected = velocity.scl(contact.getWorldManifold().getNormal());
-		return relativeMomentumProjected.len2()/5f;
+		return velocity.scl(contact.getWorldManifold().getNormal()).len() ;
 	}
 	
 	@Override public void postSolve(Contact contact, ContactImpulse oldManifold) {}
