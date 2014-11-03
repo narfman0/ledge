@@ -2,9 +2,10 @@ package com.blastedstudios.ledge.ui.loading;
 
 import java.util.List;
 
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.Texture;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
-import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.GDXGameFade;
 import com.blastedstudios.gdxworld.world.GDXLevel;
@@ -15,19 +16,19 @@ import com.blastedstudios.ledge.world.being.Player;
 
 public class GameplayLoadingWindowExecutor implements ILoadingWindowExecutor{
 	private final GDXGame game;
-	private final AssetManagerWrapper assetManager;
+	private final AssetManager assetManager;
 	private final Player player;
 	private final GDXLevel level;
 	private final GDXWorld world;
 	private final FileHandle selectedFile;
 	private final GDXRenderer gdxRenderer;
-	private final AssetManagerWrapper sharedAssets;
+	private final AssetManager sharedAssets;
 	private List<String> createdAssetList = null;
 	private GameplayScreen screen = null;
 	private int ticksToTransitionGame = 2;
 	
 	public GameplayLoadingWindowExecutor(final GDXGame game, Player player, GDXLevel level, GDXWorld world,
-			FileHandle selectedFile, final GDXRenderer gdxRenderer, AssetManagerWrapper sharedAssets){
+			FileHandle selectedFile, final GDXRenderer gdxRenderer, AssetManager sharedAssets){
 		this.game = game;
 		this.player = player;
 		this.level = level;
@@ -35,14 +36,14 @@ public class GameplayLoadingWindowExecutor implements ILoadingWindowExecutor{
 		this.selectedFile = selectedFile;
 		this.gdxRenderer = gdxRenderer;
 		this.sharedAssets = sharedAssets;
-		assetManager = new AssetManagerWrapper();
+		assetManager = new AssetManager();
 		createdAssetList = level.createAssetList();
 	}
 
 	@Override public boolean act(float delta) {
 		//begin loading
 		if(!createdAssetList.isEmpty())
-			assetManager.loadTexture(createdAssetList.remove(0));
+			assetManager.load(createdAssetList.remove(0), Texture.class);
 		//middle of loading
 		if(createdAssetList.isEmpty())
 			assetManager.update();

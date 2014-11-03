@@ -15,6 +15,7 @@ import java.util.Map.Entry;
 import aurelienribon.tweenengine.TweenManager;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
@@ -27,7 +28,6 @@ import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
-import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXLevel.CreateLevelReturnStruct;
@@ -68,12 +68,12 @@ public class WorldManager implements IDeathCallback{
 	private final LinkedList<Turret> turrets = new LinkedList<>();
 	private final AIWorld aiWorld;
 	private final TweenManager tweenManager;
-	private final AssetManagerWrapper sharedAssets;
+	private final AssetManager sharedAssets;
 	private final IGameplayListener listener;
 	private boolean pause, inputEnable = true, playerTrack = true, desireFixedRotation = true;
 	private final Random random;
 	
-	public WorldManager(Player player, GDXLevel level, AssetManagerWrapper sharedAssets, IGameplayListener listener){
+	public WorldManager(Player player, GDXLevel level, AssetManager sharedAssets, IGameplayListener listener){
 		this.player = player;
 		this.level = level;
 		this.sharedAssets = sharedAssets;
@@ -130,13 +130,13 @@ public class WorldManager implements IDeathCallback{
 	}
 	
 	public static void drawTexture(SpriteBatch spriteBatch, Body body,
-			String textureName, float scale, AssetManagerWrapper... assetManagers){
+			String textureName, float scale, AssetManager... assetManagers){
 		Texture texture = null;
-		for(AssetManagerWrapper assetManager : assetManagers){
+		for(AssetManager assetManager : assetManagers){
 			if(!textureName.endsWith("png"))
 				Gdx.app.error("WorldManager.drawTexture", "Texture must end with png: " + textureName);
 			if(assetManager.isLoaded(textureName))
-				texture = assetManager.getTexture(textureName);
+				texture = assetManager.get(textureName);
 		}
 		if(texture == null)
 			Gdx.app.error("WorldManager.drawTexture", "Can't find texture: " + textureName);
@@ -366,7 +366,7 @@ public class WorldManager implements IDeathCallback{
 		return random;
 	}
 
-	public AssetManagerWrapper getSharedAssets() {
+	public AssetManager getSharedAssets() {
 		return sharedAssets;
 	}
 

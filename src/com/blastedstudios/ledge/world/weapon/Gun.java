@@ -4,9 +4,9 @@ import java.util.Random;
 
 import net.xeoh.plugins.base.Plugin;
 
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
-import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.ledge.physics.PhysicsEnvironment;
 import com.blastedstudios.ledge.world.WorldManager;
@@ -80,7 +80,7 @@ public class Gun extends Weapon {
 	
 	public static interface IGunListener extends Plugin{
 		void shoot(Gun gun, Being source, Random random, Vector2 direction,
-				WorldManager world, Vector2 origin, AssetManagerWrapper sharedAssets);
+				WorldManager world, Vector2 origin, AssetManager sharedAssets);
 		void setCurrentRounds(Gun gun, int currentRounds);
 	}
 }

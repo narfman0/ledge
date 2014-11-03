@@ -4,13 +4,13 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.NinePatch;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.utils.GdxRuntimeException;
-import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.ui.main.MainScreen;
 
@@ -22,7 +22,7 @@ public class DialogManager {
 	private final Queue<DialogStruct> dialogs = new LinkedList<>();
 	private final SpriteBatch spriteBatch = new SpriteBatch();
 	private final NinePatch patch;
-	
+
 	public DialogManager(Skin skin){
 		spriteBatch.setColor(MainScreen.WINDOW_ALPHA_COLOR);
 		font = skin.getFont("default-font-noblur");
@@ -30,27 +30,29 @@ public class DialogManager {
 		TEXT_DRAW_HEIGHT = TEXT_PORTRAIT_DRAW_HEIGHT - (int)font.getLineHeight();
 		patch = skin.getPatch("character");
 	}
-	
+
 	public void add(String dialog, String portrait){
 		dialogs.add(new DialogStruct(splitRenderable(dialog, DIALOG_WIDTH), portrait));
 	}
-	
+
 	public DialogStruct poll(){
 		return dialogs.poll();
 	}
-	
-	public void render(AssetManagerWrapper assetManager){
+
+	public void render(AssetManager assetManager){
 		if(!dialogs.isEmpty()){
 			float centerX = Gdx.graphics.getWidth()/2;
 			spriteBatch.begin();
 			patch.draw(spriteBatch, centerX - 256, 0, 768, 256);
 			if(!dialogs.peek().portrait.isEmpty()){
-				patch.draw(spriteBatch, centerX - 512, 0, 256, 256);
-				try{
-					final Texture tex = assetManager.getTexture(dialogs.peek().portrait + ".png");
-					spriteBatch.draw(tex, centerX - 512, 0, 256, 256);
-				}catch(GdxRuntimeException e){
-					e.printStackTrace();
+				if(Properties.getBool("dialog.useportrait", false)){
+					patch.draw(spriteBatch, centerX - 512, 0, 256, 256);
+					try{
+						final Texture tex = assetManager.get("data/textures/portrait/" + dialogs.peek().portrait + ".png");
+						spriteBatch.draw(tex, centerX - 512, 0, 256, 256);
+					}catch(GdxRuntimeException e){
+						e.printStackTrace();
+					}
 				}
 				font.draw(spriteBatch, dialogs.peek().portrait + ":", centerX - 170, TEXT_PORTRAIT_DRAW_HEIGHT);
 			}
@@ -58,7 +60,7 @@ public class DialogManager {
 			spriteBatch.end();
 		}
 	}
-	
+
 	/**
 	 * @param lineWidth max number of characters the line may be before newline
 	 * @return string with newlines inserted for words that would straddle 
@@ -81,10 +83,10 @@ public class DialogManager {
 		}
 		return builder.toString();
 	}
-	
+
 	public class DialogStruct{
 		public final String dialog, portrait;
-		
+
 		public DialogStruct(String dialog, String portrait){
 			this.dialog = dialog;
 			this.portrait = portrait;

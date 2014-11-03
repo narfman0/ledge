@@ -1,6 +1,7 @@
 package com.blastedstudios.ledge.ui.overworld;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
@@ -10,7 +11,6 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.blastedstudios.gdxworld.ui.AbstractWindow;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
-import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXWorld;
@@ -26,7 +26,7 @@ class LevelInformationWindow extends AbstractWindow{
 	public LevelInformationWindow(final Skin skin, final GDXLevel level, 
 			final GDXGame game, final Player player, final GDXWorld world, 
 			final FileHandle selectedFile, final GDXRenderer gdxRenderer,
-			final AssetManagerWrapper sharedAssets, final OverworldScreen screen) {
+			final AssetManager sharedAssets, final OverworldScreen screen) {
 		super("", skin);
 		setColor(MainScreen.WINDOW_ALPHA_COLOR);
 		this.level = level;

@@ -5,9 +5,9 @@ import java.util.Random;
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.math.Vector2;
-import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.weapon.Gun;
@@ -16,7 +16,7 @@ import com.blastedstudios.ledge.world.weapon.Gun.IGunListener;
 @PluginImplementation
 public class GunshotSound implements IGunListener {
 	@Override public void shoot(Gun gun, Being source, Random random,
-			Vector2 direction, WorldManager world, Vector2 origin, AssetManagerWrapper sharedAssets) {
+			Vector2 direction, WorldManager world, Vector2 origin, AssetManager sharedAssets) {
 		String filename = "data/sounds/guns/" + gun.getFireSound() + ".mp3";
 		if(!sharedAssets.isLoaded(filename)){
 			Gdx.app.error("GunshotSound.shoot", "Sound not loaded: " + filename);

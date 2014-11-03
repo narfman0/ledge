@@ -1,11 +1,11 @@
 package com.blastedstudios.ledge.world.weapon.shot;
 
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.WorldManifold;
-import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
@@ -49,7 +49,7 @@ public class GunShot {
 		this.gun = gun;
 	}
 	
-	public void render(float dt, SpriteBatch spriteBatch, AssetManagerWrapper assetManager, 
+	public void render(float dt, SpriteBatch spriteBatch, AssetManager assetManager, 
 			Body body, WorldManager worldManager){
 		String ammoPath = "data/textures/ammo/" + gun.getAmmoType().textureName + ".png";
 		WorldManager.drawTexture(spriteBatch, body,	ammoPath, getWeaponRenderScale(), assetManager);

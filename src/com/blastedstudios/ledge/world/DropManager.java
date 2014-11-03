@@ -8,6 +8,7 @@ import java.util.Random;
 import java.util.Map.Entry;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
@@ -16,7 +17,6 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.blastedstudios.gdxworld.physics.PhysicsHelper;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
-import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.weapon.AmmoTypeEnum;
@@ -33,7 +33,7 @@ public class DropManager {
 	private final Map<Body,AmmoDropStruct> droppedAmmo = new HashMap<>();
 
 	public void render(float dt, boolean paused, Being player, World world,
-			SpriteBatch spriteBatch, GDXRenderer renderer, AssetManagerWrapper sharedAssets){
+			SpriteBatch spriteBatch, GDXRenderer renderer, AssetManager sharedAssets){
 		float impulseDistance = Properties.getFloat("drop.impulse.distance", 100f);
 		float impulseScale = Properties.getFloat("drop.impulse.scalar", .03f);
 		{
@@ -69,7 +69,8 @@ public class DropManager {
 					Properties.getFloat("gameplay.camera.zoom"), sharedAssets);
 			if(distance < Properties.getFloat("drop.pickup.distance", .5f)){
 				player.addCash(entry.getValue());
-				sharedAssets.getSound("data/sounds/chaching.mp3").play();
+				Sound sound = sharedAssets.get("data/sounds/chaching.mp3");
+				sound.play();
 				world.destroyBody(dropBody);
 				cashDropRemoveList.add(dropBody);
 			}else if(!paused && distance < impulseDistance){

@@ -2,11 +2,11 @@ package com.blastedstudios.ledge.ui.main;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
-import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.util.ScreenLevelPanner;
@@ -22,12 +22,12 @@ public class MainScreen extends AbstractScreen implements IMainWindowListener,
 	public static final FileHandle WORLD_FILE = Gdx.files.internal("data/world/" + Properties.get("world.path", "world.xml"));
 	private final GDXWorld gdxWorld;
 	private final GDXRenderer gdxRenderer;
-	private final AssetManagerWrapper sharedAssets;
+	private final AssetManager sharedAssets;
 	private NewCharacterWindow newCharacterWindow;
 	private MainWindow mainWindow;
 	private ScreenLevelPanner activePanner, loadingPanner;
 
-	public MainScreen(final GDXGame game, AssetManagerWrapper sharedAssets, GDXWorld gdxWorld){
+	public MainScreen(final GDXGame game, AssetManager sharedAssets, GDXWorld gdxWorld){
 		super(game, SKIN_PATH);
 		this.sharedAssets = sharedAssets;
 		this.gdxWorld = gdxWorld;

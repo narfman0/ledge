@@ -3,10 +3,10 @@ package com.blastedstudios.ledge.ui.loading;
 import net.xeoh.plugins.base.util.uri.ClassURI;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.blastedstudios.gdxworld.ui.AbstractScreen;
-import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.GDXGameFade;
 import com.blastedstudios.gdxworld.util.PluginUtil;
@@ -16,7 +16,7 @@ import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.util.AssetUtil;
 
 public class MainLoadingScreen extends AbstractScreen{
-	private final AssetManagerWrapper sharedAssets = new AssetManagerWrapper();
+	private final AssetManager sharedAssets = new AssetManager();
 	private GDXWorld gdxWorld;
 	private int iterationsToLoad = 1;
 	private MainScreen mainScreen = null;

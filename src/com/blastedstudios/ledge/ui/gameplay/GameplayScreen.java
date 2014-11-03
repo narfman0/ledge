@@ -6,6 +6,7 @@ import box2dLight.RayHandler;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -23,7 +24,6 @@ import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.ui.AbstractWindow;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.ui.leveleditor.LevelEditorScreen;
-import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.GDXGameFade;
 import com.blastedstudios.gdxworld.util.GDXGameFade.IPopListener;
@@ -69,12 +69,12 @@ public class GameplayScreen extends AbstractScreen {
 	private Vector2 touchedDirection;
 	private final TiledMeshRenderer tiledMeshRenderer;
 	private final SpriteBatch spriteBatch = new SpriteBatch();
-	private final AssetManagerWrapper sharedAssets, assetManager;
+	private final AssetManager sharedAssets, assetManager;
 	private Table tintTable;
 	
 	public GameplayScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world,
-			FileHandle selectedFile, final GDXRenderer gdxRenderer, AssetManagerWrapper sharedAssets,
-			AssetManagerWrapper assetManager){
+			FileHandle selectedFile, final GDXRenderer gdxRenderer, AssetManager sharedAssets,
+			AssetManager assetManager){
 		super(game, MainScreen.SKIN_PATH);
 		this.level = level;
 		this.world = world;

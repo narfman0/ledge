@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
@@ -14,7 +15,6 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextField;
 import com.badlogic.gdx.scenes.scene2d.ui.Window;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
-import com.blastedstudios.gdxworld.util.AssetManagerWrapper;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.GDXGameFade;
 import com.blastedstudios.gdxworld.world.GDXWorld;
@@ -30,7 +30,7 @@ class NewCharacterWindow extends Window{
 	public NewCharacterWindow(final Skin skin, final GDXGame game, 
 			final INewCharacterWindowListener listener, final GDXWorld gdxWorld, 
 			final FileHandle worldFile, final GDXRenderer gdxRenderer,
-			final AssetManagerWrapper sharedAssets) {
+			final AssetManager sharedAssets) {
 		super("", skin);
 		setColor(MainScreen.WINDOW_ALPHA_COLOR);
 		final TextField nameField = new TextField("", skin);
