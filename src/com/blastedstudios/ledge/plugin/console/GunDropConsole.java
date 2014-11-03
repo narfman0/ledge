@@ -36,7 +36,7 @@ public class GunDropConsole implements IConsoleCommand{
 					}else
 						weapon = WeaponFactory.getWeapon(weaponName);
 					world.getPlayer().getGuns().add(0, weapon);
-					world.getPlayer().setCurrentWeapon(0, world.getWorld());
+					world.getPlayer().setCurrentWeapon(0, world.getWorld(), true);
 					Gdx.app.log("GunDropConsole.execute", "Generated weapon: " + weapon + " for player");
 				}
 			}

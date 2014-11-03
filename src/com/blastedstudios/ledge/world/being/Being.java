@@ -328,7 +328,7 @@ public class Being implements Serializable{
 		if(guns.size() < MAX_GUNS){
 			guns.add(weapon);
 			if(guns.size() == 1)
-				setCurrentWeapon(0, world);
+				setCurrentWeapon(0, world, true);
 		}else
 			inventory.add(weapon);
 	}
@@ -411,8 +411,8 @@ public class Being implements Serializable{
 		return currentWeapon;
 	}
 
-	public void setCurrentWeapon(int currentWeapon, World world) {
-		if(this.currentWeapon == currentWeapon)
+	public void setCurrentWeapon(int currentWeapon, World world, boolean force) {
+		if(!force && this.currentWeapon == currentWeapon)
 			return; //dont do anything if its the same, duh
 		if(getEquippedWeapon() != null)
 			getEquippedWeapon().dispose(world);

@@ -60,11 +60,11 @@ public class NearDeadTick extends
 						return Status.FAILURE;
 					float d = self.getPosition().dst(world.getPlayer().getPosition());
 					if(d > Properties.getFloat("neardead.boss.weapon.far", 15f))
-						self.setCurrentWeapon(2, world.getWorld());
+						self.setCurrentWeapon(2, world.getWorld(), false);
 					else if(d > Properties.getFloat("neardead.boss.weapon.medium", 9f))
-						self.setCurrentWeapon(1, world.getWorld());
+						self.setCurrentWeapon(1, world.getWorld(), false);
 					else
-						self.setCurrentWeapon(0, world.getWorld());
+						self.setCurrentWeapon(0, world.getWorld(), false);
 				}else if(identifier.equals("path")){
 					long duration = Properties.getLong("neardead.boss.direction.duration", 15000);
 					float distance = Properties.getFloat("neardead.boss.player.distance", 10f);

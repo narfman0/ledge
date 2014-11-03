@@ -122,7 +122,7 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 				if(!being.getGuns().isEmpty())
 					being.getGuns().get(0).dispose(worldManager.getWorld());
 				being.getGuns().add(0, WeaponFactory.getWeapon(weapon));
-				being.setCurrentWeapon(0, worldManager.getWorld());
+				being.setCurrentWeapon(0, worldManager.getWorld(), true);
 				if(being.getGuns().size() > 3)
 					being.getInventory().add(being.getGuns().remove(3));
 			}

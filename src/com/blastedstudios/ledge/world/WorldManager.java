@@ -274,7 +274,7 @@ public class WorldManager implements IDeathCallback{
 	}
 	
 	public void changePlayerWeapon(int weapon){
-		player.setCurrentWeapon(weapon, world);
+		player.setCurrentWeapon(weapon, world, false);
 	}
 
 	@Override public void dead(Being being) {
