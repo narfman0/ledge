@@ -147,8 +147,12 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		setFriction(10);
 		torsoBody.setFixedRotation(false);
 		torsoBody.setBullet(false);
-		Vector2 dir = damage.getDir().cpy();
-		breakAppendage(damage.getBodyPart(), world, dir);
+		Vector2 dir = Vector2.Zero.cpy();
+		//quest manifestations probably wont have damage struct associated with death
+		if(damage != null && damage.getDir() != null){
+			dir = damage.getDir().cpy();
+			breakAppendage(damage.getBodyPart(), world, dir);
+		}
 		torsoBody.applyTorque((dir.x > 0 ? -1 : 1) * DEATH_TORQUE, true);
 	}
 

@@ -80,8 +80,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>68.480576</x>
-            <y>2.0064697</y>
+            <x>61.24676</x>
+            <y>0.8496305</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -91,28 +91,44 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-56.851727</x>
-              <y>9.034156</y>
+              <x>2.0433083</x>
+              <y>0.4636482</y>
             </Vector2>
             <Vector2>
-              <x>-56.840828</x>
-              <y>-4.6498494</y>
+              <x>2.1215706</x>
+              <y>-4.232233</y>
             </Vector2>
             <Vector2>
-              <x>44.60199</x>
-              <y>-6.0636783</y>
+              <x>51.835804</x>
+              <y>-4.906839</y>
             </Vector2>
             <Vector2>
-              <x>44.517654</x>
-              <y>-3.6399665</y>
+              <x>51.75147</x>
+              <y>-2.483127</y>
             </Vector2>
             <Vector2>
-              <x>12.310883</x>
-              <y>-3.1555839</y>
+              <x>19.544697</x>
+              <y>-1.9987446</y>
             </Vector2>
             <Vector2>
-              <x>12.261993</x>
-              <y>8.474923</y>
+              <x>19.495808</x>
+              <y>9.6317625</y>
+            </Vector2>
+            <Vector2>
+              <x>-49.65051</x>
+              <y>10.137161</y>
+            </Vector2>
+            <Vector2>
+              <x>-49.53311</x>
+              <y>-3.4808912</y>
+            </Vector2>
+            <Vector2>
+              <x>-23.804485</x>
+              <y>-3.6547837</y>
+            </Vector2>
+            <Vector2>
+              <x>-23.804485</x>
+              <y>0.5240468</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -3891,7 +3907,7 @@
         <world.shape.GDXPolygon>
           <name>cauldronExit</name>
           <resource>cauldronExit.png</resource>
-          <density>3.0</density>
+          <density>4.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
           <bodyType>DynamicBody</bodyType>
@@ -4012,8 +4028,8 @@
           <restitution>0.3</restitution>
           <bodyType>DynamicBody</bodyType>
           <center>
-            <x>39.215614</x>
-            <y>-6.3850217</y>
+            <x>38.3745</x>
+            <y>-6.371974</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -4048,8 +4064,8 @@
           <restitution>0.3</restitution>
           <bodyType>DynamicBody</bodyType>
           <center>
-            <x>40.413742</x>
-            <y>-6.397363</y>
+            <x>39.70956</x>
+            <y>-6.371974</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -4073,42 +4089,6 @@
             <Vector2>
               <x>0.5936928</x>
               <y>0.6191635</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-121</name>
-          <resource>crate1.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>DynamicBody</bodyType>
-          <center>
-            <x>39.8339</x>
-            <y>-4.934633</y>
-          </center>
-          <filter>
-            <categoryBits>1</categoryBits>
-            <maskBits>-1</maskBits>
-            <groupIndex>0</groupIndex>
-          </filter>
-          <repeatable>false</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-0.60585403</x>
-              <y>0.6177087</y>
-            </Vector2>
-            <Vector2>
-              <x>-0.6192627</x>
-              <y>-0.5998821</y>
-            </Vector2>
-            <Vector2>
-              <x>0.6070976</x>
-              <y>-0.61305475</y>
-            </Vector2>
-            <Vector2>
-              <x>0.61802673</x>
-              <y>0.5952277</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -4613,6 +4593,42 @@
             <Vector2>
               <x>0.7060852</x>
               <y>-0.26071072</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-15</name>
+          <resource>crate1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>39.092236</x>
+            <y>-5.0017357</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.60315704</x>
+              <y>0.61030245</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.59474945</x>
+              <y>-0.6405659</y>
+            </Vector2>
+            <Vector2>
+              <x>0.60736084</x>
+              <y>-0.569952</y>
+            </Vector2>
+            <Vector2>
+              <x>0.59054947</x>
+              <y>0.60021496</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -6096,10 +6112,11 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
             <coordinates>
-              <x>30.986305</x>
-              <y>18.271637</y>
+              <x>31.511063</x>
+              <y>18.176718</y>
             </coordinates>
             <being>player</being>
+            <npcData>player</npcData>
             <path></path>
           </manifestation>
         </world.quest.GDXQuest>
@@ -6338,6 +6355,14 @@
               <x>0.0</x>
               <y>0.0</y>
             </impulse>
+            <position>
+              <x>0.0</x>
+              <y>0.0</y>
+            </position>
+            <velocity>
+              <x>0.0</x>
+              <y>0.0</y>
+            </velocity>
             <type>DynamicBody</type>
             <torque>40.0</torque>
             <angle>0.0</angle>
@@ -6382,6 +6407,14 @@
               <x>0.0</x>
               <y>0.0</y>
             </impulse>
+            <position>
+              <x>0.0</x>
+              <y>0.0</y>
+            </position>
+            <velocity>
+              <x>0.0</x>
+              <y>0.0</y>
+            </velocity>
             <type>DynamicBody</type>
             <torque>10.0</torque>
             <angle>0.0</angle>
@@ -6404,6 +6437,14 @@
               <x>0.0</x>
               <y>0.0</y>
             </impulse>
+            <position>
+              <x>0.0</x>
+              <y>0.0</y>
+            </position>
+            <velocity>
+              <x>0.0</x>
+              <y>0.0</y>
+            </velocity>
             <type>DynamicBody</type>
             <torque>-10.0</torque>
             <angle>0.0</angle>
@@ -6457,52 +6498,6 @@
             <fixedRotation>false</fixedRotation>
             <torque>-15.0</torque>
             <being>cauldronEnemy4</being>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>cauldronLLever8</name>
-          <prerequisites>cauldronLLever3</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.time.TimeTrigger">
-            <time>3000</time>
-          </trigger>
-          <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
-            <name>crate1</name>
-            <impulse>
-              <x>-99999.0</x>
-              <y>0.0</y>
-            </impulse>
-            <type>DynamicBody</type>
-            <torque>0.0</torque>
-            <angle>0.0</angle>
-            <hasPosition>false</hasPosition>
-            <hasVelocity>false</hasVelocity>
-            <hasAngle>false</hasAngle>
-            <relativePosition>false</relativePosition>
-            <relativeVelocity>false</relativeVelocity>
-            <relativeAngle>false</relativeAngle>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>cauldronLLever9</name>
-          <prerequisites>cauldronLLever8</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
-            <name>crate2</name>
-            <impulse>
-              <x>99999.0</x>
-              <y>0.0</y>
-            </impulse>
-            <type>DynamicBody</type>
-            <torque>0.0</torque>
-            <angle>0.0</angle>
-            <hasPosition>false</hasPosition>
-            <hasVelocity>false</hasVelocity>
-            <hasAngle>false</hasAngle>
-            <relativePosition>false</relativePosition>
-            <relativeVelocity>false</relativeVelocity>
-            <relativeAngle>false</relativeAngle>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -6567,7 +6562,7 @@
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
           <name>cauldronLLeverSpawn</name>
-          <prerequisites>cauldronLLever9</prerequisites>
+          <prerequisites>cauldronLLever</prerequisites>
           <repeatable>true</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
@@ -6576,6 +6571,7 @@
               <y>-8.229991</y>
             </coordinates>
             <being>player</being>
+            <npcData>player</npcData>
             <path></path>
           </manifestation>
         </world.quest.GDXQuest>
@@ -8510,6 +8506,80 @@
             <dialog>Colligan arrives in shock to the sewers. Through here he must reach and activate the mill, which he may scale to get to Ratchet&apos;s relatively hidden.</dialog>
             <origin></origin>
             <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>cauldronLLever1Exit</name>
+          <prerequisites>cauldronLLever</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
+            <name>cauldronExit</name>
+            <impulse>
+              <x>0.0</x>
+              <y>0.0</y>
+            </impulse>
+            <position>
+              <x>0.0</x>
+              <y>0.0</y>
+            </position>
+            <velocity>
+              <x>0.0</x>
+              <y>0.0</y>
+            </velocity>
+            <type>DynamicBody</type>
+            <torque>9999.0</torque>
+            <angle>0.0</angle>
+            <hasPosition>false</hasPosition>
+            <hasVelocity>false</hasVelocity>
+            <hasAngle>false</hasAngle>
+            <relativePosition>true</relativePosition>
+            <relativeVelocity>true</relativeVelocity>
+            <relativeAngle>true</relativeAngle>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>cauldronLLever5Kill</name>
+          <prerequisites>cauldronLLever4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>cauldronEnemy1</being>
+            <dmg>0.0</dmg>
+            <kill>true</kill>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>cauldronLLever6Kill</name>
+          <prerequisites>cauldronLLever5</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>cauldronEnemy2</being>
+            <dmg>0.0</dmg>
+            <kill>true</kill>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>cauldronLLever7Kill</name>
+          <prerequisites>cauldronLLever6</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>cauldronEnemy3</being>
+            <dmg>0.0</dmg>
+            <kill>true</kill>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>cauldronLLever8Kill</name>
+          <prerequisites>cauldronLLever7</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>cauldronEnemy4</being>
+            <dmg>0.0</dmg>
+            <kill>true</kill>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>

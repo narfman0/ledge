@@ -247,7 +247,7 @@ public class Being implements Serializable{
 
 	public void death(WorldManager worldManager) {
 		ragdoll.death(worldManager.getWorld(), lastDamage);
-		if(lastDamage.getOrigin() != null && lastDamage.getOrigin() != this)
+		if(lastDamage != null && lastDamage.getOrigin() != null && lastDamage.getOrigin() != this)
 			lastDamage.getOrigin().addXp(Properties.getBool("being.xp.usestatic", false) ? xp : 
 				calculateXPWorth(this, lastDamage.getOrigin().getLevel()));
 		lastDamage = null;
