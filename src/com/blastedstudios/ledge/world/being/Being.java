@@ -248,7 +248,8 @@ public class Being implements Serializable{
 	public void death(WorldManager worldManager) {
 		ragdoll.death(worldManager.getWorld(), lastDamage);
 		if(lastDamage.getOrigin() != null && lastDamage.getOrigin() != this)
-			lastDamage.getOrigin().addXp(xp);
+			lastDamage.getOrigin().addXp(Properties.getBool("being.xp.usestatic", false) ? xp : 
+				calculateXPWorth(this, lastDamage.getOrigin().getLevel()));
 		lastDamage = null;
 		dead = true;
 		reloading = false;
@@ -256,6 +257,17 @@ public class Being implements Serializable{
 			getEquippedWeapon().death(worldManager.getWorld());
 		for(IComponent component : getListeners())
 			component.death(worldManager);
+	}
+	
+	public static long calculateXPWorth(Being mob, int charLevel){
+		int xp = (charLevel * 5) + 45;
+		if(charLevel < mob.getLevel())
+			xp *= (1f + .05f * (mob.getLevel() - charLevel));
+		else if(charLevel > mob.getLevel())
+			xp *= (1f - ((charLevel - mob.getLevel()) / (5f + 2f * charLevel)));
+		if(mob instanceof NPC && ((NPC)mob).isBoss())
+			xp *= 3;
+		return xp;
 	}
 	
 	public boolean isSpawned(){
