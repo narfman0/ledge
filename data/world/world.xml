@@ -28,7 +28,7 @@
         </world.shape.GDXCircle>
         <world.shape.GDXCircle>
           <name>sewerElevator</name>
-          <resource>data/textures/home/sewerElevator.png</resource>
+          <resource>data/textures/home/metalElevator.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -42751,14 +42751,14 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>elevator3</name>
-          <resource>data/textures/home/elevatorWLip.png</resource>
+          <resource>data/textures/ledge4/ledge4BossElevator.png</resource>
           <density>5.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
           <bodyType>DynamicBody</bodyType>
           <center>
-            <x>141.54251</x>
-            <y>-345.3593</y>
+            <x>141.1975</x>
+            <y>-343.68594</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -42768,80 +42768,36 @@
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
-              <x>-2.547165</x>
-              <y>0.2453003</y>
+              <x>-1.499115</x>
+              <y>-1.5526123</y>
             </Vector2>
             <Vector2>
-              <x>-2.24263</x>
-              <y>-0.4855957</y>
+              <x>2.2606049</x>
+              <y>-1.5595703</y>
             </Vector2>
             <Vector2>
-              <x>2.4111786</x>
-              <y>-0.42486572</y>
+              <x>2.2547913</x>
+              <y>-2.039978</y>
             </Vector2>
             <Vector2>
-              <x>2.6343231</x>
-              <y>0.27297974</y>
+              <x>-1.8414307</x>
+              <y>-2.046936</y>
             </Vector2>
             <Vector2>
-              <x>2.079834</x>
-              <y>0.29733276</y>
+              <x>-1.876236</x>
+              <y>1.6988525</y>
             </Vector2>
             <Vector2>
-              <x>2.0054474</x>
-              <y>-0.011016846</y>
+              <x>0.17767334</x>
+              <y>2.2558594</y>
             </Vector2>
             <Vector2>
-              <x>-2.0983734</x>
-              <y>-0.13937378</y>
+              <x>2.0691376</x>
+              <y>1.6222839</y>
             </Vector2>
             <Vector2>
-              <x>-2.24263</x>
-              <y>0.2453003</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>elevator3Top</name>
-          <resource></resource>
-          <density>5.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>DynamicBody</bodyType>
-          <center>
-            <x>140.63736</x>
-            <y>-343.14783</y>
-          </center>
-          <filter>
-            <categoryBits>1</categoryBits>
-            <maskBits>-1</maskBits>
-            <groupIndex>0</groupIndex>
-          </filter>
-          <repeatable>false</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-1.3482971</x>
-              <y>-1.9498291</y>
-            </Vector2>
-            <Vector2>
-              <x>-1.2618713</x>
-              <y>0.7882385</y>
-            </Vector2>
-            <Vector2>
-              <x>2.9385529</x>
-              <y>0.7260132</y>
-            </Vector2>
-            <Vector2>
-              <x>2.8521118</x>
-              <y>1.1615906</y>
-            </Vector2>
-            <Vector2>
-              <x>-1.5730133</x>
-              <y>1.1201172</y>
-            </Vector2>
-            <Vector2>
-              <x>-1.6075897</x>
-              <y>-1.8460999</y>
+              <x>-1.545517</x>
+              <y>1.6222839</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -51120,18 +51076,6 @@
             <y>-1.0</y>
           </axis>
         </world.joint.PrismaticJoint>
-        <world.joint.WeldJoint>
-          <name>elevator3Top</name>
-          <bodyA>elevator3Top</bodyA>
-          <bodyB>elevator3</bodyB>
-          <jointType>WeldJoint</jointType>
-          <collideConnected>false</collideConnected>
-          <referenceAngle>0.0</referenceAngle>
-          <anchor>
-            <x>139.08162</x>
-            <y>-345.0769</y>
-          </anchor>
-        </world.joint.WeldJoint>
         <world.joint.RevoluteJoint>
           <name>Joint-0</name>
           <bodyA>lastBaseDoor</bodyA>
