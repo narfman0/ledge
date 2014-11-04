@@ -89,10 +89,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		sprites.put(headBody, atlas.createSprite("head"));
 		sprites.put(rArmBody, atlas.createSprite("rarm"));
 		sprites.put(lArmBody, atlas.createSprite("larm"));
-		//Converting to svg graphics, but this value is used elsewhere and set here. Change eventually.
-		Properties.set("ragdoll.custom.scale", ".005f");
-		float scale = being.getResource().matches(Properties.get("being.resource.newscale", "player|dummy|nearDeadBoss|ratchet.*")) ? 
-				Properties.getFloat("gameplay.camera.zoom") : Properties.getFloat("ragdoll.custom.scale");
+		float scale = Properties.getFloat("gameplay.camera.zoom");
 		for(Sprite sprite : sprites.values())
 			sprite.setScale(scale);
 	}
