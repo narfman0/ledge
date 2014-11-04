@@ -28,7 +28,7 @@
         </world.shape.GDXCircle>
         <world.shape.GDXCircle>
           <name>sewerElevator</name>
-          <resource>data/textures/home/metalElevator.png</resource>
+          <resource>data/textures/environment/metalElevator.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
