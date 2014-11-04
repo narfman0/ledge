@@ -26,6 +26,24 @@
           </filter>
           <radius>1.0</radius>
         </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>sewerElevator</name>
+          <resource>data/textures/home/sewerElevator.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>9.341301</x>
+            <y>-14.769103</y>
+          </center>
+          <filter>
+            <categoryBits>0</categoryBits>
+            <maskBits>0</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>1.0</radius>
+        </world.shape.GDXCircle>
       </circles>
       <polygons>
         <world.shape.GDXPolygon>
@@ -2076,8 +2094,8 @@
           <restitution>0.3</restitution>
           <bodyType>DynamicBody</bodyType>
           <center>
-            <x>9.390884</x>
-            <y>-13.383756</y>
+            <x>9.333462</x>
+            <y>-13.416743</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -2087,20 +2105,20 @@
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
-              <x>-1.2757082</x>
-              <y>-0.15427303</y>
+              <x>-1.4417849</x>
+              <y>-0.12675953</y>
             </Vector2>
             <Vector2>
-              <x>0.031303406</x>
-              <y>0.45716476</y>
+              <x>0.0662384</x>
+              <y>0.40962696</y>
             </Vector2>
             <Vector2>
-              <x>1.307682</x>
-              <y>-0.12981606</y>
+              <x>1.3813992</x>
+              <y>-0.1427784</y>
             </Vector2>
             <Vector2>
-              <x>-0.06327629</x>
-              <y>-0.17307568</y>
+              <x>-0.005853653</x>
+              <y>-0.14008808</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -6103,6 +6121,18 @@
             <y>-7.135944</y>
           </anchor>
         </world.joint.RevoluteJoint>
+        <world.joint.WeldJoint>
+          <name>sewerElevatorJoint</name>
+          <bodyA>sewerElevator</bodyA>
+          <bodyB>elevator2Roof</bodyB>
+          <jointType>WeldJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>9.274559</x>
+            <y>-13.247387</y>
+          </anchor>
+        </world.joint.WeldJoint>
       </joints>
       <quests>
         <world.quest.GDXQuest>
