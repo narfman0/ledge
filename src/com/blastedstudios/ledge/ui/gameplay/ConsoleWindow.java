@@ -14,14 +14,12 @@ import com.blastedstudios.ledge.world.WorldManager;
 
 public class ConsoleWindow extends AbstractWindow{
 	private final TextField text;
-	private final WorldManager world;
-	private final GameplayScreen screen;
 	
 	public ConsoleWindow(final Skin skin, final WorldManager world, 
 			final GameplayScreen screen, final EventListener listener) {
 		super("Console", skin);
-		this.world = world;
-		this.screen = screen;
+		for(IConsoleCommand command : PluginUtil.getPlugins(IConsoleCommand.class))
+			command.initialize(world, screen);
 		text = new TextField("", skin);
 		text.setMessageText("<enter command>");
 		text.setWidth(200);
@@ -47,7 +45,7 @@ public class ConsoleWindow extends AbstractWindow{
 				for(String match : command.getMatches())
 					try{
 						if(tokens[0].matches(match))
-							command.execute(world, screen, tokens);
+							command.execute(tokens);
 					}catch(Exception e){
 						Gdx.app.error("ConsoleWindow.execute", "Failed to execute command: " + text.getText());
 						e.printStackTrace();

@@ -4,20 +4,17 @@ import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 import com.badlogic.gdx.Gdx;
 import com.blastedstudios.gdxworld.util.Properties;
-import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
-import com.blastedstudios.ledge.util.IConsoleCommand;
 import com.blastedstudios.ledge.world.DropManager;
-import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 import com.blastedstudios.ledge.world.weapon.WeaponFactory;
 
 @PluginImplementation
-public class GunDropConsole implements IConsoleCommand{
+public class GunDropConsole extends AbstractConsole{
 	@Override public String[] getMatches() {
 		return new String[]{"gun"};
 	}
 
-	@Override public void execute(final WorldManager world, final GameplayScreen screen, String[] tokens) {
+	@Override public void execute(String[] tokens) {
 		if(tokens[1].equalsIgnoreCase("drop")){
 			if(tokens.length == 2)
 				Gdx.app.log("GunDropConsole.execute", "Gun drop probability: " + 

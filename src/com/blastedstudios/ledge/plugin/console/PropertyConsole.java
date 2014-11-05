@@ -4,17 +4,14 @@ import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 import com.badlogic.gdx.Gdx;
 import com.blastedstudios.gdxworld.util.Properties;
-import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
-import com.blastedstudios.ledge.util.IConsoleCommand;
-import com.blastedstudios.ledge.world.WorldManager;
 
 @PluginImplementation
-public class PropertyConsole implements IConsoleCommand {
+public class PropertyConsole extends AbstractConsole {
 	@Override public String[] getMatches() {
 		return new String[]{"property","prop"};
 	}
 
-	@Override public void execute(final WorldManager world, final GameplayScreen screen, String[] tokens) {
+	@Override public void execute(String[] tokens) {
 		if(tokens.length == 2)
 			Gdx.app.log("PropertyConsole.execute", "Property " + tokens[1] + 
 					" has value: " + Properties.get(tokens[1]));

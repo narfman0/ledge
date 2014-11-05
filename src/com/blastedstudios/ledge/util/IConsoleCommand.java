@@ -6,7 +6,8 @@ import com.blastedstudios.ledge.world.WorldManager;
 import net.xeoh.plugins.base.Plugin;
 
 public interface IConsoleCommand extends Plugin {
-	public String[] getMatches();
-	public void execute(final WorldManager world, final GameplayScreen screen, String[] tokens);
-	public String getHelp();
+	void initialize(final WorldManager world, final GameplayScreen screen);
+	String[] getMatches();
+	void execute(String[] tokens);
+	String getHelp();
 }

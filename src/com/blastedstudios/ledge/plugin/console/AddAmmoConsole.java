@@ -3,20 +3,17 @@ package com.blastedstudios.ledge.plugin.console;
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 import com.badlogic.gdx.Gdx;
-import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
-import com.blastedstudios.ledge.util.IConsoleCommand;
-import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.weapon.Gun;
 import com.blastedstudios.ledge.world.weapon.Melee;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 
 @PluginImplementation
-public class AddAmmoConsole implements IConsoleCommand{
+public class AddAmmoConsole extends AbstractConsole{
 	@Override public String[] getMatches() {
 		return new String[]{"player"};
 	}
 
-	@Override public void execute(final WorldManager world, final GameplayScreen screen, String[] tokens) {
+	@Override public void execute(String[] tokens) {
 		if(tokens.length == 3 && tokens[1].equalsIgnoreCase("addammo")){
 			int amount = Integer.parseInt(tokens[2]);
 			Weapon equipped = world.getPlayer().getEquippedWeapon();

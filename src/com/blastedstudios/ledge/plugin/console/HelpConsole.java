@@ -4,17 +4,15 @@ import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 import com.badlogic.gdx.Gdx;
 import com.blastedstudios.gdxworld.util.PluginUtil;
-import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
 import com.blastedstudios.ledge.util.IConsoleCommand;
-import com.blastedstudios.ledge.world.WorldManager;
 
 @PluginImplementation
-public class HelpConsole implements IConsoleCommand{
+public class HelpConsole extends AbstractConsole{
 	@Override public String[] getMatches() {
 		return new String[]{"help", "h"};
 	}
 
-	@Override public void execute(WorldManager world, GameplayScreen screen, String[] tokens) {
+	@Override public void execute(String[] tokens) {
 		for(IConsoleCommand command : PluginUtil.getPlugins(IConsoleCommand.class))
 			Gdx.app.log("HelpConsole.execute", command.getHelp());
 		Gdx.app.log("HelpConsole.execute", "Direct debug commands are enabled with the debug.commands property."
