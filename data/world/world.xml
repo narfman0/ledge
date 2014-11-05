@@ -39916,7 +39916,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>deadDoor</name>
-          <resource></resource>
+          <resource>data/textures/ledge4/ledge4FinalTrapdoor.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -43348,7 +43348,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>lastBaseDoor</name>
-          <resource></resource>
+          <resource>data/textures/environment/woodDoorLarge.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
