@@ -9710,14 +9710,14 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>cart1</name>
-          <resource></resource>
+          <resource>data/textures/desert/desertTrolley.png</resource>
           <density>10.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-229.08076</x>
-            <y>-3.2728941</y>
+            <x>-229.08592</x>
+            <y>-3.2499115</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -9727,36 +9727,36 @@
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
-              <x>-1.684372</x>
-              <y>-0.4248047</y>
+              <x>-1.5775299</x>
+              <y>-0.41823626</y>
             </Vector2>
             <Vector2>
-              <x>1.7281342</x>
-              <y>-0.44433594</y>
+              <x>1.6028748</x>
+              <y>-0.42403626</y>
             </Vector2>
             <Vector2>
-              <x>1.640625</x>
-              <y>0.33691406</y>
+              <x>1.5932007</x>
+              <y>0.3299787</y>
             </Vector2>
             <Vector2>
-              <x>1.356247</x>
-              <y>0.3173828</y>
+              <x>1.3614044</x>
+              <y>0.29440022</y>
             </Vector2>
             <Vector2>
-              <x>1.3343811</x>
-              <y>-0.15136719</y>
+              <x>1.3708649</x>
+              <y>-0.13983059</y>
             </Vector2>
             <Vector2>
-              <x>-1.378128</x>
-              <y>-0.13183594</y>
+              <x>-1.4035187</x>
+              <y>-0.19203162</y>
             </Vector2>
             <Vector2>
-              <x>-1.3343658</x>
-              <y>0.2783203</y>
+              <x>-1.374527</x>
+              <y>0.31257868</y>
             </Vector2>
             <Vector2>
-              <x>-1.6624908</x>
-              <y>0.21972656</y>
+              <x>-1.5726929</x>
+              <y>0.23717666</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
