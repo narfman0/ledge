@@ -20425,8 +20425,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-787.4508</x>
-            <y>-25.61823</y>
+            <x>-787.4506</x>
+            <y>-25.736366</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -20436,60 +20436,60 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>5.1520386</x>
-              <y>-1.0090733</y>
+              <x>5.1518555</x>
+              <y>-0.8909378</y>
             </Vector2>
             <Vector2>
-              <x>5.196045</x>
-              <y>-4.1601467</y>
+              <x>5.1810913</x>
+              <y>-4.878479</y>
             </Vector2>
             <Vector2>
-              <x>2.7597656</x>
-              <y>-4.167923</y>
+              <x>2.777588</x>
+              <y>-4.8672123</y>
             </Vector2>
             <Vector2>
-              <x>2.7597656</x>
-              <y>-1.824173</y>
+              <x>2.7595825</x>
+              <y>-1.7060375</y>
             </Vector2>
             <Vector2>
-              <x>-8.624634</x>
-              <y>-1.902298</y>
+              <x>-8.624817</x>
+              <y>-1.7841625</y>
             </Vector2>
             <Vector2>
-              <x>-8.668396</x>
-              <y>3.410202</y>
+              <x>-8.668579</x>
+              <y>3.5283375</y>
             </Vector2>
             <Vector2>
-              <x>2.2254028</x>
-              <y>3.410202</y>
+              <x>2.2252197</x>
+              <y>3.5283375</y>
             </Vector2>
             <Vector2>
-              <x>2.2472534</x>
-              <y>2.2969208</y>
+              <x>2.2470703</x>
+              <y>2.4150562</y>
             </Vector2>
             <Vector2>
-              <x>1.7879028</x>
-              <y>2.316452</y>
+              <x>1.7877197</x>
+              <y>2.4345875</y>
             </Vector2>
             <Vector2>
-              <x>1.7441406</x>
-              <y>2.785202</y>
+              <x>1.7439575</x>
+              <y>2.9033375</y>
             </Vector2>
             <Vector2>
-              <x>-8.099609</x>
-              <y>2.6484833</y>
+              <x>-8.0997925</x>
+              <y>2.7666187</y>
             </Vector2>
             <Vector2>
-              <x>-8.099609</x>
-              <y>-1.3749542</y>
+              <x>-8.0997925</x>
+              <y>-1.2568188</y>
             </Vector2>
             <Vector2>
-              <x>4.8066406</x>
-              <y>-1.4726105</y>
+              <x>4.8064575</x>
+              <y>-1.354475</y>
             </Vector2>
             <Vector2>
-              <x>4.814575</x>
-              <y>-0.9562607</y>
+              <x>4.814392</x>
+              <y>-0.8381252</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -28211,14 +28211,14 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>westBaseDoor</name>
-          <resource>data/textures/home/woodDoor.png</resource>
+          <resource>data/textures/environment/woodDoorLarge.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.05</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-782.5683</x>
-            <y>-33.69503</y>
+            <x>-782.5869</x>
+            <y>-34.139175</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -28228,20 +28228,20 @@
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
-              <x>-0.19274902</x>
-              <y>3.7544155</y>
+              <x>-0.20837402</x>
+              <y>3.3102703</y>
             </Vector2>
             <Vector2>
-              <x>-0.19274902</x>
-              <y>-3.863243</y>
+              <x>-0.1741333</x>
+              <y>-3.419098</y>
             </Vector2>
             <Vector2>
-              <x>0.21539307</x>
-              <y>-3.6455956</y>
+              <x>0.23400879</x>
+              <y>-3.2014503</y>
             </Vector2>
             <Vector2>
-              <x>0.17004395</x>
-              <y>3.7544155</y>
+              <x>0.14837646</x>
+              <y>3.3102703</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -28751,7 +28751,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>ledgeBossDeathDoor</name>
-          <resource>data/textures/home/woodDoor.png</resource>
+          <resource>data/textures/environment/woodDoorLarge.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
