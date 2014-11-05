@@ -1,8 +1,8 @@
 package com.blastedstudios.ledge.util;
 
-import com.badlogic.gdx.graphics.g2d.Sprite;
-
 import aurelienribon.tweenengine.TweenAccessor;
+
+import com.badlogic.gdx.graphics.g2d.Sprite;
 
 public class SpriteTweenAccessor implements TweenAccessor<Sprite> {
 	public static final int POSITION_XY = 1;

@@ -8,7 +8,7 @@
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.actions.execution;
 
-import com.badlogic.gdx.Gdx;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.util.VisibilityReturnStruct;
 import com.blastedstudios.ledge.world.WorldManager;
@@ -105,11 +105,11 @@ public class Search extends jbt.execution.task.leaf.action.ExecutionAction {
 	protected void internalSpawn() {
 		this.getExecutor().requestInsertionIntoList(
 				jbt.execution.core.BTExecutor.BTExecutorList.TICKABLE, this);
-		Gdx.app.debug(this.getClass().getCanonicalName(), "spawned");
+		Log.debug(this.getClass().getCanonicalName(), "spawned");
 	}
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
-		Gdx.app.debug(this.getClass().getCanonicalName(), "ticked");
+		Log.debug(this.getClass().getCanonicalName(), "ticked");
 		int searchTime = Properties.getInt("npc.search.time", 5000);
 		if(getLastTime() == null || (int)System.currentTimeMillis() - getLastTime() > searchTime)
 			return Status.FAILURE;

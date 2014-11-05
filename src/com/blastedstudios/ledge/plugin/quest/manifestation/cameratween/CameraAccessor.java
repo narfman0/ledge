@@ -1,8 +1,8 @@
 package com.blastedstudios.ledge.plugin.quest.manifestation.cameratween;
 
-import com.badlogic.gdx.graphics.Camera;
-
 import aurelienribon.tweenengine.TweenAccessor;
+
+import com.badlogic.gdx.graphics.Camera;
 
 public class CameraAccessor implements TweenAccessor<Camera> {
 	public static final int POSITION_XY = 1;

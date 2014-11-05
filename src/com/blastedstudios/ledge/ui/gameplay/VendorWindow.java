@@ -12,12 +12,13 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
-import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener.ChangeEvent;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.blastedstudios.gdxworld.ui.AbstractWindow;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunButton;
-import com.blastedstudios.ledge.ui.gameplay.inventory.GunInformationWindow;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunButton.IButtonClicked;
+import com.blastedstudios.ledge.ui.gameplay.inventory.GunInformationWindow;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunInformationWindow.IWeaponInfoListener;
 import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.world.being.Being;
@@ -82,7 +83,7 @@ public class VendorWindow extends AbstractWindow implements IButtonClicked{
 				if(client.buy(weapon, world))
 					npc.getVendorWeapons().remove(weapon);
 				else
-					Gdx.app.log("VendorWindow.buyWeapon", "Failed to buy weapon: " + weapon);
+					Log.log("VendorWindow.buyWeapon", "Failed to buy weapon: " + weapon);
 				closeListener.changed(new ChangeEvent(), VendorWindow.this);
 			}
 		};

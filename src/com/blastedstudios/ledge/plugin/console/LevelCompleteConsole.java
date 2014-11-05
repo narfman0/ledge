@@ -2,7 +2,7 @@ package com.blastedstudios.ledge.plugin.console;
 
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
-import com.badlogic.gdx.Gdx;
+import com.blastedstudios.gdxworld.util.Log;
 
 @PluginImplementation
 public class LevelCompleteConsole extends AbstractConsole{
@@ -15,12 +15,12 @@ public class LevelCompleteConsole extends AbstractConsole{
 			if(tokens.length == 2){
 				if(screen != null){
 					screen.levelComplete(true, "");
-					Gdx.app.log("LevelCompleteConsole.execute", "Current level completed");
+					Log.log("LevelCompleteConsole.execute", "Current level completed");
 				}
 			}else if(tokens.length == 3){
 				String levelName = tokens[2];
 				world.getPlayer().setLevelCompleted(levelName, true);
-				Gdx.app.log("LevelCompleteConsole.execute", "Level marked completed: " + levelName);
+				Log.log("LevelCompleteConsole.execute", "Level marked completed: " + levelName);
 			}
 		}
 	}

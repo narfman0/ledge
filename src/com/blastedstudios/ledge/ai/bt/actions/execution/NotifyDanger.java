@@ -8,8 +8,8 @@
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.actions.execution;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.GDXPath;
 import com.blastedstudios.ledge.ai.AIWorld;
@@ -79,7 +79,7 @@ public class NotifyDanger extends
 		 */
 		this.getExecutor().requestInsertionIntoList(
 				jbt.execution.core.BTExecutor.BTExecutorList.TICKABLE, this);
-		Gdx.app.debug(this.getClass().getCanonicalName(), "spawned");
+		Log.debug(this.getClass().getCanonicalName(), "spawned");
 	}
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {

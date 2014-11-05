@@ -1,10 +1,10 @@
 package com.blastedstudios.ledge.plugin.quest.handler;
 
+import net.xeoh.plugins.base.annotations.PluginImplementation;
+
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.endlevel.IEndLevelHandler;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
-
-import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 @PluginImplementation
 public class EndLevelHandlerPlugin implements IEndLevelHandler, IGameplayScreenInitializer{

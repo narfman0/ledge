@@ -17,6 +17,7 @@ import com.badlogic.gdx.physics.box2d.Joint;
 import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.util.FileUtil;
 import com.blastedstudios.gdxworld.util.ISerializer;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.animation.GDXAnimationHandler;
 import com.blastedstudios.gdxworld.world.animation.GDXAnimations;
@@ -56,7 +57,7 @@ jbt.execution.task.leaf.action.ExecutionAction {
 	protected void internalSpawn() {
 		this.getExecutor().requestInsertionIntoList(
 				jbt.execution.core.BTExecutor.BTExecutorList.TICKABLE, this);
-		Gdx.app.debug(this.getClass().getCanonicalName(), "spawned");
+		Log.debug(this.getClass().getCanonicalName(), "spawned");
 	}
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {

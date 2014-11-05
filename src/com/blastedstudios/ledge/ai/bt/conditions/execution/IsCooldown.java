@@ -8,7 +8,7 @@
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.conditions.execution;
 
-import com.badlogic.gdx.Gdx;
+import com.blastedstudios.gdxworld.util.Log;
 
 /** ExecutionCondition class created from MMPM condition IsCooldown. */
 public class IsCooldown extends
@@ -68,7 +68,7 @@ public class IsCooldown extends
 	protected void internalSpawn() {
 		this.getExecutor().requestInsertionIntoList(
 				jbt.execution.core.BTExecutor.BTExecutorList.TICKABLE, this);
-		Gdx.app.debug(this.getClass().getCanonicalName(), "spawned");
+		Log.debug(this.getClass().getCanonicalName(), "spawned");
 	}
 
 	protected Status internalTick() {

@@ -8,7 +8,7 @@
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.actions.execution;
 
-import com.badlogic.gdx.Gdx;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
@@ -36,7 +36,7 @@ public class ClosestTurret extends
 	protected void internalSpawn() {
 		this.getExecutor().requestInsertionIntoList(
 				jbt.execution.core.BTExecutor.BTExecutorList.TICKABLE, this);
-		Gdx.app.debug(this.getClass().getCanonicalName(), "spawned");
+		Log.debug(this.getClass().getCanonicalName(), "spawned");
 	}
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {

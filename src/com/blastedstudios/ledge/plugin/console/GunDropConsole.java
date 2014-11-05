@@ -2,7 +2,7 @@ package com.blastedstudios.ledge.plugin.console;
 
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
-import com.badlogic.gdx.Gdx;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.DropManager;
 import com.blastedstudios.ledge.world.weapon.Weapon;
@@ -17,12 +17,12 @@ public class GunDropConsole extends AbstractConsole{
 	@Override public void execute(String[] tokens) {
 		if(tokens[1].equalsIgnoreCase("drop")){
 			if(tokens.length == 2)
-				Gdx.app.log("GunDropConsole.execute", "Gun drop probability: " + 
+				Log.log("GunDropConsole.execute", "Gun drop probability: " + 
 						Properties.getFloat(DropManager.GUN_DROP_PROPERTY, .05f));
 			else if(tokens.length == 3){
 				try{
 					Properties.set(DropManager.GUN_DROP_PROPERTY, "" + Float.parseFloat(tokens[2]));
-					Gdx.app.log("GunDropConsole.execute", "Gun drop probability set to: " + 
+					Log.log("GunDropConsole.execute", "Gun drop probability set to: " + 
 							Properties.getFloat(DropManager.GUN_DROP_PROPERTY));
 				}catch(NumberFormatException e){
 					String weaponName = tokens[2];
@@ -34,7 +34,7 @@ public class GunDropConsole extends AbstractConsole{
 						weapon = WeaponFactory.getWeapon(weaponName);
 					world.getPlayer().getGuns().add(0, weapon);
 					world.getPlayer().setCurrentWeapon(0, world.getWorld(), true);
-					Gdx.app.log("GunDropConsole.execute", "Generated weapon: " + weapon + " for player");
+					Log.log("GunDropConsole.execute", "Generated weapon: " + weapon + " for player");
 				}
 			}
 		}

@@ -17,6 +17,7 @@ import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.ui.worldeditor.WorldEditorScreen;
 import com.blastedstudios.gdxworld.util.GDXGame;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXWorld;
@@ -46,7 +47,7 @@ public class OverworldScreen extends AbstractScreen{
 		this.worldFile = worldFile;
 		this.gdxRenderer = gdxRenderer;
 		this.sharedAssets = sharedAssets;
-		Gdx.app.log("OverworldScreen.<init>", "Loaded world successfully");
+		Log.log("OverworldScreen.<init>", "Loaded world successfully");
 		levelSprite = skin.getSprite("overworld-level");
 		levelCurrentSprite = skin.getSprite("overworld-current");
 		String backgroundPath = "data/textures/" + gdxWorld.getWorldProperties().get("background");

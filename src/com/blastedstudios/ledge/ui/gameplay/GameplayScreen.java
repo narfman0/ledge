@@ -27,6 +27,7 @@ import com.blastedstudios.gdxworld.ui.leveleditor.LevelEditorScreen;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.GDXGameFade;
 import com.blastedstudios.gdxworld.util.GDXGameFade.IPopListener;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.util.TiledMeshRenderer;
 import com.blastedstudios.gdxworld.world.GDXLevel;
@@ -108,7 +109,7 @@ public class GameplayScreen extends AbstractScreen {
 		rayHandler = worldManager.getCreateLevelStruct().lights.rayHandler;
 		tiledMeshRenderer = new TiledMeshRenderer(gdxRenderer, level.getPolygons());
 		if(sharedAssets.getQueuedAssets() > 0)
-			Gdx.app.log("GameplayScreen.<init>", "Shared assets finishing loading");
+			Log.log("GameplayScreen.<init>", "Shared assets finishing loading");
 		sharedAssets.finishLoading();//unsure if queued == 0 means its done... this verifies
 	}
 
@@ -216,7 +217,7 @@ public class GameplayScreen extends AbstractScreen {
 			if(key == Keys.NUM_1 + i && consoleWindow == null)
 				if(worldManager.getPlayer().getGuns().size() > i && i != worldManager.getPlayer().getCurrentGun()){
 					worldManager.changePlayerWeapon(i);
-					Gdx.app.log("GameplayScreen.render","New gun selected: " + worldManager.getPlayer().getGuns().get(i));
+					Log.log("GameplayScreen.render","New gun selected: " + worldManager.getPlayer().getGuns().get(i));
 				}
 		switch(key){
 		case Keys.ESCAPE:
@@ -263,7 +264,7 @@ public class GameplayScreen extends AbstractScreen {
 		case Keys.E:
 			if(debugCommandEnabled()){
 				game.pushScreen(new LevelEditorScreen(game, world, selectedFile, level, assetManager));
-				Gdx.app.log("GameplayScreen.render", "Edit mode entered");
+				Log.log("GameplayScreen.render", "Edit mode entered");
 			}
 			if(vendorWindow == null){
 				if(!worldManager.isPause() && worldManager.isInputEnable()){
@@ -326,7 +327,7 @@ public class GameplayScreen extends AbstractScreen {
 		case Keys.F6:
 			if(debugCommandEnabled()){
 				Properties.set("debug.draw", ""+!Properties.getBool("debug.draw"));
-				Gdx.app.log("GameplayScreen.render", "debug.draw: " + Properties.getBool("debug.draw"));
+				Log.log("GameplayScreen.render", "debug.draw: " + Properties.getBool("debug.draw"));
 			}
 			break;
 		case Keys.F9:
@@ -342,7 +343,7 @@ public class GameplayScreen extends AbstractScreen {
 		case Keys.F12:
 			if(debugCommandEnabled()){
 				levelComplete(true, "");
-				Gdx.app.log("Gameplayscreen.keyDown", "beat level cheater");
+				Log.log("Gameplayscreen.keyDown", "beat level cheater");
 			}
 			break;
 		}
@@ -422,7 +423,7 @@ public class GameplayScreen extends AbstractScreen {
 		if(this.tintTable != null)
 			this.tintTable.remove();
 		stage.addActor(this.tintTable = tintTable);
-		Gdx.app.log("GameplayScreen.applyTintTable", "New table applied at " + System.currentTimeMillis());
+		Log.log("GameplayScreen.applyTintTable", "New table applied at " + System.currentTimeMillis());
 	}
 
 	public interface IGameplayListener{

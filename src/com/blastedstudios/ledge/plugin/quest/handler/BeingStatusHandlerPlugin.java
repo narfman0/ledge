@@ -2,7 +2,7 @@ package com.blastedstudios.ledge.plugin.quest.handler;
 
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
-import com.badlogic.gdx.Gdx;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.IBeingStatusHandler;
 import com.blastedstudios.ledge.world.WorldManager;
@@ -24,7 +24,7 @@ public class BeingStatusHandlerPlugin implements IBeingStatusHandler, IWorldMana
 					being.setHp(0f);
 				else if (dmg > 0f)
 					being.setHp(being.getHp() - dmg);
-		Gdx.app.log("BeingStatusHandlerPlugin.statusBeing", "Status change for " + beingName);
+		Log.log("BeingStatusHandlerPlugin.statusBeing", "Status change for " + beingName);
 		return CompletionEnum.COMPLETED;
 	}
 }

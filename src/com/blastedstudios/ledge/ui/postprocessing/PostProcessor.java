@@ -25,8 +25,9 @@ import com.badlogic.gdx.graphics.glutils.FrameBuffer;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Disposable;
-import com.blastedstudios.ledge.ui.postprocessing.utils.PingPongBuffer;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.ledge.ui.postprocessing.utils.ItemsManager;
+import com.blastedstudios.ledge.ui.postprocessing.utils.PingPongBuffer;
 
 /** Provides a way to capture the rendered scene to an off-screen buffer and to apply a chain of effects on it before rendering to
  * screen.
@@ -132,11 +133,11 @@ public final class PostProcessor implements Disposable {
 	/** Provides a way to query the pipeline for the most used states */
 	public static boolean isStateEnabled (int pname) {
 		if (EnableQueryStates) {
-			// Gdx.app.log( "PipelineState", "Querying blending" );
+			// Log.log( "PipelineState", "Querying blending" );
 			return pipelineState.isEnabled(pname);
 		}
 
-		// Gdx.app.log( "PipelineState", "(not querying)" );
+		// Log.log( "PipelineState", "(not querying)" );
 		return false;
 	}
 
@@ -261,7 +262,7 @@ public final class PostProcessor implements Disposable {
 		if (enabled && !capturing) {
 			if (buildEnabledEffectsList() == 0) {
 				// no enabled effects
-				// Gdx.app.log( "PostProcessor::capture()",
+				// Log.log( "PostProcessor::capture()",
 				// "No post-processor effects enabled" );
 				return false;
 			}
@@ -291,7 +292,7 @@ public final class PostProcessor implements Disposable {
 		if (enabled && !capturing) {
 			if (buildEnabledEffectsList() == 0) {
 				// no enabled effects
-				// Gdx.app.log( "PostProcessor::captureNoClear",
+				// Log.log( "PostProcessor::captureNoClear",
 				// "No post-processor effects enabled" );
 				return false;
 			}
@@ -387,7 +388,7 @@ public final class PostProcessor implements Disposable {
 			// ensure default texture unit #0 is active
 			Gdx.gl.glActiveTexture(GL20.GL_TEXTURE0);
 		} else {
-			Gdx.app.log("PostProcessor", "No post-processor effects enabled, aborting render");
+			Log.log("PostProcessor", "No post-processor effects enabled, aborting render");
 		}
 	}
 

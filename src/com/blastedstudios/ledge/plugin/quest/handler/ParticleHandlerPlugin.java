@@ -1,13 +1,13 @@
 package com.blastedstudios.ledge.plugin.quest.handler;
 
+import net.xeoh.plugins.base.annotations.PluginImplementation;
+
 import com.badlogic.gdx.math.Vector2;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.particle.IParticleHandler;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.particle.ParticleManifestationTypeEnum;
 import com.blastedstudios.gdxworld.world.GDXParticle;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
-
-import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 @PluginImplementation
 public class ParticleHandlerPlugin implements IParticleHandler, IGameplayScreenInitializer{

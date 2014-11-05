@@ -16,6 +16,7 @@ import com.badlogic.gdx.physics.box2d.joints.RevoluteJointDef;
 import com.badlogic.gdx.physics.box2d.joints.WeldJointDef;
 import com.blastedstudios.gdxworld.physics.PhysicsHelper;
 import com.blastedstudios.gdxworld.util.FileUtil;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.group.GDXGroupExportStruct;
 import com.blastedstudios.ledge.physics.ragdoll.IRagdoll;
@@ -105,7 +106,7 @@ public class Melee extends Weapon {
 			world.destroyBody(body);
 			body = null;
 		}else
-			Gdx.app.error("Melee.deactivate", "Want to destroy weapon body, but null! " + this);
+			Log.error("Melee.deactivate", "Want to destroy weapon body, but null! " + this);
 	}
 
 	@Override public void death(World world){
@@ -115,7 +116,7 @@ public class Melee extends Weapon {
 			world.destroyJoint(joint);
 			joint = null;
 		}else
-			Gdx.app.error("Melee.deactivate", "Want to destroy weapon joint, but null! " + this);
+			Log.error("Melee.deactivate", "Want to destroy weapon joint, but null! " + this);
 	}
 	
 	public static double impulseToDamageScalar(float impulse, float dt){

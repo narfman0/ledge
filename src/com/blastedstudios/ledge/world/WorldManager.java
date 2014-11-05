@@ -9,12 +9,11 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 import java.util.Map.Entry;
+import java.util.Random;
 
 import aurelienribon.tweenengine.TweenManager;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.Texture;
@@ -28,6 +27,7 @@ import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXLevel.CreateLevelReturnStruct;
@@ -38,18 +38,18 @@ import com.blastedstudios.ledge.physics.ContactListener;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen.IGameplayListener;
 import com.blastedstudios.ledge.util.VisibilityReturnStruct;
 import com.blastedstudios.ledge.world.being.Being;
+import com.blastedstudios.ledge.world.being.Being.IDeathCallback;
 import com.blastedstudios.ledge.world.being.FactionEnum;
 import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.NPC.DifficultyEnum;
 import com.blastedstudios.ledge.world.being.NPCData;
-import com.blastedstudios.ledge.world.being.Being.IDeathCallback;
 import com.blastedstudios.ledge.world.being.Player;
+import com.blastedstudios.ledge.world.weapon.DamageStruct;
 import com.blastedstudios.ledge.world.weapon.Gun;
 import com.blastedstudios.ledge.world.weapon.Melee;
 import com.blastedstudios.ledge.world.weapon.Turret;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 import com.blastedstudios.ledge.world.weapon.WeaponFactory;
-import com.blastedstudios.ledge.world.weapon.DamageStruct;
 import com.blastedstudios.ledge.world.weapon.shot.GunShot;
 
 public class WorldManager implements IDeathCallback{
@@ -134,12 +134,12 @@ public class WorldManager implements IDeathCallback{
 		Texture texture = null;
 		for(AssetManager assetManager : assetManagers){
 			if(!textureName.endsWith("png"))
-				Gdx.app.error("WorldManager.drawTexture", "Texture must end with png: " + textureName);
+				Log.error("WorldManager.drawTexture", "Texture must end with png: " + textureName);
 			if(assetManager.isLoaded(textureName))
 				texture = assetManager.get(textureName);
 		}
 		if(texture == null)
-			Gdx.app.error("WorldManager.drawTexture", "Can't find texture: " + textureName);
+			Log.error("WorldManager.drawTexture", "Can't find texture: " + textureName);
 		Sprite sprite = new Sprite(texture);
 		sprite.setPosition(body.getWorldCenter().x - sprite.getWidth()/2, 
 				body.getWorldCenter().y - sprite.getHeight()/2);
@@ -165,7 +165,7 @@ public class WorldManager implements IDeathCallback{
 				target.getRagdoll().breakAppendage(damage.getBodyPart(), world, damage.getDir());
 			target.setHp(target.getHp() - damage.getDamage());
 			target.receivedDamage(damage);
-			Gdx.app.log("WorldManager.processHit","Processed damage on being: " + target.getName() + 
+			Log.log("WorldManager.processHit","Processed damage on being: " + target.getName() + 
 					" dmg: " + damage.getDamage() + " hp: " + target.getHp());
 		}
 	}
@@ -235,7 +235,7 @@ public class WorldManager implements IDeathCallback{
 		NPCData npcData = NPCData.parse(gdxNPC.getProperties().get("NPCData"));
 		if(npcData == null){
 			npcData = new NPCData();
-			Gdx.app.error("WorldManager.<init>", "NPC failed to initialize " + gdxNPC + ", attempting defaults");
+			Log.error("WorldManager.<init>", "NPC failed to initialize " + gdxNPC + ", attempting defaults");
 		}
 		npcData.apply(gdxNPC.getProperties());
 		return spawnNPC(gdxNPC.getName(), gdxNPC.getCoordinates(), npcData, aiWorld);

@@ -8,11 +8,11 @@ import org.jgrapht.alg.DijkstraShortestPath;
 import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.SimpleWeightedGraph;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.physics.PhysicsHelper;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 
 public class AIWorld {
@@ -20,7 +20,7 @@ public class AIWorld {
 	
 	public AIWorld(World gameWorld){
 		movementGraph = GraphGenerator.generateGraph(gameWorld);
-		Gdx.app.log("AIWorld.<init>","Initialized graph with " +movementGraph.edgeSet().size() + 
+		Log.log("AIWorld.<init>","Initialized graph with " +movementGraph.edgeSet().size() + 
 				" edges and " +	movementGraph.vertexSet().size() + " vertices");
 	}
 	
@@ -52,7 +52,7 @@ public class AIWorld {
 				steps.add(movementGraph.getEdgeSource(edge));
 			steps.add(movementGraph.getEdgeTarget(list.get(list.size()-1)));
 		}catch(Exception e){
-			Gdx.app.error("AIWorld.<init>","Error pathfinding for origin="+originRounded+
+			Log.error("AIWorld.<init>","Error pathfinding for origin="+originRounded+
 					" destination="+destinationRounded+" with message: "+e.getMessage());
 		}
 		return steps;

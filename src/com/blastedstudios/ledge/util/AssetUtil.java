@@ -1,8 +1,8 @@
 package com.blastedstudios.ledge.util;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.files.FileHandle;
+import com.blastedstudios.gdxworld.util.Log;
 
 public class AssetUtil {
 	public static <T> void loadAssetsRecursive(AssetManager assets, FileHandle path, Class<T> type){
@@ -12,10 +12,10 @@ public class AssetUtil {
 			else{
 				try{
 					assets.load(file.path(), type);
-					Gdx.app.debug("MainScreen.loadAssetsRecursive", "Success loading asset path: " +
+					Log.debug("MainScreen.loadAssetsRecursive", "Success loading asset path: " +
 							path.path() + " as " + type.getCanonicalName());
 				}catch(Exception e){
-					Gdx.app.debug("MainScreen.loadAssetsRecursive", "Failed to load asset path: " +
+					Log.debug("MainScreen.loadAssetsRecursive", "Failed to load asset path: " +
 							path.path() + " as " + type.getCanonicalName());
 				}
 			}

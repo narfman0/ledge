@@ -3,6 +3,7 @@ package com.blastedstudios.ledge.plugin.console;
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 import com.badlogic.gdx.Gdx;
+import com.blastedstudios.gdxworld.util.Log;
 
 @PluginImplementation
 public class LogLevelConsole extends AbstractConsole{
@@ -14,7 +15,7 @@ public class LogLevelConsole extends AbstractConsole{
 		if(tokens.length == 3 && tokens[1].equalsIgnoreCase("level")){
 			int level = Integer.parseInt(tokens[2]);
 			Gdx.app.setLogLevel(level);
-			Gdx.app.log("LogLevelConsole.execute", "Log level set to: " + level);
+			Log.log("LogLevelConsole.execute", "Log level set to: " + level);
 		}
 	}
 

@@ -6,6 +6,7 @@ import java.util.List;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.blastedstudios.gdxworld.util.FileUtil;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.being.Player;
 
@@ -14,19 +15,19 @@ public class SaveHelper {
 
 	public static List<Player> load() {
 		init();
-		Gdx.app.log("SaveHelper.load","Loading characters...");
+		Log.log("SaveHelper.load","Loading characters...");
 		List<Player> characters = new LinkedList<Player>();
 		for(FileHandle file : Gdx.files.external(SAVE_DIRECTORY).list()){
 			try {
 				Player being = (Player) FileUtil.getSerializer(file).load(file);
 				characters.add(being);
-				Gdx.app.log("SaveHelper.load","Loaded: " + being.getName());
+				Log.log("SaveHelper.load","Loaded: " + being.getName());
 			} catch (Exception e) {
-				Gdx.app.error("SaveHelper.load","Failed to load " + file.path());
+				Log.error("SaveHelper.load","Failed to load " + file.path());
 				e.printStackTrace();
 			} 
 		}
-		Gdx.app.log("SaveHelper.load","Done loading characters");
+		Log.log("SaveHelper.load","Done loading characters");
 		return characters;
 	}
 
@@ -36,9 +37,9 @@ public class SaveHelper {
 				"." + Properties.get("save.extenstion", "xml"));
 		try{
 			FileUtil.getSerializer(file).save(file, character);
-			Gdx.app.log("SaveHelper.save","Saved " + character.getName() + " successfully");
+			Log.log("SaveHelper.save","Saved " + character.getName() + " successfully");
 		}catch(Exception e){
-			Gdx.app.error("SaveHelper.save","Failed to write " + character.getName() + " to " + file.path());
+			Log.error("SaveHelper.save","Failed to write " + character.getName() + " to " + file.path());
 			e.printStackTrace();
 		}
 	}

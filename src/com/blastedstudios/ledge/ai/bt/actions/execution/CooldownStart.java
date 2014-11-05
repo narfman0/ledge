@@ -8,7 +8,7 @@
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.actions.execution;
 
-import com.badlogic.gdx.Gdx;
+import com.blastedstudios.gdxworld.util.Log;
 
 /** ExecutionAction class created from MMPM action CooldownStart. */
 public class CooldownStart extends
@@ -102,7 +102,7 @@ public class CooldownStart extends
 	protected void internalSpawn() {
 		this.getExecutor().requestInsertionIntoList(
 				jbt.execution.core.BTExecutor.BTExecutorList.TICKABLE, this);
-		Gdx.app.debug(this.getClass().getCanonicalName(), "spawned");
+		Log.debug(this.getClass().getCanonicalName(), "spawned");
 	}
 
 	protected Status internalTick() {

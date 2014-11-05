@@ -1,10 +1,10 @@
 package com.blastedstudios.ledge.plugin.quest.handler;
 
+import net.xeoh.plugins.base.annotations.PluginImplementation;
+
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.ledge.plugin.quest.manifestation.cameracontrol.ICameraControlHandler;
 import com.blastedstudios.ledge.world.WorldManager;
-
-import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 @PluginImplementation
 public class CameraControlHandlerPlugin implements ICameraControlHandler, IWorldManagerInitializer{

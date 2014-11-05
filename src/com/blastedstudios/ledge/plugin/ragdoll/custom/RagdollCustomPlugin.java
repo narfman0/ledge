@@ -1,13 +1,13 @@
 package com.blastedstudios.ledge.plugin.ragdoll.custom;
 
+import net.xeoh.plugins.base.annotations.PluginImplementation;
+
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.ledge.physics.ragdoll.IRagdoll;
 import com.blastedstudios.ledge.physics.ragdoll.IRagdoll.IRagdollPlugin;
 import com.blastedstudios.ledge.world.being.Being;
-
-import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 @PluginImplementation
 public class RagdollCustomPlugin implements IRagdollPlugin{

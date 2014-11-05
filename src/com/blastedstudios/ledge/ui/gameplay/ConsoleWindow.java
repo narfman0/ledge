@@ -1,6 +1,5 @@
 package com.blastedstudios.ledge.ui.gameplay;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.EventListener;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
@@ -8,6 +7,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextField;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.blastedstudios.gdxworld.ui.AbstractWindow;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.ledge.util.IConsoleCommand;
 import com.blastedstudios.ledge.world.WorldManager;
@@ -47,7 +47,7 @@ public class ConsoleWindow extends AbstractWindow{
 						if(tokens[0].matches(match))
 							command.execute(tokens);
 					}catch(Exception e){
-						Gdx.app.error("ConsoleWindow.execute", "Failed to execute command: " + text.getText());
+						Log.error("ConsoleWindow.execute", "Failed to execute command: " + text.getText());
 						e.printStackTrace();
 					}
 		}catch(Exception e){

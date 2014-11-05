@@ -4,10 +4,10 @@ import java.util.Random;
 
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.math.Vector2;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.weapon.Gun;
@@ -19,7 +19,7 @@ public class GunshotSound implements IGunListener {
 			Vector2 direction, WorldManager world, Vector2 origin, AssetManager sharedAssets) {
 		String filename = "data/sounds/guns/" + gun.getFireSound() + ".mp3";
 		if(!sharedAssets.isLoaded(filename)){
-			Gdx.app.error("GunshotSound.shoot", "Sound not loaded: " + filename);
+			Log.error("GunshotSound.shoot", "Sound not loaded: " + filename);
 			return;
 		}
 		final Sound sound = sharedAssets.get(filename, Sound.class);
@@ -28,7 +28,7 @@ public class GunshotSound implements IGunListener {
 			float pan = Math.max(-1, Math.min(1, (world.getPlayer().getPosition().x - origin.x) / 15f));
 			sound.play(volume, 1, pan);
 		}else
-			Gdx.app.error("Being.attack", "Sound null for fireSound: " + gun.getFireSound());
+			Log.error("Being.attack", "Sound null for fireSound: " + gun.getFireSound());
 	}
 
 	@Override public void setCurrentRounds(Gun gun, int currentRounds) {}

@@ -2,7 +2,7 @@ package com.blastedstudios.ledge.plugin.console;
 
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
-import com.badlogic.gdx.Gdx;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 
 @PluginImplementation
@@ -15,7 +15,7 @@ public class GodmodeConsole extends AbstractConsole{
 		if(tokens.length == 3 && tokens[1].equalsIgnoreCase("godmode")){
 			boolean enabled = Boolean.parseBoolean(tokens[2]);
 			Properties.set("character.godmode", enabled+"");
-			Gdx.app.log("GodmodeConsole.execute", "Godmode set to: " + enabled);
+			Log.log("GodmodeConsole.execute", "Godmode set to: " + enabled);
 		}
 	}
 

@@ -3,6 +3,8 @@ package com.blastedstudios.ledge.ui.gameplay.hud;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+import net.xeoh.plugins.base.annotations.PluginImplementation;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -10,8 +12,6 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.Player;
-
-import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 @PluginImplementation
 public class BossHP extends AbstractHUDElement{

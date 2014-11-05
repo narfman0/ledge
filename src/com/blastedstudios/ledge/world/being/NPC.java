@@ -10,12 +10,12 @@ import jbt.execution.core.IBTExecutor;
 import jbt.execution.core.IBTLibrary;
 import jbt.execution.core.IContext;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.GDXPath;
 import com.blastedstudios.ledge.ai.AIWorld;
@@ -64,7 +64,7 @@ public class NPC extends Being {
 			setPath(path);
 			btExecutor = BTExecutorFactory.createBTExecutor(library.getBT("Root"), context);
 		}catch(Exception e){
-			Gdx.app.error("NPC.<init>", "Error making NPC: " + name + " with message: " + e.getMessage());
+			Log.error("NPC.<init>", "Error making NPC: " + name + " with message: " + e.getMessage());
 		}
 	}
 	

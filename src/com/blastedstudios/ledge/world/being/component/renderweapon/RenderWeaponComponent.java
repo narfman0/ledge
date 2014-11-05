@@ -2,7 +2,6 @@ package com.blastedstudios.ledge.world.being.component.renderweapon;
 
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
@@ -10,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.being.Being.BodyPart;
 import com.blastedstudios.ledge.world.being.component.AbstractComponent;
@@ -26,7 +26,7 @@ public class RenderWeaponComponent extends AbstractComponent {
 			if(weaponSprite == null){
 				String path = "data/textures/weapons/" + being.getEquippedWeapon().getResource() + ".png";
 				if(!sharedAssets.isLoaded(path)){
-					Gdx.app.log("RenderWeaponComponent.render", "Texture not loaded: " + path);
+					Log.log("RenderWeaponComponent.render", "Texture not loaded: " + path);
 					return;
 				}
 				weaponSprite = new Sprite(sharedAssets.get(path, Texture.class));

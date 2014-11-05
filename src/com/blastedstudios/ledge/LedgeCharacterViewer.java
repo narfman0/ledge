@@ -21,6 +21,7 @@ import com.blastedstudios.gdxworld.GDXWorldEditor;
 import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.util.FileUtil;
 import com.blastedstudios.gdxworld.util.GDXGame;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXWorld;
@@ -29,8 +30,8 @@ import com.blastedstudios.ledge.world.Stats;
 import com.blastedstudios.ledge.world.being.FactionEnum;
 import com.blastedstudios.ledge.world.being.NPCData;
 import com.blastedstudios.ledge.world.being.Player;
-import com.blastedstudios.ledge.world.weapon.WeaponFactory;
 import com.blastedstudios.ledge.world.weapon.Weapon;
+import com.blastedstudios.ledge.world.weapon.WeaponFactory;
 
 public class LedgeCharacterViewer extends GDXGame {
 	@Override public void create () {
@@ -111,7 +112,7 @@ public class LedgeCharacterViewer extends GDXGame {
 			}
 			if(Gdx.input.isKeyPressed(Keys.CONTROL_LEFT) && Gdx.input.isKeyPressed(Keys.D)){
 				Properties.set("debug.draw", ""+!Properties.getBool("debug.draw"));
-				Gdx.app.log("GameplayScreen.render", "debug.draw: " + Properties.getBool("debug.draw"));
+				Log.log("GameplayScreen.render", "debug.draw: " + Properties.getBool("debug.draw"));
 			}
 			if(Gdx.input.isKeyPressed(Keys.ESCAPE))
 				window.setVisible(!window.isVisible());

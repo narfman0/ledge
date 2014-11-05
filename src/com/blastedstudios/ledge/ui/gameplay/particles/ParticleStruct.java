@@ -1,7 +1,7 @@
 package com.blastedstudios.ledge.ui.gameplay.particles;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.world.GDXParticle;
 
 class ParticleStruct {
@@ -29,7 +29,7 @@ class ParticleStruct {
 	public void scheduleRemove(String name){
 		removeScheduled = System.currentTimeMillis();
 		effect.setDuration(0);
-		Gdx.app.debug("ParticleStruct.scheduleRemove", "Scheduled remove for: " + name);
+		Log.debug("ParticleStruct.scheduleRemove", "Scheduled remove for: " + name);
 	}
 
 	@Override public String toString(){

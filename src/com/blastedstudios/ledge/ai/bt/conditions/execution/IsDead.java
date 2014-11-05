@@ -8,7 +8,7 @@
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.conditions.execution;
 
-import com.badlogic.gdx.Gdx;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
 
@@ -34,11 +34,11 @@ public class IsDead extends
 	protected void internalSpawn() {
 		this.getExecutor().requestInsertionIntoList(
 				jbt.execution.core.BTExecutor.BTExecutorList.TICKABLE, this);
-		Gdx.app.debug(this.getClass().getCanonicalName(), "spawned");
+		Log.debug(this.getClass().getCanonicalName(), "spawned");
 	}
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
-		Gdx.app.debug(this.getClass().getCanonicalName(), "ticked");
+		Log.debug(this.getClass().getCanonicalName(), "ticked");
 		Being self = (Being) getContext().getVariable(AIFieldEnum.SELF.name());
 		return self.isDead() ? Status.SUCCESS : Status.FAILURE;
 	}

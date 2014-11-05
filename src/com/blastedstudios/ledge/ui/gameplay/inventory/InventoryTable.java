@@ -16,6 +16,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunButton.IButtonClicked;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunInformationWindow.IWeaponInfoListener;
@@ -107,7 +108,7 @@ public class InventoryTable extends Table implements IButtonClicked, IWeaponInfo
 			firstList.add(firstIndex, second);
 			secondList.add(secondIndex, first);
 		}
-		Gdx.app.log("InventoryWindow.swap", "Weapon swap, first: " + first + " second: " + second);
+		Log.log("InventoryWindow.swap", "Weapon swap, first: " + first + " second: " + second);
 	}
 
 	@Override public void gunButtonClicked(Weapon weapon) {

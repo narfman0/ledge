@@ -1,11 +1,11 @@
 package com.blastedstudios.ledge.plugin.quest.handler;
 
-import com.badlogic.gdx.Gdx;
+import net.xeoh.plugins.base.annotations.PluginImplementation;
+
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.ledge.plugin.quest.manifestation.beingremove.IBeingRemoveHandler;
 import com.blastedstudios.ledge.world.WorldManager;
-
-import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 @PluginImplementation
 public class BeingRemoveHandlerPlugin implements IBeingRemoveHandler, IWorldManagerInitializer{
@@ -22,7 +22,7 @@ public class BeingRemoveHandlerPlugin implements IBeingRemoveHandler, IWorldMana
 				total += world.removeNPC(beingName);
 		else
 			total = world.removeNPC(being);
-		Gdx.app.log("BeingRemoveHandlerPlugin.removeBeing", "Removed " + total + " beings matching " + being);
+		Log.log("BeingRemoveHandlerPlugin.removeBeing", "Removed " + total + " beings matching " + being);
 		return CompletionEnum.COMPLETED;
 	}
 }

@@ -1,7 +1,7 @@
 package com.blastedstudios.ledge.plugin.quest.manifestation.weaponadd;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.gdxworld.world.quest.manifestation.AbstractQuestManifestation;
 import com.blastedstudios.ledge.world.QuestManifestationExecutor;
@@ -28,7 +28,7 @@ public class WeaponAddManifestation extends AbstractQuestManifestation {
 		case PERSON:
 			return ((QuestManifestationExecutor)executor).weaponAdd(weapon, target);
 		}
-		Gdx.app.log("WeaponAddManifestation.execute", "Case not matched: " + weaponAddType + ", skipping");
+		Log.log("WeaponAddManifestation.execute", "Case not matched: " + weaponAddType + ", skipping");
 		return CompletionEnum.COMPLETED;
 	}
 

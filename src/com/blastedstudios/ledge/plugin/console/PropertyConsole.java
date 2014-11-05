@@ -2,7 +2,7 @@ package com.blastedstudios.ledge.plugin.console;
 
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
-import com.badlogic.gdx.Gdx;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 
 @PluginImplementation
@@ -13,7 +13,7 @@ public class PropertyConsole extends AbstractConsole {
 
 	@Override public void execute(String[] tokens) {
 		if(tokens.length == 2)
-			Gdx.app.log("PropertyConsole.execute", "Property " + tokens[1] + 
+			Log.log("PropertyConsole.execute", "Property " + tokens[1] + 
 					" has value: " + Properties.get(tokens[1]));
 		else if(tokens.length == 3)
 			Properties.set(tokens[1], tokens[2]);

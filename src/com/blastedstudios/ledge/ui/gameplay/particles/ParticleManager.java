@@ -4,11 +4,11 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.GDXParticle;
 import com.blastedstudios.gdxworld.world.shape.GDXShape;
@@ -24,9 +24,9 @@ public class ParticleManager {
 		if(!particles.containsKey(particle.getName())){
 			try{
 				particles.put(particle.getName(), new ParticleStruct(particle.createEffect(), particle));
-				Gdx.app.log("ParticleManager.addParticle", "Particle added: " + particle);
+				Log.log("ParticleManager.addParticle", "Particle added: " + particle);
 			}catch(Exception e){
-				Gdx.app.log("ParticleManager.addParticle", "Failed to add particle: " + particle);
+				Log.log("ParticleManager.addParticle", "Failed to add particle: " + particle);
 				e.printStackTrace();
 			}
 		}
@@ -73,11 +73,11 @@ public class ParticleManager {
 	public void disposeParticle(String name){
 		ParticleStruct struct = particles.get(name);
 		if(struct == null)
-			Gdx.app.error("ParticleManager.disposeParticle", "Particle remove requested for " + 
+			Log.error("ParticleManager.disposeParticle", "Particle remove requested for " + 
 					name + ", but no such particle exists");
 		else{
 			struct.effect.dispose();
-			Gdx.app.debug("ParticleManager.disposeParticle", "Disposed " + name);
+			Log.debug("ParticleManager.disposeParticle", "Disposed " + name);
 		}
 	}
 
@@ -91,7 +91,7 @@ public class ParticleManager {
 			struct.particle.setEmitterName(emitterName);
 			struct.particle.setAttachedBody(attachedBody);
 		}else
-			Gdx.app.error("ParticleManager.modify", "Particle modify requested for " + 
+			Log.error("ParticleManager.modify", "Particle modify requested for " + 
 					name + ", but no such particle exists");
 	}
 }

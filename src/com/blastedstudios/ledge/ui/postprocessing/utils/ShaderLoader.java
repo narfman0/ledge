@@ -18,6 +18,7 @@ package com.blastedstudios.ledge.ui.postprocessing.utils;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
+import com.blastedstudios.gdxworld.util.Log;
 
 public final class ShaderLoader {
 	public static String BasePath = "data/shaders/";
@@ -33,7 +34,7 @@ public final class ShaderLoader {
 			log += " w/ (" + defines.replace( "\n", ", " ) + ")";
 		}
 		log += "...";
-		Gdx.app.log( "ShaderLoader", "Compiling " + log );
+		Log.log( "ShaderLoader", "Compiling " + log );
 
 		String vpSrc = Gdx.files.internal( BasePath + vertexFileName + ".vertex" ).readString();
 		String fpSrc = Gdx.files.internal( BasePath + fragmentFileName + ".fragment" ).readString();
@@ -51,7 +52,7 @@ public final class ShaderLoader {
 		ShaderProgram shader = new ShaderProgram( defines + "\n" + vertex, defines + "\n" + fragment );
 
 		if( !shader.isCompiled() ) {
-			Gdx.app.error( "ShaderLoader", shader.getLog() );
+			Log.error( "ShaderLoader", shader.getLog() );
 			System.exit( -1 );
 		}
 

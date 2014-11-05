@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 import java.util.Map.Entry;
+import java.util.Random;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
-import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
+import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.physics.PhysicsHelper;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.weapon.AmmoTypeEnum;
@@ -51,7 +51,7 @@ public class DropManager {
 				player.receive(entry.getValue(), world);
 				world.destroyBody(dropBody);
 				gunDropRemoveList.add(dropBody);
-				Gdx.app.log("WorldManager.render","Player picked up " + entry.getValue());
+				Log.log("WorldManager.render","Player picked up " + entry.getValue());
 			}else if(!paused && distance < impulseDistance){
 				Vector2 impulse = player.getPosition().cpy().sub(dropBody.getWorldCenter());
 				impulse.nor().scl(impulseScale);
@@ -116,7 +116,7 @@ public class DropManager {
 			int amount = being.getEquippedWeapon().getRoundsPerClip()/4 + random.nextInt(5);
 			AmmoDropStruct struct = new AmmoDropStruct(amount, ((Gun)being.getEquippedWeapon()).getAmmoType());
 			droppedAmmo.put(generateDropBody(world, being.getPosition(), struct), struct);
-			Gdx.app.log("WorldManager.generateAmmo", "Generated " + struct);
+			Log.log("WorldManager.generateAmmo", "Generated " + struct);
 		}
 	}
 
@@ -124,7 +124,7 @@ public class DropManager {
 		if(random.nextFloat() < Properties.getFloat(GUN_DROP_PROPERTY, .1f)){
 			Weapon weapon = WeaponFactory.generateGun(WeaponFactory.generateILevel(being.getLevel()), being.getLevel());
 			dropGun(world, weapon, being.getPosition());
-			Gdx.app.log("WorldManager.generateGuns", "Generated " + weapon);
+			Log.log("WorldManager.generateGuns", "Generated " + weapon);
 		}
 	}
 	
@@ -135,7 +135,7 @@ public class DropManager {
 		else if(random.nextFloat() < Properties.getFloat("cash.drop.probability") + .5f)
 			amount = being.getLevel()*(10+random.nextInt(4)) + random.nextInt(50);
 		droppedCash.put(generateDropBody(world, being.getPosition(), amount), amount);
-		Gdx.app.log("WorldManager.generateCash", "Generated $" + amount);
+		Log.log("WorldManager.generateCash", "Generated $" + amount);
 	}
 	
 	private Body generateDropBody(World world, Vector2 position, Object userData){

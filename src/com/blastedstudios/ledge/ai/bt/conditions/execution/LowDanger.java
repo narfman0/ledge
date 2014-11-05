@@ -8,12 +8,12 @@
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.conditions.execution;
 
-import com.badlogic.gdx.Gdx;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.ledge.util.VisibilityReturnStruct;
+import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
 import com.blastedstudios.ledge.world.weapon.DamageStruct;
-import com.blastedstudios.ledge.world.WorldManager;
 
 /** ExecutionCondition class created from MMPM condition LowDanger. */
 public class LowDanger extends
@@ -37,11 +37,11 @@ public class LowDanger extends
 	protected void internalSpawn() {
 		this.getExecutor().requestInsertionIntoList(
 				jbt.execution.core.BTExecutor.BTExecutorList.TICKABLE, this);
-		Gdx.app.debug(this.getClass().getCanonicalName(), "spawned");
+		Log.debug(this.getClass().getCanonicalName(), "spawned");
 	}
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
-		Gdx.app.debug(this.getClass().getCanonicalName(), "ticked");
+		Log.debug(this.getClass().getCanonicalName(), "ticked");
 		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
 		NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
 		

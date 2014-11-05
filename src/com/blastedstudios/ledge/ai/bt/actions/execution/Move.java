@@ -8,9 +8,9 @@
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.actions.execution;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.World;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.ledge.physics.VisibleQueryCallback;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.NPC;
@@ -74,15 +74,15 @@ public class Move extends jbt.execution.task.leaf.action.ExecutionAction {
 	protected void internalSpawn() {
 		this.getExecutor().requestInsertionIntoList(
 				jbt.execution.core.BTExecutor.BTExecutorList.TICKABLE, this);
-		Gdx.app.debug(this.getClass().getCanonicalName(), "spawned");
+		Log.debug(this.getClass().getCanonicalName(), "spawned");
 	}
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
-		Gdx.app.debug(this.getClass().getCanonicalName(), "ticked");
+		Log.debug(this.getClass().getCanonicalName(), "ticked");
 		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
 		NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
 		if(getTarget() == null){
-			Gdx.app.debug(this.getClass().getCanonicalName() + ".internalTick", "Null target for " + self.toString());
+			Log.debug(this.getClass().getCanonicalName() + ".internalTick", "Null target for " + self.toString());
 			self.stopMovement();
 			return Status.FAILURE;
 		}

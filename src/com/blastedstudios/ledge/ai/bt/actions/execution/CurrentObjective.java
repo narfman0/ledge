@@ -8,8 +8,8 @@
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.actions.execution;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.world.GDXPath;
 import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
@@ -36,11 +36,11 @@ public class CurrentObjective extends
 	protected void internalSpawn() {
 		this.getExecutor().requestInsertionIntoList(
 				jbt.execution.core.BTExecutor.BTExecutorList.TICKABLE, this);
-		Gdx.app.debug(this.getClass().getCanonicalName(), "spawned");
+		Log.debug(this.getClass().getCanonicalName(), "spawned");
 	}
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
-		Gdx.app.debug(this.getClass().getCanonicalName(), "ticked");
+		Log.debug(this.getClass().getCanonicalName(), "ticked");
 		GDXPath objective = (GDXPath) getContext().getVariable(AIFieldEnum.OBJECTIVE.name());
 		NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
 		if(objective != null && !objective.getNodes().isEmpty()){

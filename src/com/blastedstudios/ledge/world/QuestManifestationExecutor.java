@@ -6,13 +6,13 @@ import java.util.Random;
 import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenEquation;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Joint;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.dialog.IDialogHandler;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.world.GDXPath;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
@@ -92,10 +92,10 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 				}
 		
 		if(path == null)
-			Gdx.app.error("QuestManifestationExecutor.pathChange", "Path null " +
+			Log.error("QuestManifestationExecutor.pathChange", "Path null " +
 					"for quest manifestation! path:" + pathString + " being:" + beingString);
 		if(!found)
-			Gdx.app.error("QuestManifestationExecutor.pathChange", "Being null " +
+			Log.error("QuestManifestationExecutor.pathChange", "Being null " +
 					"for quest manifestation! path:" + pathString + " being:" + beingString);
 		return CompletionEnum.COMPLETED;
 	}
@@ -169,7 +169,7 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 				if(being.getName().equalsIgnoreCase(beingName))
 					target = being;
 		if(target == null)
-			Gdx.app.error("QuestManifestationExecutor.jetpackManifestation", "Being not found with name: " + beingName);
+			Log.error("QuestManifestationExecutor.jetpackManifestation", "Being not found with name: " + beingName);
 		else{
 			if(changeImpulse && target.getStats().getJetpackImpulse() < impulse)
 				target.getStats().setJetpackImpulse(impulse);

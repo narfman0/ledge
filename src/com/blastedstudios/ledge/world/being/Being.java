@@ -19,6 +19,7 @@ import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.FileUtil;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.physics.PhysicsEnvironment;
@@ -30,10 +31,10 @@ import com.blastedstudios.ledge.world.Stats;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.component.IComponent;
 import com.blastedstudios.ledge.world.weapon.AmmoTypeEnum;
+import com.blastedstudios.ledge.world.weapon.DamageStruct;
 import com.blastedstudios.ledge.world.weapon.Gun;
 import com.blastedstudios.ledge.world.weapon.Melee;
 import com.blastedstudios.ledge.world.weapon.Weapon;
-import com.blastedstudios.ledge.world.weapon.DamageStruct;
 
 public class Being implements Serializable{
 	private static final long serialVersionUID = 1L;
@@ -218,7 +219,7 @@ public class Being implements Serializable{
 		Weapon weapon = getEquippedWeapon();
 		if(weapon != null && !(weapon instanceof Melee) && reloading && timeUntilReload <= 0f){
 			reloadImmediate((Gun)weapon);
-			Gdx.app.log("Being.reload", name + "'s gun " + weapon.getName() + " reloaded to " + 
+			Log.log("Being.reload", name + "'s gun " + weapon.getName() + " reloaded to " + 
 					((Gun)weapon).getCurrentRounds() + " rounds");
 			reloading = false;
 		}
@@ -299,7 +300,7 @@ public class Being implements Serializable{
 		}
 		if(getEquippedWeapon() != null)
 			ticksToActivateWeapon = 5;
-		Gdx.app.log("Being.respawn", name + " initialized at " + x + "," + y);
+		Log.log("Being.respawn", name + " initialized at " + x + "," + y);
 		for(IComponent component : getListeners())
 			component.respawn(world, x, y);
 	}
@@ -452,7 +453,7 @@ public class Being implements Serializable{
 
 	public void addCash(int cash){
 		this.cash += cash;
-		Gdx.app.log("Being.addCash", name + " received " + cash + " cash");
+		Log.log("Being.addCash", name + " received " + cash + " cash");
 	}
 
 	public int getLevel() {
@@ -473,7 +474,7 @@ public class Being implements Serializable{
 
 	public long addXp(long xp){
 		this.xp += xp;
-		Gdx.app.log("Being.addXp", name + " received " + xp + " xp, total xp is " + this.xp);
+		Log.log("Being.addXp", name + " received " + xp + " xp, total xp is " + this.xp);
 		while(this.xp > xpToLevel(level+1))
 			levelUp();
 		for(IComponent component : getListeners())
@@ -485,7 +486,7 @@ public class Being implements Serializable{
 		++level;
 		if(Properties.getBool("being.levelup.restorehp", false))
 			hp = getMaxHp();
-		Gdx.app.log("Being.levelUp", name + " now level " + level);
+		Log.log("Being.levelUp", name + " now level " + level);
 		for(IComponent component : getListeners())
 			component.levelUp();
 	}
@@ -494,7 +495,7 @@ public class Being implements Serializable{
 		if(getEquippedWeapon() != null && getEquippedWeapon() instanceof Melee){
 			Melee meleeWeapon = (Melee) getEquippedWeapon(); 
 			if(meleeWeapon.getBody() == null)
-				Gdx.app.error("Being.isOwned", "Melee body null for: " + getName() + "'s weapon: " + meleeWeapon);
+				Log.error("Being.isOwned", "Melee body null for: " + getName() + "'s weapon: " + meleeWeapon);
 			else
 				for(Fixture meleeFixture : meleeWeapon.getBody().getFixtureList())
 					if(fixture == meleeFixture)
@@ -512,7 +513,7 @@ public class Being implements Serializable{
 			if(sharedAssets != null)
 				sharedAssets.get("data/sounds/guns/reload.mp3", Sound.class).play();
 			timeUntilReload = (float)getEquippedWeapon().getReloadSpeed()/1000f;
-			Gdx.app.log("Being.setReloading", name + " began reloading");
+			Log.log("Being.setReloading", name + " began reloading");
 			for(IComponent component : getListeners())
 				component.setReloading(reloading);
 		}
@@ -585,7 +586,7 @@ public class Being implements Serializable{
 
 	public void addAmmo(AmmoTypeEnum ammoType, int amount){
 		ammo.put(ammoType, ammo.get(ammoType) + amount);
-		Gdx.app.log("Being.addAmmo", name + " received " + amount + " ammo added for " + ammoType);
+		Log.log("Being.addAmmo", name + " received " + amount + " ammo added for " + ammoType);
 	}
 
 	public enum BodyPart {

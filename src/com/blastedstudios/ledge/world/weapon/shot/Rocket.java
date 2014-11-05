@@ -11,6 +11,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.WorldManifold;
+import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.Being.BodyPart;
@@ -59,7 +60,7 @@ public class Rocket extends GunShot {
 		}
 		//handle damage on nearby players
 		for(Entry<Being,Float> being : nearbyBeings.entrySet()){
-			Gdx.app.log("RocketLauncher.handleContact","Calculate rocket baseDamage for " + being.getKey().getName());
+			Log.log("RocketLauncher.handleContact","Calculate rocket baseDamage for " + being.getKey().getName());
 			worldManager.processHit(launcher.calculateLinearDmg(being.getValue()), being.getKey(), getBeing(), 
 					being.getKey().getRagdoll().getBodyPart(BodyPart.torso).getFixtureList().get(0), 
 					manifold.getNormal(), manifold.getPoints()[0]);

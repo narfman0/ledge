@@ -9,6 +9,7 @@ import java.util.Random;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.blastedstudios.gdxworld.plugin.serializer.xml.XMLSerializer;
+import com.blastedstudios.gdxworld.util.Log;
 
 public class WeaponFactory {
 	private static final XMLSerializer serializer = new XMLSerializer();
@@ -110,7 +111,7 @@ public class WeaponFactory {
 	 */
 	private static Weapon rollWeaponType(float roll, int pLevel, Random random){
 		if(pLevel < 1){
-			Gdx.app.error("WeaponFactory.rollWeaponType", "Error: mLevel of " + pLevel + ", using 1");
+			Log.error("WeaponFactory.rollWeaponType", "Error: mLevel of " + pLevel + ", using 1");
 			pLevel = 1;
 		}
 		Collection<Weapon> weapons = getStockWeapons();
