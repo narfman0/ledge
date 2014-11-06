@@ -1,21 +1,20 @@
 package com.blastedstudios.ledge.ui.main;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
-import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.util.ScreenLevelPanner;
 import com.blastedstudios.gdxworld.util.ScreenLevelPanner.ITransitionListener;
 import com.blastedstudios.gdxworld.world.GDXWorld;
+import com.blastedstudios.ledge.ui.LedgeScreen;
 import com.blastedstudios.ledge.ui.main.MainWindow.IMainWindowListener;
 import com.blastedstudios.ledge.ui.main.NewCharacterWindow.INewCharacterWindowListener;
 
-public class MainScreen extends AbstractScreen implements IMainWindowListener,
+public class MainScreen extends LedgeScreen implements IMainWindowListener,
 		INewCharacterWindowListener, ITransitionListener {
 	public static final Color WINDOW_ALPHA_COLOR = new Color(1, 1, 1, .7f);
 	public static final String SKIN_PATH = Properties.get("screen.skin","data/ui/uiskinGame.json");
@@ -28,12 +27,17 @@ public class MainScreen extends AbstractScreen implements IMainWindowListener,
 	private ScreenLevelPanner activePanner, loadingPanner;
 
 	public MainScreen(final GDXGame game, AssetManager sharedAssets, GDXWorld gdxWorld){
-		super(game, SKIN_PATH);
+		super(game);
 		this.sharedAssets = sharedAssets;
 		this.gdxWorld = gdxWorld;
 		gdxRenderer = new GDXRenderer(true, true);
 		stage.addActor(mainWindow = new MainWindow(skin, game, this, gdxWorld, WORLD_FILE, gdxRenderer, sharedAssets));
 		loadingPanner = new ScreenLevelPanner(gdxWorld, gdxRenderer, this);
+		register(ActionType.BACK, new AbstractInputHandler() {
+			public void down(){
+				Gdx.app.exit();
+			}
+		});
 	}
 
 	@Override public void render(float delta){
@@ -41,15 +45,6 @@ public class MainScreen extends AbstractScreen implements IMainWindowListener,
 		sharedAssets.update();
 		updatePanners(delta);
 		stage.draw();
-	}
-
-	@Override public boolean keyDown(int key) {
-		switch(key){
-		case Keys.ESCAPE:
-			Gdx.app.exit();
-			break;
-		}
-		return super.keyDown(key);
 	}
 
 	@Override public void newCharacterButtonClicked() {
