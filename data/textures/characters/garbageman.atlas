@@ -5,42 +5,42 @@ repeat: none
 head
   rotate: false
   xy: 0, 0
-  size: 488, 478
-  orig: 488, 478
+  size: 122, 119
+  orig: 122, 119
   offset: 0, 0
   index: -1
 torso
   rotate: false
-  xy: 0, 507
-  size: 479, 606
-  orig: 479, 606
+  xy: 0, 126
+  size: 119, 151
+  orig: 119, 151
   offset: 0, 0
   index: -1
 larm
   rotate: false
-  xy: 465, 0
-  size: 836, 209
-  orig: 836, 209
+  xy: 116, 0
+  size: 209, 52
+  orig: 209, 52
   offset: 0, 0
   index: -1
 rarm
   rotate: false
-  xy: 470, 0
-  size: 661, 209
-  orig: 661, 209
+  xy: 117, 0
+  size: 165, 52
+  orig: 165, 52
   offset: 0, 0
   index: -1
 lleg
   rotate: false
-  xy: 558, 562
-  size: 470, 560
-  orig: 470, 560
+  xy: 139, 140
+  size: 117, 140
+  orig: 117, 140
   offset: 0, 0
   index: -1
 rleg
   rotate: false
-  xy: 558, 562
-  size: 470, 560
-  orig: 470, 560
+  xy: 139, 140
+  size: 117, 140
+  orig: 117, 140
   offset: 0, 0
   index: -1
