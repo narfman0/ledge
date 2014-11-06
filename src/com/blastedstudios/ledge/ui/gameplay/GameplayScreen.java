@@ -59,7 +59,7 @@ public class GameplayScreen extends AbstractScreen {
 	private final HUD hud;
 	private OrthographicCamera camera;
 	private WorldManager worldManager;
-	private AbstractWindow characterWindow, inventoryWindow, vendorWindow;
+	private AbstractWindow characterWindow, inventoryWindow, vendorWindow, backWindow;
 	private ConsoleWindow consoleWindow;
 	private final Box2DDebugRenderer renderer;
 	private final GDXRenderer gdxRenderer;
@@ -146,6 +146,7 @@ public class GameplayScreen extends AbstractScreen {
 		if(!worldManager.isPause() && worldManager.isInputEnable() && Gdx.input.isTouched() && 
 				(inventoryWindow == null || !inventoryWindow.contains(x, y)) &&
 				(characterWindow == null || !characterWindow.contains(x, y)) &&
+				(backWindow == null || !backWindow.contains(x, y)) &&
 				(vendorWindow == null || !vendorWindow.contains(x, y)))
 			worldManager.getPlayer().attack(touchedDirection, worldManager);
 	}
@@ -220,14 +221,6 @@ public class GameplayScreen extends AbstractScreen {
 					Log.log("GameplayScreen.render","New gun selected: " + worldManager.getPlayer().getGuns().get(i));
 				}
 		switch(key){
-		case Keys.ESCAPE:
-			GDXGameFade.fadeOutPopScreen(game, new IPopListener() {
-				@Override public void screenPopped() {
-					SaveHelper.save(worldManager.getPlayer());
-					dispose();
-				}
-			});
-			break;
 		case Keys.C:
 		case Keys.CONTROL_LEFT:
 			worldManager.setDesireFixedRotation(false);
@@ -236,8 +229,9 @@ public class GameplayScreen extends AbstractScreen {
 			if(!worldManager.isPause() && worldManager.isInputEnable())
 				worldManager.getPlayer().setReloading(true);
 			break;
+		case Keys.ESCAPE:
 		case Keys.I:
-			if(consoleWindow == null && !worldManager.isPause() && worldManager.isInputEnable()){
+			if(consoleWindow == null && worldManager.isInputEnable()){
 				if(characterWindow == null){
 					cleanCharacterWindows();//just to be safe
 					ChangeListener listener = new ChangeListener() {
@@ -246,6 +240,7 @@ public class GameplayScreen extends AbstractScreen {
 						}
 					};
 					stage.addActor(characterWindow = new CharacterWindow(skin, worldManager.getPlayer(), listener));
+					stage.addActor(backWindow = new BackWindow(skin, this));
 					stage.addActor(inventoryWindow = new InventoryWindow(skin, 
 							worldManager.getPlayer(), listener, worldManager.getSharedAssets(), stage, false));
 					worldManager.pause(true);
@@ -353,11 +348,12 @@ public class GameplayScreen extends AbstractScreen {
 	}
 	
 	private void cleanCharacterWindows(){
-		for(AbstractWindow window : new AbstractWindow[]{characterWindow,inventoryWindow,vendorWindow})
+		for(AbstractWindow window : new AbstractWindow[]{characterWindow, inventoryWindow, vendorWindow, backWindow})
 			if(window != null)
 				window.remove();
 		characterWindow = null;
 		inventoryWindow = null;
+		backWindow = null;
 		vendorWindow = null;
 		worldManager.pause(false);
 	}
@@ -410,6 +406,15 @@ public class GameplayScreen extends AbstractScreen {
 	
 	public Camera getCamera(){
 		return camera;
+	}
+	
+	public void handleBack(){
+		GDXGameFade.fadeOutPopScreen(game, new IPopListener() {
+			@Override public void screenPopped() {
+				SaveHelper.save(worldManager.getPlayer());
+				dispose();
+			}
+		});
 	}
 	
 	@Override public void dispose(){

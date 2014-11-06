@@ -12,6 +12,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener.ChangeEvent;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.blastedstudios.gdxworld.ui.AbstractWindow;
+import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunButton.IButtonClicked;
 import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.world.being.Being;
@@ -45,8 +46,8 @@ public class InventoryWindow extends AbstractWindow implements IButtonClicked {
 				listener.changed(new ChangeEvent(), event.getListenerActor().getParent().getParent());
 			}
 		});
-		final Button exitButton = new TextButton("Exit", skin);
-		exitButton.addListener(new ClickListener() {
+		final Button cancelButton = new TextButton(Properties.get("ui.inventory.button.cancel.text", "Cancel"), skin);
+		cancelButton.addListener(new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
 				listener.changed(new ChangeEvent(), event.getListenerActor().getParent().getParent());
 			}
@@ -55,7 +56,7 @@ public class InventoryWindow extends AbstractWindow implements IButtonClicked {
 		row();
 		Table controls = new Table();
 		controls.add(acceptButton);
-		controls.add(exitButton);
+		controls.add(cancelButton);
 		add(controls);
 		pack();
 		setX(Gdx.graphics.getWidth() - getWidth());

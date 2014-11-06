@@ -10,6 +10,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener.ChangeEvent;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.blastedstudios.gdxworld.ui.AbstractWindow;
+import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.world.being.Being;
 
@@ -17,8 +18,8 @@ public class CharacterWindow extends AbstractWindow {
 	public CharacterWindow(final Skin skin, Being being, final ChangeListener listener){
 		super("", skin);
 		setColor(MainScreen.WINDOW_ALPHA_COLOR);
-		final Button exitButton = new TextButton("Exit", skin);
-		exitButton.addListener(new ClickListener() {
+		final Button button = new TextButton(Properties.get("ui.character.button.text", "Close"), skin);
+		button.addListener(new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
 				listener.changed(new ChangeEvent(), event.getTarget().getParent());
 			}
@@ -36,10 +37,11 @@ public class CharacterWindow extends AbstractWindow {
 		add(new Label("XP: " + being.getXp() + "/" + Being.xpToLevel(being.getLevel()+1), skin));
 		row();
 		add(new Label("HP: " + (int)being.getHp() + "/" + (int)being.getMaxHp(), skin));
-		row();
-		add(exitButton).fillX();
+		if(Properties.getBool("ui.character.button.show", false)){
+			row();
+			add(button).fillX();
+		}
 		pack();
-		setX(0);
 		setY(Gdx.graphics.getHeight()/2 - getHeight()/2);
 	}
 }
