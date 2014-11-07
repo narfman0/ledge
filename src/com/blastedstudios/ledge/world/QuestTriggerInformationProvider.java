@@ -7,17 +7,16 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.utils.Array;
 import com.blastedstudios.gdxworld.world.quest.trigger.IQuestTriggerInformationProvider;
 import com.blastedstudios.ledge.plugin.quest.trigger.beinghit.IBeingHitListener;
+import com.blastedstudios.ledge.ui.LedgeScreen.ActionType;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.weapon.DamageStruct;
 
 public class QuestTriggerInformationProvider implements IQuestTriggerInformationProvider{
-	private final GameplayScreen screen;
 	private final WorldManager worldManager;
 	private final HashSet<IBeingHitListener> beingHitListeners = new HashSet<>();
 	
 	public QuestTriggerInformationProvider(GameplayScreen screen, WorldManager worldManager){
-		this.screen = screen;
 		this.worldManager = worldManager;
 	}
 
@@ -59,7 +58,7 @@ public class QuestTriggerInformationProvider implements IQuestTriggerInformation
 	}
 
 	@Override public boolean isAction() {
-		return screen.isAction();
+		return ActionType.MODIFIER.isPressed();
 	}
 	
 	public void beingHit(DamageStruct damageStruct){

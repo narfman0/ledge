@@ -5,7 +5,6 @@ import aurelienribon.tweenengine.TweenManager;
 import aurelienribon.tweenengine.equations.Cubic;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -76,7 +75,7 @@ public class OverworldScreen extends LedgeScreen{
 		});
 		register(ActionType.ACTION, new AbstractInputHandler() {
 			public void down(){
-				if(Gdx.input.isKeyPressed(Keys.CONTROL_LEFT))
+				if(ActionType.MODIFIER.isPressed())
 					game.pushScreen(new WorldEditorScreen(game, gdxWorld, worldFile));
 			}
 		});

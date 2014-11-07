@@ -5,8 +5,6 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.scenes.scene2d.Actor;
@@ -18,6 +16,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
+import com.blastedstudios.ledge.ui.LedgeScreen.ActionType;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunButton.IButtonClicked;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunInformationWindow.IWeaponInfoListener;
 import com.blastedstudios.ledge.ui.main.MainScreen;
@@ -113,7 +112,7 @@ public class InventoryTable extends Table implements IButtonClicked, IWeaponInfo
 
 	@Override public void gunButtonClicked(Weapon weapon) {
 		informationWindowListener.gunButtonClicked(weapon);
-		if(lastClicked != null && Gdx.input.isKeyPressed(Keys.SHIFT_LEFT)){
+		if(lastClicked != null && ActionType.MODIFIER.isPressed()){
 			swap(lastClicked, weapon);
 			lastClicked = null;
 			rebuildGunTables();
