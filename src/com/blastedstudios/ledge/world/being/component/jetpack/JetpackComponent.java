@@ -3,7 +3,6 @@ package com.blastedstudios.ledge.world.being.component.jetpack;
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.ParticleEmitter;
@@ -11,6 +10,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
+import com.blastedstudios.ledge.ui.LedgeScreen.ActionType;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.Being.BodyPart;
@@ -30,7 +30,7 @@ public class JetpackComponent extends AbstractComponent {
 			DASH_FORCE = Properties.getFloat("character.jetpack.dash.force", 500);
 	private ParticleEffect jetpackEffect;
 	private boolean lastJetpackActivated, jetpackActivated, dashRight;
-	private long lastTimeAPressed, lastTimeDPressed;
+	private long lastTimeLeftPressed, lastTimeRightPressed;
 	private float jetpackPower;
 	private float timeUntilDashAvailable;
 
@@ -126,35 +126,28 @@ public class JetpackComponent extends AbstractComponent {
 	}
 
 	@Override public boolean keyDown(int key, WorldManager worldManager) {
-		switch(key){
-		case Keys.A:
-			if(!worldManager.isPause() && worldManager.isInputEnable()){
-				if(System.currentTimeMillis() - lastTimeAPressed < Properties.getFloat("input.doublepress.time", 250))
-					dash(false);
-				lastTimeAPressed = System.currentTimeMillis();
-			}
-			break;
-		case Keys.D:
-			if(!worldManager.isPause() && worldManager.isInputEnable()){
-				if(System.currentTimeMillis() - lastTimeDPressed < Properties.getFloat("input.doublepress.time", 250))
-					dash(true);
-				lastTimeDPressed = System.currentTimeMillis();
-			}
-			break;
-		case Keys.W:
+		if(ActionType.UP.matches(key)){
 			if(!worldManager.isPause() && worldManager.isInputEnable())
 				jetpackActivated = true;
-			break;
+		}else if(ActionType.LEFT.matches(key)){
+			if(!worldManager.isPause() && worldManager.isInputEnable()){
+				if(System.currentTimeMillis() - lastTimeLeftPressed < Properties.getFloat("input.doublepress.time", 250))
+					dash(false);
+				lastTimeLeftPressed = System.currentTimeMillis();
+			}
+		}else if(ActionType.RIGHT.matches(key)){
+			if(!worldManager.isPause() && worldManager.isInputEnable()){
+				if(System.currentTimeMillis() - lastTimeRightPressed < Properties.getFloat("input.doublepress.time", 250))
+					dash(true);
+				lastTimeRightPressed = System.currentTimeMillis();
+			}
 		}
 		return false;
 	}
 
 	@Override public boolean keyUp(int key, WorldManager worldManager){
-		switch(key){
-		case Keys.W:
+		if(ActionType.UP.matches(key))
 			jetpackActivated = false;
-			break;
-		}
 		return false;
 	}
 }

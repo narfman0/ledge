@@ -14,8 +14,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.scenes.scene2d.Actor;
-import com.badlogic.gdx.scenes.scene2d.Event;
-import com.badlogic.gdx.scenes.scene2d.EventListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.beingspawn.BeingSpawnManifestation;
@@ -36,12 +34,12 @@ import com.blastedstudios.gdxworld.world.GDXWorld;
 import com.blastedstudios.gdxworld.world.quest.GDXQuest;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
+import com.blastedstudios.ledge.ui.LedgeScreen;
 import com.blastedstudios.ledge.ui.gameplay.hud.HUD;
 import com.blastedstudios.ledge.ui.gameplay.inventory.InventoryWindow;
 import com.blastedstudios.ledge.ui.gameplay.particles.ParticleManager;
 import com.blastedstudios.ledge.ui.loading.GameplayLoadingWindowExecutor;
 import com.blastedstudios.ledge.ui.loading.LoadingWindow;
-import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.util.SaveHelper;
 import com.blastedstudios.ledge.world.DialogManager;
 import com.blastedstudios.ledge.world.DialogManager.DialogStruct;
@@ -53,7 +51,7 @@ import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.Player;
 import com.blastedstudios.ledge.world.being.component.IComponent;
 
-public class GameplayScreen extends AbstractScreen {
+public class GameplayScreen extends LedgeScreen {
 	private final DialogManager dialogManager;
 	private final ParticleManager particleManager;
 	private final HUD hud;
@@ -76,7 +74,7 @@ public class GameplayScreen extends AbstractScreen {
 	public GameplayScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world,
 			FileHandle selectedFile, final GDXRenderer gdxRenderer, AssetManager sharedAssets,
 			AssetManager assetManager){
-		super(game, MainScreen.SKIN_PATH);
+		super(game);
 		this.level = level;
 		this.world = world;
 		this.selectedFile = selectedFile;
@@ -111,6 +109,121 @@ public class GameplayScreen extends AbstractScreen {
 		if(sharedAssets.getQueuedAssets() > 0)
 			Log.log("GameplayScreen.<init>", "Shared assets finishing loading");
 		sharedAssets.finishLoading();//unsure if queued == 0 means its done... this verifies
+		registerInput();
+	}
+	
+	private void registerInput(){
+		register(ActionType.BACK, new AbstractInputHandler() {
+			public void down(){
+				handlePause();
+			}
+		});
+		register(ActionType.CROUCH, new AbstractInputHandler() {
+			public void down(){
+				worldManager.setDesireFixedRotation(false);
+			}
+			public void up(){
+				worldManager.setDesireFixedRotation(true);
+			}
+		});
+		register(ActionType.RELOAD, new AbstractInputHandler() {
+			public void down(){
+				if(!worldManager.isPause() && worldManager.isInputEnable())
+					worldManager.getPlayer().setReloading(true);
+			}
+		});
+		register(ActionType.INVENTORY, new AbstractInputHandler() {
+			public void down(){
+				handlePause();
+			}
+		});
+		register(ActionType.LEFT, new AbstractInputHandler() {
+			public void down(){
+				if(!worldManager.isPause() && worldManager.isInputEnable())
+					worldManager.getPlayer().setMoveLeft(true);
+			}
+			public void up(){
+				worldManager.getPlayer().setMoveLeft(false);
+			}
+		});
+		register(ActionType.RIGHT, new AbstractInputHandler() {
+			public void down(){
+				if(!worldManager.isPause() && worldManager.isInputEnable())
+					worldManager.getPlayer().setMoveRight(true);
+			}
+			public void up(){
+				worldManager.getPlayer().setMoveRight(false);
+			}
+		});
+		register(ActionType.UP, new AbstractInputHandler() {
+			public void down(){
+				if(!worldManager.isPause() && worldManager.isInputEnable())
+					worldManager.getPlayer().setJump(true);
+			}
+			public void up(){
+				worldManager.getPlayer().setJump(false);
+			}
+		});
+		register(ActionType.ACTION, new AbstractInputHandler() {
+			public void down(){
+				if(debugCommandEnabled()){
+					game.pushScreen(new LevelEditorScreen(game, world, selectedFile, level, assetManager));
+					Log.log("GameplayScreen.render", "Edit mode entered");
+				}
+				if(vendorWindow == null){
+					if(!worldManager.isPause() && worldManager.isInputEnable()){
+						NPC npc = worldManager.findVendor();
+						if(npc != null){
+							cleanCharacterWindows();//just to be safe
+							ChangeListener listener = new ChangeListener() {
+								@Override public void changed(ChangeEvent event, Actor actor) {
+									cleanCharacterWindows();
+								}
+							};
+							stage.addActor(vendorWindow = new VendorWindow(skin, npc, stage, worldManager.getPlayer(),
+									worldManager.getWorld(), listener, worldManager.getSharedAssets()));
+							stage.addActor(inventoryWindow = new InventoryWindow(skin, 
+									worldManager.getPlayer(), listener, worldManager.getSharedAssets(), stage, true));
+							worldManager.pause(true);
+						}
+					}
+				}else
+					cleanCharacterWindows();
+				DialogStruct struct = dialogManager.poll();
+				if(struct != null){
+					//TODO kinda nasty hack, here... on the slow side and doesn't go through GDXQuestManager
+					for(GDXQuest quest : level.getQuests())
+						if(quest.getManifestation() instanceof DialogManifestation){
+							String converted = DialogManager.splitRenderable(((DialogManifestation)quest.getManifestation()).getDialog(), DialogManager.DIALOG_WIDTH);
+							if(converted.equals(struct.dialog)){
+								worldManager.getPlayer().getQuestManager().setStatus(quest.getName(), CompletionEnum.COMPLETED);
+								break;
+							}
+						}
+				}
+			}
+			public void up(){
+			}
+		});
+	}
+	
+	private void handlePause(){
+		if(consoleWindow == null && worldManager.isInputEnable()){
+			if(characterWindow == null){
+				cleanCharacterWindows();//just to be safe
+				ChangeListener listener = new ChangeListener() {
+					@Override public void changed(ChangeEvent event, Actor actor) {
+						cleanCharacterWindows();
+					}
+				};
+				stage.addActor(characterWindow = new CharacterWindow(skin, worldManager.getPlayer(), listener));
+				stage.addActor(backWindow = new BackWindow(skin, this));
+				stage.addActor(inventoryWindow = new InventoryWindow(skin, 
+						worldManager.getPlayer(), listener, worldManager.getSharedAssets(), stage, false));
+				worldManager.pause(true);
+			}else
+				cleanCharacterWindows();
+		}
 	}
 
 	@Override public void render(float delta) {
@@ -170,10 +283,6 @@ public class GameplayScreen extends AbstractScreen {
 		});
 	}
 
-	public boolean isAction() {
-		return Gdx.input.isKeyPressed(Keys.ENTER) || Gdx.input.isKeyPressed(Keys.E);
-	}
-
 	public DialogManager getDialogManager() {
 		return dialogManager;
 	}
@@ -221,100 +330,6 @@ public class GameplayScreen extends AbstractScreen {
 					Log.log("GameplayScreen.render","New gun selected: " + worldManager.getPlayer().getGuns().get(i));
 				}
 		switch(key){
-		case Keys.C:
-		case Keys.CONTROL_LEFT:
-			worldManager.setDesireFixedRotation(false);
-			break;
-		case Keys.R:
-			if(!worldManager.isPause() && worldManager.isInputEnable())
-				worldManager.getPlayer().setReloading(true);
-			break;
-		case Keys.ESCAPE:
-		case Keys.I:
-			if(consoleWindow == null && worldManager.isInputEnable()){
-				if(characterWindow == null){
-					cleanCharacterWindows();//just to be safe
-					ChangeListener listener = new ChangeListener() {
-						@Override public void changed(ChangeEvent event, Actor actor) {
-							cleanCharacterWindows();
-						}
-					};
-					stage.addActor(characterWindow = new CharacterWindow(skin, worldManager.getPlayer(), listener));
-					stage.addActor(backWindow = new BackWindow(skin, this));
-					stage.addActor(inventoryWindow = new InventoryWindow(skin, 
-							worldManager.getPlayer(), listener, worldManager.getSharedAssets(), stage, false));
-					worldManager.pause(true);
-				}else
-					cleanCharacterWindows();
-			}
-			break;
-		case Keys.A:
-			if(!worldManager.isPause() && worldManager.isInputEnable())
-				worldManager.getPlayer().setMoveLeft(true);
-			break;
-		case Keys.D:
-			if(!worldManager.isPause() && worldManager.isInputEnable())
-				worldManager.getPlayer().setMoveRight(true);
-			break;
-		case Keys.E:
-			if(debugCommandEnabled()){
-				game.pushScreen(new LevelEditorScreen(game, world, selectedFile, level, assetManager));
-				Log.log("GameplayScreen.render", "Edit mode entered");
-			}
-			if(vendorWindow == null){
-				if(!worldManager.isPause() && worldManager.isInputEnable()){
-					NPC npc = worldManager.findVendor();
-					if(npc != null){
-						cleanCharacterWindows();//just to be safe
-						ChangeListener listener = new ChangeListener() {
-							@Override public void changed(ChangeEvent event, Actor actor) {
-								cleanCharacterWindows();
-							}
-						};
-						stage.addActor(vendorWindow = new VendorWindow(skin, npc, stage, worldManager.getPlayer(),
-								worldManager.getWorld(), listener, worldManager.getSharedAssets()));
-						stage.addActor(inventoryWindow = new InventoryWindow(skin, 
-								worldManager.getPlayer(), listener, worldManager.getSharedAssets(), stage, true));
-						worldManager.pause(true);
-					}
-				}
-			}else
-				cleanCharacterWindows();
-			break;
-		case Keys.W:
-			if(!worldManager.isPause() && worldManager.isInputEnable())
-				worldManager.getPlayer().setJump(true);
-			break;
-		case Keys.ENTER:
-			DialogStruct struct = dialogManager.poll();
-			if(struct != null){
-				//TODO kinda nasty hack, here... on the slow side and doesn't go through GDXQuestManager
-				for(GDXQuest quest : level.getQuests())
-					if(quest.getManifestation() instanceof DialogManifestation){
-						String converted = DialogManager.splitRenderable(((DialogManifestation)quest.getManifestation()).getDialog(), DialogManager.DIALOG_WIDTH);
-						if(converted.equals(struct.dialog)){
-							worldManager.getPlayer().getQuestManager().setStatus(quest.getName(), CompletionEnum.COMPLETED);
-							break;
-						}
-					}
-			}else if(debugCommandEnabled()){
-		 		if(consoleWindow == null){
-		 			EventListener listener = new EventListener() {
-						@Override public boolean handle(Event event) {
-							consoleWindow.remove();
-				 			consoleWindow = null;
-							return false;
-						}
-					};
-		 			stage.addActor(consoleWindow = new ConsoleWindow(skin, worldManager, this, listener));
-					consoleWindow.setX(Gdx.graphics.getWidth()/2);
-		 		}else{
-		 			consoleWindow.execute();
-		 			consoleWindow.remove();
-		 			consoleWindow = null;
-		 		}
-			}
-			break;
 		case Keys.F2:
 			if(worldManager.getPlayer().isDead() && worldManager.getRespawnLocation() != null)
 				worldManager.respawnPlayer();
@@ -359,25 +374,10 @@ public class GameplayScreen extends AbstractScreen {
 	}
 	
 	private boolean debugCommandEnabled(){
-		return Properties.getBool("debug.commands") && Gdx.input.isKeyPressed(Keys.CONTROL_LEFT);
+		return Properties.getBool("debug.commands") && ActionType.MODIFIER.isPressed();
 	}
 	
 	@Override public boolean keyUp(int key) {
-		switch(key){
-		case Keys.A:
-			worldManager.getPlayer().setMoveLeft(false);
-			break;
-		case Keys.D:
-			worldManager.getPlayer().setMoveRight(false);
-			break;
-		case Keys.W:
-			worldManager.getPlayer().setJump(false);
-			break;
-		case Keys.C:
-		case Keys.CONTROL_LEFT:
-			worldManager.setDesireFixedRotation(true);
-			break;
-		}
 		for(IComponent component : worldManager.getPlayer().getListeners())
 			component.keyUp(key, worldManager);
 		return super.keyUp(key);
