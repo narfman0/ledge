@@ -18,12 +18,18 @@ public class BeingStatusHandlerPlugin implements IBeingStatusHandler, IWorldMana
 
 	@Override
 	public CompletionEnum statusBeing(String beingName, float dmg, boolean kill) {
-		for(Being being : world.getAllBeings())
-			if(being.getName().equals(beingName))
-				if(kill)
-					being.setHp(0f);
-				else if (dmg > 0f)
-					being.setHp(being.getHp() - dmg);
+		Being target = null;
+		if(beingName.endsWith("player"))
+			target = world.getPlayer();
+		else
+			for(Being being : world.getAllBeings())
+				if(being.getName().equals(beingName))
+					target = being;
+		if(target != null)
+			if(kill)
+				target.setHp(0f);
+			else if (dmg > 0f)
+				target.setHp(target.getHp() - dmg);
 		Log.log("BeingStatusHandlerPlugin.statusBeing", "Status change for " + beingName);
 		return CompletionEnum.COMPLETED;
 	}

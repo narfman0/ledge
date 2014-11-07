@@ -29029,6 +29029,74 @@
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-7</name>
+          <resource>data/textures/tiled/forest1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-135.5008</x>
+            <y>-98.6642</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-46.633194</x>
+              <y>45.69725</y>
+            </Vector2>
+            <Vector2>
+              <x>-29.34671</x>
+              <y>25.328606</y>
+            </Vector2>
+            <Vector2>
+              <x>-26.770935</x>
+              <y>15.368973</y>
+            </Vector2>
+            <Vector2>
+              <x>-12.74733</x>
+              <y>8.843704</y>
+            </Vector2>
+            <Vector2>
+              <x>-5.0200195</x>
+              <y>6.4396515</y>
+            </Vector2>
+            <Vector2>
+              <x>2.9934692</x>
+              <y>5.4093323</y>
+            </Vector2>
+            <Vector2>
+              <x>13.296539</x>
+              <y>5.752777</y>
+            </Vector2>
+            <Vector2>
+              <x>21.596252</x>
+              <y>7.4699554</y>
+            </Vector2>
+            <Vector2>
+              <x>27.033966</x>
+              <y>9.530579</y>
+            </Vector2>
+            <Vector2>
+              <x>48.180115</x>
+              <y>13.199745</y>
+            </Vector2>
+            <Vector2>
+              <x>50.502075</x>
+              <y>-72.894</y>
+            </Vector2>
+            <Vector2>
+              <x>-43.084137</x>
+              <y>-70.1465</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
       </polygons>
       <npcs>
         <world.GDXNPC>
@@ -35356,6 +35424,26 @@
             <path></path>
           </manifestation>
         </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>-152.40248</x>
+              <y>-46.599022</y>
+            </lowerLeft>
+            <upperRight>
+              <x>-122.29806</x>
+              <y>-17.340523</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>player</being>
+            <dmg>0.0</dmg>
+            <kill>true</kill>
+          </manifestation>
+        </world.quest.GDXQuest>
       </quests>
       <backgrounds>
         <world.GDXBackground>
@@ -40226,8 +40314,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>72.628456</x>
-            <y>-422.79877</y>
+            <x>23.4324</x>
+            <y>-421.6168</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -40237,16 +40325,16 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-118.237366</x>
-              <y>30.984863</y>
+              <x>-216.62949</x>
+              <y>33.348907</y>
             </Vector2>
             <Vector2>
-              <x>130.6098</x>
-              <y>28.66098</y>
+              <x>179.80585</x>
+              <y>27.479004</y>
             </Vector2>
             <Vector2>
-              <x>-12.372433</x>
-              <y>-59.645874</y>
+              <x>36.823624</x>
+              <y>-60.82785</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -50768,6 +50856,26 @@
             <path>ratchet</path>
           </manifestation>
         </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>fall0</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>-182.85422</x>
+              <y>-402.81454</y>
+            </lowerLeft>
+            <upperRight>
+              <x>137.15764</x>
+              <y>-344.84128</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>player</being>
+            <dmg>0.0</dmg>
+            <kill>true</kill>
+          </manifestation>
+        </world.quest.GDXQuest>
       </quests>
       <backgrounds>
         <world.GDXBackground>
@@ -50859,8 +50967,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-8.093325</x>
-            <y>-5.1562104</y>
+            <x>16.877876</x>
+            <y>-5.141614</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -50870,96 +50978,96 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-27.584593</x>
-              <y>19.684093</y>
+              <x>-52.555794</x>
+              <y>19.669498</y>
             </Vector2>
             <Vector2>
-              <x>-31.773867</x>
-              <y>8.50704</y>
+              <x>-56.745068</x>
+              <y>8.492443</y>
             </Vector2>
             <Vector2>
-              <x>-42.786568</x>
-              <y>-5.170939</y>
+              <x>-67.75777</x>
+              <y>-5.1855354</y>
             </Vector2>
             <Vector2>
-              <x>-36.3266</x>
-              <y>-5.500529</y>
+              <x>-61.2978</x>
+              <y>-5.5151253</y>
             </Vector2>
             <Vector2>
-              <x>3.1099243</x>
-              <y>-5.1160064</y>
+              <x>-21.861277</x>
+              <y>-5.130603</y>
             </Vector2>
             <Vector2>
-              <x>4.15582</x>
-              <y>-5.610391</y>
+              <x>-20.81538</x>
+              <y>-5.6249876</y>
             </Vector2>
             <Vector2>
-              <x>11.354061</x>
-              <y>-5.665323</y>
+              <x>-13.61714</x>
+              <y>-5.6799192</y>
             </Vector2>
             <Vector2>
-              <x>14.553284</x>
-              <y>-5.939981</y>
+              <x>-10.417917</x>
+              <y>-5.9545774</y>
             </Vector2>
             <Vector2>
-              <x>19.106018</x>
-              <y>-5.939981</y>
+              <x>-5.865183</x>
+              <y>-5.9545774</y>
             </Vector2>
             <Vector2>
-              <x>32.456604</x>
-              <y>-5.445596</y>
+              <x>7.485403</x>
+              <y>-5.4601927</y>
             </Vector2>
             <Vector2>
-              <x>48.32966</x>
-              <y>-5.2258697</y>
+              <x>23.35846</x>
+              <y>-5.240466</y>
             </Vector2>
             <Vector2>
-              <x>50.11384</x>
-              <y>-5.665323</y>
+              <x>25.14264</x>
+              <y>-5.6799192</y>
             </Vector2>
             <Vector2>
-              <x>52.14411</x>
-              <y>-5.2258697</y>
+              <x>27.172913</x>
+              <y>-5.240466</y>
             </Vector2>
             <Vector2>
-              <x>95.09464</x>
-              <y>-4.340857</y>
+              <x>644.46106</x>
+              <y>-4.01974</y>
             </Vector2>
             <Vector2>
-              <x>97.31404</x>
-              <y>-41.31942</y>
+              <x>72.34284</x>
+              <y>-41.33402</y>
             </Vector2>
             <Vector2>
-              <x>-51.373337</x>
-              <y>-39.88378</y>
+              <x>-76.344536</x>
+              <y>-39.89838</y>
             </Vector2>
             <Vector2>
-              <x>-43.398422</x>
-              <y>12.478371</y>
+              <x>-68.36962</x>
+              <y>12.463774</y>
             </Vector2>
             <Vector2>
-              <x>-36.4515</x>
-              <y>15.831133</y>
+              <x>-61.4227</x>
+              <y>15.816537</y>
             </Vector2>
             <Vector2>
-              <x>-33.071922</x>
-              <y>20.022083</y>
+              <x>-58.04312</x>
+              <y>20.007488</y>
             </Vector2>
             <Vector2>
-              <x>-33.259674</x>
-              <y>15.831133</y>
+              <x>-58.230873</x>
+              <y>15.816537</y>
             </Vector2>
             <Vector2>
-              <x>-30.255598</x>
-              <y>20.524996</y>
+              <x>-55.2268</x>
+              <y>20.510399</y>
             </Vector2>
             <Vector2>
-              <x>-31.382124</x>
-              <y>17.004599</y>
+              <x>-56.353325</x>
+              <y>16.990002</y>
             </Vector2>
             <Vector2>
-              <x>-30.067839</x>
-              <y>16.166409</y>
+              <x>-55.03904</x>
+              <y>16.151814</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -53388,6 +53496,26 @@
             <relativePosition>true</relativePosition>
             <relativeVelocity>true</relativeVelocity>
             <relativeAngle>true</relativeAngle>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>sideRightDie</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>80.57623</x>
+              <y>-10.971953</y>
+            </lowerLeft>
+            <upperRight>
+              <x>120.28236</x>
+              <y>35.52263</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>player</being>
+            <dmg>0.0</dmg>
+            <kill>true</kill>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
