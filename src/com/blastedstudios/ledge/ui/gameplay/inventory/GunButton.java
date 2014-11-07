@@ -14,8 +14,8 @@ import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 
 public class GunButton extends ImageButton {
-	private static final float INVENTORY_GUN_DIMENSION_X = Properties.getFloat("inventory.gun.dimension.x", 128f),
-		INVENTORY_GUN_DIMENSION_Y = Properties.getFloat("inventory.gun.dimension.y", 64f);
+	private static final float INVENTORY_GUN_DIMENSION_X = Properties.getFloat("inventory.gun.dimension.x", 64f),
+			INVENTORY_GUN_DIMENSION_Y = Properties.getFloat("inventory.gun.dimension.y", 64f);
 	public final Weapon gun;
 	
 	public GunButton(final Skin skin, final AssetManager sharedAssets, 
@@ -27,6 +27,8 @@ public class GunButton extends ImageButton {
 				clickedListener.gunButtonClicked(gun);
 			}
 		});
+		setWidth(INVENTORY_GUN_DIMENSION_X);
+		setHeight(INVENTORY_GUN_DIMENSION_Y);
 	}
 
 	static Sprite createGunSprite(AssetManager sharedAssets, String resource){
@@ -39,7 +41,9 @@ public class GunButton extends ImageButton {
 			sprite = new Sprite(EMPTY);
 			Log.error("GunButton.createGunSprite", "Failed to create sprite with resource: " + resource + " " + e.getMessage());
 		}
-		sprite.setSize(INVENTORY_GUN_DIMENSION_X, INVENTORY_GUN_DIMENSION_Y);
+		float scale = Math.min(1f, Math.min(INVENTORY_GUN_DIMENSION_Y / sprite.getHeight(), 
+											INVENTORY_GUN_DIMENSION_X / sprite.getWidth()));
+		sprite.setSize(sprite.getWidth() * scale, sprite.getHeight() * scale);
 		return sprite;
 	}
 	
