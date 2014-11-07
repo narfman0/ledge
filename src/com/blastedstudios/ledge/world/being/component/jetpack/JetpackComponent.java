@@ -10,7 +10,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
-import com.blastedstudios.ledge.ui.LedgeScreen.ActionType;
+import com.blastedstudios.ledge.util.ActionEnum;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.Being.BodyPart;
@@ -126,16 +126,16 @@ public class JetpackComponent extends AbstractComponent {
 	}
 
 	@Override public boolean keyDown(int key, WorldManager worldManager) {
-		if(ActionType.UP.matches(key)){
+		if(ActionEnum.UP.matches(key)){
 			if(!worldManager.isPause() && worldManager.isInputEnable())
 				jetpackActivated = true;
-		}else if(ActionType.LEFT.matches(key)){
+		}else if(ActionEnum.LEFT.matches(key)){
 			if(!worldManager.isPause() && worldManager.isInputEnable()){
 				if(System.currentTimeMillis() - lastTimeLeftPressed < Properties.getFloat("input.doublepress.time", 250))
 					dash(false);
 				lastTimeLeftPressed = System.currentTimeMillis();
 			}
-		}else if(ActionType.RIGHT.matches(key)){
+		}else if(ActionEnum.RIGHT.matches(key)){
 			if(!worldManager.isPause() && worldManager.isInputEnable()){
 				if(System.currentTimeMillis() - lastTimeRightPressed < Properties.getFloat("input.doublepress.time", 250))
 					dash(true);
@@ -146,7 +146,7 @@ public class JetpackComponent extends AbstractComponent {
 	}
 
 	@Override public boolean keyUp(int key, WorldManager worldManager){
-		if(ActionType.UP.matches(key))
+		if(ActionEnum.UP.matches(key))
 			jetpackActivated = false;
 		return false;
 	}

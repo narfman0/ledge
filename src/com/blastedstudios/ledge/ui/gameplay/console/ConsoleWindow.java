@@ -1,44 +1,68 @@
-package com.blastedstudios.ledge.ui.gameplay;
+package com.blastedstudios.ledge.ui.gameplay.console;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.scenes.scene2d.EventListener;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.ui.ScrollPane;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextField;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.blastedstudios.gdxworld.ui.AbstractWindow;
 import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.PluginUtil;
+import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
 import com.blastedstudios.ledge.util.IConsoleCommand;
 import com.blastedstudios.ledge.world.WorldManager;
 
-public class ConsoleWindow extends AbstractWindow{
+public class ConsoleWindow extends AbstractWindow {
 	private final TextField text;
+	private final Table historyTable;
 	
 	public ConsoleWindow(final Skin skin, final WorldManager world, 
 			final GameplayScreen screen, final EventListener listener) {
 		super("Console", skin);
+		historyTable = new Table(skin);
+		redrawHistory();
 		for(IConsoleCommand command : PluginUtil.getPlugins(IConsoleCommand.class))
 			command.initialize(world, screen);
 		text = new TextField("", skin);
 		text.setMessageText("<enter command>");
-		text.setWidth(200);
-		TextButton button = new TextButton("Send", skin);
-		button.addListener(new ClickListener() {
+		TextButton executeButton = new TextButton("Execute", skin);
+		executeButton.addListener(new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
 				execute();
+			}
+		});
+		TextButton closeButton = new TextButton("Close", skin);
+		closeButton.addListener(new ClickListener() {
+			@Override public void clicked(InputEvent event, float x, float y) {
 				listener.handle(event);
 			}
 		});
+		add(new ScrollPane(historyTable)).colspan(3);
+		row();
 		add(text);
-		add(button);
-		pack();
+		add(executeButton);
+		add(closeButton);
+		setSize(Gdx.graphics.getWidth()-8f, Gdx.graphics.getHeight()/2f);
+	}
+	
+	private void redrawHistory(){
+		historyTable.clear();
+		for(ConsoleOutputStruct struct : History.items){
+			historyTable.add(struct.output, "default-font", struct.color);
+			historyTable.row();
+		}
 	}
 
 	/**
 	 * Interpret text and execute command therein
 	 */
 	public void execute() {
+		History.add(text.getText(), Color.BLACK);
 		try{
 			String[] tokens = text.getText().split(" ");
 			for(IConsoleCommand command : PluginUtil.getPlugins(IConsoleCommand.class))
@@ -53,5 +77,6 @@ public class ConsoleWindow extends AbstractWindow{
 		}catch(Exception e){
 			e.printStackTrace();
 		}
+		redrawHistory();
 	}
 }

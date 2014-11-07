@@ -16,10 +16,10 @@ import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
-import com.blastedstudios.ledge.ui.LedgeScreen.ActionType;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunButton.IButtonClicked;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunInformationWindow.IWeaponInfoListener;
 import com.blastedstudios.ledge.ui.main.MainScreen;
+import com.blastedstudios.ledge.util.ActionEnum;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 
@@ -112,7 +112,7 @@ public class InventoryTable extends Table implements IButtonClicked, IWeaponInfo
 
 	@Override public void gunButtonClicked(Weapon weapon) {
 		informationWindowListener.gunButtonClicked(weapon);
-		if(lastClicked != null && ActionType.MODIFIER.isPressed()){
+		if(lastClicked != null && ActionEnum.MODIFIER.isPressed()){
 			swap(lastClicked, weapon);
 			lastClicked = null;
 			rebuildGunTables();

@@ -13,6 +13,7 @@ import com.blastedstudios.gdxworld.world.GDXWorld;
 import com.blastedstudios.ledge.ui.LedgeScreen;
 import com.blastedstudios.ledge.ui.main.MainWindow.IMainWindowListener;
 import com.blastedstudios.ledge.ui.main.NewCharacterWindow.INewCharacterWindowListener;
+import com.blastedstudios.ledge.util.ActionEnum;
 
 public class MainScreen extends LedgeScreen implements IMainWindowListener,
 		INewCharacterWindowListener, ITransitionListener {
@@ -33,7 +34,7 @@ public class MainScreen extends LedgeScreen implements IMainWindowListener,
 		gdxRenderer = new GDXRenderer(true, true);
 		stage.addActor(mainWindow = new MainWindow(skin, game, this, gdxWorld, WORLD_FILE, gdxRenderer, sharedAssets));
 		loadingPanner = new ScreenLevelPanner(gdxWorld, gdxRenderer, this);
-		register(ActionType.BACK, new AbstractInputHandler() {
+		register(ActionEnum.BACK, new AbstractInputHandler() {
 			public void down(){
 				Gdx.app.exit();
 			}

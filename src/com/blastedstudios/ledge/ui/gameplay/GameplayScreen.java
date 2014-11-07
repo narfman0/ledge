@@ -14,6 +14,8 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.Event;
+import com.badlogic.gdx.scenes.scene2d.EventListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.beingspawn.BeingSpawnManifestation;
@@ -35,11 +37,13 @@ import com.blastedstudios.gdxworld.world.quest.GDXQuest;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.ledge.ui.LedgeScreen;
+import com.blastedstudios.ledge.ui.gameplay.console.ConsoleWindow;
 import com.blastedstudios.ledge.ui.gameplay.hud.HUD;
 import com.blastedstudios.ledge.ui.gameplay.inventory.InventoryWindow;
 import com.blastedstudios.ledge.ui.gameplay.particles.ParticleManager;
 import com.blastedstudios.ledge.ui.loading.GameplayLoadingWindowExecutor;
 import com.blastedstudios.ledge.ui.loading.LoadingWindow;
+import com.blastedstudios.ledge.util.ActionEnum;
 import com.blastedstudios.ledge.util.SaveHelper;
 import com.blastedstudios.ledge.world.DialogManager;
 import com.blastedstudios.ledge.world.DialogManager.DialogStruct;
@@ -113,12 +117,12 @@ public class GameplayScreen extends LedgeScreen {
 	}
 	
 	private void registerInput(){
-		register(ActionType.BACK, new AbstractInputHandler() {
+		register(ActionEnum.BACK, new AbstractInputHandler() {
 			public void down(){
 				handlePause();
 			}
 		});
-		register(ActionType.CROUCH, new AbstractInputHandler() {
+		register(ActionEnum.CROUCH, new AbstractInputHandler() {
 			public void down(){
 				worldManager.setDesireFixedRotation(false);
 			}
@@ -126,18 +130,18 @@ public class GameplayScreen extends LedgeScreen {
 				worldManager.setDesireFixedRotation(true);
 			}
 		});
-		register(ActionType.RELOAD, new AbstractInputHandler() {
+		register(ActionEnum.RELOAD, new AbstractInputHandler() {
 			public void down(){
 				if(!worldManager.isPause() && worldManager.isInputEnable())
 					worldManager.getPlayer().setReloading(true);
 			}
 		});
-		register(ActionType.INVENTORY, new AbstractInputHandler() {
+		register(ActionEnum.INVENTORY, new AbstractInputHandler() {
 			public void down(){
 				handlePause();
 			}
 		});
-		register(ActionType.LEFT, new AbstractInputHandler() {
+		register(ActionEnum.LEFT, new AbstractInputHandler() {
 			public void down(){
 				if(!worldManager.isPause() && worldManager.isInputEnable())
 					worldManager.getPlayer().setMoveLeft(true);
@@ -146,7 +150,7 @@ public class GameplayScreen extends LedgeScreen {
 				worldManager.getPlayer().setMoveLeft(false);
 			}
 		});
-		register(ActionType.RIGHT, new AbstractInputHandler() {
+		register(ActionEnum.RIGHT, new AbstractInputHandler() {
 			public void down(){
 				if(!worldManager.isPause() && worldManager.isInputEnable())
 					worldManager.getPlayer().setMoveRight(true);
@@ -155,7 +159,7 @@ public class GameplayScreen extends LedgeScreen {
 				worldManager.getPlayer().setMoveRight(false);
 			}
 		});
-		register(ActionType.UP, new AbstractInputHandler() {
+		register(ActionEnum.UP, new AbstractInputHandler() {
 			public void down(){
 				if(!worldManager.isPause() && worldManager.isInputEnable())
 					worldManager.getPlayer().setJump(true);
@@ -164,8 +168,34 @@ public class GameplayScreen extends LedgeScreen {
 				worldManager.getPlayer().setJump(false);
 			}
 		});
-		register(ActionType.ACTION, new AbstractInputHandler() {
+		register(ActionEnum.CONSOLE, new AbstractInputHandler() {
 			public void down(){
+				if(Properties.getBool("debug.commands")){
+					if(consoleWindow == null){
+						EventListener listener = new EventListener() {
+							@Override public boolean handle(Event event) {
+								consoleWindow.remove();
+								consoleWindow = null;
+								return false;
+							}
+						};
+						stage.addActor(consoleWindow = new ConsoleWindow(skin, worldManager, GameplayScreen.this, listener));
+						consoleWindow.setX(Gdx.graphics.getWidth()/2 - consoleWindow.getWidth()/2);
+					}else{
+						consoleWindow.remove();
+						consoleWindow = null;
+					}
+				}
+			}
+		});
+		register(ActionEnum.ACTION, new AbstractInputHandler() {
+			public void down(){
+				if(consoleWindow != null){
+					consoleWindow.execute();
+					consoleWindow.remove();
+					consoleWindow = null;
+					return;
+				}
 				if(debugCommandEnabled()){
 					game.pushScreen(new LevelEditorScreen(game, world, selectedFile, level, assetManager));
 					Log.log("GameplayScreen.render", "Edit mode entered");
@@ -260,7 +290,8 @@ public class GameplayScreen extends LedgeScreen {
 				(inventoryWindow == null || !inventoryWindow.contains(x, y)) &&
 				(characterWindow == null || !characterWindow.contains(x, y)) &&
 				(backWindow == null || !backWindow.contains(x, y)) &&
-				(vendorWindow == null || !vendorWindow.contains(x, y)))
+				(vendorWindow == null || !vendorWindow.contains(x, y)) && 
+				(consoleWindow == null || !consoleWindow.contains(x, y)))
 			worldManager.getPlayer().attack(touchedDirection, worldManager);
 	}
 	
@@ -374,7 +405,7 @@ public class GameplayScreen extends LedgeScreen {
 	}
 	
 	private boolean debugCommandEnabled(){
-		return Properties.getBool("debug.commands") && ActionType.MODIFIER.isPressed();
+		return Properties.getBool("debug.commands") && ActionEnum.MODIFIER.isPressed();
 	}
 	
 	@Override public boolean keyUp(int key) {

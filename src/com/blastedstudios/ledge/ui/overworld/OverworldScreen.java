@@ -20,6 +20,7 @@ import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXWorld;
 import com.blastedstudios.ledge.ui.LedgeScreen;
+import com.blastedstudios.ledge.util.ActionEnum;
 import com.blastedstudios.ledge.util.SpriteTweenAccessor;
 import com.blastedstudios.ledge.world.being.Player;
 
@@ -68,14 +69,14 @@ public class OverworldScreen extends LedgeScreen{
 		tweenManager = new TweenManager();
 		Tween.registerAccessor(Sprite.class, new SpriteTweenAccessor());
 		camera.update();
-		register(ActionType.BACK, new AbstractInputHandler() {
+		register(ActionEnum.BACK, new AbstractInputHandler() {
 			public void down(){
 				game.popScreen();
 			}
 		});
-		register(ActionType.ACTION, new AbstractInputHandler() {
+		register(ActionEnum.ACTION, new AbstractInputHandler() {
 			public void down(){
-				if(ActionType.MODIFIER.isPressed())
+				if(ActionEnum.MODIFIER.isPressed())
 					game.pushScreen(new WorldEditorScreen(game, gdxWorld, worldFile));
 			}
 		});
