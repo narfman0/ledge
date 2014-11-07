@@ -13,7 +13,7 @@ import com.blastedstudios.ledge.ui.main.MainScreen;
 public class BackWindow extends AbstractWindow {
 	public BackWindow(final Skin skin, final GameplayScreen screen) {
 		super("", skin);
-		Button button = new TextButton(Properties.get("ui.back.button.text", "Exit to main menu"), skin);
+		Button button = new TextButton(Properties.get("ui.back.button.text", "Exit to Map"), skin);
 		button.addListener(new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
 				screen.handleBack();
