@@ -13,7 +13,7 @@
                       <Parameter name="runs" fromcontext="false">1</Parameter>
                     </Parameters>
                     <Children>
-                      <Node id="Node_36" name="GMTick" type="Action" />
+                      <Node id="Node_36" name="GMInit" type="Action" />
                     </Children>
                   </Node>
                 </Children>

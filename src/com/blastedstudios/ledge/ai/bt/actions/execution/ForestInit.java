@@ -17,21 +17,21 @@ import com.blastedstudios.ledge.world.being.INPCActionExecutor;
 import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
 
-/** ExecutionAction class created from MMPM action ForestTick. */
-public class ForestTick extends jbt.execution.task.leaf.action.ExecutionAction {
+/** ExecutionAction class created from MMPM action ForestInit. */
+public class ForestInit extends jbt.execution.task.leaf.action.ExecutionAction {
 
 	/**
-	 * Constructor. Constructs an instance of ForestTick that is able to run a
-	 * com.blastedstudios.ledge.ai.bt.actions.ForestTick.
+	 * Constructor. Constructs an instance of ForestInit that is able to run a
+	 * com.blastedstudios.ledge.ai.bt.actions.ForestInit.
 	 */
-	public ForestTick(jbt.model.core.ModelTask modelTask,
+	public ForestInit(jbt.model.core.ModelTask modelTask,
 			jbt.execution.core.BTExecutor executor,
 			jbt.execution.core.ExecutionTask parent) {
 		super(modelTask, executor, parent);
 
-		if (!(modelTask instanceof com.blastedstudios.ledge.ai.bt.actions.ForestTick)) {
+		if (!(modelTask instanceof com.blastedstudios.ledge.ai.bt.actions.ForestInit)) {
 			throw new java.lang.RuntimeException(
-					"The ModelTask must subclass com.blastedstudios.ledge.ai.bt.actions.ForestTick");
+					"The ModelTask must subclass com.blastedstudios.ledge.ai.bt.actions.ForestInit");
 		}
 	}
 

@@ -17,22 +17,22 @@ import com.blastedstudios.ledge.world.being.INPCActionExecutor;
 import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
 
-/** ExecutionAction class created from MMPM action NearDeadTick. */
-public class NearDeadTick extends
+/** ExecutionAction class created from MMPM action NearDeadInit. */
+public class NearDeadInit extends
 		jbt.execution.task.leaf.action.ExecutionAction {
 
 	/**
-	 * Constructor. Constructs an instance of NearDeadTick that is able to run a
-	 * com.blastedstudios.ledge.ai.bt.actions.NearDeadTick.
+	 * Constructor. Constructs an instance of NearDeadInit that is able to run a
+	 * com.blastedstudios.ledge.ai.bt.actions.NearDeadInit.
 	 */
-	public NearDeadTick(jbt.model.core.ModelTask modelTask,
+	public NearDeadInit(jbt.model.core.ModelTask modelTask,
 			jbt.execution.core.BTExecutor executor,
 			jbt.execution.core.ExecutionTask parent) {
 		super(modelTask, executor, parent);
 
-		if (!(modelTask instanceof com.blastedstudios.ledge.ai.bt.actions.NearDeadTick)) {
+		if (!(modelTask instanceof com.blastedstudios.ledge.ai.bt.actions.NearDeadInit)) {
 			throw new java.lang.RuntimeException(
-					"The ModelTask must subclass com.blastedstudios.ledge.ai.bt.actions.NearDeadTick");
+					"The ModelTask must subclass com.blastedstudios.ledge.ai.bt.actions.NearDeadInit");
 		}
 	}
 

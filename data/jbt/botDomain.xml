@@ -38,9 +38,9 @@
 		<Action name="Stop" />
 		
 		<!-- Specific domain node(s) e.g. bosses -->
-		<Action name="GMTick" />
-		<Action name="ForestTick" />
-		<Action name="NearDeadTick" />
+		<Action name="GMInit" />
+		<Action name="ForestInit" />
+		<Action name="NearDeadInit" />
 	</ActionSet>
 	<SensorSet>
 		<Sensor name="LowDanger" type="BOOLEAN" />

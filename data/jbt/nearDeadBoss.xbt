@@ -13,7 +13,7 @@
                       <Parameter name="runs" fromcontext="false">1</Parameter>
                     </Parameters>
                     <Children>
-                      <Node id="Node_38" name="NearDeadTick" type="Action" />
+                      <Node id="Node_38" name="NearDeadInit" type="Action" />
                     </Children>
                   </Node>
                 </Children>

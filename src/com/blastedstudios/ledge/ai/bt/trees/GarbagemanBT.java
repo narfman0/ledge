@@ -27,7 +27,7 @@ public class GarbagemanBT implements jbt.execution.core.IBTLibrary {
 								new jbt.model.task.decorator.ModelLimit(
 										null,
 										1,
-										new com.blastedstudios.ledge.ai.bt.actions.GMTick(
+										new com.blastedstudios.ledge.ai.bt.actions.GMInit(
 												null))),
 						new jbt.model.task.composite.ModelSequence(
 								null,

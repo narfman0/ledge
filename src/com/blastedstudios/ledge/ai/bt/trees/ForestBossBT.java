@@ -27,7 +27,7 @@ public class ForestBossBT implements jbt.execution.core.IBTLibrary {
 								new jbt.model.task.decorator.ModelLimit(
 										null,
 										1,
-										new com.blastedstudios.ledge.ai.bt.actions.ForestTick(
+										new com.blastedstudios.ledge.ai.bt.actions.ForestInit(
 												null))),
 						new jbt.model.task.composite.ModelSequence(
 								null,

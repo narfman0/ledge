@@ -27,7 +27,7 @@ public class NearDeadBossBT implements jbt.execution.core.IBTLibrary {
 								new jbt.model.task.decorator.ModelLimit(
 										null,
 										1,
-										new com.blastedstudios.ledge.ai.bt.actions.NearDeadTick(
+										new com.blastedstudios.ledge.ai.bt.actions.NearDeadInit(
 												null))),
 						new jbt.model.task.composite.ModelSequence(
 								null,

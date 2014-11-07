@@ -29,8 +29,8 @@ import com.blastedstudios.ledge.world.being.INPCActionExecutor;
 import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
 
-/** ExecutionAction class created from MMPM action GMTick. */
-public class GMTick extends
+/** ExecutionAction class created from MMPM action GMInit. */
+public class GMInit extends
 jbt.execution.task.leaf.action.ExecutionAction {
 	private static String HANDLER_NAME = "AnimationHandler",
 			HANDLER_PATH = "data/world/npc/animation/garbageman.xml",
@@ -40,17 +40,17 @@ jbt.execution.task.leaf.action.ExecutionAction {
 	private static final long TOTAL_TIME_DIRECTION = Properties.getInt("garbageman.move.time", 7000);//ms
 
 	/**
-	 * Constructor. Constructs an instance of GMTick that is able to run a
-	 * com.blastedstudios.ledge.ai.bt.actions.GMTick.
+	 * Constructor. Constructs an instance of GMInit that is able to run a
+	 * com.blastedstudios.ledge.ai.bt.actions.GMInit.
 	 */
-	public GMTick(jbt.model.core.ModelTask modelTask,
+	public GMInit(jbt.model.core.ModelTask modelTask,
 			jbt.execution.core.BTExecutor executor,
 			jbt.execution.core.ExecutionTask parent) {
 		super(modelTask, executor, parent);
 
-		if (!(modelTask instanceof com.blastedstudios.ledge.ai.bt.actions.GMTick)) {
+		if (!(modelTask instanceof com.blastedstudios.ledge.ai.bt.actions.GMInit)) {
 			throw new java.lang.RuntimeException(
-					"The ModelTask must subclass com.blastedstudios.ledge.ai.bt.actions.GMTick");
+					"The ModelTask must subclass com.blastedstudios.ledge.ai.bt.actions.GMInit");
 		}
 	}
 
