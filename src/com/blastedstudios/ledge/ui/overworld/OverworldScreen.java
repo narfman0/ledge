@@ -13,7 +13,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
-import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.ui.worldeditor.WorldEditorScreen;
 import com.blastedstudios.gdxworld.util.GDXGame;
@@ -21,11 +20,11 @@ import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXWorld;
-import com.blastedstudios.ledge.ui.main.MainScreen;
+import com.blastedstudios.ledge.ui.LedgeScreen;
 import com.blastedstudios.ledge.util.SpriteTweenAccessor;
 import com.blastedstudios.ledge.world.being.Player;
 
-public class OverworldScreen extends AbstractScreen{
+public class OverworldScreen extends LedgeScreen{
 	private static final float OFFSET_SCALAR = Properties.getFloat("world.level.offset.scalar", 20);
 	private final SpriteBatch spriteBatch = new SpriteBatch();
 	private final Sprite backgroundSprite, levelSprite, levelCurrentSprite;
@@ -41,7 +40,7 @@ public class OverworldScreen extends AbstractScreen{
 
 	public OverworldScreen(GDXGame game, Player player, GDXWorld gdxWorld, FileHandle worldFile,
 			GDXRenderer gdxRenderer, AssetManager sharedAssets){
-		super(game, MainScreen.SKIN_PATH);
+		super(game);
 		this.player = player;
 		this.gdxWorld = gdxWorld;
 		this.worldFile = worldFile;
@@ -69,21 +68,24 @@ public class OverworldScreen extends AbstractScreen{
 		levelCurrentSprite.setPosition(firstLevel.getCoordinates().x*OFFSET_SCALAR, firstLevel.getCoordinates().y*OFFSET_SCALAR);
 		tweenManager = new TweenManager();
 		Tween.registerAccessor(Sprite.class, new SpriteTweenAccessor());
+		camera.update();
+		register(ActionType.BACK, new AbstractInputHandler() {
+			public void down(){
+				game.popScreen();
+			}
+		});
+		register(ActionType.ACTION, new AbstractInputHandler() {
+			public void down(){
+				if(Gdx.input.isKeyPressed(Keys.CONTROL_LEFT))
+					game.pushScreen(new WorldEditorScreen(game, gdxWorld, worldFile));
+			}
+		});
 	}
 
 	@Override public void render(float delta){
 		super.render(delta);
 		sharedAssets.update();
 		tweenManager.update(delta);
-		camera.update();
-		if(Gdx.input.isKeyPressed(Keys.UP) && upperLeft.y > camera.position.y)
-			camera.position.y+=camera.zoom;
-		if(Gdx.input.isKeyPressed(Keys.DOWN) && lowerRight.y < camera.position.y)
-			camera.position.y-=camera.zoom;
-		if(Gdx.input.isKeyPressed(Keys.RIGHT) && lowerRight.x > camera.position.x)
-			camera.position.x+=camera.zoom;
-		if(Gdx.input.isKeyPressed(Keys.LEFT) && upperLeft.x < camera.position.x)
-			camera.position.x-=camera.zoom;
 		spriteBatch.setProjectionMatrix(camera.combined);
 		spriteBatch.begin();
 		backgroundSprite.draw(spriteBatch);
@@ -98,18 +100,6 @@ public class OverworldScreen extends AbstractScreen{
 		}
 		spriteBatch.end();
 		stage.draw();
-	}
-
-	@Override public boolean keyDown(int key) {
-		switch(key){
-		case Keys.ESCAPE:
-			game.popScreen();
-			break;
-		case Keys.E:
-			if(Gdx.input.isKeyPressed(Keys.CONTROL_LEFT))
-				game.pushScreen(new WorldEditorScreen(game, gdxWorld, worldFile));
-		}
-		return super.keyDown(key);
 	}
 
 	@Override public boolean touchDown(int x, int y, int ptr, int button) {
