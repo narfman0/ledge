@@ -86,8 +86,6 @@ public class JetpackComponent extends AbstractComponent {
 			if(being.getRagdoll().getBodyPart(BodyPart.torso).getLinearVelocity().y < 2f)
 				being.getRagdoll().applyForceAtCenter(0, being.getStats().getJetpackImpulse());
 			jetpackPower += -Properties.getFloat("character.jetpack.burnrate", 1f);
-			Log.log("Being.jetpackRecharge", "Jetpack burning, currently " + jetpackPower + "/" + 
-					being.getStats().getJetpackMax() + " loc:" + being.getPosition());
 		}
 		jetpackPower = Math.min(being.getStats().getJetpackMax(), jetpackPower + being.getStats().getJetpackRecharge());
 	}

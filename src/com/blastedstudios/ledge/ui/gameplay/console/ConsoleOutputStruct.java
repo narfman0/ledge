@@ -10,4 +10,8 @@ class ConsoleOutputStruct {
 		this.output = output;
 		this.color = color;
 	}
+	
+	@Override public String toString(){
+		return "[ConsoleOutputStruct output: " + output + " color: " + color + "]";
+	}
 }

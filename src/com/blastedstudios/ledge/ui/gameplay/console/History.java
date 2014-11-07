@@ -14,17 +14,20 @@ public class History implements ILogHandler{
 
 	@Override
 	public void debug(String tag, String message) {
-		add(tag + ": " + message, Color.GRAY);
+		if(Properties.getBool("history.log.debug", false))
+			add(tag + ": " + message, Color.GRAY);
 	}
 
 	@Override
 	public void error(String tag, String message) {
-		add(tag + ": " + message, Color.MAROON);
+		if(Properties.getBool("history.log.error", true))
+			add(tag + ": " + message, Color.MAROON);
 	}
 
 	@Override
 	public void log(String tag, String message) {
-		add(tag + ": " + message, Color.DARK_GRAY);
+		if(Properties.getBool("history.log.log", true))
+			add(tag + ": " + message, Color.DARK_GRAY);
 	}
 	
 	public static void add(String msg, Color color){
