@@ -114,60 +114,6 @@
             </velocity>
             <type>StaticBody</type>
             <torque>0.0</torque>
-            <angle>1.0</angle>
-            <hasPosition>false</hasPosition>
-            <hasVelocity>false</hasVelocity>
-            <hasAngle>true</hasAngle>
-            <relativePosition>true</relativePosition>
-            <relativeVelocity>true</relativeVelocity>
-            <relativeAngle>false</relativeAngle>
-          </manifestation>
-          <time>0.5</time>
-        </world.animation.AnimationStruct>
-        <world.animation.AnimationStruct>
-          <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
-            <name>torso</name>
-            <impulse>
-              <x>0.0</x>
-              <y>-750.0</y>
-            </impulse>
-            <position>
-              <x>0.0</x>
-              <y>0.0</y>
-            </position>
-            <velocity>
-              <x>0.0</x>
-              <y>0.0</y>
-            </velocity>
-            <type>DynamicBody</type>
-            <torque>20000.0</torque>
-            <angle>0.0</angle>
-            <hasPosition>false</hasPosition>
-            <hasVelocity>false</hasVelocity>
-            <hasAngle>false</hasAngle>
-            <relativePosition>true</relativePosition>
-            <relativeVelocity>true</relativeVelocity>
-            <relativeAngle>true</relativeAngle>
-          </manifestation>
-          <time>.75</time>
-        </world.animation.AnimationStruct>
-        <world.animation.AnimationStruct>
-          <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
-            <name>torso</name>
-            <impulse>
-              <x>0.0</x>
-              <y>0.0</y>
-            </impulse>
-            <position>
-              <x>0.0</x>
-              <y>0.0</y>
-            </position>
-            <velocity>
-              <x>0.0</x>
-              <y>0.0</y>
-            </velocity>
-            <type>StaticBody</type>
-            <torque>0.0</torque>
             <angle>0.0</angle>
             <hasPosition>false</hasPosition>
             <hasVelocity>false</hasVelocity>
@@ -203,7 +149,7 @@
             <relativeVelocity>true</relativeVelocity>
             <relativeAngle>true</relativeAngle>
           </manifestation>
-          <time>1.5</time>
+          <time>1.4</time>
         </world.animation.AnimationStruct>
         <world.animation.AnimationStruct>
           <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
