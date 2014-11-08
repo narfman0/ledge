@@ -224,7 +224,8 @@ public class GameplayScreen extends LedgeScreen {
 								break;
 							}
 						}
-				}
+				}else if(worldManager.getPlayer().isDead() && worldManager.getRespawnLocation() != null)
+					worldManager.respawnPlayer();
 			}
 		});
 	}
