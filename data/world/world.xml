@@ -8663,6 +8663,25 @@
             <type></type>
           </manifestation>
         </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet73</name>
+          <prerequisites>ratchet72</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.particle.ParticleManifestation">
+            <name>Particle</name>
+            <effectFile>particles/particle.p</effectFile>
+            <imagesDir>particles</imagesDir>
+            <emitterName></emitterName>
+            <attachedBody></attachedBody>
+            <duration>-1</duration>
+            <position>
+              <x>0.0</x>
+              <y>0.0</y>
+            </position>
+            <modificationType>REMOVE</modificationType>
+          </manifestation>
+        </world.quest.GDXQuest>
       </quests>
       <backgrounds>
         <world.GDXBackground>
@@ -16997,7 +17016,7 @@
           </trigger>
           <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
             <success>true</success>
-            <nextLevel></nextLevel>
+            <nextLevel>Forest</nextLevel>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -34596,7 +34615,7 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
             <success>true</success>
-            <nextLevel></nextLevel>
+            <nextLevel>NearDead</nextLevel>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -50393,7 +50412,7 @@
           </trigger>
           <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
             <success>true</success>
-            <nextLevel></nextLevel>
+            <nextLevel>Dead</nextLevel>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -50925,6 +50944,30 @@
             <being>player</being>
             <dmg>0.0</dmg>
             <kill>true</kill>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>respawn12</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>387.02762</x>
+              <y>-193.04855</y>
+            </lowerLeft>
+            <upperRight>
+              <x>398.71335</x>
+              <y>-184.29666</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>399.54214</x>
+              <y>-211.4474</y>
+            </coordinates>
+            <being>player</being>
+            <npcData></npcData>
+            <path></path>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>

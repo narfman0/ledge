@@ -190,12 +190,6 @@ public class GameplayScreen extends LedgeScreen {
 		});
 		register(ActionEnum.ACTION, new AbstractInputHandler() {
 			public void down(){
-				if(consoleWindow != null){
-					consoleWindow.execute();
-					consoleWindow.remove();
-					consoleWindow = null;
-					return;
-				}
 				if(debugCommandEnabled()){
 					game.pushScreen(new LevelEditorScreen(game, world, selectedFile, level, assetManager));
 					Log.log("GameplayScreen.render", "Edit mode entered");
