@@ -373,7 +373,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		}
 	}
 
-	private static void recoverFromFreeRotation(Body body){
+	public static void recoverFromFreeRotation(Body body){
 		body.setTransform(body.getPosition().x, body.getPosition().y, 
 				(body.getAngle() % (float)((body.getAngle() < 0 ? 2.0 : -2.0)*Math.PI))*.83f);
 	}

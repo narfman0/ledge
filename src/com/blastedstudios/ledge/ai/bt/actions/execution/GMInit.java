@@ -23,6 +23,8 @@ import com.blastedstudios.gdxworld.world.animation.GDXAnimationHandler;
 import com.blastedstudios.gdxworld.world.animation.GDXAnimations;
 import com.blastedstudios.gdxworld.world.quest.manifestation.IQuestManifestationExecutor;
 import com.blastedstudios.ledge.ai.bt.TimeKeeper;
+import com.blastedstudios.ledge.physics.ragdoll.AbstractRagdoll;
+import com.blastedstudios.ledge.physics.ragdoll.IRagdoll;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being.BodyPart;
 import com.blastedstudios.ledge.world.being.INPCActionExecutor;
@@ -35,7 +37,8 @@ jbt.execution.task.leaf.action.ExecutionAction {
 	private static String HANDLER_NAME = "AnimationHandler",
 			HANDLER_PATH = "data/world/npc/animation/garbageman.xml",
 			TIME_MOVED_DIRECTION = "TimeMoved",
-			CURRENT = "CurrentAnimation";
+			CURRENT = "CurrentAnimation",
+			RECOVER_TIME = "Recover";
 	private static final float STOMP_DISTANCE = Properties.getFloat("garbageman.stomp.distance", 6f);
 	private static final long TOTAL_TIME_DIRECTION = Properties.getInt("garbageman.move.time", 7000);//ms
 
@@ -104,10 +107,13 @@ jbt.execution.task.leaf.action.ExecutionAction {
 					if(!handler.getCurrentAnimation().getName().equals("sword")){
 						if(distance < Properties.getFloat("garbageman.sword.distance.max", 10f) && distance > STOMP_DISTANCE){
 							handler.applyCurrentAnimation(handler.getAnimations().getAnimation("sword"), 0);
+							context.setVariable(RECOVER_TIME, 1.3f);
+							self.setFixedRotation(false);
 							return Status.RUNNING;
 						}else
 							return Status.FAILURE;
 					}
+					recover(context, self.getRagdoll());
 					handler.render(Gdx.graphics.getDeltaTime());
 					return handler.getCurrentAnimation().getName().equals("sword") ? Status.RUNNING : Status.SUCCESS;
 				}else if(identifier.equals("stomp")){
@@ -139,6 +145,26 @@ jbt.execution.task.leaf.action.ExecutionAction {
 				}
 			}
 		};
+	}
+	
+	private static void recover(IContext context, IRagdoll ragdoll){
+		Object var = context.getVariable(RECOVER_TIME);
+		if(var == null)
+			return;
+		float recoverTime = (float) var;
+		recoverTime -= Gdx.graphics.getDeltaTime();
+		Body torso = ragdoll.getBodyPart(BodyPart.torso);
+		if(recoverTime <= 0f){
+			if(!ragdoll.isFixedRotation())
+				ragdoll.setFixedRotation(true);
+			if(Math.abs(torso.getAngle()) > .05f)
+				AbstractRagdoll.recoverFromFreeRotation(torso);
+			else{
+				context.clearVariable(RECOVER_TIME);
+				return;
+			}
+		}
+		context.setVariable(RECOVER_TIME, Math.max(0f, recoverTime));
 	}
 
 	protected void internalTerminate() {}

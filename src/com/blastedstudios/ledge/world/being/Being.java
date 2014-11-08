@@ -658,9 +658,11 @@ public class Being implements Serializable{
 	}
 
 	public void setFixedRotation(boolean fixedRotation) {
-		ragdoll.setFixedRotation(fixedRotation);
-		for(IComponent component : getListeners())
-			component.setFixedRotation(fixedRotation);
+		if(fixedRotation != ragdoll.isFixedRotation()){
+			ragdoll.setFixedRotation(fixedRotation);
+			for(IComponent component : getListeners())
+				component.setFixedRotation(fixedRotation);
+		}
 	}
 	
 	public Stats getStats(){
