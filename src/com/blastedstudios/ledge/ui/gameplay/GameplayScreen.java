@@ -232,8 +232,6 @@ public class GameplayScreen extends LedgeScreen {
 						}
 				}
 			}
-			public void up(){
-			}
 		});
 	}
 	

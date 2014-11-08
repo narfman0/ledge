@@ -58,7 +58,7 @@ public class QuestTriggerInformationProvider implements IQuestTriggerInformation
 	}
 
 	@Override public boolean isAction() {
-		return ActionEnum.MODIFIER.isPressed();
+		return ActionEnum.ACTION.isPressed();
 	}
 	
 	public void beingHit(DamageStruct damageStruct){
