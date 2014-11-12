@@ -10605,7 +10605,7 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>As a ball finally penetrates a cylinder on the combustion jepack behind him, he too is engulfed in black smoke. Filling the sky, the engine sputters as Colligan&apos;s threshold for consciousness is surpassed.</dialog>
+            <dialog>As a ball finally penetrates a cylinder on the combustion jet pack behind him, he too is engulfed in black smoke. Filling the sky, the engine sputters as Colligan&apos;s threshold for consciousness is surpassed.</dialog>
             <origin></origin>
             <type></type>
           </manifestation>
