@@ -83,6 +83,10 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		lHandFixture.setUserData(being);
 		rHandFixture.setUserData(being);
 
+		setTextureAtlas(atlas);
+	}
+	
+	public void setTextureAtlas(final TextureAtlas atlas){
 		sprites.put(torsoBody, atlas.createSprite("torso"));
 		sprites.put(rLegBody, atlas.createSprite("rleg"));
 		sprites.put(lLegBody, atlas.createSprite("lleg"));
