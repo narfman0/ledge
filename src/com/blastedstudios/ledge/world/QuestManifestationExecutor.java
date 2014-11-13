@@ -75,7 +75,12 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 	}
 
 	public CompletionEnum pathChange(String beingString, String pathString) {
-		GDXPath path = worldManager.getPath(pathString);
+		final GDXPath path;
+		if(pathString.equals("player")){
+			path = new GDXPath();
+			path.getNodes().add(worldManager.getPlayer().getPosition());
+		}else
+			path = worldManager.getPath(pathString);
 		
 		boolean found = false;
 		LinkedList<String> names = new LinkedList<>();

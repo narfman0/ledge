@@ -1,7 +1,11 @@
 package com.blastedstudios.ledge.plugin.quest.handler;
 
+import java.util.LinkedList;
+
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.IBeingStatusHandler;
@@ -17,19 +21,22 @@ public class BeingStatusHandlerPlugin implements IBeingStatusHandler, IWorldMana
 	}
 
 	@Override
-	public CompletionEnum statusBeing(String beingName, float dmg, boolean kill) {
-		Being target = null;
-		if(beingName.endsWith("player"))
-			target = world.getPlayer();
-		else
-			for(Being being : world.getAllBeings())
-				if(being.getName().equals(beingName))
-					target = being;
-		if(target != null)
+	public CompletionEnum statusBeing(String beingName, float dmg, boolean kill, String textureAtlas) {
+		LinkedList<Being> targets = new LinkedList<>();
+		if(beingName.matches("player"))
+			targets.add(world.getPlayer());
+		for(Being being : world.getAllBeings())
+			if(being.getName().matches(beingName))
+				targets.add(being);
+		for(Being target : targets){
+			if (dmg > 0f)
+				target.setHp(target.getHp() - dmg);
 			if(kill)
 				target.setHp(0f);
-			else if (dmg > 0f)
-				target.setHp(target.getHp() - dmg);
+			if(textureAtlas != null && !textureAtlas.isEmpty())
+				target.getRagdoll().setTextureAtlas(new TextureAtlas(
+						Gdx.files.internal("data/textures/characters/" + textureAtlas + ".atlas")));
+		}
 		Log.log("BeingStatusHandlerPlugin.statusBeing", "Status change for " + beingName);
 		return CompletionEnum.COMPLETED;
 	}

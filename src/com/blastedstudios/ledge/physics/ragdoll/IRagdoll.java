@@ -42,7 +42,7 @@ public interface IRagdoll{
 	void applyTorque(float torque);
 	boolean isFacingLeft();
 	void breakAppendage(BodyPart bodyPart, World world, Vector2 dir);
-	
+	void setTextureAtlas(final TextureAtlas atlas);
 	Body getHandFacing();
 	/**
 	 * @return position of the hand according to which direction the ragdoll is facing.
