@@ -21,7 +21,7 @@ public class BeingStatusHandlerPlugin implements IBeingStatusHandler, IWorldMana
 	}
 
 	@Override
-	public CompletionEnum statusBeing(String beingName, float dmg, boolean kill, String textureAtlas) {
+	public CompletionEnum statusBeing(String beingName, float dmg, boolean kill, String textureAtlas, boolean remove) {
 		LinkedList<Being> targets = new LinkedList<>();
 		if(beingName.matches("player"))
 			targets.add(world.getPlayer());
@@ -36,6 +36,8 @@ public class BeingStatusHandlerPlugin implements IBeingStatusHandler, IWorldMana
 			if(textureAtlas != null && !textureAtlas.isEmpty())
 				target.getRagdoll().setTextureAtlas(new TextureAtlas(
 						Gdx.files.internal("data/textures/characters/" + textureAtlas + ".atlas")));
+			if(remove)
+				world.removeNPC(target.getName());
 		}
 		Log.log("BeingStatusHandlerPlugin.statusBeing", "Status change for " + beingName);
 		return CompletionEnum.COMPLETED;

@@ -43,5 +43,6 @@ public class CharacterWindow extends AbstractWindow {
 		}
 		pack();
 		setY(Gdx.graphics.getHeight()/2 - getHeight()/2);
+		setMovable(false);
 	}
 }

@@ -9355,6 +9355,7 @@
             <being>cauldronEnemy1</being>
             <dmg>0.0</dmg>
             <kill>true</kill>
+            <remove>false</remove>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -9366,6 +9367,7 @@
             <being>cauldronEnemy2</being>
             <dmg>0.0</dmg>
             <kill>true</kill>
+            <remove>false</remove>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -9377,6 +9379,7 @@
             <being>cauldronEnemy3</being>
             <dmg>0.0</dmg>
             <kill>true</kill>
+            <remove>false</remove>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -9388,6 +9391,7 @@
             <being>cauldronEnemy4</being>
             <dmg>0.0</dmg>
             <kill>true</kill>
+            <remove>false</remove>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -9397,8 +9401,12 @@
           <trigger class="plugin.quest.trigger.time.TimeTrigger">
             <time>25000</time>
           </trigger>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingremove.BeingRemoveManifestation">
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
             <being>cohiggan</being>
+            <textureAtlas></textureAtlas>
+            <dmg>0.0</dmg>
+            <kill>false</kill>
+            <remove>true</remove>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -36879,8 +36887,12 @@
           <prerequisites>baseDoorWestOpen18</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingremove.BeingRemoveManifestation">
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
             <being>forestBoss</being>
+            <textureAtlas></textureAtlas>
+            <dmg>0.0</dmg>
+            <kill>false</kill>
+            <remove>true</remove>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -36903,8 +36915,12 @@
           <prerequisites>baseDoorWestOpen16</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingremove.BeingRemoveManifestation">
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
             <being>will</being>
+            <textureAtlas></textureAtlas>
+            <dmg>0.0</dmg>
+            <kill>false</kill>
+            <remove>true</remove>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -37450,6 +37466,7 @@
             <being>player</being>
             <dmg>0.0</dmg>
             <kill>true</kill>
+            <remove>false</remove>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
@@ -52882,6 +52899,7 @@
             <being>player</being>
             <dmg>0.0</dmg>
             <kill>true</kill>
+            <remove>false</remove>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -55487,6 +55505,7 @@
             <being>player</being>
             <dmg>0.0</dmg>
             <kill>true</kill>
+            <remove>false</remove>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>

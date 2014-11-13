@@ -65,6 +65,7 @@ public class VendorWindow extends AbstractWindow implements IButtonClicked{
 		pack();
 		setY(Gdx.graphics.getHeight()/2 - getHeight()/2);
 		setColor(MainScreen.WINDOW_ALPHA_COLOR);
+		setMovable(false);
 	}
 	
 	@Override public boolean remove(){

@@ -23,5 +23,6 @@ public class BackWindow extends AbstractWindow {
 		pack();
 		setX(Gdx.graphics.getWidth()/2 - getWidth()/2);
 		setColor(MainScreen.WINDOW_ALPHA_COLOR);
+		setMovable(false);
 	}
 }

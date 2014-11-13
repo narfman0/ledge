@@ -8,8 +8,8 @@ import com.blastedstudios.gdxworld.world.quest.manifestation.AbstractQuestManife
 
 public class BeingStatusManifestationTable extends ManifestationTable{
 	private final BeingStatusManifestation manifestation;
-	private final TextField beingField, dmgField;
-	private final CheckBox killCheckbox;
+	private final TextField beingField, dmgField, spriteAtlasField;
+	private final CheckBox killCheckbox, removeCheckbox;
 	
 	public BeingStatusManifestationTable(Skin skin, BeingStatusManifestation manifestation){
 		super(skin);
@@ -18,21 +18,32 @@ public class BeingStatusManifestationTable extends ManifestationTable{
 		beingField.setMessageText("<being name(s) or regex>");
 		dmgField = new TextField(manifestation.getDmg()+"", skin);
 		dmgField.setMessageText("<apply damage>");
+		spriteAtlasField = new TextField(manifestation.getTextureAtlas(), skin);
+		spriteAtlasField.setMessageText("<sprite atlas>");
 		killCheckbox = new CheckBox("Kill", skin);
 		killCheckbox.setChecked(manifestation.isKill());
+		removeCheckbox = new CheckBox("Remove", skin);
+		removeCheckbox.setChecked(manifestation.isRemove());
 		add("Being(s): ");
 		add(beingField);
 		row();
 		add("Damage: ");
 		add(dmgField);
 		row();
+		add("Sprite Atlas: ");
+		add(spriteAtlasField);
+		row();
 		add(killCheckbox);
+		row();
+		add(removeCheckbox);
 	}
 
 	@Override public AbstractQuestManifestation apply() {
 		manifestation.setBeing(beingField.getText());
 		manifestation.setDmg(Float.parseFloat(dmgField.getText()));
 		manifestation.setKill(killCheckbox.isChecked());
+		manifestation.setTextureAtlas(spriteAtlasField.getText());
+		manifestation.setRemove(removeCheckbox.isChecked());
 		return manifestation;
 	}
 }

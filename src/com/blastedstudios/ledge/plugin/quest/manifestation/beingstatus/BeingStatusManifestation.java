@@ -9,24 +9,25 @@ public class BeingStatusManifestation extends AbstractQuestManifestation{
 	public static final BeingStatusManifestation DEFAULT = new BeingStatusManifestation();
 	private String being = "", textureAtlas = "";
 	private float dmg = 0f;
-	private boolean kill;
+	private boolean kill, remove;
 	
 	public BeingStatusManifestation(){}
-	public BeingStatusManifestation(String being, float dmg, boolean kill, String textureAtlas){
+	public BeingStatusManifestation(String being, float dmg, boolean kill, String textureAtlas, boolean remove){
 		this.being = being;
 		this.dmg = dmg;
 		this.kill = kill;
 		this.textureAtlas = textureAtlas;
+		this.remove = remove;
 	}
 	
 	@Override public CompletionEnum execute() {
 		for(IBeingStatusHandler handler : PluginUtil.getPlugins(IBeingStatusHandler.class))
-			handler.statusBeing(being, dmg, kill, textureAtlas);
+			handler.statusBeing(being, dmg, kill, textureAtlas, remove);
 		return CompletionEnum.COMPLETED;
 	}
 
 	@Override public AbstractQuestManifestation clone() {
-		return new BeingStatusManifestation(being, dmg, kill, textureAtlas);
+		return new BeingStatusManifestation(being, dmg, kill, textureAtlas, remove);
 	}
 
 	@Override public String toString() {
@@ -57,13 +58,21 @@ public class BeingStatusManifestation extends AbstractQuestManifestation{
 		this.kill = kill;
 	}
 	
-	public String getSprite() {
+	public String getTextureAtlas() {
 		if(textureAtlas == null)
 			textureAtlas = "";
 		return textureAtlas;
 	}
 	
-	public void setSprite(String textureAtlas) {
+	public void setTextureAtlas(String textureAtlas) {
 		this.textureAtlas = textureAtlas;
+	}
+	
+	public boolean isRemove() {
+		return remove;
+	}
+	
+	public void setRemove(boolean remove) {
+		this.remove = remove;
 	}
 }

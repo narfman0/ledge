@@ -61,6 +61,7 @@ public class InventoryWindow extends AbstractWindow implements IButtonClicked {
 		pack();
 		setX(Gdx.graphics.getWidth() - getWidth());
 		setY(Gdx.graphics.getHeight()/2 - getHeight()/2);
+		setMovable(false);
 	}
 	
 	@Override public boolean remove(){
