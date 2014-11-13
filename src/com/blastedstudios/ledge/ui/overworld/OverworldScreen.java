@@ -38,7 +38,7 @@ public class OverworldScreen extends LedgeScreen{
 	private final TweenManager tweenManager;
 	private final AssetManager sharedAssets;
 
-	public OverworldScreen(GDXGame game, Player player, GDXWorld gdxWorld, FileHandle worldFile,
+	public OverworldScreen(final GDXGame game, Player player, GDXWorld gdxWorld, FileHandle worldFile,
 			GDXRenderer gdxRenderer, AssetManager sharedAssets){
 		super(game);
 		this.player = player;
