@@ -15,7 +15,7 @@ public enum ActionEnum {
 	CROUCH(Properties.getInt("input.crouch", Keys.CONTROL_LEFT), Properties.getInt("input.crouch2", Keys.C)),
 	BACK(Properties.getInt("input.back", Keys.ESCAPE), Properties.getInt("input.back2", Keys.BACK)),
 	MODIFIER(Properties.getInt("input.modifier", Keys.SHIFT_LEFT), Properties.getInt("input.modifier2", Keys.SHIFT_RIGHT)),
-	CONSOLE(Properties.getInt("input.console", Keys.PERIOD), Properties.getInt("input.console2", Keys.MINUS)),
+	CONSOLE(Properties.getInt("input.console", Keys.PERIOD), Properties.getInt("input.console2", Keys.COLON)),
 	UNDEFINED(-1,-1);
 	
 	public int key1, key2;
