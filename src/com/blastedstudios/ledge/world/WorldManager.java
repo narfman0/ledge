@@ -169,22 +169,6 @@ public class WorldManager implements IDeathCallback{
 					" dmg: " + damage.getDamage() + " hp: " + target.getHp());
 		}
 	}
-	
-	public Player getPlayer(){
-		return player;
-	}
-
-	public World getWorld() {
-		return world;
-	}
-
-	public List<Being> getAllBeings() {
-		List<Being> beings = new LinkedList<>();
-		beings.addAll(npcs);
-		if(player.isSpawned())
-			beings.add(player);
-		return beings;
-	}
 
 	public VisibilityReturnStruct isVisible(NPC origin){
 		Being closestEnemy = null;
@@ -207,28 +191,6 @@ public class WorldManager implements IDeathCallback{
 				}
 			}
 		return new VisibilityReturnStruct(enemyCount, closestEnemy);
-	}
-
-	public CreateLevelReturnStruct getCreateLevelStruct() {
-		return createLevelStruct;
-	}
-
-	public void respawnPlayer() {
-		player.respawn(world, respawnLocation.x, respawnLocation.y);
-	}
-	
-	public Vector2 getRespawnLocation(){
-		return respawnLocation;
-	}
-
-	public void setRespawnLocation(Vector2 respawnLocation) {
-		this.respawnLocation = respawnLocation;
-		if(!player.isSpawned())
-			player.respawn(world, respawnLocation.x, respawnLocation.y);
-	}
-	
-	public Map<Body,GunShot> getGunshots(){
-		return gunshots;
 	}
 	
 	public NPC spawnNPC(GDXLevel level, GDXNPC gdxNPC, AIWorld aiWorld){
@@ -273,14 +235,44 @@ public class WorldManager implements IDeathCallback{
 		return npc;
 	}
 	
-	public void changePlayerWeapon(int weapon){
-		player.setCurrentWeapon(weapon, world, false);
+	public void setRespawnLocation(Vector2 respawnLocation) {
+		this.respawnLocation = respawnLocation;
+		if(!player.isSpawned())
+			player.respawn(world, respawnLocation.x, respawnLocation.y);
 	}
 
 	@Override public void dead(Being being) {
 		if(being != player)
 			dropManager.generateDrop(being, world);
 		being.death(this);
+	}
+
+	public void respawnPlayer() {
+		player.respawn(world, respawnLocation.x, respawnLocation.y);
+	}
+
+	public List<Being> getAllBeings() {
+		List<Being> beings = new LinkedList<>();
+		beings.addAll(npcs);
+		if(player.isSpawned())
+			beings.add(player);
+		return beings;
+	}
+
+	public CreateLevelReturnStruct getCreateLevelStruct() {
+		return createLevelStruct;
+	}
+	
+	public Vector2 getRespawnLocation(){
+		return respawnLocation;
+	}
+	
+	public Map<Body,GunShot> getGunshots(){
+		return gunshots;
+	}
+	
+	public void changePlayerWeapon(int weapon){
+		player.setCurrentWeapon(weapon, world, false);
 	}
 
 	public DropManager getDropManager() {
@@ -362,6 +354,11 @@ public class WorldManager implements IDeathCallback{
 		return null;
 	}
 
+	public void dispose(Being being) {
+		being.dispose(world);
+		npcs.remove(being);
+	}
+
 	public Random getRandom() {
 		return random;
 	}
@@ -378,24 +375,15 @@ public class WorldManager implements IDeathCallback{
 		this.playerTrack = playerTrack;
 	}
 
-	/**
-	 * @param being regular expression for being(s) to remove
-	 * @return count of beings removed matching string being
-	 */
-	public int removeNPC(String being) {
-		int removed = 0;
-		for(Iterator<NPC> i = npcs.iterator(); i.hasNext();){
-			NPC npc = i.next();
-			if(npc.getName().matches(being)){
-				npc.dispose(world);
-				i.remove();
-				++removed;
-			}
-		}
-		return removed;
-	}
-
 	public void setDesireFixedRotation(boolean desireFixedRotation) {
 		this.desireFixedRotation = desireFixedRotation;
+	}
+	
+	public Player getPlayer(){
+		return player;
+	}
+
+	public World getWorld() {
+		return world;
 	}
 }

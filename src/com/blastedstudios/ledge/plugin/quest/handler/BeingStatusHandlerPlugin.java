@@ -4,8 +4,6 @@ import java.util.LinkedList;
 
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.IBeingStatusHandler;
@@ -23,7 +21,7 @@ public class BeingStatusHandlerPlugin implements IBeingStatusHandler, IWorldMana
 	@Override
 	public CompletionEnum statusBeing(String beingName, float dmg, boolean kill, String textureAtlas, boolean remove) {
 		LinkedList<Being> targets = new LinkedList<>();
-		if(beingName.matches("player"))
+		if("player".matches(beingName))
 			targets.add(world.getPlayer());
 		for(Being being : world.getAllBeings())
 			if(being.getName().matches(beingName))
@@ -34,10 +32,9 @@ public class BeingStatusHandlerPlugin implements IBeingStatusHandler, IWorldMana
 			if(kill)
 				target.setHp(0f);
 			if(textureAtlas != null && !textureAtlas.isEmpty())
-				target.getRagdoll().setTextureAtlas(new TextureAtlas(
-						Gdx.files.internal("data/textures/characters/" + textureAtlas + ".atlas")));
+				target.setTextureAtlas(textureAtlas);
 			if(remove)
-				world.removeNPC(target.getName());
+				world.dispose(target);
 		}
 		Log.log("BeingStatusHandlerPlugin.statusBeing", "Status change for " + beingName);
 		return CompletionEnum.COMPLETED;

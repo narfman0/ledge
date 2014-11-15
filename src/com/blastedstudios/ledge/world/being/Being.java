@@ -703,4 +703,11 @@ public class Being implements Serializable{
 	public boolean isInvulnerable() {
 		return invulnerable;
 	}
+
+	public void setTextureAtlas(String textureAtlas) {
+		ragdollResource = textureAtlas;
+		if(ragdoll != null)
+			ragdoll.setTextureAtlas(new TextureAtlas(
+					Gdx.files.internal("data/textures/characters/" + textureAtlas + ".atlas")));
+	}
 }
