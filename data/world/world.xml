@@ -5629,67 +5629,6 @@
           </properties>
         </world.GDXNPC>
         <world.GDXNPC>
-          <name>cohiggan</name>
-          <coordinates>
-            <x>-120.91657</x>
-            <y>57.4571</y>
-          </coordinates>
-          <properties class="tree-map">
-            <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Attack</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Behavior</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Cash</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Defense</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Faction</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>HP</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Level</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>NPCData</string>
-              <string>cohiggan</string>
-            </entry>
-            <entry>
-              <string>Path</string>
-              <string>cohiggan0</string>
-            </entry>
-            <entry>
-              <string>Resource</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-          </properties>
-        </world.GDXNPC>
-        <world.GDXNPC>
           <name>NPC-0</name>
           <coordinates>
             <x>100.13367</x>
@@ -10582,7 +10521,7 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>While hovering high above his home, Colligan, in a daze, sees many men raise flared muzzles at his direction. Had he the wherewithall, he may have presented himself as a smaller target, but as some lead pellets screamed by, it took all he had not to pass out.</dialog>
+            <dialog>While hovering high above his home, Colligan, in a daze, sees men raise flared muzzles at his direction. As lead pellets screamed by, it took all he had not to pass out.</dialog>
             <origin></origin>
             <type></type>
           </manifestation>
@@ -10593,14 +10532,14 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>As a ball finally penetrates a cylinder on the combustion jet pack behind him, he too is engulfed in black smoke. Filling the sky, the engine sputters as Colligan&apos;s threshold for consciousness is surpassed.</dialog>
+            <dialog>As a round penetrates a cylinder on the combustion jet pack behind him, he too is engulfed in black smoke.</dialog>
             <origin></origin>
             <type></type>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
           <name>end57</name>
-          <prerequisites>end56</prerequisites>
+          <prerequisites>end57Dialog</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
@@ -10748,6 +10687,157 @@
             <max>100.0</max>
             <recharge>0.0</recharge>
             <impulse>0.0</impulse>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end40Path-0</name>
+          <prerequisites>end40Path</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>3000</time>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>robbot</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end38Robbot-0</name>
+          <prerequisites>end38Robbot</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>3000</time>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>robbot</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end39Spawn</name>
+          <prerequisites>end39</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>-89.22362</x>
+              <y>57.568264</y>
+            </coordinates>
+            <being>tmad0</being>
+            <npcData>townieMale</npcData>
+            <path>ratchet0</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end39Spawn-0</name>
+          <prerequisites>end39Spawn</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>-87.56282</x>
+              <y>57.62071</y>
+            </coordinates>
+            <being>tmad1</being>
+            <npcData>townieMale</npcData>
+            <path>ratchet0</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end39Spawn-1</name>
+          <prerequisites>end39Spawn-0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>-87.51912</x>
+              <y>57.410927</y>
+            </coordinates>
+            <being>tmad2</being>
+            <npcData>townieMale</npcData>
+            <path>ratchet0</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end43MadMove</name>
+          <prerequisites>end43</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>tmad.*</being>
+            <path>ratchet2</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end54WeaponAdd</name>
+          <prerequisites>end54</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.weaponadd.WeaponAddManifestation">
+            <weapon>blunderbuss</weapon>
+            <target>tmad0</target>
+            <weaponAddType>PERSON</weaponAddType>
+            <location>
+              <x>0.0</x>
+              <y>0.0</y>
+            </location>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end55</name>
+          <prerequisites>end54</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog></dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet0CohSpawn</name>
+          <prerequisites>ratchet0Init</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>-120.94804</x>
+              <y>57.430595</y>
+            </coordinates>
+            <being>cohiggan</being>
+            <npcData>cohiggan</npcData>
+            <path>cohiggan0</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end57Dialog</name>
+          <prerequisites>end56</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Filling the sky, the engine sputters as Colligan&apos;s threshold for consciousness is surpassed.</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end54Faction</name>
+          <prerequisites>end54</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.factionchange.FactionChangeManifestation">
+            <being>tmad.*</being>
+            <faction>ENEMY</faction>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end54PathTMad</name>
+          <prerequisites>end53</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>tmad.*</being>
+            <path>cohiggan1</path>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>

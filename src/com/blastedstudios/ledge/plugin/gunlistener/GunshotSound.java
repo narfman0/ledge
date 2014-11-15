@@ -24,8 +24,9 @@ public class GunshotSound implements IGunListener {
 		}
 		final Sound sound = sharedAssets.get(filename, Sound.class);
 		if(sound != null){
-			float volume =  (float)Math.min(1, 1.0/Math.log(world.getPlayer().getPosition().dst(origin)+1f));
-			float pan = Math.max(-1, Math.min(1, (world.getPlayer().getPosition().x - origin.x) / 15f));
+			Vector2 playerPosition = world.getPlayer().getPosition();
+			float volume =  playerPosition == null ? 1f : (float)Math.min(1, 1.0/Math.log(playerPosition.dst(origin)+1f));
+			float pan = playerPosition == null ? 0f : Math.max(-1, Math.min(1, (world.getPlayer().getPosition().x - origin.x) / 15f));
 			sound.play(volume, 1, pan);
 		}else
 			Log.error("Being.attack", "Sound null for fireSound: " + gun.getFireSound());

@@ -1,8 +1,8 @@
 package com.blastedstudios.ledge.plugin.quest.manifestation.pathchange;
 
+import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.gdxworld.world.quest.manifestation.AbstractQuestManifestation;
-import com.blastedstudios.ledge.world.QuestManifestationExecutor;
 
 public class PathChangeManifestation extends AbstractQuestManifestation {
 	private static final long serialVersionUID = 1L;
@@ -16,7 +16,10 @@ public class PathChangeManifestation extends AbstractQuestManifestation {
 	}
 	
 	@Override public CompletionEnum execute() {
-		return ((QuestManifestationExecutor)executor).pathChange(being, path);
+		for(IPathChangeHandler handler : PluginUtil.getPlugins(IPathChangeHandler.class))
+			if(handler.pathChange(being, path) == CompletionEnum.COMPLETED)
+				return CompletionEnum.COMPLETED;
+		return CompletionEnum.EXECUTING;
 	}
 
 	@Override public AbstractQuestManifestation clone() {

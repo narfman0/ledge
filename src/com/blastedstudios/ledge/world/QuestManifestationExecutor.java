@@ -1,6 +1,5 @@
 package com.blastedstudios.ledge.world;
 
-import java.util.LinkedList;
 import java.util.Random;
 
 import aurelienribon.tweenengine.Tween;
@@ -14,7 +13,6 @@ import com.badlogic.gdx.utils.Array;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.dialog.IDialogHandler;
 import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.PluginUtil;
-import com.blastedstudios.gdxworld.world.GDXPath;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.gdxworld.world.quest.manifestation.IQuestManifestationExecutor;
 import com.blastedstudios.ledge.plugin.quest.handler.DialogHandlerPlugin;
@@ -24,7 +22,6 @@ import com.blastedstudios.ledge.plugin.quest.manifestation.cameratween.CameraAcc
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.FactionEnum;
-import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.weapon.Gun;
 import com.blastedstudios.ledge.world.weapon.Turret;
 import com.blastedstudios.ledge.world.weapon.WeaponFactory;
@@ -66,49 +63,18 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 
 	public CompletionEnum factionChange(String beingName, FactionEnum faction) {
 		for(Being being : worldManager.getAllBeings())
-			if(being.getName().equalsIgnoreCase(beingName) || 
-					beingName.equalsIgnoreCase("player") && being == worldManager.getPlayer()){
+			if(being.getName().matches(beingName) || 
+					"player".matches(beingName) && being == worldManager.getPlayer()){
 				being.setFaction(faction);
 				being.respawn(worldManager.getWorld(), being.getPosition().x, being.getPosition().y);
 			}
 		return CompletionEnum.COMPLETED;
 	}
 
-	public CompletionEnum pathChange(String beingString, String pathString) {
-		final GDXPath path;
-		if(pathString.equals("player")){
-			path = new GDXPath();
-			path.getNodes().add(worldManager.getPlayer().getPosition());
-		}else
-			path = worldManager.getPath(pathString);
-		
-		boolean found = false;
-		LinkedList<String> names = new LinkedList<>();
-		if(beingString.contains(","))
-			for(String name : beingString.split(","))
-				names.add(name.trim());
-		else
-			names.add(beingString);
-		for(Being being : worldManager.getAllBeings())
-			for(String name : names)
-				if(being.getName().equalsIgnoreCase(name)){
-					((NPC)being).setPath(path);
-					found = true;
-				}
-		
-		if(path == null)
-			Log.error("QuestManifestationExecutor.pathChange", "Path null " +
-					"for quest manifestation! path:" + pathString + " being:" + beingString);
-		if(!found)
-			Log.error("QuestManifestationExecutor.pathChange", "Being null " +
-					"for quest manifestation! path:" + pathString + " being:" + beingString);
-		return CompletionEnum.COMPLETED;
-	}
-
 	public CompletionEnum beingRotation(String beingString, boolean fixedRotation, float torque) {
 		for(Being being : worldManager.getAllBeings())
-			if(being.getName().equalsIgnoreCase(beingString) || 
-					beingString.equalsIgnoreCase("player") && being == worldManager.getPlayer()){
+			if(being.getName().matches(beingString) || 
+					"player".matches(beingString) && being == worldManager.getPlayer()){
 				being.setFixedRotation(fixedRotation);
 				being.getRagdoll().applyTorque(torque);
 			}
@@ -122,8 +88,8 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 
 	public CompletionEnum weaponAdd(String weapon, String target) {
 		for(Being being : worldManager.getAllBeings())
-			if(being.getName().equalsIgnoreCase(target) ||
-					target.equalsIgnoreCase("player") && being == worldManager.getPlayer()){
+			if(being.getName().matches(target) ||
+					"player".matches(target) && being == worldManager.getPlayer()){
 				if(!being.getGuns().isEmpty())
 					being.getGuns().get(0).dispose(worldManager.getWorld());
 				being.getGuns().add(0, WeaponFactory.getWeapon(weapon));
@@ -136,8 +102,8 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 
 	public CompletionEnum addXP(String beingName, long xp) {
 		for(Being being : worldManager.getAllBeings())
-			if(being.getName().equalsIgnoreCase(beingName) || 
-					beingName.equalsIgnoreCase("player") && being == worldManager.getPlayer())
+			if(being.getName().matches(beingName) || 
+					"player".matches(beingName) && being == worldManager.getPlayer())
 				being.addXp(xp);
 		return CompletionEnum.COMPLETED;
 	}
@@ -154,11 +120,11 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 	}
 
 	public CompletionEnum beingInvuln(String beingName, boolean invuln) {
-		if(beingName.equalsIgnoreCase("player"))
+		if("player".matches(beingName))
 			worldManager.getPlayer().setInvulnerable(invuln);
 		else
 			for(Being being : worldManager.getAllBeings())
-				if(being.getName().equalsIgnoreCase(beingName))
+				if(being.getName().matches(beingName))
 					being.setInvulnerable(invuln);
 		return CompletionEnum.COMPLETED;
 	}
@@ -167,11 +133,11 @@ public class QuestManifestationExecutor implements IQuestManifestationExecutor{
 			boolean changeMax, float max, boolean changeRecharge,
 			float recharge, boolean changeImpulse, float impulse) {
 		Being target = null;
-		if(beingName.equalsIgnoreCase("player"))
+		if("player".matches(beingName))
 			target = worldManager.getPlayer();
 		else
 			for(Being being : worldManager.getAllBeings())
-				if(being.getName().equalsIgnoreCase(beingName))
+				if(being.getName().matches(beingName))
 					target = being;
 		if(target == null)
 			Log.error("QuestManifestationExecutor.jetpackManifestation", "Being not found with name: " + beingName);

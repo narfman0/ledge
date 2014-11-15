@@ -363,6 +363,8 @@ public class Being implements Serializable{
 	}
 
 	public Vector2 getPosition(){
+		if(ragdoll == null)
+			return null;
 		return ragdoll.getPosition().cpy();
 	}
 
