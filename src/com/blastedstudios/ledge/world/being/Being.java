@@ -554,6 +554,9 @@ public class Being implements Serializable{
 
 	public void setResource(String resource) {
 		this.resource = resource;
+		if(ragdoll != null)
+			ragdoll.setTextureAtlas(new TextureAtlas(
+					Gdx.files.internal("data/textures/characters/" + resource + ".atlas")));
 	}
 
 	public boolean canAttack(){
@@ -702,12 +705,5 @@ public class Being implements Serializable{
 
 	public boolean isInvulnerable() {
 		return invulnerable;
-	}
-
-	public void setTextureAtlas(String textureAtlas) {
-		ragdollResource = textureAtlas;
-		if(ragdoll != null)
-			ragdoll.setTextureAtlas(new TextureAtlas(
-					Gdx.files.internal("data/textures/characters/" + textureAtlas + ".atlas")));
 	}
 }

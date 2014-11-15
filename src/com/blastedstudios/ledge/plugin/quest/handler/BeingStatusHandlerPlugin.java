@@ -32,7 +32,7 @@ public class BeingStatusHandlerPlugin implements IBeingStatusHandler, IWorldMana
 			if(kill)
 				target.setHp(0f);
 			if(textureAtlas != null && !textureAtlas.isEmpty())
-				target.setTextureAtlas(textureAtlas);
+				target.setResource(textureAtlas);
 			if(remove)
 				world.dispose(target);
 		}
