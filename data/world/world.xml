@@ -9293,8 +9293,10 @@
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
             <being>cauldronEnemy1</being>
             <dmg>0.0</dmg>
+            <aim>0.0</aim>
             <kill>true</kill>
             <remove>false</remove>
+            <doAim>false</doAim>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -9305,8 +9307,10 @@
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
             <being>cauldronEnemy2</being>
             <dmg>0.0</dmg>
+            <aim>0.0</aim>
             <kill>true</kill>
             <remove>false</remove>
+            <doAim>false</doAim>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -9317,8 +9321,10 @@
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
             <being>cauldronEnemy3</being>
             <dmg>0.0</dmg>
+            <aim>0.0</aim>
             <kill>true</kill>
             <remove>false</remove>
+            <doAim>false</doAim>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -9329,8 +9335,10 @@
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
             <being>cauldronEnemy4</being>
             <dmg>0.0</dmg>
+            <aim>0.0</aim>
             <kill>true</kill>
             <remove>false</remove>
+            <doAim>false</doAim>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -9344,8 +9352,10 @@
             <being>cohiggan</being>
             <textureAtlas></textureAtlas>
             <dmg>0.0</dmg>
+            <aim>0.0</aim>
             <kill>false</kill>
             <remove>true</remove>
+            <doAim>false</doAim>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -10611,8 +10621,10 @@
             <being>player</being>
             <textureAtlas>colliganSuit</textureAtlas>
             <dmg>0.0</dmg>
+            <aim>0.0</aim>
             <kill>false</kill>
             <remove>true</remove>
+            <doAim>false</doAim>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -10624,8 +10636,10 @@
             <being>robbot</being>
             <textureAtlas></textureAtlas>
             <dmg>0.0</dmg>
+            <aim>0.0</aim>
             <kill>false</kill>
             <remove>true</remove>
+            <doAim>false</doAim>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -10654,7 +10668,7 @@
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
-          <name>end55Shot</name>
+          <name>end55ColRotation</name>
           <prerequisites>end55</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
@@ -10838,6 +10852,38 @@
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
             <being>tmad.*</being>
             <path>cohiggan1</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end39Spawn-2</name>
+          <prerequisites>end39Spawn-1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>tmad.*</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>4.0</aim>
+            <kill>false</kill>
+            <remove>false</remove>
+            <doAim>true</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end55Attack</name>
+          <prerequisites>end55</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>tmad0</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget>colliganSuit</attackTarget>
+            <dmg>0.0</dmg>
+            <aim>0.0</aim>
+            <kill>false</kill>
+            <remove>false</remove>
+            <doAim>false</doAim>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
@@ -37103,8 +37149,10 @@
             <being>forestBoss</being>
             <textureAtlas></textureAtlas>
             <dmg>0.0</dmg>
+            <aim>0.0</aim>
             <kill>false</kill>
             <remove>true</remove>
+            <doAim>false</doAim>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -37131,8 +37179,10 @@
             <being>will</being>
             <textureAtlas></textureAtlas>
             <dmg>0.0</dmg>
+            <aim>0.0</aim>
             <kill>false</kill>
             <remove>true</remove>
+            <doAim>false</doAim>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -37677,8 +37727,10 @@
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
             <being>player</being>
             <dmg>0.0</dmg>
+            <aim>0.0</aim>
             <kill>true</kill>
             <remove>false</remove>
+            <doAim>false</doAim>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
@@ -53110,8 +53162,10 @@
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
             <being>player</being>
             <dmg>0.0</dmg>
+            <aim>0.0</aim>
             <kill>true</kill>
             <remove>false</remove>
+            <doAim>false</doAim>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -55716,8 +55770,10 @@
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
             <being>player</being>
             <dmg>0.0</dmg>
+            <aim>0.0</aim>
             <kill>true</kill>
             <remove>false</remove>
+            <doAim>false</doAim>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>

@@ -1,12 +1,15 @@
 package com.blastedstudios.ledge.plugin.quest.handler;
 
-import java.util.LinkedList;
+import java.util.List;
 
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.math.Vector2;
 import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.IBeingStatusHandler;
+import com.blastedstudios.ledge.util.VectorHelper;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
 
@@ -19,13 +22,9 @@ public class BeingStatusHandlerPlugin implements IBeingStatusHandler, IWorldMana
 	}
 
 	@Override
-	public CompletionEnum statusBeing(String beingName, float dmg, boolean kill, String textureAtlas, boolean remove) {
-		LinkedList<Being> targets = new LinkedList<>();
-		if("player".matches(beingName))
-			targets.add(world.getPlayer());
-		for(Being being : world.getAllBeings())
-			if(being.getName().matches(beingName))
-				targets.add(being);
+	public CompletionEnum statusBeing(String beingName, float dmg, boolean kill,
+			String textureAtlas, boolean remove, boolean doAim, float aim, String attackTarget) {
+		List<Being> targets = world.matchBeings(beingName);
 		for(Being target : targets){
 			if (dmg > 0f)
 				target.setHp(target.getHp() - dmg);
@@ -35,6 +34,20 @@ public class BeingStatusHandlerPlugin implements IBeingStatusHandler, IWorldMana
 				target.setResource(textureAtlas);
 			if(remove)
 				world.dispose(target);
+			if(doAim)
+				target.aim(aim);
+			if(!attackTarget.equals("")){
+				Vector2 direction;
+				try{
+					direction = VectorHelper.parse(attackTarget);
+				}catch(Exception e){
+					direction = world.matchBeings(attackTarget).get(0).getPosition();
+				}
+				if(direction == null)
+					Gdx.app.error("BeingStatusHandlerPlugin.statusBeing", "Direction null for: " + attackTarget);
+				else
+					target.attack(direction, world);
+			}
 		}
 		Log.log("BeingStatusHandlerPlugin.statusBeing", "Status change for " + beingName);
 		return CompletionEnum.COMPLETED;

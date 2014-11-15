@@ -16,4 +16,9 @@ public class VectorHelper {
 	public static Vector2 calculateAverage(Vector2[] vectors){
 		return calculateAverage(Arrays.asList(vectors));
 	}
+	
+	public static Vector2 parse(String vectorString){
+		String[] components = vectorString.split(",");
+		return new Vector2(Float.parseFloat(components[0]), Float.parseFloat(components[1]));
+	}
 }

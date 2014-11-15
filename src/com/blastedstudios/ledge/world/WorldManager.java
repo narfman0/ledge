@@ -314,10 +314,6 @@ public class WorldManager implements IDeathCallback{
 		}
 		return null;
 	}
-
-	public void transferParticles(ParticleEffect... particles) {
-		this.particles.addAll(Arrays.asList(particles));
-	}
 	
 	private void renderTransferredParticles(float dt){
 		for(Iterator<ParticleEffect> i = particles.iterator(); i.hasNext();){
@@ -326,6 +322,20 @@ public class WorldManager implements IDeathCallback{
 			if(effect.isComplete())
 				i.remove();
 		}
+	}
+	
+	public List<Being> matchBeings(String beingName){
+		LinkedList<Being> targets = new LinkedList<>();
+		if("player".matches(beingName))
+			targets.add(player);
+		for(Being being : getAllBeings())
+			if(being.getName().matches(beingName))
+				targets.add(being);
+		return targets;
+	}
+
+	public void transferParticles(ParticleEffect... particles) {
+		this.particles.addAll(Arrays.asList(particles));
 	}
 
 	public AIWorld getAiWorld() {
