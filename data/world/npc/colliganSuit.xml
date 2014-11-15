@@ -2,7 +2,7 @@
   <properties>
     <entry>
       <string>Resource</string>
-      <string>colligan</string>
+      <string>colliganSuit</string>
     </entry>
     <entry>
       <string>HP</string>
@@ -29,20 +29,28 @@
       <string>2</string>
     </entry>
     <entry>
+      <string>Faction</string>
+      <string>FRIEND</string>
+    </entry>
+    <entry>
+      <string>Behavior</string>
+      <string>NeutralBT</string>
+    </entry>
+    <entry>
       <string>Weapons</string>
       <string></string>
     </entry>
     <entry>
       <string>JetpackMax</string>
-      <string>0</string>
+      <string>100</string>
     </entry>
     <entry>
       <string>JetpackRecharge</string>
-      <string>.4</string>
+      <string>5</string>
     </entry>
     <entry>
       <string>JetpackImpulse</string>
-      <string>100</string>
+      <string>200</string>
     </entry>
   </properties>
 </com.blastedstudios.ledge.world.being.NPCData>

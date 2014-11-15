@@ -10070,7 +10070,7 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
             <dialog>Ratchet pauses again briefly</dialog>
-            <origin>Colligan</origin>
+            <origin></origin>
             <type></type>
           </manifestation>
         </world.quest.GDXQuest>
@@ -10135,7 +10135,7 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>This is a small device, Im unfamiliar with it, I dont...?</dialog>
+            <dialog>This is a small device, I&apos;m unfamiliar with it, I dont...?</dialog>
             <origin>Colligan</origin>
             <type></type>
           </manifestation>
@@ -10234,7 +10234,7 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>Whats this...</dialog>
+            <dialog>What&apos;s this...</dialog>
             <origin></origin>
             <type></type>
           </manifestation>
@@ -10267,7 +10267,7 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>Your father said you need to take this pack and go. Weve crossed the line, we are...</dialog>
+            <dialog>Your father said you need to take this pack and go. We&apos;ve crossed the line, we are...</dialog>
             <origin>Ratchet</origin>
             <type></type>
           </manifestation>
@@ -10344,7 +10344,7 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>Combustion for now while solar cells charge, the price of living Im afraid. You are to take off now. Go to the other ledge, they will keep you.</dialog>
+            <dialog>Combustion for now while solar cells charge, the price of living I&apos;m afraid. You are to take off now. Go to the other ledge, they will keep you.</dialog>
             <origin>Ratchet</origin>
             <type></type>
           </manifestation>
@@ -10432,7 +10432,7 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>Rob-bot whisks Col and the suit to the launchpad by grabbing him and rolling quickly as if on a track to the launchpad.</dialog>
+            <dialog>Rob-bot swiftly whisks the pack to the launchpad.</dialog>
             <origin></origin>
             <type></type>
           </manifestation>
@@ -10454,7 +10454,7 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>You cant stay, I am not leaving..!</dialog>
+            <dialog>You can&apos;t stay, I am not leaving..!</dialog>
             <origin>Colligan</origin>
             <type></type>
           </manifestation>
@@ -10474,11 +10474,18 @@
           <name>end44</name>
           <prerequisites>end43</prerequisites>
           <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>Haha, Rob and you shall be close, now go Rob-bot, and Col: be free, just not right now! Ha, ha!</dialog>
-            <origin>Ratchet</origin>
-            <type></type>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>-140.37692</x>
+              <y>56.806488</y>
+            </lowerLeft>
+            <upperRight>
+              <x>-138.03651</x>
+              <y>65.89276</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>false</inputEnable>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -10505,7 +10512,7 @@
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
           <name>end47</name>
-          <prerequisites>end46</prerequisites>
+          <prerequisites>end46RobRemove</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
@@ -10537,35 +10544,8 @@
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
-          <name>end50</name>
-          <prerequisites>end49</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
-            <inputEnable>true</inputEnable>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>end51</name>
-          <prerequisites>end50</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
-            <lowerLeft>
-              <x>-143.8611</x>
-              <y>56.893417</y>
-            </lowerLeft>
-            <upperRight>
-              <x>-138.55093</x>
-              <y>70.73918</y>
-            </upperRight>
-          </trigger>
-          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
-            <inputEnable>false</inputEnable>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
           <name>end52</name>
-          <prerequisites>end51</prerequisites>
+          <prerequisites>end49</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
@@ -10626,6 +10606,133 @@
           <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
             <success>true</success>
             <nextLevel>Desert</nextLevel>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end1SpawnRobbot</name>
+          <prerequisites>end1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>-125.48877</x>
+              <y>57.1369</y>
+            </coordinates>
+            <being>robbot</being>
+            <npcData>robbot</npcData>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end38Robbot</name>
+          <prerequisites>end37</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>robbot</being>
+            <path>cohiggan0</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end40Path</name>
+          <prerequisites>end39</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>robbot</being>
+            <path>cohiggan1</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end44Input</name>
+          <prerequisites>end43</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>true</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end44Dialog</name>
+          <prerequisites>end44</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Haha, Rob and you shall be close, now go Rob-bot, and Col: be free, just not right now! Ha, ha!</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end46Suit</name>
+          <prerequisites>end45</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>player</being>
+            <textureAtlas></textureAtlas>
+            <dmg>0.0</dmg>
+            <kill>false</kill>
+            <remove>true</remove>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end46RobRemove</name>
+          <prerequisites>end46Suit</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>robbot</being>
+            <textureAtlas></textureAtlas>
+            <dmg>0.0</dmg>
+            <kill>false</kill>
+            <remove>true</remove>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end46PlayerNPC</name>
+          <prerequisites>end46Suit</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>-139.39355</x>
+              <y>57.2077</y>
+            </coordinates>
+            <being>colliganSuit</being>
+            <npcData>colliganSuit</npcData>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end53Path</name>
+          <prerequisites>end52</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>colliganSuit</being>
+            <path>cohiggan2</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end55Shot</name>
+          <prerequisites>end55</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingrotation.BeingRotationManifestation">
+            <fixedRotation>false</fixedRotation>
+            <torque>0.0</torque>
+            <being>colliganSuit</being>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end56Path</name>
+          <prerequisites>end56</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>colliganSuit</being>
+            <path></path>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
