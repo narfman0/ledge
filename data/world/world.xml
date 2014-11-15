@@ -10694,7 +10694,7 @@
           <prerequisites>end40Path</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.time.TimeTrigger">
-            <time>3000</time>
+            <time>5000</time>
           </trigger>
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
             <being>robbot</being>
@@ -10765,7 +10765,7 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
             <being>tmad.*</being>
-            <path>ratchet2</path>
+            <path>ratchet1</path>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
