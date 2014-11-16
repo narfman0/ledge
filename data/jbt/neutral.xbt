@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tree>
+  <Node id="Node_0" name="Root" type="Root">
+    <Children>
+      <Node id="Node_28" type="Repeat">
+        <Children>
+          <Node id="Node_3" type="Selector">
+            <Children>
+              <Node id="Node_4" type="Sequence">
+                <Children>
+                  <Node id="Node_5" name="HighDanger" type="Condition" />
+                  <Node id="Node_7" name="Move" type="Action">
+                    <Parameters>
+                      <Parameter name="target" fromcontext="true">ClosestFriendlyBaseTarget</Parameter>
+                    </Parameters>
+                  </Node>
+                </Children>
+              </Node>
+              <Node id="Node_8" type="Sequence">
+                <Children>
+                  <Node id="Node_9" name="LowDanger" type="Condition" />
+                  <Node id="Node_11" name="Move" type="Action">
+                    <Parameters>
+                      <Parameter name="target" fromcontext="true">ClosestCoverTarget</Parameter>
+                    </Parameters>
+                  </Node>
+                </Children>
+              </Node>
+              <Node id="Node_24" type="Sequence">
+                <Children>
+                  <Node id="Node_25" name="CurrentObjective" type="Action" />
+                  <Node id="Node_29" name="Move" type="Action">
+                    <Parameters>
+                      <Parameter name="target" fromcontext="true">CurrentObjectiveTarget</Parameter>
+                    </Parameters>
+                  </Node>
+                  <Node id="Node_30" name="Aim" type="Action">
+                    <Parameters>
+                      <Parameter name="target" fromcontext="true">CurrentObjectiveTarget</Parameter>
+                    </Parameters>
+                  </Node>
+                </Children>
+              </Node>
+            </Children>
+          </Node>
+        </Children>
+      </Node>
+    </Children>
+  </Node>
+</Tree>
+

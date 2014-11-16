@@ -3,6 +3,9 @@
 		<Action name="Action">
 			<Parameter name="type" type="STRING" />
 		</Action>
+		<Action name="Aim">
+			<Parameter name="target" type="COORDINATE" />
+		</Action>
 		<Action name="ClosestCover" />
 		<Action name="ClosestTurret" type="COORDINATE" />
 		<Action name="CooldownStart">

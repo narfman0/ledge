@@ -2,7 +2,7 @@
 //                   MACHINE GENERATED CODE                
 //                       DO NOT MODIFY                     
 //                                                         
-// Generated on 04/23/2014 20:39:46
+// Generated on 11/15/2014 22:37:27
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.trees;
 
@@ -44,6 +44,8 @@ public class EnemyAggressiveBT implements jbt.execution.core.IBTLibrary {
 								new com.blastedstudios.ledge.ai.bt.actions.CurrentObjective(
 										null),
 								new com.blastedstudios.ledge.ai.bt.actions.Move(
+										null, null, "CurrentObjectiveTarget"),
+								new com.blastedstudios.ledge.ai.bt.actions.Aim(
 										null, null, "CurrentObjectiveTarget"))));
 
 	}

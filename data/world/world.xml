@@ -6883,8 +6883,8 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
             <coordinates>
-              <x>-26.432291</x>
-              <y>45.781242</y>
+              <x>31.768826</x>
+              <y>18.19642</y>
             </coordinates>
             <being>player</being>
             <npcData>player</npcData>
@@ -10849,7 +10849,7 @@
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
           <name>end55Attack</name>
-          <prerequisites>end55</prerequisites>
+          <prerequisites>end55StopAI</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
@@ -10870,6 +10870,16 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
             <being>robbot</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end55StopAI</name>
+          <prerequisites>end55</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>tmad.*</being>
             <path></path>
           </manifestation>
         </world.quest.GDXQuest>

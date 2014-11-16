@@ -49,6 +49,11 @@
                       <Parameter name="target" fromcontext="true">CurrentObjectiveTarget</Parameter>
                     </Parameters>
                   </Node>
+                  <Node id="Node_40" name="Aim" type="Action">
+                    <Parameters>
+                      <Parameter name="target" fromcontext="true">CurrentObjectiveTarget</Parameter>
+                    </Parameters>
+                  </Node>
                 </Children>
               </Node>
             </Children>

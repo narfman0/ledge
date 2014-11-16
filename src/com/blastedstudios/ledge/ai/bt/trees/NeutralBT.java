@@ -2,18 +2,18 @@
 //                   MACHINE GENERATED CODE                
 //                       DO NOT MODIFY                     
 //                                                         
-// Generated on 01/26/2013 17:32:41
+// Generated on 11/15/2014 22:37:28
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.trees;
 
 /**
  * BT library that includes the trees read from the following files:
  * <ul>
- * <li>data/jbt/neutralTree.xbt</li>
+ * <li>data/jbt/neutral.xbt</li>
  * </ul>
  */
 public class NeutralBT implements jbt.execution.core.IBTLibrary {
-	/** Tree generated from file data/jbt/neutralTree.xbt. */
+	/** Tree generated from file data/jbt/neutral.xbt. */
 	private static jbt.model.core.ModelTask Root;
 
 	/* Static initialization of all the trees. */
@@ -39,6 +39,8 @@ public class NeutralBT implements jbt.execution.core.IBTLibrary {
 								new com.blastedstudios.ledge.ai.bt.actions.CurrentObjective(
 										null),
 								new com.blastedstudios.ledge.ai.bt.actions.Move(
+										null, null, "CurrentObjectiveTarget"),
+								new com.blastedstudios.ledge.ai.bt.actions.Aim(
 										null, null, "CurrentObjectiveTarget"))));
 
 	}
