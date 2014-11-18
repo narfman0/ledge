@@ -92,8 +92,6 @@ public class WorldManager implements IDeathCallback{
 	}
 
 	public void render(float dt, GDXRenderer gdxRenderer, Camera cam, Batch batch){
-		batch.end();
-		batch.begin();//TODO why must i do this?
 		if(!pause && inputEnable && !player.isDead())
 			player.setFixedRotation(desireFixedRotation);
 		if(player.isSpawned())
