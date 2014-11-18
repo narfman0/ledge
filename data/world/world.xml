@@ -10554,7 +10554,7 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
             <success>true</success>
-            <nextLevel>Desert</nextLevel>
+            <nextLevel>Interlude1</nextLevel>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -57077,6 +57077,463 @@
           <string>6</string>
         </entry>
       </properties>
+      <lightAmbient>-437918337</lightAmbient>
+    </world.GDXLevel>
+    <world.GDXLevel>
+      <name>Interlude1</name>
+      <coordinates>
+        <x>-0.6000004</x>
+        <y>15.76</y>
+      </coordinates>
+      <tiles/>
+      <circles/>
+      <polygons>
+        <world.shape.GDXPolygon>
+          <name>Polygon-0</name>
+          <resource></resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>0.5593628</x>
+            <y>-3.6831124</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-10.511464</x>
+              <y>0.31523824</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.2644587</x>
+              <y>-0.54641414</y>
+            </Vector2>
+            <Vector2>
+              <x>9.331071</x>
+              <y>0.12609553</y>
+            </Vector2>
+            <Vector2>
+              <x>6.8441863</x>
+              <y>0.04203224</y>
+            </Vector2>
+            <Vector2>
+              <x>-4.399333</x>
+              <y>0.063047886</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+      </polygons>
+      <npcs>
+        <world.GDXNPC>
+          <name>trade</name>
+          <coordinates>
+            <x>-1.0028204</x>
+            <y>-3.0946665</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>trade</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>respect</name>
+          <coordinates>
+            <x>0.78353214</x>
+            <y>-3.1787305</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string>-4</string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>respect</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>honor</name>
+          <coordinates>
+            <x>-2.946794</x>
+            <y>-3.157714</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>honor</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+      </npcs>
+      <paths/>
+      <joints/>
+      <quests>
+        <world.quest.GDXQuest>
+          <name>d0</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>It is time to bring another.</dialog>
+            <origin>Trade</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>d1</name>
+          <prerequisites>d0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Another in agreement of our ideals?</dialog>
+            <origin>Respect</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>d2</name>
+          <prerequisites>d1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>What is your wish, master?</dialog>
+            <origin>Honor</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>d3</name>
+          <prerequisites>d2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>You are the top two scientists, time to make the perfect trinity. Your powers should synergize nicely to guarantee our goals will be met. Bring in Will, he has proven not only proficiency but a conviction to advance scientific standards. He seems to have mastered repressing social stigma associated with most unprogressives.</dialog>
+            <origin>Trade</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>d4</name>
+          <prerequisites>d3</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>His power grows as we speak.</dialog>
+            <origin>Respect</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>d5</name>
+          <prerequisites>d4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Your observations are accurate.</dialog>
+            <origin>Honor</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>d6</name>
+          <prerequisites>d5</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Still, the time is nigh, test him. Bring him here to verify his dogma, so as not to revisit old missteps.</dialog>
+            <origin>Trade</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>d7</name>
+          <prerequisites>d6</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>trade</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>4.0</aim>
+            <kill>false</kill>
+            <remove>false</remove>
+            <doAim>true</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>d8</name>
+          <prerequisites>d7</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>1500</time>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>trade</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>0.0</aim>
+            <kill>false</kill>
+            <remove>false</remove>
+            <doAim>true</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>d9</name>
+          <prerequisites>d8</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>We will bring him in right away...</dialog>
+            <origin>Respect</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>d10</name>
+          <prerequisites>d9</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>...and see to his faith in science</dialog>
+            <origin>Honor</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>d11</name>
+          <prerequisites>d10</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Good, good, there is still hope for humanity, then. Be off.</dialog>
+            <origin>Respect</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>d12</name>
+          <prerequisites>d11</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
+            <success>true</success>
+            <nextLevel>Desert</nextLevel>
+          </manifestation>
+        </world.quest.GDXQuest>
+      </quests>
+      <backgrounds>
+        <world.GDXBackground>
+          <coordinates>
+            <x>0.0</x>
+            <y>0.0</y>
+          </coordinates>
+          <texture>data/textures/home/background100.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>100.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>0.0</x>
+            <y>-3.0</y>
+          </coordinates>
+          <texture>data/textures/central/centralCityscape.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>10.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>0.0</x>
+            <y>0.0</y>
+          </coordinates>
+          <texture>data/textures/central/centralMeeting.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+      </backgrounds>
+      <lights/>
+      <groups/>
+      <particles/>
+      <sounds/>
+      <animations class="linked-list"/>
+      <properties class="tree-map"/>
       <lightAmbient>-437918337</lightAmbient>
     </world.GDXLevel>
   </levels>
