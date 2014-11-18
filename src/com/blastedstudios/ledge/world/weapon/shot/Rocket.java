@@ -5,8 +5,8 @@ import java.util.Map.Entry;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Fixture;
@@ -31,11 +31,11 @@ public class Rocket extends GunShot {
 		explosion.load(Gdx.files.internal("data/particles/rocketExplosion.p"), Gdx.files.internal("data/particles"));
 	}
 	
-	@Override public void render(float dt, SpriteBatch spriteBatch, AssetManager assetManager, 
+	@Override public void render(float dt, Batch batch, AssetManager assetManager, 
 			Body body, WorldManager worldManager){
-		super.render(dt, spriteBatch, assetManager, body, worldManager);
+		super.render(dt, batch, assetManager, body, worldManager);
 		trail.setPosition(body.getPosition().x, body.getPosition().y);
-		trail.draw(spriteBatch, dt);
+		trail.draw(batch, dt);
 		explosion.setPosition(body.getPosition().x, body.getPosition().y);
 	}
 

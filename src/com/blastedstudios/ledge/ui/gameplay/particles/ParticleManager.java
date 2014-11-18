@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
 
-import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.Camera;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.blastedstudios.gdxworld.util.Log;
@@ -18,7 +18,6 @@ import com.blastedstudios.ledge.world.being.Being;
 public class ParticleManager {
 	private static final long TIME_TO_REMOVE_SCHEDULED = Properties.getInt("particles.remove.time", 11000);
 	private final HashMap<String, ParticleStruct> particles = new HashMap<>();
-	private final SpriteBatch spriteBatch = new SpriteBatch();
 
 	public void addParticle(GDXParticle particle){
 		if(!particles.containsKey(particle.getName())){
@@ -32,9 +31,7 @@ public class ParticleManager {
 		}
 	}
 
-	public void render(float dt, OrthographicCamera camera, WorldManager worldManager){
-		spriteBatch.setProjectionMatrix(camera.combined);
-		spriteBatch.begin();
+	public void render(float dt, Camera camera, WorldManager worldManager, Batch batch){
 		for(Iterator<Entry<String,ParticleStruct>> iter = particles.entrySet().iterator(); iter.hasNext();){
 			Entry<String,ParticleStruct> entry = iter.next();
 			ParticleStruct struct = entry.getValue();
@@ -53,9 +50,9 @@ public class ParticleManager {
 			}
 			float time = worldManager.isPause() ? 0f : dt;
 			if(struct.particle.getEmitterName().isEmpty())
-				struct.effect.draw(spriteBatch, time);
+				struct.effect.draw(batch, time);
 			else
-				struct.effect.findEmitter(struct.particle.getEmitterName()).draw(spriteBatch, time);
+				struct.effect.findEmitter(struct.particle.getEmitterName()).draw(batch, time);
 			
 			if(struct.isRemoveScheduled() && 
 					(System.currentTimeMillis() - struct.getRemoveScheduled() > TIME_TO_REMOVE_SCHEDULED)){
@@ -63,7 +60,6 @@ public class ParticleManager {
 				iter.remove();
 			}
 		}
-		spriteBatch.end();
 	}
 
 	public void scheduleRemove(String name) {

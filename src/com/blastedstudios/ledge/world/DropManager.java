@@ -9,7 +9,7 @@ import java.util.Random;
 
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Sound;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
@@ -33,7 +33,7 @@ public class DropManager {
 	private final Map<Body,AmmoDropStruct> droppedAmmo = new HashMap<>();
 
 	public void render(float dt, boolean paused, Being player, World world,
-			SpriteBatch spriteBatch, GDXRenderer renderer, AssetManager sharedAssets){
+			Batch batch, GDXRenderer renderer, AssetManager sharedAssets){
 		float impulseDistance = Properties.getFloat("drop.impulse.distance", 100f);
 		float impulseScale = Properties.getFloat("drop.impulse.scalar", .03f);
 		{
@@ -43,7 +43,7 @@ public class DropManager {
 			float distance = player.getPosition().dst2(dropBody.getPosition());
 			String gunPath = "data/textures/weapons/" + entry.getValue().getResource() + ".png";
 			try{
-				WorldManager.drawTexture(spriteBatch, dropBody, gunPath, Properties.getFloat("ragdoll.custom.scale"), sharedAssets);
+				WorldManager.drawTexture(batch, dropBody, gunPath, Properties.getFloat("ragdoll.custom.scale"), sharedAssets);
 			}catch(Exception e){
 				e.printStackTrace();
 			}
@@ -65,7 +65,7 @@ public class DropManager {
 		for(Entry<Body, Integer> entry : droppedCash.entrySet()){
 			Body dropBody = entry.getKey();
 			float distance = player.getPosition().dst2(dropBody.getPosition());
-			WorldManager.drawTexture(spriteBatch, dropBody, "data/textures/money.png", 
+			WorldManager.drawTexture(batch, dropBody, "data/textures/money.png", 
 					Properties.getFloat("gameplay.camera.zoom"), sharedAssets);
 			if(distance < Properties.getFloat("drop.pickup.distance", .5f)){
 				player.addCash(entry.getValue());
@@ -87,7 +87,7 @@ public class DropManager {
 			Body dropBody = entry.getKey();
 			float distance = player.getPosition().dst2(dropBody.getPosition());
 			String ammoPath = "data/textures/ammo/" + entry.getValue().type.textureName + ".png";
-			WorldManager.drawTexture(spriteBatch, dropBody, ammoPath, Properties.getFloat("gameplay.camera.zoom"), sharedAssets);
+			WorldManager.drawTexture(batch, dropBody, ammoPath, Properties.getFloat("gameplay.camera.zoom"), sharedAssets);
 			if(distance < Properties.getFloat("drop.pickup.distance", .5f)){
 				player.addAmmo(entry.getValue().type, entry.getValue().amount);
 				world.destroyBody(dropBody);

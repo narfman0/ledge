@@ -1,7 +1,7 @@
 package com.blastedstudios.ledge.world.weapon.shot;
 
 import com.badlogic.gdx.assets.AssetManager;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Fixture;
@@ -49,10 +49,10 @@ public class GunShot {
 		this.gun = gun;
 	}
 	
-	public void render(float dt, SpriteBatch spriteBatch, AssetManager assetManager, 
+	public void render(float dt, Batch batch, AssetManager assetManager, 
 			Body body, WorldManager worldManager){
 		String ammoPath = "data/textures/ammo/" + gun.getAmmoType().textureName + ".png";
-		WorldManager.drawTexture(spriteBatch, body,	ammoPath, getWeaponRenderScale(), assetManager);
+		WorldManager.drawTexture(batch, body,	ammoPath, getWeaponRenderScale(), assetManager);
 	}
 
 	public boolean isCanRemove() {

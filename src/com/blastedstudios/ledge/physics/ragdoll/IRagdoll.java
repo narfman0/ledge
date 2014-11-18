@@ -3,7 +3,7 @@ package com.blastedstudios.ledge.physics.ragdoll;
 import net.xeoh.plugins.base.Plugin;
 
 import com.badlogic.gdx.files.FileHandle;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
@@ -35,7 +35,7 @@ public interface IRagdoll{
 	void dispose(World world);
 	BodyPart getBodyPart(Fixture fixture);
 	Body getBodyPart(BodyPart part);
-	void render(SpriteBatch spriteBatch, boolean dead, boolean isGrounded,
+	void render(Batch batch, boolean dead, boolean isGrounded,
 			boolean isMoving, float velX, boolean paused, boolean inputEnabled);
 	boolean isFixedRotation();
 	void setFixedRotation(boolean fixedRotation);

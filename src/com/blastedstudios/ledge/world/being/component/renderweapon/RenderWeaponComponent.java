@@ -4,8 +4,8 @@ import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
@@ -20,7 +20,7 @@ import com.blastedstudios.ledge.world.weapon.shot.GunShot;
 public class RenderWeaponComponent extends AbstractComponent {
 	private transient Sprite weaponSprite;
 
-	@Override public void render(float dt, SpriteBatch spriteBatch, AssetManager sharedAssets,
+	@Override public void render(float dt, Batch batch, AssetManager sharedAssets,
 			GDXRenderer renderer, boolean facingLeft, boolean paused) {
 		if(being.getEquippedWeapon() != null){
 			if(weaponSprite == null){
@@ -49,7 +49,7 @@ public class RenderWeaponComponent extends AbstractComponent {
 			weaponSprite.setRotation((float)Math.toDegrees(rotation));
 			if(facingLeft)
 				weaponSprite.flip(false, true);
-			weaponSprite.draw(spriteBatch);
+			weaponSprite.draw(batch);
 			if(facingLeft)
 				weaponSprite.flip(false, true);
 		}

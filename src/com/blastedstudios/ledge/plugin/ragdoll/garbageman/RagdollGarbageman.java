@@ -1,7 +1,7 @@
 package com.blastedstudios.ledge.plugin.ragdoll.garbageman;
 
 import com.badlogic.gdx.files.FileHandle;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Filter;
@@ -22,8 +22,8 @@ public class RagdollGarbageman extends RagdollLoader {
 			}
 	}
 	
-	@Override public void render(SpriteBatch spriteBatch, boolean dead, boolean isGrounded,
+	@Override public void render(Batch batch, boolean dead, boolean isGrounded,
 			boolean isMoving, float velX, boolean paused, boolean inputEnabled){
-		super.render(spriteBatch, isGrounded, isMoving, velX, paused);
+		super.render(batch, isGrounded, isMoving, velX, paused);
 	}
 }

@@ -17,9 +17,9 @@ import aurelienribon.tweenengine.TweenManager;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
@@ -61,7 +61,6 @@ public class WorldManager implements IDeathCallback{
 	private final Player player;
 	private final CreateLevelReturnStruct createLevelStruct;
 	private Vector2 respawnLocation;
-	private final SpriteBatch spriteBatch = new SpriteBatch();
 	private final DropManager dropManager;
 	private final GDXLevel level;
 	private final LinkedList<ParticleEffect> particles = new LinkedList<>();
@@ -92,27 +91,26 @@ public class WorldManager implements IDeathCallback{
 			spawnNPC(level, gdxNPC, aiWorld);
 	}
 
-	public void render(float dt, GDXRenderer gdxRenderer, Camera cam){
+	public void render(float dt, GDXRenderer gdxRenderer, Camera cam, Batch batch){
+		batch.end();
+		batch.begin();//TODO why must i do this?
 		if(!pause && inputEnable && !player.isDead())
 			player.setFixedRotation(desireFixedRotation);
-		spriteBatch.setProjectionMatrix(cam.combined);
-		spriteBatch.begin();
 		if(player.isSpawned())
-			player.render(dt, world, spriteBatch, sharedAssets, gdxRenderer, this, pause, inputEnable);
+			player.render(dt, world, batch, sharedAssets, gdxRenderer, this, pause, inputEnable);
 		for(NPC npc : npcs)
-			npc.render(dt, world, spriteBatch, sharedAssets, gdxRenderer, this, pause, true);
+			npc.render(dt, world, batch, sharedAssets, gdxRenderer, this, pause, true);
 		for(Iterator<Entry<Body, GunShot>> iter = gunshots.entrySet().iterator(); iter.hasNext();){
 			Entry<Body, GunShot> entry = iter.next();
-			entry.getValue().render(dt, spriteBatch, sharedAssets, entry.getKey(), this);
+			entry.getValue().render(dt, batch, sharedAssets, entry.getKey(), this);
 			if(entry.getValue().isCanRemove())
 				iter.remove();
 		}
 		for(Turret turret : turrets)
-			turret.render(dt, spriteBatch, gdxRenderer, this);
+			turret.render(dt, batch, gdxRenderer, this);
 		if(player.isSpawned())
-			dropManager.render(dt, pause, player, world, spriteBatch, gdxRenderer, sharedAssets);
-		renderTransferredParticles(dt);
-		spriteBatch.end();
+			dropManager.render(dt, pause, player, world, batch, gdxRenderer, sharedAssets);
+		renderTransferredParticles(dt, batch);
 		if(Properties.getBool("world.debug.draw", false))
 			debugRenderer.render(aiWorldDebug, cam.combined);
 		if(!pause)//min 1/20 because larger and you get really high hits on level startup/big cpu hits
@@ -129,7 +127,7 @@ public class WorldManager implements IDeathCallback{
 		return bodyArray;
 	}
 	
-	public static void drawTexture(SpriteBatch spriteBatch, Body body,
+	public static void drawTexture(Batch batch, Body body,
 			String textureName, float scale, AssetManager... assetManagers){
 		Texture texture = null;
 		for(AssetManager assetManager : assetManagers){
@@ -145,7 +143,7 @@ public class WorldManager implements IDeathCallback{
 				body.getWorldCenter().y - sprite.getHeight()/2);
 		sprite.setRotation((float) Math.toDegrees(body.getAngle()));
 		sprite.setScale(scale);
-		sprite.draw(spriteBatch);
+		sprite.draw(batch);
 	}
 
 	public void processHit(float damageBase, Being target, Being origin, Fixture hit, Vector2 normal, Vector2 damagePosition) {
@@ -315,10 +313,10 @@ public class WorldManager implements IDeathCallback{
 		return null;
 	}
 	
-	private void renderTransferredParticles(float dt){
+	private void renderTransferredParticles(float dt, Batch batch){
 		for(Iterator<ParticleEffect> i = particles.iterator(); i.hasNext();){
 			ParticleEffect effect = i.next();
-			effect.draw(spriteBatch, dt);
+			effect.draw(batch, dt);
 			if(effect.isComplete())
 				i.remove();
 		}

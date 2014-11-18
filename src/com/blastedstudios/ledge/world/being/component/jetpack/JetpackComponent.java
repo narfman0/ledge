@@ -4,9 +4,9 @@ import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.ParticleEmitter;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
@@ -34,14 +34,14 @@ public class JetpackComponent extends AbstractComponent {
 	private float jetpackPower;
 	private float timeUntilDashAvailable;
 
-	@Override public void render(float dt, SpriteBatch spriteBatch, AssetManager sharedAssets,
+	@Override public void render(float dt, Batch batch, AssetManager sharedAssets,
 			GDXRenderer gdxRenderer, boolean facingLeft, boolean paused) {
 		if(!being.getStats().hasJetpack())
 			return;
 		if(!paused)
 			updateJetpackAngles();
 		jetpackEffect.setPosition(being.getPosition().x, being.getPosition().y);
-		jetpackEffect.draw(spriteBatch, dt);
+		jetpackEffect.draw(batch, dt);
 		if(paused)
 			return;
 		timeUntilDashAvailable -= dt;

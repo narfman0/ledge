@@ -11,7 +11,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.files.FileHandle;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Contact;
@@ -90,17 +90,17 @@ public class Being implements Serializable{
 			initializeBodypartDmgMap();
 	}
 
-	public void render(float dt, World world, SpriteBatch spriteBatch, AssetManager sharedAssets,
+	public void render(float dt, World world, Batch batch, AssetManager sharedAssets,
 			GDXRenderer gdxRenderer, IDeathCallback deathCallback, boolean paused, boolean inputEnabled){
 		if(ticksToActivateWeapon != -1 && getEquippedWeapon() != null && ticksToActivateWeapon-- == 0)
 			getEquippedWeapon().activate(world, ragdoll, this);
 		this.sharedAssets = sharedAssets;
 		Vector2 vel = ragdoll.getLinearVelocity();
 		
-		ragdoll.render(spriteBatch, dead, isGrounded(world), moveLeft || moveRight, vel.x, paused, inputEnabled);
+		ragdoll.render(batch, dead, isGrounded(world), moveLeft || moveRight, vel.x, paused, inputEnabled);
 		boolean facingLeft = !isDead() && ragdoll.aim(lastGunHeadingRadians);
 		for(IComponent component : getListeners())
-			component.render(dt, spriteBatch, sharedAssets, gdxRenderer, facingLeft, paused);
+			component.render(dt, batch, sharedAssets, gdxRenderer, facingLeft, paused);
 		
 		if(paused)
 			return;

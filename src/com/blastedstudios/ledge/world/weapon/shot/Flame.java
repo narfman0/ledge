@@ -2,8 +2,8 @@ package com.blastedstudios.ledge.world.weapon.shot;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
@@ -27,11 +27,11 @@ public class Flame extends GunShot {
 		flame.setDuration(99999);
 	}
 	
-	@Override public void render(float dt, SpriteBatch spriteBatch, AssetManager assetManager, 
+	@Override public void render(float dt, Batch batch, AssetManager assetManager, 
 			Body body, WorldManager worldManager){
-		super.render(dt, spriteBatch, assetManager, body, worldManager);
+		super.render(dt, batch, assetManager, body, worldManager);
 		flame.setPosition(body.getPosition().x, body.getPosition().y);
-		flame.draw(spriteBatch, dt);
+		flame.draw(batch, dt);
 		if(isTimeToRemoveSet() && System.currentTimeMillis() >= timeToRemove){
 			worldManager.transferParticles(flame);
 			body.setUserData(WorldManager.REMOVE_USER_DATA);

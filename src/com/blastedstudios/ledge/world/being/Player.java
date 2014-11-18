@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.badlogic.gdx.assets.AssetManager;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.world.GDXLevel;
@@ -26,10 +26,10 @@ public class Player extends Being {
 		super(name, guns, inventory, stats, currentGun, cash, level, xp, faction, factions, resource, null);
 	}
 	
-	@Override public void render(float dt, World world, SpriteBatch spriteBatch, 
+	@Override public void render(float dt, World world, Batch batch, 
 			AssetManager sharedAssets, GDXRenderer gdxRenderer, IDeathCallback deathCallback,
 			boolean paused, boolean inputEnabled){
-		super.render(dt, world, spriteBatch, sharedAssets, gdxRenderer, deathCallback, paused, inputEnabled);
+		super.render(dt, world, batch, sharedAssets, gdxRenderer, deathCallback, paused, inputEnabled);
 		questManager.tick();
 	}
 

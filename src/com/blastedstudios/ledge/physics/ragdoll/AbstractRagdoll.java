@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
@@ -346,16 +346,16 @@ public abstract class AbstractRagdoll implements IRagdoll {
 		sprite.translateX(rotation/300f);
 	}
 
-	@Override public void render(SpriteBatch spriteBatch, boolean dead, boolean isGrounded, 
+	@Override public void render(Batch batch, boolean dead, boolean isGrounded, 
 			boolean isMoving, float velX, boolean paused, boolean inputEnabled) {
 		if(!dead && !paused && (inputEnabled || torsoBody.isFixedRotation())){
 			lArmBody.applyTorque(getAngularImpulse(lArmBody, targetHeading)*5f, true);
 			rArmBody.applyTorque(getAngularImpulse(rArmBody, targetHeading+(float)Math.PI)*5f, true);
 		}
-		render(spriteBatch, isGrounded, isMoving, velX, paused);
+		render(batch, isGrounded, isMoving, velX, paused);
 	}
 
-	public void render(SpriteBatch spriteBatch, boolean isGrounded, boolean isMoving, float velX, boolean paused){
+	public void render(Batch batch, boolean isGrounded, boolean isMoving, float velX, boolean paused){
 		for(BodyPart part : facingLeft ? LEFT_FACING_ORDER : RIGHT_FACING_ORDER){
 			Body body = getBodyPart(part);
 			Sprite sprite = sprites.get(body);
@@ -364,7 +364,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 				sprite.flip(facingLeft, false);
 			if(isGrounded && isMoving && (part == BodyPart.rLeg || part == BodyPart.lLeg))
 				rotateLeg(sprite, part == BodyPart.rLeg, velX);
-			sprite.draw(spriteBatch);
+			sprite.draw(batch);
 			if(part == BodyPart.head || part == BodyPart.torso)
 				sprite.flip(facingLeft, false);
 		}

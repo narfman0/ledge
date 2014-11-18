@@ -8,9 +8,9 @@ import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.ParticleEmitter;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.being.component.AbstractComponent;
@@ -22,11 +22,11 @@ public class BloodComponent extends AbstractComponent {
 	private static final long BLOOD_TIME = Properties.getInt("character.blood.time", 10000);
 	private transient LinkedList<BloodStruct> blood = new LinkedList<>();
 	
-	@Override public void render(float dt, SpriteBatch spriteBatch, AssetManager sharedAssets,
+	@Override public void render(float dt, Batch batch, AssetManager sharedAssets,
 			GDXRenderer gdxRenderer, boolean facingLeft, boolean paused){
 		for(Iterator<BloodStruct> iter = blood.iterator(); iter.hasNext();){
 			BloodStruct current = iter.next();
-			current.effect.draw(spriteBatch, dt);
+			current.effect.draw(batch, dt);
 			if(System.currentTimeMillis() - current.startTime > BLOOD_TIME){
 				current.effect.dispose();
 				iter.remove();

@@ -3,8 +3,8 @@ package com.blastedstudios.ledge.world.weapon;
 import java.util.Random;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.Properties;
@@ -37,7 +37,7 @@ public class Turret {
 		this.direction = Math.max(directionLow, Math.min(directionHigh, direction));
 	}
 	
-	public void render(float dt, SpriteBatch spriteBatch, GDXRenderer gdxRenderer, WorldManager worldManager) {
+	public void render(float dt, Batch batch, GDXRenderer gdxRenderer, WorldManager worldManager) {
 		if(gunSprite == null){
 			String gunPath = "data/textures/weapons/" + gun.getResource() + ".png",
 				basePath = "data/textures/weapons/" + baseResource;
@@ -49,8 +49,8 @@ public class Turret {
 			weaponBaseSprite.setPosition(location.x - weaponBaseSprite.getWidth()/2f, location.y - weaponBaseSprite.getHeight()/2f);
 		}
 		gunSprite.setRotation((float)Math.toDegrees(direction));
-		gunSprite.draw(spriteBatch);
-		weaponBaseSprite.draw(spriteBatch);
+		gunSprite.draw(batch);
+		weaponBaseSprite.draw(batch);
 		if(reloadTime != 0l && System.currentTimeMillis() > reloadTime){
 			gun.setCurrentRounds(gun.getRoundsPerClip());
 			reloadTime = 0l;

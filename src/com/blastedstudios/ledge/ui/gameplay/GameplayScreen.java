@@ -1,5 +1,6 @@
 package com.blastedstudios.ledge.ui.gameplay;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import box2dLight.RayHandler;
@@ -23,6 +24,10 @@ import com.blastedstudios.gdxworld.plugin.quest.manifestation.dialog.DialogManif
 import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.ui.AbstractWindow;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
+import com.blastedstudios.gdxworld.ui.drawable.Drawable;
+import com.blastedstudios.gdxworld.ui.drawable.DrawableSorter;
+import com.blastedstudios.gdxworld.ui.drawable.ShapeDrawable;
+import com.blastedstudios.gdxworld.ui.drawable.TiledMeshRendererDrawable;
 import com.blastedstudios.gdxworld.ui.leveleditor.LevelEditorScreen;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.GDXGameFade;
@@ -37,6 +42,8 @@ import com.blastedstudios.gdxworld.world.quest.GDXQuest;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.ledge.ui.LedgeScreen;
+import com.blastedstudios.ledge.ui.drawable.ParticleManagerDrawable;
+import com.blastedstudios.ledge.ui.drawable.WorldManagerDrawable;
 import com.blastedstudios.ledge.ui.gameplay.console.ConsoleWindow;
 import com.blastedstudios.ledge.ui.gameplay.hud.HUD;
 import com.blastedstudios.ledge.ui.gameplay.inventory.InventoryWindow;
@@ -73,6 +80,7 @@ public class GameplayScreen extends LedgeScreen {
 	private final TiledMeshRenderer tiledMeshRenderer;
 	private final SpriteBatch spriteBatch = new SpriteBatch();
 	private final AssetManager sharedAssets, assetManager;
+	private final LinkedList<Drawable> drawables;
 	private Table tintTable;
 	
 	public GameplayScreen(GDXGame game, Player player, GDXLevel level, GDXWorld world,
@@ -114,6 +122,16 @@ public class GameplayScreen extends LedgeScreen {
 			Log.log("GameplayScreen.<init>", "Shared assets finishing loading");
 		sharedAssets.finishLoading();//unsure if queued == 0 means its done... this verifies
 		registerInput();
+		drawables = gdxRenderer.generateDrawables(assetManager, spriteBatch, level, camera, 
+				worldManager.getCreateLevelStruct().bodies.entrySet());
+		drawables.sort(new DrawableSorter());
+		int startIndex = drawables.size() - 1;
+		for(int i = 1; i < drawables.size(); i++)
+			if(drawables.get(i-1) instanceof ShapeDrawable && !(drawables.get(i) instanceof ShapeDrawable))
+				startIndex = i;
+		drawables.add(startIndex, new ParticleManagerDrawable(particleManager, worldManager));
+		drawables.add(startIndex, new WorldManagerDrawable(worldManager));
+		drawables.add(startIndex, new TiledMeshRendererDrawable(tiledMeshRenderer));
 	}
 	
 	private void registerInput(){
@@ -262,12 +280,10 @@ public class GameplayScreen extends LedgeScreen {
 
 		spriteBatch.setProjectionMatrix(camera.combined);
 		spriteBatch.begin();
-		gdxRenderer.render(assetManager, spriteBatch, level, camera, worldManager.getCreateLevelStruct().bodies.entrySet());
+		for(Drawable drawable : drawables)
+			drawable.render(delta, assetManager, spriteBatch, camera, gdxRenderer);
 		spriteBatch.end();
 		
-		tiledMeshRenderer.render(camera);
-		worldManager.render(delta, gdxRenderer, camera);
-		particleManager.render(delta, camera, worldManager);
 		if(Properties.getBool("lighting.draw", true))
 			rayHandler.updateAndRender();
 		if(Properties.getBool("debug.draw"))

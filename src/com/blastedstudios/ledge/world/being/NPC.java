@@ -11,7 +11,7 @@ import jbt.execution.core.IBTLibrary;
 import jbt.execution.core.IContext;
 
 import com.badlogic.gdx.assets.AssetManager;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
@@ -68,10 +68,10 @@ public class NPC extends Being {
 		}
 	}
 	
-	@Override public void render(float dt, World world, SpriteBatch spriteBatch, 
+	@Override public void render(float dt, World world, Batch batch, 
 			AssetManager sharedAssets, GDXRenderer gdxRenderer, IDeathCallback callback,
 			boolean paused, boolean inputEnabled){
-		super.render(dt, world, spriteBatch, sharedAssets, gdxRenderer, callback, paused, inputEnabled);
+		super.render(dt, world, batch, sharedAssets, gdxRenderer, callback, paused, inputEnabled);
 		if(!dead && btExecutor != null)
 			btExecutor.tick();
 	}
