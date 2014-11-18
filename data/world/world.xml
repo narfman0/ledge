@@ -57082,8 +57082,8 @@
     <world.GDXLevel>
       <name>Interlude1</name>
       <coordinates>
-        <x>-0.6000004</x>
-        <y>15.76</y>
+        <x>4.1333323</x>
+        <y>9.279999</y>
       </coordinates>
       <tiles/>
       <circles/>
@@ -57096,8 +57096,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>0.5593628</x>
-            <y>-3.6831124</y>
+            <x>0.59062445</x>
+            <y>0.86062443</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -57133,13 +57133,13 @@
         <world.GDXNPC>
           <name>trade</name>
           <coordinates>
-            <x>-1.0028204</x>
-            <y>-3.0946665</y>
+            <x>-0.8987919</x>
+            <y>1.3989115</y>
           </coordinates>
           <properties class="tree-map">
             <entry>
               <string>Aim</string>
-              <string></string>
+              <string>-.4</string>
             </entry>
             <entry>
               <string>Attack</string>
@@ -57194,13 +57194,13 @@
         <world.GDXNPC>
           <name>respect</name>
           <coordinates>
-            <x>0.78353214</x>
-            <y>-3.1787305</y>
+            <x>1.2577143</x>
+            <y>1.566211</y>
           </coordinates>
           <properties class="tree-map">
             <entry>
               <string>Aim</string>
-              <string>-4</string>
+              <string>-2.5</string>
             </entry>
             <entry>
               <string>Attack</string>
@@ -57255,13 +57255,13 @@
         <world.GDXNPC>
           <name>honor</name>
           <coordinates>
-            <x>-2.946794</x>
-            <y>-3.157714</y>
+            <x>-2.9900393</x>
+            <y>1.3455179</y>
           </coordinates>
           <properties class="tree-map">
             <entry>
               <string>Aim</string>
-              <string></string>
+              <string>-.4</string>
             </entry>
             <entry>
               <string>Attack</string>
@@ -57319,9 +57319,11 @@
       <quests>
         <world.quest.GDXQuest>
           <name>d0</name>
-          <prerequisites></prerequisites>
+          <prerequisites>camera1</prerequisites>
           <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>3000</time>
+          </trigger>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
             <dialog>It is time to bring another.</dialog>
             <origin>Trade</origin>
@@ -57471,30 +57473,53 @@
             <nextLevel>Desert</nextLevel>
           </manifestation>
         </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>camera0</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.cameratween.CameraTweenManifestation">
+            <target>
+              <x>-9.875023</x>
+              <y>25.540508</y>
+            </target>
+            <duration>0.0</duration>
+            <tweenType>ExpoIn</tweenType>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>camera1</name>
+          <prerequisites>camera0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>1000</time>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.cameratween.CameraTweenManifestation">
+            <target>
+              <x>-0.48663652</x>
+              <y>6.063586</y>
+            </target>
+            <duration>3.0</duration>
+            <tweenType>CubicInOut</tweenType>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>d8Ponder</name>
+          <prerequisites>d7</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Trade looks in the distance with a passing, hardly perceptible grimace of bitterness.</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
       </quests>
       <backgrounds>
         <world.GDXBackground>
           <coordinates>
             <x>0.0</x>
             <y>0.0</y>
-          </coordinates>
-          <texture>data/textures/home/background100.png</texture>
-          <scissor>false</scissor>
-          <scissorUpperRight>
-            <x>0.0</x>
-            <y>0.0</y>
-          </scissorUpperRight>
-          <scissorLowerLeft>
-            <x>0.0</x>
-            <y>0.0</y>
-          </scissorLowerLeft>
-          <depth>100.0</depth>
-          <scale>0.02</scale>
-        </world.GDXBackground>
-        <world.GDXBackground>
-          <coordinates>
-            <x>0.0</x>
-            <y>-3.0</y>
           </coordinates>
           <texture>data/textures/central/centralCityscape.png</texture>
           <scissor>false</scissor>
@@ -57511,8 +57536,8 @@
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
-            <x>0.0</x>
-            <y>0.0</y>
+            <x>0.16875105</x>
+            <y>8.074687</y>
           </coordinates>
           <texture>data/textures/central/centralMeeting.png</texture>
           <scissor>false</scissor>
