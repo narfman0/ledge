@@ -11011,8 +11011,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>233.55476</x>
-            <y>-10.56848</y>
+            <x>243.43254</x>
+            <y>-8.281154</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -11022,60 +11022,60 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>33.078598</x>
-              <y>2.919848</y>
+              <x>36.755295</x>
+              <y>32.68547</y>
             </Vector2>
             <Vector2>
-              <x>4.778763</x>
-              <y>2.8852472</y>
+              <x>22.804672</x>
+              <y>0.7143564</y>
             </Vector2>
             <Vector2>
-              <x>3.5537567</x>
-              <y>3.1391535</y>
+              <x>-5.8658295</x>
+              <y>0.6304436</y>
             </Vector2>
             <Vector2>
-              <x>0.8631439</x>
-              <y>3.256341</y>
+              <x>-9.014633</x>
+              <y>0.9690151</y>
             </Vector2>
             <Vector2>
-              <x>-4.4806213</x>
-              <y>3.021966</y>
+              <x>-14.358398</x>
+              <y>0.7346401</y>
             </Vector2>
             <Vector2>
-              <x>-5.005615</x>
-              <y>3.490716</y>
+              <x>-14.883392</x>
+              <y>1.2033901</y>
             </Vector2>
             <Vector2>
-              <x>-5.2462463</x>
-              <y>3.412591</y>
+              <x>-15.124023</x>
+              <y>1.1252651</y>
             </Vector2>
             <Vector2>
-              <x>-5.6181183</x>
-              <y>3.0805597</y>
+              <x>-15.495895</x>
+              <y>0.7932339</y>
             </Vector2>
             <Vector2>
-              <x>-6.1212463</x>
-              <y>3.490716</y>
+              <x>-15.999023</x>
+              <y>1.2033901</y>
             </Vector2>
             <Vector2>
-              <x>-8.089996</x>
-              <y>3.5297785</y>
+              <x>-17.967773</x>
+              <y>1.2424526</y>
             </Vector2>
             <Vector2>
-              <x>-10.45874</x>
-              <y>3.4516535</y>
+              <x>-20.336517</x>
+              <y>1.1643276</y>
             </Vector2>
             <Vector2>
-              <x>-15.402496</x>
-              <y>2.787591</y>
+              <x>-25.280273</x>
+              <y>0.5002651</y>
             </Vector2>
             <Vector2>
-              <x>-15.54393</x>
-              <y>-18.905287</y>
+              <x>-25.421707</x>
+              <y>-21.192612</y>
             </Vector2>
             <Vector2>
-              <x>33.69252</x>
-              <y>-19.560862</y>
+              <x>120.18733</x>
+              <y>-21.773636</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -12724,42 +12724,6 @@
             <Vector2>
               <x>1.6184082</x>
               <y>0.12893403</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-17</name>
-          <resource></resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>262.8731</x>
-            <y>0.13069987</y>
-          </center>
-          <filter>
-            <categoryBits>1</categoryBits>
-            <maskBits>-1</maskBits>
-            <groupIndex>0</groupIndex>
-          </filter>
-          <repeatable>false</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-0.23608398</x>
-              <y>-7.7553883</y>
-            </Vector2>
-            <Vector2>
-              <x>-0.11804199</x>
-              <y>7.7553873</y>
-            </Vector2>
-            <Vector2>
-              <x>0.32461548</x>
-              <y>7.7199755</y>
-            </Vector2>
-            <Vector2>
-              <x>0.029510498</x>
-              <y>-7.7199755</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -15253,8 +15217,8 @@
         <world.GDXNPC>
           <name>desertSoldier1</name>
           <coordinates>
-            <x>173.6854</x>
-            <y>-24.284685</y>
+            <x>169.49571</x>
+            <y>-20.899492</y>
           </coordinates>
           <properties>
             <entry>
@@ -15263,7 +15227,7 @@
             </entry>
             <entry>
               <string>Aim</string>
-              <string>-4</string>
+              <string>-3</string>
             </entry>
             <entry>
               <string>Resource</string>
@@ -15314,8 +15278,8 @@
         <world.GDXNPC>
           <name>desertSoldier2</name>
           <coordinates>
-            <x>168.12364</x>
-            <y>-26.410103</y>
+            <x>163.28355</x>
+            <y>-26.241669</y>
           </coordinates>
           <properties>
             <entry>
@@ -15324,7 +15288,7 @@
             </entry>
             <entry>
               <string>Aim</string>
-              <string>-4</string>
+              <string></string>
             </entry>
             <entry>
               <string>Resource</string>
@@ -18788,6 +18752,189 @@
             </entry>
           </properties>
         </world.GDXNPC>
+        <world.GDXNPC>
+          <name>father</name>
+          <coordinates>
+            <x>166.59128</x>
+            <y>-26.574076</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string>-3</string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string>ENEMY</string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>desertMale</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>mother</name>
+          <coordinates>
+            <x>167.92743</x>
+            <y>-26.495861</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string>-3</string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string>ENEMY</string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>desertFemale</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>daughter</name>
+          <coordinates>
+            <x>168.48143</x>
+            <y>-26.495861</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string>-3</string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string>ENEMY</string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>desertFemale</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
       </npcs>
       <paths>
         <world.GDXPath>
@@ -19194,10 +19341,11 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
             <coordinates>
-              <x>260.06586</x>
-              <y>-0.477085</y>
+              <x>196.9252</x>
+              <y>-22.46507</y>
             </coordinates>
             <being>player</being>
+            <npcData>player</npcData>
             <path></path>
           </manifestation>
         </world.quest.GDXQuest>
@@ -19249,7 +19397,7 @@
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
           <name>vasht0</name>
-          <prerequisites></prerequisites>
+          <prerequisites>vasht0Disable</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
             <lowerLeft>
@@ -19346,9 +19494,18 @@
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
           <name>vasht0Disable</name>
-          <prerequisites>vasht0</prerequisites>
+          <prerequisites></prerequisites>
           <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>258.22018</x>
+              <y>-2.1536798</y>
+            </lowerLeft>
+            <upperRight>
+              <x>261.90076</x>
+              <y>3.1222758</y>
+            </upperRight>
+          </trigger>
           <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
             <inputEnable>false</inputEnable>
           </manifestation>
@@ -19364,16 +19521,16 @@
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
           <name>vasht9InputDisable</name>
-          <prerequisites></prerequisites>
+          <prerequisites>vasht8InputEnable</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
             <lowerLeft>
-              <x>252.69003</x>
-              <y>-7.729283</y>
+              <x>252.05316</x>
+              <y>-7.688369</y>
             </lowerLeft>
             <upperRight>
-              <x>254.26866</x>
-              <y>-5.041423</y>
+              <x>256.08102</x>
+              <y>4.8785458</y>
             </upperRight>
           </trigger>
           <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
@@ -19842,7 +19999,7 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>As Rob-bot voice trails of in Colligans brain, rattling off a variety of fun mark 18 facts, Colligans mindset is transitioned back to that of flight.</dialog>
+            <dialog>As Rob-bot voice trails off in Colligans brain, rattling off a variety of fun mark 18 facts, Colligans mindset is transitioned back to that of flight.</dialog>
             <origin></origin>
             <type>Type</type>
           </manifestation>
@@ -19897,7 +20054,7 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>, well, time to test out, farewell Vasht, thanks for...</dialog>
+            <dialog>Huh, well, time to test out, farewell Vasht, thanks for...</dialog>
             <origin>Colligan</origin>
             <type>Type</type>
           </manifestation>
@@ -19928,12 +20085,12 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
             <lowerLeft>
-              <x>185.58566</x>
-              <y>-27.29951</y>
+              <x>170.53452</x>
+              <y>-27.375761</y>
             </lowerLeft>
             <upperRight>
-              <x>191.37923</x>
-              <y>-15.57332</y>
+              <x>175.40656</x>
+              <y>-15.35048</y>
             </upperRight>
           </trigger>
           <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
@@ -19946,64 +20103,9 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>Colligan runs West to next house and sees group of three soldiers. One is in a building and shoots a family. As the scene unfolds before Colligan, he is overcome with hatred and again thinks of his wrench to bring justice.</dialog>
+            <dialog>Colligan runs West to next house and sees group of three soldiers, one in the house shouting</dialog>
             <origin></origin>
             <type>Type</type>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>family2</name>
-          <prerequisites>family1</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.kill.KillTrigger">
-            <name>desertSoldier2</name>
-          </trigger>
-          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
-            <inputEnable>false</inputEnable>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>family3</name>
-          <prerequisites>family2</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>After avenging the seemingly helpless family, Colligan eyes the corpse of the soldier wielding the gun. Half disgusted, and half intrigued, he slowly creeps up to it. As he grips it, Rob-bot beeps in understanding, and Colligan decides on this being another tool through which he may administer justice to this uncalled for attack on a peaceful people group.</dialog>
-            <origin></origin>
-            <type>Type</type>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>family4</name>
-          <prerequisites>family3</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.weaponadd.WeaponAddManifestation">
-            <weapon>glock</weapon>
-            <target>player</target>
-            <weaponAddType>PERSON</weaponAddType>
-            <location>
-              <x>0.0</x>
-              <y>0.0</y>
-            </location>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>family5</name>
-          <prerequisites>family4</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
-            <inputEnable>true</inputEnable>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>family1InputEnable</name>
-          <prerequisites>family1</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
-            <inputEnable>true</inputEnable>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -20355,6 +20457,224 @@
             </coordinates>
             <being>player</being>
             <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>vasht14Motion</name>
+          <prerequisites>vasht13</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>vasht</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>3.1</aim>
+            <kill>false</kill>
+            <remove>false</remove>
+            <doAim>true</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>start-0</name>
+          <prerequisites>start</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>player</being>
+            <textureAtlas>colligan</textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>0.0</aim>
+            <kill>false</kill>
+            <remove>false</remove>
+            <doAim>false</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>robbot37</name>
+          <prerequisites>robbot36Enable</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>robbot</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>0.0</aim>
+            <kill>false</kill>
+            <remove>true</remove>
+            <doAim>false</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>robbot38</name>
+          <prerequisites>robbot37</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>player</being>
+            <textureAtlas>colliganSuit</textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>0.0</aim>
+            <kill>false</kill>
+            <remove>false</remove>
+            <doAim>false</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>robbot24</name>
+          <prerequisites>robbot23</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>vasht</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>0.0</aim>
+            <kill>true</kill>
+            <remove>false</remove>
+            <doAim>false</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>family2</name>
+          <prerequisites>family1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Get on your knees and stay calm, I cant let you stay up in an aggressive position!</dialog>
+            <origin>Desert Soldier 1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>family3</name>
+          <prerequisites>family2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>This is our house, and I must stand in the presence of the woman, you have no respect for sacred rites?</dialog>
+            <origin>Desert Man</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>family4</name>
+          <prerequisites>family3</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Sir, you must sit down or we will use force!</dialog>
+            <origin>Desert Soldier 1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>family5</name>
+          <prerequisites>family4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>My wife is right here, we mean no aggression but we musnt acquiesce...</dialog>
+            <origin>Desert Man</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>family5MoveArm</name>
+          <prerequisites>family4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>500</time>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>father</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>0.0</aim>
+            <kill>false</kill>
+            <remove>false</remove>
+            <doAim>true</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>family5MoveArm-0</name>
+          <prerequisites>family5MoveArm</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>1000</time>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>father</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>-3.0</aim>
+            <kill>false</kill>
+            <remove>false</remove>
+            <doAim>true</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>family5MoveArm-1</name>
+          <prerequisites>family5MoveArm-0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.factionchange.FactionChangeManifestation">
+            <being>(father|mother|daughter)</being>
+            <faction>FRIEND</faction>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>family5MoveArm-2</name>
+          <prerequisites>family5MoveArm-1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>As the scene unfolds before Colligan, he is overcome with hatred and again thinks to bring justice for the helpless family.</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>family5MoveArm-3</name>
+          <prerequisites>family5MoveArm-2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>true</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>familyKill0</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.kill.KillTrigger">
+            <name>desertSoldier2</name>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Colligan eyes the corpse of the soldier wielding the gun. Half disgusted, and half intrigued, he slowly creeps up to it. As he grips it, Rob-bot beeps in understanding, and Colligan decides on this being another tool through which he may administer justice to this uncalled for attack on a peaceful people group.</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>familyKill1</name>
+          <prerequisites>familyKill0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.weaponadd.WeaponAddManifestation">
+            <weapon>glock</weapon>
+            <target>player</target>
+            <weaponAddType>PERSON</weaponAddType>
+            <location>
+              <x>0.0</x>
+              <y>0.0</y>
+            </location>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
