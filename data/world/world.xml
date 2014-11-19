@@ -11001,7 +11001,26 @@
         <y>-3.8400002</y>
       </coordinates>
       <tiles/>
-      <circles/>
+      <circles>
+        <world.shape.GDXCircle>
+          <name>Circle-0</name>
+          <resource>data/textures/environment/metalElevator.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>-278.75516</x>
+            <y>0.08594793</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>0</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>1.0</radius>
+        </world.shape.GDXCircle>
+      </circles>
       <polygons>
         <world.shape.GDXPolygon>
           <name>Polygon-19</name>
@@ -14155,8 +14174,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-272.7729</x>
-            <y>4.4134035</y>
+            <x>-273.32098</x>
+            <y>4.6841393</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -14166,28 +14185,28 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>5.8641663</x>
-              <y>1.793654</y>
+              <x>6.412262</x>
+              <y>1.5229182</y>
             </Vector2>
             <Vector2>
-              <x>-2.7697754</x>
-              <y>1.7700539</y>
+              <x>-2.2216797</x>
+              <y>1.4993181</y>
             </Vector2>
             <Vector2>
-              <x>-2.7697754</x>
-              <y>-3.823316</y>
+              <x>-3.8344727</x>
+              <y>-3.3667254</y>
             </Vector2>
             <Vector2>
-              <x>-3.1040955</x>
-              <y>-3.8469164</y>
+              <x>-4.231781</x>
+              <y>-3.2205627</y>
             </Vector2>
             <Vector2>
-              <x>-3.0647888</x>
-              <y>1.98246</y>
+              <x>-2.516693</x>
+              <y>1.7117243</y>
             </Vector2>
             <Vector2>
-              <x>5.8444824</x>
-              <y>2.124064</y>
+              <x>6.392578</x>
+              <y>1.8533282</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -15148,6 +15167,174 @@
             <Vector2>
               <x>-0.5</x>
               <y>-0.20000076</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-0</name>
+          <resource>data/textures/tiled/sand1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-282.88873</x>
+            <y>-27.505459</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>5.3660583</x>
+              <y>23.881794</y>
+            </Vector2>
+            <Vector2>
+              <x>3.2770996</x>
+              <y>23.24371</y>
+            </Vector2>
+            <Vector2>
+              <x>1.6629028</x>
+              <y>22.446102</y>
+            </Vector2>
+            <Vector2>
+              <x>0.7133484</x>
+              <y>21.557343</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.44506836</x>
+              <y>20.372326</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.0717468</x>
+              <y>19.369621</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.4325867</x>
+              <y>18.230183</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.964325</x>
+              <y>16.68055</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.0402832</x>
+              <y>15.609479</y>
+            </Vector2>
+            <Vector2>
+              <x>-16.181885</x>
+              <y>-91.226135</y>
+            </Vector2>
+            <Vector2>
+              <x>12.116333</x>
+              <y>-90.16495</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>gondolaBase</name>
+          <resource></resource>
+          <density>100.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-278.7056</x>
+            <y>-1.4640611</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-1.6094055</x>
+              <y>0.18363976</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.6094055</x>
+              <y>-0.17139733</y>
+            </Vector2>
+            <Vector2>
+              <x>1.614502</x>
+              <y>-0.19588232</y>
+            </Vector2>
+            <Vector2>
+              <x>1.6042786</x>
+              <y>0.18363976</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>gondolaRoof</name>
+          <resource></resource>
+          <density>100.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>-278.73706</x>
+            <y>1.474179</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-1.6187439</x>
+              <y>-0.1958828</y>
+            </Vector2>
+            <Vector2>
+              <x>0.033996582</x>
+              <y>0.36728</y>
+            </Vector2>
+            <Vector2>
+              <x>1.5847473</x>
+              <y>-0.17139769</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-24</name>
+          <resource>data/textures/tiled/metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-275.7544</x>
+            <y>-2.4462807</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-1.2946472</x>
+              <y>1.1445559</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.49264526</x>
+              <y>1.1445559</y>
+            </Vector2>
+            <Vector2>
+              <x>3.0819397</x>
+              <y>-1.1514301</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.2946472</x>
+              <y>-1.1376815</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -18935,6 +19122,128 @@
             </entry>
           </properties>
         </world.GDXNPC>
+        <world.GDXNPC>
+          <name>officer2</name>
+          <coordinates>
+            <x>-229.9305</x>
+            <y>1.3946308</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string>glock</string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>desertSoldier</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>officer1</name>
+          <coordinates>
+            <x>-226.16624</x>
+            <y>1.5441327</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string>-3</string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string>glock</string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>desertSoldier</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
       </npcs>
       <paths>
         <world.GDXPath>
@@ -19332,6 +19641,52 @@
             <y>-12.969927</y>
           </anchor>
         </world.joint.RevoluteJoint>
+        <world.joint.WeldJoint>
+          <name>gondolaJoint</name>
+          <bodyA>gondolaRoof</bodyA>
+          <bodyB>gondolaBase</bodyB>
+          <jointType>WeldJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>-278.8459</x>
+            <y>0.017301202</y>
+          </anchor>
+        </world.joint.WeldJoint>
+        <world.joint.WeldJoint>
+          <name>gondolaTextureJoint</name>
+          <bodyA>Circle-0</bodyA>
+          <bodyB>gondolaBase</bodyB>
+          <jointType>WeldJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>-278.71326</x>
+            <y>0.054029465</y>
+          </anchor>
+        </world.joint.WeldJoint>
+        <world.joint.PrismaticJoint>
+          <name>gondolaPrismatic</name>
+          <bodyA>gondolaBase</bodyA>
+          <bodyB>Polygon-36</bodyB>
+          <jointType>PrismaticJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>true</enableMotor>
+          <lowerTranslation>0.0</lowerTranslation>
+          <upperTranslation>0.0</upperTranslation>
+          <maxMotorForce>999.0</maxMotorForce>
+          <motorSpeed>-0.5</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>-275.53784</x>
+            <y>3.8015296</y>
+          </anchor>
+          <axis>
+            <x>-0.8638078</x>
+            <y>-0.5038215</y>
+          </axis>
+        </world.joint.PrismaticJoint>
       </joints>
       <quests>
         <world.quest.GDXQuest>
@@ -19341,8 +19696,8 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
             <coordinates>
-              <x>196.9252</x>
-              <y>-22.46507</y>
+              <x>-273.10342</x>
+              <y>-2.8056064</y>
             </coordinates>
             <being>player</being>
             <npcData>player</npcData>
@@ -19350,22 +19705,21 @@
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
-          <name>end</name>
+          <name>end0</name>
           <prerequisites></prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
             <lowerLeft>
-              <x>-293.65714</x>
-              <y>-14.645664</y>
+              <x>-276.2355</x>
+              <y>-4.137677</y>
             </lowerLeft>
             <upperRight>
-              <x>-275.78207</x>
-              <y>1.6487563</y>
+              <x>-272.85938</x>
+              <y>6.3147607</y>
             </upperRight>
           </trigger>
-          <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
-            <success>true</success>
-            <nextLevel>Forest</nextLevel>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>false</inputEnable>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -20675,6 +21029,232 @@
               <x>0.0</x>
               <y>0.0</y>
             </location>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base0</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>-223.49298</x>
+              <y>-11.903796</y>
+            </lowerLeft>
+            <upperRight>
+              <x>-221.22731</x>
+              <y>1.1363907</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>false</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base1</name>
+          <prerequisites>base0Input</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Interesting, I underestimated these folks hints of peace. Unfortunate to upset the natural balance, but we need to bring swift action to the interloper. Bring E1/E2 here to fortify the entrance to the facility, they mustnt pass here. Make other e squads systematically go over the terrain and...</dialog>
+            <origin>Officer2</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base2</name>
+          <prerequisites>base1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>With a downcast aspect, the officer responds.</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base3</name>
+          <prerequisites>base2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Affirmative sir, I understand, Ill call them in now.</dialog>
+            <origin>Officer1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base4</name>
+          <prerequisites>base3</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>officer1</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>0.0</aim>
+            <kill>false</kill>
+            <remove>false</remove>
+            <doAim>true</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base5</name>
+          <prerequisites>base4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Interloper, there! Give up!</dialog>
+            <origin>Officer1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base6</name>
+          <prerequisites>base5</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>officer(1|2)</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget>player</attackTarget>
+            <dmg>0.0</dmg>
+            <aim>0.0</aim>
+            <kill>false</kill>
+            <remove>false</remove>
+            <doAim>true</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end2</name>
+          <prerequisites>end1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Argh... why would they take out Vasht and such a peaceful area? They didnt seem to like it but acted anyway, not too unfamiliar I suppose. What is this forest beneath us, another ledge? </dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end3</name>
+          <prerequisites>end2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Rob-bot, thoughts? Huh. Suppose I should see this facility and if it can help me get home... or somewhere...</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end5</name>
+          <prerequisites>end4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.objectdistance.ObjectDistanceTrigger">
+            <target>gondolaBase</target>
+            <distance>1.0</distance>
+            <actionRequired>true</actionRequired>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
+            <name>gondolaBase</name>
+            <impulse>
+              <x>0.0</x>
+              <y>0.0</y>
+            </impulse>
+            <position>
+              <x>0.0</x>
+              <y>0.0</y>
+            </position>
+            <velocity>
+              <x>0.0</x>
+              <y>0.0</y>
+            </velocity>
+            <type>DynamicBody</type>
+            <torque>0.0</torque>
+            <angle>0.0</angle>
+            <hasPosition>false</hasPosition>
+            <hasVelocity>false</hasVelocity>
+            <hasAngle>false</hasAngle>
+            <relativePosition>true</relativePosition>
+            <relativeVelocity>true</relativeVelocity>
+            <relativeAngle>true</relativeAngle>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end6</name>
+          <prerequisites>end5</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>2000</time>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
+            <success>true</success>
+            <nextLevel>Forest</nextLevel>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base0Input</name>
+          <prerequisites>base0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>E3 hasnt reported in, despite P2 and P3 reporting success in the initial run. Other teams report little resistance.</dialog>
+            <origin>Officer1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base7</name>
+          <prerequisites>base6</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>true</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>respawn10</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>-258.75082</x>
+              <y>20.043446</y>
+            </lowerLeft>
+            <upperRight>
+              <x>-258.75082</x>
+              <y>20.043446</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <coordinates>
+              <x>-259.8571</x>
+              <y>14.705626</y>
+            </coordinates>
+            <being>player</being>
+            <npcData></npcData>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end1</name>
+          <prerequisites>end0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Passing through the bunker, Colligan finds interesting housing. Looking beyond in awe, he sees a vast canopy of trees below him. It appears another ledge is close enough to build a gondola down to this forest area.</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end4</name>
+          <prerequisites>end3</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
+            <inputEnable>true</inputEnable>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
@@ -31685,6 +32265,42 @@
             <Vector2>
               <x>-43.084137</x>
               <y>-70.1465</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-19</name>
+          <resource>data/textures/environment/metalElevator.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>0.86794305</x>
+            <y>-16.051884</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-1.551379</x>
+              <y>1.6302834</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.6225709</x>
+              <y>-1.6302834</y>
+            </Vector2>
+            <Vector2>
+              <x>1.6403685</x>
+              <y>-1.72995</y>
+            </Vector2>
+            <Vector2>
+              <x>1.5335815</x>
+              <y>1.7299519</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
