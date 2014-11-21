@@ -94,6 +94,8 @@ public class WorldManager implements IDeathCallback{
 	public void render(float dt, GDXRenderer gdxRenderer, Camera cam, Batch batch){
 		if(!pause && inputEnable && !player.isDead())
 			player.setFixedRotation(desireFixedRotation);
+		batch.end();
+		batch.begin();
 		if(player.isSpawned())
 			player.render(dt, world, batch, sharedAssets, gdxRenderer, this, pause, inputEnable);
 		for(NPC npc : npcs)
