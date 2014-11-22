@@ -48,8 +48,25 @@ public class CurrentObjective extends
 			getContext().setVariable("CurrentObjectiveTarget", new float[]{target.x, target.y});
 			if(objective.getNodes().get(0).dst(self.getPosition()) < 1)
 				objective.getNodes().remove(0);
-			if(objective.getNodes().isEmpty())
-				getContext().setVariable(AIFieldEnum.OBJECTIVE.name(), self.getPath().clone());
+			if(objective.getNodes().isEmpty()){
+				switch(objective.getCompletionCriteria()){
+				case END:
+					getContext().clearVariable(AIFieldEnum.OBJECTIVE.name());
+					break;
+				case REPEAT:
+					getContext().setVariable(AIFieldEnum.OBJECTIVE.name(), self.getPath().clone());
+					break;
+				case REVERSE:
+					boolean reversed = getContext().getVariable("PATH_REVERSED") == null || 
+							(boolean)getContext().getVariable("PATH_REVERSED");
+					GDXPath clone = (GDXPath) self.getPath().clone();
+					if(!reversed)
+						clone.reverse();
+					getContext().setVariable("PATH_REVERSED", !reversed);
+					getContext().setVariable(AIFieldEnum.OBJECTIVE.name(), clone);
+					break;
+				}
+			}
 			return Status.SUCCESS;
 		}else{
 			getContext().clearVariable("CurrentObjectiveTarget");
