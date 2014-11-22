@@ -74,6 +74,10 @@ public class Aim extends jbt.execution.task.leaf.action.ExecutionAction {
 
 	protected Status internalTick() {
 		NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
+		if(getTarget() == null || self.getPosition() == null){
+			Log.error("Aim.internalTick", "Target of self null, aborting");
+			return Status.FAILURE;
+		}
 		Vector2 direction = new Vector2(getTarget()[0], getTarget()[1]).sub(self.getPosition()).nor();
 		self.aim((float)Math.atan2(direction.y, direction.x));
 		return Status.SUCCESS;

@@ -1,10 +1,11 @@
-package com.blastedstudios.ledge.plugin.quest.handler;
+package com.blastedstudios.ledge.plugin.quest.handler.manifestation;
 
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 import com.badlogic.gdx.math.Vector2;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.beingspawn.IBeingSpawnHandler;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
+import com.blastedstudios.ledge.plugin.quest.handler.IWorldManagerInitializer;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.NPCData;
 

@@ -1,4 +1,4 @@
-package com.blastedstudios.ledge.plugin.quest.handler;
+package com.blastedstudios.ledge.plugin.quest.handler.manifestation;
 
 import java.util.HashMap;
 
@@ -9,6 +9,7 @@ import com.blastedstudios.gdxworld.plugin.quest.manifestation.sound.ISoundHandle
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.sound.SoundManifestationEnum;
 import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
+import com.blastedstudios.ledge.plugin.quest.handler.IWorldManagerInitializer;
 import com.blastedstudios.ledge.world.WorldManager;
 
 @PluginImplementation

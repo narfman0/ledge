@@ -1,4 +1,4 @@
-package com.blastedstudios.ledge.plugin.quest.handler;
+package com.blastedstudios.ledge.plugin.quest.handler.manifestation;
 
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
@@ -7,6 +7,7 @@ import com.blastedstudios.gdxworld.plugin.quest.manifestation.particle.IParticle
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.particle.ParticleManifestationTypeEnum;
 import com.blastedstudios.gdxworld.world.GDXParticle;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
+import com.blastedstudios.ledge.plugin.quest.handler.IGameplayScreenInitializer;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
 
 @PluginImplementation

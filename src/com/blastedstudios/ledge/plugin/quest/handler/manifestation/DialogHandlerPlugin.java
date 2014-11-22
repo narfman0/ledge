@@ -1,4 +1,4 @@
-package com.blastedstudios.ledge.plugin.quest.handler;
+package com.blastedstudios.ledge.plugin.quest.handler.manifestation;
 
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 

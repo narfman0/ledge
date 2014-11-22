@@ -24,6 +24,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.Fixture;
+import com.badlogic.gdx.physics.box2d.Joint;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
@@ -330,6 +331,26 @@ public class WorldManager implements IDeathCallback{
 			if(being.getName().matches(beingName))
 				targets.add(being);
 		return targets;
+	}
+
+	public List<Joint> matchPhysicsJoint(String name) {
+		LinkedList<Joint> joints = new LinkedList<>();
+		Array<Joint> allJoints = new Array<>(world.getJointCount());
+		world.getJoints(allJoints);
+		for(Joint joint : allJoints)
+			if(joint.getUserData() != null && joint.getUserData() instanceof String && ((String)joint.getUserData()).matches(name))
+				joints.add(joint);
+		return joints;
+	}
+
+	public List<Body> matchPhysicsObject(String name) {
+		LinkedList<Body> bodies = new LinkedList<>();
+		Array<Body> bodyArray = new Array<>(world.getBodyCount());
+		world.getBodies(bodyArray);
+		for(Body body : bodyArray)
+			if(name != null && body.getUserData() instanceof String && ((String)body.getUserData()).matches(name))
+				bodies.add(body);
+		return bodies;
 	}
 
 	public void transferParticles(ParticleEffect... particles) {

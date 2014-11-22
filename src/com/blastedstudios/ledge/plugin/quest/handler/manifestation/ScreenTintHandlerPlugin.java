@@ -1,4 +1,4 @@
-package com.blastedstudios.ledge.plugin.quest.handler;
+package com.blastedstudios.ledge.plugin.quest.handler.manifestation;
 
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
@@ -7,6 +7,7 @@ import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.blastedstudios.gdxworld.util.GDXGameFade;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
+import com.blastedstudios.ledge.plugin.quest.handler.IGameplayScreenInitializer;
 import com.blastedstudios.ledge.plugin.quest.manifestation.screentint.IScreenTintHandler;
 import com.blastedstudios.ledge.plugin.quest.manifestation.screentint.ScreenTintManifestation.TintType;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;

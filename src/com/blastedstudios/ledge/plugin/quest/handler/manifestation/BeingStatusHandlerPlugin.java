@@ -1,4 +1,4 @@
-package com.blastedstudios.ledge.plugin.quest.handler;
+package com.blastedstudios.ledge.plugin.quest.handler.manifestation;
 
 import java.util.List;
 
@@ -8,6 +8,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
 import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
+import com.blastedstudios.ledge.plugin.quest.handler.IWorldManagerInitializer;
 import com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.IBeingStatusHandler;
 import com.blastedstudios.ledge.util.VectorHelper;
 import com.blastedstudios.ledge.world.WorldManager;
