@@ -16,5 +16,9 @@
       <string>Behavior</string>
       <string>NeutralBT</string>
     </entry>
+    <entry>
+      <string>Weapons</string>
+      <string>staffWill</string>
+    </entry>
   </properties>
 </com.blastedstudios.ledge.world.being.NPCData>
