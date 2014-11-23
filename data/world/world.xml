@@ -19696,8 +19696,8 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
             <coordinates>
-              <x>-273.10342</x>
-              <y>-2.8056064</y>
+              <x>260.30185</x>
+              <y>-1.2782454</y>
             </coordinates>
             <being>player</being>
             <npcData>player</npcData>
