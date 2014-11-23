@@ -58517,7 +58517,26 @@
         <y>-5.2800007</y>
       </coordinates>
       <tiles/>
-      <circles/>
+      <circles>
+        <world.shape.GDXCircle>
+          <name>willDrop</name>
+          <resource></resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>4.462796</x>
+            <y>2.91506</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>0</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>2.5</radius>
+        </world.shape.GDXCircle>
+      </circles>
       <polygons>
         <world.shape.GDXPolygon>
           <name>Polygon-0</name>
@@ -59484,15 +59503,7 @@
               <y>2.8931408</y>
             </Vector2>
           </nodes>
-        </world.GDXPath>
-        <world.GDXPath>
-          <name>will2</name>
-          <nodes>
-            <Vector2>
-              <x>14.596234</x>
-              <y>2.9390678</y>
-            </Vector2>
-          </nodes>
+          <completionCriteria>REPEAT</completionCriteria>
         </world.GDXPath>
         <world.GDXPath>
           <name>will3</name>
@@ -59636,143 +59647,8 @@
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
-          <name>start-11</name>
-          <prerequisites>start-10</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
-            <being>rebel1</being>
-            <path>soldier1</path>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>start-12</name>
-          <prerequisites>start-11</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>Rebel1 aggressively runs at Will, who deftly handles his weapon, resulting in a killing blow</dialog>
-            <origin></origin>
-            <type></type>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>start-13</name>
-          <prerequisites>start-12</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
-            <being>will</being>
-            <path>will1</path>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>start-14</name>
-          <prerequisites>start-13</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.time.TimeTrigger">
-            <time>500</time>
-          </trigger>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
-            <being>rebel1</being>
-            <textureAtlas></textureAtlas>
-            <attackTarget></attackTarget>
-            <dmg>0.0</dmg>
-            <aim>0.0</aim>
-            <kill>true</kill>
-            <remove>false</remove>
-            <doAim>false</doAim>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>start-15</name>
-          <prerequisites>start-14</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>Fire!</dialog>
-            <origin>Officer1</origin>
-            <type></type>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>start-16</name>
-          <prerequisites>start-15</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.factionchange.FactionChangeManifestation">
-            <being>rebel.*</being>
-            <faction>FRIEND</faction>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>start-17</name>
-          <prerequisites>start-16</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>Alright we surrender! We surrender!</dialog>
-            <origin>Rebel2</origin>
-            <type></type>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>start-18</name>
-          <prerequisites>start-17</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
-            <being>will</being>
-            <path>will2</path>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>start-19</name>
-          <prerequisites>start-18</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.time.TimeTrigger">
-            <time>1000</time>
-          </trigger>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
-            <being>rebel.*</being>
-            <textureAtlas></textureAtlas>
-            <attackTarget></attackTarget>
-            <dmg>0.0</dmg>
-            <aim>0.0</aim>
-            <kill>true</kill>
-            <remove>false</remove>
-            <doAim>false</doAim>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>start-20</name>
-          <prerequisites>start-19</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
-            <being>will</being>
-            <path></path>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>start-21</name>
-          <prerequisites>start-20</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
-            <being>will</being>
-            <textureAtlas></textureAtlas>
-            <attackTarget></attackTarget>
-            <dmg>0.0</dmg>
-            <aim>-3.0</aim>
-            <kill>false</kill>
-            <remove>false</remove>
-            <doAim>true</doAim>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
           <name>start-22</name>
-          <prerequisites>start-21</prerequisites>
+          <prerequisites>start-16</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
@@ -59810,6 +59686,103 @@
           <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
             <success>true</success>
             <nextLevel>Forest</nextLevel>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>start-11</name>
+          <prerequisites>start-10</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>rebel1</being>
+            <path>will1</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>start-12</name>
+          <prerequisites>start-11</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>will</being>
+            <path>will1</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>start-13</name>
+          <prerequisites>start-12</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.objectdistance.ObjectDistanceTrigger">
+            <origin>will</origin>
+            <target>willDrop</target>
+            <distance>2.5</distance>
+            <actionRequired>false</actionRequired>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>will</being>
+            <path></path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>start-14</name>
+          <prerequisites>start-13</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.screentint.ScreenTintManifestation">
+            <tableColor>
+              <r>1.0</r>
+              <g>1.0</g>
+              <b>1.0</b>
+              <a>0.0</a>
+            </tableColor>
+            <pixmapColor>
+              <r>1.0</r>
+              <g>1.0</g>
+              <b>1.0</b>
+              <a>1.0</a>
+            </pixmapColor>
+            <tintType>FADEIN</tintType>
+            <duration>0.2</duration>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>start-15</name>
+          <prerequisites>start-14</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>200</time>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.screentint.ScreenTintManifestation">
+            <tableColor>
+              <r>1.0</r>
+              <g>1.0</g>
+              <b>1.0</b>
+              <a>1.0</a>
+            </tableColor>
+            <pixmapColor>
+              <r>1.0</r>
+              <g>1.0</g>
+              <b>1.0</b>
+              <a>1.0</a>
+            </pixmapColor>
+            <tintType>FADEOUT</tintType>
+            <duration>1.0</duration>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>start-16</name>
+          <prerequisites>start-15</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>rebel.*</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>0.0</aim>
+            <kill>true</kill>
+            <remove>false</remove>
+            <doAim>false</doAim>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
