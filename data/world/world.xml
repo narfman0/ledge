@@ -58870,8 +58870,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-9.1981</x>
-            <y>10.414428</y>
+            <x>-9.26988</x>
+            <y>10.444282</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -58881,84 +58881,84 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-7.214532</x>
-              <y>1.1407881</y>
+              <x>-8.100403</x>
+              <y>1.4889278</y>
             </Vector2>
             <Vector2>
-              <x>-7.214532</x>
-              <y>0.38615894</y>
+              <x>-7.620697</x>
+              <y>0.5753975</y>
             </Vector2>
             <Vector2>
-              <x>-5.9924116</x>
-              <y>-0.45389938</y>
+              <x>-5.9206314</x>
+              <y>-0.4837532</y>
             </Vector2>
             <Vector2>
-              <x>-4.87708</x>
-              <y>-0.65323544</y>
+              <x>-4.8052998</x>
+              <y>-0.68308926</y>
             </Vector2>
             <Vector2>
-              <x>-3.7261515</x>
-              <y>-0.21184826</y>
+              <x>-3.6543713</x>
+              <y>-0.24170208</y>
             </Vector2>
             <Vector2>
-              <x>-3.1922169</x>
-              <y>0.30072975</y>
+              <x>-3.1204367</x>
+              <y>0.27087593</y>
             </Vector2>
             <Vector2>
-              <x>-2.0628471</x>
-              <y>0.7273283</y>
+              <x>-1.9910669</x>
+              <y>0.6974745</y>
             </Vector2>
             <Vector2>
-              <x>0.9016743</x>
-              <y>0.2872343</y>
+              <x>0.9734545</x>
+              <y>0.2573805</y>
             </Vector2>
             <Vector2>
-              <x>3.065474</x>
-              <y>-0.28533268</y>
+              <x>3.1372542</x>
+              <y>-0.3151865</y>
             </Vector2>
             <Vector2>
-              <x>4.9119697</x>
-              <y>-1.1333532</y>
+              <x>4.98375</x>
+              <y>-1.163207</y>
             </Vector2>
             <Vector2>
-              <x>6.4621134</x>
-              <y>-1.9813728</y>
+              <x>6.5338936</x>
+              <y>-2.0112267</y>
             </Vector2>
             <Vector2>
-              <x>7.6864557</x>
-              <y>-2.3533297</y>
+              <x>7.758236</x>
+              <y>-2.3831835</y>
             </Vector2>
             <Vector2>
-              <x>7.778145</x>
-              <y>-1.8765612</y>
+              <x>7.849925</x>
+              <y>-1.906415</y>
             </Vector2>
             <Vector2>
-              <x>6.891843</x>
-              <y>-0.8496752</y>
+              <x>6.963623</x>
+              <y>-0.879529</y>
             </Vector2>
             <Vector2>
-              <x>6.081938</x>
-              <y>1.0146904</y>
+              <x>6.153718</x>
+              <y>0.9848366</y>
             </Vector2>
             <Vector2>
-              <x>1.8185368</x>
-              <y>1.0207243</y>
+              <x>1.890317</x>
+              <y>0.9908705</y>
             </Vector2>
             <Vector2>
-              <x>0.16818619</x>
-              <y>1.2774458</y>
+              <x>0.23996639</x>
+              <y>1.247592</y>
             </Vector2>
             <Vector2>
-              <x>-2.0934086</x>
-              <y>1.4608183</y>
+              <x>-2.0216284</x>
+              <y>1.4309645</y>
             </Vector2>
             <Vector2>
-              <x>-3.377016</x>
-              <y>1.4974928</y>
+              <x>-3.3052359</x>
+              <y>1.467639</y>
             </Vector2>
             <Vector2>
-              <x>-6.016143</x>
-              <y>0.6851635</y>
+              <x>-5.9443626</x>
+              <y>0.6553097</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -59650,7 +59650,9 @@
           <name>start-22</name>
           <prerequisites>start-16</prerequisites>
           <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>1500</time>
+          </trigger>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
             <dialog>Very good officer, thanks for your armed guard, they have again deftly dealt with the rebels. Please take me back to the main facility now.</dialog>
             <origin>Will</origin>
@@ -59694,7 +59696,7 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
-            <being>rebel1</being>
+            <being>rebel.*</being>
             <path>will1</path>
           </manifestation>
         </world.quest.GDXQuest>
