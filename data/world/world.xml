@@ -58526,8 +58526,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>4.462796</x>
-            <y>2.91506</y>
+            <x>2.4339795</x>
+            <y>2.9085536</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -59499,8 +59499,8 @@
           <name>will1</name>
           <nodes>
             <Vector2>
-              <x>4.478924</x>
-              <y>2.8931408</y>
+              <x>2.495083</x>
+              <y>2.835229</y>
             </Vector2>
           </nodes>
           <completionCriteria>REPEAT</completionCriteria>
@@ -59572,7 +59572,7 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>&lt;smiling&gt;: Heh, I&apos;ll head out...</dialog>
+            <dialog>&lt;smiling&gt;: Heh, I&apos;ll head out to address their concerns.</dialog>
             <origin>Will</origin>
             <type></type>
           </manifestation>
@@ -59615,7 +59615,7 @@
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
           <name>start-8</name>
-          <prerequisites>start-7</prerequisites>
+          <prerequisites>start-7Wait</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
@@ -59654,7 +59654,7 @@
             <time>1500</time>
           </trigger>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>Very good officer, thanks for your armed guard, they have again deftly dealt with the rebels. Please take me back to the main facility now.</dialog>
+            <dialog>Very good officer, thanks for notifying me and for the support of your armed guard. We have again deftly dealt with the rebels. Please take me back to the main facility now.</dialog>
             <origin>Will</origin>
             <type></type>
           </manifestation>
@@ -59675,7 +59675,7 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>Officer1 looks uncomfortably at peers</dialog>
+            <dialog>Officer1 looks in reverence and dread at Will, a newly inducted &quot;top 3&quot; scientist. After his gaze seeks sympathy with his peers, it shifts back to shock at the corpses of the young rebels at their feet, easily dispatched by the powerful scientist they are supposed to guard, Will.</dialog>
             <origin></origin>
             <type></type>
           </manifestation>
@@ -59744,7 +59744,7 @@
               <a>1.0</a>
             </pixmapColor>
             <tintType>FADEIN</tintType>
-            <duration>0.2</duration>
+            <duration>0.15</duration>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -59752,7 +59752,7 @@
           <prerequisites>start-14</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.time.TimeTrigger">
-            <time>200</time>
+            <time>250</time>
           </trigger>
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.screentint.ScreenTintManifestation">
             <tableColor>
@@ -59785,6 +59785,57 @@
             <kill>true</kill>
             <remove>false</remove>
             <doAim>false</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>start-8Aim</name>
+          <prerequisites>start-8</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>will</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>-0.4</aim>
+            <kill>false</kill>
+            <remove>false</remove>
+            <doAim>true</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>start-11Rotate</name>
+          <prerequisites>start-11</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>150</time>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingrotation.BeingRotationManifestation">
+            <fixedRotation>false</fixedRotation>
+            <torque>10.0</torque>
+            <being>will</being>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>start-14Upright</name>
+          <prerequisites>start-14</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingrotation.BeingRotationManifestation">
+            <fixedRotation>true</fixedRotation>
+            <torque>0.0</torque>
+            <being>will</being>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>start-7Wait</name>
+          <prerequisites>start-7</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>1000</time>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.pause.PauseManifestation">
+            <pause>false</pause>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
