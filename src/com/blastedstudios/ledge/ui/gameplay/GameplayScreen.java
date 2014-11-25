@@ -387,7 +387,7 @@ public class GameplayScreen extends LedgeScreen {
 		case Keys.F10:
 			if(debugCommandEnabled()){
 				Vector2 position = worldManager.getPlayer().getPosition();
-				worldManager.spawnNPC(level, level.getClosestNPC(position.x, position.y), worldManager.getAiWorld());
+				worldManager.spawnNPC(level.getClosestNPC(position.x, position.y), worldManager.getAiWorld());
 			}
 			break;
 		case Keys.F12:
@@ -438,8 +438,8 @@ public class GameplayScreen extends LedgeScreen {
 				if(quest.getName().equals(status.questName) && status.getCompleted() == CompletionEnum.COMPLETED &&
 						quest.getManifestation() instanceof BeingSpawnManifestation){
 					BeingSpawnManifestation manifestation = ((BeingSpawnManifestation)quest.getManifestation());
-					if(manifestation.getBeing().equals("player"))
-						return manifestation.getCoordinates();
+					if(manifestation.getNpc().getName().equals("player"))
+						return manifestation.getNpc().getCoordinates();
 				}
 		return null;
 	}

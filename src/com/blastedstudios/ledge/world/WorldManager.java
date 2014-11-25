@@ -89,7 +89,7 @@ public class WorldManager implements IDeathCallback{
 		aiWorld = new AIWorld(world);
 		aiWorldDebug = aiWorld.createGraphVisible();
 		for(GDXNPC gdxNPC : level.getNpcs())
-			spawnNPC(level, gdxNPC, aiWorld);
+			spawnNPC(gdxNPC, aiWorld);
 	}
 
 	public void render(float dt, GDXRenderer gdxRenderer, Camera cam, Batch batch){
@@ -192,7 +192,7 @@ public class WorldManager implements IDeathCallback{
 		return new VisibilityReturnStruct(enemyCount, closestEnemy);
 	}
 	
-	public NPC spawnNPC(GDXLevel level, GDXNPC gdxNPC, AIWorld aiWorld){
+	public NPC spawnNPC(GDXNPC gdxNPC, AIWorld aiWorld){
 		NPCData npcData = NPCData.parse(gdxNPC.getProperties().get("NPCData"));
 		if(npcData == null){
 			npcData = new NPCData();
