@@ -34042,13 +34042,13 @@
         <world.GDXNPC>
           <name>samel</name>
           <coordinates>
-            <x>-576.0072</x>
-            <y>39.16692</y>
+            <x>-576.0121</x>
+            <y>39.12267</y>
           </coordinates>
           <properties class="tree-map">
             <entry>
               <string>Aim</string>
-              <string></string>
+              <string>3.2</string>
             </entry>
             <entry>
               <string>Attack</string>
@@ -34780,6 +34780,7 @@
               <y>-7.9311666</y>
             </Vector2>
           </nodes>
+          <completionCriteria>END</completionCriteria>
         </world.GDXPath>
         <world.GDXPath>
           <name>chopper</name>
@@ -34789,6 +34790,7 @@
               <y>-7.63032</y>
             </Vector2>
           </nodes>
+          <completionCriteria>END</completionCriteria>
         </world.GDXPath>
         <world.GDXPath>
           <name>boss0</name>
@@ -34798,6 +34800,22 @@
               <y>-10.118161</y>
             </Vector2>
           </nodes>
+          <completionCriteria>END</completionCriteria>
+        </world.GDXPath>
+        <world.GDXPath>
+          <name>samel0</name>
+          <nodes/>
+          <completionCriteria>END</completionCriteria>
+        </world.GDXPath>
+        <world.GDXPath>
+          <name>samel1</name>
+          <nodes>
+            <Vector2>
+              <x>-569.32184</x>
+              <y>38.131985</y>
+            </Vector2>
+          </nodes>
+          <completionCriteria>END</completionCriteria>
         </world.GDXPath>
       </paths>
       <joints>
@@ -36722,8 +36740,8 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>We got another! Colligan is trapped by many small people, by the looks hunter-gatherers. They capture him and direct him up to their elder to speak.</dialog>
-            <origin></origin>
+            <dialog>We got another!</dialog>
+            <origin>Small1</origin>
             <type></type>
           </manifestation>
         </world.quest.GDXQuest>
@@ -36747,7 +36765,7 @@
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
           <name>small2</name>
-          <prerequisites>small1</prerequisites>
+          <prerequisites>small1cap3</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
@@ -36782,14 +36800,14 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>Dialog ensues, ending with how the westerners are bad and have been researching fishy things. They rebel and hail Colligan as their leader to fight the base in the west.</dialog>
+            <dialog>He looks different elder, we bring him to you to judge.</dialog>
             <origin></origin>
             <type></type>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
           <name>small7</name>
-          <prerequisites>small6</prerequisites>
+          <prerequisites>small6Judge44</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
@@ -36907,7 +36925,7 @@
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
-          <name>small8Move0</name>
+          <name>small8Move</name>
           <prerequisites>small7</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
@@ -36921,97 +36939,7 @@
             </upperRight>
           </trigger>
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
-            <being>small3</being>
-            <path>small0</path>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>small8Move1</name>
-          <prerequisites>small8Move0</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
-            <being>small4</being>
-            <path>small0</path>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>small8Move2</name>
-          <prerequisites>small8Move1</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
-            <being>small5</being>
-            <path>small0</path>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>small8Move3</name>
-          <prerequisites>small8Move2</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
-            <being>small6</being>
-            <path>small0</path>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>small8Move4</name>
-          <prerequisites>small8Move3</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
-            <being>small7</being>
-            <path>small0</path>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>small8Move5</name>
-          <prerequisites>small8Move4</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
-            <being>small8</being>
-            <path>small0</path>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>small8Move6</name>
-          <prerequisites>small8Move5</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
-            <being>small9</being>
-            <path>small0</path>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>small8Move7</name>
-          <prerequisites>small8Move6</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
-            <being>small10</being>
-            <path>small0</path>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>small8Move8</name>
-          <prerequisites>small8Move7</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
-            <being>small11</being>
-            <path>small0</path>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>small8Move9</name>
-          <prerequisites>small8Move8</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
-            <being>small12</being>
+            <being>small([3-9]|1[0-2])</being>
             <path>small0</path>
           </manifestation>
         </world.quest.GDXQuest>
@@ -38137,7 +38065,7 @@
               <x>-53.127</x>
               <y>-27.865116</y>
             </coordinates>
-            <being></being>
+            <being>begin0</being>
             <npcData>ledge3Soldier</npcData>
             <path></path>
           </manifestation>
@@ -38152,7 +38080,7 @@
               <x>-29.025316</x>
               <y>-21.000359</y>
             </coordinates>
-            <being></being>
+            <being>begin1</being>
             <npcData>ledge3Soldier</npcData>
             <path></path>
           </manifestation>
@@ -38167,7 +38095,7 @@
               <x>-25.555428</x>
               <y>-20.662748</y>
             </coordinates>
-            <being></being>
+            <being>begin2</being>
             <npcData>ledge3Soldier</npcData>
             <path></path>
           </manifestation>
@@ -38182,7 +38110,7 @@
               <x>-14.958195</x>
               <y>-28.09019</y>
             </coordinates>
-            <being></being>
+            <being>begin3</being>
             <npcData>ledge3Soldier</npcData>
             <path></path>
           </manifestation>
@@ -38664,6 +38592,628 @@
             <kill>true</kill>
             <remove>false</remove>
             <doAim>false</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>wake6Aim</name>
+          <prerequisites>wake6</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>begin.*</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>2.4</aim>
+            <kill>false</kill>
+            <remove>false</remove>
+            <doAim>true</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small1cap0</name>
+          <prerequisites>small1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>He looks different, we bring him home.</dialog>
+            <origin>Small2</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small1cap1</name>
+          <prerequisites>small1cap0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>We beat him now!</dialog>
+            <origin>Small1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small1cap2</name>
+          <prerequisites>small1cap1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>No! We go home safe.</dialog>
+            <origin>Small1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small1cap3</name>
+          <prerequisites>small1cap2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Erghh... home safe. Go now to Samel, up in trees!</dialog>
+            <origin>Small1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small4Turn</name>
+          <prerequisites>small4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>samel</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>-0.3</aim>
+            <kill>false</kill>
+            <remove>false</remove>
+            <doAim>true</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge0</name>
+          <prerequisites>small6</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Doesn&apos;t look like the others, perhaps he isn&apos;t tradeable</dialog>
+            <origin>Samel</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge1</name>
+          <prerequisites>small6Judge0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>Samel</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>-0.7</aim>
+            <kill>false</kill>
+            <remove>false</remove>
+            <doAim>true</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge2</name>
+          <prerequisites>small6Judge1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>OWW! Im not even of age yet to join them, I am fighting them!</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge3</name>
+          <prerequisites>small6Judge2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Of age... desert people speak of age. It is important to them. It is not to us; those *motions West* take from us no matter what age we are. Of age is living to us.</dialog>
+            <origin>Samel</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge4</name>
+          <prerequisites>small6Judge3</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>We trade him for ours!</dialog>
+            <origin>Small1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge5</name>
+          <prerequisites>small6Judge4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>No, they kill us. Hes worth nothing, you should not have brought him.</dialog>
+            <origin>Samel</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge6</name>
+          <prerequisites>small6Judge5</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>We kill him?</dialog>
+            <origin>Small1</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge7</name>
+          <prerequisites>small6Judge6</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>What other options?</dialog>
+            <origin>Small2</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge8</name>
+          <prerequisites>small6Judge7</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Kill! Kill they take our own!</dialog>
+            <origin>Small3</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge9</name>
+          <prerequisites>small6Judge8</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>No use otherwise, but...</dialog>
+            <origin>Samel</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge10</name>
+          <prerequisites>small6Judge9</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>A bit beyond, Small4 runs up breathing heavily</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge11</name>
+          <prerequisites>small6Judge10</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Many dead behind clearing! Everyone gone!</dialog>
+            <origin>Small4</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge12</name>
+          <prerequisites>small6Judge11</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>More gone..! Kill!</dialog>
+            <origin>Smalls</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge13</name>
+          <prerequisites>small6Judge12</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>We can slow, think...</dialog>
+            <origin>Samel</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge14</name>
+          <prerequisites>small6Judge13</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>No think, Kill!</dialog>
+            <origin>Smalls</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge15</name>
+          <prerequisites>small6Judge14</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>No not ours, theirs dead!</dialog>
+            <origin>Small4</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge16</name>
+          <prerequisites>small6Judge15</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Theirs is dead? Where ours?</dialog>
+            <origin>Small2</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge17</name>
+          <prerequisites>small6Judge16</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Ours is alive, theirs is dead.</dialog>
+            <origin>Small4</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge18</name>
+          <prerequisites>small6Judge17</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Kill!</dialog>
+            <origin>Smalls</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge19</name>
+          <prerequisites>small6Judge18</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>No bad, this one killed theirs! He has brought us closer to getting ours back! For now, we talk! You! Tell us why you are here.</dialog>
+            <origin>Samel</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge20</name>
+          <prerequisites>small6Judge19</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Ah, I traveled from above... to explore... I am... impressed by your strength and wisdom. I was alone above...</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge21</name>
+          <prerequisites>small6Judge20</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Quiet! We know you are from the desert, why did you kill the soldiers?</dialog>
+            <origin>Samel</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge22</name>
+          <prerequisites>small6Judge21</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>I was running away, I didn&apos;t want to kill them. I just wanted peace again but they made me... I ran from then on. Where are we?</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge23</name>
+          <prerequisites>small6Judge22</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>No questions. You are desert folk, then we need to bring you back there. Otherwise my people will try to avenge their losses.</dialog>
+            <origin>Samel</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge24</name>
+          <prerequisites>small6Judge23</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>I cannot go back, they have destroyed the desert ledge! I need to go on!</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge25</name>
+          <prerequisites>small6Judge24</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>You obey the elder, bad!</dialog>
+            <origin>Smalls</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge26</name>
+          <prerequisites>small6Judge25</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>I.. obey, I just suggest that you allow me to continue to....</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge27</name>
+          <prerequisites>small6Judge26</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Bad..! You..</dialog>
+            <origin>Smalls</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge28</name>
+          <prerequisites>small6Judge27</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Wait, you continue on... West? You do what you have been doing?</dialog>
+            <origin>Samel</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge29</name>
+          <prerequisites>small6Judge28</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Yes, I am heading West.</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge30</name>
+          <prerequisites>small6Judge29</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Samel motions to group to huddle a little further away out of hearing range of Colligan, though still clearly audible.</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge31</name>
+          <prerequisites>small6Judge30</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>He continues forward and kills west.</dialog>
+            <origin>Samel</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge32</name>
+          <prerequisites>small6Judge31</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>No he go free, bad!</dialog>
+            <origin>Smalls</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge33</name>
+          <prerequisites>small6Judge32</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Ahh no, he go free, good - he kill bad, we see our people!</dialog>
+            <origin>Small2</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge34</name>
+          <prerequisites>small6Judge33</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>If he goes West, either he gets caught or dead from soldiers or makes it West and lets us save our people!</dialog>
+            <origin>Samel</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge35</name>
+          <prerequisites>small6Judge34</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Mmm... free good? Free see our people, yes! Good!</dialog>
+            <origin>Smalls</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge36</name>
+          <prerequisites>small6Judge35</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>*looking conspiratorially* He better be...</dialog>
+            <origin>Samel</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge37</name>
+          <prerequisites>small6Judge36</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>I am good! Aside from eavesdropping... me good, and I will head West and go to the facility and help you free your people!</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge38</name>
+          <prerequisites>small6Judge37</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Hmm yes... but the facility is bad, many guards. We aid you in going... from behind.</dialog>
+            <origin>Samel</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge39</name>
+          <prerequisites>small6Judge38</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>That sounds better. I will help you get your people, and we can get to the facility to fix my stuff.</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge40</name>
+          <prerequisites>small6Judge39</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Agreed, we attack after food! Guard, cut his binds, now we eat, then we save our people!</dialog>
+            <origin>Samel</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge41</name>
+          <prerequisites>small6Judge40</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.screentint.ScreenTintManifestation">
+            <tableColor>
+              <r>1.0</r>
+              <g>1.0</g>
+              <b>1.0</b>
+              <a>0.0</a>
+            </tableColor>
+            <pixmapColor>
+              <r>0.0</r>
+              <g>0.0</g>
+              <b>0.0</b>
+              <a>1.0</a>
+            </pixmapColor>
+            <tintType>FADEIN</tintType>
+            <duration>1.0</duration>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge43</name>
+          <prerequisites>small6Judge42</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>1000</time>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>A long and simple, yet satisfying meal nourishes those mustering the determination to march West.</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge1Path</name>
+          <prerequisites>small6Judge1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>samel</being>
+            <path>samel0</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge29Path</name>
+          <prerequisites>small6Judge29</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
+            <being>samel</being>
+            <path>samel1</path>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge42</name>
+          <prerequisites>small6Judge41</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>1000</time>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.screentint.ScreenTintManifestation">
+            <tableColor>
+              <r>1.0</r>
+              <g>1.0</g>
+              <b>1.0</b>
+              <a>1.0</a>
+            </tableColor>
+            <pixmapColor>
+              <r>0.0</r>
+              <g>0.0</g>
+              <b>0.0</b>
+              <a>1.0</a>
+            </pixmapColor>
+            <tintType>FADEOUT</tintType>
+            <duration>1.0</duration>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>small6Judge44</name>
+          <prerequisites>small6Judge43</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>You go scout out ahead, we follow. We help rush gate, then take back our home.</dialog>
+            <origin>Samel</origin>
+            <type></type>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
