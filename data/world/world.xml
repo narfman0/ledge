@@ -38663,8 +38663,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>-58.86667</x>
-                <y>-10.480001</y>
+                <x>-773.1402</x>
+                <y>-35.280975</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
@@ -40528,7 +40528,7 @@
               <properties class="tree-map">
                 <entry>
                   <string>Aim</string>
-                  <string></string>
+                  <string>-3</string>
                 </entry>
                 <entry>
                   <string>Attack</string>
@@ -40895,16 +40895,6 @@
             <dialog>Colligan turns toward the garage, mind set to tweak Rob-bot and the devices therein.</dialog>
             <origin></origin>
             <type></type>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
-          <name>end</name>
-          <prerequisites>base33</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
-            <success>true</success>
-            <nextLevel>NearDead</nextLevel>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -44328,6 +44318,356 @@
             <dialog>You go scout out ahead, we follow. We help rush gate, then take back our home.</dialog>
             <origin>Samel</origin>
             <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base3Soldier0</name>
+          <prerequisites>base3</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <npc>
+              <name>endSoldier1</name>
+              <coordinates>
+                <x>-816.0</x>
+                <y>-37.233738</y>
+              </coordinates>
+              <properties class="tree-map">
+                <entry>
+                  <string>Aim</string>
+                  <string>-3</string>
+                </entry>
+                <entry>
+                  <string>Attack</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Behavior</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Cash</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Defense</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Faction</string>
+                  <string>FRIEND</string>
+                </entry>
+                <entry>
+                  <string>Guns</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>HP</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Level</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>NPCData</string>
+                  <string>ledge3Soldier</string>
+                </entry>
+                <entry>
+                  <string>Path</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Resource</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>XP</string>
+                  <string></string>
+                </entry>
+              </properties>
+            </npc>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base3Soldier1</name>
+          <prerequisites>base3Soldier0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <npc>
+              <name>endSoldier2</name>
+              <coordinates>
+                <x>-815.0</x>
+                <y>-37.233738</y>
+              </coordinates>
+              <properties class="tree-map">
+                <entry>
+                  <string>Aim</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Attack</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Behavior</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Cash</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Defense</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Faction</string>
+                  <string>FRIEND</string>
+                </entry>
+                <entry>
+                  <string>Guns</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>HP</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Level</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>NPCData</string>
+                  <string>ledge3Soldier</string>
+                </entry>
+                <entry>
+                  <string>Path</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Resource</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>XP</string>
+                  <string></string>
+                </entry>
+              </properties>
+            </npc>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base34</name>
+          <prerequisites>base33</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.screentint.ScreenTintManifestation">
+            <tableColor>
+              <r>1.0</r>
+              <g>1.0</g>
+              <b>1.0</b>
+              <a>0.0</a>
+            </tableColor>
+            <pixmapColor>
+              <r>0.0</r>
+              <g>0.0</g>
+              <b>0.0</b>
+              <a>1.0</a>
+            </pixmapColor>
+            <tintType>FADEIN</tintType>
+            <duration>1.0</duration>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base35</name>
+          <prerequisites>base34</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>1000</time>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>player</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>0.0</aim>
+            <kill>false</kill>
+            <remove>true</remove>
+            <doAim>false</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base36</name>
+          <prerequisites>base35</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.cameratween.CameraTweenManifestation">
+            <target>
+              <x>-912.2301</x>
+              <y>-19.75974</y>
+            </target>
+            <duration>0.1</duration>
+            <tweenType>ExpoIn</tweenType>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base38</name>
+          <prerequisites>base36</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>10</time>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.screentint.ScreenTintManifestation">
+            <tableColor>
+              <r>1.0</r>
+              <g>1.0</g>
+              <b>1.0</b>
+              <a>1.0</a>
+            </tableColor>
+            <pixmapColor>
+              <r>0.0</r>
+              <g>0.0</g>
+              <b>0.0</b>
+              <a>1.0</a>
+            </pixmapColor>
+            <tintType>FADEOUT</tintType>
+            <duration>1.0</duration>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base33Spawn0</name>
+          <prerequisites>base33</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
+            <npc>
+              <name>colliganSuit</name>
+              <coordinates>
+                <x>-912.16296</x>
+                <y>-21.048655</y>
+              </coordinates>
+              <properties class="tree-map">
+                <entry>
+                  <string>Aim</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Attack</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Behavior</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Cash</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Defense</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Faction</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Guns</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>HP</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Level</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>NPCData</string>
+                  <string>colliganSuit</string>
+                </entry>
+                <entry>
+                  <string>Path</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>Resource</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>XP</string>
+                  <string></string>
+                </entry>
+              </properties>
+            </npc>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base33Spawn1</name>
+          <prerequisites>base33Spawn0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingrotation.BeingRotationManifestation">
+            <fixedRotation>false</fixedRotation>
+            <torque>20.0</torque>
+            <being>colliganSuit</being>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base39</name>
+          <prerequisites>base38</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Colligan is lying in the garage near asleep after weeks of tweaking Rob-bot and a radio. He caught a curious signal a while back, and his been listening less and less intently to static as days go by. He is lonely, as the small, primitive folks have mostly abandoned him, and misses his home.</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base40</name>
+          <prerequisites>base39</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Hello, this is day xxx, is anyone there? Hello? Ratchet, soldiers, anyone? Is there anyone left? Is there anyone anywhere?</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base41</name>
+          <prerequisites>base40</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>&lt;faintly, with static&gt;: Hello, hello, Ratchet answering, who is this?</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base42</name>
+          <prerequisites>base41</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingrotation.BeingRotationManifestation">
+            <fixedRotation>true</fixedRotation>
+            <torque>0.0</torque>
+            <being>colliganSuit</being>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base43</name>
+          <prerequisites>base42</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
+            <success>true</success>
+            <nextLevel>NearDead</nextLevel>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>

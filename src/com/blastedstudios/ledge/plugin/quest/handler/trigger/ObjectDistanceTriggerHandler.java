@@ -20,7 +20,8 @@ public class ObjectDistanceTriggerHandler implements IObjectDistanceTriggerHandl
 	@Override public boolean activate(ObjectDistanceTrigger trigger) {
 		for(Vector2 origin : getPosition(trigger.getOrigin()))
 			for(Vector2 target : getPosition(trigger.getTarget()))
-				if(origin.dst(target) <= trigger.getDistance() && (!trigger.isActionRequired() || ActionEnum.ACTION.isPressed()))
+				if(origin != null && target != null && origin.dst(target) <= trigger.getDistance() && 
+						(!trigger.isActionRequired() || ActionEnum.ACTION.isPressed()))
 					return true;
 		return false;
 	}
