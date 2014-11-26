@@ -25650,7 +25650,7 @@
           </vertices>
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
-          <name>Polygon-502</name>
+          <name>helipadGround</name>
           <resource>data/textures/tiled/forest1.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
@@ -26118,7 +26118,7 @@
           </vertices>
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
-          <name>Polygon-603</name>
+          <name>helipadStairTop</name>
           <resource>data/textures/tiled/wood1.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
@@ -26154,15 +26154,15 @@
           </vertices>
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
-          <name>Polygon-607</name>
+          <name>helipadWallLeft</name>
           <resource>data/textures/tiled/wood1.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-870.3662</x>
-            <y>-19.221668</y>
+            <x>-870.3373</x>
+            <y>-19.197468</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -26172,61 +26172,61 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-0.4029541</x>
-              <y>-5.2988625</y>
+              <x>-0.28015137</x>
+              <y>-5.3518257</y>
             </Vector2>
             <Vector2>
-              <x>0.25671387</x>
-              <y>-5.282833</y>
+              <x>0.2277832</x>
+              <y>-5.3070335</y>
             </Vector2>
             <Vector2>
-              <x>0.28533936</x>
-              <y>-2.7909317</y>
+              <x>0.2564087</x>
+              <y>-2.8151321</y>
             </Vector2>
             <Vector2>
-              <x>1.9179688</x>
-              <y>-2.7737446</y>
+              <x>1.8890381</x>
+              <y>-2.797945</y>
             </Vector2>
             <Vector2>
-              <x>1.9609375</x>
-              <y>-2.3441086</y>
+              <x>1.9320068</x>
+              <y>-2.368309</y>
             </Vector2>
             <Vector2>
-              <x>0.27105713</x>
-              <y>-2.378479</y>
+              <x>0.24212646</x>
+              <y>-2.4026794</y>
             </Vector2>
             <Vector2>
-              <x>0.34075928</x>
-              <y>5.423794</y>
+              <x>0.3118286</x>
+              <y>5.3995934</y>
             </Vector2>
             <Vector2>
-              <x>-0.38110352</x>
-              <y>5.3847313</y>
+              <x>-0.41003418</x>
+              <y>5.360531</y>
             </Vector2>
             <Vector2>
-              <x>-2.2404785</x>
-              <y>2.9628563</y>
+              <x>-2.2694092</x>
+              <y>2.9386559</y>
             </Vector2>
             <Vector2>
-              <x>-1.6716919</x>
-              <y>2.7480125</y>
+              <x>-1.7006226</x>
+              <y>2.723812</y>
             </Vector2>
             <Vector2>
-              <x>-0.3373413</x>
-              <y>4.349575</y>
+              <x>-0.19866943</x>
+              <y>4.6203623</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
-          <name>Polygon-618</name>
+          <name>helipadDoorMount</name>
           <resource>data/textures/tiled/wood1.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-854.7834</x>
-            <y>-17.05484</y>
+            <x>-854.8076</x>
+            <y>-17.050549</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -26236,65 +26236,65 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-10.80072</x>
-              <y>2.913207</y>
+              <x>-10.776489</x>
+              <y>2.9089155</y>
             </Vector2>
             <Vector2>
-              <x>-10.767029</x>
-              <y>2.417122</y>
+              <x>-10.742798</x>
+              <y>2.4128304</y>
             </Vector2>
             <Vector2>
-              <x>-4.8430786</x>
-              <y>2.380455</y>
+              <x>-4.8188477</x>
+              <y>2.3761635</y>
             </Vector2>
             <Vector2>
-              <x>-0.8795166</x>
-              <y>-0.5516281</y>
+              <x>-0.85528564</x>
+              <y>-0.55591965</y>
             </Vector2>
             <Vector2>
-              <x>1.9141846</x>
-              <y>-0.53209686</y>
+              <x>1.9384155</x>
+              <y>-0.5363884</y>
             </Vector2>
             <Vector2>
-              <x>2.0454712</x>
-              <y>-4.438347</y>
+              <x>2.0697021</x>
+              <y>-4.4426384</y>
             </Vector2>
             <Vector2>
-              <x>2.4610596</x>
-              <y>-4.4774094</y>
+              <x>2.4852905</x>
+              <y>-4.481701</y>
             </Vector2>
             <Vector2>
-              <x>2.4610596</x>
-              <y>-0.5906906</y>
+              <x>2.4852905</x>
+              <y>-0.59498215</y>
             </Vector2>
             <Vector2>
-              <x>11.757935</x>
-              <y>-0.37584686</y>
+              <x>11.782166</x>
+              <y>-0.3801384</y>
             </Vector2>
             <Vector2>
-              <x>11.692322</x>
-              <y>0.22962189</y>
+              <x>11.716553</x>
+              <y>0.22533035</y>
             </Vector2>
             <Vector2>
-              <x>-0.4701538</x>
-              <y>0.11243439</y>
+              <x>-0.73742676</x>
+              <y>0.15963364</y>
             </Vector2>
             <Vector2>
-              <x>-4.570984</x>
-              <y>2.913207</y>
+              <x>-4.546753</x>
+              <y>2.9089155</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
-          <name>Polygon-630</name>
+          <name>helipadRoof</name>
           <resource>data/textures/tiled/wood1.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-863.3556</x>
-            <y>-8.938971</y>
+            <x>-859.40137</x>
+            <y>-9.272966</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -26304,36 +26304,44 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>8.170288</x>
-              <y>-1.783206</y>
+              <x>4.2160645</x>
+              <y>-0.88171864</y>
             </Vector2>
             <Vector2>
-              <x>8.170288</x>
-              <y>-1.2157145</y>
+              <x>0.28216553</x>
+              <y>1.5454054</y>
             </Vector2>
             <Vector2>
-              <x>4.236389</x>
-              <y>1.2114096</y>
+              <x>-9.097778</x>
+              <y>1.4417505</y>
             </Vector2>
             <Vector2>
-              <x>-5.213501</x>
-              <y>1.3871908</y>
+              <x>-11.324646</x>
+              <y>0.07301903</y>
             </Vector2>
             <Vector2>
-              <x>-7.619751</x>
-              <y>-0.065935135</y>
+              <x>-10.983398</x>
+              <y>-0.35693932</y>
             </Vector2>
             <Vector2>
-              <x>-7.029175</x>
-              <y>-0.69093513</y>
+              <x>-8.773987</x>
+              <y>0.9321232</y>
             </Vector2>
             <Vector2>
-              <x>-4.819763</x>
-              <y>0.59812737</y>
+              <x>0.15100098</x>
+              <y>0.8930607</y>
             </Vector2>
             <Vector2>
-              <x>4.1052246</x>
-              <y>0.55906487</y>
+              <x>4.180603</x>
+              <y>-1.4133205</y>
+            </Vector2>
+            <Vector2>
+              <x>15.724487</x>
+              <y>-1.4429836</y>
+            </Vector2>
+            <Vector2>
+              <x>15.62561</x>
+              <y>-0.7903948</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -33878,7 +33886,7 @@
           </vertices>
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
-          <name>Polygon-0</name>
+          <name>helipadStairBottom</name>
           <resource>data/textures/tiled/wood1.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
@@ -34238,7 +34246,7 @@
           </vertices>
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
-          <name>Polygon-0</name>
+          <name>helipadWallRight</name>
           <resource>data/textures/tiled/wood1.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
@@ -34514,42 +34522,6 @@
             <Vector2>
               <x>-1.4569092</x>
               <y>-10.963983</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>Polygon-0</name>
-          <resource>data/textures/tiled/wood1.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>-849.496</x>
-            <y>-10.381662</y>
-          </center>
-          <filter>
-            <categoryBits>1</categoryBits>
-            <maskBits>-1</maskBits>
-            <groupIndex>0</groupIndex>
-          </filter>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>5.7993774</x>
-              <y>0.2664671</y>
-            </Vector2>
-            <Vector2>
-              <x>-5.744934</x>
-              <y>0.22697735</y>
-            </Vector2>
-            <Vector2>
-              <x>-5.772766</x>
-              <y>-0.27375126</y>
-            </Vector2>
-            <Vector2>
-              <x>5.718384</x>
-              <y>-0.21969223</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -35421,189 +35393,6 @@
           <coordinates>
             <x>-782.91223</x>
             <y>-26.269068</y>
-          </coordinates>
-          <properties class="tree-map">
-            <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Attack</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Behavior</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Cash</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Defense</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Faction</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>HP</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Level</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>NPCData</string>
-              <string>ledge3Sniper</string>
-            </entry>
-            <entry>
-              <string>Path</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Resource</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-          </properties>
-        </world.GDXNPC>
-        <world.GDXNPC>
-          <name>NPC-8</name>
-          <coordinates>
-            <x>-795.92633</x>
-            <y>-21.695833</y>
-          </coordinates>
-          <properties class="tree-map">
-            <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Attack</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Behavior</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Cash</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Defense</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Faction</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>HP</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Level</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>NPCData</string>
-              <string>ledge3Sniper</string>
-            </entry>
-            <entry>
-              <string>Path</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Resource</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-          </properties>
-        </world.GDXNPC>
-        <world.GDXNPC>
-          <name>NPC-9</name>
-          <coordinates>
-            <x>-794.1578</x>
-            <y>-17.60847</y>
-          </coordinates>
-          <properties class="tree-map">
-            <entry>
-              <string>Aim</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Attack</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Behavior</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Cash</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Defense</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Faction</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Guns</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>HP</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Level</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>NPCData</string>
-              <string>ledge3Sniper</string>
-            </entry>
-            <entry>
-              <string>Path</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>Resource</string>
-              <string></string>
-            </entry>
-            <entry>
-              <string>XP</string>
-              <string></string>
-            </entry>
-          </properties>
-        </world.GDXNPC>
-        <world.GDXNPC>
-          <name>NPC-10</name>
-          <coordinates>
-            <x>-843.5403</x>
-            <y>-9.604928</y>
           </coordinates>
           <properties class="tree-map">
             <entry>
@@ -38637,7 +38426,7 @@
         <world.joint.RevoluteJoint>
           <name>Joint-0</name>
           <bodyA>westBaseDoor</bodyA>
-          <bodyB>Polygon-502</bodyB>
+          <bodyB>helipadDoorMount</bodyB>
           <jointType>RevoluteJoint</jointType>
           <collideConnected>true</collideConnected>
           <enableLimit>false</enableLimit>
@@ -44667,7 +44456,7 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
             <success>true</success>
-            <nextLevel>NearDead</nextLevel>
+            <nextLevel>Interlude3</nextLevel>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
@@ -44840,7 +44629,36 @@
         </world.GDXBackground>
       </backgrounds>
       <lights/>
-      <groups/>
+      <groups>
+        <world.group.GDXGroup>
+          <name>interludeGroup</name>
+          <center>
+            <x>-857.9399</x>
+            <y>-18.22071</y>
+          </center>
+          <circles class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string></string>
+            </a>
+          </circles>
+          <polygons class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>helipadStairBottom</string>
+              <string>helipadStairTop</string>
+              <string>helipadGround</string>
+              <string>helipadWallLeft</string>
+              <string>helipadWallRight</string>
+              <string>helipadDoorMount</string>
+              <string>helipadRoof</string>
+            </a>
+          </polygons>
+          <joints class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string></string>
+            </a>
+          </joints>
+        </world.group.GDXGroup>
+      </groups>
       <particles/>
       <sounds/>
       <animations class="linked-list"/>
@@ -66813,6 +66631,1011 @@
           <string>Desert</string>
         </entry>
       </properties>
+      <lightAmbient>-437918337</lightAmbient>
+    </world.GDXLevel>
+    <world.GDXLevel>
+      <name>Interlude3</name>
+      <coordinates>
+        <x>-19.466667</x>
+        <y>-5.6800003</y>
+      </coordinates>
+      <tiles/>
+      <circles/>
+      <polygons>
+        <world.shape.GDXPolygon>
+          <name>helipadStairBottom</name>
+          <resource>data/textures/tiled/wood1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-5.4146576</x>
+            <y>0.38428402</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.8700104</x>
+              <y>0.20193005</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.8700104</x>
+              <y>-0.19333744</y>
+            </Vector2>
+            <Vector2>
+              <x>0.86283875</x>
+              <y>-0.19333744</y>
+            </Vector2>
+            <Vector2>
+              <x>0.877182</x>
+              <y>0.18474483</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>helipadStairTop</name>
+          <resource>data/textures/tiled/wood1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-5.5349274</x>
+            <y>7.0796223</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.97343445</x>
+              <y>-0.2685547</y>
+            </Vector2>
+            <Vector2>
+              <x>1.0390778</x>
+              <y>-0.2685547</y>
+            </Vector2>
+            <Vector2>
+              <x>0.95155334</x>
+              <y>0.25878906</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.0171967</x>
+              <y>0.2783203</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>helipadGround</name>
+          <resource>data/textures/tiled/forest1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>1.5749583</x>
+            <y>-1.933478</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>89.37609</x>
+              <y>-10.070571</y>
+            </Vector2>
+            <Vector2>
+              <x>89.33233</x>
+              <y>-9.386977</y>
+            </Vector2>
+            <Vector2>
+              <x>88.807365</x>
+              <y>-9.386977</y>
+            </Vector2>
+            <Vector2>
+              <x>88.829216</x>
+              <y>-10.168227</y>
+            </Vector2>
+            <Vector2>
+              <x>87.23235</x>
+              <y>-10.226821</y>
+            </Vector2>
+            <Vector2>
+              <x>87.16674</x>
+              <y>-8.859633</y>
+            </Vector2>
+            <Vector2>
+              <x>86.31359</x>
+              <y>-8.781508</y>
+            </Vector2>
+            <Vector2>
+              <x>86.35735</x>
+              <y>-10.226821</y>
+            </Vector2>
+            <Vector2>
+              <x>77.963615</x>
+              <y>-10.168227</y>
+            </Vector2>
+            <Vector2>
+              <x>77.088615</x>
+              <y>-10.539321</y>
+            </Vector2>
+            <Vector2>
+              <x>62.58538</x>
+              <y>-10.715102</y>
+            </Vector2>
+            <Vector2>
+              <x>61.44793</x>
+              <y>-10.422133</y>
+            </Vector2>
+            <Vector2>
+              <x>28.38958</x>
+              <y>-10.652236</y>
+            </Vector2>
+            <Vector2>
+              <x>28.38958</x>
+              <y>-9.658889</y>
+            </Vector2>
+            <Vector2>
+              <x>27.140068</x>
+              <y>-9.597857</y>
+            </Vector2>
+            <Vector2>
+              <x>27.185478</x>
+              <y>-8.566665</y>
+            </Vector2>
+            <Vector2>
+              <x>25.719841</x>
+              <y>-8.508071</y>
+            </Vector2>
+            <Vector2>
+              <x>25.829216</x>
+              <y>-7.6682277</y>
+            </Vector2>
+            <Vector2>
+              <x>24.363579</x>
+              <y>-7.687759</y>
+            </Vector2>
+            <Vector2>
+              <x>24.407341</x>
+              <y>-6.594009</y>
+            </Vector2>
+            <Vector2>
+              <x>23.226067</x>
+              <y>-6.5549464</y>
+            </Vector2>
+            <Vector2>
+              <x>23.313591</x>
+              <y>-5.578384</y>
+            </Vector2>
+            <Vector2>
+              <x>22.022942</x>
+              <y>-5.6369777</y>
+            </Vector2>
+            <Vector2>
+              <x>22.110466</x>
+              <y>-4.6018214</y>
+            </Vector2>
+            <Vector2>
+              <x>20.929192</x>
+              <y>-4.58229</y>
+            </Vector2>
+            <Vector2>
+              <x>20.88549</x>
+              <y>-3.1760402</y>
+            </Vector2>
+            <Vector2>
+              <x>19.222954</x>
+              <y>-3.2541652</y>
+            </Vector2>
+            <Vector2>
+              <x>19.222954</x>
+              <y>-2.113544</y>
+            </Vector2>
+            <Vector2>
+              <x>17.801079</x>
+              <y>-2.0940127</y>
+            </Vector2>
+            <Vector2>
+              <x>17.779228</x>
+              <y>-1.0197939</y>
+            </Vector2>
+            <Vector2>
+              <x>-11.095772</x>
+              <y>-1.0119814</y>
+            </Vector2>
+            <Vector2>
+              <x>-12.823921</x>
+              <y>0.3513018</y>
+            </Vector2>
+            <Vector2>
+              <x>-13.655159</x>
+              <y>0.21458304</y>
+            </Vector2>
+            <Vector2>
+              <x>-19.233284</x>
+              <y>3.5348954</y>
+            </Vector2>
+            <Vector2>
+              <x>-24.692696</x>
+              <y>5.605208</y>
+            </Vector2>
+            <Vector2>
+              <x>-27.448982</x>
+              <y>8.081771</y>
+            </Vector2>
+            <Vector2>
+              <x>-37.0207</x>
+              <y>8.023177</y>
+            </Vector2>
+            <Vector2>
+              <x>-37.005074</x>
+              <y>8.644269</y>
+            </Vector2>
+            <Vector2>
+              <x>-37.836372</x>
+              <y>8.878644</y>
+            </Vector2>
+            <Vector2>
+              <x>-37.967598</x>
+              <y>9.562238</y>
+            </Vector2>
+            <Vector2>
+              <x>-38.973824</x>
+              <y>9.523175</y>
+            </Vector2>
+            <Vector2>
+              <x>-39.10511</x>
+              <y>10.38255</y>
+            </Vector2>
+            <Vector2>
+              <x>-40.023872</x>
+              <y>10.38255</y>
+            </Vector2>
+            <Vector2>
+              <x>-40.045723</x>
+              <y>11.398175</y>
+            </Vector2>
+            <Vector2>
+              <x>-41.07386</x>
+              <y>11.554425</y>
+            </Vector2>
+            <Vector2>
+              <x>-41.09571</x>
+              <y>12.472394</y>
+            </Vector2>
+            <Vector2>
+              <x>-42.080086</x>
+              <y>12.8239565</y>
+            </Vector2>
+            <Vector2>
+              <x>-42.080086</x>
+              <y>13.6052065</y>
+            </Vector2>
+            <Vector2>
+              <x>-42.976997</x>
+              <y>13.50755</y>
+            </Vector2>
+            <Vector2>
+              <x>-43.339607</x>
+              <y>15.0114565</y>
+            </Vector2>
+            <Vector2>
+              <x>-45.658333</x>
+              <y>15.460675</y>
+            </Vector2>
+            <Vector2>
+              <x>-47.495857</x>
+              <y>15.4020815</y>
+            </Vector2>
+            <Vector2>
+              <x>-48.668465</x>
+              <y>15.352799</y>
+            </Vector2>
+            <Vector2>
+              <x>-48.86982</x>
+              <y>15.086961</y>
+            </Vector2>
+            <Vector2>
+              <x>-48.708748</x>
+              <y>14.664036</y>
+            </Vector2>
+            <Vector2>
+              <x>-43.53962</x>
+              <y>14.503644</y>
+            </Vector2>
+            <Vector2>
+              <x>-43.058357</x>
+              <y>13.1364565</y>
+            </Vector2>
+            <Vector2>
+              <x>-42.92707</x>
+              <y>10.109113</y>
+            </Vector2>
+            <Vector2>
+              <x>-41.767708</x>
+              <y>6.417706</y>
+            </Vector2>
+            <Vector2>
+              <x>-44.089546</x>
+              <y>6.339581</y>
+            </Vector2>
+            <Vector2>
+              <x>-48.37702</x>
+              <y>5.1598954</y>
+            </Vector2>
+            <Vector2>
+              <x>-54.286385</x>
+              <y>5.0817704</y>
+            </Vector2>
+            <Vector2>
+              <x>-54.986397</x>
+              <y>4.2419267</y>
+            </Vector2>
+            <Vector2>
+              <x>-54.680183</x>
+              <y>3.1091142</y>
+            </Vector2>
+            <Vector2>
+              <x>-52.777046</x>
+              <y>1.6247393</y>
+            </Vector2>
+            <Vector2>
+              <x>-49.483345</x>
+              <y>-9.39479</y>
+            </Vector2>
+            <Vector2>
+              <x>-50.71778</x>
+              <y>-44.592415</y>
+            </Vector2>
+            <Vector2>
+              <x>89.22686</x>
+              <y>-37.750694</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>helipadWallLeft</name>
+          <resource>data/textures/tiled/wood1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-8.932712</x>
+            <y>6.065107</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.28017902</x>
+              <y>-5.351829</y>
+            </Vector2>
+            <Vector2>
+              <x>0.22775555</x>
+              <y>-5.307037</y>
+            </Vector2>
+            <Vector2>
+              <x>0.25638103</x>
+              <y>-2.8151355</y>
+            </Vector2>
+            <Vector2>
+              <x>1.8890104</x>
+              <y>-2.7979484</y>
+            </Vector2>
+            <Vector2>
+              <x>1.9319792</x>
+              <y>-2.3683124</y>
+            </Vector2>
+            <Vector2>
+              <x>0.24209881</x>
+              <y>-2.4026828</y>
+            </Vector2>
+            <Vector2>
+              <x>0.31180096</x>
+              <y>5.39959</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.41006184</x>
+              <y>5.3605275</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.2694368</x>
+              <y>2.9386525</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.7006502</x>
+              <y>2.7238088</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.19869709</x>
+              <y>4.620359</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>helipadWallRight</name>
+          <resource>data/textures/tiled/wood1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>17.973145</x>
+            <y>11.7994795</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>0.30596924</x>
+              <y>-3.4225645</y>
+            </Vector2>
+            <Vector2>
+              <x>0.3267212</x>
+              <y>3.4225645</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.34747314</x>
+              <y>3.3976736</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.2852173</x>
+              <y>-3.3976736</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>helipadDoorMount</name>
+          <resource>data/textures/tiled/wood1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>6.5969086</x>
+            <y>8.212027</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-10.776474</x>
+              <y>2.9089117</y>
+            </Vector2>
+            <Vector2>
+              <x>-10.742783</x>
+              <y>2.4128265</y>
+            </Vector2>
+            <Vector2>
+              <x>-4.8188324</x>
+              <y>2.3761597</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.8552704</x>
+              <y>-0.55592346</y>
+            </Vector2>
+            <Vector2>
+              <x>1.9384308</x>
+              <y>-0.5363922</y>
+            </Vector2>
+            <Vector2>
+              <x>2.0697174</x>
+              <y>-4.442642</y>
+            </Vector2>
+            <Vector2>
+              <x>2.4853058</x>
+              <y>-4.4817047</y>
+            </Vector2>
+            <Vector2>
+              <x>2.4853058</x>
+              <y>-0.59498596</y>
+            </Vector2>
+            <Vector2>
+              <x>11.782181</x>
+              <y>-0.3801422</y>
+            </Vector2>
+            <Vector2>
+              <x>11.716568</x>
+              <y>0.22532654</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.7374115</x>
+              <y>0.15962982</y>
+            </Vector2>
+            <Vector2>
+              <x>-4.5467377</x>
+              <y>2.9089117</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>helipadRoof</name>
+          <resource>data/textures/tiled/wood1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>2.003186</x>
+            <y>15.989604</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>4.216052</x>
+              <y>-0.8817177</y>
+            </Vector2>
+            <Vector2>
+              <x>0.28215337</x>
+              <y>1.5454073</y>
+            </Vector2>
+            <Vector2>
+              <x>-9.097791</x>
+              <y>1.4417505</y>
+            </Vector2>
+            <Vector2>
+              <x>-11.324658</x>
+              <y>0.07301998</y>
+            </Vector2>
+            <Vector2>
+              <x>-10.983411</x>
+              <y>-0.35693836</y>
+            </Vector2>
+            <Vector2>
+              <x>-8.773999</x>
+              <y>0.93212414</y>
+            </Vector2>
+            <Vector2>
+              <x>0.15098882</x>
+              <y>0.89306164</y>
+            </Vector2>
+            <Vector2>
+              <x>4.1805906</x>
+              <y>-1.4133196</y>
+            </Vector2>
+            <Vector2>
+              <x>15.724475</x>
+              <y>-1.4429827</y>
+            </Vector2>
+            <Vector2>
+              <x>15.625598</x>
+              <y>-0.7903938</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+      </polygons>
+      <npcs>
+        <world.GDXNPC>
+          <name>colligan</name>
+          <coordinates>
+            <x>-2.9675932</x>
+            <y>18.336441</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string>.9</string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>colliganSuit</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+        <world.GDXNPC>
+          <name>ratchet</name>
+          <coordinates>
+            <x>13.209938</x>
+            <y>30.659077</y>
+          </coordinates>
+          <properties class="tree-map">
+            <entry>
+              <string>Aim</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Attack</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Behavior</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Cash</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Defense</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Faction</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Guns</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>HP</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>Level</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>NPCData</string>
+              <string>ratchetChopper</string>
+            </entry>
+            <entry>
+              <string>Path</string>
+              <string>ratchet0</string>
+            </entry>
+            <entry>
+              <string>Resource</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>XP</string>
+              <string></string>
+            </entry>
+          </properties>
+        </world.GDXNPC>
+      </npcs>
+      <paths>
+        <world.GDXPath>
+          <name>ratchet0</name>
+          <nodes>
+            <Vector2>
+              <x>9.012746</x>
+              <y>25.96474</y>
+            </Vector2>
+            <Vector2>
+              <x>4.5303073</x>
+              <y>21.221504</y>
+            </Vector2>
+            <Vector2>
+              <x>0.8221066</x>
+              <y>19.510025</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.8893707</x>
+              <y>18.580938</y>
+            </Vector2>
+          </nodes>
+          <completionCriteria>END</completionCriteria>
+        </world.GDXPath>
+      </paths>
+      <joints/>
+      <quests>
+        <world.quest.GDXQuest>
+          <name>dialog0</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.objectdistance.ObjectDistanceTrigger">
+            <origin>colligan</origin>
+            <target>ratchet</target>
+            <distance>4.5</distance>
+            <actionRequired>false</actionRequired>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Ratchet! Finally I can see you! I havent seen anyone for ages!</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>dialog1</name>
+          <prerequisites>dialog0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Yes my boy, I apologize for what happened, it appears you fell to the ledge below our target! There has been much activity since then, I have been a busy body, you have awoken a monster inside me, haha!</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>dialog2</name>
+          <prerequisites>dialog1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Well I&apos;ve been stuck here interloping for many time cycles, which I surmise you know all about?</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>dialog3</name>
+          <prerequisites>dialog2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Oh my oh my yes - well you see, our ledge has been so stuffy, I fear they would rip each other apart if we gave them enough time. I decided to jump start their scientific prowess and powered an inter-ledge exploratory event!</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>dialog4</name>
+          <prerequisites>dialog3</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>You wanted to escape the ledge at the cost of my brother!</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>dialog5</name>
+          <prerequisites>dialog4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Wouldnt that be a straightforward conflict, naive grandson. When have you known me to be that transparent? There are other happenings unfortunately more pertinent than that. The time has come to leave this ledge.</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>dialog6</name>
+          <prerequisites>dialog5</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>How can I go back? They think me a murderer, and worse, a scientific deviant?!</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>dialog7</name>
+          <prerequisites>dialog6</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Those pompous prideful plebeians wouldnt appreciate improvement if it bit them, no, you my boy are going to another ledge in the next step of your exploratory excavation into ledge life.</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>dialog8</name>
+          <prerequisites>dialog7</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>How can I go back... now? I must see my family..!</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>dialog9</name>
+          <prerequisites>dialog8</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>A time will come for that, but it is too soon. We can hide you... by interloping. Might as well be useful and see the world during hiding? Deviance isnt one you can easily hide from on our home ledge, interestingly enough. A curious ledge, that... No, you are to go to a harvested ledge!</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>dialog10</name>
+          <prerequisites>dialog9</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>What is a harvested ledge?</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>dialog11</name>
+          <prerequisites>dialog10</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Why, it is what you are to learn! I have to awake a monster in you too, my officiously observant offspring. Besides, I do not know but was rather guided by a raucous and rebellious birdie.</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>dialog12</name>
+          <prerequisites>dialog11</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Waiiit - not understanding</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>dialog13</name>
+          <prerequisites>dialog12</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Neither do I, neither do I. Are you ready to head out?</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>dialog14</name>
+          <prerequisites>dialog13</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Ready? Thats nebulous and non-specific, knowing you. Yes.. no! How do you know of interloping!</dialog>
+            <origin>Colligan</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>dialog15</name>
+          <prerequisites>dialog14</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>I am one of course! You are still picking up some of my traits, very good! Off we go!</dialog>
+            <origin>Ratchet</origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>dialog16</name>
+          <prerequisites>dialog15</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
+            <success>true</success>
+            <nextLevel>NearDead</nextLevel>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>camera</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.cameratween.CameraTweenManifestation">
+            <target>
+              <x>-2.9296894</x>
+              <y>18.945314</y>
+            </target>
+            <duration>0.0</duration>
+            <tweenType>ExpoIn</tweenType>
+          </manifestation>
+        </world.quest.GDXQuest>
+      </quests>
+      <backgrounds>
+        <world.GDXBackground>
+          <coordinates>
+            <x>0.0</x>
+            <y>0.0</y>
+          </coordinates>
+          <texture>data/textures/forest/forestBackground.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>30.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+      </backgrounds>
+      <lights/>
+      <groups>
+        <world.group.GDXGroup>
+          <name>interludeGroup</name>
+          <center>
+            <x>0.0</x>
+            <y>0.0</y>
+          </center>
+          <circles/>
+          <polygons>
+            <string>helipadStairBottom</string>
+            <string>helipadStairTop</string>
+            <string>helipadGround</string>
+            <string>helipadWallLeft</string>
+            <string>helipadWallRight</string>
+            <string>helipadDoorMount</string>
+            <string>helipadRoof</string>
+          </polygons>
+          <joints/>
+        </world.group.GDXGroup>
+      </groups>
+      <particles/>
+      <sounds/>
+      <animations class="linked-list"/>
+      <properties class="tree-map"/>
       <lightAmbient>-437918337</lightAmbient>
     </world.GDXLevel>
   </levels>
