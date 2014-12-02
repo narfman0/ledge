@@ -362,7 +362,7 @@ public abstract class AbstractRagdoll implements IRagdoll {
 			applyBodyTransform(sprite, body);
 			if(part == BodyPart.head || part == BodyPart.torso)
 				sprite.flip(facingLeft, false);
-			if(isGrounded && isMoving && (part == BodyPart.rLeg || part == BodyPart.lLeg))
+			if(!paused && isGrounded && isMoving && (part == BodyPart.rLeg || part == BodyPart.lLeg))
 				rotateLeg(sprite, part == BodyPart.rLeg, velX);
 			sprite.draw(batch);
 			if(part == BodyPart.head || part == BodyPart.torso)
