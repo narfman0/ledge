@@ -41,7 +41,7 @@ public class JetpackComponent extends AbstractComponent {
 		if(!paused)
 			updateJetpackAngles();
 		jetpackEffect.setPosition(being.getPosition().x, being.getPosition().y);
-		jetpackEffect.draw(batch, dt);
+		jetpackEffect.draw(batch, paused ? 0f : dt);
 		if(paused)
 			return;
 		timeUntilDashAvailable -= dt;
