@@ -103,9 +103,10 @@ public class WorldManager implements IDeathCallback{
 			npc.render(dt, world, batch, sharedAssets, gdxRenderer, this, pause, true);
 		for(Iterator<Entry<Body, GunShot>> iter = gunshots.entrySet().iterator(); iter.hasNext();){
 			Entry<Body, GunShot> entry = iter.next();
-			entry.getValue().render(dt, batch, sharedAssets, entry.getKey(), this);
 			if(entry.getValue().isCanRemove())
 				iter.remove();
+			else
+				entry.getValue().render(dt, batch, sharedAssets, entry.getKey(), this);
 		}
 		for(Turret turret : turrets)
 			turret.render(dt, batch, gdxRenderer, this);
