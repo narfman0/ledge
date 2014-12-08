@@ -60864,7 +60864,44 @@
         <y>-16.879997</y>
       </coordinates>
       <tiles/>
-      <circles/>
+      <circles>
+        <world.shape.GDXCircle>
+          <name>zeppelinAnchorMount</name>
+          <resource></resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>46.302387</x>
+            <y>56.220387</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>0</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>1.0</radius>
+        </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>zeppelinHanger</name>
+          <resource></resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>47.99325</x>
+            <y>72.474396</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>0</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>1.0</radius>
+        </world.shape.GDXCircle>
+      </circles>
       <polygons>
         <world.shape.GDXPolygon>
           <name>Polygon-1</name>
@@ -61770,8 +61807,8 @@
           <restitution>0.3</restitution>
           <bodyType>DynamicBody</bodyType>
           <center>
-            <x>49.965885</x>
-            <y>63.779953</y>
+            <x>49.874348</x>
+            <y>63.835915</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -61781,81 +61818,33 @@
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
-              <x>2.2625504</x>
-              <y>0.41088486</y>
+              <x>2.2085495</x>
+              <y>0.50190735</y>
             </Vector2>
             <Vector2>
-              <x>-1.8545532</x>
-              <y>0.011104584</y>
+              <x>-1.81884</x>
+              <y>0.08510208</y>
             </Vector2>
             <Vector2>
-              <x>-0.40800095</x>
-              <y>-0.42199707</y>
+              <x>-2.5887108</x>
+              <y>-0.9514084</y>
+            </Vector2>
+            <Vector2>
+              <x>2.1990013</x>
+              <y>0.36439514</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>zeppelin</name>
           <resource></resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>50.495792</x>
-            <y>57.425102</y>
-          </center>
-          <filter>
-            <categoryBits>1</categoryBits>
-            <maskBits>-1</maskBits>
-            <groupIndex>0</groupIndex>
-          </filter>
-          <repeatable>false</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-3.344368</x>
-              <y>0.6678467</y>
-            </Vector2>
-            <Vector2>
-              <x>-3.1776886</x>
-              <y>-1.3008003</y>
-            </Vector2>
-            <Vector2>
-              <x>-1.1191368</x>
-              <y>-1.534008</y>
-            </Vector2>
-            <Vector2>
-              <x>0.8003273</x>
-              <y>-1.1675377</y>
-            </Vector2>
-            <Vector2>
-              <x>4.6923485</x>
-              <y>1.2172928</y>
-            </Vector2>
-            <Vector2>
-              <x>4.1386375</x>
-              <y>1.0467758</y>
-            </Vector2>
-            <Vector2>
-              <x>0.9903984</x>
-              <y>0.6488991</y>
-            </Vector2>
-            <Vector2>
-              <x>-2.980503</x>
-              <y>0.4215393</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
-          <name>zeppelinTail</name>
-          <resource></resource>
-          <density>1.0</density>
+          <density>1.5</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
           <bodyType>DynamicBody</bodyType>
           <center>
-            <x>42.741615</x>
-            <y>59.42093</y>
+            <x>49.654682</x>
+            <y>57.217255</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -61865,20 +61854,56 @@
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
-              <x>-0.6771774</x>
-              <y>2.586792</y>
+              <x>-2.3709717</x>
+              <y>-0.8748398</y>
             </Vector2>
             <Vector2>
-              <x>-0.32691193</x>
-              <y>-2.922371</y>
+              <x>-2.3365784</x>
+              <y>-1.0929527</y>
             </Vector2>
             <Vector2>
-              <x>0.6304779</x>
-              <y>-1.1885223</y>
+              <x>-0.25256348</x>
+              <y>-1.2424965</y>
             </Vector2>
             <Vector2>
-              <x>0.37361526</x>
-              <y>1.5241127</y>
+              <x>1.6414375</x>
+              <y>-0.9596901</y>
+            </Vector2>
+            <Vector2>
+              <x>5.5334587</x>
+              <y>1.4251404</y>
+            </Vector2>
+            <Vector2>
+              <x>4.979748</x>
+              <y>1.2546234</y>
+            </Vector2>
+            <Vector2>
+              <x>1.8315086</x>
+              <y>0.8567467</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.25256348</x>
+              <y>0.6167984</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.484768</x>
+              <y>0.6167984</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.4672623</x>
+              <y>0.5117569</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.0929222</x>
+              <y>0.14409637</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.1804619</x>
+              <y>-0.40213776</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.5481186</x>
+              <y>-0.85383224</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -61890,8 +61915,8 @@
           <restitution>0.3</restitution>
           <bodyType>DynamicBody</bodyType>
           <center>
-            <x>45.68969</x>
-            <y>65.90189</y>
+            <x>45.835083</x>
+            <y>64.97067</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -61901,20 +61926,116 @@
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
-              <x>1.3718681</x>
-              <y>3.0971527</y>
+              <x>1.3754349</x>
+              <y>-1.7031059</y>
             </Vector2>
             <Vector2>
-              <x>-1.196743</x>
-              <y>2.5098877</y>
+              <x>-2.135929</x>
+              <y>-1.9734993</y>
             </Vector2>
             <Vector2>
-              <x>-2.0373802</x>
-              <y>-2.9992828</y>
+              <x>-2.135929</x>
+              <y>-2.2100945</y>
             </Vector2>
             <Vector2>
-              <x>1.8622437</x>
-              <y>-2.607769</y>
+              <x>1.8448753</x>
+              <y>-1.9284325</y>
+            </Vector2>
+            <Vector2>
+              <x>1.2439995</x>
+              <y>3.9977036</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.19247055</x>
+              <y>3.8174362</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>anchor</name>
+          <resource>data/textures/airship/anchor.png</resource>
+          <density>3.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>47.247555</x>
+            <y>54.275867</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.34408188</x>
+              <y>0.44356918</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.34408188</x>
+              <y>0.392807</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.07489014</x>
+              <y>0.37896347</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.117191315</x>
+              <y>-0.25325394</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.33639145</x>
+              <y>-0.25325394</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.61711884</x>
+              <y>-0.073280334</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.6286545</x>
+              <y>-0.3501625</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.38638306</x>
+              <y>-0.5255203</y>
+            </Vector2>
+            <Vector2>
+              <x>0.34428024</x>
+              <y>-0.56243896</y>
+            </Vector2>
+            <Vector2>
+              <x>0.5673256</x>
+              <y>-0.3270874</y>
+            </Vector2>
+            <Vector2>
+              <x>0.60578156</x>
+              <y>-0.23017883</y>
+            </Vector2>
+            <Vector2>
+              <x>0.6173172</x>
+              <y>-0.0778923</y>
+            </Vector2>
+            <Vector2>
+              <x>0.044322968</x>
+              <y>-0.24402237</y>
+            </Vector2>
+            <Vector2>
+              <x>0.05970764</x>
+              <y>0.37896347</y>
+            </Vector2>
+            <Vector2>
+              <x>0.3135147</x>
+              <y>0.392807</y>
+            </Vector2>
+            <Vector2>
+              <x>0.32120895</x>
+              <y>0.45741272</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.02468872</x>
+              <y>0.45254898</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -62588,7 +62709,7 @@
         </world.joint.WeldJoint>
         <world.joint.PrismaticJoint>
           <name>zeppelinPathJoint</name>
-          <bodyA>zeppelin</bodyA>
+          <bodyA>zeppelinHanger</bodyA>
           <bodyB>Polygon-33</bodyB>
           <jointType>PrismaticJoint</jointType>
           <collideConnected>false</collideConnected>
@@ -62600,26 +62721,14 @@
           <motorSpeed>-0.8</motorSpeed>
           <referenceAngle>0.0</referenceAngle>
           <anchor>
-            <x>22.166664</x>
-            <y>30.439121</y>
+            <x>22.106129</x>
+            <y>30.439522</y>
           </anchor>
           <axis>
             <x>-0.35894945</x>
             <y>-0.933357</y>
           </axis>
         </world.joint.PrismaticJoint>
-        <world.joint.WeldJoint>
-          <name>zeppelinTailJoint</name>
-          <bodyA>zeppelinTail</bodyA>
-          <bodyB>zeppelin</bodyB>
-          <jointType>WeldJoint</jointType>
-          <collideConnected>false</collideConnected>
-          <referenceAngle>0.0</referenceAngle>
-          <anchor>
-            <x>45.10007</x>
-            <y>57.281586</y>
-          </anchor>
-        </world.joint.WeldJoint>
         <world.joint.WeldJoint>
           <name>zeppelinSailJoint</name>
           <bodyA>zeppelinSail</bodyA>
@@ -62632,6 +62741,42 @@
             <y>60.16201</y>
           </anchor>
         </world.joint.WeldJoint>
+        <world.joint.RopeJoint>
+          <name>anchorJoint</name>
+          <bodyA>anchor</bodyA>
+          <bodyB>zeppelinAnchorMount</bodyB>
+          <jointType>RopeJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <maxLength>12.0</maxLength>
+          <center>
+            <x>46.84325</x>
+            <y>55.382698</y>
+          </center>
+        </world.joint.RopeJoint>
+        <world.joint.WeldJoint>
+          <name>zeppelinAnchorMountJoint</name>
+          <bodyA>zeppelinAnchorMount</bodyA>
+          <bodyB>zeppelin</bodyB>
+          <jointType>WeldJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <referenceAngle>1.57</referenceAngle>
+          <anchor>
+            <x>47.3112</x>
+            <y>56.19825</y>
+          </anchor>
+        </world.joint.WeldJoint>
+        <world.joint.RopeJoint>
+          <name>zeppelinHangerJoint</name>
+          <bodyA>zeppelinGraphic</bodyA>
+          <bodyB>zeppelinHanger</bodyB>
+          <jointType>RopeJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <maxLength>10.0</maxLength>
+          <center>
+            <x>48.98306</x>
+            <y>72.44677</y>
+          </center>
+        </world.joint.RopeJoint>
       </joints>
       <quests>
         <world.quest.GDXQuest>
@@ -62643,8 +62788,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>-29.866669</x>
-                <y>46.079994</y>
+                <x>13.038534</x>
+                <y>-9.1969795</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
@@ -63284,7 +63429,7 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
-            <name>zeppelin</name>
+            <name>zeppelinHanger</name>
             <impulse>
               <x>0.0</x>
               <y>0.0</y>
@@ -63310,15 +63455,16 @@
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
           <name>gm6</name>
-          <prerequisites>gm5</prerequisites>
+          <prerequisites>gm5ZepStop</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.objectdistance.ObjectDistanceTrigger">
+            <origin>player</origin>
             <target>zeppelin</target>
             <distance>3.0</distance>
             <actionRequired>true</actionRequired>
           </trigger>
           <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
-            <inputEnable>true</inputEnable>
+            <inputEnable>false</inputEnable>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -63414,6 +63560,8 @@
           </trigger>
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
             <being>player</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
             <dmg>0.0</dmg>
             <aim>0.0</aim>
             <kill>true</kill>
@@ -63488,6 +63636,82 @@
                 </entry>
               </properties>
             </npc>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>gm5ZepStop</name>
+          <prerequisites>gm5</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.objectdistance.ObjectDistanceTrigger">
+            <origin>zeppelin</origin>
+            <target>gmDoor</target>
+            <distance>23.0</distance>
+            <actionRequired>false</actionRequired>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
+            <name>zeppelinHanger</name>
+            <impulse>
+              <x>0.0</x>
+              <y>0.0</y>
+            </impulse>
+            <position>
+              <x>0.0</x>
+              <y>0.0</y>
+            </position>
+            <velocity>
+              <x>0.0</x>
+              <y>0.0</y>
+            </velocity>
+            <type>StaticBody</type>
+            <torque>0.0</torque>
+            <angle>0.0</angle>
+            <hasPosition>false</hasPosition>
+            <hasVelocity>false</hasVelocity>
+            <hasAngle>false</hasAngle>
+            <relativePosition>true</relativePosition>
+            <relativeVelocity>true</relativeVelocity>
+            <relativeAngle>true</relativeAngle>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>gm5ZepStop-0</name>
+          <prerequisites>gm5ZepStop</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>As the zeppelin hovers nearby, Colligan sees an anchor thrown off the stern of the ship as an indicator to jump up to safety.</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>gm6Static</name>
+          <prerequisites>gm6</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
+            <name>zeppelinHanger</name>
+            <impulse>
+              <x>0.0</x>
+              <y>0.0</y>
+            </impulse>
+            <position>
+              <x>0.0</x>
+              <y>0.0</y>
+            </position>
+            <velocity>
+              <x>0.0</x>
+              <y>0.0</y>
+            </velocity>
+            <type>DynamicBody</type>
+            <torque>0.0</torque>
+            <angle>0.0</angle>
+            <hasPosition>false</hasPosition>
+            <hasVelocity>false</hasVelocity>
+            <hasAngle>false</hasAngle>
+            <relativePosition>true</relativePosition>
+            <relativeVelocity>true</relativeVelocity>
+            <relativeAngle>true</relativeAngle>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
