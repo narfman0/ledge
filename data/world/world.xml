@@ -60866,24 +60866,6 @@
       <tiles/>
       <circles>
         <world.shape.GDXCircle>
-          <name>zeppelinAnchorMount</name>
-          <resource></resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>DynamicBody</bodyType>
-          <center>
-            <x>46.302387</x>
-            <y>56.220387</y>
-          </center>
-          <filter>
-            <categoryBits>1</categoryBits>
-            <maskBits>0</maskBits>
-            <groupIndex>0</groupIndex>
-          </filter>
-          <radius>1.0</radius>
-        </world.shape.GDXCircle>
-        <world.shape.GDXCircle>
           <name>zeppelinHanger</name>
           <resource></resource>
           <density>1.0</density>
@@ -60900,6 +60882,240 @@
             <groupIndex>0</groupIndex>
           </filter>
           <radius>1.0</radius>
+        </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>anchorChain-0</name>
+          <resource>data/textures/environment/chain.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>46.96142</x>
+            <y>56.228813</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>0</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>0.3</radius>
+        </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>anchorChain-1</name>
+          <resource>data/textures/environment/chain.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>46.36315</x>
+            <y>56.183258</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>0</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>0.3</radius>
+        </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>anchorChain-2</name>
+          <resource>data/textures/environment/chain.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>45.76488</x>
+            <y>56.137707</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>0</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>0.3</radius>
+        </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>anchorChain-3</name>
+          <resource>data/textures/environment/chain.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>45.166615</x>
+            <y>56.09215</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>0</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>0.3</radius>
+        </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>anchorChain-4</name>
+          <resource>data/textures/environment/chain.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>44.568344</x>
+            <y>56.0466</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>0</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>0.3</radius>
+        </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>anchorChain-5</name>
+          <resource>data/textures/environment/chain.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>43.970078</x>
+            <y>56.001045</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>0</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>0.3</radius>
+        </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>anchorChain-6</name>
+          <resource>data/textures/environment/chain.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>43.371807</x>
+            <y>55.95549</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>0</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>0.3</radius>
+        </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>anchorChain-7</name>
+          <resource>data/textures/environment/chain.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>42.77354</x>
+            <y>55.90994</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>0</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>0.3</radius>
+        </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>anchorChain-8</name>
+          <resource>data/textures/environment/chain.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>42.175274</x>
+            <y>55.864384</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>0</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>0.3</radius>
+        </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>anchorChain-9</name>
+          <resource>data/textures/environment/chain.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>41.577003</x>
+            <y>55.818832</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>0</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>0.3</radius>
+        </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>anchorChain-10</name>
+          <resource>data/textures/environment/chain.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>40.978737</x>
+            <y>55.773277</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>0</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>0.3</radius>
+        </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>anchorChain-11</name>
+          <resource>data/textures/environment/chain.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>40.380466</x>
+            <y>55.727722</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>0</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>0.3</radius>
+        </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>anchorChain-12</name>
+          <resource>data/textures/environment/chain.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>39.7822</x>
+            <y>55.68217</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>0</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>0.3</radius>
         </world.shape.GDXCircle>
       </circles>
       <polygons>
@@ -61954,13 +62170,13 @@
         <world.shape.GDXPolygon>
           <name>anchor</name>
           <resource>data/textures/airship/anchor.png</resource>
-          <density>3.0</density>
+          <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
           <bodyType>DynamicBody</bodyType>
           <center>
-            <x>47.247555</x>
-            <y>54.275867</y>
+            <x>39.321953</x>
+            <y>54.24667</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -61970,72 +62186,100 @@
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
-              <x>-0.34408188</x>
-              <y>0.44356918</y>
+              <x>-0.23586655</x>
+              <y>1.6182213</y>
             </Vector2>
             <Vector2>
-              <x>-0.34408188</x>
-              <y>0.392807</y>
+              <x>-0.7554474</x>
+              <y>1.1505966</y>
             </Vector2>
             <Vector2>
-              <x>-0.07489014</x>
-              <y>0.37896347</y>
+              <x>-0.7212677</x>
+              <y>0.920887</y>
             </Vector2>
             <Vector2>
-              <x>-0.117191315</x>
-              <y>-0.25325394</y>
+              <x>-0.40678024</x>
+              <y>0.88806915</y>
             </Vector2>
             <Vector2>
-              <x>-0.33639145</x>
-              <y>-0.25325394</y>
+              <x>-0.44779968</x>
+              <y>-0.4737854</y>
             </Vector2>
             <Vector2>
-              <x>-0.61711884</x>
-              <y>-0.073280334</y>
+              <x>-1.411766</x>
+              <y>-0.4573784</y>
             </Vector2>
             <Vector2>
-              <x>-0.6286545</x>
-              <y>-0.3501625</y>
+              <x>-2.0885887</x>
+              <y>0.108695984</y>
             </Vector2>
             <Vector2>
-              <x>-0.38638306</x>
-              <y>-0.5255203</y>
+              <x>-2.068081</x>
+              <y>-0.5558243</y>
             </Vector2>
             <Vector2>
-              <x>0.34428024</x>
-              <y>-0.56243896</y>
+              <x>-1.7467575</x>
+              <y>-0.80194473</y>
             </Vector2>
             <Vector2>
-              <x>0.5673256</x>
-              <y>-0.3270874</y>
+              <x>-1.0289154</x>
+              <y>-0.83475876</y>
             </Vector2>
             <Vector2>
-              <x>0.60578156</x>
-              <y>-0.23017883</y>
+              <x>-0.044441223</x>
+              <y>-0.9578171</y>
             </Vector2>
             <Vector2>
-              <x>0.6173172</x>
-              <y>-0.0778923</y>
+              <x>0.9673805</x>
+              <y>-0.92500305</y>
             </Vector2>
             <Vector2>
-              <x>0.044322968</x>
-              <y>-0.24402237</y>
+              <x>1.5826759</x>
+              <y>-0.5804367</y>
             </Vector2>
             <Vector2>
-              <x>0.05970764</x>
-              <y>0.37896347</y>
+              <x>1.7330818</x>
+              <y>0.0020446777</y>
             </Vector2>
             <Vector2>
-              <x>0.3135147</x>
-              <y>0.392807</y>
+              <x>1.7330818</x>
+              <y>0.13330841</y>
             </Vector2>
             <Vector2>
-              <x>0.32120895</x>
-              <y>0.45741272</y>
+              <x>1.507473</x>
+              <y>-0.0717926</y>
             </Vector2>
             <Vector2>
-              <x>-0.02468872</x>
-              <y>0.45254898</y>
+              <x>1.3502312</x>
+              <y>-0.30150223</y>
+            </Vector2>
+            <Vector2>
+              <x>1.0699272</x>
+              <y>-0.4573784</y>
+            </Vector2>
+            <Vector2>
+              <x>0.365757</x>
+              <y>-0.4901924</y>
+            </Vector2>
+            <Vector2>
+              <x>0.20167923</x>
+              <y>-0.49839783</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.078624725</x>
+              <y>-0.43276596</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.044441223</x>
+              <y>0.937294</y>
+            </Vector2>
+            <Vector2>
+              <x>0.27688217</x>
+              <y>0.9290886</y>
+            </Vector2>
+            <Vector2>
+              <x>0.29055405</x>
+              <y>1.1505966</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -62742,30 +62986,6 @@
           </anchor>
         </world.joint.WeldJoint>
         <world.joint.RopeJoint>
-          <name>anchorJoint</name>
-          <bodyA>anchor</bodyA>
-          <bodyB>zeppelinAnchorMount</bodyB>
-          <jointType>RopeJoint</jointType>
-          <collideConnected>false</collideConnected>
-          <maxLength>12.0</maxLength>
-          <center>
-            <x>46.84325</x>
-            <y>55.382698</y>
-          </center>
-        </world.joint.RopeJoint>
-        <world.joint.WeldJoint>
-          <name>zeppelinAnchorMountJoint</name>
-          <bodyA>zeppelinAnchorMount</bodyA>
-          <bodyB>zeppelin</bodyB>
-          <jointType>WeldJoint</jointType>
-          <collideConnected>false</collideConnected>
-          <referenceAngle>1.57</referenceAngle>
-          <anchor>
-            <x>47.3112</x>
-            <y>56.19825</y>
-          </anchor>
-        </world.joint.WeldJoint>
-        <world.joint.RopeJoint>
           <name>zeppelinHangerJoint</name>
           <bodyA>zeppelinGraphic</bodyA>
           <bodyB>zeppelinHanger</bodyB>
@@ -62777,6 +62997,258 @@
             <y>72.44677</y>
           </center>
         </world.joint.RopeJoint>
+        <world.joint.RevoluteJoint>
+          <name>anchorChain-0</name>
+          <bodyA>anchorChain-0</bodyA>
+          <bodyB>anchorChain-1</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>0.0</lowerAngle>
+          <upperAngle>0.0</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>46.662285</x>
+            <y>56.206036</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
+        <world.joint.RevoluteJoint>
+          <name>anchorChain-1</name>
+          <bodyA>anchorChain-1</bodyA>
+          <bodyB>anchorChain-2</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>0.0</lowerAngle>
+          <upperAngle>0.0</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>46.06402</x>
+            <y>56.160484</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
+        <world.joint.RevoluteJoint>
+          <name>anchorChain-2</name>
+          <bodyA>anchorChain-2</bodyA>
+          <bodyB>anchorChain-3</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>0.0</lowerAngle>
+          <upperAngle>0.0</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>45.465748</x>
+            <y>56.11493</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
+        <world.joint.RevoluteJoint>
+          <name>anchorChain-3</name>
+          <bodyA>anchorChain-3</bodyA>
+          <bodyB>anchorChain-4</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>0.0</lowerAngle>
+          <upperAngle>0.0</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>44.867477</x>
+            <y>56.069374</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
+        <world.joint.RevoluteJoint>
+          <name>anchorChain-4</name>
+          <bodyA>anchorChain-4</bodyA>
+          <bodyB>anchorChain-5</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>0.0</lowerAngle>
+          <upperAngle>0.0</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>44.26921</x>
+            <y>56.023823</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
+        <world.joint.RevoluteJoint>
+          <name>anchorChain-5</name>
+          <bodyA>anchorChain-5</bodyA>
+          <bodyB>anchorChain-6</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>0.0</lowerAngle>
+          <upperAngle>0.0</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>43.670944</x>
+            <y>55.978268</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
+        <world.joint.RevoluteJoint>
+          <name>anchorChain-6</name>
+          <bodyA>anchorChain-6</bodyA>
+          <bodyB>anchorChain-7</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>0.0</lowerAngle>
+          <upperAngle>0.0</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>43.072674</x>
+            <y>55.932716</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
+        <world.joint.RevoluteJoint>
+          <name>anchorChain-7</name>
+          <bodyA>anchorChain-7</bodyA>
+          <bodyB>anchorChain-8</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>0.0</lowerAngle>
+          <upperAngle>0.0</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>42.474407</x>
+            <y>55.88716</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
+        <world.joint.RevoluteJoint>
+          <name>anchorChain-8</name>
+          <bodyA>anchorChain-8</bodyA>
+          <bodyB>anchorChain-9</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>0.0</lowerAngle>
+          <upperAngle>0.0</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>41.876137</x>
+            <y>55.841606</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
+        <world.joint.RevoluteJoint>
+          <name>anchorChain-9</name>
+          <bodyA>anchorChain-9</bodyA>
+          <bodyB>anchorChain-10</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>0.0</lowerAngle>
+          <upperAngle>0.0</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>41.27787</x>
+            <y>55.796055</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
+        <world.joint.RevoluteJoint>
+          <name>anchorChain-10</name>
+          <bodyA>anchorChain-10</bodyA>
+          <bodyB>anchorChain-11</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>0.0</lowerAngle>
+          <upperAngle>0.0</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>40.679604</x>
+            <y>55.7505</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
+        <world.joint.RevoluteJoint>
+          <name>anchorChain-11</name>
+          <bodyA>anchorChain-11</bodyA>
+          <bodyB>anchorChain-12</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>0.0</lowerAngle>
+          <upperAngle>0.0</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>40.081333</x>
+            <y>55.70495</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
+        <world.joint.RevoluteJoint>
+          <name>anchorZeppelinChain</name>
+          <bodyA>zeppelin</bodyA>
+          <bodyB>anchorChain-0</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>0.0</lowerAngle>
+          <upperAngle>0.0</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>47.222263</x>
+            <y>56.23235</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
+        <world.joint.RevoluteJoint>
+          <name>anchorAnchorChain</name>
+          <bodyA>anchor</bodyA>
+          <bodyB>anchorChain-12</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>0.0</lowerAngle>
+          <upperAngle>0.0</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>39.204544</x>
+            <y>55.652336</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
       </joints>
       <quests>
         <world.quest.GDXQuest>
@@ -62788,8 +63260,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>13.038534</x>
-                <y>-9.1969795</y>
+                <x>-29.97776</x>
+                <y>45.735416</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
@@ -63712,6 +64184,16 @@
             <relativePosition>true</relativePosition>
             <relativeVelocity>true</relativeVelocity>
             <relativeAngle>true</relativeAngle>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>gm11End</name>
+          <prerequisites>gm10</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
+            <success>true</success>
+            <nextLevel></nextLevel>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
