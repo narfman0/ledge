@@ -23,6 +23,11 @@ public class PhysicsManifestationHandlerPlugin implements	IPhysicsManifestationH
 	
 	@Override public CompletionEnum execute(PhysicsManifestation manifestation) {
 		List<Body> bodies = world.matchPhysicsObject(manifestation.getName());
+		if(manifestation.getExecutor() != null){
+			Body body = manifestation.getExecutor().getPhysicsObject(manifestation.getName());
+			if(!bodies.contains(body))
+				bodies.add(body);
+		}
 		for(Being being : world.matchBeings(manifestation.getName()))
 			bodies.add(being.getRagdoll().getBodyPart(BodyPart.torso));
 		for(Body body : bodies){
