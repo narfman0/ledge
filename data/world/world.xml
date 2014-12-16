@@ -12246,6 +12246,32 @@
       <particles/>
       <sounds/>
       <animations class="linked-list"/>
+      <metadata>
+        <cameraShots>
+          <world.metadata.CameraShot>
+            <position>
+              <x>-14.083334</x>
+              <y>63.899998</y>
+            </position>
+            <velocity>
+              <x>1.062501</x>
+              <y>0.07500076</y>
+            </velocity>
+            <name>Shot-0</name>
+          </world.metadata.CameraShot>
+          <world.metadata.CameraShot>
+            <position>
+              <x>118.84209</x>
+              <y>14.141452</y>
+            </position>
+            <velocity>
+              <x>-0.95475006</x>
+              <y>-0.047738075</y>
+            </velocity>
+            <name>Shot-1</name>
+          </world.metadata.CameraShot>
+        </cameraShots>
+      </metadata>
       <properties/>
       <lightAmbient>-437918337</lightAmbient>
     </world.GDXLevel>
@@ -23788,6 +23814,32 @@
       <particles/>
       <sounds/>
       <animations class="linked-list"/>
+      <metadata>
+        <cameraShots>
+          <world.metadata.CameraShot>
+            <position>
+              <x>67.424446</x>
+              <y>30.076036</y>
+            </position>
+            <velocity>
+              <x>1.7766953</x>
+              <y>0.04634857</y>
+            </velocity>
+            <name>Shot-1</name>
+          </world.metadata.CameraShot>
+          <world.metadata.CameraShot>
+            <position>
+              <x>-164.82802</x>
+              <y>-9.422659</y>
+            </position>
+            <velocity>
+              <x>-1.4947205</x>
+              <y>-0.062934875</y>
+            </velocity>
+            <name>Shot-2</name>
+          </world.metadata.CameraShot>
+        </cameraShots>
+      </metadata>
       <properties>
         <entry>
           <string>Prerequisites</string>
@@ -44662,6 +44714,43 @@
       <particles/>
       <sounds/>
       <animations class="linked-list"/>
+      <metadata>
+        <cameraShots>
+          <world.metadata.CameraShot>
+            <position>
+              <x>-110.08091</x>
+              <y>41.336433</y>
+            </position>
+            <velocity>
+              <x>0.0</x>
+              <y>-2.800602</y>
+            </velocity>
+            <name>Shot-3</name>
+          </world.metadata.CameraShot>
+          <world.metadata.CameraShot>
+            <position>
+              <x>-297.7106</x>
+              <y>96.71779</y>
+            </position>
+            <velocity>
+              <x>1.5539551</x>
+              <y>-2.6106567</y>
+            </velocity>
+            <name>Shot-4</name>
+          </world.metadata.CameraShot>
+          <world.metadata.CameraShot>
+            <position>
+              <x>-570.9631</x>
+              <y>39.381035</y>
+            </position>
+            <velocity>
+              <x>-1.5856934</x>
+              <y>-0.10014343</y>
+            </velocity>
+            <name>Shot-5</name>
+          </world.metadata.CameraShot>
+        </cameraShots>
+      </metadata>
       <properties>
         <entry>
           <string>Prerequisites</string>
@@ -60841,6 +60930,32 @@
       <particles/>
       <sounds/>
       <animations class="linked-list"/>
+      <metadata>
+        <cameraShots>
+          <world.metadata.CameraShot>
+            <position>
+              <x>51.464806</x>
+              <y>-200.4977</y>
+            </position>
+            <velocity>
+              <x>2.2811012</x>
+              <y>-3.6720123</y>
+            </velocity>
+            <name>Shot-6</name>
+          </world.metadata.CameraShot>
+          <world.metadata.CameraShot>
+            <position>
+              <x>612.53894</x>
+              <y>-247.5857</y>
+            </position>
+            <velocity>
+              <x>-0.9346924</x>
+              <y>-1.0121613</y>
+            </velocity>
+            <name>Shot-7</name>
+          </world.metadata.CameraShot>
+        </cameraShots>
+      </metadata>
       <properties>
         <entry>
           <string>Prerequisites</string>
@@ -64293,6 +64408,32 @@
       <particles/>
       <sounds/>
       <animations class="linked-list"/>
+      <metadata>
+        <cameraShots>
+          <world.metadata.CameraShot>
+            <position>
+              <x>-44.453136</x>
+              <y>16.176203</y>
+            </position>
+            <velocity>
+              <x>1.0943413</x>
+              <y>-0.23173904</y>
+            </velocity>
+            <name>Shot-8</name>
+          </world.metadata.CameraShot>
+          <world.metadata.CameraShot>
+            <position>
+              <x>9.29833</x>
+              <y>9.378412</y>
+            </position>
+            <velocity>
+              <x>0.19311714</x>
+              <y>-2.5491705</y>
+            </velocity>
+            <name>Shot-9</name>
+          </world.metadata.CameraShot>
+        </cameraShots>
+      </metadata>
       <properties>
         <entry>
           <string>Prerequisites</string>
@@ -65596,6 +65737,9 @@
       <groups/>
       <particles/>
       <sounds/>
+      <metadata>
+        <cameraShots/>
+      </metadata>
       <properties>
         <entry>
           <string>Prerequisites</string>
@@ -66091,6 +66235,32 @@
       <particles/>
       <sounds/>
       <animations class="linked-list"/>
+      <metadata>
+        <cameraShots>
+          <world.metadata.CameraShot>
+            <position>
+              <x>-11.999654</x>
+              <y>19.26658</y>
+            </position>
+            <velocity>
+              <x>1.7062435</x>
+              <y>-0.13426208</y>
+            </velocity>
+            <name>Shot-10</name>
+          </world.metadata.CameraShot>
+          <world.metadata.CameraShot>
+            <position>
+              <x>16.167366</x>
+              <y>4.0278583</y>
+            </position>
+            <velocity>
+              <x>-1.1188459</x>
+              <y>-0.20139313</y>
+            </velocity>
+            <name>Shot-11</name>
+          </world.metadata.CameraShot>
+        </cameraShots>
+      </metadata>
       <properties class="tree-map">
         <entry>
           <string>Description</string>
@@ -67461,6 +67631,21 @@
       <particles/>
       <sounds/>
       <animations class="linked-list"/>
+      <metadata>
+        <cameraShots>
+          <world.metadata.CameraShot>
+            <position>
+              <x>-5.0065026</x>
+              <y>14.765625</y>
+            </position>
+            <velocity>
+              <x>-0.25</x>
+              <y>0.0</y>
+            </velocity>
+            <name>Shot-12</name>
+          </world.metadata.CameraShot>
+        </cameraShots>
+      </metadata>
       <properties class="tree-map">
         <entry>
           <string>Description</string>
@@ -68479,6 +68664,32 @@
       <particles/>
       <sounds/>
       <animations class="linked-list"/>
+      <metadata>
+        <cameraShots>
+          <world.metadata.CameraShot>
+            <position>
+              <x>-1.8333325</x>
+              <y>10.599997</y>
+            </position>
+            <velocity>
+              <x>0.0</x>
+              <y>3.0</y>
+            </velocity>
+            <name>Shot-13</name>
+          </world.metadata.CameraShot>
+          <world.metadata.CameraShot>
+            <position>
+              <x>-2.4166656</x>
+              <y>21.8</y>
+            </position>
+            <velocity>
+              <x>-0.1</x>
+              <y>-3.0</y>
+            </velocity>
+            <name>Shot-14</name>
+          </world.metadata.CameraShot>
+        </cameraShots>
+      </metadata>
       <properties class="tree-map"/>
       <lightAmbient>-437918337</lightAmbient>
     </world.GDXLevel>
