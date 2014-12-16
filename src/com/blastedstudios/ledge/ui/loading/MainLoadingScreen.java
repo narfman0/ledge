@@ -44,7 +44,7 @@ public class MainLoadingScreen extends AbstractScreen{
 		if(mainScreen == null && sharedAssets.getProgress() == 1f)
 			mainScreen = new MainScreen(game, sharedAssets, gdxWorld);
 		if(mainScreen != null)
-			mainScreen.updatePanners(delta);
+			mainScreen.update(delta);
 		if(iterationsToLoad-- == 0){
 			PluginUtil.initialize(ClassURI.CLASSPATH);//this takes 5+ seconds
 			gdxWorld = GDXWorld.load(MainScreen.WORLD_FILE);
