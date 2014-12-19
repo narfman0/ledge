@@ -52,6 +52,7 @@ import com.blastedstudios.ledge.ui.loading.GameplayLoadingWindowExecutor;
 import com.blastedstudios.ledge.ui.loading.LoadingWindow;
 import com.blastedstudios.ledge.util.ActionEnum;
 import com.blastedstudios.ledge.util.SaveHelper;
+import com.blastedstudios.ledge.world.DialogBubble;
 import com.blastedstudios.ledge.world.DialogManager;
 import com.blastedstudios.ledge.world.DialogManager.DialogStruct;
 import com.blastedstudios.ledge.world.QuestManifestationExecutor;
@@ -64,6 +65,7 @@ import com.blastedstudios.ledge.world.being.component.IComponent;
 
 public class GameplayScreen extends LedgeScreen {
 	private final DialogManager dialogManager;
+	private final DialogBubble dialogBubble;
 	private final ParticleManager particleManager;
 	private final HUD hud;
 	private OrthographicCamera camera;
@@ -95,6 +97,7 @@ public class GameplayScreen extends LedgeScreen {
 		this.assetManager = assetManager;
 		hud = new HUD(skin, player);
 		dialogManager = new DialogManager(skin);
+		dialogBubble = new DialogBubble(sharedAssets, skin);
 		particleManager = new ParticleManager();
 		for(GDXParticle particle : level.getParticles())
 			particleManager.addParticle(particle);
@@ -288,6 +291,7 @@ public class GameplayScreen extends LedgeScreen {
 			rayHandler.updateAndRender();
 		if(Properties.getBool("debug.draw"))
 			renderer.render(worldManager.getWorld(), camera.combined);
+		dialogBubble.render(sharedAssets, worldManager, dialogManager, camera);
 		dialogManager.render(assetManager);
 		stage.draw();
 		if(worldManager.getPlayer().isSpawned())

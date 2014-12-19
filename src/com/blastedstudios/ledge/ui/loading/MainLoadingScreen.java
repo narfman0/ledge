@@ -34,6 +34,7 @@ public class MainLoadingScreen extends AbstractScreen{
 			}
 		}));
 		sharedAssets.load("data/textures/blood.png", Texture.class);
+		sharedAssets.load("data/textures/dialogBubble.png", Texture.class);
 		sharedAssets.load("data/textures/money.png", Texture.class);
 	}
 

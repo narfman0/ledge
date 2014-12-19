@@ -31,14 +31,6 @@ public class DialogManager {
 		patch = skin.getPatch("character");
 	}
 
-	public void add(String dialog, String portrait){
-		dialogs.add(new DialogStruct(splitRenderable(dialog, DIALOG_WIDTH), portrait));
-	}
-
-	public DialogStruct poll(){
-		return dialogs.poll();
-	}
-
 	public void render(AssetManager assetManager){
 		if(!dialogs.isEmpty()){
 			float centerX = Gdx.graphics.getWidth()/2;
@@ -94,5 +86,17 @@ public class DialogManager {
 		public String toString(){
 			return "[DialogStruct dialog:" + dialog + " portrait:" + portrait + "]";
 		}
+	}
+
+	public void add(String dialog, String portrait){
+		dialogs.add(new DialogStruct(splitRenderable(dialog, DIALOG_WIDTH), portrait));
+	}
+
+	public DialogStruct poll(){
+		return dialogs.poll();
+	}
+	
+	public DialogStruct peek(){
+		return dialogs.peek();
 	}
 }
