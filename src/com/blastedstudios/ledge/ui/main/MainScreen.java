@@ -15,7 +15,7 @@ import com.blastedstudios.ledge.ui.main.NewCharacterWindow.INewCharacterWindowLi
 import com.blastedstudios.ledge.util.ActionEnum;
 
 public class MainScreen extends LedgeScreen implements IMainWindowListener, INewCharacterWindowListener {
-	public static final Color WINDOW_ALPHA_COLOR = new Color(1, 1, 1, .7f);
+	public static final Color WINDOW_ALPHA_COLOR = new Color(Properties.getInt("window.alpha.color", 0xFFFFFFFF));
 	public static final String SKIN_PATH = Properties.get("screen.skin","data/ui/uiskinGame.json");
 	public static final FileHandle WORLD_FILE = Gdx.files.internal("data/world/" + Properties.get("world.path", "world.xml"));
 	private final GDXWorld gdxWorld;
