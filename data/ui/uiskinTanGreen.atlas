@@ -2,7 +2,7 @@ uiskinTanGreen.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-character
+dialog
   rotate: false
   xy: 707, 0
   size: 137, 137
@@ -63,14 +63,14 @@ check-on
   orig: 14, 14
   offset: 0, 0
   index: -1
-hud-bar-outside
+hud-hpbar-outside
   rotate: false
   xy: 280, 0
   size: 198, 49
   orig: 198, 49
   offset: 0, 0
   index: -1
-hud-bar-inside
+hud-hpbar-inside
   rotate: false
   xy: 286, 48
   size: 187, 39
@@ -178,7 +178,7 @@ overworld-level
   orig: 70, 70
   offset: 0, 0
   index: -1
-overworld-current
+overworld-level-current
   rotate: false
   xy: 924, 0
   size: 70, 70

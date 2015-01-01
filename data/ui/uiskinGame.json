@@ -1,7 +1,7 @@
 {
 com.badlogic.gdx.graphics.g2d.BitmapFont: { 
-	default-font: { file: data/fonts/robotoLight24Blur.fnt },
-	default-font-noblur: { file: data/fonts/robotoLight24.fnt }
+	default: { file: data/fonts/robotoLight24Blur.fnt },
+	noblur: { file: data/fonts/robotoLight24.fnt }
 },
 com.badlogic.gdx.graphics.Color: {
 	brown: { a: 1, b: 0.3, g: 0.47, r: 0.427 },
@@ -10,15 +10,16 @@ com.badlogic.gdx.graphics.Color: {
 	black: { a: 1, b: 0, g: 0, r: 0 },
 	white: { a: 1, b: 1, g: 1, r: 1 },
 	dialog: yellow,
+	hud-hpbar: yellow,
 },
 com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
 	default: { down: default-round-down, up: default-round },
 	toggle: { down: default-round-down, checked: default-round-down, up: default-round }
 },
 com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
-	default: { down: default-round-down, up: default-round, font: default-font, fontColor: yellow },
-	toggle: { down: default-round-down, up: default-round, checked: default-round-down, font: default-font, fontColor: yellow, downFontColor: brown },
-	toggle-button: { over: toggle-button, up: toggle-button-shell, checked: toggle-button-checked, font: default-font, fontColor: yellow, downFontColor: brown }
+	default: { down: default-round-down, up: default-round, font: default, fontColor: yellow },
+	toggle: { down: default-round-down, up: default-round, checked: default-round-down, font: default, fontColor: yellow, downFontColor: brown },
+	toggle-button: { over: toggle-button, up: toggle-button-shell, checked: toggle-button-checked, font: default, fontColor: yellow, downFontColor: brown }
 },
 com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle: {
 	default: { down: default-round-down, up: default-round },
@@ -28,8 +29,8 @@ com.badlogic.gdx.scenes.scene2d.ui.ScrollPane$ScrollPaneStyle: {
 },
 com.badlogic.gdx.scenes.scene2d.ui.SelectBox$SelectBoxStyle: {
 	default: {
-		font: default-font, fontColor: white, background: default-select, scrollStyle: default,
-		listStyle: { font: default-font, selection: default-select-selection }
+		font: default, fontColor: white, background: default-select, scrollStyle: default,
+		listStyle: { font: default, selection: default-select-selection }
 	}
 },
 com.badlogic.gdx.scenes.scene2d.ui.SplitPane$SplitPaneStyle: {
@@ -37,22 +38,22 @@ com.badlogic.gdx.scenes.scene2d.ui.SplitPane$SplitPaneStyle: {
 	default-horizontal: { handle: default-splitpane }
 },
 com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle: {
-	default: { titleFont: default-font, background: default-window, titleFontColor: yellow }
+	default: { titleFont: default, background: default-window, titleFontColor: yellow }
 },
 com.badlogic.gdx.scenes.scene2d.ui.Slider$SliderStyle: {
 	default-horizontal: { background: default-slider, knob: default-slider-knob }
 },
 com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
-	default: { font: default-font, fontColor: yellow }
+	default: { font: default, fontColor: yellow }
 },
 com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle: {
-	default: { selection: selection, background: textfield, font: default-font, fontColor: yellow, messageFont: default-font, messageFontColor: yellow, cursor: cursor }
+	default: { selection: selection, background: textfield, font: default, fontColor: yellow, messageFont: default, messageFontColor: yellow, cursor: cursor }
 },
 com.badlogic.gdx.scenes.scene2d.ui.CheckBox$CheckBoxStyle: {
-	default: { checkboxOn: check-on, checkboxOff: check-off, font: default-font, fontColor: yellow }
+	default: { checkboxOn: check-on, checkboxOff: check-off, font: default, fontColor: yellow }
 },
 com.badlogic.gdx.scenes.scene2d.ui.List$ListStyle: {
-	default: { fontColorUnselected: brown, selection: default-rect-pad, fontColorSelected: yellow, font: default-font }
+	default: { fontColorUnselected: brown, selection: default-rect-pad, fontColorSelected: yellow, font: default }
 },
 com.badlogic.gdx.scenes.scene2d.ui.Touchpad$TouchpadStyle: {
 	default: { background: default-pane, knob: default-round-large }

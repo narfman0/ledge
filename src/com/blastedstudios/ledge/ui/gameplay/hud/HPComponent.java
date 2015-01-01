@@ -4,15 +4,20 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.blastedstudios.ledge.util.ui.UIHelper;
 
 public class HPComponent {
 	private final Sprite barOutsideSprite, barInsideSprite;
 	
 	public HPComponent(Skin skin){
-		barOutsideSprite = skin.getSprite("hud-bar-outside");
-		barOutsideSprite.setColor(skin.getColor("yellow"));
-		barInsideSprite = skin.getSprite("hud-bar-inside");
-		barInsideSprite.setColor(skin.getColor("yellow"));
+		barOutsideSprite = UIHelper.getSprite(skin, "hud-hpbar-outside", "hud-hpbar", "circle");
+		try{
+			barOutsideSprite.setColor(UIHelper.getColor(skin, "hud-hpbar-outside", "hud-hpbar", "primary"));
+		}catch(Exception e){}
+		barInsideSprite = UIHelper.getSprite(skin, "hud-hpbar-inside", "hud-hpbar", "circle");
+		try{
+			barInsideSprite.setColor(UIHelper.getColor(skin, "hud-hpbar-inside", "hud-hpbar", "primary"));
+		}catch(Exception e){}
 	}
 	
 	public void render(SpriteBatch spriteBatch, float percentHP, Vector2 position){

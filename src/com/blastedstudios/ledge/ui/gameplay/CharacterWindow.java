@@ -5,21 +5,19 @@ import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
-import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener.ChangeEvent;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.blastedstudios.gdxworld.ui.AbstractWindow;
 import com.blastedstudios.gdxworld.util.Properties;
-import com.blastedstudios.ledge.ui.main.MainScreen;
+import com.blastedstudios.ledge.util.ui.LedgeTextButton;
+import com.blastedstudios.ledge.util.ui.LedgeWindow;
 import com.blastedstudios.ledge.world.being.Being;
 
-public class CharacterWindow extends AbstractWindow {
+public class CharacterWindow extends LedgeWindow {
 	public CharacterWindow(final Skin skin, Being being, final ChangeListener listener){
 		super("", skin);
-		setColor(MainScreen.WINDOW_ALPHA_COLOR);
-		final Button button = new TextButton(Properties.get("ui.character.button.text", "Close"), skin);
-		button.addListener(new ClickListener() {
+		final Button button = new LedgeTextButton(Properties.get("ui.character.button.text", "Close"),
+				skin, new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
 				listener.changed(new ChangeEvent(), event.getTarget().getParent());
 			}

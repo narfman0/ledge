@@ -10,22 +10,21 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.ScrollPane;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
-import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener.ChangeEvent;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.blastedstudios.gdxworld.ui.AbstractWindow;
 import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunButton;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunButton.IButtonClicked;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunInformationWindow;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunInformationWindow.IWeaponInfoListener;
-import com.blastedstudios.ledge.ui.main.MainScreen;
+import com.blastedstudios.ledge.util.ui.LedgeTextButton;
+import com.blastedstudios.ledge.util.ui.LedgeWindow;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 
-public class VendorWindow extends AbstractWindow implements IButtonClicked{
+public class VendorWindow extends LedgeWindow implements IButtonClicked{
 	private final Stage stage;
 	private final Skin skin;
 	private final Being client;
@@ -51,8 +50,7 @@ public class VendorWindow extends AbstractWindow implements IButtonClicked{
 				table.row();
 			counter++;
 		}
-		Button exitButton = new TextButton("Exit", skin);
-		exitButton.addListener(new ClickListener() {
+		Button exitButton = new LedgeTextButton("Exit", skin, new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
 				closeListener.changed(new ChangeEvent(), event.getListenerActor().getParent().getParent());
 			}
@@ -64,7 +62,6 @@ public class VendorWindow extends AbstractWindow implements IButtonClicked{
 		add(exitButton);
 		pack();
 		setY(Gdx.graphics.getHeight()/2 - getHeight()/2);
-		setColor(MainScreen.WINDOW_ALPHA_COLOR);
 		setMovable(false);
 	}
 	

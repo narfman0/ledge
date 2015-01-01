@@ -10,15 +10,16 @@ import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
-import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextField;
-import com.badlogic.gdx.scenes.scene2d.ui.Window;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.GDXGameFade;
 import com.blastedstudios.gdxworld.world.GDXWorld;
 import com.blastedstudios.ledge.ui.overworld.OverworldScreen;
+import com.blastedstudios.ledge.util.ui.LedgeTextButton;
+import com.blastedstudios.ledge.util.ui.LedgeWindow;
+import com.blastedstudios.ledge.util.ui.UIHelper;
 import com.blastedstudios.ledge.world.Stats;
 import com.blastedstudios.ledge.world.being.FactionEnum;
 import com.blastedstudios.ledge.world.being.NPCData;
@@ -26,19 +27,19 @@ import com.blastedstudios.ledge.world.being.Player;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 import com.blastedstudios.ledge.world.weapon.WeaponFactory;
 
-class NewCharacterWindow extends Window{
+class NewCharacterWindow extends LedgeWindow{
 	public NewCharacterWindow(final Skin skin, final GDXGame game, 
 			final INewCharacterWindowListener listener, final GDXWorld gdxWorld, 
 			final FileHandle worldFile, final GDXRenderer gdxRenderer,
 			final AssetManager sharedAssets) {
 		super("", skin);
-		setColor(MainScreen.WINDOW_ALPHA_COLOR);
 		final TextField nameField = new TextField("", skin);
+		try{
+			nameField.setColor(UIHelper.getColor(skin, "new-name-field", "textfield", "secondary"));
+		}catch(Exception e){}
 		nameField.setMessageText("<name>");
 		nameField.setMaxLength(12);
-		final Button createButton = new TextButton("Create", skin);
-		final Button backButton = new TextButton("Back", skin);
-		createButton.addListener(new ClickListener() {
+		final Button createButton = new LedgeTextButton("Create", skin, new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
 				NPCData npcData = NPCData.parse("player");
 				Player player = new Player(nameField.getText(), 
@@ -51,7 +52,7 @@ class NewCharacterWindow extends Window{
 				GDXGameFade.fadeInPushScreen(game, screen);
 			}
 		});
-		backButton.addListener(new ClickListener() {
+		final Button backButton = new LedgeTextButton("Back", skin, new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
 				listener.backButtonClicked();
 			}

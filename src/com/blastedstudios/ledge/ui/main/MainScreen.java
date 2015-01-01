@@ -3,7 +3,6 @@ package com.blastedstudios.ledge.ui.main;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.files.FileHandle;
-import com.badlogic.gdx.graphics.Color;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.Properties;
@@ -15,7 +14,6 @@ import com.blastedstudios.ledge.ui.main.NewCharacterWindow.INewCharacterWindowLi
 import com.blastedstudios.ledge.util.ActionEnum;
 
 public class MainScreen extends LedgeScreen implements IMainWindowListener, INewCharacterWindowListener {
-	public static final Color WINDOW_ALPHA_COLOR = new Color(Properties.getInt("window.alpha.color", 0xFFFFFFFF));
 	public static final String SKIN_PATH = Properties.get("screen.skin","data/ui/uiskinGame.json");
 	public static final FileHandle WORLD_FILE = Gdx.files.internal("data/world/" + Properties.get("world.path", "world.xml"));
 	private final GDXWorld gdxWorld;

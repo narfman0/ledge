@@ -7,20 +7,19 @@ import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
-import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.blastedstudios.gdxworld.ui.AbstractWindow;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXWorld;
 import com.blastedstudios.ledge.ui.loading.GameplayLoadingWindowExecutor;
 import com.blastedstudios.ledge.ui.loading.LoadingWindow;
-import com.blastedstudios.ledge.ui.main.MainScreen;
+import com.blastedstudios.ledge.util.ui.LedgeTextButton;
+import com.blastedstudios.ledge.util.ui.LedgeWindow;
 import com.blastedstudios.ledge.world.DialogManager;
 import com.blastedstudios.ledge.world.being.Player;
 
-class LevelInformationWindow extends AbstractWindow{
+class LevelInformationWindow extends LedgeWindow{
 	public final GDXLevel level;
 	
 	public LevelInformationWindow(final Skin skin, final GDXLevel level, 
@@ -28,10 +27,8 @@ class LevelInformationWindow extends AbstractWindow{
 			final FileHandle selectedFile, final GDXRenderer gdxRenderer,
 			final AssetManager sharedAssets, final OverworldScreen screen) {
 		super("", skin);
-		setColor(MainScreen.WINDOW_ALPHA_COLOR);
 		this.level = level;
-		final Button startButton = new TextButton("Start", skin);
-		startButton.addListener(new ClickListener() {
+		final Button startButton = new LedgeTextButton("Start", skin, new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
 				screen.getStage().addActor(new LoadingWindow(skin, 
 						new GameplayLoadingWindowExecutor(game, player, level, world, selectedFile, gdxRenderer, sharedAssets)));

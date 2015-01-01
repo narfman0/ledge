@@ -1,0 +1,64 @@
+{
+com.badlogic.gdx.graphics.g2d.BitmapFont: { 
+	default: { file: data/fonts/helveticaNeueBCond24.fnt },
+},
+com.badlogic.gdx.graphics.Color: {
+	blue: { a: 1, b: 1, g: 0, r: 0 },
+	brown: { a: 1, b: 0.3, g: 0.47, r: 0.427 },
+	brown1: { a: 1, b: 0.13333, g: 0.1529, r: 0.1607 },
+	brown3: { a: 1, b: 0.349, g: 0.44313, r: 0.48627 },
+	green: { a: 1, b: 0, g: 1, r: 0 },
+	yellow: { a: 1, b: 0.635, g: 1, r: 0.91 },
+	black: { a: 1, b: 0, g: 0, r: 0 },
+	gray: { a: 1, b: .75, g: .75, r: .75 },
+	white: { a: 1, b: 1, g: 1, r: 1 },
+	red: { a: 1, b: 0, g: 0, r: 1 },
+	red-blood: { a: 1, b: .003921, g: .01171, r: .317647 },
+	text: white,
+	dialog: text,
+	background: red-blood,
+	primary: black,
+	secondary: white,
+	overworld-level: red-blood,
+	overworld-level-current: white,
+	hud-font: red-blood,
+	new-name-field: red-blood
+},
+com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
+	default: { down: rectangle, up: rectangle },
+},
+com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
+	default: { down: rectangle, up: rectangle, font: default, fontColor: text },
+},
+com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle: {
+	default: { down: rectangle, up: rectangle },
+},
+com.badlogic.gdx.scenes.scene2d.ui.ScrollPane$ScrollPaneStyle: {
+	default: { vScroll: rectangle, hScrollKnob: rectangle, background: rectangle, hScroll: rectangle, vScrollKnob: rectangle }
+},
+com.badlogic.gdx.scenes.scene2d.ui.SelectBox$SelectBoxStyle: {
+	default: {
+		font: default, fontColor: text, scrollStyle: default,
+		listStyle: { font: default, selection: rectangle }
+	}
+},
+com.badlogic.gdx.scenes.scene2d.ui.SplitPane$SplitPaneStyle: {
+	default-vertical: { handle: rectangle },
+	default-horizontal: { handle: rectangle }
+},
+com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle: {
+	default: { titleFont: default, background: rectangle, titleFontColor: text }
+},
+com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
+	default: { font: default, fontColor: text }
+},
+com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle: {
+	default: { selection: rectangle, background: rectangle, font: default, fontColor: text, messageFont: default, messageFontColor: text }
+},
+com.badlogic.gdx.scenes.scene2d.ui.CheckBox$CheckBoxStyle: {
+	default: { checkboxOn: circle, checkboxOff: circle, font: default, fontColor: text }
+},
+com.badlogic.gdx.scenes.scene2d.ui.List$ListStyle: {
+	default: { fontColorUnselected: text, selection: rectangle, fontColorSelected: text, font: default }
+},
+}

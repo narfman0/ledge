@@ -10,14 +10,15 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextField;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.blastedstudios.gdxworld.ui.AbstractWindow;
 import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen;
 import com.blastedstudios.ledge.util.IConsoleCommand;
+import com.blastedstudios.ledge.util.ui.LedgeTextButton;
+import com.blastedstudios.ledge.util.ui.LedgeWindow;
 import com.blastedstudios.ledge.world.WorldManager;
 
-public class ConsoleWindow extends AbstractWindow {
+public class ConsoleWindow extends LedgeWindow {
 	private final TextField text;
 	private final Table historyTable;
 	
@@ -30,14 +31,12 @@ public class ConsoleWindow extends AbstractWindow {
 			command.initialize(world, screen);
 		text = new TextField("", skin);
 		text.setMessageText("<enter command>");
-		TextButton executeButton = new TextButton("Execute", skin);
-		executeButton.addListener(new ClickListener() {
+		TextButton executeButton = new LedgeTextButton("Execute", skin, new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
 				execute();
 			}
 		});
-		TextButton closeButton = new TextButton("Close", skin);
-		closeButton.addListener(new ClickListener() {
+		TextButton closeButton = new LedgeTextButton("Close", skin, new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
 				listener.handle(event);
 			}

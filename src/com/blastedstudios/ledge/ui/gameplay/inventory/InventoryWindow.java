@@ -7,14 +7,13 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
-import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener.ChangeEvent;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.blastedstudios.gdxworld.ui.AbstractWindow;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunButton.IButtonClicked;
-import com.blastedstudios.ledge.ui.main.MainScreen;
+import com.blastedstudios.ledge.util.ui.LedgeTextButton;
+import com.blastedstudios.ledge.util.ui.LedgeWindow;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 
@@ -24,7 +23,7 @@ import com.blastedstudios.ledge.world.weapon.Weapon;
  * There shall be 4 settable gun slots, otherwise guns go in main inventory
  * There shall be 4*4 inventory slots available
  */
-public class InventoryWindow extends AbstractWindow implements IButtonClicked {
+public class InventoryWindow extends LedgeWindow implements IButtonClicked {
 	private final Skin skin;
 	private final Stage stage;
 	private final InventoryTable inventoryTable;
@@ -34,20 +33,18 @@ public class InventoryWindow extends AbstractWindow implements IButtonClicked {
 	public InventoryWindow(final Skin skin, final Being being, final ChangeListener listener,
 			final AssetManager sharedAssets, final Stage stage, boolean canSell){
 		super("", skin);
-		setColor(MainScreen.WINDOW_ALPHA_COLOR);
 		this.skin = skin;
 		this.stage = stage;
 		this.canSell = canSell;
 		inventoryTable = new InventoryTable(skin, being, listener, sharedAssets, this);
-		final Button acceptButton = new TextButton("Accept", skin);
-		acceptButton.addListener(new ClickListener() {
+		final Button acceptButton = new LedgeTextButton("Accept", skin, new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
 				inventoryTable.accept();
 				listener.changed(new ChangeEvent(), event.getListenerActor().getParent().getParent());
 			}
 		});
-		final Button cancelButton = new TextButton(Properties.get("ui.inventory.button.cancel.text", "Cancel"), skin);
-		cancelButton.addListener(new ClickListener() {
+		final Button cancelButton = new LedgeTextButton(Properties.get("ui.inventory.button.cancel.text", "Cancel"),
+				skin, new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
 				listener.changed(new ChangeEvent(), event.getListenerActor().getParent().getParent());
 			}

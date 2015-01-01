@@ -3,7 +3,7 @@ uiskinGame.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-character
+dialog
   rotate: false
   xy: 477, 0
   size: 133, 63
@@ -78,14 +78,14 @@ check-on
   orig: 14, 14
   offset: 0, 0
   index: -1
-hud-bar-outside
+hud-hpbar-outside
   rotate: false
   xy: 278, 0
   size: 199, 49
   orig: 199, 49
   offset: 0, 0
   index: -1
-hud-bar-inside
+hud-hpbar-inside
   rotate: false
   xy: 286, 48
   size: 187, 39

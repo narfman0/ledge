@@ -22,7 +22,6 @@ import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.beingspawn.BeingSpawnManifestation;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.dialog.DialogManifestation;
 import com.blastedstudios.gdxworld.ui.AbstractScreen;
-import com.blastedstudios.gdxworld.ui.AbstractWindow;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.ui.drawable.Drawable;
 import com.blastedstudios.gdxworld.ui.drawable.DrawableSorter;
@@ -52,6 +51,7 @@ import com.blastedstudios.ledge.ui.loading.GameplayLoadingWindowExecutor;
 import com.blastedstudios.ledge.ui.loading.LoadingWindow;
 import com.blastedstudios.ledge.util.ActionEnum;
 import com.blastedstudios.ledge.util.SaveHelper;
+import com.blastedstudios.ledge.util.ui.LedgeWindow;
 import com.blastedstudios.ledge.world.DialogBubble;
 import com.blastedstudios.ledge.world.DialogManager;
 import com.blastedstudios.ledge.world.DialogManager.DialogStruct;
@@ -70,7 +70,7 @@ public class GameplayScreen extends LedgeScreen {
 	private final HUD hud;
 	private OrthographicCamera camera;
 	private WorldManager worldManager;
-	private AbstractWindow characterWindow, inventoryWindow, vendorWindow, backWindow;
+	private LedgeWindow characterWindow, inventoryWindow, vendorWindow, backWindow;
 	private ConsoleWindow consoleWindow;
 	private final Box2DDebugRenderer renderer;
 	private final GDXRenderer gdxRenderer;
@@ -407,7 +407,7 @@ public class GameplayScreen extends LedgeScreen {
 	}
 	
 	private void cleanCharacterWindows(){
-		for(AbstractWindow window : new AbstractWindow[]{characterWindow, inventoryWindow, vendorWindow, backWindow})
+		for(LedgeWindow window : new LedgeWindow[]{characterWindow, inventoryWindow, vendorWindow, backWindow})
 			if(window != null)
 				window.remove();
 		characterWindow = null;

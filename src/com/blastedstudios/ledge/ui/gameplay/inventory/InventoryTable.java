@@ -18,8 +18,8 @@ import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunButton.IButtonClicked;
 import com.blastedstudios.ledge.ui.gameplay.inventory.GunInformationWindow.IWeaponInfoListener;
-import com.blastedstudios.ledge.ui.main.MainScreen;
 import com.blastedstudios.ledge.util.ActionEnum;
+import com.blastedstudios.ledge.util.ui.UIHelper;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 
@@ -36,7 +36,9 @@ public class InventoryTable extends Table implements IButtonClicked, IWeaponInfo
 	
 	public InventoryTable(final Skin skin, final Being being, final ChangeListener listener,
 			final AssetManager sharedAssets, IButtonClicked informationWindowListener){
-		setColor(MainScreen.WINDOW_ALPHA_COLOR);
+		try{
+			setColor(UIHelper.getColor(skin, "table-background", "background", "primary"));
+		}catch(Exception e){}
 		this.sharedAssets = sharedAssets;
 		this.skin = skin;
 		this.being = being;

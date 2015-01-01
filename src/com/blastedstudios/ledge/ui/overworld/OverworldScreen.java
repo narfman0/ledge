@@ -22,6 +22,7 @@ import com.blastedstudios.gdxworld.world.GDXWorld;
 import com.blastedstudios.ledge.ui.LedgeScreen;
 import com.blastedstudios.ledge.util.ActionEnum;
 import com.blastedstudios.ledge.util.SpriteTweenAccessor;
+import com.blastedstudios.ledge.util.ui.UIHelper;
 import com.blastedstudios.ledge.world.being.Player;
 
 public class OverworldScreen extends LedgeScreen{
@@ -47,8 +48,14 @@ public class OverworldScreen extends LedgeScreen{
 		this.gdxRenderer = gdxRenderer;
 		this.sharedAssets = sharedAssets;
 		Log.log("OverworldScreen.<init>", "Loaded world successfully");
-		levelSprite = skin.getSprite("overworld-level");
-		levelCurrentSprite = skin.getSprite("overworld-current");
+		levelSprite = UIHelper.getSprite(skin, "overworld-level", "circle");
+		try{
+			levelSprite.setColor(UIHelper.getColor(skin, "overworld-level", "secondary"));
+		}catch(Exception e){}
+		levelCurrentSprite = new Sprite(UIHelper.getSprite(skin, "overworld-level-current", "overworld-level", "circle"));
+		try{
+			levelCurrentSprite.setColor(UIHelper.getColor(skin, "overworld-level-current", "overworld-level", "primary"));
+		}catch(Exception e){}
 		String backgroundPath = "data/textures/" + gdxWorld.getWorldProperties().get("background");
 		sharedAssets.finishLoading();
 		backgroundSprite = new Sprite(sharedAssets.get(backgroundPath, Texture.class));

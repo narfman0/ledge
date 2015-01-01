@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.blastedstudios.gdxworld.util.PluginUtil;
+import com.blastedstudios.ledge.util.ui.UIHelper;
 import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.Player;
 
@@ -20,8 +21,10 @@ public class HUD {
 	private final BitmapFont font;
 	
 	public HUD(Skin skin, Player player){
-		font = skin.getFont("default-font");
-		font.setColor(skin.getColor("yellow"));
+		font = UIHelper.getFont(skin, "hud", "blur", "default");
+		try{
+			font.setColor(UIHelper.getColor(skin, "hud-font", "secondary"));
+		}catch(Exception e){}
 		for(IHUDElement element : PluginUtil.getPlugins(IHUDElement.class))
 			elements.add(element.initialize(skin, font, player));
 	}

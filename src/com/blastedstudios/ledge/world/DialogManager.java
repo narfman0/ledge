@@ -12,7 +12,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.blastedstudios.gdxworld.util.Properties;
-import com.blastedstudios.ledge.ui.main.MainScreen;
+import com.blastedstudios.ledge.util.ui.UIHelper;
 
 public class DialogManager {
 	public final static int DIALOG_WIDTH = Properties.getInt("dialog.width", 67);
@@ -24,11 +24,15 @@ public class DialogManager {
 	private final NinePatch patch;
 
 	public DialogManager(Skin skin){
-		spriteBatch.setColor(MainScreen.WINDOW_ALPHA_COLOR);
-		font = skin.getFont("default-font-noblur");
-		font.setColor(skin.getColor("dialog"));
+		try{
+			spriteBatch.setColor(UIHelper.getColor(skin, "table-background", "background", "primary"));
+		}catch(Exception e){}
+		font = UIHelper.getFont(skin, "dialog", "noblur", "default");
+		try{
+			font.setColor(UIHelper.getColor(skin, "dialog", "text", "secondary"));
+		}catch(Exception e){}
 		TEXT_DRAW_HEIGHT = TEXT_PORTRAIT_DRAW_HEIGHT - (int)font.getLineHeight();
-		patch = skin.getPatch("character");
+		patch = UIHelper.getPatch(skin, "dialog", "circle");
 	}
 
 	public void render(AssetManager assetManager){

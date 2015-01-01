@@ -7,8 +7,6 @@ import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
-import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
-import com.badlogic.gdx.scenes.scene2d.ui.Window;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.GDXGame;
@@ -16,33 +14,31 @@ import com.blastedstudios.gdxworld.util.GDXGameFade;
 import com.blastedstudios.gdxworld.world.GDXWorld;
 import com.blastedstudios.ledge.ui.overworld.OverworldScreen;
 import com.blastedstudios.ledge.util.SaveHelper;
+import com.blastedstudios.ledge.util.ui.LedgeTextButton;
+import com.blastedstudios.ledge.util.ui.LedgeWindow;
 import com.blastedstudios.ledge.world.being.Player;
 
-class MainWindow extends Window{
+class MainWindow extends LedgeWindow{
 	public MainWindow(final Skin skin, final GDXGame game, final IMainWindowListener listener, 
 			final GDXWorld gdxWorld, final FileHandle worldFile, final GDXRenderer gdxRenderer,
 			final AssetManager sharedAssets) {
 		super("", skin);
-		setColor(MainScreen.WINDOW_ALPHA_COLOR);
-		final Button newCharacterButton = new TextButton("Create New", skin);
-		final Button exitButton = new TextButton("Exit", skin);
-		newCharacterButton.addListener(new ClickListener() {
+		final Button newButton = new LedgeTextButton("Create New", skin, new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
 				listener.newCharacterButtonClicked();
 			}
 		});
-		exitButton.addListener(new ClickListener() {
+		final Button exitButton = new LedgeTextButton("Exit", skin, new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
 				Gdx.app.exit();
 			}
 		});
 		add(new Label("Ledge", skin));
 		row();
-		add(newCharacterButton).fillX();
+		add(newButton).fillX();
 		row();
 		for(final Player being : SaveHelper.load()){
-			final Button savedCharacterButton = new TextButton(being.getName(), skin);
-			savedCharacterButton.addListener(new ClickListener() {
+			final Button savedCharacterButton = new LedgeTextButton(being.getName(), skin, new ClickListener() {
 				@Override public void clicked(InputEvent event, float x, float y) {
 					OverworldScreen screen = new OverworldScreen(game, being, 
 							gdxWorld, worldFile, gdxRenderer, sharedAssets); 
