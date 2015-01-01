@@ -101,17 +101,16 @@ public class OverworldScreen extends LedgeScreen{
 				Vector2 position = level.getCoordinates().cpy().scl(OFFSET_SCALAR);
 				levelSprite.setPosition(position.x, position.y);
 				levelSprite.draw(spriteBatch);
-				if(levelInfo != null && levelInfo.level == level)
-					levelCurrentSprite.draw(spriteBatch);
 			}
 		}
+		levelCurrentSprite.draw(spriteBatch);
 		spriteBatch.end();
 		stage.draw();
 	}
 
 	@Override public boolean touchDown(int x, int y, int ptr, int button) {
 		super.touchDown(x, y, ptr, button);
-		if(levelInfo == null || !levelInfo.contains(x, y)){
+		if(!levelInfo.contains(x, y)){
 			Vector2 coordinates = GDXRenderer.toWorldCoordinates(camera, new Vector2(x,y));
 			coordinates.scl(1f/OFFSET_SCALAR);
 			GDXLevel level = gdxWorld.getClosestLevel(coordinates.x,coordinates.y);
