@@ -5,9 +5,11 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.files.FileHandle;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.GDXGame;
+import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.util.panner.PannerManager;
 import com.blastedstudios.gdxworld.world.GDXWorld;
+import com.blastedstudios.ledge.plugin.quest.handler.ISharedAssetConsumer;
 import com.blastedstudios.ledge.ui.LedgeScreen;
 import com.blastedstudios.ledge.ui.main.MainWindow.IMainWindowListener;
 import com.blastedstudios.ledge.ui.main.NewCharacterWindow.INewCharacterWindowListener;
@@ -30,6 +32,8 @@ public class MainScreen extends LedgeScreen implements IMainWindowListener, INew
 		gdxRenderer = new GDXRenderer(true, true);
 		stage.addActor(mainWindow = new MainWindow(skin, game, this, gdxWorld, WORLD_FILE, gdxRenderer, sharedAssets));
 		panner = new PannerManager(gdxWorld, gdxRenderer);
+		for(ISharedAssetConsumer handler : PluginUtil.getPlugins(ISharedAssetConsumer.class))
+			handler.setAssets(sharedAssets);
 		register(ActionEnum.BACK, new AbstractInputHandler() {
 			public void down(){
 				Gdx.app.exit();
