@@ -1,5 +1,8 @@
 package com.blastedstudios.ledge.plugin.quest.handler.manifestation;
 
+import java.util.Iterator;
+import java.util.LinkedList;
+
 import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 import com.badlogic.gdx.assets.AssetManager;
@@ -13,9 +16,10 @@ import com.blastedstudios.ledge.plugin.quest.handler.ISharedAssetConsumer;
 
 @PluginImplementation
 public class SoundThematicHandlerPlugin implements ISoundHandler, ISharedAssetConsumer{
-	private Sound current, previous = null;
-	private long currentId, previousId;
-	private float transitionTime = 0f;
+	private final LinkedList<MusicStruct> previousMusics = new LinkedList<>();
+	private Sound current;
+	private long currentId;
+	private float transitionTime;
 	private AssetManager assets;
 	
 	@Override public CompletionEnum sound(float dt, SoundManifestationEnum manifestationType,
@@ -28,8 +32,7 @@ public class SoundThematicHandlerPlugin implements ISoundHandler, ISharedAssetCo
 		float duration = Properties.getFloat("sound.music.fade.duration", 2f);
 		switch(manifestationType){
 		case THEMATIC:
-			transitionTime = duration;
-			previous = current;
+			previousMusics.add(new MusicStruct(transitionTime = duration, current, currentId));
 			current = assets.get(path, Sound.class);
 			currentId = current.loop(0f);
 			return CompletionEnum.EXECUTING;
@@ -39,19 +42,30 @@ public class SoundThematicHandlerPlugin implements ISoundHandler, ISharedAssetCo
 	}
 
 	@Override public CompletionEnum tick(float dt) {
-		transitionTime -= dt;
-		if(transitionTime <= 0f){
-			previous.stop(previousId);
-			previous = null;
-			current.setVolume(currentId, 1f);
-			return CompletionEnum.COMPLETED;
-		}else{
-			float duration = Properties.getFloat("sound.music.fade.duration");
-			current.setVolume(currentId, (duration - transitionTime)/duration);
-			previous.setVolume(previousId, transitionTime/duration);
-			Log.log("SoundTheme.tick", "Current: " + (duration - transitionTime)/duration + " previous: " + transitionTime/duration);
-			return CompletionEnum.EXECUTING;
+		float duration = Properties.getFloat("sound.music.fade.duration");
+		for(Iterator<MusicStruct> iter = previousMusics.iterator(); iter.hasNext();){
+			MusicStruct struct = iter.next();
+			struct.timeRemaining -= dt;
+			struct.sound.setVolume(struct.id, struct.timeRemaining/duration);
+			if(struct.timeRemaining <= 0f){
+				struct.sound.stop(struct.id);
+				iter.remove();
+				if(previousMusics.isEmpty())
+					transitionTime = duration;
+			}
 		}
+		if(previousMusics.isEmpty()){
+			transitionTime -= dt;
+			if(transitionTime <= 0f){
+				current.setVolume(currentId, 1f);
+				return CompletionEnum.COMPLETED;
+			}else{
+				current.setVolume(currentId, (duration - transitionTime)/duration);
+				Log.log("SoundTheme.tick", "Current: " + (duration - transitionTime)/duration + " previous: " + transitionTime/duration);
+				return CompletionEnum.EXECUTING;
+			}
+		}
+		return CompletionEnum.EXECUTING;
 	}
 
 	@Override public void setAssets(AssetManager assets) {
@@ -59,5 +73,17 @@ public class SoundThematicHandlerPlugin implements ISoundHandler, ISharedAssetCo
 		String defaultMusic = Properties.get("sound.music", "EpicMovieGameTrailer");
 		current = assets.get("data/sounds/music/" + defaultMusic + ".mp3", Sound.class);
 		currentId = current.loop();
+	}
+	
+	private class MusicStruct{
+		float timeRemaining;
+		final Sound sound;
+		final long id;
+		
+		MusicStruct(float timeRemaining, Sound sound, long id){
+			this.timeRemaining = timeRemaining;
+			this.sound = sound;
+			this.id = id;
+		}
 	}
 }
