@@ -16,10 +16,8 @@ import com.blastedstudios.ledge.plugin.quest.handler.ISharedAssetConsumer;
 
 @PluginImplementation
 public class SoundThematicHandlerPlugin implements ISoundHandler, ISharedAssetConsumer{
-	private final LinkedList<MusicStruct> previousMusics = new LinkedList<>();
-	private Sound current;
-	private long currentId;
-	private float transitionTime;
+	private final LinkedList<MusicStruct> previous = new LinkedList<>();
+	private MusicStruct current;
 	private AssetManager assets;
 	
 	@Override public CompletionEnum sound(float dt, SoundManifestationEnum manifestationType,
@@ -29,12 +27,11 @@ public class SoundThematicHandlerPlugin implements ISoundHandler, ISharedAssetCo
 			Log.error("SoundThematicHandlerPlugin.sound", "Sound not available: " + path);
 			return CompletionEnum.COMPLETED;
 		}
-		float duration = Properties.getFloat("sound.music.fade.duration", 2f);
 		switch(manifestationType){
 		case THEMATIC:
-			previousMusics.add(new MusicStruct(transitionTime = duration, current, currentId));
-			current = assets.get(path, Sound.class);
-			currentId = current.loop(0f);
+			previous.add(new MusicStruct(current.sound, current.id));
+			Sound sound = assets.get(path, Sound.class);
+			current = new MusicStruct(sound, sound.loop(0f));
 			return CompletionEnum.EXECUTING;
 		default:
 			return CompletionEnum.NOT_STARTED;
@@ -42,26 +39,24 @@ public class SoundThematicHandlerPlugin implements ISoundHandler, ISharedAssetCo
 	}
 
 	@Override public CompletionEnum tick(float dt) {
-		float duration = Properties.getFloat("sound.music.fade.duration");
-		for(Iterator<MusicStruct> iter = previousMusics.iterator(); iter.hasNext();){
+		for(Iterator<MusicStruct> iter = previous.iterator(); iter.hasNext();){
 			MusicStruct struct = iter.next();
-			struct.timeRemaining -= dt;
-			struct.sound.setVolume(struct.id, struct.timeRemaining/duration);
-			if(struct.timeRemaining <= 0f){
+			struct.time -= dt;
+			struct.sound.setVolume(struct.id, struct.time/struct.duration);
+			if(struct.time <= 0f){
 				struct.sound.stop(struct.id);
 				iter.remove();
-				if(previousMusics.isEmpty())
-					transitionTime = duration;
+				if(previous.isEmpty())
+					current.time = struct.duration;
 			}
 		}
-		if(previousMusics.isEmpty()){
-			transitionTime -= dt;
-			if(transitionTime <= 0f){
-				current.setVolume(currentId, 1f);
+		if(previous.isEmpty()){
+			current.time -= dt;
+			if(current.time <= 0f){
+				current.sound.setVolume(current.id, 1f);
 				return CompletionEnum.COMPLETED;
 			}else{
-				current.setVolume(currentId, (duration - transitionTime)/duration);
-				Log.log("SoundTheme.tick", "Current: " + (duration - transitionTime)/duration + " previous: " + transitionTime/duration);
+				current.sound.setVolume(current.id, (current.duration - current.time)/current.duration);
 				return CompletionEnum.EXECUTING;
 			}
 		}
@@ -71,17 +66,17 @@ public class SoundThematicHandlerPlugin implements ISoundHandler, ISharedAssetCo
 	@Override public void setAssets(AssetManager assets) {
 		this.assets = assets;
 		String defaultMusic = Properties.get("sound.music", "EpicMovieGameTrailer");
-		current = assets.get("data/sounds/music/" + defaultMusic + ".mp3", Sound.class);
-		currentId = current.loop();
+		Sound sound = assets.get("data/sounds/music/" + defaultMusic + ".mp3", Sound.class);
+		current = new MusicStruct(sound, sound.loop());
 	}
 	
 	private class MusicStruct{
-		float timeRemaining;
+		final float duration = Properties.getFloat("sound.music.fade.duration", 2f); 
 		final Sound sound;
 		final long id;
+		float time = duration;
 		
-		MusicStruct(float timeRemaining, Sound sound, long id){
-			this.timeRemaining = timeRemaining;
+		MusicStruct(Sound sound, long id){
 			this.sound = sound;
 			this.id = id;
 		}
