@@ -69,8 +69,7 @@ public class DropManager {
 					Properties.getFloat("gameplay.camera.zoom"), sharedAssets);
 			if(distance < Properties.getFloat("drop.pickup.distance", .5f)){
 				player.addCash(entry.getValue());
-				Sound sound = sharedAssets.get("data/sounds/chaching.mp3");
-				sound.play();
+				sharedAssets.get("data/sounds/chaching.mp3", Sound.class).play();
 				world.destroyBody(dropBody);
 				cashDropRemoveList.add(dropBody);
 			}else if(!paused && distance < impulseDistance){
@@ -106,8 +105,10 @@ public class DropManager {
 	
 	public void generateDrop(Being being, World world){
 		generateGuns(world, being);
-		generateAmmo(world, being);
-		generateCash(world, being);
+		if(Properties.getBool("drops.ammo.enable", false))
+			generateAmmo(world, being);
+		if(Properties.getBool("drops.cash.enable", false))
+			generateCash(world, being);
 	}
 	
 	private void generateAmmo(World world, Being being) {
