@@ -15,6 +15,7 @@ import java.util.Random;
 import aurelienribon.tweenengine.TweenManager;
 
 import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
@@ -352,6 +353,12 @@ public class WorldManager implements IDeathCallback{
 			if(name != null && body.getUserData() instanceof String && ((String)body.getUserData()).matches(name))
 				bodies.add(body);
 		return bodies;
+	}
+	
+	public static void playSoundTuned(Sound sound, Vector2 origin, Vector2 destination){
+		float pan = destination == null ? 0f : Math.max(-1, Math.min(1, (destination.x - origin.x) / 15f));
+		float volume = destination == null ? 1f : (float)Math.min(1, 1.0/Math.log(destination.dst(origin)+1f));
+		sound.play(volume, 1, pan);
 	}
 
 	public void transferParticles(ParticleEffect... particles) {

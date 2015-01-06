@@ -5,6 +5,7 @@ import java.util.Map.Entry;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.math.Vector2;
@@ -68,6 +69,8 @@ public class Rocket extends GunShot {
 		//send off particles to particle manager
 		explosion.setPosition(gunshotBody.getPosition().x, gunshotBody.getPosition().y);
 		explosion.start();
+		Sound sound = worldManager.getSharedAssets().get("data/sounds/smallRocketExplosion.mp3", Sound.class);
+		WorldManager.playSoundTuned(sound, origin.getPosition(), worldManager.getPlayer().getPosition());
 		trail.setDuration(1500);
 		worldManager.transferParticles(trail, explosion);
 

@@ -52,7 +52,7 @@ public class ConsoleWindow extends LedgeWindow {
 	private void redrawHistory(){
 		historyTable.clear();
 		for(ConsoleOutputStruct struct : History.items){
-			historyTable.add(struct.output, "default-font", struct.color);
+			historyTable.add(struct.output, "default", struct.color);
 			historyTable.row();
 		}
 	}

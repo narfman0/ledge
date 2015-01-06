@@ -1,0 +1,24 @@
+package com.blastedstudios.ledge.world.being.component.damagesound;
+
+import net.xeoh.plugins.base.annotations.PluginImplementation;
+
+import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.audio.Sound;
+import com.blastedstudios.ledge.plugin.quest.handler.ISharedAssetConsumer;
+import com.blastedstudios.ledge.world.being.component.AbstractComponent;
+import com.blastedstudios.ledge.world.weapon.DamageStruct;
+
+@PluginImplementation
+public class DamageSoundComponent extends AbstractComponent implements ISharedAssetConsumer{
+	private AssetManager assets;
+	
+	@Override public void receivedDamage(DamageStruct damage){
+		if(damage == null || damage.getOrigin() == null)
+			return;
+		assets.get("data/sounds/thud004.mp3", Sound.class).play();
+	}
+
+	@Override public void setAssets(AssetManager assets) {
+		this.assets = assets;
+	}
+}
