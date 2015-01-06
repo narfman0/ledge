@@ -15,7 +15,7 @@ public class PathChangeManifestation extends AbstractQuestManifestation {
 		this.path = path;
 	}
 	
-	@Override public CompletionEnum execute() {
+	@Override public CompletionEnum execute(float dt) {
 		for(IPathChangeHandler handler : PluginUtil.getPlugins(IPathChangeHandler.class))
 			if(handler.pathChange(being, path) == CompletionEnum.COMPLETED)
 				return CompletionEnum.COMPLETED;

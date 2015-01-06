@@ -17,7 +17,7 @@ public class FactionChangeManifestation extends AbstractQuestManifestation {
 		this.faction = faction;
 	}
 	
-	@Override public CompletionEnum execute() {
+	@Override public CompletionEnum execute(float dt) {
 		return ((QuestManifestationExecutor)executor).factionChange(being, faction);
 	}
 

@@ -21,7 +21,7 @@ public class WeaponAddManifestation extends AbstractQuestManifestation {
 		this.location = location;
 	}
 	
-	@Override public CompletionEnum execute() {
+	@Override public CompletionEnum execute(float dt) {
 		switch(weaponAddType){
 		case LOCATION:
 			return ((QuestManifestationExecutor)executor).weaponSpawn(weapon, location);

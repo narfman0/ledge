@@ -14,7 +14,7 @@ public class CameraControlManifestation extends AbstractQuestManifestation {
 		this.playerTrack = playerTrack;
 	}
 	
-	@Override public CompletionEnum execute() {
+	@Override public CompletionEnum execute(float dt) {
 		for(ICameraControlHandler handler : PluginUtil.getPlugins(ICameraControlHandler.class))
 			if(handler.playerTrack(playerTrack) == CompletionEnum.COMPLETED)
 				return CompletionEnum.COMPLETED;

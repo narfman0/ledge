@@ -19,11 +19,11 @@ public class CameraTweenManifestation extends AbstractQuestManifestation{
 		this.tweenType = tweenType;
 	}
 	
-	@Override public CompletionEnum execute() {
+	@Override public CompletionEnum execute(float dt) {
 		return CompletionEnum.EXECUTING;
 	}
 	
-	@Override public CompletionEnum tick(){
+	@Override public CompletionEnum tick(float dt){
 		return ((QuestManifestationExecutor)executor).cameraTween(CameraAccessor.POSITION_XY, duration, target, tweenType.equation);
 	}
 

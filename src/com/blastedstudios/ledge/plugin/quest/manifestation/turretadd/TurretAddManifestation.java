@@ -24,7 +24,7 @@ public class TurretAddManifestation extends AbstractQuestManifestation {
 		this.directionHigh = directionHigh;
 	}
 	
-	@Override public CompletionEnum execute() {
+	@Override public CompletionEnum execute(float dt) {
 		return ((QuestManifestationExecutor)executor).turretAdd(location, mountLocation, weapon, baseResource, direction, directionLow, directionHigh);
 	}
 

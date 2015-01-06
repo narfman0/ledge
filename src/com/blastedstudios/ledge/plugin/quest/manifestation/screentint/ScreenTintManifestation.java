@@ -20,7 +20,7 @@ public class ScreenTintManifestation extends AbstractQuestManifestation{
 		this.duration = duration;
 	}
 	
-	@Override public CompletionEnum execute() {
+	@Override public CompletionEnum execute(float dt) {
 		for(IScreenTintHandler handler : PluginUtil.getPlugins(IScreenTintHandler.class))
 			handler.screenTint(tableColor, pixmapColor, duration, tintType);
 		return CompletionEnum.COMPLETED;

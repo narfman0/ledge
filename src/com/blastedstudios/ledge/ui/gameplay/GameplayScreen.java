@@ -109,7 +109,7 @@ public class GameplayScreen extends LedgeScreen {
 		player.getQuestManager().initialize(new QuestTriggerInformationProvider(this, worldManager), 
 				new QuestManifestationExecutor(this, worldManager));
 		player.getQuestManager().setCurrentLevel(level);
-		player.getQuestManager().tick();//to get "start" quest to set respawn location
+		player.getQuestManager().tick(0f);//to get "start" quest to set respawn location
 		if(worldManager.getRespawnLocation() == null && Properties.getBool("player.spawn.onnewlevel.loadsavedspawn", false)){
 			List<QuestStatus> statuses = player.getQuestManager().getQuestStatuses(level);
 			worldManager.setRespawnLocation(getSavedSpawn(statuses));
@@ -296,7 +296,7 @@ public class GameplayScreen extends LedgeScreen {
 		stage.draw();
 		if(worldManager.getPlayer().isSpawned())
 			hud.render();
-		worldManager.getPlayer().getQuestManager().tick();
+		worldManager.getPlayer().getQuestManager().tick(delta);
 		
 		int x = Gdx.input.getX(), y = Gdx.input.getY();
 		if(!worldManager.isPause() && worldManager.isInputEnable() && Gdx.input.isTouched() && 

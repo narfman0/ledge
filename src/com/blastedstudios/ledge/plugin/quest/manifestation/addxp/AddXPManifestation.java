@@ -16,7 +16,7 @@ public class AddXPManifestation extends AbstractQuestManifestation {
 		this.xp = xp;
 	}
 	
-	@Override public CompletionEnum execute() {
+	@Override public CompletionEnum execute(float dt) {
 		return ((QuestManifestationExecutor)executor).addXP(being, xp);
 	}
 

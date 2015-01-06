@@ -16,7 +16,7 @@ public class BeingInvulnManifestation extends AbstractQuestManifestation{
 		this.invuln = invuln;
 	}
 	
-	@Override public CompletionEnum execute() {
+	@Override public CompletionEnum execute(float dt) {
 		return ((QuestManifestationExecutor)executor).beingInvuln(being, invuln);
 	}
 

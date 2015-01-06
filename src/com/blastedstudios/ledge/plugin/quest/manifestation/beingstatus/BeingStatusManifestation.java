@@ -24,7 +24,7 @@ public class BeingStatusManifestation extends AbstractQuestManifestation{
 		this.doAim = doaim;
 	}
 	
-	@Override public CompletionEnum execute() {
+	@Override public CompletionEnum execute(float dt) {
 		for(IBeingStatusHandler handler : PluginUtil.getPlugins(IBeingStatusHandler.class))
 			handler.statusBeing(being, dmg, kill, textureAtlas, remove, doAim, aim, getAttackTarget());
 		return CompletionEnum.COMPLETED;

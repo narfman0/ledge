@@ -18,7 +18,7 @@ public class BeingRotationManifestation extends AbstractQuestManifestation {
 		this.being = being;
 	}
 	
-	@Override public CompletionEnum execute() {
+	@Override public CompletionEnum execute(float dt) {
 		return ((QuestManifestationExecutor)executor).beingRotation(being, fixedRotation, torque);
 	}
 

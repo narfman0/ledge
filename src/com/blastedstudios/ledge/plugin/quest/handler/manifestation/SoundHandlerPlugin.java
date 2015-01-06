@@ -21,8 +21,8 @@ public class SoundHandlerPlugin implements ISoundHandler, IWorldManagerInitializ
 		this.world = world;
 	}
 
-	@Override public CompletionEnum sound(SoundManifestationEnum manifestationType, String name,
-			String filename, float volume, float pan, float pitch) {
+	@Override public CompletionEnum sound(float dt, SoundManifestationEnum manifestationType,
+			String name, String filename, float volume, float pan, float pitch) {
 		String path = "data/sounds/" + filename + ".mp3";
 		if(!world.getSharedAssets().isLoaded(path)){
 			Log.error("SoundHandlerPlugin.sound", "Sound not available: " + path);
@@ -52,8 +52,12 @@ public class SoundHandlerPlugin implements ISoundHandler, IWorldManagerInitializ
 			sound.setVolume(soundIdMap.get(name), volume);
 			break;
 		default:
-			break;
+			return CompletionEnum.NOT_STARTED;
 		}
 		return CompletionEnum.COMPLETED;
+	}
+
+	@Override public CompletionEnum tick(float dt) {
+		return CompletionEnum.NOT_STARTED;
 	}
 }

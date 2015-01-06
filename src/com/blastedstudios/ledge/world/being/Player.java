@@ -30,7 +30,7 @@ public class Player extends Being {
 			AssetManager sharedAssets, GDXRenderer gdxRenderer, IDeathCallback deathCallback,
 			boolean paused, boolean inputEnabled){
 		super.render(dt, world, batch, sharedAssets, gdxRenderer, deathCallback, paused, inputEnabled);
-		questManager.tick();
+		questManager.tick(dt);
 	}
 
 	public GDXQuestManager getQuestManager(){

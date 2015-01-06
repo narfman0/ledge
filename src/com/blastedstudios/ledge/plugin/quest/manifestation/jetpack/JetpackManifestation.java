@@ -24,7 +24,7 @@ public class JetpackManifestation extends AbstractQuestManifestation{
 		this.impulse = impulse;
 	}
 	
-	@Override public CompletionEnum execute() {
+	@Override public CompletionEnum execute(float dt) {
 		return ((QuestManifestationExecutor)executor).jetpackManifestation(beingName,
 				changeMax, max, changeRecharge, recharge, changeImpulse, impulse);
 	}
