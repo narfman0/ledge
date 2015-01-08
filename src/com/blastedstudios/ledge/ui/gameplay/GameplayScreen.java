@@ -32,6 +32,7 @@ import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.GDXGameFade;
 import com.blastedstudios.gdxworld.util.GDXGameFade.IPopListener;
 import com.blastedstudios.gdxworld.util.Log;
+import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.util.TiledMeshRenderer;
 import com.blastedstudios.gdxworld.world.GDXLevel;
@@ -40,6 +41,7 @@ import com.blastedstudios.gdxworld.world.GDXWorld;
 import com.blastedstudios.gdxworld.world.quest.GDXQuest;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
+import com.blastedstudios.ledge.plugin.level.ILevelCompletedListener;
 import com.blastedstudios.ledge.ui.LedgeScreen;
 import com.blastedstudios.ledge.ui.drawable.ParticleManagerDrawable;
 import com.blastedstudios.ledge.ui.drawable.WorldManagerDrawable;
@@ -50,7 +52,6 @@ import com.blastedstudios.ledge.ui.gameplay.particles.ParticleManager;
 import com.blastedstudios.ledge.ui.loading.GameplayLoadingWindowExecutor;
 import com.blastedstudios.ledge.ui.loading.LoadingWindow;
 import com.blastedstudios.ledge.util.ActionEnum;
-import com.blastedstudios.ledge.util.SaveHelper;
 import com.blastedstudios.ledge.util.ui.LedgeWindow;
 import com.blastedstudios.ledge.world.DialogBubble;
 import com.blastedstudios.ledge.world.DialogManager;
@@ -309,12 +310,8 @@ public class GameplayScreen extends LedgeScreen {
 	}
 	
 	public void levelComplete(final boolean success, final String nextLevelName){
-		SaveHelper.save(worldManager.getPlayer());
-		//cant always setLevelCompleted(...,success), because if player 
-		//previously beats a level then replays and loses, we don't want to 
-		//make it so he can't play any later levels again
-		if(success) 
-			worldManager.getPlayer().setLevelCompleted(level.getName(), true);
+		for(ILevelCompletedListener listener : PluginUtil.getPlugins(ILevelCompletedListener.class))
+			listener.levelComplete(success, nextLevelName, worldManager, level);
 		GDXGameFade.fadeOutPopScreen(game, new IPopListener() {
 			@Override public void screenPopped() {
 				dispose();
@@ -450,15 +447,6 @@ public class GameplayScreen extends LedgeScreen {
 	
 	public Camera getCamera(){
 		return camera;
-	}
-	
-	public void handleBack(){
-		GDXGameFade.fadeOutPopScreen(game, new IPopListener() {
-			@Override public void screenPopped() {
-				SaveHelper.save(worldManager.getPlayer());
-				dispose();
-			}
-		});
 	}
 	
 	@Override public void dispose(){

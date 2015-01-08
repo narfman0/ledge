@@ -10,6 +10,7 @@ import com.badlogic.gdx.audio.Sound;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.sound.ISoundHandler;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.sound.SoundManifestationEnum;
 import com.blastedstudios.gdxworld.util.Log;
+import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.ledge.plugin.quest.handler.ISharedAssetConsumer;
@@ -17,12 +18,14 @@ import com.blastedstudios.ledge.plugin.quest.handler.ISharedAssetConsumer;
 @PluginImplementation
 public class SoundThematicHandlerPlugin implements ISoundHandler, ISharedAssetConsumer{
 	private final LinkedList<MusicStruct> previous = new LinkedList<>();
-	private MusicStruct current;
+	private MusicStruct current = null;
 	private AssetManager assets;
 	
 	@Override public CompletionEnum sound(float dt, SoundManifestationEnum manifestationType,
 			String name, String filename, float volume, float pan, float pitch) {
 		String path = "data/sounds/" + filename + ".mp3";
+		if(name.equals("main"))
+			path = getMainMusic();
 		if(!assets.isLoaded(path)){
 			Log.error("SoundThematicHandlerPlugin.sound", "Sound not available: " + path);
 			return CompletionEnum.COMPLETED;
@@ -62,12 +65,32 @@ public class SoundThematicHandlerPlugin implements ISoundHandler, ISharedAssetCo
 		}
 		return CompletionEnum.EXECUTING;
 	}
+	
+	public void applyMusic(String path){
+		float volume = 1f;
+		if(current != null){
+			previous.add(new MusicStruct(current.sound, current.id));
+			volume = 0f;
+		}
+		Sound sound = assets.get(path, Sound.class);
+		current = new MusicStruct(sound, sound.loop(volume));
+	}
+	
+	public static SoundThematicHandlerPlugin get(){
+		//return instance of self, lame plugin way
+		for(ISoundHandler handler : PluginUtil.getPlugins(ISoundHandler.class))
+			if(handler instanceof SoundThematicHandlerPlugin)
+				return (SoundThematicHandlerPlugin)handler;
+		return null;
+	}
 
 	@Override public void setAssets(AssetManager assets) {
 		this.assets = assets;
-		String defaultMusic = Properties.get("sound.music", "EpicMovieGameTrailer");
-		Sound sound = assets.get("data/sounds/music/" + defaultMusic + ".mp3", Sound.class);
-		current = new MusicStruct(sound, sound.loop());
+		applyMusic(getMainMusic());
+	}
+	
+	public static String getMainMusic(){
+		return Properties.get("sound.music.main", "data/sounds/music/EpicMovieGameTrailer.mp3");
 	}
 	
 	private class MusicStruct{

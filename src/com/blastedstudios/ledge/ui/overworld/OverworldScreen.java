@@ -19,6 +19,7 @@ import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXWorld;
+import com.blastedstudios.ledge.plugin.quest.handler.manifestation.SoundThematicHandlerPlugin;
 import com.blastedstudios.ledge.ui.LedgeScreen;
 import com.blastedstudios.ledge.util.ActionEnum;
 import com.blastedstudios.ledge.util.SpriteTweenAccessor;
@@ -91,6 +92,7 @@ public class OverworldScreen extends LedgeScreen{
 
 	@Override public void render(float delta){
 		super.render(delta);
+		SoundThematicHandlerPlugin.get().tick(delta);
 		sharedAssets.update();
 		tweenManager.update(delta);
 		spriteBatch.setProjectionMatrix(camera.combined);

@@ -10,6 +10,7 @@ import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.util.panner.PannerManager;
 import com.blastedstudios.gdxworld.world.GDXWorld;
 import com.blastedstudios.ledge.plugin.quest.handler.ISharedAssetConsumer;
+import com.blastedstudios.ledge.plugin.quest.handler.manifestation.SoundThematicHandlerPlugin;
 import com.blastedstudios.ledge.ui.LedgeScreen;
 import com.blastedstudios.ledge.ui.main.MainWindow.IMainWindowListener;
 import com.blastedstudios.ledge.ui.main.NewCharacterWindow.INewCharacterWindowListener;
@@ -43,6 +44,7 @@ public class MainScreen extends LedgeScreen implements IMainWindowListener, INew
 
 	@Override public void render(float delta){
 		super.render(delta);
+		SoundThematicHandlerPlugin.get().tick(delta);
 		sharedAssets.update();
 		update(delta);
 		stage.draw();

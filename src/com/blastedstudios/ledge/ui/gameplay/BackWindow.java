@@ -14,7 +14,7 @@ public class BackWindow extends LedgeWindow {
 		super("", skin);
 		Button button = new LedgeTextButton(Properties.get("ui.back.button.text", "Exit to Map"), skin, new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
-				screen.handleBack();
+				screen.levelComplete(false, null);
 			}
 		});
 		add(button);
