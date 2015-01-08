@@ -24,7 +24,7 @@ public class SoundThematicHandlerPlugin implements ISoundHandler, ISharedAssetCo
 	@Override public CompletionEnum sound(float dt, SoundManifestationEnum manifestationType,
 			String name, String filename, float volume, float pan, float pitch) {
 		String path = "data/sounds/" + filename + ".mp3";
-		if(name.equals("main"))
+		if(filename.equals("main"))
 			path = getMainMusic();
 		if(!assets.isLoaded(path)){
 			Log.error("SoundThematicHandlerPlugin.sound", "Sound not available: " + path);
@@ -35,6 +35,7 @@ public class SoundThematicHandlerPlugin implements ISoundHandler, ISharedAssetCo
 			previous.add(new MusicStruct(current.sound, current.id));
 			Sound sound = assets.get(path, Sound.class);
 			current = new MusicStruct(sound, sound.loop(0f));
+			Log.log("SoundThematicHandlerPlugin.sound", "Thematic sound executing: " + path);
 			return CompletionEnum.EXECUTING;
 		default:
 			return CompletionEnum.NOT_STARTED;

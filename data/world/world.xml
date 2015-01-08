@@ -23519,6 +23519,7 @@
           <prerequisites>end4</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.objectdistance.ObjectDistanceTrigger">
+            <origin>player</origin>
             <target>gondolaBase</target>
             <distance>1.0</distance>
             <actionRequired>true</actionRequired>
@@ -23676,6 +23677,34 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
             <inputEnable>true</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>startMusic</name>
+          <prerequisites>start-0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/SolemnSpirits</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>endMusic</name>
+          <prerequisites>end5</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>main</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
@@ -43574,6 +43603,8 @@
           </trigger>
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
             <being>player</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
             <dmg>0.0</dmg>
             <aim>0.0</aim>
             <kill>true</kill>
@@ -44551,6 +44582,34 @@
           <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
             <success>true</success>
             <nextLevel>Interlude3</nextLevel>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>startMusic</name>
+          <prerequisites>start</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/TranquilEndings</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseMusic</name>
+          <prerequisites>base42</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>main</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
@@ -60777,6 +60836,8 @@
           </trigger>
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
             <being>player</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
             <dmg>0.0</dmg>
             <aim>0.0</aim>
             <kill>true</kill>
@@ -60912,6 +60973,34 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.inputenable.InputEnableManifestation">
             <inputEnable>true</inputEnable>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>startMusic</name>
+          <prerequisites>start</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/SolemnSpirits</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>endMusic</name>
+          <prerequisites>end</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>main</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
@@ -63997,9 +64086,13 @@
               <y>71.091644</y>
             </upperRight>
           </trigger>
-          <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
-            <success>true</success>
-            <nextLevel></nextLevel>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>main</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -64420,6 +64513,58 @@
                 </entry>
               </properties>
             </npc>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>startMusic</name>
+          <prerequisites>start</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/TranquilEndings</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>end-0</name>
+          <prerequisites>end</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
+            <success>true</success>
+            <nextLevel></nextLevel>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>gmMusic</name>
+          <prerequisites>gm0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/TheImpassable</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>gmMusic</name>
+          <prerequisites>gm10</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>main</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
