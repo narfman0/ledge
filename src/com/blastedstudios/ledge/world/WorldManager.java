@@ -358,7 +358,7 @@ public class WorldManager implements IDeathCallback{
 	public static void playSoundTuned(Sound sound, Vector2 origin, Vector2 destination){
 		float pan = destination == null ? 0f : Math.max(-1, Math.min(1, (destination.x - origin.x) / 15f));
 		float volume = destination == null ? 1f : (float)Math.min(1, 1.0/Math.log(destination.dst(origin)+1f));
-		sound.play(volume, 1, pan);
+		sound.play(volume * Properties.getFloat("sound.volume", 1f), 1, pan);
 	}
 
 	public void transferParticles(ParticleEffect... particles) {

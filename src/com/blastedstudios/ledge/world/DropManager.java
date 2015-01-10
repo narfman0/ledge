@@ -69,7 +69,7 @@ public class DropManager {
 					Properties.getFloat("gameplay.camera.zoom"), sharedAssets);
 			if(distance < Properties.getFloat("drop.pickup.distance", .5f)){
 				player.addCash(entry.getValue());
-				sharedAssets.get("data/sounds/chaching.mp3", Sound.class).play();
+				sharedAssets.get("data/sounds/chaching.mp3", Sound.class).play(Properties.getFloat("sound.volume", 1f));
 				world.destroyBody(dropBody);
 				cashDropRemoveList.add(dropBody);
 			}else if(!paused && distance < impulseDistance){
@@ -90,7 +90,7 @@ public class DropManager {
 			if(distance < Properties.getFloat("drop.pickup.distance", .5f)){
 				player.addAmmo(entry.getValue().type, entry.getValue().amount);
 				world.destroyBody(dropBody);
-				sharedAssets.get("data/sounds/guns/ammoPickup.mp3", Sound.class).play();
+				sharedAssets.get("data/sounds/guns/ammoPickup.mp3", Sound.class).play(Properties.getFloat("sound.volume", 1f));
 				ammoDropRemoveList.add(dropBody);
 			}else if(!paused && distance < impulseDistance){
 				Vector2 impulse = player.getPosition().cpy().sub(dropBody.getWorldCenter());

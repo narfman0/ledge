@@ -4,6 +4,7 @@ import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Sound;
+import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.plugin.quest.handler.ISharedAssetConsumer;
 import com.blastedstudios.ledge.world.being.component.AbstractComponent;
 
@@ -12,7 +13,7 @@ public class LevelUpSoundComponent extends AbstractComponent implements ISharedA
 	private AssetManager assets;
 	
 	@Override public void levelUp(){
-		assets.get("data/sounds/levelup.mp3", Sound.class).play();
+		assets.get("data/sounds/levelup.mp3", Sound.class).play(Properties.getFloat("sound.volume", 1f));
 	}
 
 	@Override public void setAssets(AssetManager assets) {

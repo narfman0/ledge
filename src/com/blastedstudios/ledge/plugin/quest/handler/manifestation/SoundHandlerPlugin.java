@@ -8,6 +8,7 @@ import com.badlogic.gdx.audio.Sound;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.sound.ISoundHandler;
 import com.blastedstudios.gdxworld.plugin.quest.manifestation.sound.SoundManifestationEnum;
 import com.blastedstudios.gdxworld.util.Log;
+import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.world.quest.QuestStatus.CompletionEnum;
 import com.blastedstudios.ledge.plugin.quest.handler.IWorldManagerInitializer;
 import com.blastedstudios.ledge.world.WorldManager;
@@ -31,10 +32,10 @@ public class SoundHandlerPlugin implements ISoundHandler, IWorldManagerInitializ
 		Sound sound = world.getSharedAssets().get(path, Sound.class);
 		switch(manifestationType){
 		case PLAY:
-			soundIdMap.put(name, sound.play(volume, pan, pitch));
+			soundIdMap.put(name, sound.play(volume * Properties.getFloat("sound.volume", 1f), pan, pitch));
 			break;
 		case LOOP:
-			soundIdMap.put(name, sound.loop(volume, pan, pitch));
+			soundIdMap.put(name, sound.loop(volume * Properties.getFloat("sound.volume", 1f), pan, pitch));
 			break;
 		case PAUSE:
 			sound.pause(soundIdMap.get(name));
@@ -49,7 +50,7 @@ public class SoundHandlerPlugin implements ISoundHandler, IWorldManagerInitializ
 			sound.stop();
 			break;
 		case VOLUME:
-			sound.setVolume(soundIdMap.get(name), volume);
+			sound.setVolume(soundIdMap.get(name), volume * Properties.getFloat("sound.volume", 1f));
 			break;
 		default:
 			return CompletionEnum.NOT_STARTED;

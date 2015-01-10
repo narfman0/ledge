@@ -46,7 +46,7 @@ public class SoundThematicHandlerPlugin implements ISoundHandler, ISharedAssetCo
 		for(Iterator<MusicStruct> iter = previous.iterator(); iter.hasNext();){
 			MusicStruct struct = iter.next();
 			struct.time -= dt;
-			struct.sound.setVolume(struct.id, struct.time/struct.duration);
+			struct.sound.setVolume(struct.id, (struct.time/struct.duration) * Properties.getFloat("music.volume", 1f));
 			if(struct.time <= 0f){
 				struct.sound.stop(struct.id);
 				iter.remove();
@@ -57,10 +57,11 @@ public class SoundThematicHandlerPlugin implements ISoundHandler, ISharedAssetCo
 		if(previous.isEmpty()){
 			current.time -= dt;
 			if(current.time <= 0f){
-				current.sound.setVolume(current.id, 1f);
+				current.sound.setVolume(current.id, Properties.getFloat("music.volume", 1f));
 				return CompletionEnum.COMPLETED;
 			}else{
-				current.sound.setVolume(current.id, (current.duration - current.time)/current.duration);
+				current.sound.setVolume(current.id, ((current.duration - current.time)/
+						current.duration) * Properties.getFloat("music.volume", 1f));
 				return CompletionEnum.EXECUTING;
 			}
 		}
@@ -68,7 +69,7 @@ public class SoundThematicHandlerPlugin implements ISoundHandler, ISharedAssetCo
 	}
 	
 	public void applyMusic(String path){
-		float volume = 1f;
+		float volume = 1f * Properties.getFloat("music.volume", 1f);
 		if(current != null){
 			previous.add(new MusicStruct(current.sound, current.id));
 			volume = 0f;

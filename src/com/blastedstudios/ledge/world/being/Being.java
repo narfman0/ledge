@@ -513,7 +513,7 @@ public class Being implements Serializable{
 	public void setReloading(boolean reloading) {
 		if(!this.reloading && reloading && getEquippedWeapon() != null){
 			if(sharedAssets != null)
-				sharedAssets.get("data/sounds/guns/reload.mp3", Sound.class).play();
+				sharedAssets.get("data/sounds/guns/reload.mp3", Sound.class).play(Properties.getFloat("sound.volume", 1f));
 			timeUntilReload = (float)getEquippedWeapon().getReloadSpeed()/1000f;
 			Log.log("Being.setReloading", name + " began reloading");
 			for(IComponent component : getListeners())

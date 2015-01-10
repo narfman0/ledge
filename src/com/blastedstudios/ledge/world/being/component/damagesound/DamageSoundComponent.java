@@ -4,6 +4,7 @@ import net.xeoh.plugins.base.annotations.PluginImplementation;
 
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Sound;
+import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.plugin.quest.handler.ISharedAssetConsumer;
 import com.blastedstudios.ledge.world.being.component.AbstractComponent;
 import com.blastedstudios.ledge.world.weapon.DamageStruct;
@@ -15,7 +16,7 @@ public class DamageSoundComponent extends AbstractComponent implements ISharedAs
 	@Override public void receivedDamage(DamageStruct damage){
 		if(damage == null || damage.getOrigin() == null)
 			return;
-		assets.get("data/sounds/thud004.mp3", Sound.class).play();
+		assets.get("data/sounds/thud004.mp3", Sound.class).play(Properties.getFloat("sound.volume", 1f));
 	}
 
 	@Override public void setAssets(AssetManager assets) {
