@@ -17,7 +17,7 @@
 	<resource>rpg7</resource>
 	<cost>2600</cost>
 	<ammoType>RPG</ammoType>
-	<fireSound>rpg</fireSound>
+	<fireSound>missileLaunch</fireSound>
 	<rolls>1</rolls>
 	<minLevel>8</minLevel>
 </com.blastedstudios.ledge.world.weapon.RocketLauncher>

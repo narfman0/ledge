@@ -70,7 +70,7 @@ public class Rocket extends GunShot {
 		explosion.setPosition(gunshotBody.getPosition().x, gunshotBody.getPosition().y);
 		explosion.start();
 		Sound sound = worldManager.getSharedAssets().get("data/sounds/smallRocketExplosion.mp3", Sound.class);
-		WorldManager.playSoundTuned(sound, origin.getPosition(), worldManager.getPlayer().getPosition());
+		WorldManager.playSoundTuned(sound, gunshotBody.getPosition(), worldManager.getPlayer().getPosition());
 		trail.setDuration(1500);
 		worldManager.transferParticles(trail, explosion);
 
