@@ -14,7 +14,7 @@
 	<resource>benellim4</resource>
 	<cost>1700</cost>
 	<ammoType>_00buck</ammoType>
-	<fireSound>ShotgunBlast2</fireSound>
+	<fireSound>gun4</fireSound>
 	<rolls>4</rolls>
 	<minLevel>4</minLevel>
 </com.blastedstudios.ledge.world.weapon.Gun>
