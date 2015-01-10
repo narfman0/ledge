@@ -16,6 +16,7 @@ import com.blastedstudios.ledge.ui.main.MainWindow.IMainWindowListener;
 import com.blastedstudios.ledge.ui.main.NewCharacterWindow.INewCharacterWindowListener;
 import com.blastedstudios.ledge.ui.main.OptionsWindow.IOptionsWindowListener;
 import com.blastedstudios.ledge.util.ActionEnum;
+import com.blastedstudios.ledge.util.SaveHelper;
 
 public class MainScreen extends LedgeScreen implements IMainWindowListener, INewCharacterWindowListener, IOptionsWindowListener {
 	public static final String SKIN_PATH = Properties.get("screen.skin","data/ui/uiskinGame.json");
@@ -32,6 +33,7 @@ public class MainScreen extends LedgeScreen implements IMainWindowListener, INew
 		super(game);
 		this.sharedAssets = sharedAssets;
 		this.gdxWorld = gdxWorld;
+		SaveHelper.loadProperties();
 		gdxRenderer = new GDXRenderer(true, true);
 		stage.addActor(mainWindow = new MainWindow(skin, game, this, gdxWorld, WORLD_FILE, gdxRenderer, sharedAssets));
 		panner = new PannerManager(gdxWorld, gdxRenderer);
@@ -39,7 +41,7 @@ public class MainScreen extends LedgeScreen implements IMainWindowListener, INew
 			handler.setAssets(sharedAssets);
 		register(ActionEnum.BACK, new AbstractInputHandler() {
 			public void down(){
-				Gdx.app.exit();
+				exit();
 			}
 		});
 	}
@@ -74,6 +76,11 @@ public class MainScreen extends LedgeScreen implements IMainWindowListener, INew
 		optionsWindow = null;
 		stage.addActor(mainWindow = new MainWindow(skin, game, this, gdxWorld, WORLD_FILE, gdxRenderer, sharedAssets));
 	}
+	
+	private void exit(){
+		SaveHelper.saveProperties();
+		Gdx.app.exit();
+	}
 
 	public void update(float delta) {
 		panner.updatePanners(delta);
@@ -81,5 +88,9 @@ public class MainScreen extends LedgeScreen implements IMainWindowListener, INew
 
 	public boolean ready() {
 		return panner.ready();
+	}
+
+	@Override public void exitButtonClicked() {
+		exit();
 	}
 }

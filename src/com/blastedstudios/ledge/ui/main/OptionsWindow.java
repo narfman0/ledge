@@ -8,6 +8,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Slider;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.Properties;
+import com.blastedstudios.ledge.util.SaveHelper;
 import com.blastedstudios.ledge.util.ui.LedgeTextButton;
 import com.blastedstudios.ledge.util.ui.LedgeWindow;
 import com.blastedstudios.ledge.util.ui.UIHelper;
@@ -26,6 +27,7 @@ class OptionsWindow extends LedgeWindow{
 			@Override public void clicked(InputEvent event, float x, float y) {
 				Properties.set("sound.volume", soundVolumeSlider.getValue()+"");
 				Properties.set("music.volume", musicVolumeSlider.getValue()+"");
+				SaveHelper.saveProperties();
 				listener.optionsClosed();
 			}
 		});

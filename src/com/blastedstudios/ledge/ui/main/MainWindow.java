@@ -35,7 +35,7 @@ class MainWindow extends LedgeWindow{
 		});
 		final Button exitButton = new LedgeTextButton("Exit", skin, new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
-				Gdx.app.exit();
+				listener.exitButtonClicked();
 			}
 		});
 		add(new Label("Ledge", skin));
@@ -65,5 +65,6 @@ class MainWindow extends LedgeWindow{
 	interface IMainWindowListener{
 		void newCharacterButtonClicked();
 		void optionsButtonClicked();
+		void exitButtonClicked();
 	}
 }

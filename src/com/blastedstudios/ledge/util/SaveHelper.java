@@ -11,13 +11,12 @@ import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.being.Player;
 
 public class SaveHelper {
-	private static String SAVE_DIRECTORY = "/.ledge/save";
+	{ init(); }
 
 	public static List<Player> load() {
-		init();
 		Log.log("SaveHelper.load","Loading characters...");
 		List<Player> characters = new LinkedList<Player>();
-		for(FileHandle file : Gdx.files.external(SAVE_DIRECTORY).list()){
+		for(FileHandle file : Gdx.files.external(".ledge/save").list()){
 			try {
 				Player being = (Player) FileUtil.getSerializer(file).load(file);
 				characters.add(being);
@@ -32,9 +31,7 @@ public class SaveHelper {
 	}
 
 	public static void save(Player character){
-		init();
-		FileHandle file = Gdx.files.external(SAVE_DIRECTORY + "/" + character.getName() + 
-				"." + Properties.get("save.extenstion", "xml"));
+		FileHandle file = Gdx.files.external(".ledge/save").child(character.getName() + "." + Properties.get("save.extenstion", "xml"));
 		try{
 			FileUtil.getSerializer(file).save(file, character);
 			Log.log("SaveHelper.save","Saved " + character.getName() + " successfully");
@@ -44,7 +41,19 @@ public class SaveHelper {
 		}
 	}
 	
+	public static void saveProperties(){
+		Properties.store(Gdx.files.external(".ledge/ledge.properties").write(false), "");
+	}
+	
+	public static void loadProperties(){
+		try{
+			Properties.load(Gdx.files.external(".ledge/ledge.properties").read());
+		}catch(Exception e){
+			Log.debug("SaveHelper.loadProperties", "Error loading properties: " + e.getMessage());
+		}
+	}
+	
 	private static void init(){
-		Gdx.files.external(SAVE_DIRECTORY).mkdirs();
+		Gdx.files.external(".ledge/save").mkdirs();
 	}
 }
