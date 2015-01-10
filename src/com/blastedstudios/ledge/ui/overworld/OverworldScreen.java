@@ -127,6 +127,7 @@ public class OverworldScreen extends LedgeScreen{
 				Tween.to(levelCurrentSprite, SpriteTweenAccessor.POSITION_XY, duration).
 					target(level.getCoordinates().x*OFFSET_SCALAR, level.getCoordinates().y*OFFSET_SCALAR).
 					ease(Cubic.INOUT).start(tweenManager);
+				Gdx.audio.newSound(Gdx.files.internal("data/sounds/ui/slide.mp3")).play();
 			}
 		}
 		return false;

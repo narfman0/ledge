@@ -1,8 +1,11 @@
 package com.blastedstudios.ledge.util.ui;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.EventListener;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 public class LedgeTextButton extends TextButton {
 	public LedgeTextButton(String name, Skin skin, EventListener... listeners){
@@ -10,6 +13,11 @@ public class LedgeTextButton extends TextButton {
 		try{
 			setColor(UIHelper.getColor(skin, "textbutton-background", "button-background", "background", "secondary"));
 		}catch(Exception e){}
+		addListener(new ClickListener() {
+			@Override public void clicked(InputEvent event, float x, float y) {
+				Gdx.audio.newSound(Gdx.files.internal("data/sounds/ui/button4.mp3")).play();
+			}
+		});
 		for(EventListener listener : listeners)
 			addListener(listener);
 	}
