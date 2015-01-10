@@ -4,7 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
-import com.badlogic.gdx.scenes.scene2d.ui.TextField;
+import com.badlogic.gdx.scenes.scene2d.ui.Slider;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.blastedstudios.gdxworld.util.GDXGame;
 import com.blastedstudios.gdxworld.util.Properties;
@@ -16,28 +16,16 @@ class OptionsWindow extends LedgeWindow{
 	public OptionsWindow(final Skin skin, final GDXGame game, 
 			final IOptionsWindowListener listener) {
 		super("", skin);
-		final TextField soundVolumeField = new TextField(Properties.get("sound.volume", "1"), skin);
-		try{
-			soundVolumeField.setColor(UIHelper.getColor(skin, "sound-volume", "volume", "textfield", "secondary"));
-		}catch(Exception e){}
-		soundVolumeField.setMessageText("<volume 0-1>");
-		soundVolumeField.setMaxLength(6);
-		final TextField musicVolumeField = new TextField(Properties.get("music.volume", "1"), skin);
-		try{
-			musicVolumeField.setColor(UIHelper.getColor(skin, "music-volume", "volume", "textfield", "secondary"));
-		}catch(Exception e){}
-		musicVolumeField.setMessageText("<volume 0-1>");
-		musicVolumeField.setMaxLength(6);
+		final Slider soundVolumeSlider = new Slider(0f, 1f, .05f, false, skin);
+		soundVolumeSlider.setValue(Properties.getFloat("sound.volume", 1f));
+		soundVolumeSlider.setColor(UIHelper.getColor(skin, "sound-volume", "volume", "secondary"));
+		final Slider musicVolumeSlider = new Slider(0f, 1f, .05f, false, skin);
+		musicVolumeSlider.setValue(Properties.getFloat("music.volume", 1f));
+		musicVolumeSlider.setColor(UIHelper.getColor(skin, "music-volume", "volume", "secondary"));
 		final Button acceptButton = new LedgeTextButton("Accept", skin, new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
-				try{
-					float sound = Float.parseFloat(soundVolumeField.getText());
-					Properties.set("sound.volume", sound+"");
-				}catch(Exception e){}
-				try{
-					float music = Float.parseFloat(musicVolumeField.getText());
-					Properties.set("music.volume", music+"");
-				}catch(Exception e){}
+				Properties.set("sound.volume", soundVolumeSlider.getValue()+"");
+				Properties.set("music.volume", musicVolumeSlider.getValue()+"");
 				listener.optionsClosed();
 			}
 		});
@@ -47,10 +35,10 @@ class OptionsWindow extends LedgeWindow{
 			}
 		});
 		add("Sound volume: ");
-		add(soundVolumeField);
+		add(soundVolumeSlider);
 		row();
 		add("Music volume: ");
-		add(musicVolumeField);
+		add(musicVolumeSlider);
 		row();
 		add(acceptButton);
 		add(cancelButton);
