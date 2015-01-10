@@ -14,9 +14,10 @@ import com.blastedstudios.ledge.plugin.quest.handler.manifestation.SoundThematic
 import com.blastedstudios.ledge.ui.LedgeScreen;
 import com.blastedstudios.ledge.ui.main.MainWindow.IMainWindowListener;
 import com.blastedstudios.ledge.ui.main.NewCharacterWindow.INewCharacterWindowListener;
+import com.blastedstudios.ledge.ui.main.OptionsWindow.IOptionsWindowListener;
 import com.blastedstudios.ledge.util.ActionEnum;
 
-public class MainScreen extends LedgeScreen implements IMainWindowListener, INewCharacterWindowListener {
+public class MainScreen extends LedgeScreen implements IMainWindowListener, INewCharacterWindowListener, IOptionsWindowListener {
 	public static final String SKIN_PATH = Properties.get("screen.skin","data/ui/uiskinGame.json");
 	public static final FileHandle WORLD_FILE = Gdx.files.internal("data/world/" + Properties.get("world.path", "world.xml"));
 	private final GDXWorld gdxWorld;
@@ -24,6 +25,7 @@ public class MainScreen extends LedgeScreen implements IMainWindowListener, INew
 	private final AssetManager sharedAssets;
 	private final PannerManager panner;
 	private NewCharacterWindow newCharacterWindow;
+	private OptionsWindow optionsWindow;
 	private MainWindow mainWindow;
 
 	public MainScreen(final GDXGame game, AssetManager sharedAssets, GDXWorld gdxWorld){
@@ -58,6 +60,18 @@ public class MainScreen extends LedgeScreen implements IMainWindowListener, INew
 
 	@Override public void backButtonClicked() {
 		newCharacterWindow.remove();
+		stage.addActor(mainWindow = new MainWindow(skin, game, this, gdxWorld, WORLD_FILE, gdxRenderer, sharedAssets));
+	}
+
+	@Override public void optionsButtonClicked() {
+		mainWindow.remove();
+		stage.addActor(optionsWindow = new OptionsWindow(skin, game, this));
+	}
+
+	@Override public void optionsClosed() {
+		if(optionsWindow != null)
+			optionsWindow.remove();
+		optionsWindow = null;
 		stage.addActor(mainWindow = new MainWindow(skin, game, this, gdxWorld, WORLD_FILE, gdxRenderer, sharedAssets));
 	}
 

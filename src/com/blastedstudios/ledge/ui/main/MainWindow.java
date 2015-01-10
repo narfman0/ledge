@@ -28,6 +28,11 @@ class MainWindow extends LedgeWindow{
 				listener.newCharacterButtonClicked();
 			}
 		});
+		final Button optionsButton = new LedgeTextButton("Options", skin, new ClickListener() {
+			@Override public void clicked(InputEvent event, float x, float y) {
+				listener.optionsButtonClicked();
+			}
+		});
 		final Button exitButton = new LedgeTextButton("Exit", skin, new ClickListener() {
 			@Override public void clicked(InputEvent event, float x, float y) {
 				Gdx.app.exit();
@@ -48,6 +53,8 @@ class MainWindow extends LedgeWindow{
 			add(savedCharacterButton).fillX();
 			row();
 		}
+		add(optionsButton).fillX();
+		row();
 		add(exitButton).fillX();
 		pack();
 		setX(Gdx.graphics.getWidth()/2 - getWidth()/2);
@@ -57,5 +64,6 @@ class MainWindow extends LedgeWindow{
 	
 	interface IMainWindowListener{
 		void newCharacterButtonClicked();
+		void optionsButtonClicked();
 	}
 }

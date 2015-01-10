@@ -22,7 +22,7 @@ com.badlogic.gdx.graphics.Color: {
 	overworld-level: red-blood,
 	overworld-level-current: white,
 	hud-font: red-blood,
-	new-name-field: red-blood
+	textfield: red-blood
 },
 com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
 	default: { down: rectangle, up: rectangle },
