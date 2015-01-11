@@ -10126,10 +10126,13 @@
               <y>7.2284813</y>
             </upperRight>
           </trigger>
-          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>Colligan arrives in shock to the sewers. Through here he must reach and activate the mill, which he may scale to get to Ratchet&apos;s relatively hidden.</dialog>
-            <origin></origin>
-            <type></type>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/TranquilEndings</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
@@ -10228,6 +10231,7 @@
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
             <being>cohiggan</being>
             <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
             <dmg>0.0</dmg>
             <aim>0.0</aim>
             <kill>false</kill>
@@ -10691,7 +10695,7 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>&lt;looks in disbelief&gt;: Im sorry, I did... Im sorry Coh... &lt;cry&gt;</dialog>
+            <dialog>&lt;looks in disbelief&gt;: I&apos;m sorry, I did... I&apos;m sorry Coh... &lt;cry&gt;</dialog>
             <origin>Colligan</origin>
             <type></type>
           </manifestation>
@@ -10790,7 +10794,7 @@
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
           <name>town31Behavior2</name>
-          <prerequisites>town31Behavior</prerequisites>
+          <prerequisites>town31Behavior1</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.factionchange.FactionChangeManifestation">
@@ -12175,6 +12179,59 @@
             <manifestationType>THEMATIC</manifestationType>
             <name>Sound-0</name>
             <filename>music/TranquilEndings</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>town26Music</name>
+          <prerequisites>town26</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/EpicTension2</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet62Music</name>
+          <prerequisites>ratchet62</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/EpicTension2</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>undergroundIntro-0</name>
+          <prerequisites>undergroundIntro</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>Colligan arrives in shock to the sewers. Through here he must reach and activate the mill, which he may scale to get to Ratchet&apos;s relatively hidden.</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>town11Music</name>
+          <prerequisites>town11</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/sad</filename>
             <volume>1.0</volume>
             <pan>0.0</pan>
             <pitch>0.0</pitch>
