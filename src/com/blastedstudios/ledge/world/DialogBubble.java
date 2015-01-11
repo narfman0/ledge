@@ -4,6 +4,7 @@ import java.util.LinkedList;
 
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
@@ -17,7 +18,7 @@ public class DialogBubble {
 	private final SpriteBatch spriteBatch = new SpriteBatch();
 
 	public DialogBubble(AssetManager assetManager, Skin skin){
-		dialogBubbleSprite = new Sprite(assetManager.get("data/textures/dialogBubble.png"));
+		dialogBubbleSprite = new Sprite(assetManager.get("data/textures/dialogBubble.png", Texture.class));
 	}
 
 	public void render(AssetManager assetManager, WorldManager world, DialogManager dialog, OrthographicCamera camera){
