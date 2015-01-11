@@ -31,10 +31,12 @@ public class DialogBubble {
 		for(String nameRaw : current.portrait.split(",")){
 			String name = extractName(nameRaw);
 			if(name.equals("player") || name.equals("colligan"))
-				renderLocations.add(world.getPlayer().getPosition());
+				if(world.getPlayer().getPosition() != null) //when player isn't spawned, perhaps colliganSuit?
+					renderLocations.add(world.getPlayer().getPosition());
 			else
 				for(Being npc : world.getAllBeings())
-					if(extractName(npc.getName()).equals(name))
+					if(extractName(npc.getName()).equals(name) ||
+							(npc.getName().equals("colliganSuit") && (name.equals("player") || name.equals("colligan"))))
 						renderLocations.add(npc.getPosition());
 		}
 
