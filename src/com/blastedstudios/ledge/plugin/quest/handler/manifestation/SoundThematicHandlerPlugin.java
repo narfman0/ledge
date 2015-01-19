@@ -34,6 +34,10 @@ public class SoundThematicHandlerPlugin implements ISoundHandler, ISharedAssetCo
 		case THEMATIC:
 			previous.add(new MusicStruct(current.sound, current.id));
 			Sound sound = assets.get(path, Sound.class);
+			if(sound == current.sound){
+				Log.log("SoundThematicHandlerPlugin.sound", "Sound currently playing, skipping");
+				return CompletionEnum.COMPLETED;
+			}
 			current = new MusicStruct(sound, sound.loop(0f));
 			Log.log("SoundThematicHandlerPlugin.sound", "Thematic sound executing: " + path);
 			return CompletionEnum.EXECUTING;

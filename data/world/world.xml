@@ -54,8 +54,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>44.30916</x>
-            <y>-16.328115</y>
+            <x>44.347507</x>
+            <y>-16.502998</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -65,44 +65,44 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>6.7149506</x>
-              <y>-0.6993103</y>
+              <x>7.8477554</x>
+              <y>-0.5247879</y>
             </Vector2>
             <Vector2>
-              <x>93.873795</x>
-              <y>-1.5630836</y>
+              <x>93.83545</x>
+              <y>-1.3882008</y>
             </Vector2>
             <Vector2>
-              <x>93.79704</x>
-              <y>-24.267664</y>
+              <x>93.7587</x>
+              <y>-24.092781</y>
             </Vector2>
             <Vector2>
-              <x>-64.05151</x>
-              <y>-23.716036</y>
+              <x>-64.08986</x>
+              <y>-23.541153</y>
             </Vector2>
             <Vector2>
-              <x>-63.76027</x>
-              <y>27.22213</y>
+              <x>-63.79862</x>
+              <y>27.397013</y>
             </Vector2>
             <Vector2>
-              <x>-36.853317</x>
-              <y>27.25864</y>
+              <x>-36.891666</x>
+              <y>27.433523</y>
             </Vector2>
             <Vector2>
-              <x>-36.794952</x>
-              <y>-0.36109734</y>
+              <x>-36.8333</x>
+              <y>-0.18621445</y>
             </Vector2>
             <Vector2>
-              <x>0.12681198</x>
-              <y>-0.6570339</y>
+              <x>-0.48722076</x>
+              <y>-0.43886185</y>
             </Vector2>
             <Vector2>
-              <x>2.3815765</x>
-              <y>-1.6294003</y>
+              <x>2.104927</x>
+              <y>-2.3120823</y>
             </Vector2>
             <Vector2>
-              <x>4.56588</x>
-              <y>-1.5871239</y>
+              <x>4.5538635</x>
+              <y>-2.3464546</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -12276,17 +12276,15 @@
           </coordinates>
           <texture>data/textures/home/background100.png</texture>
           <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
           <depth>100.0</depth>
-          <scale>0.02</scale>
-        </world.GDXBackground>
-        <world.GDXBackground>
-          <coordinates>
-            <x>26.447924</x>
-            <y>16.418947</y>
-          </coordinates>
-          <texture>data/textures/home/colHome.png</texture>
-          <scissor>false</scissor>
-          <depth>1.0</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
         <world.GDXBackground>
@@ -12307,16 +12305,6 @@
           <texture>data/textures/home/victorianHouseWoodSpackle1.png</texture>
           <scissor>false</scissor>
           <depth>1.02</depth>
-          <scale>0.02</scale>
-        </world.GDXBackground>
-        <world.GDXBackground>
-          <coordinates>
-            <x>26.577242</x>
-            <y>25.89312</y>
-          </coordinates>
-          <texture>data/textures/home/colHomeRoof.png</texture>
-          <scissor>false</scissor>
-          <depth>1.0</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
         <world.GDXBackground>
@@ -12368,6 +12356,278 @@
           <scissor>false</scissor>
           <depth>1.02</depth>
           <scale>0.05</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>17.0</x>
+            <y>0.0</y>
+          </coordinates>
+          <texture>data/textures/tiled/brick.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0001</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>37.45</x>
+            <y>0.0</y>
+          </coordinates>
+          <texture>data/textures/tiled/brick.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.00001</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>57.9</x>
+            <y>0.0</y>
+          </coordinates>
+          <texture>data/textures/tiled/brick.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.00001</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>26.447924</x>
+            <y>16.418947</y>
+          </coordinates>
+          <texture>data/textures/home/colHome.png</texture>
+          <scissor>false</scissor>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>26.577242</x>
+            <y>25.89312</y>
+          </coordinates>
+          <texture>data/textures/home/colHomeRoof.png</texture>
+          <scissor>false</scissor>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>77.8</x>
+            <y>-1.0</y>
+          </coordinates>
+          <texture>data/textures/tiled/brick.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>97.7</x>
+            <y>-1.0</y>
+          </coordinates>
+          <texture>data/textures/tiled/brick.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>117.6</x>
+            <y>-2.0</y>
+          </coordinates>
+          <texture>data/textures/tiled/brick.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>137.6</x>
+            <y>-2.0</y>
+          </coordinates>
+          <texture>data/textures/tiled/brick.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>17.0</x>
+            <y>-20.48</y>
+          </coordinates>
+          <texture>data/textures/tiled/brick.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>37.45</x>
+            <y>-20.48</y>
+          </coordinates>
+          <texture>data/textures/tiled/brick.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>57.9</x>
+            <y>-20.48</y>
+          </coordinates>
+          <texture>data/textures/tiled/brick.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>77.8</x>
+            <y>-21.48</y>
+          </coordinates>
+          <texture>data/textures/tiled/brick.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>97.7</x>
+            <y>-21.48</y>
+          </coordinates>
+          <texture>data/textures/tiled/brick.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>117.6</x>
+            <y>-22.48</y>
+          </coordinates>
+          <texture>data/textures/tiled/brick.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>137.6</x>
+            <y>-22.48</y>
+          </coordinates>
+          <texture>data/textures/tiled/brick.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
         </world.GDXBackground>
       </backgrounds>
       <lights/>
