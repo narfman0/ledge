@@ -17008,6 +17008,58 @@
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-0</name>
+          <resource>data/textures/tiled/sand1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-309.79944</x>
+            <y>-67.973595</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>20.505768</x>
+              <y>21.513363</y>
+            </Vector2>
+            <Vector2>
+              <x>17.924957</x>
+              <y>14.667458</y>
+            </Vector2>
+            <Vector2>
+              <x>11.269226</x>
+              <y>11.733494</y>
+            </Vector2>
+            <Vector2>
+              <x>-3.2647705</x>
+              <y>8.39204</y>
+            </Vector2>
+            <Vector2>
+              <x>-13.432739</x>
+              <y>19.002499</y>
+            </Vector2>
+            <Vector2>
+              <x>-56.709137</x>
+              <y>17.21175</y>
+            </Vector2>
+            <Vector2>
+              <x>-38.30426</x>
+              <y>-40.490105</y>
+            </Vector2>
+            <Vector2>
+              <x>62.010773</x>
+              <y>-52.030487</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
       </polygons>
       <npcs>
         <world.GDXNPC>
@@ -21945,7 +21997,7 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>A roar that has been steadily getting louder suddenly passes the threshold of ignoring, as a huge fling metal object is flung across the sky. Colligan looks in amazement.</dialog>
+            <dialog>A roar that has been steadily getting louder suddenly passes the threshold of ignoring, as a huge flying metal object is flung across the sky. Colligan looks in amazement.</dialog>
             <origin></origin>
             <type>Type</type>
           </manifestation>
@@ -24052,6 +24104,130 @@
             <volume>1.0</volume>
             <pan>0.0</pan>
             <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>robbot23Music</name>
+          <prerequisites>robbot23</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/TheImpassable</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>familyKill1Music</name>
+          <prerequisites>familyKill1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/SolemnSpirits</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>base7Music</name>
+          <prerequisites>base7</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/EpicTension2</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>robbot35Explode0</name>
+          <prerequisites>robbot35</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.particle.ParticleManifestation">
+            <name>Particle0</name>
+            <effectFile>data/particles/jetpackBlackSmoke.p</effectFile>
+            <imagesDir>data/particles</imagesDir>
+            <emitterName>smoke</emitterName>
+            <attachedBody></attachedBody>
+            <duration>-1</duration>
+            <position>
+              <x>239.01</x>
+              <y>-0.31874135</y>
+            </position>
+            <modificationType>CREATE</modificationType>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>robbot35Explode1</name>
+          <prerequisites>robbot35Explode0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.particle.ParticleManifestation">
+            <name>Particle1</name>
+            <effectFile>data/particles/jetpackBlackSmoke.p</effectFile>
+            <imagesDir>data/particles</imagesDir>
+            <emitterName>smoke</emitterName>
+            <attachedBody></attachedBody>
+            <duration>-1</duration>
+            <position>
+              <x>250.35007</x>
+              <y>-4.8945007</y>
+            </position>
+            <modificationType>CREATE</modificationType>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>robbot35Explode2</name>
+          <prerequisites>robbot35Explode1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.particle.ParticleManifestation">
+            <name>Particle2</name>
+            <effectFile>data/particles/jetpackBlackSmoke.p</effectFile>
+            <imagesDir>data/particles</imagesDir>
+            <emitterName>smoke</emitterName>
+            <attachedBody></attachedBody>
+            <duration>-1</duration>
+            <position>
+              <x>259.71634</x>
+              <y>0.087971926</y>
+            </position>
+            <modificationType>CREATE</modificationType>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>falldie</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>-274.47055</x>
+              <y>5.6950464</y>
+            </lowerLeft>
+            <upperRight>
+              <x>-274.47055</x>
+              <y>5.6950464</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>player</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>0.0</aim>
+            <kill>true</kill>
+            <remove>false</remove>
+            <doAim>false</doAim>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>

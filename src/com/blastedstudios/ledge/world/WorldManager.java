@@ -198,10 +198,15 @@ public class WorldManager implements IDeathCallback{
 		NPCData npcData = NPCData.parse(gdxNPC.getProperties().get("NPCData"));
 		if(npcData == null){
 			npcData = new NPCData();
-			Log.error("WorldManager.<init>", "NPC failed to initialize " + gdxNPC + ", attempting defaults");
+			Log.error("WorldManager.spawnNPC", "NPC failed to initialize " + gdxNPC + ", attempting defaults");
 		}
-		npcData.apply(gdxNPC.getProperties());
-		return spawnNPC(gdxNPC.getName(), gdxNPC.getCoordinates(), npcData, aiWorld);
+		try{
+			npcData.apply(gdxNPC.getProperties());
+			return spawnNPC(gdxNPC.getName(), gdxNPC.getCoordinates(), npcData, aiWorld);
+		}catch(Exception e){
+			Log.error("WorldManager.spawnNPC", "NPC defaults failed for " + gdxNPC + ", giving up");
+		}
+		return null;
 	}
 	
 	public NPC spawnNPC(String name, Vector2 coordinates, NPCData npcData, AIWorld aiWorld){
