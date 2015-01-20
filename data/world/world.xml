@@ -34659,8 +34659,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-554.85034</x>
-            <y>30.500467</y>
+            <x>-554.98126</x>
+            <y>30.431427</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -34670,36 +34670,36 @@
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
-              <x>-3.611267</x>
-              <y>0.36539078</y>
+              <x>-2.369629</x>
+              <y>0.23462486</y>
             </Vector2>
             <Vector2>
-              <x>-3.5950317</x>
-              <y>-0.043848038</y>
+              <x>-2.5998535</x>
+              <y>-0.048936844</y>
             </Vector2>
             <Vector2>
-              <x>-0.07098389</x>
-              <y>-0.3946247</y>
+              <x>0.059936523</x>
+              <y>-0.3255844</y>
             </Vector2>
             <Vector2>
-              <x>3.6965942</x>
-              <y>-0.10231209</y>
+              <x>2.223816</x>
+              <y>-0.16493797</y>
             </Vector2>
             <Vector2>
-              <x>3.5666504</x>
-              <y>0.17051506</y>
+              <x>2.2786255</x>
+              <y>0.09284401</y>
             </Vector2>
             <Vector2>
-              <x>1.9264526</x>
-              <y>-0.0048732758</y>
+              <x>2.057373</x>
+              <y>0.06416702</y>
             </Vector2>
             <Vector2>
-              <x>-0.038513184</x>
-              <y>-0.06333542</y>
+              <x>0.09240723</x>
+              <y>0.0057048798</y>
             </Vector2>
             <Vector2>
-              <x>-1.8735962</x>
-              <y>0.07307625</y>
+              <x>-1.7426758</x>
+              <y>0.14211655</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -39098,8 +39098,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>-773.1402</x>
-                <y>-35.280975</y>
+                <x>-56.21582</x>
+                <y>-8.125002</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
@@ -39163,6 +39163,7 @@
           <prerequisites></prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.objectdistance.ObjectDistanceTrigger">
+            <origin>player</origin>
             <target>elevator1</target>
             <distance>1.0</distance>
             <actionRequired>true</actionRequired>
@@ -45124,6 +45125,71 @@
         <world.quest.GDXQuest>
           <name>baseMusic</name>
           <prerequisites>base42</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>main</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>treeBaseElevatorMusic</name>
+          <prerequisites>treeBaseElevator</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/TheImpassable</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>treeBaseElevatorMusic-0</name>
+          <prerequisites>treeBaseElevatorMusic</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>-124.634224</x>
+              <y>38.247883</y>
+            </lowerLeft>
+            <upperRight>
+              <x>-118.29</x>
+              <y>62.042072</y>
+            </upperRight>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/TranquilEndings</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>baseDoorWestOpen0Music</name>
+          <prerequisites>baseDoorWestOpen0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/EpicTension2</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>forestBossKill2Music</name>
+          <prerequisites>forestBossKill2</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
@@ -59724,6 +59790,7 @@
           <prerequisites>boss2</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.objectdistance.ObjectDistanceTrigger">
+            <origin>player</origin>
             <target>elevator3</target>
             <distance>1.0</distance>
             <actionRequired>true</actionRequired>
@@ -61521,6 +61588,34 @@
             <manifestationType>THEMATIC</manifestationType>
             <name>Sound-0</name>
             <filename>main</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>boss0Music</name>
+          <prerequisites>boss0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/TheImpassable</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>boss2Music</name>
+          <prerequisites>boss2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/SolemnSpirits</filename>
             <volume>1.0</volume>
             <pan>0.0</pan>
             <pitch>0.0</pitch>
@@ -65046,7 +65141,7 @@
           <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
             <manifestationType>THEMATIC</manifestationType>
             <name>Sound-0</name>
-            <filename>music/TranquilEndings</filename>
+            <filename>music/LabyrinthOfFear</filename>
             <volume>1.0</volume>
             <pan>0.0</pan>
             <pitch>0.0</pitch>
@@ -65085,6 +65180,20 @@
             <manifestationType>THEMATIC</manifestationType>
             <name>Sound-0</name>
             <filename>main</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>gm0Music</name>
+          <prerequisites>gm0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/TheImpassable</filename>
             <volume>1.0</volume>
             <pan>0.0</pan>
             <pitch>0.0</pitch>
@@ -68329,6 +68438,20 @@
             <pause>false</pause>
           </manifestation>
         </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>music</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/DarkAtmosphere</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
       </quests>
       <backgrounds>
         <world.GDXBackground>
@@ -69341,6 +69464,20 @@
             </target>
             <duration>0.0</duration>
             <tweenType>ExpoIn</tweenType>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>music</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.sound.SoundManifestation">
+            <manifestationType>THEMATIC</manifestationType>
+            <name>Sound-0</name>
+            <filename>music/SolemnSpirits</filename>
+            <volume>1.0</volume>
+            <pan>0.0</pan>
+            <pitch>0.0</pitch>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>

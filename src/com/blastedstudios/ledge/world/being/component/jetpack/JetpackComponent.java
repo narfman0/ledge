@@ -56,7 +56,7 @@ public class JetpackComponent extends AbstractComponent {
 		}
 		jetpackRecharge();
 
-		if(isDashing())
+		if(isDashing() && !being.isDead())
 			applyDashForce();
 	}
 
