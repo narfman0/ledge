@@ -12737,8 +12737,8 @@
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
-            <x>17.0</x>
-            <y>0.0</y>
+            <x>16.0</x>
+            <y>-1.0</y>
           </coordinates>
           <texture>data/textures/tiled/brick.png</texture>
           <scissor>false</scissor>
@@ -12750,13 +12750,13 @@
             <x>0.0</x>
             <y>0.0</y>
           </scissorLowerLeft>
-          <depth>1.0001</depth>
+          <depth>1.05</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
-            <x>37.45</x>
-            <y>0.0</y>
+            <x>36.45</x>
+            <y>-1.0</y>
           </coordinates>
           <texture>data/textures/tiled/brick.png</texture>
           <scissor>false</scissor>
@@ -12768,13 +12768,13 @@
             <x>0.0</x>
             <y>0.0</y>
           </scissorLowerLeft>
-          <depth>1.00001</depth>
+          <depth>1.05</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
-            <x>57.9</x>
-            <y>0.0</y>
+            <x>56.9</x>
+            <y>-1.0</y>
           </coordinates>
           <texture>data/textures/tiled/brick.png</texture>
           <scissor>false</scissor>
@@ -12786,7 +12786,7 @@
             <x>0.0</x>
             <y>0.0</y>
           </scissorLowerLeft>
-          <depth>1.00001</depth>
+          <depth>1.05</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
         <world.GDXBackground>
@@ -12811,43 +12811,7 @@
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
-            <x>77.8</x>
-            <y>-1.0</y>
-          </coordinates>
-          <texture>data/textures/tiled/brick.png</texture>
-          <scissor>false</scissor>
-          <scissorUpperRight>
-            <x>0.0</x>
-            <y>0.0</y>
-          </scissorUpperRight>
-          <scissorLowerLeft>
-            <x>0.0</x>
-            <y>0.0</y>
-          </scissorLowerLeft>
-          <depth>1.0</depth>
-          <scale>0.02</scale>
-        </world.GDXBackground>
-        <world.GDXBackground>
-          <coordinates>
-            <x>97.7</x>
-            <y>-1.0</y>
-          </coordinates>
-          <texture>data/textures/tiled/brick.png</texture>
-          <scissor>false</scissor>
-          <scissorUpperRight>
-            <x>0.0</x>
-            <y>0.0</y>
-          </scissorUpperRight>
-          <scissorLowerLeft>
-            <x>0.0</x>
-            <y>0.0</y>
-          </scissorLowerLeft>
-          <depth>1.0</depth>
-          <scale>0.02</scale>
-        </world.GDXBackground>
-        <world.GDXBackground>
-          <coordinates>
-            <x>117.6</x>
+            <x>76.8</x>
             <y>-2.0</y>
           </coordinates>
           <texture>data/textures/tiled/brick.png</texture>
@@ -12860,12 +12824,12 @@
             <x>0.0</x>
             <y>0.0</y>
           </scissorLowerLeft>
-          <depth>1.0</depth>
+          <depth>1.05</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
-            <x>137.6</x>
+            <x>96.7</x>
             <y>-2.0</y>
           </coordinates>
           <texture>data/textures/tiled/brick.png</texture>
@@ -12878,13 +12842,13 @@
             <x>0.0</x>
             <y>0.0</y>
           </scissorLowerLeft>
-          <depth>1.0</depth>
+          <depth>1.05</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
-            <x>17.0</x>
-            <y>-20.48</y>
+            <x>116.6</x>
+            <y>-3.0</y>
           </coordinates>
           <texture>data/textures/tiled/brick.png</texture>
           <scissor>false</scissor>
@@ -12896,13 +12860,13 @@
             <x>0.0</x>
             <y>0.0</y>
           </scissorLowerLeft>
-          <depth>1.0</depth>
+          <depth>1.05</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
-            <x>37.45</x>
-            <y>-20.48</y>
+            <x>136.6</x>
+            <y>-3.0</y>
           </coordinates>
           <texture>data/textures/tiled/brick.png</texture>
           <scissor>false</scissor>
@@ -12914,30 +12878,12 @@
             <x>0.0</x>
             <y>0.0</y>
           </scissorLowerLeft>
-          <depth>1.0</depth>
+          <depth>1.05</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
-            <x>57.9</x>
-            <y>-20.48</y>
-          </coordinates>
-          <texture>data/textures/tiled/brick.png</texture>
-          <scissor>false</scissor>
-          <scissorUpperRight>
-            <x>0.0</x>
-            <y>0.0</y>
-          </scissorUpperRight>
-          <scissorLowerLeft>
-            <x>0.0</x>
-            <y>0.0</y>
-          </scissorLowerLeft>
-          <depth>1.0</depth>
-          <scale>0.02</scale>
-        </world.GDXBackground>
-        <world.GDXBackground>
-          <coordinates>
-            <x>77.8</x>
+            <x>16.0</x>
             <y>-21.48</y>
           </coordinates>
           <texture>data/textures/tiled/brick.png</texture>
@@ -12950,12 +12896,12 @@
             <x>0.0</x>
             <y>0.0</y>
           </scissorLowerLeft>
-          <depth>1.0</depth>
+          <depth>1.05</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
-            <x>97.7</x>
+            <x>36.45</x>
             <y>-21.48</y>
           </coordinates>
           <texture>data/textures/tiled/brick.png</texture>
@@ -12968,12 +12914,30 @@
             <x>0.0</x>
             <y>0.0</y>
           </scissorLowerLeft>
-          <depth>1.0</depth>
+          <depth>1.05</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
-            <x>117.6</x>
+            <x>56.9</x>
+            <y>-21.48</y>
+          </coordinates>
+          <texture>data/textures/tiled/brick.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.05</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>76.8</x>
             <y>-22.48</y>
           </coordinates>
           <texture>data/textures/tiled/brick.png</texture>
@@ -12986,12 +12950,12 @@
             <x>0.0</x>
             <y>0.0</y>
           </scissorLowerLeft>
-          <depth>1.0</depth>
+          <depth>1.05</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
-            <x>137.6</x>
+            <x>96.7</x>
             <y>-22.48</y>
           </coordinates>
           <texture>data/textures/tiled/brick.png</texture>
@@ -13004,7 +12968,43 @@
             <x>0.0</x>
             <y>0.0</y>
           </scissorLowerLeft>
-          <depth>1.0</depth>
+          <depth>1.05</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>116.6</x>
+            <y>-23.48</y>
+          </coordinates>
+          <texture>data/textures/tiled/brick.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.05</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>136.6</x>
+            <y>-23.48</y>
+          </coordinates>
+          <texture>data/textures/tiled/brick.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.05</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
         <world.GDXBackground>
