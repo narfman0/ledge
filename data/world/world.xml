@@ -44,6 +44,60 @@
           </filter>
           <radius>1.0</radius>
         </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>steamCarGraphic</name>
+          <resource>data/textures/home/steamMobile.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>33.13025</x>
+            <y>85.455345</y>
+          </center>
+          <filter>
+            <categoryBits>0</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>0.3</radius>
+        </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>steamCarWRear</name>
+          <resource>data/textures/home/steamMobileWheelR.png</resource>
+          <density>3.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>31.840729</x>
+            <y>84.62627</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>0.48</radius>
+        </world.shape.GDXCircle>
+        <world.shape.GDXCircle>
+          <name>steamCarFRear</name>
+          <resource>data/textures/home/steamMobileWheelF.png</resource>
+          <density>3.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>35.038086</x>
+            <y>84.431046</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <radius>0.3</radius>
+        </world.shape.GDXCircle>
       </circles>
       <polygons>
         <world.shape.GDXPolygon>
@@ -1442,8 +1496,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>50.267082</x>
-            <y>71.064</y>
+            <x>44.773563</x>
+            <y>72.225624</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -1453,76 +1507,76 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-43.917824</x>
-              <y>16.462776</y>
+              <x>-38.424305</x>
+              <y>15.301155</y>
             </Vector2>
             <Vector2>
-              <x>-45.00448</x>
-              <y>16.462776</y>
+              <x>-39.51096</x>
+              <y>15.301155</y>
             </Vector2>
             <Vector2>
-              <x>-45.526073</x>
-              <y>15.667969</y>
+              <x>-40.032555</x>
+              <y>14.506348</y>
             </Vector2>
             <Vector2>
-              <x>-43.78743</x>
-              <y>13.581596</y>
+              <x>-38.29391</x>
+              <y>12.419975</y>
             </Vector2>
             <Vector2>
-              <x>-24.036728</x>
-              <y>6.1408157</y>
+              <x>-18.54321</x>
+              <y>4.9791946</y>
             </Vector2>
             <Vector2>
-              <x>33.231277</x>
-              <y>-13.720745</y>
+              <x>0.24293137</x>
+              <y>-10.957504</y>
             </Vector2>
             <Vector2>
-              <x>44.858406</x>
-              <y>-26.776237</y>
+              <x>50.351925</x>
+              <y>-27.937859</y>
             </Vector2>
             <Vector2>
-              <x>49.174957</x>
-              <y>-26.002716</y>
+              <x>54.668476</x>
+              <y>-27.164337</y>
             </Vector2>
             <Vector2>
-              <x>51.03971</x>
-              <y>-23.800537</y>
+              <x>56.53323</x>
+              <y>-24.962158</y>
             </Vector2>
             <Vector2>
-              <x>53.21525</x>
-              <y>-18.18853</y>
+              <x>58.708767</x>
+              <y>-19.350151</y>
             </Vector2>
             <Vector2>
-              <x>51.35929</x>
-              <y>-13.52129</y>
+              <x>56.85281</x>
+              <y>-14.682911</y>
             </Vector2>
             <Vector2>
-              <x>40.03637</x>
-              <y>-7.110924</y>
+              <x>19.69572</x>
+              <y>-6.094307</y>
             </Vector2>
             <Vector2>
-              <x>20.272728</x>
-              <y>-0.45400238</y>
+              <x>3.647171</x>
+              <y>5.317993</y>
             </Vector2>
             <Vector2>
-              <x>1.3325806</x>
-              <y>5.463249</y>
+              <x>-8.334103</x>
+              <y>10.862511</y>
             </Vector2>
             <Vector2>
-              <x>-23.577843</x>
-              <y>12.120171</y>
+              <x>-15.372387</x>
+              <y>12.270157</y>
             </Vector2>
             <Vector2>
-              <x>-35.876602</x>
-              <y>13.879646</y>
+              <x>-30.383083</x>
+              <y>12.718025</y>
             </Vector2>
             <Vector2>
-              <x>-39.962418</x>
-              <y>14.277054</y>
+              <x>-34.4689</x>
+              <y>13.115433</y>
             </Vector2>
             <Vector2>
-              <x>-42.831177</x>
-              <y>15.518944</y>
+              <x>-37.337658</x>
+              <y>14.357323</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -4738,6 +4792,130 @@
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>steamCarBody</name>
+          <resource></resource>
+          <density>3.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>33.307476</x>
+            <y>85.91936</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-2.5536652</x>
+              <y>-0.023200989</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.7067223</x>
+              <y>-1.0188904</y>
+            </Vector2>
+            <Vector2>
+              <x>2.0622597</x>
+              <y>-1.2218933</y>
+            </Vector2>
+            <Vector2>
+              <x>1.9414215</x>
+              <y>0.6921463</y>
+            </Vector2>
+            <Vector2>
+              <x>1.7400322</x>
+              <y>0.6051407</y>
+            </Vector2>
+            <Vector2>
+              <x>1.6755867</x>
+              <y>-0.26487732</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.37862015</x>
+              <y>-0.26487732</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.39473343</x>
+              <y>0.66313934</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.6766815</x>
+              <y>0.63414</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.7089081</x>
+              <y>0.19913483</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-14</name>
+          <resource>data/textures/tiled/metal1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>91.279724</x>
+            <y>60.36776</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.53816986</x>
+              <y>-0.33932495</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.42871094</x>
+              <y>1.0070114</y>
+            </Vector2>
+            <Vector2>
+              <x>0.96687317</x>
+              <y>-0.6676979</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>steamCarBlock</name>
+          <resource></resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>32.6588</x>
+            <y>84.0418</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.17544937</x>
+              <y>0.4435196</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.217556</x>
+              <y>-0.16281891</y>
+            </Vector2>
+            <Vector2>
+              <x>0.39299774</x>
+              <y>-0.28071594</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
       </polygons>
       <npcs>
         <world.GDXNPC>
@@ -6980,6 +7158,54 @@
             <y>64.368774</y>
           </anchor>
         </world.joint.RevoluteJoint>
+        <world.joint.WeldJoint>
+          <name>steamCarGraphicJoint</name>
+          <bodyA>steamCarGraphic</bodyA>
+          <bodyB>steamCarBody</bodyB>
+          <jointType>WeldJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>33.16247</x>
+            <y>85.426346</y>
+          </anchor>
+        </world.joint.WeldJoint>
+        <world.joint.RevoluteJoint>
+          <name>steamCarWRear</name>
+          <bodyA>steamCarWRear</bodyA>
+          <bodyB>steamCarBody</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>0.0</lowerAngle>
+          <upperAngle>0.0</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>31.833277</x>
+            <y>84.614334</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
+        <world.joint.RevoluteJoint>
+          <name>steamCarWFront</name>
+          <bodyA>steamCarFRear</bodyA>
+          <bodyB>steamCarBody</bodyB>
+          <jointType>RevoluteJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <enableLimit>false</enableLimit>
+          <enableMotor>false</enableMotor>
+          <lowerAngle>0.0</lowerAngle>
+          <upperAngle>0.0</upperAngle>
+          <maxMotorTorque>0.0</maxMotorTorque>
+          <motorSpeed>0.0</motorSpeed>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>35.03945</x>
+            <y>84.45</y>
+          </anchor>
+        </world.joint.RevoluteJoint>
       </joints>
       <quests>
         <world.quest.GDXQuest>
@@ -6991,8 +7217,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>31.768826</x>
-                <y>18.19642</y>
+                <x>29.39284</x>
+                <y>85.87467</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
@@ -12357,6 +12583,52 @@
             <pitch>0.0</pitch>
           </manifestation>
         </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>steamCarBlockRemove</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.objectdistance.ObjectDistanceTrigger">
+            <origin>player</origin>
+            <target>steamCarBody</target>
+            <distance>1.0</distance>
+            <actionRequired>true</actionRequired>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
+            <name>steamCarBlock</name>
+            <impulse>
+              <x>0.0</x>
+              <y>0.0</y>
+            </impulse>
+            <position>
+              <x>0.0</x>
+              <y>-900.0</y>
+            </position>
+            <velocity>
+              <x>0.0</x>
+              <y>0.0</y>
+            </velocity>
+            <type>StaticBody</type>
+            <torque>0.0</torque>
+            <angle>0.0</angle>
+            <hasPosition>true</hasPosition>
+            <hasVelocity>false</hasVelocity>
+            <hasAngle>false</hasAngle>
+            <relativePosition>false</relativePosition>
+            <relativeVelocity>true</relativeVelocity>
+            <relativeAngle>true</relativeAngle>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>Quest-315</name>
+          <prerequisites>Quest-314</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog></dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
       </quests>
       <backgrounds>
         <world.GDXBackground>
@@ -12519,6 +12791,24 @@
             <y>0.0</y>
           </scissorLowerLeft>
           <depth>1.1</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>26.729977</x>
+            <y>80.91964</y>
+          </coordinates>
+          <texture>data/textures/home/windmill.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.07</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
         <world.GDXBackground>
@@ -12901,6 +13191,24 @@
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
+            <x>10.695337</x>
+            <y>82.22808</y>
+          </coordinates>
+          <texture>data/textures/home/tractor.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.05</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
             <x>-81.476074</x>
             <y>56.89379</y>
           </coordinates>
@@ -12989,6 +13297,24 @@
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
+            <x>20.56126</x>
+            <y>82.917015</y>
+          </coordinates>
+          <texture>data/textures/home/barn.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.07</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
             <x>26.447924</x>
             <y>16.418947</y>
           </coordinates>
@@ -13041,24 +13367,6 @@
             <y>0.0</y>
           </scissorLowerLeft>
           <depth>1.0</depth>
-          <scale>0.02</scale>
-        </world.GDXBackground>
-        <world.GDXBackground>
-          <coordinates>
-            <x>23.280079</x>
-            <y>80.73119</y>
-          </coordinates>
-          <texture>data/textures/home/tractor.png</texture>
-          <scissor>false</scissor>
-          <scissorUpperRight>
-            <x>0.0</x>
-            <y>0.0</y>
-          </scissorUpperRight>
-          <scissorLowerLeft>
-            <x>0.0</x>
-            <y>0.0</y>
-          </scissorLowerLeft>
-          <depth>1.05</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
       </backgrounds>
