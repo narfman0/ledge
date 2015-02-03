@@ -7221,8 +7221,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>29.39284</x>
-                <y>85.87467</y>
+                <x>31.174496</x>
+                <y>18.519215</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
@@ -12588,8 +12588,8 @@
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
-          <name>steamCarBlockRemove</name>
-          <prerequisites></prerequisites>
+          <name>steamCarBlockRemove1</name>
+          <prerequisites>steamCarBlockRemove0</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.objectdistance.ObjectDistanceTrigger">
             <origin>player</origin>
@@ -12623,14 +12623,35 @@
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
-          <name>Quest-315</name>
-          <prerequisites>Quest-314</prerequisites>
+          <name>steamCarBlockRemove0</name>
+          <prerequisites></prerequisites>
           <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <trigger class="plugin.quest.trigger.aabb.AABBTrigger">
+            <lowerLeft>
+              <x>25.801363</x>
+              <y>84.240875</y>
+            </lowerLeft>
+            <upperRight>
+              <x>34.992825</x>
+              <y>95.48332</y>
+            </upperRight>
+          </trigger>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog></dialog>
+            <dialog>Colligan may stumble upon some inviting objects. To try to operate things, jump on or near them and press the action key (e by default).</dialog>
             <origin></origin>
             <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>steamCarBlockRemove2</name>
+          <prerequisites>steamCarBlockRemove1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.revolutejoint.RevoluteJointManifestation">
+            <name>steamCarWRear</name>
+            <enableMotor>true</enableMotor>
+            <maxMotorTorque>25.0</maxMotorTorque>
+            <motorSpeed>10.0</motorSpeed>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
