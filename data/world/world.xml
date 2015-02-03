@@ -7188,8 +7188,8 @@
           <motorSpeed>0.0</motorSpeed>
           <referenceAngle>0.0</referenceAngle>
           <anchor>
-            <x>31.833277</x>
-            <y>84.614334</y>
+            <x>31.841055</x>
+            <y>84.62573</y>
           </anchor>
         </world.joint.RevoluteJoint>
         <world.joint.RevoluteJoint>
@@ -7206,8 +7206,8 @@
           <motorSpeed>0.0</motorSpeed>
           <referenceAngle>0.0</referenceAngle>
           <anchor>
-            <x>35.03945</x>
-            <y>84.45</y>
+            <x>35.03823</x>
+            <y>84.43092</y>
           </anchor>
         </world.joint.RevoluteJoint>
       </joints>
@@ -7221,8 +7221,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>31.174496</x>
-                <y>18.519215</y>
+                <x>31.062614</x>
+                <y>18.391466</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
