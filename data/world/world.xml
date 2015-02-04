@@ -2268,8 +2268,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-6.8779197</x>
-            <y>64.67767</y>
+            <x>-7.0562434</x>
+            <y>64.54646</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -2279,52 +2279,52 @@
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
-              <x>-0.47306395</x>
-              <y>1.7628937</y>
+              <x>-0.2947402</x>
+              <y>1.894104</y>
             </Vector2>
             <Vector2>
-              <x>-9.341955</x>
-              <y>1.6193619</y>
+              <x>-8.901627</x>
+              <y>1.5974884</y>
             </Vector2>
             <Vector2>
-              <x>-8.503008</x>
-              <y>-1.3374176</y>
+              <x>-8.530838</x>
+              <y>-1.211235</y>
             </Vector2>
             <Vector2>
-              <x>-2.2468429</x>
-              <y>-0.5049286</y>
+              <x>-2.1810822</x>
+              <y>-0.46038818</y>
             </Vector2>
             <Vector2>
-              <x>-2.0071445</x>
-              <y>-8.399231</y>
+              <x>-1.9956851</x>
+              <y>-8.830933</y>
             </Vector2>
             <Vector2>
-              <x>1.1568933</x>
-              <y>-8.485352</y>
+              <x>0.9937973</x>
+              <y>-8.830933</y>
             </Vector2>
             <Vector2>
-              <x>0.19809437</x>
-              <y>-1.4235382</y>
+              <x>0.34491444</x>
+              <y>-1.9064636</y>
             </Vector2>
             <Vector2>
-              <x>8.769989</x>
-              <y>-1.9874611</y>
+              <x>8.432743</x>
+              <y>-1.9898834</y>
             </Vector2>
             <Vector2>
-              <x>9.369238</x>
-              <y>0.88319397</y>
+              <x>9.17432</x>
+              <y>1.4584503</y>
             </Vector2>
             <Vector2>
-              <x>1.6509051</x>
-              <y>0.56742096</y>
+              <x>1.5268049</x>
+              <y>0.7075958</y>
             </Vector2>
             <Vector2>
-              <x>2.355393</x>
-              <y>8.767288</y>
+              <x>2.384253</x>
+              <y>8.883484</y>
             </Vector2>
             <Vector2>
-              <x>-0.92849493</x>
-              <y>8.537636</y>
+              <x>-0.9528451</x>
+              <y>8.68882</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -4920,6 +4920,74 @@
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>steamCarRamp</name>
+          <resource>data/textures/tiled/dirt1.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>70.90956</x>
+            <y>65.73451</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-3.1360168</x>
+              <y>-0.43789673</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.5929565</x>
+              <y>-0.43789673</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.3386154</x>
+              <y>-0.42964172</y>
+            </Vector2>
+            <Vector2>
+              <x>-2.1392593</x>
+              <y>-0.37190247</y>
+            </Vector2>
+            <Vector2>
+              <x>-1.0930939</x>
+              <y>-0.0519104</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.7889099</x>
+              <y>0.07182312</y>
+            </Vector2>
+            <Vector2>
+              <x>0.89567566</x>
+              <y>0.6689377</y>
+            </Vector2>
+            <Vector2>
+              <x>1.5349808</x>
+              <y>0.7776108</y>
+            </Vector2>
+            <Vector2>
+              <x>2.0794144</x>
+              <y>0.7677307</y>
+            </Vector2>
+            <Vector2>
+              <x>2.3681335</x>
+              <y>0.6590576</y>
+            </Vector2>
+            <Vector2>
+              <x>2.5331116</x>
+              <y>0.5108719</y>
+            </Vector2>
+            <Vector2>
+              <x>2.6774673</x>
+              <y>-1.7267456</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
       </polygons>
       <npcs>
         <world.GDXNPC>
@@ -7221,8 +7289,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>31.062614</x>
-                <y>18.391466</y>
+                <x>31.08333</x>
+                <y>18.400002</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
@@ -12650,8 +12718,33 @@
           <manifestation class="plugin.quest.manifestation.revolutejoint.RevoluteJointManifestation">
             <name>steamCarWRear</name>
             <enableMotor>true</enableMotor>
-            <maxMotorTorque>25.0</maxMotorTorque>
-            <motorSpeed>10.0</motorSpeed>
+            <maxMotorTorque>45.0</maxMotorTorque>
+            <motorSpeed>20.0</motorSpeed>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>steamCarBlockRemove4</name>
+          <prerequisites>steamCarBlockRemove3</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>1500</time>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.jointremove.JointRemoveManifestation">
+            <jointName>steamCarWRear</jointName>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>steamCarBlockRemove3</name>
+          <prerequisites>steamCarBlockRemove2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.objectdistance.ObjectDistanceTrigger">
+            <origin>steamCarBody</origin>
+            <target>steamCarRamp</target>
+            <distance>3.0</distance>
+            <actionRequired>false</actionRequired>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.pause.PauseManifestation">
+            <pause>false</pause>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
@@ -13333,10 +13426,18 @@
             <x>-6.559963</x>
             <y>53.68539</y>
           </coordinates>
-          <texture>data/textures/home/mill1.png</texture>
+          <texture>data/textures/home/millBase.png</texture>
           <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
           <depth>1.02</depth>
-          <scale>0.05</scale>
+          <scale>0.02</scale>
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
