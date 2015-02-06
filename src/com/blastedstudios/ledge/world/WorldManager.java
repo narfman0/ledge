@@ -37,6 +37,7 @@ import com.blastedstudios.gdxworld.world.GDXNPC;
 import com.blastedstudios.gdxworld.world.GDXPath;
 import com.blastedstudios.ledge.ai.AIWorld;
 import com.blastedstudios.ledge.physics.ContactListener;
+import com.blastedstudios.ledge.ui.drawable.SavePillarDrawable;
 import com.blastedstudios.ledge.ui.gameplay.GameplayScreen.IGameplayListener;
 import com.blastedstudios.ledge.util.VisibilityReturnStruct;
 import com.blastedstudios.ledge.world.being.Being;
@@ -71,6 +72,7 @@ public class WorldManager implements IDeathCallback{
 	private final TweenManager tweenManager;
 	private final AssetManager sharedAssets;
 	private final IGameplayListener listener;
+	private final SavePillarDrawable savePillarDrawable;
 	private boolean pause, inputEnable = true, playerTrack = true, desireFixedRotation = true;
 	private final Random random;
 	
@@ -91,6 +93,7 @@ public class WorldManager implements IDeathCallback{
 		aiWorldDebug = aiWorld.createGraphVisible();
 		for(GDXNPC gdxNPC : level.getNpcs())
 			spawnNPC(gdxNPC, aiWorld);
+		savePillarDrawable = new SavePillarDrawable(level, sharedAssets);
 	}
 
 	public void render(float dt, GDXRenderer gdxRenderer, Camera cam, Batch batch){
@@ -98,6 +101,8 @@ public class WorldManager implements IDeathCallback{
 			player.setFixedRotation(desireFixedRotation);
 		batch.end();
 		batch.begin();
+		if(Properties.getBool("save.pillar.draw", true))
+			savePillarDrawable.render(dt, null, batch, cam, gdxRenderer);
 		if(player.isSpawned())
 			player.render(dt, world, batch, sharedAssets, gdxRenderer, this, pause, inputEnable);
 		for(NPC npc : npcs)
