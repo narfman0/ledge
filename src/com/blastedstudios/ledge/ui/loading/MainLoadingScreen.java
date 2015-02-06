@@ -5,6 +5,7 @@ import net.xeoh.plugins.base.util.uri.ClassURI;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Sound;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
 import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.util.GDXGame;
@@ -33,9 +34,9 @@ public class MainLoadingScreen extends AbstractScreen{
 				return false;
 			}
 		}));
-		sharedAssets.load("data/textures/blood.png", Texture.class);
-		sharedAssets.load("data/textures/dialogBubble.png", Texture.class);
-		sharedAssets.load("data/textures/money.png", Texture.class);
+		for(FileHandle handle : Gdx.files.internal("data/textures").list())
+			if(!handle.isDirectory() && handle.extension().equals("png"))
+				sharedAssets.load(handle.path(), Texture.class);
 	}
 
 	@Override public void render(float delta){
@@ -49,7 +50,6 @@ public class MainLoadingScreen extends AbstractScreen{
 		if(iterationsToLoad-- == 0){
 			PluginUtil.initialize(ClassURI.CLASSPATH);//this takes 5+ seconds
 			gdxWorld = GDXWorld.load(MainScreen.WORLD_FILE);
-			sharedAssets.load("data/textures/" + gdxWorld.getWorldProperties().get("background"), Texture.class);
 			AssetUtil.loadAssetsRecursive(sharedAssets, Gdx.files.internal("data/sounds"), Sound.class);
 			AssetUtil.loadAssetsRecursive(sharedAssets, Gdx.files.internal("data/textures/ammo"), Texture.class);
 			AssetUtil.loadAssetsRecursive(sharedAssets, Gdx.files.internal("data/textures/weapons"), Texture.class);
