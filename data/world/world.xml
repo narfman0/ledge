@@ -14119,6 +14119,110 @@
       </circles>
       <polygons>
         <world.shape.GDXPolygon>
+          <name>Polygon-0</name>
+          <resource>data/textures/tiled/mudBrickDark.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-95.66644</x>
+            <y>22.285873</y>
+          </center>
+          <filter>
+            <categoryBits>0</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-12.442825</x>
+              <y>5.0426884</y>
+            </Vector2>
+            <Vector2>
+              <x>-12.285492</x>
+              <y>-5.3730984</y>
+            </Vector2>
+            <Vector2>
+              <x>12.573944</x>
+              <y>-4.901085</y>
+            </Vector2>
+            <Vector2>
+              <x>12.154373</x>
+              <y>5.231493</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-3</name>
+          <resource>data/textures/tiled/mudBrickDark.png</resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-263.19153</x>
+            <y>10.294075</y>
+          </center>
+          <filter>
+            <categoryBits>0</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>true</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-13.63208</x>
+              <y>-14.034985</y>
+            </Vector2>
+            <Vector2>
+              <x>18.802841</x>
+              <y>-14.276734</y>
+            </Vector2>
+            <Vector2>
+              <x>18.567795</x>
+              <y>4.6604204</y>
+            </Vector2>
+            <Vector2>
+              <x>8.293381</x>
+              <y>4.741003</y>
+            </Vector2>
+            <Vector2>
+              <x>7.9911957</x>
+              <y>8.770187</y>
+            </Vector2>
+            <Vector2>
+              <x>2.2832031</x>
+              <y>10.744484</y>
+            </Vector2>
+            <Vector2>
+              <x>-3.9956055</x>
+              <y>8.246393</y>
+            </Vector2>
+            <Vector2>
+              <x>-4.4656982</x>
+              <y>5.10363</y>
+            </Vector2>
+            <Vector2>
+              <x>-3.5927124</x>
+              <y>2.9278736</y>
+            </Vector2>
+            <Vector2>
+              <x>-3.6262817</x>
+              <y>-3.962028</y>
+            </Vector2>
+            <Vector2>
+              <x>-12.524048</x>
+              <y>-4.0829043</y>
+            </Vector2>
+            <Vector2>
+              <x>-14.102142</x>
+              <y>-8.837339</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
           <name>Polygon-19</name>
           <resource>data/textures/tiled/sand1.png</resource>
           <density>1.0</density>
@@ -14196,7 +14300,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-183</name>
-          <resource>data/textures/tiled/sand1.png</resource>
+          <resource>data/textures/tiled/mudBrick.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -14332,7 +14436,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-212</name>
-          <resource>data/textures/tiled/sand1.png</resource>
+          <resource>data/textures/tiled/mudBrick.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -14444,7 +14548,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-243</name>
-          <resource>data/textures/tiled/sand1.png</resource>
+          <resource>data/textures/tiled/mudBrick.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -14648,7 +14752,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>cart1Roof</name>
-          <resource>data/textures/tiled/sand1.png</resource>
+          <resource>data/textures/tiled/mudBrick.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -14724,7 +14828,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-110</name>
-          <resource>data/textures/tiled/sand1.png</resource>
+          <resource>data/textures/tiled/mudBrick.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -14788,7 +14892,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-121</name>
-          <resource>data/textures/tiled/sand1.png</resource>
+          <resource>data/textures/tiled/mudBrick.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -14824,7 +14928,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-130</name>
-          <resource>data/textures/tiled/sand1.png</resource>
+          <resource>data/textures/tiled/mudBrick.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -14860,7 +14964,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-149</name>
-          <resource>data/textures/tiled/sand1.png</resource>
+          <resource>data/textures/tiled/mudBrick.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -14940,7 +15044,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-0</name>
-          <resource>data/textures/tiled/sand1.png</resource>
+          <resource>data/textures/tiled/mudBrick.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -15028,7 +15132,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-17</name>
-          <resource>data/textures/tiled/sand1.png</resource>
+          <resource>data/textures/tiled/mudBrick.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -15148,7 +15252,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-0</name>
-          <resource>data/textures/tiled/sand1.png</resource>
+          <resource>data/textures/tiled/mudBrick.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -15532,7 +15636,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-255</name>
-          <resource>data/textures/tiled/sand1.png</resource>
+          <resource>data/textures/tiled/mudBrick.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -16692,7 +16796,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-0</name>
-          <resource>data/textures/tiled/sand1.png</resource>
+          <resource>data/textures/tiled/mudBrick.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -17052,7 +17156,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-0</name>
-          <resource>data/textures/tiled/sand1.png</resource>
+          <resource>data/textures/tiled/mudBrick.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -17152,7 +17256,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-14</name>
-          <resource>data/textures/tiled/sand1.png</resource>
+          <resource>data/textures/tiled/mudBrick.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -17220,7 +17324,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-30</name>
-          <resource>data/textures/tiled/sand1.png</resource>
+          <resource>data/textures/tiled/mudBrick.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -17264,7 +17368,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-36</name>
-          <resource>data/textures/tiled/sand1.png</resource>
+          <resource>data/textures/tiled/mudBrick.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -18400,7 +18504,7 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>Polygon-24</name>
-          <resource>data/textures/tiled/metal1.png</resource>
+          <resource>data/textures/tiled/mudBrick.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
@@ -25693,6 +25797,14 @@
           </coordinates>
           <texture>data/textures/home/background100.png</texture>
           <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
           <depth>100.0</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
@@ -25715,6 +25827,60 @@
           <scissor>false</scissor>
           <depth>1.1</depth>
           <scale>0.01</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-231.32013</x>
+            <y>-13.910834</y>
+          </coordinates>
+          <texture>data/textures/environment/cave1BR.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.03</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-188.912</x>
+            <y>-22.207106</y>
+          </coordinates>
+          <texture>data/textures/environment/cave1BL.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.03</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>31.77587</x>
+            <y>36.56222</y>
+          </coordinates>
+          <texture>data/textures/environment/cave1BL.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.03</depth>
+          <scale>0.02</scale>
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
