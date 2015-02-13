@@ -12,6 +12,7 @@ com.badlogic.gdx.graphics.Color: {
 	white: { a: 1, b: 1, g: 1, r: 1 },
 	dialog: brown1,
 	hud-hpbar: yellow,
+	volume: white,
 },
 com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
 	default: { down: default-button, up: default-button },
