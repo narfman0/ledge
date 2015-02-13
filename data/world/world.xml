@@ -14518,8 +14518,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-85.45321</x>
-            <y>24.073914</y>
+            <x>-86.019226</x>
+            <y>23.454609</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -14529,52 +14529,36 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>2.439064</x>
-              <y>-3.8444004</y>
+              <x>3.0050812</x>
+              <y>-3.2250957</y>
             </Vector2>
             <Vector2>
-              <x>2.220314</x>
-              <y>3.4798183</y>
+              <x>2.7863312</x>
+              <y>4.099123</y>
             </Vector2>
             <Vector2>
-              <x>1.7609406</x>
-              <y>3.5188808</y>
+              <x>2.3269577</x>
+              <y>4.1381855</y>
             </Vector2>
             <Vector2>
-              <x>1.7171936</x>
-              <y>1.3899746</y>
+              <x>2.4144592</x>
+              <y>-0.2368145</y>
             </Vector2>
             <Vector2>
-              <x>0.5140686</x>
-              <y>1.3509121</y>
+              <x>-7.7792892</x>
+              <y>-0.2368145</y>
             </Vector2>
             <Vector2>
-              <x>0.579689</x>
-              <y>1.1360683</y>
+              <x>-7.7792892</x>
+              <y>-0.5493145</y>
             </Vector2>
             <Vector2>
-              <x>1.7171936</x>
-              <y>1.0774746</y>
+              <x>2.4582062</x>
+              <y>-0.76415825</y>
             </Vector2>
             <Vector2>
-              <x>1.8484421</x>
-              <y>-0.85611916</y>
-            </Vector2>
-            <Vector2>
-              <x>-8.345306</x>
-              <y>-0.85611916</y>
-            </Vector2>
-            <Vector2>
-              <x>-8.345306</x>
-              <y>-1.1686192</y>
-            </Vector2>
-            <Vector2>
-              <x>1.892189</x>
-              <y>-1.3834629</y>
-            </Vector2>
-            <Vector2>
-              <x>2.001564</x>
-              <y>-3.8444004</y>
+              <x>2.5675812</x>
+              <y>-3.2250957</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -18591,6 +18575,70 @@
             <Vector2>
               <x>-1.6839981</x>
               <y>-2.7950668</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-0</name>
+          <resource></resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-84.41061</x>
+            <y>24.874195</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.4162674</x>
+              <y>0.80945396</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.33422852</x>
+              <y>-1.6189137</y>
+            </Vector2>
+            <Vector2>
+              <x>0.7505188</x>
+              <y>0.80945396</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>Polygon-3</name>
+          <resource></resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>StaticBody</bodyType>
+          <center>
+            <x>-107.06869</x>
+            <y>24.334555</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.7657013</x>
+              <y>0.84591675</y>
+            </Vector2>
+            <Vector2>
+              <x>0.39196777</x>
+              <y>0.8131008</y>
+            </Vector2>
+            <Vector2>
+              <x>0.37373352</x>
+              <y>-1.6590214</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -26212,6 +26260,132 @@
             <y>18.318167</y>
           </coordinates>
           <texture>data/textures/desert/serverRack1.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-107.269226</x>
+            <y>23.94441</y>
+          </coordinates>
+          <texture>data/textures/desert/ups.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-84.23847</x>
+            <y>24.486383</y>
+          </coordinates>
+          <texture>data/textures/desert/ups.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-90.6583</x>
+            <y>24.856678</y>
+          </coordinates>
+          <texture>data/textures/desert/microphone.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-90.988716</x>
+            <y>23.865448</y>
+          </coordinates>
+          <texture>data/textures/desert/workbench.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-89.602104</x>
+            <y>18.73616</y>
+          </coordinates>
+          <texture>data/textures/desert/weaponLocker.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-87.4604</x>
+            <y>24.516829</y>
+          </coordinates>
+          <texture>data/textures/desert/weaponLocker.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-105.68774</x>
+            <y>18.27208</y>
+          </coordinates>
+          <texture>data/textures/desert/weaponLocker.png</texture>
           <scissor>false</scissor>
           <scissorUpperRight>
             <x>0.0</x>
