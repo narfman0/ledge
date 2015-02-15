@@ -17,9 +17,11 @@ public class PhysicsEnvironment {
 		CAT_PROJECTILE	= 0x4,
 		CAT_FRIEND		= 0x8,
 		CAT_ENEMY		= 0x10,
+		CAT_DEAD		= 0x20,
 		MASK_FRIEND		= (short)-1 & ~CAT_FRIEND,
 		MASK_ENEMY		= (short)-1 & ~CAT_ENEMY,
 		MASK_PROJECTILE	= (short)-1 & ~CAT_PROJECTILE,
+		MASK_DEAD		= CAT_SCENERY | CAT_DEAD,
 		MASK_NOTHING	= CAT_SCENERY,
 		MASK_SCENERY	= -1;
 	private static final float BULLET_DENSITY = Properties.getFloat("gun.bullet.density", 1f),

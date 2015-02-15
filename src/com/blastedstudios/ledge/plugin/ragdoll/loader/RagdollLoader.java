@@ -24,7 +24,7 @@ public class RagdollLoader extends AbstractRagdoll {
 	
 	public RagdollLoader(World world, float x, float y, Being being, TextureAtlas atlas, FileHandle file){
 		this(world, x, y, being, atlas, createBodyMap(world, file, x, y));
-		initializeFilters(being.getMask(), being.getCat());
+		setFilters(being.getMask(), being.getCat());
 	}
 	
 	protected static Map<String,Body> createBodyMap(World world, FileHandle fileHandle, float x, float y){

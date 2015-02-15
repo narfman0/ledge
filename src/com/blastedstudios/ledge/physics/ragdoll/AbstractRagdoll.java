@@ -98,17 +98,19 @@ public abstract class AbstractRagdoll implements IRagdoll {
 			sprite.setScale(scale);
 	}
 
-	protected void initializeFilters(short mask, short cat){
+	public void setFilters(short mask, short cat){
 		for(Fixture fixture : new Fixture[]{lArmFixture, lHandFixture, rArmFixture, rHandFixture}){
 			Filter filter = fixture.getFilterData();
 			filter.maskBits = PhysicsEnvironment.MASK_NOTHING;
 			filter.categoryBits = PhysicsEnvironment.CAT_NOTHING;
 			fixture.setFilterData(filter);
 		}
-		Filter filter = headFixture.getFilterData();
-		filter.maskBits = mask;
-		filter.categoryBits = cat;
-		headFixture.setFilterData(filter);
+		for(Fixture fixture : new Fixture[]{headFixture, torsoFixture, lLegFixture, rLegFixture}){
+			Filter filter = fixture.getFilterData();
+			filter.maskBits = mask;
+			filter.categoryBits = cat;
+			fixture.setFilterData(filter);
+		}
 	}
 
 	protected void initializeJoints(World world){
@@ -155,6 +157,8 @@ public abstract class AbstractRagdoll implements IRagdoll {
 			breakAppendage(damage.getBodyPart(), world, dir);
 		}
 		torsoBody.applyTorque((dir.x > 0 ? -1 : 1) * DEATH_TORQUE, true);
+		if(Properties.getBool("ragdoll.death.collide", true))
+			setFilters(PhysicsEnvironment.MASK_DEAD, PhysicsEnvironment.CAT_DEAD);
 	}
 
 	@Override public void breakAppendage(BodyPart bodyPart, World world, Vector2 dir){

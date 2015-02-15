@@ -29,7 +29,7 @@ public class RagdollCustom extends AbstractRagdoll {
 				createLArm(world, being.getMask(), being.getCat()), 
 				createLHand(world, being.getMask(), being.getCat()), 
 				createRHand(world, being.getMask(), being.getCat()));
-		initializeFilters(being.getMask(), being.getCat());
+		setFilters(being.getMask(), being.getCat());
 		initializeJoints(world);
 		setTransform(x,y,0);
 	}
