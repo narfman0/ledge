@@ -17,4 +17,5 @@
 	<fireSound>MP5_1</fireSound>
 	<rolls>1</rolls>
 	<minLevel>3</minLevel>
+	<semiAutomatic>true</semiAutomatic>
 </com.blastedstudios.ledge.world.weapon.Gun>

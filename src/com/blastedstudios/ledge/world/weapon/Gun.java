@@ -17,7 +17,9 @@ public class Gun extends Weapon {
 	private static final long serialVersionUID = 1L;
 	private int currentRounds;
 	private AmmoTypeEnum ammoType;
+	private boolean semiAutomatic;
 	private long lastFireTime;
+	private transient boolean attackReleased;
 	
 	public GunShot createGunShot(Being origin, Vector2 dir){
 		return new GunShot(origin, dir, this);
@@ -72,15 +74,25 @@ public class Gun extends Weapon {
 		}
 		for(IGunListener listener : PluginUtil.getPlugins(IGunListener.class))
 			listener.shoot(this, source, random, direction, world, position, world.getSharedAssets());
+		attackReleased = false;
 	}
 	
 	@Override public boolean canAttack(){
-		return getMSSinceAttack()/1000f > 1f/getRateOfFire() && getCurrentRounds() > 0;
+		boolean rateOfFireCheck = getMSSinceAttack()/1000f > 1f/getRateOfFire();
+		return (rateOfFireCheck || (semiAutomatic && attackReleased)) && getCurrentRounds() > 0;
 	}
-	
+
 	public static interface IGunListener extends Plugin{
 		void shoot(Gun gun, Being source, Random random, Vector2 direction,
 				WorldManager world, Vector2 origin, AssetManager sharedAssets);
 		void setCurrentRounds(Gun gun, int currentRounds);
+	}
+	
+	public void setAttackReleased(boolean attackReleased) {
+		this.attackReleased = attackReleased;
+	}
+
+	public boolean isSemiAutomatic() {
+		return semiAutomatic;
 	}
 }

@@ -13,6 +13,7 @@ import com.blastedstudios.gdxworld.world.GDXLevel;
 import com.blastedstudios.gdxworld.world.GDXWorld;
 import com.blastedstudios.gdxworld.world.quest.GDXQuestManager;
 import com.blastedstudios.ledge.world.Stats;
+import com.blastedstudios.ledge.world.weapon.Gun;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 
 public class Player extends Being {
@@ -60,5 +61,13 @@ public class Player extends Being {
 					if(gdxLevel.getName().equals(prereq.trim()) && !isLevelCompleted(prereq))
 						return false;
 		return true;
+	}
+	
+	public void touchUp(int x, int y, int x1, int y1){
+		if(getEquippedWeapon() != null && getEquippedWeapon() instanceof Gun){
+			Gun gun = (Gun) getEquippedWeapon();
+			if(gun.isSemiAutomatic())
+				gun.setAttackReleased(true);
+		}
 	}
 }

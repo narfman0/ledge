@@ -342,6 +342,11 @@ public class GameplayScreen extends LedgeScreen {
 		mouseMovedHandler(x, y);
 		return false;
 	}
+	
+	@Override public boolean touchUp(int x, int y, int x1, int y1){
+		worldManager.getPlayer().touchUp(x, y, x1, y1);
+		return false;
+	}
 
 	private void mouseMovedHandler(int x, int y) {
 		if(!worldManager.isPause() && worldManager.isInputEnable()){

@@ -1,6 +1,6 @@
 <com.blastedstudios.ledge.world.weapon.Gun>
 	<stats>
-		<accuracy>.83</accuracy>
+		<accuracy>.87</accuracy>
 		<damage>25</damage>
 		<muzzleVelocity>375</muzzleVelocity>
 		<rateOfFire>1.5</rateOfFire>
@@ -17,4 +17,5 @@
 	<fireSound>Glock-18_1</fireSound>
 	<rolls>7</rolls>
 	<minLevel>1</minLevel>
+	<semiAutomatic>true</semiAutomatic>
 </com.blastedstudios.ledge.world.weapon.Gun>
