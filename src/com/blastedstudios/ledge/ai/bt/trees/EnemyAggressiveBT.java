@@ -24,19 +24,19 @@ public class EnemyAggressiveBT implements jbt.execution.core.IBTLibrary {
 						null,
 						new jbt.model.task.composite.ModelSequence(
 								null,
-								new com.blastedstudios.ledge.ai.bt.conditions.LowDanger(
+								new com.blastedstudios.ledge.ai.bt.conditions.Danger(
 										null),
 								new com.blastedstudios.ledge.ai.bt.actions.NotifyDanger(
-										null, null, "LowDangerTarget"),
+										null, null, "DangerTarget"),
 								new com.blastedstudios.ledge.ai.bt.actions.Shoot(
-										null, null, "LowDangerTarget"),
+										null, null, "DangerTarget"),
 								new com.blastedstudios.ledge.ai.bt.actions.Move(
-										null, null, "LowDangerTarget")),
+										null, null, "DangerTarget")),
 						new jbt.model.task.composite.ModelSequence(
 								null,
 								new com.blastedstudios.ledge.ai.bt.actions.Search(
-										null, null, "LowDangerTarget", null,
-										"LowDangerLastTime"),
+										null, null, "DangerTarget", null,
+										"DangerLastTime"),
 								new com.blastedstudios.ledge.ai.bt.actions.Move(
 										null, null, "SearchLocation")),
 						new jbt.model.task.composite.ModelSequence(

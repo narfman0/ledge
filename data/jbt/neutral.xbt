@@ -6,19 +6,9 @@
         <Children>
           <Node id="Node_3" type="Selector">
             <Children>
-              <Node id="Node_4" type="Sequence">
-                <Children>
-                  <Node id="Node_5" name="HighDanger" type="Condition" />
-                  <Node id="Node_7" name="Move" type="Action">
-                    <Parameters>
-                      <Parameter name="target" fromcontext="true">ClosestFriendlyBaseTarget</Parameter>
-                    </Parameters>
-                  </Node>
-                </Children>
-              </Node>
               <Node id="Node_8" type="Sequence">
                 <Children>
-                  <Node id="Node_9" name="LowDanger" type="Condition" />
+                  <Node id="Node_9" name="Danger" type="Condition" />
                   <Node id="Node_11" name="Move" type="Action">
                     <Parameters>
                       <Parameter name="target" fromcontext="true">ClosestCoverTarget</Parameter>

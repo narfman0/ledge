@@ -8,7 +8,7 @@
             <Children>
               <Node id="Node_8" type="Sequence">
                 <Children>
-                  <Node id="Node_9" name="LowDanger" type="Condition" />
+                  <Node id="Node_9" name="Danger" type="Condition" />
                   <Node id="Node_32" name="ClosestTurret" type="Action" />
                   <Node id="Node_33" name="Move" type="Action">
                     <Parameters>
@@ -17,7 +17,7 @@
                   </Node>
                   <Node id="Node_34" name="OperateTurret" type="Action">
                     <Parameters>
-                      <Parameter name="target" fromcontext="true">LowDangerTarget</Parameter>
+                      <Parameter name="target" fromcontext="true">DangerTarget</Parameter>
                     </Parameters>
                   </Node>
                 </Children>

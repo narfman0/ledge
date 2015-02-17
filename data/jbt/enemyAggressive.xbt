@@ -8,20 +8,20 @@
             <Children>
               <Node id="Node_8" type="Sequence">
                 <Children>
-                  <Node id="Node_9" name="LowDanger" type="Condition" />
+                  <Node id="Node_9" name="Danger" type="Condition" />
                   <Node id="Node_39" name="NotifyDanger" type="Action">
                     <Parameters>
-                      <Parameter name="target" fromcontext="true">LowDangerTarget</Parameter>
+                      <Parameter name="target" fromcontext="true">DangerTarget</Parameter>
                     </Parameters>
                   </Node>
                   <Node id="Node_13" name="Shoot" type="Action">
                     <Parameters>
-                      <Parameter name="target" fromcontext="true">LowDangerTarget</Parameter>
+                      <Parameter name="target" fromcontext="true">DangerTarget</Parameter>
                     </Parameters>
                   </Node>
                   <Node id="Node_33" name="Move" type="Action">
                     <Parameters>
-                      <Parameter name="target" fromcontext="true">LowDangerTarget</Parameter>
+                      <Parameter name="target" fromcontext="true">DangerTarget</Parameter>
                     </Parameters>
                   </Node>
                 </Children>
@@ -30,8 +30,8 @@
                 <Children>
                   <Node id="Node_37" name="Search" type="Action">
                     <Parameters>
-                      <Parameter name="lastTarget" fromcontext="true">LowDangerTarget</Parameter>
-                      <Parameter name="lastTime" fromcontext="true">LowDangerLastTime</Parameter>
+                      <Parameter name="lastTarget" fromcontext="true">DangerTarget</Parameter>
+                      <Parameter name="lastTime" fromcontext="true">DangerLastTime</Parameter>
                     </Parameters>
                   </Node>
                   <Node id="Node_38" name="Move" type="Action">

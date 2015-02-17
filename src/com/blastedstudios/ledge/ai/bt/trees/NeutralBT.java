@@ -24,13 +24,7 @@ public class NeutralBT implements jbt.execution.core.IBTLibrary {
 						null,
 						new jbt.model.task.composite.ModelSequence(
 								null,
-								new com.blastedstudios.ledge.ai.bt.conditions.HighDanger(
-										null),
-								new com.blastedstudios.ledge.ai.bt.actions.Move(
-										null, null, "ClosestFriendlyBaseTarget")),
-						new jbt.model.task.composite.ModelSequence(
-								null,
-								new com.blastedstudios.ledge.ai.bt.conditions.LowDanger(
+								new com.blastedstudios.ledge.ai.bt.conditions.Danger(
 										null),
 								new com.blastedstudios.ledge.ai.bt.actions.Move(
 										null, null, "ClosestCoverTarget")),

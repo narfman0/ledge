@@ -46,8 +46,7 @@
 		<Action name="NearDeadInit" />
 	</ActionSet>
 	<SensorSet>
-		<Sensor name="LowDanger" type="BOOLEAN" />
-		<Sensor name="HighDanger" type="BOOLEAN" />
+		<Sensor name="Danger" type="BOOLEAN" />
 		<Sensor name="InCover" type="BOOLEAN" />
 		<Sensor name="IsCooldown" type="BOOLEAN">
 			<Parameter name="identifier" type="STRING" />

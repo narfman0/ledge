@@ -15,22 +15,22 @@ import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
 import com.blastedstudios.ledge.world.weapon.DamageStruct;
 
-/** ExecutionCondition class created from MMPM condition LowDanger. */
-public class LowDanger extends
+/** ExecutionCondition class created from MMPM condition Danger. */
+public class Danger extends
 		jbt.execution.task.leaf.condition.ExecutionCondition {
 
 	/**
-	 * Constructor. Constructs an instance of LowDanger that is able to run a
-	 * com.blastedstudios.ledge.ai.bt.conditions.LowDanger.
+	 * Constructor. Constructs an instance of Danger that is able to run a
+	 * com.blastedstudios.ledge.ai.bt.conditions.Danger.
 	 */
-	public LowDanger(jbt.model.core.ModelTask modelTask,
+	public Danger(jbt.model.core.ModelTask modelTask,
 			jbt.execution.core.BTExecutor executor,
 			jbt.execution.core.ExecutionTask parent) {
 		super(modelTask, executor, parent);
 
-		if (!(modelTask instanceof com.blastedstudios.ledge.ai.bt.conditions.LowDanger)) {
+		if (!(modelTask instanceof com.blastedstudios.ledge.ai.bt.conditions.Danger)) {
 			throw new java.lang.RuntimeException(
-					"The ModelTask must subclass com.blastedstudios.ledge.ai.bt.conditions.LowDanger");
+					"The ModelTask must subclass com.blastedstudios.ledge.ai.bt.conditions.Danger");
 		}
 	}
 
@@ -51,14 +51,14 @@ public class LowDanger extends
 			self.aim(shotDamage.getOrigin());
 			getContext().clearVariable(AIFieldEnum.ATTACK_TICK.name());
 			float[] target = new float[]{shotDamage.getOrigin().getPosition().x, shotDamage.getOrigin().getPosition().y};
-			getContext().setVariable("LowDangerTarget", target);
-			getContext().setVariable("LowDangerLastTime", (int)System.currentTimeMillis());
+			getContext().setVariable("DangerTarget", target);
+			getContext().setVariable("DangerLastTime", (int)System.currentTimeMillis());
 		}
 		
 		VisibilityReturnStruct struct = world.isVisible((NPC) getContext().getVariable(AIFieldEnum.SELF.name()));
 		if(struct.isVisible()){
-			getContext().setVariable("LowDangerTarget", struct.target);
-			getContext().setVariable("LowDangerLastTime", (int)System.currentTimeMillis());
+			getContext().setVariable("DangerTarget", struct.target);
+			getContext().setVariable("DangerLastTime", (int)System.currentTimeMillis());
 			return Status.SUCCESS;
 		}
 		return Status.FAILURE;
