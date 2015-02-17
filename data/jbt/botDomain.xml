@@ -46,6 +46,7 @@
 		<Action name="NearDeadInit" />
 	</ActionSet>
 	<SensorSet>
+		<Sensor name="Alert" type="BOOLEAN" />
 		<Sensor name="Danger" type="BOOLEAN" />
 		<Sensor name="InCover" type="BOOLEAN" />
 		<Sensor name="IsCooldown" type="BOOLEAN">
@@ -54,6 +55,7 @@
 		<Sensor name="IsDead" type="BOOLEAN" />
 		<Sensor name="PlayerLeft" type="BOOLEAN" />
 		<Sensor name="PlayerUnder" type="BOOLEAN" />
+		<Sensor name="Visible" type="BOOLEAN" />
 	</SensorSet>
 	<EntitySet/>
 	<GoalSet/>

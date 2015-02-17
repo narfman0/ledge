@@ -8,6 +8,7 @@
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.actions.execution;
 
+import com.badlogic.gdx.Gdx;
 import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.ledge.world.WorldManager;
@@ -77,6 +78,10 @@ public class OperateTurret extends
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
 		NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
+		if(getTarget() == null){
+			Gdx.app.error("OperateTurret.internalTick", "Target null for " + self);
+			return Status.FAILURE;
+		}
 		Turret turret = (Turret) getContext().getVariable(AIFieldEnum.TURRET.name());
 		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
 		if(turret.getMountLocation().dst2(self.getPosition()) < Properties.getFloat("ai.turret.operate.distance", 1f)){

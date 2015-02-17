@@ -33,6 +33,8 @@ public class ContactListener implements com.badlogic.gdx.physics.box2d.ContactLi
 		Body gunshotBody = aBody.getUserData() instanceof GunShot ? aBody :	bBody.getUserData() instanceof GunShot ? bBody : null;
 		Fixture hit = aBody.getUserData() instanceof Being ? contact.getFixtureA() : bBody.getUserData() instanceof Being ? contact.getFixtureB() : null;
 		Body meleeBody = aBody.getUserData() instanceof Melee ? aBody : bBody.getUserData() instanceof Melee ? bBody : null;
+		if(aBody.getUserData() == WorldManager.REMOVE_USER_DATA || bBody.getUserData() == WorldManager.REMOVE_USER_DATA)
+			return;
 			
 		if(gunshotBody != null){//handle projectile contact
 			GunShot gunshot = (GunShot) gunshotBody.getUserData();

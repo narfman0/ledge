@@ -2,7 +2,7 @@
 //                   MACHINE GENERATED CODE                
 //                       DO NOT MODIFY                     
 //                                                         
-// Generated on 11/15/2014 22:37:28
+// Generated on 02/17/2015 00:51:36
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.trees;
 
@@ -25,6 +25,8 @@ public class NeutralBT implements jbt.execution.core.IBTLibrary {
 						new jbt.model.task.composite.ModelSequence(
 								null,
 								new com.blastedstudios.ledge.ai.bt.conditions.Danger(
+										null),
+								new com.blastedstudios.ledge.ai.bt.conditions.Visible(
 										null),
 								new com.blastedstudios.ledge.ai.bt.actions.Move(
 										null, null, "ClosestCoverTarget")),

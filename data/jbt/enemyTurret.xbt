@@ -8,7 +8,15 @@
             <Children>
               <Node id="Node_8" type="Sequence">
                 <Children>
-                  <Node id="Node_9" name="Danger" type="Condition" />
+                  <Node id="Node_36" type="Parallel">
+                    <Parameters>
+                      <Parameter name="policy" fromcontext="false">selector</Parameter>
+                    </Parameters>
+                    <Children>
+                      <Node id="Node_9" name="Danger" type="Condition" />
+                      <Node id="Node_35" name="Visible" type="Condition" />
+                    </Children>
+                  </Node>
                   <Node id="Node_32" name="ClosestTurret" type="Action" />
                   <Node id="Node_33" name="Move" type="Action">
                     <Parameters>

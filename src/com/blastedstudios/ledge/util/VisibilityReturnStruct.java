@@ -1,14 +1,16 @@
 package com.blastedstudios.ledge.util;
 
+import java.util.LinkedList;
+
 import com.blastedstudios.ledge.world.being.Being;
 
 public class VisibilityReturnStruct {
-	public final int enemyCount;
+	public final LinkedList<Being> enemies;
 	public final Being closestEnemy;
 	public final float[] target; 
 	
-	public VisibilityReturnStruct(int enemyCount, Being closestEnemy){
-		this.enemyCount = enemyCount;
+	public VisibilityReturnStruct(LinkedList<Being> enemies, Being closestEnemy){
+		this.enemies = enemies;
 		this.closestEnemy = closestEnemy;
 		if(closestEnemy != null)
 			target = new float[]{closestEnemy.getPosition().x, closestEnemy.getPosition().y};

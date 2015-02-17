@@ -157,14 +157,14 @@ public class WorldManager implements IDeathCallback{
 	public void processHit(float damageBase, Being target, Being origin, Fixture hit, Vector2 normal, Vector2 damagePosition) {
 		DamageStruct damage = new DamageStruct();
 		damage.setTarget(target);
+		damage.setDir(normal);
+		damage.setOrigin(origin);
+		damage.setDamagePosition(damagePosition);
 		float bodypartDmgModifier = target.handleShotDamage(hit, damage);
 		float attackModifier = (100f + (origin == null ? 0f : origin.getAttack())) / 100f;
 		float defenseModifier = 100f / (100f + target.getDefense());
 		damage.setDamage(damageBase * bodypartDmgModifier * 
 				attackModifier * defenseModifier);
-		damage.setDir(normal);
-		damage.setOrigin(origin);
-		damage.setDamagePosition(damagePosition);
 		getProvider().beingHit(damage);
 		if( (!Properties.getBool("character.godmode", false) || target != player) && !target.isInvulnerable() ){
 			if(Properties.getBool("being.appendage.break.dead", false) && target.isDead())
@@ -179,7 +179,7 @@ public class WorldManager implements IDeathCallback{
 	public VisibilityReturnStruct isVisible(NPC origin){
 		Being closestEnemy = null;
 		float closestDistanceSq = Float.MAX_VALUE;
-		int enemyCount = 0;
+		LinkedList<Being> enemies = new LinkedList<>();
 		for(Being being : getAllBeings())
 			if(being != origin && !origin.isFriendly(being.getFaction()) && !being.isDead()){
 				float currentClosestDistanceSq = being.getPosition().dst2(origin.getPosition());
@@ -187,16 +187,16 @@ public class WorldManager implements IDeathCallback{
 						facingCorrectly = origin.getRagdoll().isFacingLeft() ?
 								being.getPosition().x < origin.getPosition().x : 
 								being.getPosition().x > origin.getPosition().x;
-				if(closer && origin.sees(being, world) && 
-						(facingCorrectly || currentClosestDistanceSq < origin.getDistanceAware())){
-					closestDistanceSq = currentClosestDistanceSq;
-					if(closestDistanceSq < origin.getDistanceVision()){
-						enemyCount++;
-						closestEnemy = being;
+				if(origin.sees(being, world)){
+					enemies.add(being);
+					if(closer && (facingCorrectly || currentClosestDistanceSq < origin.getDistanceAware())){
+						closestDistanceSq = currentClosestDistanceSq;
+						if(closestDistanceSq < origin.getDistanceVision())
+							closestEnemy = being;
 					}
 				}
 			}
-		return new VisibilityReturnStruct(enemyCount, closestEnemy);
+		return new VisibilityReturnStruct(enemies, closestEnemy);
 	}
 	
 	public NPC spawnNPC(GDXNPC gdxNPC, AIWorld aiWorld){

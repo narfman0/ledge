@@ -10,7 +10,6 @@ package com.blastedstudios.ledge.ai.bt.conditions.execution;
 
 import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.ledge.util.VisibilityReturnStruct;
-import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.NPC.AIFieldEnum;
 import com.blastedstudios.ledge.world.weapon.DamageStruct;
@@ -42,12 +41,12 @@ public class Danger extends
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
 		Log.debug(this.getClass().getCanonicalName(), "ticked");
-		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
 		NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
 		
 		// figure out, upon receiving damage, where origin is
 		DamageStruct shotDamage = (DamageStruct) getContext().getVariable(AIFieldEnum.ATTACK_TICK.name());
 		if(shotDamage != null && shotDamage.getOrigin() != null){
+			getContext().setVariable(NPC.AIFieldEnum.ALERT.name(), shotDamage.getOrigin());
 			self.aim(shotDamage.getOrigin());
 			getContext().clearVariable(AIFieldEnum.ATTACK_TICK.name());
 			float[] target = new float[]{shotDamage.getOrigin().getPosition().x, shotDamage.getOrigin().getPosition().y};
@@ -55,8 +54,8 @@ public class Danger extends
 			getContext().setVariable("DangerLastTime", (int)System.currentTimeMillis());
 		}
 		
-		VisibilityReturnStruct struct = world.isVisible((NPC) getContext().getVariable(AIFieldEnum.SELF.name()));
-		if(struct.isVisible()){
+		VisibilityReturnStruct struct = (VisibilityReturnStruct) getContext().getVariable(NPC.AIFieldEnum.VISIBLE.name());
+		if(struct != null && struct.isVisible()){
 			getContext().setVariable("DangerTarget", struct.target);
 			getContext().setVariable("DangerLastTime", (int)System.currentTimeMillis());
 			return Status.SUCCESS;

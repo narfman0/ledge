@@ -27,7 +27,7 @@ import com.blastedstudios.ledge.world.weapon.Melee;
 import com.blastedstudios.ledge.world.weapon.Weapon;
 
 public class NPC extends Being {
-	public enum AIFieldEnum{AI_WORLD, ATTACK_TICK, OBJECTIVE, SELF, WORLD, TURRET}
+	public enum AIFieldEnum{AI_WORLD, ALERT, ATTACK_TICK, OBJECTIVE, SELF, WORLD, TURRET, VISIBLE}
 	public enum DifficultyEnum{HARD, MEDIUM, EASY}
 	private static final long serialVersionUID = 1L;
 	private IContext context;
