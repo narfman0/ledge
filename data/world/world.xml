@@ -19894,45 +19894,37 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>petraExitPlatform</name>
-          <resource></resource>
+          <resource>data/textures/tiled/wood1.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-251.35027</x>
-            <y>124.24651</y>
+            <x>-252.00021</x>
+            <y>123.780815</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
             <maskBits>-1</maskBits>
             <groupIndex>0</groupIndex>
           </filter>
-          <repeatable>false</repeatable>
+          <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>2.1888885</x>
-              <y>0.8831558</y>
+              <x>3.1086426</x>
+              <y>-0.12758636</y>
             </Vector2>
             <Vector2>
-              <x>2.2377625</x>
-              <y>-0.5442352</y>
+              <x>-3.1086273</x>
+              <y>-0.15674591</y>
             </Vector2>
             <Vector2>
-              <x>-3.7585754</x>
-              <y>-0.62244415</y>
+              <x>-3.1086273</x>
+              <y>0.09744263</y>
             </Vector2>
             <Vector2>
-              <x>-3.7585754</x>
-              <y>-0.36825562</y>
-            </Vector2>
-            <Vector2>
-              <x>1.8629913</x>
-              <y>-0.2509308</y>
-            </Vector2>
-            <Vector2>
-              <x>1.2275085</x>
-              <y>0.90270996</y>
+              <x>3.1086426</x>
+              <y>0.1869049</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -20476,8 +20468,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-209.59955</x>
-            <y>132.02637</y>
+            <x>-218.39929</x>
+            <y>132.03133</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -20487,33 +20479,33 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-2.02565</x>
-              <y>-0.097229004</y>
+              <x>-15.626907</x>
+              <y>-0.9462738</y>
             </Vector2>
             <Vector2>
-              <x>2.1157074</x>
-              <y>-0.18365479</y>
+              <x>16.094559</x>
+              <y>0.67189026</y>
             </Vector2>
             <Vector2>
-              <x>2.0796967</x>
-              <y>0.1620636</y>
+              <x>16.149872</x>
+              <y>0.87101746</y>
             </Vector2>
             <Vector2>
-              <x>-2.1697083</x>
-              <y>0.11885071</y>
+              <x>-16.617554</x>
+              <y>-0.5966339</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
-          <name>Polygon-89</name>
-          <resource>data/textures/tiled/wood1.png</resource>
+          <name>Polygon-18</name>
+          <resource>data/textures/tiled/sand1.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-224.3524</x>
-            <y>131.71416</y>
+            <x>-342.80173</x>
+            <y>55.667988</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -20523,20 +20515,20 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-2.618103</x>
-              <y>0.29537964</y>
+              <x>0.9522095</x>
+              <y>0.18961334</y>
             </Vector2>
             <Vector2>
-              <x>-2.618103</x>
-              <y>-0.1700592</y>
+              <x>-0.98275757</x>
+              <y>0.23854446</y>
             </Vector2>
             <Vector2>
-              <x>2.6330261</x>
-              <y>-0.2416687</y>
+              <x>-0.9216614</x>
+              <y>-0.20184326</y>
             </Vector2>
             <Vector2>
-              <x>2.6031952</x>
-              <y>0.116363525</y>
+              <x>0.9522095</x>
+              <y>-0.22631073</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -24990,8 +24982,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>-198.87758</x>
-                <y>133.6078</y>
+                <x>-252.29254</x>
+                <y>124.380684</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
@@ -27895,7 +27887,7 @@
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
           <name>petraExit-0</name>
-          <prerequisites>petraLever1-0,petraLever2-0</prerequisites>
+          <prerequisites></prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.objectdistance.ObjectDistanceTrigger">
             <origin>player</origin>
@@ -27994,36 +27986,6 @@
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
-          <name>petraExit-1</name>
-          <prerequisites>petraExit-0</prerequisites>
-          <repeatable>false</repeatable>
-          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
-          <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
-            <name>petraExitPlatform</name>
-            <impulse>
-              <x>0.0</x>
-              <y>0.0</y>
-            </impulse>
-            <position>
-              <x>0.0</x>
-              <y>0.0</y>
-            </position>
-            <velocity>
-              <x>0.0</x>
-              <y>0.0</y>
-            </velocity>
-            <type>DynamicBody</type>
-            <torque>0.0</torque>
-            <angle>0.0</angle>
-            <hasPosition>false</hasPosition>
-            <hasVelocity>false</hasVelocity>
-            <hasAngle>false</hasAngle>
-            <relativePosition>true</relativePosition>
-            <relativeVelocity>true</relativeVelocity>
-            <relativeAngle>true</relativeAngle>
-          </manifestation>
-        </world.quest.GDXQuest>
-        <world.quest.GDXQuest>
           <name>petraLever2-2</name>
           <prerequisites>petraLever2-1</prerequisites>
           <repeatable>false</repeatable>
@@ -28059,33 +28021,75 @@
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
+          <name>petraExit-1</name>
+          <prerequisites>petraExit-0</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
+            <name>petraExitPlatform</name>
+            <impulse>
+              <x>0.0</x>
+              <y>0.0</y>
+            </impulse>
+            <position>
+              <x>0.0</x>
+              <y>0.0</y>
+            </position>
+            <velocity>
+              <x>0.0</x>
+              <y>0.0</y>
+            </velocity>
+            <type>DynamicBody</type>
+            <torque>0.0</torque>
+            <angle>0.0</angle>
+            <hasPosition>false</hasPosition>
+            <hasVelocity>false</hasVelocity>
+            <hasAngle>false</hasAngle>
+            <relativePosition>true</relativePosition>
+            <relativeVelocity>true</relativeVelocity>
+            <relativeAngle>true</relativeAngle>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
           <name>petraExit-2</name>
           <prerequisites>petraExit-1</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.time.TimeTrigger">
-            <time>1000</time>
+            <time>150</time>
           </trigger>
-          <manifestation class="plugin.quest.manifestation.wheeljoint.WheelJointManifestation">
-            <joint>
-              <name>petraColumn2Wheel</name>
-              <bodyA>petraExitPlatform</bodyA>
-              <bodyB>column1</bodyB>
-              <jointType>WheelJoint</jointType>
-              <collideConnected>false</collideConnected>
-              <dampingRatio>0.0</dampingRatio>
-              <frequencyHz>0.0</frequencyHz>
-              <maxMotorTorque>0.0</maxMotorTorque>
-              <motorSpeed>0.0</motorSpeed>
-              <enableMotor>false</enableMotor>
-              <anchor>
-                <x>-255.0</x>
-                <y>120.0</y>
-              </anchor>
-              <axis>
-                <x>1.0</x>
-                <y>0.0</y>
-              </axis>
-            </joint>
+          <manifestation class="plugin.quest.manifestation.bodyremove.BodyRemoveManifestation">
+            <name>petraExitPlatform</name>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>petraExit-3</name>
+          <prerequisites>petraExit-2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.bodyremove.BodyRemoveManifestation">
+            <name>column1</name>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>petraExit-4</name>
+          <prerequisites>petraExit-3</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.bodyremove.BodyRemoveManifestation">
+            <name>column2</name>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>petraExit-5</name>
+          <prerequisites>petraExit-4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.groupcreate.GroupCreateManifestation">
+            <path>data/world/groups/ledge2cart.xml</path>
+            <position>
+              <x>-252.3958</x>
+              <y>120.32692</y>
+            </position>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
@@ -28674,7 +28678,32 @@
         </world.GDXBackground>
       </backgrounds>
       <lights/>
-      <groups/>
+      <groups>
+        <world.group.GDXGroup>
+          <name>car</name>
+          <center>
+            <x>-251.90636</x>
+            <y>120.41306</y>
+          </center>
+          <circles class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>wheelF</string>
+              <string>wheelR</string>
+            </a>
+          </circles>
+          <polygons class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>body</string>
+            </a>
+          </polygons>
+          <joints class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>wheelFJoint</string>
+              <string>wheelRJoint</string>
+            </a>
+          </joints>
+        </world.group.GDXGroup>
+      </groups>
       <particles/>
       <sounds/>
       <animations class="linked-list"/>
