@@ -25,7 +25,7 @@ public class PhysicsManifestationHandlerPlugin implements	IPhysicsManifestationH
 		List<Body> bodies = world.matchPhysicsObject(manifestation.getName());
 		if(manifestation.getExecutor() != null){
 			Body body = manifestation.getExecutor().getPhysicsObject(manifestation.getName());
-			if(!bodies.contains(body))
+			if(body != null && !bodies.contains(body))
 				bodies.add(body);
 		}
 		for(Being being : world.matchBeings(manifestation.getName()))
