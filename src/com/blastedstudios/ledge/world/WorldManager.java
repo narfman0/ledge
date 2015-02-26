@@ -237,8 +237,13 @@ public class WorldManager implements IDeathCallback{
 			for(int i=0; i<count; i++)
 				vendorWeapons.add(WeaponFactory.generateGun(npcLevel, player.getLevel()));
 		}
-		NPC npc = new NPC(name, WeaponFactory.getGuns(npcData.get("Weapons")), 
-				new ArrayList<Weapon>(), Stats.parseNPCData(npcData), 0, cash, 
+		List<Weapon> weapons = WeaponFactory.getGuns(npcData.get("Weapons"));
+		int currentWeapon = 0;
+		for(int i=0; i<weapons.size(); i++)
+			if(!(weapons.get(i) instanceof Melee))
+				currentWeapon = i;
+		NPC npc = new NPC(name, weapons, 
+				new ArrayList<Weapon>(), Stats.parseNPCData(npcData), currentWeapon, cash, 
 				npcLevel, xp, npcData.get("Behavior"), level.getPath(npcData.get("Path")),
 				faction, factions, this, npcData.get("Resource"), npcData.get("RagdollResource"),
 				difficulty, aiWorld, npcData.getBool("Vendor"), vendorWeapons, npcData.getBool("boss"));

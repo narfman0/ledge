@@ -38,6 +38,9 @@
 		<Action name="Shoot">
 			<Parameter name="target" type="COORDINATE" />
 		</Action>
+		<Action name="SelectWeapon">
+			<Parameter name="target" type="COORDINATE" />
+		</Action>
 		<Action name="Stop" />
 		
 		<!-- Specific domain node(s) e.g. bosses -->

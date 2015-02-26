@@ -2,7 +2,7 @@
 //                   MACHINE GENERATED CODE                
 //                       DO NOT MODIFY                     
 //                                                         
-// Generated on 02/17/2015 00:51:36
+// Generated on 02/25/2015 17:32:15
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.trees;
 
@@ -34,6 +34,8 @@ public class EnemyAggressiveBT implements jbt.execution.core.IBTLibrary {
 										new com.blastedstudios.ledge.ai.bt.conditions.Alert(
 												null)),
 								new com.blastedstudios.ledge.ai.bt.actions.NotifyDanger(
+										null, null, "DangerTarget"),
+								new com.blastedstudios.ledge.ai.bt.actions.SelectWeapon(
 										null, null, "DangerTarget"),
 								new com.blastedstudios.ledge.ai.bt.actions.Shoot(
 										null, null, "DangerTarget"),

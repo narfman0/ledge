@@ -23,6 +23,11 @@
                       <Parameter name="target" fromcontext="true">DangerTarget</Parameter>
                     </Parameters>
                   </Node>
+                  <Node id="Node_46" name="SelectWeapon" type="Action">
+                    <Parameters>
+                      <Parameter name="target" fromcontext="true">DangerTarget</Parameter>
+                    </Parameters>
+                  </Node>
                   <Node id="Node_13" name="Shoot" type="Action">
                     <Parameters>
                       <Parameter name="target" fromcontext="true">DangerTarget</Parameter>
