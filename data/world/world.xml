@@ -26400,8 +26400,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>-215.31969</x>
-                <y>47.35884</y>
+                <x>-200.57063</x>
+                <y>120.2345</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
@@ -33853,6 +33853,24 @@
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
+            <x>-109.62055</x>
+            <y>68.72119</y>
+          </coordinates>
+          <texture>data/textures/desert/petra.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>2.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
             <x>-159.77045</x>
             <y>-10.440577</y>
           </coordinates>
@@ -34377,6 +34395,24 @@
             <y>0.0</y>
           </scissorLowerLeft>
           <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-77.75985</x>
+            <y>39.746964</y>
+          </coordinates>
+          <texture>data/textures/tiled/mudBrick2.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>3.0</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
         <world.GDXBackground>
