@@ -19884,37 +19884,57 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>petraExitPlatform</name>
-          <resource>data/textures/tiled/wood1.png</resource>
+          <resource>data/textures/desert/cartBody.png</resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-252.00021</x>
-            <y>123.780815</y>
+            <x>-252.11359</x>
+            <y>123.87307</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
             <maskBits>-1</maskBits>
             <groupIndex>0</groupIndex>
           </filter>
-          <repeatable>true</repeatable>
+          <repeatable>false</repeatable>
           <vertices>
             <Vector2>
-              <x>3.1086426</x>
-              <y>-0.12758636</y>
+              <x>-3.3590698</x>
+              <y>-0.778389</y>
             </Vector2>
             <Vector2>
-              <x>-3.1086273</x>
-              <y>-0.15674591</y>
+              <x>-2.7020264</x>
+              <y>0.7078934</y>
             </Vector2>
             <Vector2>
-              <x>-3.1086273</x>
-              <y>0.09744263</y>
+              <x>-2.1960144</x>
+              <y>0.7260208</y>
             </Vector2>
             <Vector2>
-              <x>3.1086426</x>
-              <y>0.1869049</y>
+              <x>-2.679367</x>
+              <y>-0.20743561</y>
+            </Vector2>
+            <Vector2>
+              <x>2.743103</x>
+              <y>-0.27993774</y>
+            </Vector2>
+            <Vector2>
+              <x>2.312622</x>
+              <y>0.54476166</y>
+            </Vector2>
+            <Vector2>
+              <x>2.7506561</x>
+              <y>0.54476166</y>
+            </Vector2>
+            <Vector2>
+              <x>3.226471</x>
+              <y>-0.687767</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.09651184</x>
+              <y>-0.5699539</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -20466,8 +20486,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-246.2702</x>
-            <y>127.31698</y>
+            <x>-246.3876</x>
+            <y>127.561745</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -20477,20 +20497,20 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-2.754013</x>
-              <y>-3.4049606</y>
+              <x>-3.0222778</x>
+              <y>-3.1177216</y>
             </Vector2>
             <Vector2>
-              <x>2.5662384</x>
-              <y>3.6302872</y>
+              <x>2.6836395</x>
+              <y>3.385521</y>
             </Vector2>
             <Vector2>
-              <x>2.8583221</x>
-              <y>3.4300003</y>
+              <x>2.9757233</x>
+              <y>3.185234</y>
             </Vector2>
             <Vector2>
-              <x>-2.6705627</x>
-              <y>-3.6553192</y>
+              <x>-2.6371155</x>
+              <y>-3.453041</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -26345,12 +26365,12 @@
           <collideConnected>false</collideConnected>
           <dampingRatio>0.5</dampingRatio>
           <frequencyHz>15.0</frequencyHz>
-          <maxMotorTorque>99.0</maxMotorTorque>
+          <maxMotorTorque>399.0</maxMotorTorque>
           <motorSpeed>2.0</motorSpeed>
           <enableMotor>true</enableMotor>
           <anchor>
-            <x>-216.97559</x>
-            <y>45.510677</y>
+            <x>-216.97696</x>
+            <y>45.508533</y>
           </anchor>
           <axis>
             <x>1.0</x>
@@ -26369,8 +26389,8 @@
           <motorSpeed>0.0</motorSpeed>
           <enableMotor>false</enableMotor>
           <anchor>
-            <x>-213.51868</x>
-            <y>45.477222</y>
+            <x>-213.52135</x>
+            <y>45.475903</y>
           </anchor>
           <axis>
             <x>1.0</x>
@@ -26388,8 +26408,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>-178.98737</x>
-                <y>120.70529</y>
+                <x>-236.65952</x>
+                <y>48.202904</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
@@ -29461,7 +29481,7 @@
           <prerequisites>petraExit-1</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.time.TimeTrigger">
-            <time>150</time>
+            <time>250</time>
           </trigger>
           <manifestation class="plugin.quest.manifestation.bodyremove.BodyRemoveManifestation">
             <name>petraExitPlatform</name>
