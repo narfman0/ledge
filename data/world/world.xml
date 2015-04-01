@@ -14100,77 +14100,77 @@
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
           <name>cart1Roof</name>
-          <resource>data/textures/tiled/mudBrick.png</resource>
+          <resource></resource>
           <density>1.0</density>
           <friction>0.5</friction>
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-227.04074</x>
-            <y>2.1453857</y>
+            <x>-227.08798</x>
+            <y>2.1102836</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
             <maskBits>-1</maskBits>
             <groupIndex>0</groupIndex>
           </filter>
-          <repeatable>true</repeatable>
+          <repeatable>false</repeatable>
           <vertices>
             <Vector2>
-              <x>1.8202362</x>
-              <y>1.5191648</y>
+              <x>1.636734</x>
+              <y>1.3057902</y>
             </Vector2>
             <Vector2>
-              <x>1.76828</x>
-              <y>2.2381587</y>
+              <x>1.5914154</x>
+              <y>2.3026845</y>
             </Vector2>
             <Vector2>
-              <x>-3.8946075</x>
-              <y>2.3077388</y>
+              <x>-3.7706604</x>
+              <y>2.266434</y>
             </Vector2>
             <Vector2>
-              <x>-4.180359</x>
-              <y>-1.7279053</y>
+              <x>-3.8386383</x>
+              <y>-1.4130135</y>
             </Vector2>
             <Vector2>
-              <x>1.404602</x>
-              <y>-1.6119385</y>
+              <x>1.3497467</x>
+              <y>-1.4039509</y>
             </Vector2>
             <Vector2>
-              <x>1.4565582</x>
-              <y>-2.2381592</y>
+              <x>1.2591248</x>
+              <y>-2.0292757</y>
             </Vector2>
             <Vector2>
-              <x>1.7423096</x>
-              <y>-2.284546</y>
+              <x>1.7424622</x>
+              <y>-2.074589</y>
             </Vector2>
             <Vector2>
-              <x>1.7942505</x>
-              <y>-0.61462414</y>
+              <x>1.7643585</x>
+              <y>-0.67151177</y>
             </Vector2>
             <Vector2>
-              <x>1.3266754</x>
-              <y>-0.5682374</y>
+              <x>1.3572998</x>
+              <y>-0.59737253</y>
             </Vector2>
             <Vector2>
-              <x>1.404602</x>
-              <y>-1.194458</y>
+              <x>1.372406</x>
+              <y>-1.0414437</y>
             </Vector2>
             <Vector2>
-              <x>-3.816681</x>
-              <y>-1.124878</y>
+              <x>-3.6045074</x>
+              <y>-1.0595691</y>
             </Vector2>
             <Vector2>
-              <x>-3.634842</x>
-              <y>1.9134517</y>
+              <x>-3.5818634</x>
+              <y>1.4961064</y>
             </Vector2>
             <Vector2>
-              <x>1.404602</x>
-              <y>1.8438718</y>
+              <x>1.3421936</x>
+              <y>1.6229842</y>
             </Vector2>
             <Vector2>
-              <x>1.404602</x>
-              <y>1.5423582</y>
+              <x>1.3799591</x>
+              <y>1.2967274</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -26408,8 +26408,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>-198.99557</x>
-                <y>134.1474</y>
+                <x>-226.36214</x>
+                <y>-3.1376135</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
@@ -35059,6 +35059,24 @@
             <y>18.27208</y>
           </coordinates>
           <texture>data/textures/desert/weaponLocker.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-228.14499</x>
+            <y>2.536739</y>
+          </coordinates>
+          <texture>data/textures/desert/baseTower.png</texture>
           <scissor>false</scissor>
           <scissorUpperRight>
             <x>0.0</x>
