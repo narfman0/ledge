@@ -26408,8 +26408,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>-226.36214</x>
-                <y>-3.1376135</y>
+                <x>-254.97568</x>
+                <y>10.726538</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
@@ -35077,6 +35077,24 @@
             <y>2.536739</y>
           </coordinates>
           <texture>data/textures/desert/baseTower.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-259.8466</x>
+            <y>14.381352</y>
+          </coordinates>
+          <texture>data/textures/desert/baseWest.png</texture>
           <scissor>false</scissor>
           <scissorUpperRight>
             <x>0.0</x>
