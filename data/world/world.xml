@@ -26408,8 +26408,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>-236.65952</x>
-                <y>48.202904</y>
+                <x>-198.99557</x>
+                <y>134.1474</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
@@ -33882,7 +33882,7 @@
             <x>-180.4</x>
             <y>104.8</y>
           </coordinates>
-          <texture>data/textures/tiled/mudBrick2.png</texture>
+          <texture>data/textures/tiled/mudBrick2Right.png</texture>
           <scissor>false</scissor>
           <scissorUpperRight>
             <x>0.0</x>
@@ -33951,8 +33951,62 @@
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
-            <x>-183.58586</x>
-            <y>107.546585</y>
+            <x>-180.4</x>
+            <y>84.4</y>
+          </coordinates>
+          <texture>data/textures/tiled/mudBrick2Right.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.5</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-119.2</x>
+            <y>104.8</y>
+          </coordinates>
+          <texture>data/textures/tiled/mudBrick2Left.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.5</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-119.120346</x>
+            <y>84.39194</y>
+          </coordinates>
+          <texture>data/textures/tiled/mudBrick2Left.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.5</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-183.75317</x>
+            <y>107.150116</y>
           </coordinates>
           <texture>data/textures/desert/petra.png</texture>
           <scissor>false</scissor>
@@ -33969,28 +34023,10 @@
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
-            <x>-381.0</x>
-            <y>48.0</y>
+            <x>-379.96234</x>
+            <y>47.89937</y>
           </coordinates>
-          <texture>data/textures/tiled/mudBrick2.png</texture>
-          <scissor>false</scissor>
-          <scissorUpperRight>
-            <x>0.0</x>
-            <y>0.0</y>
-          </scissorUpperRight>
-          <scissorLowerLeft>
-            <x>0.0</x>
-            <y>0.0</y>
-          </scissorLowerLeft>
-          <depth>1.15</depth>
-          <scale>0.02</scale>
-        </world.GDXBackground>
-        <world.GDXBackground>
-          <coordinates>
-            <x>-360.54123</x>
-            <y>47.991383</y>
-          </coordinates>
-          <texture>data/textures/tiled/mudBrick2.png</texture>
+          <texture>data/textures/tiled/mudBrick2Right.png</texture>
           <scissor>false</scissor>
           <scissorUpperRight>
             <x>0.0</x>
@@ -34459,6 +34495,42 @@
             <y>-5.5766387</y>
           </coordinates>
           <texture>data/textures/tiled/mudBrick2.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.15</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-360.4828</x>
+            <y>47.933243</y>
+          </coordinates>
+          <texture>data/textures/tiled/mudBrick2.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.15</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-120.3518</x>
+            <y>-5.53349</y>
+          </coordinates>
+          <texture>data/textures/tiled/mudBrick2Right.png</texture>
           <scissor>false</scissor>
           <scissorUpperRight>
             <x>0.0</x>
