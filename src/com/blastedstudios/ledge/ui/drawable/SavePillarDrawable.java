@@ -4,6 +4,7 @@ import java.util.LinkedList;
 
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Camera;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.Vector2;
@@ -18,7 +19,7 @@ public class SavePillarDrawable extends Drawable {
 	private final LinkedList<Vector2> pillarPositions = new LinkedList<>();
 	
 	public SavePillarDrawable(GDXLevel level, AssetManager sharedAssets){
-		sprite = new Sprite(sharedAssets.get("data/textures/savePillar.png"));
+		sprite = new Sprite(sharedAssets.get("data/textures/savePillar.png", Texture.class));
 		sprite.setScale(.02f);
 		for(GDXQuest quest : level.getQuests())
 			if(quest.getManifestation() instanceof BeingSpawnManifestation){
