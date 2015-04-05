@@ -26408,8 +26408,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>-254.97568</x>
-                <y>10.726538</y>
+                <x>260.7209</x>
+                <y>-0.8279743</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
@@ -50008,8 +50008,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>-554.55066</x>
-                <y>31.622162</y>
+                <x>-59.51099</x>
+                <y>-10.213286</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
@@ -56933,6 +56933,132 @@
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
+            <x>-790.83655</x>
+            <y>-20.823015</y>
+          </coordinates>
+          <texture>data/textures/forest/westBaseTower.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-857.4091</x>
+            <y>-18.402943</y>
+          </coordinates>
+          <texture>data/textures/forest/westBaseMiddle.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-908.6928</x>
+            <y>-17.545063</y>
+          </coordinates>
+          <texture>data/textures/forest/westBaseResearch.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-913.7054</x>
+            <y>-20.601294</y>
+          </coordinates>
+          <texture>data/textures/home/workbench.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-864.56805</x>
+            <y>-12.198134</y>
+          </coordinates>
+          <texture>data/textures/desert/serverRack1.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-863.07825</x>
+            <y>-12.251236</y>
+          </coordinates>
+          <texture>data/textures/desert/serverRack2.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-862.84216</x>
+            <y>-26.234663</y>
+          </coordinates>
+          <texture>data/textures/desert/serverRack2.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
             <x>-573.36633</x>
             <y>39.22073</y>
           </coordinates>
@@ -56947,6 +57073,42 @@
             <y>0.0</y>
           </scissorLowerLeft>
           <depth>0.9999999</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-909.6678</x>
+            <y>-19.886095</y>
+          </coordinates>
+          <texture>data/textures/desert/serverRack1.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>0.99999</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-861.24915</x>
+            <y>-26.252363</y>
+          </coordinates>
+          <texture>data/textures/desert/serverRack1.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>0.9999</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
         <world.GDXBackground>
