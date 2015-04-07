@@ -32,15 +32,15 @@ rarm
   index: -1
 lleg
   rotate: false
-  xy: 139, 140
-  size: 117, 148
-  orig: 117, 148
+  xy: 144, 152
+  size: 117, 136
+  orig: 117, 136
   offset: 0, 0
   index: -1
 rleg
   rotate: false
-  xy: 139, 140
-  size: 117, 148
-  orig: 117, 148
+  xy: 261, 151
+  size: 123, 137
+  orig: 123, 137
   offset: 0, 0
   index: -1
