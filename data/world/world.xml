@@ -75853,8 +75853,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>16.877876</x>
-            <y>-5.141614</y>
+            <x>14.807969</x>
+            <y>-5.266305</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -75864,96 +75864,96 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-52.555794</x>
-              <y>19.669498</y>
+              <x>-50.485886</x>
+              <y>19.79419</y>
             </Vector2>
             <Vector2>
-              <x>-56.745068</x>
-              <y>8.492443</y>
+              <x>-54.67516</x>
+              <y>8.617134</y>
             </Vector2>
             <Vector2>
-              <x>-67.75777</x>
-              <y>-5.1855354</y>
+              <x>-65.68786</x>
+              <y>-5.0608444</y>
             </Vector2>
             <Vector2>
-              <x>-61.2978</x>
-              <y>-5.5151253</y>
+              <x>-59.22789</x>
+              <y>-5.3904343</y>
             </Vector2>
             <Vector2>
-              <x>-21.861277</x>
-              <y>-5.130603</y>
+              <x>-19.79137</x>
+              <y>-5.005912</y>
             </Vector2>
             <Vector2>
-              <x>-20.81538</x>
-              <y>-5.6249876</y>
+              <x>-18.745472</x>
+              <y>-5.5002966</y>
             </Vector2>
             <Vector2>
-              <x>-13.61714</x>
-              <y>-5.6799192</y>
+              <x>-11.547233</x>
+              <y>-5.555228</y>
             </Vector2>
             <Vector2>
-              <x>-10.417917</x>
-              <y>-5.9545774</y>
+              <x>-8.34801</x>
+              <y>-5.8298864</y>
             </Vector2>
             <Vector2>
-              <x>-5.865183</x>
-              <y>-5.9545774</y>
+              <x>-3.7952757</x>
+              <y>-5.8298864</y>
             </Vector2>
             <Vector2>
-              <x>7.485403</x>
-              <y>-5.4601927</y>
+              <x>9.55531</x>
+              <y>-5.3355017</y>
             </Vector2>
             <Vector2>
-              <x>23.35846</x>
-              <y>-5.240466</y>
+              <x>25.428368</x>
+              <y>-5.115775</y>
             </Vector2>
             <Vector2>
-              <x>25.14264</x>
-              <y>-5.6799192</y>
+              <x>27.212547</x>
+              <y>-5.555228</y>
             </Vector2>
             <Vector2>
-              <x>27.172913</x>
-              <y>-5.240466</y>
+              <x>29.24282</x>
+              <y>-5.115775</y>
             </Vector2>
             <Vector2>
-              <x>644.46106</x>
-              <y>-4.01974</y>
+              <x>646.53094</x>
+              <y>-3.895049</y>
             </Vector2>
             <Vector2>
-              <x>72.34284</x>
-              <y>-41.33402</y>
+              <x>74.41275</x>
+              <y>-41.209328</y>
             </Vector2>
             <Vector2>
-              <x>-76.344536</x>
-              <y>-39.89838</y>
+              <x>-74.27463</x>
+              <y>-39.77369</y>
             </Vector2>
             <Vector2>
-              <x>-68.36962</x>
-              <y>12.463774</y>
+              <x>-113.90752</x>
+              <y>9.720573</y>
             </Vector2>
             <Vector2>
-              <x>-61.4227</x>
-              <y>15.816537</y>
+              <x>-59.35279</x>
+              <y>15.941228</y>
             </Vector2>
             <Vector2>
-              <x>-58.04312</x>
-              <y>20.007488</y>
+              <x>-55.973213</x>
+              <y>20.13218</y>
             </Vector2>
             <Vector2>
-              <x>-58.230873</x>
-              <y>15.816537</y>
+              <x>-56.160965</x>
+              <y>15.941228</y>
             </Vector2>
             <Vector2>
-              <x>-55.2268</x>
-              <y>20.510399</y>
+              <x>-53.15689</x>
+              <y>20.63509</y>
             </Vector2>
             <Vector2>
-              <x>-56.353325</x>
-              <y>16.990002</y>
+              <x>-54.283417</x>
+              <y>17.114693</y>
             </Vector2>
             <Vector2>
-              <x>-55.03904</x>
-              <y>16.151814</y>
+              <x>-52.96913</x>
+              <y>16.276505</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -76329,8 +76329,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-33.71521</x>
-            <y>48.960144</y>
+            <x>-33.312683</x>
+            <y>48.41316</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -76340,16 +76340,20 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-0.80142975</x>
-              <y>-2.0730286</y>
+              <x>0.70365524</x>
+              <y>-2.1933022</y>
             </Vector2>
             <Vector2>
-              <x>1.2555733</x>
-              <y>0.6518326</y>
+              <x>0.8203354</x>
+              <y>1.3770561</y>
             </Vector2>
             <Vector2>
-              <x>-0.45414352</x>
-              <y>1.4212036</y>
+              <x>-0.8566704</x>
+              <y>1.9681892</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.66731644</x>
+              <y>-1.151947</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -76361,8 +76365,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-33.71521</x>
-            <y>55.489132</y>
+            <x>-33.581818</x>
+            <y>54.161438</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -76372,16 +76376,20 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-0.4274292</x>
-              <y>-4.5948677</y>
+              <x>0.2577095</x>
+              <y>-3.7357597</y>
             </Vector2>
             <Vector2>
-              <x>0.6144295</x>
-              <y>2.1692047</y>
+              <x>0.48103714</x>
+              <y>3.4968987</y>
             </Vector2>
             <Vector2>
-              <x>-0.18700027</x>
-              <y>2.425663</y>
+              <x>-0.3203926</x>
+              <y>3.753357</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.41835022</x>
+              <y>-3.5145035</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -76393,8 +76401,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-33.982353</x>
-            <y>62.498978</y>
+            <x>-33.844147</x>
+            <y>62.684174</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -76404,20 +76412,20 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>0.026714325</x>
-              <y>-3.9109802</y>
+              <x>-0.11149216</x>
+              <y>-4.096176</y>
             </Vector2>
             <Vector2>
-              <x>-0.37400055</x>
-              <y>3.6865768</y>
+              <x>-0.9463043</x>
+              <y>4.261421</y>
             </Vector2>
             <Vector2>
-              <x>-0.026714325</x>
-              <y>4.3597794</y>
+              <x>0.3526764</x>
+              <y>4.201004</y>
             </Vector2>
             <Vector2>
-              <x>0.37400055</x>
-              <y>-4.1353836</y>
+              <x>0.7051163</x>
+              <y>-4.366249</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -79066,10 +79074,18 @@
         <world.GDXBackground>
           <coordinates>
             <x>-1.0</x>
-            <y>3.5</y>
+            <y>16.0</y>
           </coordinates>
           <texture>data/textures/ledge5/ledge5BackgroundBase.png</texture>
           <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
           <depth>6.0</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
@@ -79083,10 +79099,257 @@
           <depth>1.0</depth>
           <scale>0.05</scale>
         </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-28.685848</x>
+            <y>47.84342</y>
+          </coordinates>
+          <texture>data/textures/ledge4/deadTree1.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-28.494896</x>
+            <y>30.703722</y>
+          </coordinates>
+          <texture>data/textures/ledge4/deadTree2.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-35.770107</x>
+            <y>46.056114</y>
+          </coordinates>
+          <texture>data/textures/ledge4/deadTree3.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-18.202679</x>
+            <y>40.900467</y>
+          </coordinates>
+          <texture>data/textures/ledge4/deadTree3.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-20.093084</x>
+            <y>32.651413</y>
+          </coordinates>
+          <texture>data/textures/ledge4/deadTree4.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-18.903675</x>
+            <y>14.21842</y>
+          </coordinates>
+          <texture>data/textures/ledge4/deadTree2.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-36.133945</x>
+            <y>29.32288</y>
+          </coordinates>
+          <texture>data/textures/ledge4/deadTree3.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-42.416374</x>
+            <y>-8.34122</y>
+          </coordinates>
+          <texture>data/textures/ledge4/burnedHouse1.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>28.985683</x>
+            <y>-8.413207</y>
+          </coordinates>
+          <texture>data/textures/ledge4/deadTree4.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>55.541943</x>
+            <y>-8.0412035</y>
+          </coordinates>
+          <texture>data/textures/ledge4/deadTree2.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>41.91752</x>
+            <y>-8.423971</y>
+          </coordinates>
+          <texture>data/textures/ledge4/deadTree1.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
       </backgrounds>
       <lights/>
       <groups/>
-      <particles/>
+      <particles>
+        <world.GDXParticle>
+          <name>fog</name>
+          <effectFile>data/particles/redFog.p</effectFile>
+          <imagesDir>data/particles</imagesDir>
+          <emitterName>fog</emitterName>
+          <attachedBody></attachedBody>
+          <duration>-1</duration>
+          <position>
+            <x>-30.2875</x>
+            <y>-8.960724</y>
+          </position>
+        </world.GDXParticle>
+        <world.GDXParticle>
+          <name>fog2</name>
+          <effectFile>data/particles/redFog.p</effectFile>
+          <imagesDir>data/particles</imagesDir>
+          <emitterName>fog</emitterName>
+          <attachedBody></attachedBody>
+          <duration>-1</duration>
+          <position>
+            <x>1.6254168</x>
+            <y>-8.917265</y>
+          </position>
+        </world.GDXParticle>
+        <world.GDXParticle>
+          <name>fog3</name>
+          <effectFile>data/particles/redFog.p</effectFile>
+          <imagesDir>data/particles</imagesDir>
+          <emitterName>fog</emitterName>
+          <attachedBody></attachedBody>
+          <duration>-1</duration>
+          <position>
+            <x>24.799698</x>
+            <y>-8.41033</y>
+          </position>
+        </world.GDXParticle>
+        <world.GDXParticle>
+          <name>fog4</name>
+          <effectFile>data/particles/redFog.p</effectFile>
+          <imagesDir>data/particles</imagesDir>
+          <emitterName>fog</emitterName>
+          <attachedBody></attachedBody>
+          <duration>-1</duration>
+          <position>
+            <x>45.077206</x>
+            <y>-8.410331</y>
+          </position>
+        </world.GDXParticle>
+      </particles>
       <sounds/>
       <animations class="linked-list"/>
       <metadata>
