@@ -5,15 +5,15 @@ repeat: none
 head
   rotate: false
   xy: 0, 0
-  size: 122, 119
-  orig: 122, 119
+  size: 122, 115
+  orig: 122, 115
   offset: 0, 0
   index: -1
 torso
   rotate: false
-  xy: 0, 126
-  size: 119, 151
-  orig: 119, 151
+  xy: 0, 116
+  size: 140, 171
+  orig: 140, 171
   offset: 0, 0
   index: -1
 larm
@@ -33,14 +33,14 @@ rarm
 lleg
   rotate: false
   xy: 139, 140
-  size: 117, 140
-  orig: 117, 140
+  size: 117, 148
+  orig: 117, 148
   offset: 0, 0
   index: -1
 rleg
   rotate: false
   xy: 139, 140
-  size: 117, 140
-  orig: 117, 140
+  size: 117, 148
+  orig: 117, 148
   offset: 0, 0
   index: -1
