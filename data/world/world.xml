@@ -13405,7 +13405,20 @@
           </world.metadata.CameraShot>
         </cameraShots>
       </metadata>
-      <properties/>
+      <properties>
+        <entry>
+          <string>Prerequisites</string>
+          <string></string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Introduction to Ledge and beginning of the journey</string>
+        </entry>
+        <entry>
+          <string>Level</string>
+          <string>1</string>
+        </entry>
+      </properties>
       <lightAmbient>-437918337</lightAmbient>
     </world.GDXLevel>
     <world.GDXLevel>
@@ -35207,7 +35220,7 @@
         </entry>
         <entry>
           <string>Description</string>
-          <string></string>
+          <string>Fleeing his home ledge, the player receives kindness from a stranger, but meets a new power</string>
         </entry>
         <entry>
           <string>Level</string>
@@ -57676,7 +57689,7 @@
         </entry>
         <entry>
           <string>Description</string>
-          <string></string>
+          <string>After witnessing an unknown entity flex its strength on a peaceful people group, the player seeks retribution</string>
         </entry>
         <entry>
           <string>Level</string>
@@ -75574,11 +75587,11 @@
         </entry>
         <entry>
           <string>Description</string>
-          <string>Near Dead</string>
+          <string>After resting in solitude in the forest, the player approaches a ledge mined of its resources and searches deep for why</string>
         </entry>
         <entry>
           <string>Level</string>
-          <string>6</string>
+          <string>7</string>
         </entry>
       </properties>
       <lightAmbient>-437918337</lightAmbient>
@@ -79385,11 +79398,11 @@
         </entry>
         <entry>
           <string>Description</string>
-          <string></string>
+          <string>Falling to dismal circumstances, the player confronts an evil</string>
         </entry>
         <entry>
           <string>Level</string>
-          <string>7</string>
+          <string>8</string>
         </entry>
       </properties>
       <lightAmbient>-437918337</lightAmbient>
@@ -79400,6 +79413,7 @@
         <x>1.666667</x>
         <y>1.1199998</y>
       </coordinates>
+      <tiles/>
       <circles/>
       <polygons>
         <world.shape.GDXPolygon>
@@ -80681,6 +80695,7 @@
       <groups/>
       <particles/>
       <sounds/>
+      <animations class="linked-list"/>
       <metadata>
         <cameraShots/>
       </metadata>
@@ -80691,11 +80706,11 @@
         </entry>
         <entry>
           <string>Description</string>
-          <string></string>
+          <string>The player is flown to a familiar ledge for so much needed recuperation</string>
         </entry>
         <entry>
           <string>Level</string>
-          <string>8</string>
+          <string>9</string>
         </entry>
       </properties>
       <lightAmbient>-437918337</lightAmbient>
@@ -81222,7 +81237,7 @@
       <properties class="tree-map">
         <entry>
           <string>Description</string>
-          <string></string>
+          <string>Mysterious advanced powerful clandestine group chats about options</string>
         </entry>
         <entry>
           <string>Level</string>
@@ -82747,7 +82762,7 @@
       <properties class="tree-map">
         <entry>
           <string>Description</string>
-          <string></string>
+          <string>Enter a new interesting character</string>
         </entry>
         <entry>
           <string>Level</string>
@@ -83802,7 +83817,20 @@
           </world.metadata.CameraShot>
         </cameraShots>
       </metadata>
-      <properties class="tree-map"/>
+      <properties>
+        <entry>
+          <string>Prerequisites</string>
+          <string></string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Fly from the lonely forest ledge to new grounds</string>
+        </entry>
+        <entry>
+          <string>Level</string>
+          <string>6</string>
+        </entry>
+      </properties>
       <lightAmbient>-437918337</lightAmbient>
     </world.GDXLevel>
   </levels>
