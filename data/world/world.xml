@@ -83869,6 +83869,144 @@
       </properties>
       <lightAmbient>-437918337</lightAmbient>
     </world.GDXLevel>
+    <world.GDXLevel>
+      <name>End</name>
+      <coordinates>
+        <x>9.799997</x>
+        <y>9.359998</y>
+      </coordinates>
+      <tiles/>
+      <circles/>
+      <polygons/>
+      <npcs/>
+      <paths/>
+      <joints/>
+      <quests>
+        <world.quest.GDXQuest>
+          <name>camera1</name>
+          <prerequisites></prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.cameratween.CameraTweenManifestation">
+            <target>
+              <x>10.682664</x>
+              <y>21.51247</y>
+            </target>
+            <duration>0.0</duration>
+            <tweenType>CubicInOut</tweenType>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>camera2</name>
+          <prerequisites>camera1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.cameratween.CameraTweenManifestation">
+            <target>
+              <x>-0.36596763</x>
+              <y>7.8345447</y>
+            </target>
+            <duration>2.0</duration>
+            <tweenType>CubicInOut</tweenType>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>camera3</name>
+          <prerequisites>camera2</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>2000</time>
+          </trigger>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>You have reached the end of the current Ledge content!</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>camera4</name>
+          <prerequisites>camera3</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
+            <dialog>While this version contains 5 levels, 21 exist in the script. Blasted Studios thanks you for playing and hopes to bring the rest of the content quickly for free.</dialog>
+            <origin></origin>
+            <type></type>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>camera5</name>
+          <prerequisites>camera4</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="plugin.quest.manifestation.endlevel.EndLevelManifestation">
+            <success>true</success>
+            <nextLevel></nextLevel>
+          </manifestation>
+        </world.quest.GDXQuest>
+      </quests>
+      <backgrounds>
+        <world.GDXBackground>
+          <coordinates>
+            <x>0.0</x>
+            <y>0.0</y>
+          </coordinates>
+          <texture>data/textures/central/centralCityscape.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>10.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>0.26666832</x>
+            <y>8.5599985</y>
+          </coordinates>
+          <texture>data/textures/central/centralMeeting.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+      </backgrounds>
+      <lights/>
+      <groups/>
+      <particles/>
+      <sounds/>
+      <animations class="linked-list"/>
+      <metadata>
+        <cameraShots/>
+      </metadata>
+      <properties class="tree-map">
+        <entry>
+          <string>Description</string>
+          <string>End of current version of game</string>
+        </entry>
+        <entry>
+          <string>Level</string>
+          <string>9</string>
+        </entry>
+        <entry>
+          <string>Prerequisites</string>
+          <string>Dead</string>
+        </entry>
+      </properties>
+      <lightAmbient>-437918337</lightAmbient>
+    </world.GDXLevel>
   </levels>
   <worldProperties>
     <entry>
