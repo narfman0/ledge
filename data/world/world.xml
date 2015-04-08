@@ -36143,54 +36143,6 @@
           </vertices>
         </world.shape.GDXPolygon>
         <world.shape.GDXPolygon>
-          <name>Polygon-260</name>
-          <resource>data/textures/tiled/forest1.png</resource>
-          <density>1.0</density>
-          <friction>0.5</friction>
-          <restitution>0.3</restitution>
-          <bodyType>StaticBody</bodyType>
-          <center>
-            <x>-609.84015</x>
-            <y>-25.023813</y>
-          </center>
-          <filter>
-            <categoryBits>1</categoryBits>
-            <maskBits>-1</maskBits>
-            <groupIndex>0</groupIndex>
-          </filter>
-          <repeatable>true</repeatable>
-          <vertices>
-            <Vector2>
-              <x>-2.6155396</x>
-              <y>-1.3839264</y>
-            </Vector2>
-            <Vector2>
-              <x>3.4437866</x>
-              <y>-1.4620514</y>
-            </Vector2>
-            <Vector2>
-              <x>1.8250732</x>
-              <y>0.7254486</y>
-            </Vector2>
-            <Vector2>
-              <x>1.1906738</x>
-              <y>1.0574799</y>
-            </Vector2>
-            <Vector2>
-              <x>-0.034301758</x>
-              <y>1.0184174</y>
-            </Vector2>
-            <Vector2>
-              <x>-1.4561768</x>
-              <y>0.4129486</y>
-            </Vector2>
-            <Vector2>
-              <x>-2.3530884</x>
-              <y>-0.3683014</y>
-            </Vector2>
-          </vertices>
-        </world.shape.GDXPolygon>
-        <world.shape.GDXPolygon>
           <name>Polygon-267</name>
           <resource>data/textures/tiled/forest1.png</resource>
           <density>1.0</density>
@@ -36198,8 +36150,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-617.7744</x>
-            <y>-18.567337</y>
+            <x>-614.33545</x>
+            <y>-16.238234</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -36730,8 +36682,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-525.28436</x>
-            <y>26.224478</y>
+            <x>-526.1901</x>
+            <y>26.2833</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -36741,60 +36693,60 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>-16.385742</x>
-              <y>0.7559681</y>
+              <x>-17.140625</x>
+              <y>0.27732468</y>
             </Vector2>
             <Vector2>
-              <x>-12.620483</x>
-              <y>1.0049915</y>
+              <x>-11.714722</x>
+              <y>0.9461689</y>
             </Vector2>
             <Vector2>
-              <x>-10.528687</x>
-              <y>0.7559681</y>
+              <x>-9.622925</x>
+              <y>0.69714546</y>
             </Vector2>
             <Vector2>
-              <x>-5.5548706</x>
-              <y>1.0049915</y>
+              <x>-4.649109</x>
+              <y>0.9461689</y>
             </Vector2>
             <Vector2>
-              <x>-2.5333862</x>
-              <y>1.0049915</y>
+              <x>-1.6276245</x>
+              <y>0.9461689</y>
             </Vector2>
             <Vector2>
-              <x>3.4630737</x>
-              <y>-0.5721569</y>
+              <x>4.3688354</x>
+              <y>-0.63097954</y>
             </Vector2>
             <Vector2>
-              <x>6.71698</x>
-              <y>-0.5721569</y>
+              <x>7.6227417</x>
+              <y>-0.63097954</y>
             </Vector2>
             <Vector2>
-              <x>13.736145</x>
-              <y>0.7144642</y>
+              <x>14.509399</x>
+              <y>1.5662403</y>
             </Vector2>
             <Vector2>
-              <x>14.6658325</x>
-              <y>0.6729603</y>
+              <x>15.046448</x>
+              <y>1.5447598</y>
             </Vector2>
             <Vector2>
-              <x>11.644348</x>
-              <y>-0.6551647</y>
+              <x>12.55011</x>
+              <y>-0.71398735</y>
             </Vector2>
             <Vector2>
-              <x>6.6240234</x>
-              <y>-1.9002819</y>
+              <x>7.529785</x>
+              <y>-1.9591045</y>
             </Vector2>
             <Vector2>
-              <x>3.834961</x>
-              <y>-2.1908092</y>
+              <x>4.7407227</x>
+              <y>-2.249632</y>
             </Vector2>
             <Vector2>
-              <x>-3.6954956</x>
-              <y>0.008897781</y>
+              <x>-2.789734</x>
+              <y>-0.04992485</y>
             </Vector2>
             <Vector2>
-              <x>-9.366577</x>
-              <y>-0.032606125</y>
+              <x>-18.823364</x>
+              <y>-0.68935966</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -57152,6 +57104,24 @@
         </world.GDXBackground>
         <world.GDXBackground>
           <coordinates>
+            <x>-661.1436</x>
+            <y>-30.211826</y>
+          </coordinates>
+          <texture>data/textures/forest/treeTop1.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>0.999</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
             <x>-515.6405</x>
             <y>22.539406</y>
           </coordinates>
@@ -71900,8 +71870,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>26.61876</x>
-                <y>-140.52759</y>
+                <x>25.959476</x>
+                <y>-141.35965</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
@@ -78023,8 +77993,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>24.21061</x>
-                <y>-7.0800815</y>
+                <x>-28.958073</x>
+                <y>45.96531</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
@@ -83796,6 +83766,60 @@
             <y>0.0</y>
           </scissorLowerLeft>
           <depth>30.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>4.071095</x>
+            <y>6.8976583</y>
+          </coordinates>
+          <texture>data/textures/forest/westBaseMiddle.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-2.886979</x>
+            <y>13.063983</y>
+          </coordinates>
+          <texture>data/textures/desert/serverRack1.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
+          <scale>0.02</scale>
+        </world.GDXBackground>
+        <world.GDXBackground>
+          <coordinates>
+            <x>-1.1783857</x>
+            <y>13.063983</y>
+          </coordinates>
+          <texture>data/textures/desert/serverRack2.png</texture>
+          <scissor>false</scissor>
+          <scissorUpperRight>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorUpperRight>
+          <scissorLowerLeft>
+            <x>0.0</x>
+            <y>0.0</y>
+          </scissorLowerLeft>
+          <depth>1.0</depth>
           <scale>0.02</scale>
         </world.GDXBackground>
       </backgrounds>
