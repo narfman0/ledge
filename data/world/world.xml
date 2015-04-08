@@ -77994,8 +77994,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>-29.97776</x>
-                <y>45.735416</y>
+                <x>24.21061</x>
+                <y>-7.0800815</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>
@@ -79074,7 +79074,7 @@
         <world.GDXBackground>
           <coordinates>
             <x>-1.0</x>
-            <y>16.0</y>
+            <y>15.0</y>
           </coordinates>
           <texture>data/textures/ledge5/ledge5BackgroundBase.png</texture>
           <scissor>false</scissor>

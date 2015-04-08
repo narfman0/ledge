@@ -19,15 +19,15 @@ torso
 larm
   rotate: false
   xy: 116, 0
-  size: 209, 52
-  orig: 209, 52
+  size: 257, 58
+  orig: 257, 58
   offset: 0, 0
   index: -1
 rarm
   rotate: false
   xy: 117, 0
-  size: 165, 52
-  orig: 165, 52
+  size: 257, 58
+  orig: 257, 58
   offset: 0, 0
   index: -1
 lleg
