@@ -54,6 +54,9 @@ public class Player extends Being {
 		//so this catches the case if he goes back and replays stuff
 		if(isLevelCompleted(level.getName()))
 			return true;
+		String active = level.getProperties().get("Active");
+		if(active != null && !Boolean.parseBoolean(active))
+			return false;
 		String prerequisies = level.getProperties().get("Prerequisites");
 		if(prerequisies != null)
 			for(String prereq : prerequisies.split(","))

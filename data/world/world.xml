@@ -13411,6 +13411,10 @@
           <string></string>
         </entry>
         <entry>
+          <string>Active</string>
+          <string>true</string>
+        </entry>
+        <entry>
           <string>Description</string>
           <string>Introduction to Ledge and beginning of the journey</string>
         </entry>
@@ -35217,6 +35221,10 @@
         <entry>
           <string>Prerequisites</string>
           <string>Interlude1</string>
+        </entry>
+        <entry>
+          <string>Active</string>
+          <string>true</string>
         </entry>
         <entry>
           <string>Description</string>
@@ -57688,6 +57696,10 @@
           <string>Interlude2</string>
         </entry>
         <entry>
+          <string>Active</string>
+          <string>true</string>
+        </entry>
+        <entry>
           <string>Description</string>
           <string>After witnessing an unknown entity flex its strength on a peaceful people group, the player seeks retribution</string>
         </entry>
@@ -75586,6 +75598,10 @@
           <string>Forest</string>
         </entry>
         <entry>
+          <string>Active</string>
+          <string>true</string>
+        </entry>
+        <entry>
           <string>Description</string>
           <string>After resting in solitude in the forest, the player approaches a ledge mined of its resources and searches deep for why</string>
         </entry>
@@ -79397,6 +79413,10 @@
           <string>NearDead</string>
         </entry>
         <entry>
+          <string>Active</string>
+          <string>true</string>
+        </entry>
+        <entry>
           <string>Description</string>
           <string>Falling to dismal circumstances, the player confronts an evil</string>
         </entry>
@@ -80705,6 +80725,10 @@
           <string>Dead</string>
         </entry>
         <entry>
+          <string>Active</string>
+          <string>false</string>
+        </entry>
+        <entry>
           <string>Description</string>
           <string>The player is flown to a familiar ledge for so much needed recuperation</string>
         </entry>
@@ -81235,6 +81259,10 @@
         </cameraShots>
       </metadata>
       <properties class="tree-map">
+        <entry>
+          <string>Active</string>
+          <string>true</string>
+        </entry>
         <entry>
           <string>Description</string>
           <string>Mysterious advanced powerful clandestine group chats about options</string>
@@ -82761,6 +82789,10 @@
       </metadata>
       <properties class="tree-map">
         <entry>
+          <string>Active</string>
+          <string>true</string>
+        </entry>
+        <entry>
           <string>Description</string>
           <string>Enter a new interesting character</string>
         </entry>
@@ -83821,6 +83853,10 @@
         <entry>
           <string>Prerequisites</string>
           <string></string>
+        </entry>
+        <entry>
+          <string>Active</string>
+          <string>true</string>
         </entry>
         <entry>
           <string>Description</string>
