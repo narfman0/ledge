@@ -84013,7 +84013,30 @@
       <sounds/>
       <animations class="linked-list"/>
       <metadata>
-        <cameraShots/>
+        <cameraShots>
+          <world.metadata.CameraShot>
+            <position>
+              <x>-12.543751</x>
+              <y>20.587502</y>
+            </position>
+            <velocity>
+              <x>1.0</x>
+              <y>0.0</y>
+            </velocity>
+            <name>Shot-1</name>
+          </world.metadata.CameraShot>
+          <world.metadata.CameraShot>
+            <position>
+              <x>12.656252</x>
+              <y>10.597502</y>
+            </position>
+            <velocity>
+              <x>-1.0</x>
+              <y>0.0</y>
+            </velocity>
+            <name>Shot-2</name>
+          </world.metadata.CameraShot>
+        </cameraShots>
       </metadata>
       <properties class="tree-map">
         <entry>
