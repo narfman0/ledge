@@ -6,8 +6,8 @@
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.conditions;
 
-/** ModelCondition class created from MMPM condition IsCooldown. */
-public class IsCooldown extends jbt.model.task.leaf.condition.ModelCondition {
+/** ModelCondition class created from MMPM condition IsOffCooldown. */
+public class IsOffCooldown extends jbt.model.task.leaf.condition.ModelCondition {
 	/**
 	 * Value of the parameter "identifier" in case its value is specified at
 	 * construction time. null otherwise.
@@ -20,7 +20,7 @@ public class IsCooldown extends jbt.model.task.leaf.condition.ModelCondition {
 	private java.lang.String identifierLoc;
 
 	/**
-	 * Constructor. Constructs an instance of IsCooldown.
+	 * Constructor. Constructs an instance of IsOffCooldown.
 	 * 
 	 * @param identifier
 	 *            value of the parameter "identifier", or null in case it should
@@ -31,7 +31,7 @@ public class IsCooldown extends jbt.model.task.leaf.condition.ModelCondition {
 	 *            represents the place in the context where the parameter's
 	 *            value will be retrieved from.
 	 */
-	public IsCooldown(jbt.model.core.ModelTask guard,
+	public IsOffCooldown(jbt.model.core.ModelTask guard,
 			java.lang.String identifier, java.lang.String identifierLoc) {
 		super(guard);
 		this.identifier = identifier;
@@ -39,13 +39,13 @@ public class IsCooldown extends jbt.model.task.leaf.condition.ModelCondition {
 	}
 
 	/**
-	 * Returns a com.blastedstudios.ledge.ai.bt.conditions.execution.IsCooldown
+	 * Returns a com.blastedstudios.ledge.ai.bt.conditions.execution.IsOffCooldown
 	 * task that is able to run this task.
 	 */
 	public jbt.execution.core.ExecutionTask createExecutor(
 			jbt.execution.core.BTExecutor executor,
 			jbt.execution.core.ExecutionTask parent) {
-		return new com.blastedstudios.ledge.ai.bt.conditions.execution.IsCooldown(
+		return new com.blastedstudios.ledge.ai.bt.conditions.execution.IsOffCooldown(
 				this, executor, parent, this.identifier, this.identifierLoc);
 	}
 }

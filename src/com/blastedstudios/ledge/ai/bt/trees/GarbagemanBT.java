@@ -2,7 +2,7 @@
 //                   MACHINE GENERATED CODE                
 //                       DO NOT MODIFY                     
 //                                                         
-// Generated on 02/17/2015 00:51:36
+// Generated on 04/09/2015 00:22:50
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.trees;
 
@@ -31,24 +31,28 @@ public class GarbagemanBT implements jbt.execution.core.IBTLibrary {
 												null))),
 						new jbt.model.task.composite.ModelSequence(
 								null,
-								new jbt.model.task.decorator.ModelInverter(
-										null,
-										new com.blastedstudios.ledge.ai.bt.conditions.IsCooldown(
-												null, "sword", null)),
+								new com.blastedstudios.ledge.ai.bt.conditions.IsOffCooldown(
+										null, "shoot", null),
+								new com.blastedstudios.ledge.ai.bt.actions.Action(
+										null, "shoot", null),
+								new com.blastedstudios.ledge.ai.bt.actions.CooldownStart(
+										null, "shoot", null, (int) 100, null)),
+						new jbt.model.task.composite.ModelSequence(
+								null,
+								new com.blastedstudios.ledge.ai.bt.conditions.IsOffCooldown(
+										null, "sword", null),
 								new com.blastedstudios.ledge.ai.bt.actions.Action(
 										null, "sword", null),
 								new com.blastedstudios.ledge.ai.bt.actions.CooldownStart(
-										null, "sword", null, (int) 10000, null)),
+										null, "sword", null, (int) 5000, null)),
 						new jbt.model.task.composite.ModelSequence(
 								null,
-								new jbt.model.task.decorator.ModelInverter(
-										null,
-										new com.blastedstudios.ledge.ai.bt.conditions.IsCooldown(
-												null, "stomp", null)),
+								new com.blastedstudios.ledge.ai.bt.conditions.IsOffCooldown(
+										null, "stomp", null),
 								new com.blastedstudios.ledge.ai.bt.actions.Action(
 										null, "stomp", null),
 								new com.blastedstudios.ledge.ai.bt.actions.CooldownStart(
-										null, "stomp", null, (int) 5000, null)),
+										null, "stomp", null, (int) 3000, null)),
 						new jbt.model.task.composite.ModelSequence(
 								null,
 								new com.blastedstudios.ledge.ai.bt.actions.Action(

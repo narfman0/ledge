@@ -573,7 +573,7 @@ public class Being implements Serializable{
 		if(canAttack()){
 			if(!(weapon instanceof Melee)){
 				Gun gun = (Gun) weapon;
-				gun.shoot(this, random, direction, world, getPosition());
+				gun.shoot(this, random, direction, world, ragdoll.getHandFacing().getPosition());
 			}
 			return true;
 		}else if(weapon != null && !(weapon instanceof Melee) && 

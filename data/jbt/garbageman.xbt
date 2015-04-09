@@ -18,16 +18,32 @@
                   </Node>
                 </Children>
               </Node>
+              <Node id="Node_53" type="Sequence">
+                <Children>
+                  <Node id="Node_55" name="IsOffCooldown" type="Condition">
+                    <Parameters>
+                      <Parameter name="identifier" fromcontext="false">shoot</Parameter>
+                    </Parameters>
+                  </Node>
+                  <Node id="Node_56" name="Action" type="Action">
+                    <Parameters>
+                      <Parameter name="type" fromcontext="false">shoot</Parameter>
+                    </Parameters>
+                  </Node>
+                  <Node id="Node_57" name="CooldownStart" type="Action">
+                    <Parameters>
+                      <Parameter name="identifier" fromcontext="false">shoot</Parameter>
+                      <Parameter name="duration" fromcontext="false">100</Parameter>
+                    </Parameters>
+                  </Node>
+                </Children>
+              </Node>
               <Node id="Node_29" type="Sequence">
                 <Children>
-                  <Node id="Node_46" type="Inverter">
-                    <Children>
-                      <Node id="Node_45" name="IsCooldown" type="Condition">
-                        <Parameters>
-                          <Parameter name="identifier" fromcontext="false">sword</Parameter>
-                        </Parameters>
-                      </Node>
-                    </Children>
+                  <Node id="Node_45" name="IsOffCooldown" type="Condition">
+                    <Parameters>
+                      <Parameter name="identifier" fromcontext="false">sword</Parameter>
+                    </Parameters>
                   </Node>
                   <Node id="Node_50" name="Action" type="Action">
                     <Parameters>
@@ -37,21 +53,17 @@
                   <Node id="Node_43" name="CooldownStart" type="Action">
                     <Parameters>
                       <Parameter name="identifier" fromcontext="false">sword</Parameter>
-                      <Parameter name="duration" fromcontext="false">10000</Parameter>
+                      <Parameter name="duration" fromcontext="false">5000</Parameter>
                     </Parameters>
                   </Node>
                 </Children>
               </Node>
               <Node id="Node_38" type="Sequence">
                 <Children>
-                  <Node id="Node_47" type="Inverter">
-                    <Children>
-                      <Node id="Node_48" name="IsCooldown" type="Condition">
-                        <Parameters>
-                          <Parameter name="identifier" fromcontext="false">stomp</Parameter>
-                        </Parameters>
-                      </Node>
-                    </Children>
+                  <Node id="Node_48" name="IsOffCooldown" type="Condition">
+                    <Parameters>
+                      <Parameter name="identifier" fromcontext="false">stomp</Parameter>
+                    </Parameters>
                   </Node>
                   <Node id="Node_51" name="Action" type="Action">
                     <Parameters>
@@ -61,7 +73,7 @@
                   <Node id="Node_49" name="CooldownStart" type="Action">
                     <Parameters>
                       <Parameter name="identifier" fromcontext="false">stomp</Parameter>
-                      <Parameter name="duration" fromcontext="false">5000</Parameter>
+                      <Parameter name="duration" fromcontext="false">3000</Parameter>
                     </Parameters>
                   </Node>
                 </Children>

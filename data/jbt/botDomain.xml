@@ -52,7 +52,7 @@
 		<Sensor name="Alert" type="BOOLEAN" />
 		<Sensor name="Danger" type="BOOLEAN" />
 		<Sensor name="InCover" type="BOOLEAN" />
-		<Sensor name="IsCooldown" type="BOOLEAN">
+		<Sensor name="IsOffCooldown" type="BOOLEAN">
 			<Parameter name="identifier" type="STRING" />
 		</Sensor>
 		<Sensor name="IsDead" type="BOOLEAN" />

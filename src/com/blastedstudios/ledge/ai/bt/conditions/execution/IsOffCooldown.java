@@ -10,8 +10,8 @@ package com.blastedstudios.ledge.ai.bt.conditions.execution;
 
 import com.blastedstudios.gdxworld.util.Log;
 
-/** ExecutionCondition class created from MMPM condition IsCooldown. */
-public class IsCooldown extends
+/** ExecutionCondition class created from MMPM condition IsOffCooldown. */
+public class IsOffCooldown extends
 		jbt.execution.task.leaf.condition.ExecutionCondition {
 	/**
 	 * Value of the parameter "identifier" in case its value is specified at
@@ -25,8 +25,8 @@ public class IsCooldown extends
 	private java.lang.String identifierLoc;
 
 	/**
-	 * Constructor. Constructs an instance of IsCooldown that is able to run a
-	 * com.blastedstudios.ledge.ai.bt.conditions.IsCooldown.
+	 * Constructor. Constructs an instance of IsOffCooldown that is able to run a
+	 * com.blastedstudios.ledge.ai.bt.conditions.IsOffCooldown.
 	 * 
 	 * @param identifier
 	 *            value of the parameter "identifier", or null in case it should
@@ -37,15 +37,15 @@ public class IsCooldown extends
 	 *            represents the place in the context where the parameter's
 	 *            value will be retrieved from.
 	 */
-	public IsCooldown(jbt.model.core.ModelTask modelTask,
+	public IsOffCooldown(jbt.model.core.ModelTask modelTask,
 			jbt.execution.core.BTExecutor executor,
 			jbt.execution.core.ExecutionTask parent,
 			java.lang.String identifier, java.lang.String identifierLoc) {
 		super(modelTask, executor, parent);
 
-		if (!(modelTask instanceof com.blastedstudios.ledge.ai.bt.conditions.IsCooldown)) {
+		if (!(modelTask instanceof com.blastedstudios.ledge.ai.bt.conditions.IsOffCooldown)) {
 			throw new java.lang.RuntimeException(
-					"The ModelTask must subclass com.blastedstudios.ledge.ai.bt.conditions.IsCooldown");
+					"The ModelTask must subclass com.blastedstudios.ledge.ai.bt.conditions.IsOffCooldown");
 		}
 
 		this.identifier = identifier;
@@ -72,14 +72,15 @@ public class IsCooldown extends
 	}
 
 	protected Status internalTick() {
+		Object variable = getContext().getVariable(getIdentifier()); 
 		// if cooldown isn't set yet, it must not be on cooldown!
-		if(getContext().getVariable(getIdentifier()) == null)
-			return Status.FAILURE;
-		// check the time
-		Long endTime = (Long) getContext().getVariable(getIdentifier());
-		if(System.currentTimeMillis() - endTime > 0)
-			return Status.SUCCESS;
-		return Status.FAILURE;
+		if(variable != null){
+			// check the time
+			Long endTime = (Long) variable;
+			if(System.currentTimeMillis() - endTime < 0)
+				return Status.FAILURE;
+		}
+		return Status.SUCCESS;
 	}
 
 	protected void internalTerminate() {}
