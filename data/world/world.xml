@@ -77024,8 +77024,8 @@
           <restitution>0.3</restitution>
           <bodyType>DynamicBody</bodyType>
           <center>
-            <x>51.747845</x>
-            <y>59.04078</y>
+            <x>51.81861</x>
+            <y>58.878273</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -77035,36 +77035,36 @@
           <repeatable>false</repeatable>
           <vertices>
             <Vector2>
-              <x>-0.42744064</x>
-              <y>-0.61294174</y>
+              <x>0.27765656</x>
+              <y>0.7216606</y>
             </Vector2>
             <Vector2>
-              <x>-0.32841873</x>
-              <y>0.41687775</y>
+              <x>0.5540657</x>
+              <y>-0.68667984</y>
             </Vector2>
             <Vector2>
-              <x>0.29211426</x>
-              <y>0.5119362</y>
+              <x>0.6945381</x>
+              <y>-0.6703682</y>
             </Vector2>
             <Vector2>
-              <x>0.47034836</x>
-              <y>-0.4386673</y>
+              <x>0.392601</x>
+              <y>0.8650665</y>
             </Vector2>
             <Vector2>
-              <x>0.5891762</x>
-              <y>-0.42282104</y>
+              <x>-0.45898056</x>
+              <y>0.7700081</y>
             </Vector2>
             <Vector2>
-              <x>0.3977356</x>
-              <y>0.61491776</y>
+              <x>-0.651268</x>
+              <y>-0.83893204</y>
             </Vector2>
             <Vector2>
-              <x>-0.45384598</x>
-              <y>0.5198593</y>
+              <x>-0.4790764</x>
+              <y>-0.8226204</y>
             </Vector2>
             <Vector2>
-              <x>-0.5396652</x>
-              <y>-0.5891762</y>
+              <x>-0.32954407</x>
+              <y>0.66184616</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -77654,8 +77654,8 @@
         <world.GDXNPC>
           <name>carragan</name>
           <coordinates>
-            <x>51.822628</x>
-            <y>58.850006</y>
+            <x>51.8063</x>
+            <y>58.848736</y>
           </coordinates>
           <properties class="tree-map">
             <entry>
@@ -77676,7 +77676,7 @@
             </entry>
             <entry>
               <string>Defense</string>
-              <string></string>
+              <string>999999</string>
             </entry>
             <entry>
               <string>Faction</string>
@@ -77684,7 +77684,7 @@
             </entry>
             <entry>
               <string>HP</string>
-              <string></string>
+              <string>999999</string>
             </entry>
             <entry>
               <string>Level</string>
