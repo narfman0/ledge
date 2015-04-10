@@ -77016,6 +77016,58 @@
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
+        <world.shape.GDXPolygon>
+          <name>zepCarragan</name>
+          <resource></resource>
+          <density>1.0</density>
+          <friction>0.5</friction>
+          <restitution>0.3</restitution>
+          <bodyType>DynamicBody</bodyType>
+          <center>
+            <x>51.747845</x>
+            <y>59.04078</y>
+          </center>
+          <filter>
+            <categoryBits>1</categoryBits>
+            <maskBits>-1</maskBits>
+            <groupIndex>0</groupIndex>
+          </filter>
+          <repeatable>false</repeatable>
+          <vertices>
+            <Vector2>
+              <x>-0.42744064</x>
+              <y>-0.61294174</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.32841873</x>
+              <y>0.41687775</y>
+            </Vector2>
+            <Vector2>
+              <x>0.29211426</x>
+              <y>0.5119362</y>
+            </Vector2>
+            <Vector2>
+              <x>0.47034836</x>
+              <y>-0.4386673</y>
+            </Vector2>
+            <Vector2>
+              <x>0.5891762</x>
+              <y>-0.42282104</y>
+            </Vector2>
+            <Vector2>
+              <x>0.3977356</x>
+              <y>0.61491776</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.45384598</x>
+              <y>0.5198593</y>
+            </Vector2>
+            <Vector2>
+              <x>-0.5396652</x>
+              <y>-0.5891762</y>
+            </Vector2>
+          </vertices>
+        </world.shape.GDXPolygon>
       </polygons>
       <npcs>
         <world.GDXNPC>
@@ -77570,13 +77622,13 @@
         <world.GDXNPC>
           <name>carragan</name>
           <coordinates>
-            <x>50.411976</x>
-            <y>58.580856</y>
+            <x>51.822628</x>
+            <y>58.850006</y>
           </coordinates>
           <properties class="tree-map">
             <entry>
               <string>Aim</string>
-              <string></string>
+              <string>-3</string>
             </entry>
             <entry>
               <string>Attack</string>
@@ -77982,6 +78034,18 @@
             <y>55.652336</y>
           </anchor>
         </world.joint.RevoluteJoint>
+        <world.joint.WeldJoint>
+          <name>zepCarraganJoint</name>
+          <bodyA>zepCarragan</bodyA>
+          <bodyB>zeppelin</bodyB>
+          <jointType>WeldJoint</jointType>
+          <collideConnected>false</collideConnected>
+          <referenceAngle>0.0</referenceAngle>
+          <anchor>
+            <x>51.784885</x>
+            <y>58.117588</y>
+          </anchor>
+        </world.joint.WeldJoint>
       </joints>
       <quests>
         <world.quest.GDXQuest>
@@ -77993,8 +78057,8 @@
             <npc>
               <name>player</name>
               <coordinates>
-                <x>20.366808</x>
-                <y>-8.723868</y>
+                <x>19.966389</x>
+                <y>-9.180931</y>
               </coordinates>
               <properties class="tree-map">
                 <entry>

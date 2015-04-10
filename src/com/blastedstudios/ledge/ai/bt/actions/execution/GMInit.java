@@ -133,6 +133,12 @@ jbt.execution.task.leaf.action.ExecutionAction {
 			this.context = context;
 		}
 		
+		private void setWeaponClass(boolean melee){
+			for(int i=0; i<self.getGuns().size(); i++)
+				if(melee ? self.getGuns().get(i) instanceof Melee : self.getGuns().get(i) instanceof RocketLauncher)
+					self.setCurrentWeapon(i, world.getWorld(), false);
+		}
+		
 		@Override public Status execute(String identifier) {
 			//track time
 			Float time = (Float) context.getVariable(TIME_MOVED_DIRECTION);
@@ -140,21 +146,12 @@ jbt.execution.task.leaf.action.ExecutionAction {
 			context.setVariable(TIME_LAST, System.currentTimeMillis());
 			time += dt;
 			
-			//set current weapon
 			float playerDistance = world.getPlayer().getPosition().dst(self.getPosition());
-			if(playerDistance > 11f){
-				for(int i=0; i<self.getGuns().size(); i++)
-					if(self.getGuns().get(i) instanceof RocketLauncher)
-						self.setCurrentWeapon(i, world.getWorld(), false);
-			}else
-				for(int i=0; i<self.getGuns().size(); i++)
-					if(self.getGuns().get(i) instanceof Melee)
-						self.setCurrentWeapon(i, world.getWorld(), false);
-				
 			if(identifier.equals("sword")){
 				// check if we should start if, if not already started
 				if(!handler.getCurrentAnimation().getName().equals("sword")){
 					if(playerDistance < Properties.getFloat("garbageman.sword.distance.max", 10f) && playerDistance > STOMP_DISTANCE){
+						setWeaponClass(true);
 						handler.applyCurrentAnimation(handler.getAnimations().getAnimation("sword"), 0);
 						context.setVariable(RECOVER_TIME, 1.3f);
 						self.setFixedRotation(false);
@@ -169,6 +166,7 @@ jbt.execution.task.leaf.action.ExecutionAction {
 				// check if we should start if, if not already started
 				if(!handler.getCurrentAnimation().getName().equals("stomp")){
 					if(playerDistance < STOMP_DISTANCE){
+						setWeaponClass(true);
 						handler.applyCurrentAnimation(handler.getAnimations().getAnimation("stomp"), 0);
 						return Status.RUNNING;
 					}else
@@ -177,9 +175,10 @@ jbt.execution.task.leaf.action.ExecutionAction {
 				handler.render(dt);
 				return handler.getCurrentAnimation().getName().equals("stomp") ? Status.RUNNING : Status.SUCCESS;
 			}else if(identifier.equals("shoot")){
-				if(playerDistance > Properties.getFloat("garbageman.shoot.distance", 11f) && !world.getPlayer().isDead())
+				if(playerDistance > Properties.getFloat("garbageman.shoot.distance", 11f) && !world.getPlayer().isDead()){
+					setWeaponClass(false);
 					self.attack(world.getPlayer().getPosition().cpy().add(0, 2f).sub(self.getPosition()).nor(), world);
-				else
+				}else
 					return Status.FAILURE;
 				handler.render(dt);
 				return Status.SUCCESS;
