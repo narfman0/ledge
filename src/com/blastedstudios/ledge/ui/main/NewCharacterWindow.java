@@ -46,7 +46,7 @@ class NewCharacterWindow extends LedgeWindow{
 						WeaponFactory.getGuns(npcData.get("Weapons")), new ArrayList<Weapon>(), 
 						Stats.parseNPCData(npcData),
 						0,0,1,0, FactionEnum.FRIEND, EnumSet.of(FactionEnum.FRIEND), 
-						"player");
+						npcData.get("Resource"));
 				OverworldScreen screen = new OverworldScreen(game, player, 
 						gdxWorld, worldFile, gdxRenderer, sharedAssets);
 				GDXGameFade.fadeInPushScreen(game, screen);

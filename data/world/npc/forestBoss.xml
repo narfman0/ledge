@@ -2,7 +2,7 @@
   <properties>
     <entry>
       <string>HP</string>
-      <string>400</string>
+      <string>800</string>
     </entry>
     <entry>
       <string>Attack</string>
@@ -10,7 +10,7 @@
     </entry>
     <entry>
       <string>Defense</string>
-      <string>5</string>
+      <string>100</string>
     </entry>
     <entry>
       <string>HPPerLevel</string>
@@ -18,11 +18,11 @@
     </entry>
     <entry>
       <string>AttackPerLevel</string>
-      <string>2</string>
+      <string>5</string>
     </entry>
     <entry>
       <string>DefensePerLevel</string>
-      <string>1</string>
+      <string>5</string>
     </entry>
     <entry>
       <string>Weapons</string>
@@ -46,7 +46,7 @@
     </entry>
     <entry>
       <string>Level</string>
-      <string>4</string>
+      <string>7</string>
     </entry>
     <entry>
       <string>XP</string>
