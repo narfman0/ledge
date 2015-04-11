@@ -1,13 +1,12 @@
 package com.blastedstudios.ledge.plugin.quest.trigger.beinghit;
 
-import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.TextField;
 import com.blastedstudios.gdxworld.plugin.mode.quest.TriggerTable;
 import com.blastedstudios.gdxworld.world.quest.trigger.AbstractQuestTrigger;
 
 public class BeingHitTable extends TriggerTable {
-	private final TextField beingText, originText, damageAmountText;
+	private final TextField beingText, originText, damageAmountText, damageRatioText;
 	private final BeingHitTrigger trigger;
 
 	public BeingHitTable(Skin skin, BeingHitTrigger trigger) {
@@ -17,19 +16,27 @@ public class BeingHitTable extends TriggerTable {
 		beingText.setMessageText("<being name regex>");
 		damageAmountText = new TextField(trigger.getDamageAmount()+"", skin);
 		damageAmountText.setMessageText("<damage amount>");
+		damageRatioText = new TextField(trigger.getDamageRatio()+"", skin);
+		damageRatioText.setMessageText("<damage ratio>");
 		originText = new TextField(trigger.getOrigin(), skin);
 		originText.setMessageText("<origin name regex>");
-		add(new Label("Being: ", skin));
+		add("Being: ");
 		add(beingText);
-		add(new Label("Damage amount: ", skin));
+		row();
+		add("Damage amount: ");
 		add(damageAmountText);
-		add(new Label("Origin: ", skin));
+		row();
+		add("Damage ratio: ");
+		add(damageRatioText);
+		row();
+		add("Origin: ");
 		add(originText);
 	}
 
 	@Override public AbstractQuestTrigger apply() {
 		trigger.setTarget(beingText.getText());
 		trigger.setDamageAmount(Float.parseFloat(damageAmountText.getText()));
+		trigger.setDamageRatio(Float.parseFloat(damageRatioText.getText()));
 		trigger.setOrigin(originText.getText());
 		return trigger;
 	}

@@ -78653,7 +78653,7 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>As the shape of the garbageman comes further into view, you faintly see a clumsily flying vessel with a familiar face drifting slowly down the rock faces</dialog>
+            <dialog>As the shape of the garbageman comes further into view, you faintly see a clumsily flying vessel with a familiar face drifting slowly down the rock faces. &quot;Just a few minutes&quot; someone yells.</dialog>
             <origin></origin>
             <type></type>
           </manifestation>
@@ -78733,7 +78733,7 @@
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
           <name>gm5</name>
-          <prerequisites>gm4</prerequisites>
+          <prerequisites>gm4Spawn-0</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.physics.PhysicsManifestation">
@@ -78815,7 +78815,7 @@
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
-            <dialog>I&apos;m sure, son. I&apos;m sorry to wrap you up in this.</dialog>
+            <dialog>I&apos;m sure, son. I&apos;m sorry to wrap you up in this. We&apos;ve got more for you up top...</dialog>
             <origin></origin>
             <type></type>
           </manifestation>
@@ -78878,8 +78878,8 @@
           </manifestation>
         </world.quest.GDXQuest>
         <world.quest.GDXQuest>
-          <name>gm1Spawn</name>
-          <prerequisites>gm1</prerequisites>
+          <name>gm4Spawn</name>
+          <prerequisites>gm4</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
@@ -79165,6 +79165,21 @@
             <volume>1.0</volume>
             <pan>0.0</pan>
             <pitch>0.0</pitch>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>gm4Spawn-0</name>
+          <prerequisites>gm4Spawn</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="com.blastedstudios.ledge.plugin.quest.trigger.beinghit.BeingHitTrigger">
+            <target>garbageman</target>
+            <origin>.*</origin>
+            <damageAmount>-1.0</damageAmount>
+            <damageRatio>0.8</damageRatio>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beinginvuln.BeingInvulnManifestation">
+            <being>garbageman</being>
+            <invuln>true</invuln>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>

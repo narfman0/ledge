@@ -9,13 +9,14 @@ public class BeingHitTrigger extends AbstractQuestTrigger implements IBeingHitLi
 	public static final BeingHitTrigger DEFAULT = new BeingHitTrigger(); 
 	private String target = ".*", origin = ".*";
 	private transient boolean invoked;
-	private float damageAmount = -1f;
+	private float damageAmount = -1f, damageRatio = -1f;
 	
 	public BeingHitTrigger(){}
-	public BeingHitTrigger(String target, String origin, float damageAmount){
+	public BeingHitTrigger(String target, String origin, float damageAmount, float damageRatio){
 		this.target = target;
 		this.damageAmount = damageAmount;
 		this.origin = origin;
+		this.damageRatio = damageRatio;
 	}
 
 	@Override public boolean activate() {
@@ -24,7 +25,7 @@ public class BeingHitTrigger extends AbstractQuestTrigger implements IBeingHitLi
 	}
 	
 	@Override public AbstractQuestTrigger clone(){
-		return new BeingHitTrigger(target, origin, damageAmount);
+		return new BeingHitTrigger(target, origin, damageAmount, damageRatio);
 	}
 
 	@Override public String toString() {
@@ -56,8 +57,19 @@ public class BeingHitTrigger extends AbstractQuestTrigger implements IBeingHitLi
 		this.damageAmount = damageAmount;
 	}
 	
+	public float getDamageRatio() {
+		return damageRatio;
+	}
+	
+	public void setDamageRatio(float damageRatio) {
+		this.damageRatio = damageRatio;
+	}
+	
 	@Override public void beingHit(DamageStruct damageStruct) {
-		if(damageStruct.getDamage() >= damageAmount && 
+		float hpAfter =  damageStruct.getTarget().getHp() - damageStruct.getDamage(),
+				dmgRatio = hpAfter / damageStruct.getTarget().getMaxHp();
+		boolean damageThresholdSatisfied = damageRatio == -1f ? true : dmgRatio < damageRatio;
+		if(damageStruct.getDamage() >= damageAmount && damageThresholdSatisfied &&
 				damageStruct.getTarget().getName().matches(target) &&
 				damageStruct.getOrigin() != null && damageStruct.getOrigin().getName().matches(origin))
 			invoked = true;
