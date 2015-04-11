@@ -7652,6 +7652,7 @@
             <target>kid0</target>
             <origin>.*</origin>
             <damageAmount>-1.0</damageAmount>
+            <damageRatio>0.0</damageRatio>
           </trigger>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
             <dialog>Argh! Not fair, officer aid me!</dialog>
@@ -7729,6 +7730,7 @@
             <target>kid0</target>
             <origin>.*</origin>
             <damageAmount>-1.0</damageAmount>
+            <damageRatio>0.0</damageRatio>
           </trigger>
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
             <being>kid0</being>
@@ -7743,6 +7745,7 @@
             <target>kid1</target>
             <origin>.*</origin>
             <damageAmount>-1.0</damageAmount>
+            <damageRatio>0.0</damageRatio>
           </trigger>
           <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.pathchange.PathChangeManifestation">
             <being>kid1</being>

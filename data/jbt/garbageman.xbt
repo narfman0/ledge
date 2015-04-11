@@ -53,7 +53,7 @@
                   <Node id="Node_43" name="CooldownStart" type="Action">
                     <Parameters>
                       <Parameter name="identifier" fromcontext="false">sword</Parameter>
-                      <Parameter name="duration" fromcontext="false">5000</Parameter>
+                      <Parameter name="duration" fromcontext="false">2500</Parameter>
                     </Parameters>
                   </Node>
                 </Children>
@@ -73,7 +73,7 @@
                   <Node id="Node_49" name="CooldownStart" type="Action">
                     <Parameters>
                       <Parameter name="identifier" fromcontext="false">stomp</Parameter>
-                      <Parameter name="duration" fromcontext="false">3000</Parameter>
+                      <Parameter name="duration" fromcontext="false">1500</Parameter>
                     </Parameters>
                   </Node>
                 </Children>

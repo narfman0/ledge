@@ -44,7 +44,7 @@ public class GarbagemanBT implements jbt.execution.core.IBTLibrary {
 								new com.blastedstudios.ledge.ai.bt.actions.Action(
 										null, "sword", null),
 								new com.blastedstudios.ledge.ai.bt.actions.CooldownStart(
-										null, "sword", null, (int) 5000, null)),
+										null, "sword", null, (int) 2500, null)),
 						new jbt.model.task.composite.ModelSequence(
 								null,
 								new com.blastedstudios.ledge.ai.bt.conditions.IsOffCooldown(
@@ -52,7 +52,7 @@ public class GarbagemanBT implements jbt.execution.core.IBTLibrary {
 								new com.blastedstudios.ledge.ai.bt.actions.Action(
 										null, "stomp", null),
 								new com.blastedstudios.ledge.ai.bt.actions.CooldownStart(
-										null, "stomp", null, (int) 3000, null)),
+										null, "stomp", null, (int) 1500, null)),
 						new jbt.model.task.composite.ModelSequence(
 								null,
 								new com.blastedstudios.ledge.ai.bt.actions.Action(

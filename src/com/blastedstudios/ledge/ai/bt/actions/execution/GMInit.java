@@ -42,7 +42,7 @@ jbt.execution.task.leaf.action.ExecutionAction {
 			CURRENT = "CurrentAnimation",
 			RECOVER_TIME = "Recover";
 	private static final float STOMP_DISTANCE = Properties.getFloat("garbageman.stomp.distance", 6f);
-	private static final float TOTAL_TIME_DIRECTION = Properties.getFloat("garbageman.move.time", 7);//s
+	private static final float TOTAL_TIME_DIRECTION = Properties.getFloat("garbageman.move.time", 7f);//s
 
 	/**
 	 * Constructor. Constructs an instance of GMInit that is able to run a
@@ -175,7 +175,7 @@ jbt.execution.task.leaf.action.ExecutionAction {
 				handler.render(dt);
 				return handler.getCurrentAnimation().getName().equals("stomp") ? Status.RUNNING : Status.SUCCESS;
 			}else if(identifier.equals("shoot")){
-				if(playerDistance > Properties.getFloat("garbageman.shoot.distance", 11f) && !world.getPlayer().isDead()){
+				if(playerDistance > Properties.getFloat("garbageman.shoot.distance", 10f) && !world.getPlayer().isDead()){
 					setWeaponClass(false);
 					self.attack(world.getPlayer().getPosition().cpy().add(0, 2f).sub(self.getPosition()).nor(), world);
 				}else
