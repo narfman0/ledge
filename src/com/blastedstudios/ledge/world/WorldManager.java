@@ -191,7 +191,7 @@ public class WorldManager implements IDeathCallback{
 					enemies.add(being);
 					if(closer && (facingCorrectly || currentClosestDistanceSq < origin.getDistanceAware())){
 						closestDistanceSq = currentClosestDistanceSq;
-						if(closestDistanceSq < Math.pow(origin.getDistanceVision(), 2))
+						if(closestDistanceSq < origin.getDistanceVision())
 							closestEnemy = being;
 					}
 				}

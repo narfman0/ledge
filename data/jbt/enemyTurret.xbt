@@ -13,8 +13,8 @@
                       <Parameter name="policy" fromcontext="false">selector</Parameter>
                     </Parameters>
                     <Children>
-                      <Node id="Node_9" name="Danger" type="Condition" />
                       <Node id="Node_35" name="Visible" type="Condition" />
+                      <Node id="Node_9" name="Danger" type="Condition" />
                     </Children>
                   </Node>
                   <Node id="Node_32" name="ClosestTurret" type="Action" />
