@@ -41,7 +41,8 @@ public class Visible extends
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
 		WorldManager world = (WorldManager) getContext().getVariable(AIFieldEnum.WORLD.name());
-		VisibilityReturnStruct struct = world.isVisible((NPC) getContext().getVariable(AIFieldEnum.SELF.name()));
+		NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
+		VisibilityReturnStruct struct = world.isVisible(self);
 		getContext().setVariable(NPC.AIFieldEnum.VISIBLE.name(), struct);
 		return Status.SUCCESS;
 	}

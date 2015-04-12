@@ -8,6 +8,7 @@
             <Children>
               <Node id="Node_8" type="Sequence">
                 <Children>
+                  <Node id="Node_35" name="Visible" type="Condition" />
                   <Node id="Node_32" type="Parallel">
                     <Parameters>
                       <Parameter name="policy" fromcontext="false">selector</Parameter>
