@@ -42,7 +42,6 @@ public class Danger extends
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
 		Log.debug(this.getClass().getCanonicalName(), "ticked");
 		NPC self = (NPC) getContext().getVariable(AIFieldEnum.SELF.name());
-		
 		// figure out, upon receiving damage, where origin is
 		DamageStruct shotDamage = (DamageStruct) getContext().getVariable(AIFieldEnum.ATTACK_TICK.name());
 		if(shotDamage != null && shotDamage.getOrigin() != null){

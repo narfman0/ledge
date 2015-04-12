@@ -27,10 +27,10 @@ public class EnemyTurretBT implements jbt.execution.core.IBTLibrary {
 								new jbt.model.task.composite.ModelParallel(
 										null,
 										jbt.model.task.composite.ModelParallel.ParallelPolicy.SELECTOR_POLICY,
-										new com.blastedstudios.ledge.ai.bt.conditions.Danger(
-												null),
 										new com.blastedstudios.ledge.ai.bt.conditions.Visible(
 												null)),
+										new com.blastedstudios.ledge.ai.bt.conditions.Danger(
+												null),
 								new com.blastedstudios.ledge.ai.bt.actions.ClosestTurret(
 										null),
 								new com.blastedstudios.ledge.ai.bt.actions.Move(

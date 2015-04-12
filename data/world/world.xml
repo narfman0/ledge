@@ -9530,7 +9530,7 @@
           <prerequisites>ratchet60</prerequisites>
           <repeatable>false</repeatable>
           <trigger class="plugin.quest.trigger.time.TimeTrigger">
-            <time>1500</time>
+            <time>500</time>
           </trigger>
           <manifestation class="plugin.quest.manifestation.dialog.DialogManifestation">
             <dialog>Bah, thats not good response, come back my boy!</dialog>
@@ -11932,6 +11932,17 @@
             <relativeAngle>true</relativeAngle>
           </manifestation>
         </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>ratchet61Rotation</name>
+          <prerequisites>ratchet60</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingrotation.BeingRotationManifestation">
+            <fixedRotation>false</fixedRotation>
+            <torque>0.0</torque>
+            <being>cohiggan</being>
+          </manifestation>
+        </world.quest.GDXQuest>
       </quests>
       <backgrounds>
         <world.GDXBackground>
@@ -13582,8 +13593,8 @@
           <restitution>0.3</restitution>
           <bodyType>StaticBody</bodyType>
           <center>
-            <x>-27.846449</x>
-            <y>30.584671</y>
+            <x>-27.844025</x>
+            <y>30.583292</y>
           </center>
           <filter>
             <categoryBits>1</categoryBits>
@@ -13593,84 +13604,84 @@
           <repeatable>true</repeatable>
           <vertices>
             <Vector2>
-              <x>50.57692</x>
-              <y>3.7434158</y>
+              <x>50.574493</x>
+              <y>3.7447948</y>
             </Vector2>
             <Vector2>
-              <x>50.64341</x>
-              <y>15.528591</y>
+              <x>50.68949</x>
+              <y>15.502386</y>
             </Vector2>
             <Vector2>
-              <x>44.546562</x>
-              <y>15.3220825</y>
+              <x>44.544136</x>
+              <y>15.323462</y>
             </Vector2>
             <Vector2>
-              <x>34.580017</x>
-              <y>11.643433</y>
+              <x>34.57759</x>
+              <y>11.644812</y>
             </Vector2>
             <Vector2>
-              <x>30.407955</x>
-              <y>9.140202</y>
+              <x>30.40553</x>
+              <y>9.141581</y>
             </Vector2>
             <Vector2>
-              <x>24.928244</x>
-              <y>7.5710106</y>
+              <x>24.92582</x>
+              <y>7.5723896</y>
             </Vector2>
             <Vector2>
-              <x>18.426918</x>
-              <y>6.731697</y>
+              <x>18.424494</x>
+              <y>6.733076</y>
             </Vector2>
             <Vector2>
-              <x>14.536293</x>
-              <y>6.3606033</y>
+              <x>14.533869</x>
+              <y>6.3619823</y>
             </Vector2>
             <Vector2>
-              <x>9.9644165</x>
-              <y>6.0481033</y>
+              <x>9.961992</x>
+              <y>6.0494823</y>
             </Vector2>
             <Vector2>
-              <x>8.914953</x>
-              <y>5.634136</y>
+              <x>8.912529</x>
+              <y>5.635515</y>
             </Vector2>
             <Vector2>
-              <x>-15.800467</x>
-              <y>5.460743</y>
+              <x>-15.802891</x>
+              <y>5.462122</y>
             </Vector2>
             <Vector2>
-              <x>-25.090029</x>
-              <y>3.5736427</y>
+              <x>-25.092453</x>
+              <y>3.5750217</y>
             </Vector2>
             <Vector2>
-              <x>-29.811136</x>
-              <y>1.4639091</y>
+              <x>-29.81356</x>
+              <y>1.4652882</y>
             </Vector2>
             <Vector2>
-              <x>-33.90573</x>
-              <y>-1.1256466</y>
+              <x>-33.908157</x>
+              <y>-1.1242676</y>
             </Vector2>
             <Vector2>
-              <x>-40.501648</x>
-              <y>-8.352737</y>
+              <x>-40.504074</x>
+              <y>-8.351358</y>
             </Vector2>
             <Vector2>
-              <x>-44.094315</x>
-              <y>-11.334333</y>
+              <x>-44.09674</x>
+              <y>-11.332954</y>
             </Vector2>
             <Vector2>
-              <x>-47.467278</x>
-              <y>-12.658533</y>
+              <x>-47.469704</x>
+              <y>-12.657154</y>
             </Vector2>
             <Vector2>
-              <x>-50.469765</x>
-              <y>-13.180233</y>
+              <x>-50.47219</x>
+              <y>-13.178854</y>
             </Vector2>
             <Vector2>
-              <x>-50.730545</x>
-              <y>-25.386448</y>
+              <x>-50.73297</x>
+              <y>-25.385069</y>
             </Vector2>
             <Vector2>
-              <x>50.345245</x>
-              <y>-26.183758</y>
+              <x>50.34282</x>
+              <y>-26.182379</y>
             </Vector2>
           </vertices>
         </world.shape.GDXPolygon>
@@ -33765,6 +33776,40 @@
             <relativePosition>true</relativePosition>
             <relativeVelocity>true</relativeVelocity>
             <relativeAngle>true</relativeAngle>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>family5MoveArm-1a</name>
+          <prerequisites>family5MoveArm-1</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>desertSolder2</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget>father</attackTarget>
+            <dmg>0.0</dmg>
+            <aim>0.0</aim>
+            <kill>false</kill>
+            <remove>false</remove>
+            <doAim>false</doAim>
+          </manifestation>
+        </world.quest.GDXQuest>
+        <world.quest.GDXQuest>
+          <name>family5MoveArm-1b</name>
+          <prerequisites>family5MoveArm-1a</prerequisites>
+          <repeatable>false</repeatable>
+          <trigger class="plugin.quest.trigger.time.TimeTrigger">
+            <time>100</time>
+          </trigger>
+          <manifestation class="com.blastedstudios.ledge.plugin.quest.manifestation.beingstatus.BeingStatusManifestation">
+            <being>(father|mother|daughter)</being>
+            <textureAtlas></textureAtlas>
+            <attackTarget></attackTarget>
+            <dmg>0.0</dmg>
+            <aim>0.0</aim>
+            <kill>true</kill>
+            <remove>false</remove>
+            <doAim>false</doAim>
           </manifestation>
         </world.quest.GDXQuest>
       </quests>
@@ -54282,7 +54327,7 @@
           <trigger class="plugin.quest.trigger.activate.ActivateTrigger"/>
           <manifestation class="plugin.quest.manifestation.beingspawn.BeingSpawnManifestation">
             <npc>
-              <name></name>
+              <name>towerTopTurret</name>
               <coordinates>
                 <x>-116.67594</x>
                 <y>39.642403</y>
