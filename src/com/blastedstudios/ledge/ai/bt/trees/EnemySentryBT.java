@@ -2,7 +2,7 @@
 //                   MACHINE GENERATED CODE                
 //                       DO NOT MODIFY                     
 //                                                         
-// Generated on 04/12/2015 15:16:40
+// Generated on 04/12/2015 22:13:03
 // ******************************************************* 
 package com.blastedstudios.ledge.ai.bt.trees;
 
@@ -33,6 +33,8 @@ public class EnemySentryBT implements jbt.execution.core.IBTLibrary {
 												null),
 										new com.blastedstudios.ledge.ai.bt.conditions.Alert(
 												null)),
+								new com.blastedstudios.ledge.ai.bt.actions.NotifyDanger(
+										null, null, "DangerTarget"),
 								new com.blastedstudios.ledge.ai.bt.actions.SelectWeapon(
 										null, null, "DangerTarget"),
 								new com.blastedstudios.ledge.ai.bt.actions.Shoot(

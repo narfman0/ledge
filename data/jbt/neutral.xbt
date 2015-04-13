@@ -6,17 +6,6 @@
         <Children>
           <Node id="Node_3" type="Selector">
             <Children>
-              <Node id="Node_8" type="Sequence">
-                <Children>
-                  <Node id="Node_9" name="Danger" type="Condition" />
-                  <Node id="Node_31" name="Visible" type="Condition" />
-                  <Node id="Node_11" name="Move" type="Action">
-                    <Parameters>
-                      <Parameter name="target" fromcontext="true">ClosestCoverTarget</Parameter>
-                    </Parameters>
-                  </Node>
-                </Children>
-              </Node>
               <Node id="Node_24" type="Sequence">
                 <Children>
                   <Node id="Node_25" name="CurrentObjective" type="Action" />

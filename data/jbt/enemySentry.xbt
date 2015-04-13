@@ -18,6 +18,11 @@
                       <Node id="Node_33" name="Alert" type="Condition" />
                     </Children>
                   </Node>
+                  <Node id="Node_36" name="NotifyDanger" type="Action">
+                    <Parameters>
+                      <Parameter name="target" fromcontext="true">DangerTarget</Parameter>
+                    </Parameters>
+                  </Node>
                   <Node id="Node_34" name="SelectWeapon" type="Action">
                     <Parameters>
                       <Parameter name="target" fromcontext="true">DangerTarget</Parameter>

@@ -89,7 +89,7 @@ public class NotifyDanger extends
 		Vector2 target = new Vector2(getTarget()[0], getTarget()[1]);
 		for(Being being : world.getAllBeings()){
 			float distanceSquared = self.getPosition().dst2(being.getPosition());
-			if(being != self && !being.isDead() && self.isFriendly(being.getFaction()) && being instanceof NPC && 
+			if(being != self && !being.isDead() && self.getFaction() == being.getFaction() && being instanceof NPC && 
 					distanceSquared < Properties.getFloat("npc.notify.los.distanceSq", 225f)){
 				aiWorld.getPathToPoint(being.getPosition(), target);
 				GDXPath path = new GDXPath();
