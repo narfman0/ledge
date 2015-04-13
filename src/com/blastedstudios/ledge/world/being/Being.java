@@ -503,7 +503,8 @@ public class Being implements Serializable{
 					if(fixture == meleeFixture)
 						return true;
 		}
-		return ragdoll.isOwned(fixture);
+		// need to double check, being could be destroyed before gunshot collides 
+		return isSpawned() && ragdoll.isOwned(fixture);
 	}
 
 	public boolean isReloading() {
