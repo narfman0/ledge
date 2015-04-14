@@ -177,7 +177,7 @@ jbt.execution.task.leaf.action.ExecutionAction {
 			}else if(identifier.equals("shoot")){
 				if(playerDistance > Properties.getFloat("garbageman.shoot.distance", 10f) && !world.getPlayer().isDead()){
 					setWeaponClass(false);
-					self.attack(world.getPlayer().getPosition().cpy().add(0, 2f).sub(self.getPosition()).nor(), world);
+					self.attack(world.getPlayer().getPosition().cpy().add(0, 1f).sub(self.getPosition()).nor(), world);
 				}else
 					return Status.FAILURE;
 				handler.render(dt);
