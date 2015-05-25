@@ -33,7 +33,6 @@ public class MainScreen extends LedgeScreen implements IMainWindowListener, INew
 		super(game);
 		this.sharedAssets = sharedAssets;
 		this.gdxWorld = gdxWorld;
-		SaveHelper.loadProperties();
 		gdxRenderer = new GDXRenderer(true, true);
 		stage.addActor(mainWindow = new MainWindow(skin, game, this, gdxWorld, WORLD_FILE, gdxRenderer, sharedAssets));
 		panner = new PannerManager(gdxWorld, gdxRenderer);
