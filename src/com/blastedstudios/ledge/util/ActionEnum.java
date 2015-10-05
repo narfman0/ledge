@@ -18,11 +18,10 @@ public enum ActionEnum {
 	CONSOLE(Properties.getInt("input.console", Keys.PERIOD), Properties.getInt("input.console2", Keys.COLON)),
 	UNDEFINED(-1,-1);
 	
-	public int key1, key2;
+	public int[] keys;
 	
-	private ActionEnum(int key1, int key2){
-		this.key1 = key1;
-		this.key2 = key2;
+	private ActionEnum(int... keys){
+		this.keys = keys;
 	}
 	
 	public static ActionEnum fromKey(int key){
@@ -35,10 +34,16 @@ public enum ActionEnum {
 	}
 	
 	public boolean matches(int key){
-		return key1 == key || key2 == key;
+		for(int targetKey : keys)
+			if(targetKey == key)
+				return true;
+		return false;
 	}
 	
 	public boolean isPressed(){
-		return Gdx.input.isKeyPressed(key1) || Gdx.input.isKeyPressed(key2);
+		for(int key : keys)
+			if(Gdx.input.isKeyPressed(key))
+				return true;
+		return false;
 	}
 }
