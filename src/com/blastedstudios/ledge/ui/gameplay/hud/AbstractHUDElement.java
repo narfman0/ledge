@@ -1,6 +1,7 @@
 package com.blastedstudios.ledge.ui.gameplay.hud;
 
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.blastedstudios.gdxworld.util.Properties;
@@ -8,6 +9,7 @@ import com.blastedstudios.ledge.world.being.NPC;
 import com.blastedstudios.ledge.world.being.Player;
 
 public abstract class AbstractHUDElement implements IHUDElement{
+	private static GlyphLayout GLYPH_LAYOUT = new GlyphLayout();
 	protected static final int INSET = Properties.getInt("hud.inset", 4);
 	protected BitmapFont font;
 	protected Player player;
@@ -22,19 +24,20 @@ public abstract class AbstractHUDElement implements IHUDElement{
 	
 	protected void drawString(SpriteBatch spriteBatch, String string, float x, 
 			float y, XAlign xAlign, YAlign yAlign){
+		GLYPH_LAYOUT.setText(font, string);
 		switch(xAlign){
 		case LEFT:
-			x -= font.getBounds(string).width;
+			x -= GLYPH_LAYOUT.width;
 			break;
 		case MIDDLE:
-			x -= (font.getBounds(string).width / 2);
+			x -= (GLYPH_LAYOUT.width / 2);
 			break;
 		case RIGHT:
 			break;
 		}
 		switch(yAlign){
 		case UP:
-			y += font.getBounds(string).height;
+			y += GLYPH_LAYOUT.height;
 			break;
 		case DOWN:
 			break;

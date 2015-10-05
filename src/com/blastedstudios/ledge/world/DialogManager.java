@@ -52,7 +52,7 @@ public class DialogManager {
 				}
 				font.draw(spriteBatch, dialogs.peek().portrait + ":", centerX - 170, TEXT_PORTRAIT_DRAW_HEIGHT);
 			}
-			font.drawMultiLine(spriteBatch, dialogs.peek().dialog, centerX - 224, TEXT_DRAW_HEIGHT);
+			font.draw(spriteBatch, dialogs.peek().dialog, centerX - 224, TEXT_DRAW_HEIGHT);
 			spriteBatch.end();
 		}
 	}

@@ -280,7 +280,7 @@ public class GameplayScreen extends LedgeScreen {
 		if(worldManager.getPlayer().isSpawned() && worldManager.isPlayerTrack())
 			camera.position.set(worldManager.getPlayer().getPosition().x, worldManager.getPlayer().getPosition().y, 0);
 		camera.update();
-		rayHandler.setCombinedMatrix(camera.combined);
+		rayHandler.setCombinedMatrix(camera);
 
 		spriteBatch.setProjectionMatrix(camera.combined);
 		spriteBatch.begin();
