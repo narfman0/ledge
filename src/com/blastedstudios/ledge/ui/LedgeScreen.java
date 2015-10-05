@@ -4,8 +4,8 @@ import java.util.HashMap;
 
 import com.blastedstudios.gdxworld.ui.AbstractScreen;
 import com.blastedstudios.gdxworld.util.GDXGame;
+import com.blastedstudios.ledge.input.ActionEnum;
 import com.blastedstudios.ledge.ui.main.MainScreen;
-import com.blastedstudios.ledge.util.ActionEnum;
 
 public abstract class LedgeScreen extends AbstractScreen {
 	protected final HashMap<ActionEnum, AbstractInputHandler> inputHandlers = new HashMap<>();

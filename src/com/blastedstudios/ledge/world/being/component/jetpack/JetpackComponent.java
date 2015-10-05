@@ -10,7 +10,7 @@ import com.badlogic.gdx.graphics.g2d.ParticleEmitter;
 import com.blastedstudios.gdxworld.ui.GDXRenderer;
 import com.blastedstudios.gdxworld.util.Log;
 import com.blastedstudios.gdxworld.util.Properties;
-import com.blastedstudios.ledge.util.ActionEnum;
+import com.blastedstudios.ledge.input.ActionEnum;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
 import com.blastedstudios.ledge.world.being.Being.BodyPart;

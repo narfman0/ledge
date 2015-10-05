@@ -8,8 +8,8 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.blastedstudios.gdxworld.plugin.quest.trigger.objectdistance.IObjectDistanceTriggerHandler;
 import com.blastedstudios.gdxworld.plugin.quest.trigger.objectdistance.ObjectDistanceTrigger;
+import com.blastedstudios.ledge.input.ActionEnum;
 import com.blastedstudios.ledge.plugin.quest.handler.IWorldManagerInitializer;
-import com.blastedstudios.ledge.util.ActionEnum;
 import com.blastedstudios.ledge.world.WorldManager;
 import com.blastedstudios.ledge.world.being.Being;
 

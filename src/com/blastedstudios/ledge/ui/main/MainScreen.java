@@ -9,13 +9,13 @@ import com.blastedstudios.gdxworld.util.PluginUtil;
 import com.blastedstudios.gdxworld.util.Properties;
 import com.blastedstudios.gdxworld.util.panner.PannerManager;
 import com.blastedstudios.gdxworld.world.GDXWorld;
+import com.blastedstudios.ledge.input.ActionEnum;
 import com.blastedstudios.ledge.plugin.quest.handler.ISharedAssetConsumer;
 import com.blastedstudios.ledge.plugin.quest.handler.manifestation.SoundThematicHandlerPlugin;
 import com.blastedstudios.ledge.ui.LedgeScreen;
 import com.blastedstudios.ledge.ui.main.MainWindow.IMainWindowListener;
 import com.blastedstudios.ledge.ui.main.NewCharacterWindow.INewCharacterWindowListener;
 import com.blastedstudios.ledge.ui.main.OptionsWindow.IOptionsWindowListener;
-import com.blastedstudios.ledge.util.ActionEnum;
 import com.blastedstudios.ledge.util.SaveHelper;
 
 public class MainScreen extends LedgeScreen implements IMainWindowListener, INewCharacterWindowListener, IOptionsWindowListener {
