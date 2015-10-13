@@ -10,7 +10,7 @@ public class BeingHitTable extends TriggerTable {
 	private final BeingHitTrigger trigger;
 
 	public BeingHitTable(Skin skin, BeingHitTrigger trigger) {
-		super(skin);
+		super(skin, trigger);
 		this.trigger = trigger;
 		beingText = new TextField(trigger.getTarget(), skin);
 		beingText.setMessageText("<being name regex>");
