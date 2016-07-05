@@ -1,17 +1,19 @@
 apply plugin: "java"
 apply plugin: "eclipse"
-apply plugin: 'application'
+apply plugin: "application"
 
 group = 'com.blastedstudios'
 mainClassName = "com.blastedstudios.ledge.Ledge"
-version = '1.0'
-description = "2D game utilizing GDXWorld"
-url = "https://github.com/narfman0/GDXWorld"
-
+version = '1.0.0'
+description = "Ledge is a 2d platforming shooter"
+/*
+url = "https://github.com/narfman0/ledge"
+*/
 defaultTasks 'eclipse', 'build'
 
 ext {
     appName = "ledge"
+    gdxVersion = '1.9.3'
 }
 
 jar {
@@ -25,11 +27,24 @@ repositories {
     mavenCentral()
     maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+    maven { url "http://maven.formreturn.com/repository/" }
 }
 
 dependencies {
-	compile project(':GDXWorld')
 	compile fileTree(dir: 'lib', include: '*.jar')
-    compile group: 'net.sf', name: 'jargs', version: '1.0'
     testCompile 'junit:junit:4.12'
+    
+    // GDXWorld dependencies. TODO push GDXWorld to maven to have gradle to the work :|
+    compile "com.badlogicgames.gdx:gdx:$gdxVersion"
+    compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+    compile "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+    compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+    compile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
+    compile "com.badlogicgames.gdx:gdx-tools:$gdxVersion"
+    compile group: 'net.xeoh.jspf', name: 'jspf-core', version: '1.0.2'
+    compile group: 'com.badlogicgames.box2dlights', name: 'box2dlights', version: '1.4'
+    compile group: 'org.codehaus.jettison', name: 'jettison', version: '1.2'
+    compile group: 'com.thoughtworks.xstream', name: 'xstream', version: '1.4.7'
+    compile group: 'xpp3', name: 'xpp3', version: '1.1.4c'
+    compile group: 'xmlpull', name: 'xmlpull', version: '1.1.3.1'
 }
