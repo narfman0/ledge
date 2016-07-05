@@ -3,3 +3,4 @@ hs_err_pid*
 *.log
 bin/
 .settings/
+.project

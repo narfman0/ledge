@@ -1,0 +1,35 @@
+apply plugin: "java"
+apply plugin: "eclipse"
+apply plugin: 'application'
+
+group = 'com.blastedstudios'
+mainClassName = "com.blastedstudios.ledge.Ledge"
+version = '1.0'
+description = "2D game utilizing GDXWorld"
+url = "https://github.com/narfman0/GDXWorld"
+
+defaultTasks 'eclipse', 'build'
+
+ext {
+    appName = "ledge"
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': '$mainClassName'
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+}
+
+dependencies {
+	compile project(':GDXWorld')
+	compile fileTree(dir: 'lib', include: '*.jar')
+    compile group: 'net.sf', name: 'jargs', version: '1.0'
+    testCompile 'junit:junit:4.12'
+}
