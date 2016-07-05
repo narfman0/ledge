@@ -6,9 +6,6 @@ group = 'com.blastedstudios'
 mainClassName = "com.blastedstudios.ledge.Ledge"
 version = '1.0.0'
 description = "Ledge is a 2d platforming shooter"
-/*
-url = "https://github.com/narfman0/ledge"
-*/
 defaultTasks 'eclipse', 'build'
 
 ext {
@@ -37,6 +34,7 @@ dependencies {
 	compile group: 'org.jgrapht', name: 'jgrapht-core', version: '0.9.2'
 	compile group: 'net.sf', name: 'jargs', version: '1.0'
 	compile group: 'org.jdom', name: 'jdom', version: '2.0.2'
+    compile "com.blastedstudios:GDXWorld:1.0"
     testCompile 'junit:junit:4.12'
     
     // GDXWorld dependencies. TODO push GDXWorld to maven to have gradle to the work :|
