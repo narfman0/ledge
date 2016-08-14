@@ -1,22 +1,33 @@
 apply plugin: "java"
 apply plugin: "eclipse"
 apply plugin: "application"
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
 
 group = 'com.blastedstudios'
 mainClassName = "com.blastedstudios.ledge.Ledge"
 version = '1.0.0'
 description = "Ledge is a 2d platforming shooter"
-defaultTasks 'eclipse', 'build'
+defaultTasks 'eclipse', 'build', 'install'
 
 ext {
     appName = "ledge"
-    gdxVersion = '1.9.3'
 }
 
 jar {
     manifest {
         attributes 'Main-Class': '$mainClassName'
     }
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives jar
+    archives sourcesJar
 }
 
 repositories {
