@@ -8,8 +8,9 @@ Usage
 
 * Ensure an up to date Java JRE is installed, at the time of writing JRE 8u45
 find here: http://www.oracle.com/technetwork/java/javase/downloads/index.html
-* Run the game using scripts in the ``scripts`` directory, e.g. runLedge.bat in
-windows
+* Compile and run with gradle target: `gradlew run`
+* If already compiles, run the game using scripts in the ``scripts`` directory,
+e.g. runLedge.bat in windows
 
 Development
 ===========
